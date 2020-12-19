@@ -1,0 +1,15 @@
+User-agent: Googlebot
+Allow: /
+User-agent: *
+Allow: /
+Disallow: /live2dw/
+Disallow: /assets/
+Disallow: /lib/
+Disallow: /js/
+Disallow: /css/
+Disallow: /fonts/
+Disallow: /vendors/
+Disallow: /404.html
+
+Sitemap: https://weilining.github.io/sitemap.xml
+Sitemap: https://weilining.github.io/baidusitemap.xml

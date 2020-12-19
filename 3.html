@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.2.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.jsdelivr.net/gh/weilining/img@main/img/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.jsdelivr.net/gh/weilining/img@main/img/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://cdn.jsdelivr.net/gh/weilining/img@main/img/favicon-16x16-next.png">
+  <link rel="mask-icon" href="https://cdn.jsdelivr.net/gh/weilining/img@main/img/logo.svg" color="#222">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+  <meta name="google-site-verification" content="KZjcRcBkV43JHcyiH4z1Yk2xu-mqlS1fQNk5Dzv7_q0">
+  <meta name="msvalidate.01" content="5C84BC77E02800759CE29C4ACCE487BD">
+  <meta name="yandex-verification" content="06c62a93328de5da">
+  <meta name="baidu-site-verification" content="code-wFDrn4lvkD">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"weilining.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.1.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"buttons","active":"valine","storage":false,"lazyload":false,"nav":null,"activeClass":"valine"},"motion":{"enable":false,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+  </script>
+<meta name="description" content="WordPress在NGINX和Litespeed下的性能对比测试">
+<meta property="og:type" content="article">
+<meta property="og:title" content="WordPress在NGINX和Litespeed下的性能对比测试">
+<meta property="og:url" content="https://weilining.github.io/3.html">
+<meta property="og:site_name" content="Ln&#39;s Blog">
+<meta property="og:description" content="WordPress在NGINX和Litespeed下的性能对比测试">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://weilining.github.io/3/aaa212cd913012fb772e749fd8a8d77a-20201022155654320.png">
+<meta property="og:image" content="https://weilining.github.io/3/83fc54895dcc8373dba0e59bd5726dcd-20201022155654138.png">
+<meta property="og:image" content="https://weilining.github.io/3/2fb87490bdd326291263173438eae104-20201022155654331.png">
+<meta property="og:image" content="https://img.jpggod.com/file/jpggod/2020/10/21/48b2a008969a4fde4875f20780ff76a9.png">
+<meta property="og:image" content="https://weilining.github.io/3/d3079603a96668d58ef5de5222805abc-20201022155656669.png">
+<meta property="og:image" content="https://img.jpggod.com/file/jpggod/2020/10/21/432118efcac760a22c1ebf85d5aae5a5.png">
+<meta property="og:image" content="https://weilining.github.io/3/0f8eeb88d97c590fe3dcd8bb50fef6bd-20201022155654451.png">
+<meta property="og:image" content="https://weilining.github.io/3/4c800485b789a75587888e6f08ec83e0-20201022155657211.png">
+<meta property="og:image" content="https://weilining.github.io/3/7cf3818e20d92657116bcebc544de7fb-20201022155656102.png">
+<meta property="og:image" content="https://weilining.github.io/3/752dd942390cdd7368754d8199d6de8b-20201022155654970.png">
+<meta property="og:image" content="https://weilining.github.io/3/2674cb8a02948d78d147006772e7e11f-20201022155655494.png">
+<meta property="og:image" content="https://weilining.github.io/3/a86f1b54a232b4f64a95b164295c4ad7-20201022155656551.png">
+<meta property="og:image" content="https://weilining.github.io/3/e52922cd04edaf3b2a8c86ed072dd6f3-20201022155657251.png">
+<meta property="og:image" content="https://weilining.github.io/3/3c9325f7a70c2a1ba6289c011a136e8b-20201022155657313.png">
+<meta property="og:image" content="https://weilining.github.io/3/4635f468db4706ce79e760a9f93797aa-20201022155658683.png">
+<meta property="og:image" content="https://weilining.github.io/3/d0d2526036cc87131365e21093426ec2-20201022155658949.png">
+<meta property="og:image" content="https://weilining.github.io/3/915c69178e9c71b81bccc7fdca68d045-20201022155657757.png">
+<meta property="og:image" content="https://weilining.github.io/3/5f348d8c4b6496873c7ae3624e947465-20201022155700551.png">
+<meta property="og:image" content="https://weilining.github.io/3/08ffe6b56746210be337805d0844322e-20201022155658471.png">
+<meta property="og:image" content="https://weilining.github.io/3/0662ff51da5c4f53380da5b85927d43c-20201022155658960.png">
+<meta property="og:image" content="https://weilining.github.io/3/dd12ff738fab3483ec9db1a839515e15-20201022155700597.png">
+<meta property="og:image" content="https://weilining.github.io/3/dfa67efd31fe5d7f6a75055119efdad2-20201022155703930.png">
+<meta property="og:image" content="https://weilining.github.io/3/ea03719eaabc28ea57a5f8cbd9bd371b-20201022155659588.png">
+<meta property="og:image" content="https://weilining.github.io/3/7e4241ae445f48991e221bbb375e90b3-20201022155659982.png">
+<meta property="og:image" content="https://weilining.github.io/3/5d7974527f62665203cab4ef14a74750-20201022155700471.png">
+<meta property="og:image" content="https://weilining.github.io/3/bdc3d8657f268963966df4a08a2136bb-20201022155700715.png">
+<meta property="og:image" content="https://weilining.github.io/3/423de1308e0c2e460e46cf70db392327-20201022155703909.png">
+<meta property="og:image" content="https://weilining.github.io/3/8339587c3a2c5f8a0481c04487b713b2-20201022155701638.png">
+<meta property="og:image" content="https://weilining.github.io/3/3f0dacd6e7260492846ab6677f25be22-20201022155701153.png">
+<meta property="og:image" content="https://weilining.github.io/3/d7a532eafabfa5cb17a1760849400e48-20201022155701552.png">
+<meta property="og:image" content="https://weilining.github.io/3/d93221902adddb61c789d4708c9fa19a-20201022155702192.png">
+<meta property="article:published_time" content="2020-10-22T07:50:24.000Z">
+<meta property="article:modified_time" content="2020-10-22T07:50:24.000Z">
+<meta property="article:author" content="Lining Wei">
+<meta property="article:tag" content="默认">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://weilining.github.io/3/aaa212cd913012fb772e749fd8a8d77a-20201022155654320.png">
+
+
+<link rel="canonical" href="https://weilining.github.io/3.html">
+
+
+<script data-pjax class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+<title>WordPress在NGINX和Litespeed下的性能对比测试 | Ln's Blog</title>
+  
+    <script>
+      function sendPageView() {
+        if (CONFIG.hostname !== location.hostname) return;
+        var uid = localStorage.getItem('uid') || (Math.random() + '.' + Math.random());
+        localStorage.setItem('uid', uid);
+        navigator.sendBeacon('https://www.google-analytics.com/collect', new URLSearchParams({
+          v  : 1,
+          tid: 'G-33WZ1RR3T8',
+          cid: uid,
+          t  : 'pageview',
+          dp : encodeURIComponent(location.pathname)
+        }));
+      }
+      document.addEventListener('pjax:complete', sendPageView);
+      sendPageView();
+    </script>
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="Ln's Blog" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Ln's Blog</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">有朋自远方来，不亦乐乎</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-bell fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-top">
+
+    <a href="/top/" rel="section"><i class="fa fa-signal fa-fw"></i>热榜</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-friends">
+
+    <a href="/friends/" rel="section"><i class="fa fa-globe-asia fa-fw"></i>朋友们</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <section class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%8B%E8%AF%95%E5%B9%B3%E5%8F%B0"><span class="nav-number">1.</span> <span class="nav-text">测试平台</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NGINX"><span class="nav-number">2.</span> <span class="nav-text">NGINX</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8E%9F%E7%94%9F"><span class="nav-number">2.0.1.</span> <span class="nav-text">原生</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#wp-super-cache"><span class="nav-number">2.0.2.</span> <span class="nav-text">wp super cache</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Litespeed"><span class="nav-number">3.</span> <span class="nav-text">Litespeed</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8E%9F%E7%94%9F-1"><span class="nav-number">3.0.1.</span> <span class="nav-text">原生</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#LiteSpeedcache"><span class="nav-number">3.0.2.</span> <span class="nav-text">LiteSpeedcache</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%93%E8%AE%BA"><span class="nav-number">4.</span> <span class="nav-text">结论</span></a></li></ol></div>
+        </section>
+        <!--/noindex-->
+
+        <section class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Lining Wei"
+      src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/icon.gif">
+  <p class="site-author-name" itemprop="name">Lining Wei</p>
+  <div class="site-description" itemprop="description">算法、技术</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">218</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">35</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/weilining" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;weilining" rel="noopener external nofollow noreferrer" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/atom.xml" title="RSS → &#x2F;atom.xml"><i class="fa fa-rss fa-fw"></i></a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll site-overview-item animated">
+    <div class="links-of-blogroll-title"><i class="fa fa-university fa-fw"></i>
+      链接
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://weilining.github.io/" title="https:&#x2F;&#x2F;weilining.github.io">Ln</a>
+        </li>
+    </ul>
+  </div>
+
+  <div class="links-of-recent-posts motion-element">
+    <div class="links-of-recent-posts-title">
+        <i class="fa fa-history fa-fw"></i>
+      最近文章
+    </div>
+    <ul class="links-of-recent-posts-list">
+        <li class="links-of-recent-posts-item">
+          <a href="/218.html" title="218.html">网页性能测试工具推荐</a>
+        </li>
+    </ul>
+  </div>
+<div style="">
+  <canvas id="canvas" style="width:60%;">当前浏览器不支持canvas，请更换浏览器后再试</canvas>
+</div>
+<script>
+(function(){
+
+   var digit=
+    [
+        [
+            [0,0,1,1,1,0,0],
+            [0,1,1,0,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,0,1,1,0],
+            [0,0,1,1,1,0,0]
+        ],//0
+        [
+            [0,0,0,1,1,0,0],
+            [0,1,1,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [1,1,1,1,1,1,1]
+        ],//1
+        [
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,0,1,1,0,0,0],
+            [0,1,1,0,0,0,0],
+            [1,1,0,0,0,0,0],
+            [1,1,0,0,0,1,1],
+            [1,1,1,1,1,1,1]
+        ],//2
+        [
+            [1,1,1,1,1,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//3
+        [
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,1,0],
+            [0,0,1,1,1,1,0],
+            [0,1,1,0,1,1,0],
+            [1,1,0,0,1,1,0],
+            [1,1,1,1,1,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,1,1]
+        ],//4
+        [
+            [1,1,1,1,1,1,1],
+            [1,1,0,0,0,0,0],
+            [1,1,0,0,0,0,0],
+            [1,1,1,1,1,1,0],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//5
+        [
+            [0,0,0,0,1,1,0],
+            [0,0,1,1,0,0,0],
+            [0,1,1,0,0,0,0],
+            [1,1,0,0,0,0,0],
+            [1,1,0,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//6
+        [
+            [1,1,1,1,1,1,1],
+            [1,1,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,1,1,0,0,0],
+            [0,0,1,1,0,0,0],
+            [0,0,1,1,0,0,0],
+            [0,0,1,1,0,0,0]
+        ],//7
+        [
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//8
+        [
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,1,1,0,0,0,0]
+        ],//9
+        [
+            [0,0,0,0,0,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,0,0,0,0,0],
+            [0,0,0,0,0,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,0,0,0,0,0]
+        ]//:
+    ];
+
+var canvas = document.getElementById('canvas');
+
+if(canvas.getContext){
+    var cxt = canvas.getContext('2d');
+    //声明canvas的宽高
+    var H = 100,W = 700;
+    canvas.height = H;
+    canvas.width = W;
+    cxt.fillStyle = '#f00';
+    cxt.fillRect(10,10,50,50);
+
+    //存储时间数据
+    var data = [];
+    //存储运动的小球
+    var balls = [];
+    //设置粒子半径
+    var R = canvas.height/20-1;
+    (function(){
+        var temp = /(\d)(\d):(\d)(\d):(\d)(\d)/.exec(new Date());
+        //存储时间数字，由十位小时、个位小时、冒号、十位分钟、个位分钟、冒号、十位秒钟、个位秒钟这7个数字组成
+        data.push(temp[1],temp[2],10,temp[3],temp[4],10,temp[5],temp[6]);
+    })();
+
+    /*生成点阵数字*/
+    function renderDigit(index,num){
+        for(var i = 0; i < digit[num].length; i++){
+            for(var j = 0; j < digit[num][i].length; j++){
+                if(digit[num][i][j] == 1){
+                    cxt.beginPath();
+                    //cxt.fillStyle = '#f00';/*红色数字*/
+                    //cxt.fillStyle = '#fff';/*白色数字*/
+                    cxt.fillStyle = '#FAF0BB';/*代码黄数字*/
+                    cxt.arc(14*(R+2)*index + j*2*(R+1)+(R+1),i*2*(R+1)+(R+1),R,0,2*Math.PI);
+                    cxt.closePath();
+                    cxt.fill();
+                }
+            }
+        }
+    }
+
+    /*更新时钟*/
+    function updateDigitTime(){
+        var changeNumArray = [];
+        var temp = /(\d)(\d):(\d)(\d):(\d)(\d)/.exec(new Date());
+        var NewData = [];
+        NewData.push(temp[1],temp[2],10,temp[3],temp[4],10,temp[5],temp[6]);
+        for(var i = data.length-1; i >=0 ; i--){
+            //时间发生变化
+            if(NewData[i] !== data[i]){
+                //将变化的数字值和在data数组中的索引存储在changeNumArray数组中
+                changeNumArray.push(i+'_'+(Number(data[i])+1)%10);
+            }
+        }
+        //增加小球
+        for(var i = 0; i< changeNumArray.length; i++){
+            addBalls.apply(this,changeNumArray[i].split('_'));
+        }
+        data = NewData.concat();
+    }
+
+    /*更新小球状态*/
+    function updateBalls(){
+        for(var i = 0; i < balls.length; i++){
+            balls[i].stepY += balls[i].disY;
+            balls[i].x += balls[i].stepX;
+            balls[i].y += balls[i].stepY;
+            if(balls[i].x > W + R || balls[i].y > H + R){
+                balls.splice(i,1);
+                i--;
+            }
+        }
+    }
+
+    /*增加要运动的小球*/
+    function addBalls(index,num){
+        var numArray = [1,2,3];
+        var colorArray =  ["#3BE","#09C","#A6C","#93C","#9C0","#690","#FB3","#F80","#F44","#C00"];
+        for(var i = 0; i < digit[num].length; i++){
+            for(var j = 0; j < digit[num][i].length; j++){
+                if(digit[num][i][j] == 1){
+                    var ball = {
+                        x:14*(R+2)*index + j*2*(R+1)+(R+1),
+                        y:i*2*(R+1)+(R+1),
+                        stepX:Math.floor(Math.random() * 4 -2),
+                        stepY:-2*numArray[Math.floor(Math.random()*numArray.length)],
+                        color:colorArray[Math.floor(Math.random()*colorArray.length)],
+                        disY:1
+                    };
+                    balls.push(ball);
+                }
+            }
+        }
+    }
+
+    /*渲染*/
+    function render(){
+        //重置画布宽度，达到清空画布的效果
+        canvas.height = 100;
+        //渲染时钟
+        for(var i = 0; i < data.length; i++){
+            renderDigit(i,data[i]);
+        }
+        //渲染小球
+        for(var i = 0; i < balls.length; i++){
+            cxt.beginPath();
+            cxt.arc(balls[i].x,balls[i].y,R,0,2*Math.PI);
+            cxt.fillStyle = balls[i].color;
+            cxt.closePath();
+            cxt.fill();
+        }
+    }
+
+    clearInterval(oTimer);
+    var oTimer = setInterval(function(){
+        //更新时钟
+        updateDigitTime();
+        //更新小球状态
+        updateBalls();
+        //渲染
+        render();
+    },50);
+}
+
+})();
+</script>
+        </section>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://weilining.github.io/3.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/weilining/img@main/img/icon.gif">
+      <meta itemprop="name" content="Lining Wei">
+      <meta itemprop="description" content="算法、技术">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ln's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          WordPress在NGINX和Litespeed下的性能对比测试<a href="https://github.com/weilining/weilining.cf/edit/main/source/_posts/3.md" class="post-edit-link" title="编辑" rel="noopener external nofollow noreferrer" target="_blank"><i class="fa fa-pen-nib"></i></a>
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-10-22 15:50:24" itemprop="dateCreated datePublished" datetime="2020-10-22T15:50:24+08:00">2020-10-22</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E9%BB%98%E8%AE%A4/" itemprop="url" rel="index"><span itemprop="name">默认</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/3.html" class="post-meta-item leancloud_visitors" data-flag-title="WordPress在NGINX和Litespeed下的性能对比测试" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">评论：</span>
+    
+    <a title="valine" href="/3.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/3.html" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.2k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+            <div class="post-description">WordPress在NGINX和Litespeed下的性能对比测试</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>都说Wordpress 在<a target="_blank" rel="noopener external nofollow noreferrer" href="https://2demo.top/tag/litespeed">litespeed</a>下的表现要好于NGINX，但是很少看到有人做<a target="_blank" rel="noopener external nofollow noreferrer" href="https://2demo.top/tag/%E6%B5%8B%E8%AF%95">测试</a>，于是我来做一个对比测试</p>
+<a id="more"></a>
+
+<h2 id="测试平台"><a href="#测试平台" class="headerlink" title="测试平台"></a>测试平台</h2><p>主机：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://2demo.top/tag/%E8%85%BE%E8%AE%AF%E4%BA%91%E8%BD%BB%E9%87%8F">腾讯云轻量</a>HK1C2G版</p>
+<p>WordPress版本：5.3</p>
+<p>压力测试平台：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://loader.io/">https://loader.io/</a></p>
+<p>默认主题，文章为纯文字，txt文档下为34K</p>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://2demo.top/tag/%E8%85%BE%E8%AE%AF%E4%BA%91">腾讯云</a>最近做活动每天上午10点-10点半之间都有199-100劵放出，有需要的可以领一下购买</p>
+<p><img data-src="/3/aaa212cd913012fb772e749fd8a8d77a-20201022155654320.png" alt="img" loading="lazy"></p>
+<p>腾讯云学生活动也很不错，25岁以下1核2G5M的轻量VPS只要9块/月</p>
+<p>25岁以下自动获得学生资格，25岁以上可以进行学生认证</p>
+<p>每个月9块钱就可以获得1C2G5M1T流量，十分划算有国内服务需求的直接上。</p>
+<p><img data-src="/3/83fc54895dcc8373dba0e59bd5726dcd-20201022155654138.png" alt="img" loading="lazy"></p>
+<p><img data-src="/3/2fb87490bdd326291263173438eae104-20201022155654331.png" alt="img" loading="lazy"></p>
+<p><strong>活动地址直达：</strong><a target="_blank" rel="noopener external nofollow noreferrer" href="https://curl.qcloud.com/hQiFtUjz">https://curl.qcloud.com/hQiFtUjz</a></p>
+<h2 id="NGINX"><a href="#NGINX" class="headerlink" title="NGINX"></a>NGINX</h2><h4 id="原生"><a href="#原生" class="headerlink" title="原生"></a>原生</h4><p>先上一个17测看看基本情况</p>
+<p><img data-src="https://img.jpggod.com/file/jpggod/2020/10/21/48b2a008969a4fde4875f20780ff76a9.png" alt="img" loading="lazy"></p>
+<p><img data-src="/3/d3079603a96668d58ef5de5222805abc-20201022155656669.png" alt="img" loading="lazy"></p>
+<p><strong>loader测试</strong></p>
+<p>2000/min</p>
+<p><img data-src="https://img.jpggod.com/file/jpggod/2020/10/21/432118efcac760a22c1ebf85d5aae5a5.png" alt="img" loading="lazy"></p>
+<p>2500/min</p>
+<p><img data-src="/3/0f8eeb88d97c590fe3dcd8bb50fef6bd-20201022155654451.png" alt="img" loading="lazy"></p>
+<p>和我上次测试负载均衡的结果差不多详情请看</p>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://2demo.top/117.html">利用腾讯云轻量服务器+宝塔快速搭建负载均衡网站</a></p>
+<p>不过由于WordPress比typecho更吃资源所以表现要差上一些</p>
+<p><strong>GTmetrix测试</strong></p>
+<p>看起来自带的主题真的是经过千锤百炼的</p>
+<p><img data-src="/3/4c800485b789a75587888e6f08ec83e0-20201022155657211.png" alt="img" loading="lazy"></p>
+<p><strong>google pagespeed</strong></p>
+<p>移动设备</p>
+<p><img data-src="/3/7cf3818e20d92657116bcebc544de7fb-20201022155656102.png" alt="img" loading="lazy"></p>
+<p>桌面设备</p>
+<p><img data-src="/3/752dd942390cdd7368754d8199d6de8b-20201022155654970.png" alt="img" loading="lazy"></p>
+<h4 id="wp-super-cache"><a href="#wp-super-cache" class="headerlink" title="wp super cache"></a>wp super cache</h4><p><strong>loader</strong></p>
+<p>开了插件之后可承受并发数变少了，插件占用了一定的资源，所以WordPress能用一个插件解决的就别用两个，尤其是大型插件</p>
+<p><img data-src="/3/2674cb8a02948d78d147006772e7e11f-20201022155655494.png" alt="img" loading="lazy"></p>
+<p><strong>GTmetrix</strong></p>
+<p><img data-src="/3/a86f1b54a232b4f64a95b164295c4ad7-20201022155656551.png" alt="img" loading="lazy"></p>
+<p><strong>google pagespeed</strong></p>
+<p>移动设备</p>
+<p><img data-src="/3/e52922cd04edaf3b2a8c86ed072dd6f3-20201022155657251.png" alt="img" loading="lazy"></p>
+<p>桌面设备</p>
+<p><img data-src="/3/3c9325f7a70c2a1ba6289c011a136e8b-20201022155657313.png" alt="img" loading="lazy"></p>
+<p>开启缓存插件之后加载速度上有了明显的提升，在速度上算的上是一个优秀的网页了。</p>
+<h2 id="Litespeed"><a href="#Litespeed" class="headerlink" title="Litespeed"></a>Litespeed</h2><p>更换程序成功后禁用缓存刷新页面看看是否是LS</p>
+<p><img data-src="/3/4635f468db4706ce79e760a9f93797aa-20201022155658683.png" alt="img" loading="lazy"></p>
+<h4 id="原生-1"><a href="#原生-1" class="headerlink" title="原生"></a>原生</h4><p><strong>17ce</strong></p>
+<p>尴尬LS会拖慢网速的吗？</p>
+<p><img data-src="/3/d0d2526036cc87131365e21093426ec2-20201022155658949.png" alt="img" loading="lazy"></p>
+<p><img data-src="/3/915c69178e9c71b81bccc7fdca68d045-20201022155657757.png" alt="img" loading="lazy"></p>
+<p><strong>gtmetrix</strong></p>
+<p><img data-src="/3/5f348d8c4b6496873c7ae3624e947465-20201022155700551.png" alt="img" loading="lazy"></p>
+<p><strong>google pagespeed</strong></p>
+<p>移动设备</p>
+<p><img data-src="/3/08ffe6b56746210be337805d0844322e-20201022155658471.png" alt="img" loading="lazy"></p>
+<p>桌面设备</p>
+<p><img data-src="/3/0662ff51da5c4f53380da5b85927d43c-20201022155658960.png" alt="img" loading="lazy"></p>
+<p><strong>loader</strong></p>
+<p>2000/min</p>
+<p><img data-src="/3/dd12ff738fab3483ec9db1a839515e15-20201022155700597.png" alt="img" loading="lazy"></p>
+<p>2500/min</p>
+<p>光这样似乎表现也很一般试试用缓存插件</p>
+<h4 id="LiteSpeedcache"><a href="#LiteSpeedcache" class="headerlink" title="LiteSpeedcache"></a>LiteSpeedcache</h4><p><strong>gtmetrix</strong></p>
+<p>加载时间降了一点</p>
+<p><img data-src="/3/dfa67efd31fe5d7f6a75055119efdad2-20201022155703930.png" alt="img" loading="lazy"></p>
+<p><strong>google pagespeed</strong></p>
+<p>移动设备</p>
+<p><img data-src="/3/ea03719eaabc28ea57a5f8cbd9bd371b-20201022155659588.png" alt="img" loading="lazy"></p>
+<p>桌面设备</p>
+<p><img data-src="/3/7e4241ae445f48991e221bbb375e90b3-20201022155659982.png" alt="img" loading="lazy"></p>
+<p>双一百！！牛逼！！</p>
+<p><strong>loader</strong></p>
+<p>2000/min</p>
+<p><img data-src="/3/5d7974527f62665203cab4ef14a74750-20201022155700471.png" alt="img" loading="lazy"></p>
+<p>2500/min</p>
+<p><img data-src="/3/bdc3d8657f268963966df4a08a2136bb-20201022155700715.png" alt="img" loading="lazy"></p>
+<p>3500/min</p>
+<p><img data-src="/3/423de1308e0c2e460e46cf70db392327-20201022155703909.png" alt="img" loading="lazy"></p>
+<p>4000/min</p>
+<p><img data-src="/3/8339587c3a2c5f8a0481c04487b713b2-20201022155701638.png" alt="img" loading="lazy"></p>
+<p>其实我觉得对于LiteSpeed来说4000其实也没有问题，最大的问题估计还是带宽瓶颈，腾讯云的香港轻量服务器给的上传带宽阈值为30m，下图为测4000/min时的上传带宽，就算忽略统计误差也远超30/8*1024=3840KB 了，所以后面延迟增加的原因主要是带宽部分。</p>
+<p><img data-src="/3/3f0dacd6e7260492846ab6677f25be22-20201022155701153.png" alt="img" loading="lazy"></p>
+<p>附上用了LScache之后的17测</p>
+<p><img data-src="/3/d7a532eafabfa5cb17a1760849400e48-20201022155701552.png" alt="img" loading="lazy"></p>
+<p><img data-src="/3/d93221902adddb61c789d4708c9fa19a-20201022155702192.png" alt="img" loading="lazy"></p>
+<h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><p>Litespeed对于WordPress的加速效果要配合Litespeedcache才能突显出来，否则光秃秃的一个LS其实并不比NGINX好，在某些方面甚至是出于劣势的。如果你的WordPress网站流量很大，那么我建议选择LiteSpeed+<a target="_blank" rel="noopener external nofollow noreferrer" href="https://2demo.top/tag/litespeedcache">litespeedcache</a>+redis/memcached更好，当然本次测试的项目比较单一，更多深层次的一些东西也未进行专业测试。大家参考为主，实际选择还得看个人爱好及专业程度</p>
+
+    </div>
+
+    
+    
+    
+      
+  <div class="popular-posts-header">相关文章</div>
+  <ul class="popular-posts">
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="/105-1.html" rel="bookmark">WordPress 面板切换语言</a></div>
+    </li>
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="/10.html" rel="bookmark">Visual Studio Code 文件比较</a></div>
+    </li>
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="/105.html" rel="bookmark">Docker Compose WordPress 快速安装</a></div>
+    </li>
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="/1016.html" rel="bookmark">最方便的 Hexo 部署</a></div>
+    </li>
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="/106-1.html" rel="bookmark">彻底解决国内npm/yarn安装包很慢问题</a></div>
+    </li>
+  </ul>
+
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>Buy me a coffee</div>
+  <button onclick="document.querySelector('.post-reward').classList.toggle('active');">
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/20201122213021.png" alt="Lining Wei 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/434235F3-7A93-4EA4-A7B6-4F6D977F1A89.png" alt="Lining Wei 支付宝">
+        <span>支付宝</span>
+      </div>
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/bitcoin.png" alt="Lining Wei 比特币">
+        <span>比特币</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文博主： </strong>Lining Wei
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://weilining.github.io/3.html" title="WordPress在NGINX和Litespeed下的性能对比测试">https://weilining.github.io/3.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener external nofollow noreferrer" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E9%BB%98%E8%AE%A4/" rel="tag"><i class="fa fa-tag"></i> 默认</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/201021.html" rel="prev" title="彻底解决 hexo init 卡顿问题">
+                  <i class="fa fa-chevron-left"></i> 彻底解决 hexo init 卡顿问题
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/4.html" rel="next" title="macOS TeamViewer 修改ID">
+                  macOS TeamViewer 修改ID <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+      <div class="comment-button-group">
+          <a class="btn comment-button livere">livere</a>
+          <a class="btn comment-button valine">valine</a>
+      </div>
+        <div class="comment-position livere">
+          
+  <div class="comments">
+    <div id="lv-container" data-id="city" data-uid="MTAyMC81MTYyOC8yODEwOQ=="></div>
+  </div>
+  
+        </div>
+        <div class="comment-position valine">
+          <div class="comments" id="valine-comments"></div>
+        </div>
+      <script data-pjax>
+        (function() {
+          const commentButton = document.querySelectorAll('.comment-button');
+            commentButton.forEach(element => {
+            const commentClass = element.classList[2];
+            element.addEventListener('click', () => {
+              commentButton.forEach(active => active.classList.toggle('active', active === element));
+              document.querySelectorAll('.comment-position').forEach(active => active.classList.toggle('active', active.classList.contains(commentClass)));
+              if (CONFIG.comments.storage) {
+                localStorage.setItem('comments_active', commentClass);
+              }
+            });
+          });
+          let { activeClass } = CONFIG.comments;
+          if (CONFIG.comments.storage) {
+            activeClass = localStorage.getItem('comments_active') || activeClass;
+          }
+          if (activeClass) {
+            const activeButton = document.querySelector(`.comment-button.${activeClass}`);
+            if (activeButton) {
+              activeButton.click();
+            }
+          }
+        })();
+      </script>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 2015 – 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Ln</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">278k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">4:13</span>
+  </span>
+</div><script src="https://cdn.jsdelivr.net/npm/canvas-matrix.js@0/canvas-matrix.min.js"></script>
+
+    </div>
+  </footer>
+
+  
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/@next-theme/pjax@0.4.0/pjax.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.1.0/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.1.0/source/js/next-boot.js"></script><script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '.page-configurations',
+    '.main-inner',
+    '.post-toc-wrap',
+    '.languages',
+    '.pjax'
+  ],
+  analytics: false,
+  cacheBust: false,
+  scrollRestoration: false,
+  scrollTo: !CONFIG.bookmark.enable
+});
+
+document.addEventListener('pjax:success', () => {
+  pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  const hasTOC = document.querySelector('.post-toc');
+  document.querySelector('.sidebar-inner').classList.toggle('sidebar-nav-active', hasTOC);
+  document.querySelector(hasTOC ? '.sidebar-nav-toc' : '.sidebar-nav-overview').click();
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
+
+  
+
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.1.0/source/js/local-search.js"></script>
+
+
+
+
+
+
+  
+
+
+
+
+    <div class="pjax">
+
+  
+
+  <script src="//cdn.jsdelivr.net/npm/quicklink@2.0.0/dist/quicklink.umd.js"></script>
+  <script>
+      window.addEventListener('load', () => {
+      quicklink.listen({
+        timeout : 3000,
+        priority: true,
+        ignores : [uri => uri.includes('#'),uri => uri === 'https://weilining.github.io/3.html',]
+      });
+      });
+  </script>
+
+<script>
+NexT.utils.loadComments('#lv-container', () => {
+  window.livereOptions = {
+    refer: "3.html"
+  };
+  (function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+    if (typeof LivereTower === 'function') { return; }
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+    e.parentNode.insertBefore(j, e);
+  })(document, 'script');
+});
+</script>
+
+<script>
+NexT.utils.loadComments('#valine-comments', () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', () => {
+    new Valine(Object.assign({"enable":true,"appId":"CY5HvvaX6B7MHSPAUt7AJNp1-MdYXbMMI","appKey":"LRXpMJ2P3huqVJg8CmKR8gYw","serverURLs":null,"placeholder":"来都来了，不撩一句嘛~，留言记得在上面留下【邮箱】，方便收到回复通知~","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"lang":"zh-cn","visitor":true,"comment_count":true,"recordIP":false,"enableQQ":false,"requiredFields":[]}, {
+      el: '#valine-comments',
+      path: "/3.html",
+      serverURLs: "https://cy5hvvax.api.lncldglobal.com"
+    }));
+  }, window.Valine);
+});
+</script>
+
+
+    </div>
+</body>
+</html>

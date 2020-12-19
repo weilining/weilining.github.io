@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.2.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.jsdelivr.net/gh/weilining/img@main/img/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.jsdelivr.net/gh/weilining/img@main/img/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://cdn.jsdelivr.net/gh/weilining/img@main/img/favicon-16x16-next.png">
+  <link rel="mask-icon" href="https://cdn.jsdelivr.net/gh/weilining/img@main/img/logo.svg" color="#222">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+  <meta name="google-site-verification" content="KZjcRcBkV43JHcyiH4z1Yk2xu-mqlS1fQNk5Dzv7_q0">
+  <meta name="msvalidate.01" content="5C84BC77E02800759CE29C4ACCE487BD">
+  <meta name="yandex-verification" content="06c62a93328de5da">
+  <meta name="baidu-site-verification" content="code-wFDrn4lvkD">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"weilining.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.1.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"buttons","active":"valine","storage":false,"lazyload":false,"nav":null,"activeClass":"valine"},"motion":{"enable":false,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+  </script>
+<meta name="description" content="默认">
+<meta property="og:type" content="article">
+<meta property="og:title" content="玩转 Hexo Butterfly">
+<meta property="og:url" content="https://weilining.github.io/6.html">
+<meta property="og:site_name" content="Ln&#39;s Blog">
+<meta property="og:description" content="默认">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-11-13T12:26:18.000Z">
+<meta property="article:modified_time" content="2020-11-13T12:26:18.000Z">
+<meta property="article:author" content="Lining Wei">
+<meta property="article:tag" content="默认">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://weilining.github.io/6.html">
+
+
+<script data-pjax class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+<title>玩转 Hexo Butterfly | Ln's Blog</title>
+  
+    <script>
+      function sendPageView() {
+        if (CONFIG.hostname !== location.hostname) return;
+        var uid = localStorage.getItem('uid') || (Math.random() + '.' + Math.random());
+        localStorage.setItem('uid', uid);
+        navigator.sendBeacon('https://www.google-analytics.com/collect', new URLSearchParams({
+          v  : 1,
+          tid: 'G-33WZ1RR3T8',
+          cid: uid,
+          t  : 'pageview',
+          dp : encodeURIComponent(location.pathname)
+        }));
+      }
+      document.addEventListener('pjax:complete', sendPageView);
+      sendPageView();
+    </script>
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="Ln's Blog" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Ln's Blog</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">有朋自远方来，不亦乐乎</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-bell fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-top">
+
+    <a href="/top/" rel="section"><i class="fa fa-signal fa-fw"></i>热榜</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-friends">
+
+    <a href="/friends/" rel="section"><i class="fa fa-globe-asia fa-fw"></i>朋友们</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <section class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo"><span class="nav-number">1.</span> <span class="nav-text">Hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85"><span class="nav-number">1.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%84%E8%A7%88"><span class="nav-number">1.2.</span> <span class="nav-text">预览</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE"><span class="nav-number">1.3.</span> <span class="nav-text">配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Butterfly"><span class="nav-number">2.</span> <span class="nav-text">Butterfly</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-1"><span class="nav-number">2.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%84%E8%A7%88-1"><span class="nav-number">2.2.</span> <span class="nav-text">预览</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE-1"><span class="nav-number">2.3.</span> <span class="nav-text">配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="nav-number">3.</span> <span class="nav-text">初始化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B0%B8%E4%B9%85%E9%93%BE%E6%8E%A5"><span class="nav-number">3.1.</span> <span class="nav-text">永久链接</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%A8%A1%E5%9D%97%E5%AE%89%E8%A3%85"><span class="nav-number">3.1.1.</span> <span class="nav-text">模块安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE-2"><span class="nav-number">3.1.2.</span> <span class="nav-text">配置</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GitHub-Token"><span class="nav-number">3.2.</span> <span class="nav-text">GitHub Token</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%83%A8%E7%BD%B2"><span class="nav-number">3.3.</span> <span class="nav-text">部署</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#hexo-d-%E9%83%A8%E7%BD%B2%E5%88%B0GitHub-Pages"><span class="nav-number">3.3.1.</span> <span class="nav-text">hexo d 部署到GitHub Pages</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E6%A8%A1%E5%9D%97"><span class="nav-number">3.3.1.1.</span> <span class="nav-text">安装模块</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE-3"><span class="nav-number">3.3.1.2.</span> <span class="nav-text">配置</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%8E%A8%E9%80%81%E5%88%B0GitHub%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93"><span class="nav-number">3.3.1.3.</span> <span class="nav-text">推送到GitHub远程仓库</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%89%93%E5%BC%80GitHub-Pages"><span class="nav-number">3.3.1.4.</span> <span class="nav-text">打开GitHub Pages</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%9F%9F%E5%90%8D%E7%BB%91%E5%AE%9A"><span class="nav-number">3.3.1.5.</span> <span class="nav-text">域名绑定</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#%E5%88%9B%E5%BB%BACNAME"><span class="nav-number">3.3.1.5.1.</span> <span class="nav-text">创建CNAME</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E5%9F%9F%E5%90%8D%E7%AE%A1%E7%90%86"><span class="nav-number">3.3.1.5.2.</span> <span class="nav-text">域名管理</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#GitHub-Action-%E9%83%A8%E7%BD%B2%E5%88%B0GitHub-Pages"><span class="nav-number">3.3.2.</span> <span class="nav-text">GitHub Action 部署到GitHub Pages</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AEsecrets"><span class="nav-number">3.3.2.1.</span> <span class="nav-text">设置secrets</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE-4"><span class="nav-number">3.3.2.2.</span> <span class="nav-text">配置</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%89%93%E5%BC%80GitHub-Pages-1"><span class="nav-number">3.3.2.3.</span> <span class="nav-text">打开GitHub Pages</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%9F%9F%E5%90%8D%E7%BB%91%E5%AE%9A-1"><span class="nav-number">3.3.2.4.</span> <span class="nav-text">域名绑定</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#%E5%88%9B%E5%BB%BACNAME-1"><span class="nav-number">3.3.2.4.1.</span> <span class="nav-text">创建CNAME</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E5%9F%9F%E5%90%8D%E7%AE%A1%E7%90%86-1"><span class="nav-number">3.3.2.4.2.</span> <span class="nav-text">域名管理</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%83%A8%E7%BD%B2%E5%88%B0vercel"><span class="nav-number">3.4.</span> <span class="nav-text">部署到vercel</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B3%A8%E5%86%8Cvercel"><span class="nav-number">3.4.1.</span> <span class="nav-text">注册vercel</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%80%9A%E8%BF%87GitHub%E6%BA%90%E7%A0%81%E9%83%A8%E7%BD%B2%E5%88%B0vercel"><span class="nav-number">3.4.2.</span> <span class="nav-text">通过GitHub源码部署到vercel</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9F%9F%E5%90%8D%E7%BB%91%E5%AE%9A-2"><span class="nav-number">3.4.3.</span> <span class="nav-text">域名绑定</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SEO"><span class="nav-number">4.</span> <span class="nav-text">SEO</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%AA%8C%E8%AF%81%E7%99%BE%E5%BA%A6%E7%AB%99%E7%82%B9"><span class="nav-number">4.1.</span> <span class="nav-text">验证百度站点</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#HTML%E6%A0%87%E7%AD%BE%E9%AA%8C%E8%AF%81"><span class="nav-number">4.1.1.</span> <span class="nav-text">HTML标签验证</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%99%BE%E5%BA%A6SEO"><span class="nav-number">4.2.</span> <span class="nav-text">百度SEO</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%A8%A1%E5%9D%97%E5%AE%89%E8%A3%85-1"><span class="nav-number">4.2.1.</span> <span class="nav-text">模块安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE-5"><span class="nav-number">4.2.2.</span> <span class="nav-text">配置</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%99%BE%E5%BA%A6%E3%80%81%E5%BF%85%E5%BA%94%E3%80%81%E4%B8%BB%E5%8A%A8%E6%8E%A8%E9%80%81"><span class="nav-number">4.3.</span> <span class="nav-text">百度、必应、主动推送</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AB%99%E7%82%B9%E5%9C%B0%E5%9B%BE%E6%A8%A1%E5%9D%97%E5%AE%89%E8%A3%85"><span class="nav-number">4.3.1.</span> <span class="nav-text">站点地图模块安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE-6"><span class="nav-number">4.3.2.</span> <span class="nav-text">配置</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Robots"><span class="nav-number">4.4.</span> <span class="nav-text">Robots</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%98%B2%E5%A4%96%E9%93%BE"><span class="nav-number">4.5.</span> <span class="nav-text">防外链</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%A8%A1%E5%9D%97%E5%AE%89%E8%A3%85-2"><span class="nav-number">4.5.1.</span> <span class="nav-text">模块安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE-7"><span class="nav-number">4.5.2.</span> <span class="nav-text">配置</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E5%8E%8B%E7%BC%A9Hexo-all-minifier"><span class="nav-number">4.6.</span> <span class="nav-text">静态资源压缩Hexo-all-minifier</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%A8%A1%E5%9D%97%E5%AE%89%E8%A3%85-3"><span class="nav-number">4.6.1.</span> <span class="nav-text">模块安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE-8"><span class="nav-number">4.6.2.</span> <span class="nav-text">配置</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%95%9C%E5%83%8F%E7%AB%99"><span class="nav-number">5.</span> <span class="nav-text">镜像站</span></a></li></ol></div>
+        </section>
+        <!--/noindex-->
+
+        <section class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Lining Wei"
+      src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/icon.gif">
+  <p class="site-author-name" itemprop="name">Lining Wei</p>
+  <div class="site-description" itemprop="description">算法、技术</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">218</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">35</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/weilining" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;weilining" rel="noopener external nofollow noreferrer" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/atom.xml" title="RSS → &#x2F;atom.xml"><i class="fa fa-rss fa-fw"></i></a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll site-overview-item animated">
+    <div class="links-of-blogroll-title"><i class="fa fa-university fa-fw"></i>
+      链接
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://weilining.github.io/" title="https:&#x2F;&#x2F;weilining.github.io">Ln</a>
+        </li>
+    </ul>
+  </div>
+
+  <div class="links-of-recent-posts motion-element">
+    <div class="links-of-recent-posts-title">
+        <i class="fa fa-history fa-fw"></i>
+      最近文章
+    </div>
+    <ul class="links-of-recent-posts-list">
+        <li class="links-of-recent-posts-item">
+          <a href="/218.html" title="218.html">网页性能测试工具推荐</a>
+        </li>
+    </ul>
+  </div>
+<div style="">
+  <canvas id="canvas" style="width:60%;">当前浏览器不支持canvas，请更换浏览器后再试</canvas>
+</div>
+<script>
+(function(){
+
+   var digit=
+    [
+        [
+            [0,0,1,1,1,0,0],
+            [0,1,1,0,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,0,1,1,0],
+            [0,0,1,1,1,0,0]
+        ],//0
+        [
+            [0,0,0,1,1,0,0],
+            [0,1,1,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [1,1,1,1,1,1,1]
+        ],//1
+        [
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,0,1,1,0,0,0],
+            [0,1,1,0,0,0,0],
+            [1,1,0,0,0,0,0],
+            [1,1,0,0,0,1,1],
+            [1,1,1,1,1,1,1]
+        ],//2
+        [
+            [1,1,1,1,1,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//3
+        [
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,1,0],
+            [0,0,1,1,1,1,0],
+            [0,1,1,0,1,1,0],
+            [1,1,0,0,1,1,0],
+            [1,1,1,1,1,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,1,1]
+        ],//4
+        [
+            [1,1,1,1,1,1,1],
+            [1,1,0,0,0,0,0],
+            [1,1,0,0,0,0,0],
+            [1,1,1,1,1,1,0],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//5
+        [
+            [0,0,0,0,1,1,0],
+            [0,0,1,1,0,0,0],
+            [0,1,1,0,0,0,0],
+            [1,1,0,0,0,0,0],
+            [1,1,0,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//6
+        [
+            [1,1,1,1,1,1,1],
+            [1,1,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,1,1,0,0,0],
+            [0,0,1,1,0,0,0],
+            [0,0,1,1,0,0,0],
+            [0,0,1,1,0,0,0]
+        ],//7
+        [
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//8
+        [
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,1,1,0,0,0,0]
+        ],//9
+        [
+            [0,0,0,0,0,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,0,0,0,0,0],
+            [0,0,0,0,0,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,0,0,0,0,0]
+        ]//:
+    ];
+
+var canvas = document.getElementById('canvas');
+
+if(canvas.getContext){
+    var cxt = canvas.getContext('2d');
+    //声明canvas的宽高
+    var H = 100,W = 700;
+    canvas.height = H;
+    canvas.width = W;
+    cxt.fillStyle = '#f00';
+    cxt.fillRect(10,10,50,50);
+
+    //存储时间数据
+    var data = [];
+    //存储运动的小球
+    var balls = [];
+    //设置粒子半径
+    var R = canvas.height/20-1;
+    (function(){
+        var temp = /(\d)(\d):(\d)(\d):(\d)(\d)/.exec(new Date());
+        //存储时间数字，由十位小时、个位小时、冒号、十位分钟、个位分钟、冒号、十位秒钟、个位秒钟这7个数字组成
+        data.push(temp[1],temp[2],10,temp[3],temp[4],10,temp[5],temp[6]);
+    })();
+
+    /*生成点阵数字*/
+    function renderDigit(index,num){
+        for(var i = 0; i < digit[num].length; i++){
+            for(var j = 0; j < digit[num][i].length; j++){
+                if(digit[num][i][j] == 1){
+                    cxt.beginPath();
+                    //cxt.fillStyle = '#f00';/*红色数字*/
+                    //cxt.fillStyle = '#fff';/*白色数字*/
+                    cxt.fillStyle = '#FAF0BB';/*代码黄数字*/
+                    cxt.arc(14*(R+2)*index + j*2*(R+1)+(R+1),i*2*(R+1)+(R+1),R,0,2*Math.PI);
+                    cxt.closePath();
+                    cxt.fill();
+                }
+            }
+        }
+    }
+
+    /*更新时钟*/
+    function updateDigitTime(){
+        var changeNumArray = [];
+        var temp = /(\d)(\d):(\d)(\d):(\d)(\d)/.exec(new Date());
+        var NewData = [];
+        NewData.push(temp[1],temp[2],10,temp[3],temp[4],10,temp[5],temp[6]);
+        for(var i = data.length-1; i >=0 ; i--){
+            //时间发生变化
+            if(NewData[i] !== data[i]){
+                //将变化的数字值和在data数组中的索引存储在changeNumArray数组中
+                changeNumArray.push(i+'_'+(Number(data[i])+1)%10);
+            }
+        }
+        //增加小球
+        for(var i = 0; i< changeNumArray.length; i++){
+            addBalls.apply(this,changeNumArray[i].split('_'));
+        }
+        data = NewData.concat();
+    }
+
+    /*更新小球状态*/
+    function updateBalls(){
+        for(var i = 0; i < balls.length; i++){
+            balls[i].stepY += balls[i].disY;
+            balls[i].x += balls[i].stepX;
+            balls[i].y += balls[i].stepY;
+            if(balls[i].x > W + R || balls[i].y > H + R){
+                balls.splice(i,1);
+                i--;
+            }
+        }
+    }
+
+    /*增加要运动的小球*/
+    function addBalls(index,num){
+        var numArray = [1,2,3];
+        var colorArray =  ["#3BE","#09C","#A6C","#93C","#9C0","#690","#FB3","#F80","#F44","#C00"];
+        for(var i = 0; i < digit[num].length; i++){
+            for(var j = 0; j < digit[num][i].length; j++){
+                if(digit[num][i][j] == 1){
+                    var ball = {
+                        x:14*(R+2)*index + j*2*(R+1)+(R+1),
+                        y:i*2*(R+1)+(R+1),
+                        stepX:Math.floor(Math.random() * 4 -2),
+                        stepY:-2*numArray[Math.floor(Math.random()*numArray.length)],
+                        color:colorArray[Math.floor(Math.random()*colorArray.length)],
+                        disY:1
+                    };
+                    balls.push(ball);
+                }
+            }
+        }
+    }
+
+    /*渲染*/
+    function render(){
+        //重置画布宽度，达到清空画布的效果
+        canvas.height = 100;
+        //渲染时钟
+        for(var i = 0; i < data.length; i++){
+            renderDigit(i,data[i]);
+        }
+        //渲染小球
+        for(var i = 0; i < balls.length; i++){
+            cxt.beginPath();
+            cxt.arc(balls[i].x,balls[i].y,R,0,2*Math.PI);
+            cxt.fillStyle = balls[i].color;
+            cxt.closePath();
+            cxt.fill();
+        }
+    }
+
+    clearInterval(oTimer);
+    var oTimer = setInterval(function(){
+        //更新时钟
+        updateDigitTime();
+        //更新小球状态
+        updateBalls();
+        //渲染
+        render();
+    },50);
+}
+
+})();
+</script>
+        </section>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://weilining.github.io/6.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/weilining/img@main/img/icon.gif">
+      <meta itemprop="name" content="Lining Wei">
+      <meta itemprop="description" content="算法、技术">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ln's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          玩转 Hexo Butterfly<a href="https://github.com/weilining/weilining.cf/edit/main/source/_posts/6.md" class="post-edit-link" title="编辑" rel="noopener external nofollow noreferrer" target="_blank"><i class="fa fa-pen-nib"></i></a>
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-11-13 20:26:18" itemprop="dateCreated datePublished" datetime="2020-11-13T20:26:18+08:00">2020-11-13</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E9%BB%98%E8%AE%A4/" itemprop="url" rel="index"><span itemprop="name">默认</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/6.html" class="post-meta-item leancloud_visitors" data-flag-title="玩转 Hexo Butterfly" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">评论：</span>
+    
+    <a title="valine" href="/6.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/6.html" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>8.3k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>8 分钟</span>
+    </span>
+</div>
+
+            <div class="post-description">默认</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h2 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h2><a id="more"></a>
+
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git clone --depth 1 https:&#x2F;&#x2F;gitee.com&#x2F;weilining&#x2F;hexo-starter.git blog</span><br><span class="line">cd blog</span><br><span class="line">git clone --depth 1 https:&#x2F;&#x2F;gitee.com&#x2F;weilining&#x2F;hexo-theme-landscape.git themes&#x2F;landscape</span><br><span class="line">npm i</span><br><span class="line">hexo cl &amp;&amp;hexo s</span><br></pre></td></tr></table></figure>
+
+<h3 id="预览"><a href="#预览" class="headerlink" title="预览"></a>预览</h3><p><a target="_blank" rel="noopener external nofollow noreferrer" href="http://localhost:4000/">http://localhost:4000</a></p>
+<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p><code>_config.yml</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Hexo Configuration</span><br><span class="line">## Docs: https:&#x2F;&#x2F;hexo.io&#x2F;docs&#x2F;configuration.html</span><br><span class="line">## Source: https:&#x2F;&#x2F;github.com&#x2F;hexojs&#x2F;hexo&#x2F;</span><br><span class="line"></span><br><span class="line"># Site</span><br><span class="line">title: 未来的嘉先生&#39;s blog                                                                         # 网站标题</span><br><span class="line">subtitle: &#39;无知是迷信之母&#39;                                                                         # 网站副标题</span><br><span class="line">description:           										                                       # 网站描述</span><br><span class="line">keywords:                                                                                          # 网站的关键词。支援多个关键词。</span><br><span class="line">author: GarveyZhong                                                                                # 网站的作者</span><br><span class="line">language: zh-CN                                                                                    # 网站使用的语言。</span><br><span class="line">timezone: &#39;Asia&#x2F;Shanghai&#39;                                                                          # 网站的时区</span><br><span class="line">email: 		                                                                      		           # 邮箱</span><br><span class="line"></span><br><span class="line"># URL</span><br><span class="line">url: https:&#x2F;&#x2F;innodb.top  # 网站的url，如果不在域名根目录，应包含子目录，且root要设置为 &#x2F;子目录&#x2F;</span><br><span class="line">root: &#x2F;                  # 网站的根目录</span><br><span class="line"># permalink: :year&#x2F;:month&#x2F;:day&#x2F;:title&#x2F;    # 文章永久链接的形成模版。每一篇文章都有唯一的url。</span><br><span class="line">permalink: :abbrlink.html # abbrlink 文章永久链接</span><br><span class="line">abbrlink:</span><br><span class="line">  alg: crc16</span><br><span class="line">  rep: hex</span><br><span class="line">  drafts: false</span><br><span class="line">  auto_category:</span><br><span class="line">     enable: true</span><br><span class="line">     depth:</span><br><span class="line">permalink_defaults:  # 文章永久链接中，各部分的默认值。                   </span><br><span class="line">pretty_urls:</span><br><span class="line">  trailing_index: true</span><br><span class="line">  trailing_html: true</span><br><span class="line"></span><br><span class="line"># Directory</span><br><span class="line">source_dir: source          # 网站中源文件（比如Markdown啊什么的所在的文件夹）</span><br><span class="line">public_dir: public          # 生成的静态网站的目录</span><br><span class="line">tag_dir: tags               # 标签页所在的文件夹。</span><br><span class="line">archive_dir: archives       # 文档页所在的文件夹</span><br><span class="line">category_dir: categories    # 分类所在的文件夹</span><br><span class="line">code_dir: downloads&#x2F;code    # 代码所在的文件夹</span><br><span class="line">i18n_dir: :lang             # 国际语言所在的文件夹</span><br><span class="line">skip_render:                # 过滤资源</span><br><span class="line">    - &#39;list&#x2F;*&#39;</span><br><span class="line">    - &#39;list&#x2F;**&#39;</span><br><span class="line">    - &#39;robots.txt&#39;</span><br><span class="line"></span><br><span class="line"># Writing</span><br><span class="line">new_post_name: :title.md    # 默认新建文档名，&#96;:title&#96;为变量，指文档标题，也可用其他变量</span><br><span class="line">default_layout: post        # 新建文档的默认布局</span><br><span class="line">titlecase: false            # 是否要把标题中的首字符大写</span><br><span class="line">external_link:              # 是否要在新的窗口中打开外链</span><br><span class="line">  enable: true</span><br><span class="line">  field: site</span><br><span class="line">  exclude: &#39;&#39;</span><br><span class="line">filename_case: 0            # 文件名是否小写敏感</span><br><span class="line">render_drafts: false        # 是否渲染草稿</span><br><span class="line">post_asset_folder: false    # 是否启用资源文件夹。如启用，新建文档同时建立同名的资源文件夹</span><br><span class="line">relative_link: false        # 是否把站内资源的链接改为站内相对链接。建议关闭。</span><br><span class="line">future: true                # 文档中指定为未来时间创建</span><br><span class="line"></span><br><span class="line">#代码块设置</span><br><span class="line">highlight:</span><br><span class="line">  enable: true              # 是否开启代码高亮功能</span><br><span class="line">  line_number: true         # 代码块中是否在前面加上行号</span><br><span class="line">  auto_detect: false        # 是否自动检测代码块的语言（比如Java、xml、JavaScript等）</span><br><span class="line">  tab_replace: &#39;&#39;</span><br><span class="line">  wrap: true</span><br><span class="line">  hljs: false</span><br><span class="line">prismjs:</span><br><span class="line">  enable: false</span><br><span class="line">  preprocess: true</span><br><span class="line">  line_number: true</span><br><span class="line">  tab_replace: &#39;&#39;</span><br><span class="line"></span><br><span class="line"># Home page setting</span><br><span class="line"># path: Root path for your blogs index page. (default &#x3D; &#39;&#39;)</span><br><span class="line"># per_page: Posts displayed per page. (0 &#x3D; disable pagination)</span><br><span class="line"># order_by: Posts order. (Order by date descending by default)</span><br><span class="line">index_generator:            </span><br><span class="line">  path: &#39;&#39;                  # 主页所在路径，默认为&#39;&#39;     </span><br><span class="line">  per_page: 10              # 主页的索引页包含文章数量，如未定义，则采用根目录下的&#96;per_page&#96;值</span><br><span class="line">  order_by: -date           # 文章（Post类型）排序属性，&#96;-&#96;为降序</span><br><span class="line"></span><br><span class="line"># Category &amp; Tag</span><br><span class="line">default_category: uncategorized</span><br><span class="line">category_map:</span><br><span class="line">tag_map:</span><br><span class="line"></span><br><span class="line"># Metadata elements</span><br><span class="line">## https:&#x2F;&#x2F;developer.mozilla.org&#x2F;en-US&#x2F;docs&#x2F;Web&#x2F;HTML&#x2F;Element&#x2F;meta</span><br><span class="line">meta_generator: true</span><br><span class="line"></span><br><span class="line"># 日期&#x2F;时间格式</span><br><span class="line"># Hexo使用Moment.js来解析和显示日期中定义的日期格式,可以自定义 http:&#x2F;&#x2F;momentjs.com&#x2F;docs&#x2F;#&#x2F;displaying&#x2F;format&#x2F;</span><br><span class="line">date_format: YYYY-MM-DD</span><br><span class="line">time_format: HH:mm:ss</span><br><span class="line"></span><br><span class="line"># 使用post的日期更新日期</span><br><span class="line">updated_option: false</span><br><span class="line"></span><br><span class="line"># Pagination</span><br><span class="line">## Set per_page to 0 to disable pagination</span><br><span class="line">per_page: 10                # 主页&#x2F;分类&#x2F;标签&#x2F;存档等类型索引页包含文章数量</span><br><span class="line">pagination_dir: page        # 分页所在文件夹</span><br><span class="line"></span><br><span class="line"># Include &#x2F; Exclude file(s)</span><br><span class="line">## include:&#x2F;exclude: options only apply to the &#39;source&#x2F;&#39; folder</span><br><span class="line">include:</span><br><span class="line">exclude:</span><br><span class="line">ignore:</span><br><span class="line"></span><br><span class="line"># 放置插件和主题  Plugins: https:&#x2F;&#x2F;hexo.io&#x2F;plugins&#x2F;   Themes: https:&#x2F;&#x2F;hexo.io&#x2F;themes&#x2F;</span><br><span class="line">theme: butterfly@3.3.0</span><br><span class="line"></span><br><span class="line"># 如果想在本插件中使用 MetingJS, meting：true， &#123;% meting %&#125; 的选项列表：https:&#x2F;&#x2F;github.com&#x2F;MoePlayer&#x2F;hexo-tag-aplayer&#x2F;blob&#x2F;master&#x2F;docs&#x2F;README-zh_cn.md#%E5%AE%89%E8%A3%85</span><br><span class="line">aplayer:</span><br><span class="line">  meting: true</span><br><span class="line"></span><br><span class="line"># Deployment</span><br><span class="line">## Docs: https:&#x2F;&#x2F;hexo.io&#x2F;docs&#x2F;one-command-deployment</span><br><span class="line">deploy: # 定义部署</span><br><span class="line">  type: &#39;&#39;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h2 id="Butterfly"><a href="#Butterfly" class="headerlink" title="Butterfly"></a>Butterfly</h2><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/jerryc127/hexo-theme-butterfly">GitHub</a></p>
+<h3 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd blog</span><br><span class="line">npm config set registry http:&#x2F;&#x2F;registry.npm.taobao.org</span><br><span class="line">npm i hexo-theme-butterfly</span><br><span class="line">npm install hexo-renderer-pug</span><br><span class="line">hexo cl &amp;&amp; hexo s</span><br></pre></td></tr></table></figure>
+
+<h3 id="预览-1"><a href="#预览-1" class="headerlink" title="预览"></a>预览</h3><p><a target="_blank" rel="noopener external nofollow noreferrer" href="http://localhost:4000/">http://localhost:4000</a></p>
+<h3 id="配置-1"><a href="#配置-1" class="headerlink" title="配置"></a>配置</h3><p><code>_config.yml</code>旁边创建<code>_config.butterfly.yml</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd blog</span><br><span class="line">cp node_modules&#x2F;hexo-theme-butterfly&#x2F;_config.yml _config.butterfly.yml</span><br></pre></td></tr></table></figure>
+
+<h2 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h2><h3 id="永久链接"><a href="#永久链接" class="headerlink" title="永久链接"></a>永久链接</h3><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/rozbo/hexo-abbrlink">GitHub</a></p>
+<h4 id="模块安装"><a href="#模块安装" class="headerlink" title="模块安装"></a>模块安装</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-abbrlink --save</span><br></pre></td></tr></table></figure>
+
+<h4 id="配置-2"><a href="#配置-2" class="headerlink" title="配置"></a>配置</h4><p><code>blog/_config.yml</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">permalink: posts&#x2F;:abbrlink&#x2F;</span><br></pre></td></tr></table></figure>
+
+<h3 id="GitHub-Token"><a href="#GitHub-Token" class="headerlink" title="GitHub Token"></a>GitHub Token</h3><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/settings/tokens">https://github.com/settings/tokens</a></p>
+<p>勾选repo，然后生成Personal access tokens</p>
+<h3 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h3><p>GitHub先创建一个任意名字的私有仓库（一个私有仓库的GitHub Pages分支是公开的，其他分支私有）</p>
+<h4 id="hexo-d-部署到GitHub-Pages"><a href="#hexo-d-部署到GitHub-Pages" class="headerlink" title="hexo d 部署到GitHub Pages"></a>hexo d 部署到GitHub Pages</h4><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/hexojs/hexo-deployer-git">GitHub</a></p>
+<h5 id="安装模块"><a href="#安装模块" class="headerlink" title="安装模块"></a>安装模块</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+
+<h5 id="配置-3"><a href="#配置-3" class="headerlink" title="配置"></a>配置</h5><p><code>blog/_config.yml</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  - type: git</span><br><span class="line">    repo:</span><br><span class="line">      github:</span><br><span class="line">        url: https:&#x2F;&#x2F;github.com:name&#x2F;name.git # GitHub Pages 的https</span><br><span class="line">        branch: gh-pages # GitHub Pages的分支</span><br><span class="line">        token: GitHub Token</span><br><span class="line">    name: name # GitHub用户名</span><br><span class="line">    email: email@qq.com # GitHub登陆邮箱</span><br></pre></td></tr></table></figure>
+
+<h5 id="推送到GitHub远程仓库"><a href="#推送到GitHub远程仓库" class="headerlink" title="推送到GitHub远程仓库"></a>推送到GitHub远程仓库</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo cl &amp;&amp; hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></figure>
+
+<h5 id="打开GitHub-Pages"><a href="#打开GitHub-Pages" class="headerlink" title="打开GitHub Pages"></a>打开GitHub Pages</h5><p>进入项目-&gt;settings 找到GitHub Pages，选择GitHub Pages的分支gh-pages，打开GitHub Pages</p>
+<h5 id="域名绑定"><a href="#域名绑定" class="headerlink" title="域名绑定"></a>域名绑定</h5><h6 id="创建CNAME"><a href="#创建CNAME" class="headerlink" title="创建CNAME"></a>创建CNAME</h6><p>blog/source里创建CNAME文件，全大写，CNAME里写入</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">lllll.cf</span><br></pre></td></tr></table></figure>
+
+<h6 id="域名管理"><a href="#域名管理" class="headerlink" title="域名管理"></a>域名管理</h6><p>设置CNAME记录，填入github.io</p>
+<h4 id="GitHub-Action-部署到GitHub-Pages"><a href="#GitHub-Action-部署到GitHub-Pages" class="headerlink" title="GitHub Action 部署到GitHub Pages"></a>GitHub Action 部署到GitHub Pages</h4><h5 id="设置secrets"><a href="#设置secrets" class="headerlink" title="设置secrets"></a>设置secrets</h5><p>进入项目-&gt;settings/secrets 增加三个参数</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">GH_NAME</span><br><span class="line">GH_EMAIL</span><br><span class="line">GH_TOKEN</span><br></pre></td></tr></table></figure>
+
+<h5 id="配置-4"><a href="#配置-4" class="headerlink" title="配置"></a>配置</h5><p><code>.github/workflows/main.yml</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">name: Deploy Blog</span><br><span class="line"></span><br><span class="line">on:</span><br><span class="line">  push:</span><br><span class="line">    branches: </span><br><span class="line">      - main </span><br><span class="line">env:</span><br><span class="line">  TZ: Asia&#x2F;Shanghai</span><br><span class="line">  </span><br><span class="line">jobs:</span><br><span class="line">  build: # 一项叫做build的任务</span><br><span class="line">    name: Hexo blog build &amp; deploy</span><br><span class="line">    runs-on: ubuntu-latest # 在最新版的Ubuntu系统下运行</span><br><span class="line">    </span><br><span class="line">    steps:</span><br><span class="line">    - name: Checkout codes # 将仓库内master分支的内容下载到工作目录</span><br><span class="line">      uses: actions&#x2F;checkout@master # 脚本来自 https:&#x2F;&#x2F;github.com&#x2F;actions&#x2F;checkout</span><br><span class="line">      with:</span><br><span class="line">        persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token</span><br><span class="line">        fetch-depth: 1</span><br><span class="line"></span><br><span class="line">    - name: Setup Node # 配置Node环境</span><br><span class="line">      uses: actions&#x2F;setup-node@v1 # 配置脚本来自 https:&#x2F;&#x2F;github.com&#x2F;actions&#x2F;setup-node</span><br><span class="line">      with:</span><br><span class="line">        node-version: &#39;12.x&#39;</span><br><span class="line"></span><br><span class="line">    - name: Cache</span><br><span class="line">      uses: actions&#x2F;cache@v1</span><br><span class="line">      id: cache-dependencies</span><br><span class="line">      with:</span><br><span class="line">        path: node_modules</span><br><span class="line">        key: $&#123;&#123;runner.OS&#125;&#125;-$&#123;&#123;hashFiles(&#39;**&#x2F;package-lock.json&#39;)&#125;&#125;</span><br><span class="line"></span><br><span class="line">    - name: Install plugins</span><br><span class="line">      if: steps.cache-dependencies.outputs.cache-hit !&#x3D; &#39;true&#39;</span><br><span class="line">      run: |</span><br><span class="line">        npm install</span><br><span class="line"></span><br><span class="line">    - name: Deploy &amp;&amp; Create local changes</span><br><span class="line">      run: |</span><br><span class="line">        npm install hexo-cli -g</span><br><span class="line">        hexo cl &amp;&amp; hexo g</span><br><span class="line"></span><br><span class="line">    - name: Commit files</span><br><span class="line">      run: |</span><br><span class="line">        git config --global core.ignorecase false</span><br><span class="line">        # set git infomation</span><br><span class="line">        git config --global user.email &#39;$&#123;&#123; secrets.GH_NAME &#125;&#125;&#39; # set up GitHub name</span><br><span class="line">        git config --global user.name &#39;$&#123;&#123; secrets.GH_EMAIL &#125;&#125;&#39; # set up GitHub email</span><br><span class="line">        cd .&#x2F;public</span><br><span class="line">        git init</span><br><span class="line">        git add .</span><br><span class="line">        git commit -m &quot;Add changes&quot; -a  </span><br><span class="line"></span><br><span class="line">    - name: Deploy</span><br><span class="line">      uses: peaceiris&#x2F;actions-gh-pages@v3</span><br><span class="line">      with:</span><br><span class="line">        github_token: $&#123;&#123; secrets.GH_TOKEN &#125;&#125; # set up GitHub Token for deploy</span><br><span class="line">        publish_branch: gh-pages #default: gh-pages</span><br></pre></td></tr></table></figure>
+
+<h5 id="打开GitHub-Pages-1"><a href="#打开GitHub-Pages-1" class="headerlink" title="打开GitHub Pages"></a>打开GitHub Pages</h5><p>进入项目-&gt;settings 找到GitHub Pages，选择GitHub Pages的分支gh-pages，打开GitHub Pages</p>
+<h5 id="域名绑定-1"><a href="#域名绑定-1" class="headerlink" title="域名绑定"></a>域名绑定</h5><h6 id="创建CNAME-1"><a href="#创建CNAME-1" class="headerlink" title="创建CNAME"></a>创建CNAME</h6><p>blog/source里创建CNAME文件，全大写，CNAME里写入</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">lllll.cf</span><br></pre></td></tr></table></figure>
+
+<h6 id="域名管理-1"><a href="#域名管理-1" class="headerlink" title="域名管理"></a>域名管理</h6><p>设置CNAME记录，填入github.io</p>
+<h3 id="部署到vercel"><a href="#部署到vercel" class="headerlink" title="部署到vercel"></a>部署到vercel</h3><h4 id="注册vercel"><a href="#注册vercel" class="headerlink" title="注册vercel"></a>注册vercel</h4><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://vercel.com,github邮箱换谷歌邮箱,进行注册/">https://vercel.com，GitHub邮箱换谷歌邮箱，进行注册</a></p>
+<h4 id="通过GitHub源码部署到vercel"><a href="#通过GitHub源码部署到vercel" class="headerlink" title="通过GitHub源码部署到vercel"></a>通过GitHub源码部署到vercel</h4><p>选Import a Git Repository，仓库https填入。</p>
+<p>FRAMEWORK PRESET 选择Hexo，然后Deploy</p>
+<h4 id="域名绑定-2"><a href="#域名绑定-2" class="headerlink" title="域名绑定"></a>域名绑定</h4><p>进入vercel项目，settings/domains，填入lllll.cf，域名管理设置A记录，ip填入76.76.21.21</p>
+<h2 id="SEO"><a href="#SEO" class="headerlink" title="SEO"></a>SEO</h2><h3 id="验证百度站点"><a href="#验证百度站点" class="headerlink" title="验证百度站点"></a>验证百度站点</h3><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://ziyuan.baidu.com/site/">https://ziyuan.baidu.com/site/</a></p>
+<h4 id="HTML标签验证"><a href="#HTML标签验证" class="headerlink" title="HTML标签验证"></a>HTML标签验证</h4><p><code>_config.butterfly.yml</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">baidu_site_verification: code-P2tiPNRKk6</span><br></pre></td></tr></table></figure>
+
+<h3 id="百度SEO"><a href="#百度SEO" class="headerlink" title="百度SEO"></a>百度SEO</h3><p>一周之后收录</p>
+<h4 id="模块安装-1"><a href="#模块安装-1" class="headerlink" title="模块安装"></a>模块安装</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-baidu-sitemap</span><br></pre></td></tr></table></figure>
+
+<h4 id="配置-5"><a href="#配置-5" class="headerlink" title="配置"></a>配置</h4><p><code>_config.yml</code>后面加上以下代码</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">baidusitemap:</span><br><span class="line">  path: sitemap.xml</span><br></pre></td></tr></table></figure>
+
+<p><code>hexo cl &amp;&amp; hexo s</code></p>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="http://localhost:4000/sitemap.xml">http://localhost:4000/sitemap.xml</a></p>
+<h3 id="百度、必应、主动推送"><a href="#百度、必应、主动推送" class="headerlink" title="百度、必应、主动推送"></a>百度、必应、主动推送</h3><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/cjh0613/hexo-submit-urls-to-search-engine">GitHub</a></p>
+<h4 id="站点地图模块安装"><a href="#站点地图模块安装" class="headerlink" title="站点地图模块安装"></a>站点地图模块安装</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install --save hexo-submit-urls-to-search-engine</span><br></pre></td></tr></table></figure>
+
+<h4 id="配置-6"><a href="#配置-6" class="headerlink" title="配置"></a>配置</h4><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://ziyuan.baidu.com/site/index###/">百度站点管理</a></p>
+<p>普通收录-&gt;资源提交-&gt;API提交-&gt;推送接口里有token</p>
+<p><code>_config.yml</code>后面加上以下代码</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo_submit_urls_to_search_engine:</span><br><span class="line">  submit_condition: count ###链接被提交的条件，可选值：count | period 现仅支持count</span><br><span class="line">  count: 10 ### 提交最新的10个链接</span><br><span class="line">  period: 900 ### 提交修改时间在 900 秒内的链接</span><br><span class="line">  google: 0 ### 是否向Google提交，可选值：1 | 0（0：否；1：是）</span><br><span class="line">  bing: 1 ### 是否向bing提交，可选值：1 | 0（0：否；1：是）</span><br><span class="line">  baidu: 1 ### 是否向baidu提交，可选值：1 | 0（0：否；1：是）</span><br><span class="line">  txt_path: submit_urls.txt #### 文本文档名， 需要推送的链接会保存在此文本文档里</span><br><span class="line">  baidu_host: https:&#x2F;&#x2F;cjh0613.github.io #### 在百度站长平台中注册的域名</span><br><span class="line">  baidu_token: 请按照文档说明获取 #### 请注意这是您的秘钥， 所以请不要把它直接发布在公众仓库里!</span><br><span class="line">  bing_host: https:&#x2F;&#x2F;cjh0613.github.io #### 在bing站长平台中注册的域名</span><br><span class="line">  bing_token: 请按照文档说明获取 #### 请注意这是您的秘钥， 所以请不要把它直接发布在公众仓库里!</span><br><span class="line">  google_host: https:&#x2F;&#x2F;cjh0613.github.io #### 在google站长平台中注册的域名</span><br><span class="line">  google_key_file: Project.json ###存放google key的json文件，放于网站根目录（与hexo _config.yml文件位置相同），请不要把json文件内容直接发布在公众仓库里!</span><br><span class="line">  replace: 0  ### 是否替换链接中的部分字符串，可选值：1 | 0（0：否；1：是）</span><br><span class="line">  find_what: http:&#x2F;&#x2F;cjh0613.github.io&#x2F;blog</span><br><span class="line">  replace_with: https:&#x2F;&#x2F;cjh0613.com</span><br></pre></td></tr></table></figure>
+
+<p><code>_config.yml</code>的<code>deploy:</code>改成</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  - type: &#39;&#39;</span><br><span class="line">  - type: cjh_baidu_url_submitter # 主动提交百度爬虫</span><br></pre></td></tr></table></figure>
+
+<p><code>_config.yml</code>的<code>url: http://example.com</code>改成</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">url: https:&#x2F;&#x2F;lllll.cf</span><br></pre></td></tr></table></figure>
+
+<p><code>hexo cl &amp;&amp;hexo g &amp;&amp; hexo d</code>最后出现<code>&#123;&quot;remain&quot;:2996,&quot;success&quot;:2&#125;</code>即可</p>
+<h3 id="Robots"><a href="#Robots" class="headerlink" title="Robots"></a>Robots</h3><p><code>blog/source/robots.txt</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">User-agent: Googlebot</span><br><span class="line">Disallow: &#x2F;page&#x2F;</span><br><span class="line">Disallow: &#x2F;page&#x2F;*.html</span><br><span class="line">User-agent: *</span><br><span class="line">Disallow: &#x2F;page&#x2F;</span><br><span class="line">Disallow: &#x2F;page&#x2F;*.html</span><br><span class="line">#Disallow politics</span><br></pre></td></tr></table></figure>
+
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://ziyuan.baidu.com/robots/index?site=https://lllll.cf/">百度robots</a></p>
+<h3 id="防外链"><a href="#防外链" class="headerlink" title="防外链"></a>防外链</h3><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/hexojs/hexo-filter-nofollow">GitHub</a></p>
+<h4 id="模块安装-2"><a href="#模块安装-2" class="headerlink" title="模块安装"></a>模块安装</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm i hexo-filter-nofollow</span><br></pre></td></tr></table></figure>
+
+<h4 id="配置-7"><a href="#配置-7" class="headerlink" title="配置"></a>配置</h4><p><code>_config.yml</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">nofollow:</span><br><span class="line">  enable: true</span><br><span class="line">  field: site</span><br><span class="line">  exclude:</span><br><span class="line">    - &#39;exclude1.com&#39;</span><br><span class="line">    - &#39;exclude2.com&#39;</span><br></pre></td></tr></table></figure>
+
+<h3 id="静态资源压缩Hexo-all-minifier"><a href="#静态资源压缩Hexo-all-minifier" class="headerlink" title="静态资源压缩Hexo-all-minifier"></a>静态资源压缩Hexo-all-minifier</h3><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/chenzhutian/hexo-all-minifier">GitHub</a></p>
+<h4 id="模块安装-3"><a href="#模块安装-3" class="headerlink" title="模块安装"></a>模块安装</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-all-minifier --save</span><br></pre></td></tr></table></figure>
+
+<h4 id="配置-8"><a href="#配置-8" class="headerlink" title="配置"></a>配置</h4><p><code>_config.yml</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">all_minifier: true</span><br><span class="line">html_minifier:</span><br><span class="line">  silent: true</span><br><span class="line">css_minifier:</span><br><span class="line">  silent: true</span><br><span class="line">js_minifier:</span><br><span class="line">  silent: true</span><br><span class="line">image_minifier:</span><br><span class="line">  enable: false</span><br></pre></td></tr></table></figure>
+
+<h2 id="镜像站"><a href="#镜像站" class="headerlink" title="镜像站"></a>镜像站</h2><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://lllllcf.netlify.app/">Netlify</a> | <a target="_blank" rel="noopener external nofollow noreferrer" href="https://lllll-cf.weilining.vercel.app/">Vercel</a></p>
+
+    </div>
+
+    
+    
+    
+      
+  <div class="popular-posts-header">相关文章</div>
+  <ul class="popular-posts">
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="/105-1.html" rel="bookmark">WordPress 面板切换语言</a></div>
+    </li>
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="/10.html" rel="bookmark">Visual Studio Code 文件比较</a></div>
+    </li>
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="/105.html" rel="bookmark">Docker Compose WordPress 快速安装</a></div>
+    </li>
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="/1016.html" rel="bookmark">最方便的 Hexo 部署</a></div>
+    </li>
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="/106-1.html" rel="bookmark">彻底解决国内npm/yarn安装包很慢问题</a></div>
+    </li>
+  </ul>
+
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>Buy me a coffee</div>
+  <button onclick="document.querySelector('.post-reward').classList.toggle('active');">
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/20201122213021.png" alt="Lining Wei 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/434235F3-7A93-4EA4-A7B6-4F6D977F1A89.png" alt="Lining Wei 支付宝">
+        <span>支付宝</span>
+      </div>
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/bitcoin.png" alt="Lining Wei 比特币">
+        <span>比特币</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文博主： </strong>Lining Wei
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://weilining.github.io/6.html" title="玩转 Hexo Butterfly">https://weilining.github.io/6.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener external nofollow noreferrer" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E9%BB%98%E8%AE%A4/" rel="tag"><i class="fa fa-tag"></i> 默认</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/5.html" rel="prev" title="macOS 之间如何远程控制">
+                  <i class="fa fa-chevron-left"></i> macOS 之间如何远程控制
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/7.html" rel="next" title="云端开发环境">
+                  云端开发环境 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+      <div class="comment-button-group">
+          <a class="btn comment-button livere">livere</a>
+          <a class="btn comment-button valine">valine</a>
+      </div>
+        <div class="comment-position livere">
+          
+  <div class="comments">
+    <div id="lv-container" data-id="city" data-uid="MTAyMC81MTYyOC8yODEwOQ=="></div>
+  </div>
+  
+        </div>
+        <div class="comment-position valine">
+          <div class="comments" id="valine-comments"></div>
+        </div>
+      <script data-pjax>
+        (function() {
+          const commentButton = document.querySelectorAll('.comment-button');
+            commentButton.forEach(element => {
+            const commentClass = element.classList[2];
+            element.addEventListener('click', () => {
+              commentButton.forEach(active => active.classList.toggle('active', active === element));
+              document.querySelectorAll('.comment-position').forEach(active => active.classList.toggle('active', active.classList.contains(commentClass)));
+              if (CONFIG.comments.storage) {
+                localStorage.setItem('comments_active', commentClass);
+              }
+            });
+          });
+          let { activeClass } = CONFIG.comments;
+          if (CONFIG.comments.storage) {
+            activeClass = localStorage.getItem('comments_active') || activeClass;
+          }
+          if (activeClass) {
+            const activeButton = document.querySelector(`.comment-button.${activeClass}`);
+            if (activeButton) {
+              activeButton.click();
+            }
+          }
+        })();
+      </script>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 2015 – 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Ln</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">278k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">4:13</span>
+  </span>
+</div><script src="https://cdn.jsdelivr.net/npm/canvas-matrix.js@0/canvas-matrix.min.js"></script>
+
+    </div>
+  </footer>
+
+  
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/@next-theme/pjax@0.4.0/pjax.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.1.0/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.1.0/source/js/next-boot.js"></script><script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '.page-configurations',
+    '.main-inner',
+    '.post-toc-wrap',
+    '.languages',
+    '.pjax'
+  ],
+  analytics: false,
+  cacheBust: false,
+  scrollRestoration: false,
+  scrollTo: !CONFIG.bookmark.enable
+});
+
+document.addEventListener('pjax:success', () => {
+  pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  const hasTOC = document.querySelector('.post-toc');
+  document.querySelector('.sidebar-inner').classList.toggle('sidebar-nav-active', hasTOC);
+  document.querySelector(hasTOC ? '.sidebar-nav-toc' : '.sidebar-nav-overview').click();
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
+
+  
+
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.1.0/source/js/local-search.js"></script>
+
+
+
+
+
+
+  
+
+
+
+
+    <div class="pjax">
+
+  
+
+  <script src="//cdn.jsdelivr.net/npm/quicklink@2.0.0/dist/quicklink.umd.js"></script>
+  <script>
+      window.addEventListener('load', () => {
+      quicklink.listen({
+        timeout : 3000,
+        priority: true,
+        ignores : [uri => uri.includes('#'),uri => uri === 'https://weilining.github.io/6.html',]
+      });
+      });
+  </script>
+
+<script>
+NexT.utils.loadComments('#lv-container', () => {
+  window.livereOptions = {
+    refer: "6.html"
+  };
+  (function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+    if (typeof LivereTower === 'function') { return; }
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+    e.parentNode.insertBefore(j, e);
+  })(document, 'script');
+});
+</script>
+
+<script>
+NexT.utils.loadComments('#valine-comments', () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', () => {
+    new Valine(Object.assign({"enable":true,"appId":"CY5HvvaX6B7MHSPAUt7AJNp1-MdYXbMMI","appKey":"LRXpMJ2P3huqVJg8CmKR8gYw","serverURLs":null,"placeholder":"来都来了，不撩一句嘛~，留言记得在上面留下【邮箱】，方便收到回复通知~","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"lang":"zh-cn","visitor":true,"comment_count":true,"recordIP":false,"enableQQ":false,"requiredFields":[]}, {
+      el: '#valine-comments',
+      path: "/6.html",
+      serverURLs: "https://cy5hvvax.api.lncldglobal.com"
+    }));
+  }, window.Valine);
+});
+</script>
+
+
+    </div>
+</body>
+</html>
