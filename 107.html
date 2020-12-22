@@ -26,7 +26,7 @@
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"weilining.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.1.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"buttons","active":"valine","storage":false,"lazyload":false,"nav":null,"activeClass":"valine"},"motion":{"enable":false,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+    var CONFIG = {"hostname":"weilining.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.1.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"buttons","active":"valine","storage":false,"lazyload":false,"nav":null,"activeClass":"valine"},"motion":{"enable":false,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 <meta name="description" content="默认">
 <meta property="og:type" content="article">
@@ -275,7 +275,7 @@
 </div>
   <div class="links-of-author site-overview-item animated">
       <span class="links-of-author-item">
-        <a href="https://github.com/weilining" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;weilining" rel="noopener external nofollow noreferrer" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3dlaWxpbmluZw==" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;weilining"><i class="fab fa-github fa-fw"></i></span>
       </span>
       <span class="links-of-author-item">
         <a href="/atom.xml" title="RSS → &#x2F;atom.xml"><i class="fa fa-rss fa-fw"></i></a>
@@ -617,7 +617,7 @@ if(canvas.getContext){
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          使用 VuePress 搭建博客<a href="https://github.com/weilining/weilining.cf/edit/main/source/_posts/107.md" class="post-edit-link" title="编辑" rel="noopener external nofollow noreferrer" target="_blank"><i class="fa fa-pen-nib"></i></a>
+          使用 VuePress 搭建博客<span class="exturl post-edit-link" data-url="aHR0cHM6Ly9naXRodWIuY29tL3dlaWxpbmluZy93ZWlsaW5pbmcuY2YvZWRpdC9tYWluL3NvdXJjZS9fcG9zdHMvMTA3Lm1k" title="编辑"><i class="fa fa-pen-nib"></i></span>
         </h1>
 
         <div class="post-meta-container">
@@ -703,7 +703,7 @@ if(canvas.getContext){
 
 <h2 id="搭建"><a href="#搭建" class="headerlink" title="搭建"></a>搭建</h2><h3 id="创建你的第一篇文档"><a href="#创建你的第一篇文档" class="headerlink" title="创建你的第一篇文档"></a>创建你的第一篇文档</h3><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">mkdir docs &amp;&amp; <span class="built_in">echo</span> <span class="string">&#x27;# Hello VuePress&#x27;</span> &gt; docs/README.md</span><br></pre></td></tr></table></figure>
 
-<h3 id="在-package-json-中添加一些-scripts"><a href="#在-package-json-中添加一些-scripts" class="headerlink" title="在 package.json 中添加一些 scripts"></a>在 <code>package.json</code> 中添加一些 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://classic.yarnpkg.com/zh-Hans/docs/package-json#toc-scripts">scripts</a></h3><p>这一步骤是可选的，但我们推荐你完成它。在下文中，我们会默认这些 scripts 已经被添加。</p>
+<h3 id="在-package-json-中添加一些-scripts"><a href="#在-package-json-中添加一些-scripts" class="headerlink" title="在 package.json 中添加一些 scripts"></a>在 <code>package.json</code> 中添加一些 <span class="exturl" data-url="aHR0cHM6Ly9jbGFzc2ljLnlhcm5wa2cuY29tL3poLUhhbnMvZG9jcy9wYWNrYWdlLWpzb24jdG9jLXNjcmlwdHM=">scripts<i class="fa fa-external-link-alt"></i></span></h3><p>这一步骤是可选的，但我们推荐你完成它。在下文中，我们会默认这些 scripts 已经被添加。</p>
 <figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;scripts&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;docs:dev&quot;</span>: <span class="string">&quot;vuepress dev docs&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;docs:build&quot;</span>: <span class="string">&quot;vuepress build docs&quot;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h2 id="写作与发布"><a href="#写作与发布" class="headerlink" title="写作与发布"></a>写作与发布</h2><p>如果你的环境已经搭建完毕，那么你可以选择在纯 Markdown 下进行写作，然后直接 <code>push</code> 到你的仓库中去。</p>
@@ -711,7 +711,7 @@ if(canvas.getContext){
 <p>与 Vue 的开发服务器相同，VuePress 的服务器也是支持热重载的。</p>
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">yarn docs:dev <span class="comment"># npm run docs:dev</span></span><br></pre></td></tr></table></figure>
 
-<p>这样，在默认情况下会在 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://localhost:8080/">https://localhost:8080</a> 开放你的开发服务器，访问即可看到你的网站。</p>
+<p>这样，在默认情况下会在 <span class="exturl" data-url="aHR0cHM6Ly9sb2NhbGhvc3Q6ODA4MC8=">https://localhost:8080<i class="fa fa-external-link-alt"></i></span> 开放你的开发服务器，访问即可看到你的网站。</p>
 <p>最后，写完了就可以进行构建了——将你的网站样式和内容编译成静态网页。</p>
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">yarn docs:build <span class="comment"># npm run docs:build</span></span><br></pre></td></tr></table></figure>
 
@@ -724,7 +724,7 @@ if(canvas.getContext){
 <p><code>config.js</code> 在写入一个语句之后即可当作一般的 JSON 文件来使用——它比 JSON 要宽松得多。</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  title: <span class="string">&#x27;Hello VuePress&#x27;</span>,</span><br><span class="line">  description: <span class="string">&#x27;Just playing around&#x27;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>具体配置项目可以参考 VuePress 官方文档的<a target="_blank" rel="noopener external nofollow noreferrer" href="https://vuepress.vuejs.org/zh/guide/basic-config.html#%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6">配置</a></p>
+<p>具体配置项目可以参考 VuePress 官方文档的<span class="exturl" data-url="aHR0cHM6Ly92dWVwcmVzcy52dWVqcy5vcmcvemgvZ3VpZGUvYmFzaWMtY29uZmlnLmh0bWwjJUU5JTg1JThEJUU3JUJEJUFFJUU2JTk2JTg3JUU0JUJCJUI2">配置<i class="fa fa-external-link-alt"></i></span></p>
 <p>要切换主题，首先使用 npm 安装你想要的主题，比如</p>
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">yarn add vuepress-theme-reco <span class="comment"># npm install vuepress-theme-example --save-dev</span></span><br></pre></td></tr></table></figure>
 
@@ -735,17 +735,17 @@ if(canvas.getContext){
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">yarn docs:dev # npm run docs:dev</span><br></pre></td></tr></table></figure>
 
 <p>在这里需要注意的一点是，VuePress 的所有主题、Plugin，根据官方的建议，均是以 <code>vuepress-theme-</code> 和 <code>vuepress-plugin-</code> 开头。也正因此，安装以他们开头的主题或插件，在填写的时候则可以省略 <code>vuepress-theme-</code> 这样的开头。当然，这只是一般情况，具体请以你所看到的主题或插件为准。</p>
-<p>关于 VuePress 原版主题的相关配置可以看官方文档的<a target="_blank" rel="noopener external nofollow noreferrer" href="https://vuepress.vuejs.org/zh/default-theme-config/">默认主题</a>。</p>
+<p>关于 VuePress 原版主题的相关配置可以看官方文档的<span class="exturl" data-url="aHR0cHM6Ly92dWVwcmVzcy52dWVqcy5vcmcvemgvZGVmYXVsdC10aGVtZS1jb25maWcv">默认主题<i class="fa fa-external-link-alt"></i></span>。</p>
 <h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p>这是阅读完文章后，我个人推荐去参考的一些文档，以及一些可能需要的插件。</p>
 <ul>
-<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://vuepress.vuejs.org/zh/config/#%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE">config.js 里完整的配置项有多少、哪些，有何作用？</a></li>
-<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.google.com/search?q=vuepress-theme+site:github.com">Google 搜索 VuePress 的主题</a></li>
-<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/meteorlxy/awesome-vuepress">meteorlxy/awesome-vuepress</a> - 丰富的 VuePress 周边生态推荐</li>
-<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/vuejs/vuepress/tree/master/packages/@vuepress">vuejs/vuepress/packages/@vuepress</a> - VuePress 官方开发的插件</li>
-<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/vuepress/vuepress-plugin-mathjax">vuepress-plugin-mathjax</a> - 在你的博客里写 公式。</li>
-<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/vuejs/vuepress/tree/master/packages/@vuepress/plugin-last-updated">vuepress-plugin-last-updated</a> - 根据 Git Log 显示文章最后修改时间</li>
-<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/vuejs/vuepress/tree/master/packages/@vuepress/plugin-pwa">vuepress-plugin-pwa</a> - 将你的博客变成具有 PWA 性质的 Web App</li>
-<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/Subilan/Blog">Subilan/Blog</a> - 本博客的 GitHub 仓库</li>
+<li><span class="exturl" data-url="aHR0cHM6Ly92dWVwcmVzcy52dWVqcy5vcmcvemgvY29uZmlnLyMlRTUlOUYlQkElRTYlOUMlQUMlRTklODUlOEQlRTclQkQlQUU=">config.js 里完整的配置项有多少、哪些，有何作用？<i class="fa fa-external-link-alt"></i></span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS9zZWFyY2g/cT12dWVwcmVzcy10aGVtZStzaXRlOmdpdGh1Yi5jb20=">Google 搜索 VuePress 的主题<i class="fa fa-external-link-alt"></i></span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL21ldGVvcmx4eS9hd2Vzb21lLXZ1ZXByZXNz">meteorlxy/awesome-vuepress<i class="fa fa-external-link-alt"></i></span> - 丰富的 VuePress 周边生态推荐</li>
+<li><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3Z1ZWpzL3Z1ZXByZXNzL3RyZWUvbWFzdGVyL3BhY2thZ2VzL0B2dWVwcmVzcw==">vuejs/vuepress/packages/@vuepress<i class="fa fa-external-link-alt"></i></span> - VuePress 官方开发的插件</li>
+<li><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3Z1ZXByZXNzL3Z1ZXByZXNzLXBsdWdpbi1tYXRoamF4">vuepress-plugin-mathjax<i class="fa fa-external-link-alt"></i></span> - 在你的博客里写 公式。</li>
+<li><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3Z1ZWpzL3Z1ZXByZXNzL3RyZWUvbWFzdGVyL3BhY2thZ2VzL0B2dWVwcmVzcy9wbHVnaW4tbGFzdC11cGRhdGVk">vuepress-plugin-last-updated<i class="fa fa-external-link-alt"></i></span> - 根据 Git Log 显示文章最后修改时间</li>
+<li><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3Z1ZWpzL3Z1ZXByZXNzL3RyZWUvbWFzdGVyL3BhY2thZ2VzL0B2dWVwcmVzcy9wbHVnaW4tcHdh">vuepress-plugin-pwa<i class="fa fa-external-link-alt"></i></span> - 将你的博客变成具有 PWA 性质的 Web App</li>
+<li><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1N1YmlsYW4vQmxvZw==">Subilan/Blog<i class="fa fa-external-link-alt"></i></span> - 本博客的 GitHub 仓库</li>
 </ul>
 
     </div>
@@ -809,7 +809,7 @@ if(canvas.getContext){
       <a href="https://weilining.github.io/107.html" title="使用 VuePress 搭建博客">https://weilining.github.io/107.html</a>
   </li>
   <li class="post-copyright-license">
-    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener external nofollow noreferrer" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC8="><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
   </li>
 </ul>
 </div>

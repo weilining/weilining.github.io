@@ -26,7 +26,7 @@
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"weilining.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.1.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"buttons","active":"valine","storage":false,"lazyload":false,"nav":null,"activeClass":"valine"},"motion":{"enable":false,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+    var CONFIG = {"hostname":"weilining.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.1.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"buttons","active":"valine","storage":false,"lazyload":false,"nav":null,"activeClass":"valine"},"motion":{"enable":false,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 <meta name="description" content="默认">
 <meta property="og:type" content="article">
@@ -280,7 +280,7 @@
 </div>
   <div class="links-of-author site-overview-item animated">
       <span class="links-of-author-item">
-        <a href="https://github.com/weilining" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;weilining" rel="noopener external nofollow noreferrer" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3dlaWxpbmluZw==" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;weilining"><i class="fab fa-github fa-fw"></i></span>
       </span>
       <span class="links-of-author-item">
         <a href="/atom.xml" title="RSS → &#x2F;atom.xml"><i class="fa fa-rss fa-fw"></i></a>
@@ -622,7 +622,7 @@ if(canvas.getContext){
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Hexo NexT LeanCloud<a href="https://github.com/weilining/weilining.cf/edit/main/source/_posts/leancloud.md" class="post-edit-link" title="编辑" rel="noopener external nofollow noreferrer" target="_blank"><i class="fa fa-pen-nib"></i></a>
+          Hexo NexT LeanCloud<span class="exturl post-edit-link" data-url="aHR0cHM6Ly9naXRodWIuY29tL3dlaWxpbmluZy93ZWlsaW5pbmcuY2YvZWRpdC9tYWluL3NvdXJjZS9fcG9zdHMvbGVhbmNsb3VkLm1k" title="编辑"><i class="fa fa-pen-nib"></i></span>
         </h1>
 
         <div class="post-meta-container">
@@ -714,7 +714,7 @@ if(canvas.getContext){
 <p>进入LeanCloud<code>设置</code>-&gt;<code>域名绑定</code>-&gt;<code>API 访问域名</code>-&gt;<code>绑定新域名</code></p>
 <p>输入域名后配置CNAME解析</p>
 <p>系统会自动检测备案、解析、以及配置SSL证书</p>
-<h1 id="2-配置"><a href="#2-配置" class="headerlink" title="2.配置"></a>2.配置</h1><h2 id="2-1-主题配置"><a href="#2-1-主题配置" class="headerlink" title="2.1 主题配置"></a>2.1 主题配置</h2><p><strong>若同时安装了Valine评论系统会产生冲突，请参考：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://blog.qust.cc/archives/63320.html">Hexo Next阅读次数不正常、显示多个阅读次数</a></strong></p>
+<h1 id="2-配置"><a href="#2-配置" class="headerlink" title="2.配置"></a>2.配置</h1><h2 id="2-1-主题配置"><a href="#2-1-主题配置" class="headerlink" title="2.1 主题配置"></a>2.1 主题配置</h2><p><strong>若同时安装了Valine评论系统会产生冲突，请参考：<span class="exturl" data-url="aHR0cHM6Ly9ibG9nLnF1c3QuY2MvYXJjaGl2ZXMvNjMzMjAuaHRtbA==">Hexo Next阅读次数不正常、显示多个阅读次数<i class="fa fa-external-link-alt"></i></span></strong></p>
 <p>修改<code>主题配置</code>文件，修改以下字段，每一项都需要修改</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Show number of visitors to each article.</span><br><span class="line"># You can visit https:&#x2F;&#x2F;leancloud.cn get AppID and AppKey.</span><br><span class="line">leancloud_visitors:</span><br><span class="line">  enable: true</span><br><span class="line">  app_id: &lt;App ID&gt;</span><br><span class="line">  app_key: &lt;App Key&gt;</span><br><span class="line">  #1.2中配置的域名</span><br><span class="line">  server_url: &lt;your server url&gt;</span><br><span class="line">  # Dependencies: https:&#x2F;&#x2F;github.com&#x2F;theme-next&#x2F;hexo-leancloud-counter-security</span><br><span class="line">  # If you don&#39;t care about security in lc counter and just want to use it directly</span><br><span class="line">  # (without hexo-leancloud-counter-security plugin), set the &#96;security&#96; to &#96;false&#96;.</span><br><span class="line">  security: true</span><br></pre></td></tr></table></figure>
 
@@ -764,7 +764,7 @@ if(canvas.getContext){
 <h3 id="5-3-配置侧边栏中文"><a href="#5-3-配置侧边栏中文" class="headerlink" title="5.3 配置侧边栏中文"></a>5.3 配置侧边栏中文</h3><p>打开<strong>hexo/theme/next/languages/zh-Hans.yml</strong>，搜索menu，添加<code>hot: 热度排行</code>即可汉化</p>
 <h1 id="6-异常"><a href="#6-异常" class="headerlink" title="6.异常"></a>6.异常</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">TypeError: serverURL option is required for apps from CN region</span><br></pre></td></tr></table></figure>
 
-<p>没有设置server_url项，或者账户不是来自<a target="_blank" rel="noopener external nofollow noreferrer" href="https://leancloud.cn/">https://leancloud.cn</a></p>
+<p>没有设置server_url项，或者账户不是来自<span class="exturl" data-url="aHR0cHM6Ly9sZWFuY2xvdWQuY24v">https://leancloud.cn<i class="fa fa-external-link-alt"></i></span></p>
 
     </div>
 
@@ -827,7 +827,7 @@ if(canvas.getContext){
       <a href="https://weilining.github.io/leancloud.html" title="Hexo NexT LeanCloud">https://weilining.github.io/leancloud.html</a>
   </li>
   <li class="post-copyright-license">
-    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener external nofollow noreferrer" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC8="><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
   </li>
 </ul>
 </div>

@@ -26,7 +26,7 @@
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"weilining.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.1.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"buttons","active":"valine","storage":false,"lazyload":false,"nav":null,"activeClass":"valine"},"motion":{"enable":false,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+    var CONFIG = {"hostname":"weilining.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.1.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"buttons","active":"valine","storage":false,"lazyload":false,"nav":null,"activeClass":"valine"},"motion":{"enable":false,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 <meta name="description" content="Hexo NexT 配置设置">
 <meta property="og:type" content="article">
@@ -279,7 +279,7 @@
 </div>
   <div class="links-of-author site-overview-item animated">
       <span class="links-of-author-item">
-        <a href="https://github.com/weilining" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;weilining" rel="noopener external nofollow noreferrer" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3dlaWxpbmluZw==" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;weilining"><i class="fab fa-github fa-fw"></i></span>
       </span>
       <span class="links-of-author-item">
         <a href="/atom.xml" title="RSS → &#x2F;atom.xml"><i class="fa fa-rss fa-fw"></i></a>
@@ -621,7 +621,7 @@ if(canvas.getContext){
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Hexo Next 配置设置<a href="https://github.com/weilining/weilining.cf/edit/main/source/_posts/Hexo%E7%9A%84Next%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96%E8%AE%BE%E7%BD%AE.md" class="post-edit-link" title="编辑" rel="noopener external nofollow noreferrer" target="_blank"><i class="fa fa-pen-nib"></i></a>
+          Hexo Next 配置设置<span class="exturl post-edit-link" data-url="aHR0cHM6Ly9naXRodWIuY29tL3dlaWxpbmluZy93ZWlsaW5pbmcuY2YvZWRpdC9tYWluL3NvdXJjZS9fcG9zdHMvSGV4b+eahE5leHTkuLvpopjnvo7ljJborr7nva4ubWQ=" title="编辑"><i class="fa fa-pen-nib"></i></span>
         </h1>
 
         <div class="post-meta-container">
@@ -715,7 +715,7 @@ if(canvas.getContext){
 
 
 
-<h2 id="RSS订阅设置"><a href="#RSS订阅设置" class="headerlink" title="RSS订阅设置"></a>RSS订阅设置</h2><p>什么？大家都不知道什么是RSS？！！！<br>好吧，其实…本博主也不知道emmm，大家可以看看知乎上有关<a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/theme-next/hexo-theme-next/releases">RSS</a>的文章<br><del>PS：加上好看就完事了不是,计较干啥</del><br>首先，我们在终端命令行进入blog所在的目录，运行：</p>
+<h2 id="RSS订阅设置"><a href="#RSS订阅设置" class="headerlink" title="RSS订阅设置"></a>RSS订阅设置</h2><p>什么？大家都不知道什么是RSS？！！！<br>好吧，其实…本博主也不知道emmm，大家可以看看知乎上有关<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3RoZW1lLW5leHQvaGV4by10aGVtZS1uZXh0L3JlbGVhc2Vz">RSS<i class="fa fa-external-link-alt"></i></span>的文章<br><del>PS：加上好看就完事了不是,计较干啥</del><br>首先，我们在终端命令行进入blog所在的目录，运行：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ npm install --save hexo-generator-feed</span><br></pre></td></tr></table></figure>
 
 <p>接着，打开<strong>站点配置文件</strong>，在文件的末尾添加：</p>
@@ -746,14 +746,14 @@ if(canvas.getContext){
 </ul>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">symbols_count_time:</span><br><span class="line">  separated_meta: true  # 是否换行显示 字数统计 及 阅读时长</span><br><span class="line">  item_text_post: true  # 文章 字数统计 阅读时长 使用图标 还是 文本表示</span><br><span class="line">  item_text_total: true # 博客底部统计 字数统计 阅读时长 使用图标 还是 文本表示</span><br><span class="line">  awl: 4</span><br><span class="line">  wpm: 275</span><br></pre></td></tr></table></figure>
 
-<h2 id="设置hexo主题"><a href="#设置hexo主题" class="headerlink" title="设置hexo主题"></a>设置hexo主题</h2><p>1、<a target="_blank" rel="noopener external nofollow noreferrer" href="https://hexo.io/themes/">选择hexo主题</a>，到github上下载主题放到themes文件夹下<br>2、修改_config.yml里的theme为该文件夹名称</p>
+<h2 id="设置hexo主题"><a href="#设置hexo主题" class="headerlink" title="设置hexo主题"></a>设置hexo主题</h2><p>1、<span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL3RoZW1lcy8=">选择hexo主题<i class="fa fa-external-link-alt"></i></span>，到github上下载主题放到themes文件夹下<br>2、修改_config.yml里的theme为该文件夹名称</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;theme-next&#x2F;hexo-theme-next themes&#x2F;next</span><br><span class="line">rm -rf .&#x2F;themes&#x2F;next&#x2F;.git</span><br><span class="line">git add .</span><br><span class="line">git rm --cached themes&#x2F;next</span><br><span class="line">git rm -r --cached .</span><br><span class="line">git commit -m &quot;backup NexT&quot;</span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
 
 <h2 id="Hexo-Next主题添加友情链接"><a href="#Hexo-Next主题添加友情链接" class="headerlink" title="Hexo Next主题添加友情链接"></a>Hexo Next主题添加友情链接</h2><p>在根目录下的/theme/next/_config.yml文件中搜索<code>Blog rolls</code>，在下面配置相应的网站名和网站链接即可：</p>
 <p><img data-src="/./Hexo%E7%9A%84Next%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96%E8%AE%BE%E7%BD%AE/B32BFB53-2B9F-4AD3-AFB5-9DA33BEBFB37-0275652.png" alt="B32BFB53-2B9F-4AD3-AFB5-9DA33BEBFB37" loading="lazy"></p>
 <p><img data-src="/./Hexo%E7%9A%84Next%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96%E8%AE%BE%E7%BD%AE/3EE981B9-D4CC-4D99-919C-8B56D8B6F432.png" alt="3EE981B9-D4CC-4D99-919C-8B56D8B6F432" loading="lazy"></p>
 <h2 id="评论Gitalk插件"><a href="#评论Gitalk插件" class="headerlink" title="评论Gitalk插件"></a>评论Gitalk插件</h2><p>1注册</p>
-<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/settings/applications/new">Register a new OAuth application</a></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3NldHRpbmdzL2FwcGxpY2F0aW9ucy9uZXc=">Register a new OAuth application<i class="fa fa-external-link-alt"></i></span></p>
 <p><img data-src="/./Hexo%E7%9A%84Next%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96%E8%AE%BE%E7%BD%AE/5BD21F3E-7A1D-48FC-8DDC-C039D76FAE67.png" alt="5BD21F3E-7A1D-48FC-8DDC-C039D76FAE67" loading="lazy"></p>
 <p>2主题站点配置</p>
 <p>用的是next主题自带<strong>gitalk评论</strong>的配置，打开主题配置文件，搜索<strong>comments</strong>，在gitalk位置添加相关的内容：</p>
@@ -777,8 +777,8 @@ if(canvas.getContext){
 
 
 <h2 id="新增菜单栏选项"><a href="#新增菜单栏选项" class="headerlink" title="新增菜单栏选项"></a>新增菜单栏选项</h2><p>1、添加新页面：hexo new page &quot;xx&quot;<br>2、在主题配置文件的menu中加上该页面<br>3、在zh-CN.yml文件中加上中文意思</p>
-<h2 id="宠物"><a href="#宠物" class="headerlink" title="宠物"></a>宠物</h2><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/EYHN/hexo-helper-live2d/blob/master/README.zh-CN.md">官方</a></p>
-<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/xiazeyu/live2d-widget-models">模型</a></p>
+<h2 id="宠物"><a href="#宠物" class="headerlink" title="宠物"></a>宠物</h2><p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0VZSE4vaGV4by1oZWxwZXItbGl2ZTJkL2Jsb2IvbWFzdGVyL1JFQURNRS56aC1DTi5tZA==">官方<i class="fa fa-external-link-alt"></i></span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3hpYXpleXUvbGl2ZTJkLXdpZGdldC1tb2RlbHM=">模型<i class="fa fa-external-link-alt"></i></span></p>
 <h2 id="模块安装"><a href="#模块安装" class="headerlink" title="模块安装"></a>模块安装</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install --save hexo-helper-live2d</span><br><span class="line">npm install live2d-widget-model-wanko</span><br></pre></td></tr></table></figure>
 
 <h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p><code>_config.yml</code></p>
@@ -823,13 +823,13 @@ if(canvas.getContext){
 <p>如<code>urlname: synology-build_hexo-blog</code></p>
 <h1 id="主题"><a href="#主题" class="headerlink" title="主题"></a>主题</h1><p>我选择的是next主题</p>
 <ul>
-<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://blog.mrzorg.top/Hexo/2020-02-11-hexo-optimize-and-next-theme/#%E6%96%B9%E6%B3%95-1">下载最新版</a></li>
-<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://blog.mrzorg.top/Hexo/2020-02-11-hexo-optimize-and-next-theme/#%E6%96%B9%E6%B3%95-2">下载最新的master分支</a></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLm1yem9yZy50b3AvSGV4by8yMDIwLTAyLTExLWhleG8tb3B0aW1pemUtYW5kLW5leHQtdGhlbWUvIyVFNiU5NiVCOSVFNiVCMyU5NS0x">下载最新版<i class="fa fa-external-link-alt"></i></span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLm1yem9yZy50b3AvSGV4by8yMDIwLTAyLTExLWhleG8tb3B0aW1pemUtYW5kLW5leHQtdGhlbWUvIyVFNiU5NiVCOSVFNiVCMyU5NS0y">下载最新的master分支<i class="fa fa-external-link-alt"></i></span></li>
 </ul>
 <h2 id="Hexo选择主题"><a href="#Hexo选择主题" class="headerlink" title="Hexo选择主题"></a>Hexo选择主题</h2><p>修改站点配置文件，默认是landscape。</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">theme: next</span><br></pre></td></tr></table></figure>
 
-<h2 id="next主题设置"><a href="#next主题设置" class="headerlink" title="next主题设置"></a>next主题设置</h2><p>查看另一篇文章<a target="_blank" rel="noopener external nofollow noreferrer" href="https://blog.mrzorg.top/Hexo/2020-02-12-hero-next-theme-settings/">Hexo的Next主题美化设置</a></p>
+<h2 id="next主题设置"><a href="#next主题设置" class="headerlink" title="next主题设置"></a>next主题设置</h2><p>查看另一篇文章<span class="exturl" data-url="aHR0cHM6Ly9ibG9nLm1yem9yZy50b3AvSGV4by8yMDIwLTAyLTEyLWhlcm8tbmV4dC10aGVtZS1zZXR0aW5ncy8=">Hexo的Next主题美化设置<i class="fa fa-external-link-alt"></i></span></p>
 <h1 id="SEO设置"><a href="#SEO设置" class="headerlink" title="SEO设置"></a>SEO设置</h1><p>主要是百度和谷歌。</p>
 <h2 id="站点地图"><a href="#站点地图" class="headerlink" title="站点地图"></a>站点地图</h2><p>安装站点地图插件：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-sitemap --save</span><br><span class="line">npm install hexo-generator-baidu-sitemap --save</span><br></pre></td></tr></table></figure>
@@ -844,7 +844,7 @@ if(canvas.getContext){
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;</span><br><span class="line">&lt;meta name&#x3D;&quot;viewport&quot; content&#x3D;&quot;width&#x3D;device-width, initial-scale&#x3D;1, maximum-scale&#x3D;2&quot;&gt;</span><br><span class="line">&lt;meta name&#x3D;&quot;theme-color&quot; content&#x3D;&quot;&#123;&#123; theme.android_chrome_color &#125;&#125;&quot;&gt;</span><br><span class="line">&lt;meta name&#x3D;&quot;generator&quot; content&#x3D;&quot;Hexo &#123;&#123; hexo_version &#125;&#125;&quot;&gt;</span><br><span class="line">&lt;meta name&#x3D;&quot;google-site-verification&quot; content&#x3D;谷歌提供的标记 &#x2F;&gt;</span><br></pre></td></tr></table></figure>
 
 <h1 id="关联github"><a href="#关联github" class="headerlink" title="关联github"></a>关联github</h1><ol>
-<li><p>安装<a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/hexojs/hexo-deployer-git">hexo-deployer-git</a></p>
+<li><p>安装<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2hleG9qcy9oZXhvLWRlcGxveWVyLWdpdA==">hexo-deployer-git<i class="fa fa-external-link-alt"></i></span></p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>修改配置文件</p>
@@ -859,7 +859,7 @@ if(canvas.getContext){
 <h1 id="添加评论"><a href="#添加评论" class="headerlink" title="添加评论"></a>添加评论</h1><p>用的是next主题自带<strong>gitalk评论</strong>的配置，打开主题配置文件，搜索<strong>comments</strong>，在gitalk位置添加相关的内容：</p>
 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">gitalk:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">github_id:</span> <span class="string">ing</span> <span class="comment"># GitHub repo owner</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">ing.github.io</span> <span class="comment"># Repository name to store issues</span></span><br><span class="line">  <span class="attr">client_id:</span> <span class="string">9f</span> <span class="comment"># GitHub Application Client ID</span></span><br><span class="line">  <span class="attr">client_secret:</span> <span class="string">70e86da6f614b3</span> <span class="comment"># GitHub Application Client Secret</span></span><br><span class="line">  <span class="attr">admin_user:</span> <span class="string">ing</span> <span class="comment"># GitHub repo owner and collaborators, only these guys can initialize gitHub issues</span></span><br><span class="line">  <span class="attr">distraction_free_mode:</span> <span class="literal">true</span> <span class="comment"># Facebook-like distraction free mode</span></span><br><span class="line">  <span class="comment"># Gitalk&#x27;s display language depends on user&#x27;s browser or system environment</span></span><br><span class="line">  <span class="comment"># If you want everyone visiting your site to see a uniform language, you can set a force language value</span></span><br><span class="line">  <span class="comment"># Available values: en | es-ES | fr | ru | zh-CN | zh-TW</span></span><br><span class="line">  <span class="attr">language:</span> <span class="string">zh-CN</span></span><br></pre></td></tr></table></figure>
 
-<h1 id="添加豆瓣电影"><a href="#添加豆瓣电影" class="headerlink" title="添加豆瓣电影"></a>添加豆瓣电影</h1><h2 id="安装插件-hexo-douban"><a href="#安装插件-hexo-douban" class="headerlink" title="安装插件**hexo-douban**"></a>安装插件**<a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/mythsman/hexo-douban">hexo-douban</a>**</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-douban --save</span><br></pre></td></tr></table></figure>
+<h1 id="添加豆瓣电影"><a href="#添加豆瓣电影" class="headerlink" title="添加豆瓣电影"></a>添加豆瓣电影</h1><h2 id="安装插件-hexo-douban"><a href="#安装插件-hexo-douban" class="headerlink" title="安装插件**hexo-douban**"></a>安装插件**<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL215dGhzbWFuL2hleG8tZG91YmFu">hexo-douban<i class="fa fa-external-link-alt"></i></span>**</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-douban --save</span><br></pre></td></tr></table></figure>
 
 <h2 id="添加站点配置文件代码"><a href="#添加站点配置文件代码" class="headerlink" title="添加站点配置文件代码"></a>添加站点配置文件代码</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#添加豆瓣电影</span><br><span class="line">douban:</span><br><span class="line">  user: mythsman</span><br><span class="line">  builtin: false</span><br><span class="line">  #book:</span><br><span class="line">    #title: &#39;This is my book title&#39;</span><br><span class="line">    #quote: &#39;This is my book quote&#39;</span><br><span class="line">  movie:</span><br><span class="line">    title: &#39;This is my movie title&#39;</span><br><span class="line">    quote: &#39;This is my movie quote&#39;</span><br><span class="line">  #game:</span><br><span class="line">    #title: &#39;This is my game title&#39;</span><br><span class="line">    #quote: &#39;This is my game quote&#39;</span><br><span class="line">  timeout: 10000</span><br></pre></td></tr></table></figure>
 
@@ -875,7 +875,7 @@ if(canvas.getContext){
 <h1 id="写作模板"><a href="#写作模板" class="headerlink" title="写作模板"></a>写作模板</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;scaffolds&#x2F;post.md</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">date: &#123;&#123; date &#125;&#125;</span><br><span class="line">urlname:</span><br><span class="line">tags:</span><br><span class="line">categories:</span><br><span class="line">description:</span><br></pre></td></tr></table></figure>
 
 <h1 id="去除代码块的行号"><a href="#去除代码块的行号" class="headerlink" title="去除代码块的行号"></a>去除代码块的行号</h1><p>在站点配置文件中找到 <code>highlight</code> 节点，设置 <code>line_number</code> 为 <code>false</code></p>
-<h1 id="文章图片可点击放大"><a href="#文章图片可点击放大" class="headerlink" title="文章图片可点击放大"></a>文章图片可点击放大</h1><p>需要插件<a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/theme-next/theme-next-fancybox3">fancybox3</a>支持，安装在主题next里。</p>
+<h1 id="文章图片可点击放大"><a href="#文章图片可点击放大" class="headerlink" title="文章图片可点击放大"></a>文章图片可点击放大</h1><p>需要插件<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3RoZW1lLW5leHQvdGhlbWUtbmV4dC1mYW5jeWJveDM=">fancybox3<i class="fa fa-external-link-alt"></i></span>支持，安装在主题next里。</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd themes&#x2F;next</span><br><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;theme-next&#x2F;theme-next-fancybox3 source&#x2F;lib&#x2F;fancybox</span><br></pre></td></tr></table></figure>
 
 <p>主题配置文件修改：</p>
@@ -958,10 +958,10 @@ if(canvas.getContext){
 <h1 id="添加站点访问人数和总访问量"><a href="#添加站点访问人数和总访问量" class="headerlink" title="添加站点访问人数和总访问量"></a>添加站点访问人数和总访问量</h1><p>修改next主题配置文件，搜索<strong>busuanzi_count</strong></p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">busuanzi_count:</span><br><span class="line">  enable: true</span><br><span class="line">  total_visitors: true</span><br><span class="line">  total_visitors_icon: user</span><br><span class="line">  total_views: true</span><br><span class="line">  total_views_icon: eye</span><br><span class="line">  post_views: true</span><br><span class="line">  post_views_icon: eye</span><br></pre></td></tr></table></figure>
 
-<h1 id="代码块主题"><a href="#代码块主题" class="headerlink" title="代码块主题"></a>代码块主题</h1><p>Next主题内置了tomorrow代码块高亮主题，一共有五个，可以去<a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/chriskempson/tomorrow-theme">Tomorrow</a>查看预览效果，搜索<strong>highlight_theme</strong>，在<code>highlight_theme:</code>中改成自己想要的即可。</p>
+<h1 id="代码块主题"><a href="#代码块主题" class="headerlink" title="代码块主题"></a>代码块主题</h1><p>Next主题内置了tomorrow代码块高亮主题，一共有五个，可以去<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2Nocmlza2VtcHNvbi90b21vcnJvdy10aGVtZQ==">Tomorrow<i class="fa fa-external-link-alt"></i></span>查看预览效果，搜索<strong>highlight_theme</strong>，在<code>highlight_theme:</code>中改成自己想要的即可。</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">codeblock:</span><br><span class="line">  # Code Highlight theme</span><br><span class="line">  # Available values: normal | night | night eighties | night blue | night bright | solarized | solarized dark | galactic</span><br><span class="line">  # See: https:&#x2F;&#x2F;github.com&#x2F;chriskempson&#x2F;tomorrow-theme</span><br><span class="line">  highlight_theme: night #原始normal</span><br></pre></td></tr></table></figure>
 
-<h1 id="页面加载条"><a href="#页面加载条" class="headerlink" title="页面加载条"></a>页面加载条</h1><p>Next主题使用的是<a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/theme-next/theme-next-pace">PACE</a>功能，有多种加载动画可选。</p>
+<h1 id="页面加载条"><a href="#页面加载条" class="headerlink" title="页面加载条"></a>页面加载条</h1><p>Next主题使用的是<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3RoZW1lLW5leHQvdGhlbWUtbmV4dC1wYWNl">PACE<i class="fa fa-external-link-alt"></i></span>功能，有多种加载动画可选。</p>
 <blockquote>
 <p>pace-theme-big-counter<br>pace-theme-bounce<br>pace-theme-barber-shop<br>pace-theme-center-atom<br>pace-theme-center-circle<br>pace-theme-center-radar<br>pace-theme-center-simple<br>pace-theme-corner-indicator<br>pace-theme-fill-left<br>pace-theme-flash<br>pace-theme-loading-bar<br>pace-theme-mac-osx<br>pace-theme-minimal</p>
 </blockquote>
@@ -973,9 +973,9 @@ if(canvas.getContext){
 
 <h1 id="动态背景"><a href="#动态背景" class="headerlink" title="动态背景"></a>动态背景</h1><p>Next主题默认提供了三种动态背景</p>
 <ul>
-<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/theme-next/theme-next-canvas-nest">Canvas-nest</a></li>
-<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/theme-next/theme-next-three">JavaScript 3D library</a></li>
-<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/theme-next/theme-next-canvas-ribbon">Canvas-ribbon</a></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3RoZW1lLW5leHQvdGhlbWUtbmV4dC1jYW52YXMtbmVzdA==">Canvas-nest<i class="fa fa-external-link-alt"></i></span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3RoZW1lLW5leHQvdGhlbWUtbmV4dC10aHJlZQ==">JavaScript 3D library<i class="fa fa-external-link-alt"></i></span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3RoZW1lLW5leHQvdGhlbWUtbmV4dC1jYW52YXMtcmliYm9u">Canvas-ribbon<i class="fa fa-external-link-alt"></i></span></li>
 </ul>
 <p>按需选择，我选择的是canvas-nest，需要安装模块到<strong>theme/next/source/lib</strong>文件夹下。</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd themes&#x2F;next</span><br><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;theme-next&#x2F;theme-next-canvas-nest source&#x2F;lib&#x2F;canvas-nest</span><br></pre></td></tr></table></figure>
@@ -1039,7 +1039,7 @@ if(canvas.getContext){
       <a href="https://weilining.github.io/20200916.html" title="Hexo Next 配置设置">https://weilining.github.io/20200916.html</a>
   </li>
   <li class="post-copyright-license">
-    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener external nofollow noreferrer" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC8="><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
   </li>
 </ul>
 </div>

@@ -26,7 +26,7 @@
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"weilining.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.1.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"buttons","active":"valine","storage":false,"lazyload":false,"nav":null,"activeClass":"valine"},"motion":{"enable":false,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+    var CONFIG = {"hostname":"weilining.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.1.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"buttons","active":"valine","storage":false,"lazyload":false,"nav":null,"activeClass":"valine"},"motion":{"enable":false,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 <meta name="description" content="默认">
 <meta property="og:type" content="article">
@@ -284,7 +284,7 @@
 </div>
   <div class="links-of-author site-overview-item animated">
       <span class="links-of-author-item">
-        <a href="https://github.com/weilining" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;weilining" rel="noopener external nofollow noreferrer" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3dlaWxpbmluZw==" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;weilining"><i class="fab fa-github fa-fw"></i></span>
       </span>
       <span class="links-of-author-item">
         <a href="/atom.xml" title="RSS → &#x2F;atom.xml"><i class="fa fa-rss fa-fw"></i></a>
@@ -626,7 +626,7 @@ if(canvas.getContext){
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Github 通过 ImgBot 优化图片的方法<a href="https://github.com/weilining/weilining.cf/edit/main/source/_posts/122.md" class="post-edit-link" title="编辑" rel="noopener external nofollow noreferrer" target="_blank"><i class="fa fa-pen-nib"></i></a>
+          Github 通过 ImgBot 优化图片的方法<span class="exturl post-edit-link" data-url="aHR0cHM6Ly9naXRodWIuY29tL3dlaWxpbmluZy93ZWlsaW5pbmcuY2YvZWRpdC9tYWluL3NvdXJjZS9fcG9zdHMvMTIyLm1k" title="编辑"><i class="fa fa-pen-nib"></i></span>
         </h1>
 
         <div class="post-meta-container">
@@ -697,14 +697,14 @@ if(canvas.getContext){
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>我在逛Github学生优惠包是看到 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/marketplace/imgbot">ImgBot</a>，它说能自己优化图像，于是尝试了一下。</p>
+        <p>我在逛Github学生优惠包是看到 <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL21hcmtldHBsYWNlL2ltZ2JvdA==">ImgBot<i class="fa fa-external-link-alt"></i></span>，它说能自己优化图像，于是尝试了一下。</p>
 <a id="more"></a>
 
 <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><blockquote>
 <p>ImgBot 是一个为你节省时间优化图片的机器人。优化图片意味着不牺牲图片质量和更小的文件大小。 安装后不久，你会收到一个优化图片的 pull request。合并这个 pull request 就行了！Imgbot 会伴随你的工作，保持图片的优化。 ImgBot 默认使用无损压缩。</p>
 </blockquote>
 <h2 id="安装ImgBot"><a href="#安装ImgBot" class="headerlink" title="安装ImgBot"></a>安装ImgBot</h2><p>因为我已经安装了 ImgBot 了，所以文字与截图上的可能有点出入</p>
-<p>首先来到 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/marketplace/imgbot">GitHub Market</a>，点击 <code>Set up a free trial</code></p>
+<p>首先来到 <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL21hcmtldHBsYWNlL2ltZ2JvdA==">GitHub Market<i class="fa fa-external-link-alt"></i></span>，点击 <code>Set up a free trial</code></p>
 <p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://img2018.cnblogs.com/i-beta/1365470/202002/1365470-20200203203153734-1938623814.png"><img data-src="/122/1365470-20200203203153734-1938623814.png" alt="img" loading="lazy"></a></p>
 <p>然后选择 <code>Open Source</code> (也就是免费的那个方案)，然后点击 <code>Install it for free</code></p>
 <p>检查一下订单，点击 <code>Complete order and begin installation</code></p>
@@ -717,7 +717,7 @@ if(canvas.getContext){
 <p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://img2018.cnblogs.com/i-beta/1365470/202002/1365470-20200203203534979-1011170824.png"><img data-src="/122/1365470-20200203203534979-1011170824.png" alt="img" loading="lazy"></a></p>
 <p>你可以点开 <code>Datails</code> 查看压缩前后大小、压缩率等细节，确认无误后，点击 <code>Merge pull request</code> 开始合并</p>
 <p>再输入 commit 信息，点击 <code>Confirm merge</code></p>
-<h2 id="设置ImgBot"><a href="#设置ImgBot" class="headerlink" title="设置ImgBot"></a>设置ImgBot</h2><p>ImgBot 默认是无损压缩的，可以按需进行<a target="_blank" rel="noopener external nofollow noreferrer" href="https://imgbot.net/docs/#configuration">配置</a>为有损压缩，对文件大小进一步压榨。配置方法是在根目录下添加 <code>.imgbotconfig</code> 文件</p>
+<h2 id="设置ImgBot"><a href="#设置ImgBot" class="headerlink" title="设置ImgBot"></a>设置ImgBot</h2><p>ImgBot 默认是无损压缩的，可以按需进行<span class="exturl" data-url="aHR0cHM6Ly9pbWdib3QubmV0L2RvY3MvI2NvbmZpZ3VyYXRpb24=">配置<i class="fa fa-external-link-alt"></i></span>为有损压缩，对文件大小进一步压榨。配置方法是在根目录下添加 <code>.imgbotconfig</code> 文件</p>
 <p>目前有三个配置项：</p>
 <ul>
 <li><p>提交 PR 的频率：</p>
@@ -743,7 +743,7 @@ if(canvas.getContext){
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;schedule&quot;: &quot;daily&quot;, &#x2F;&#x2F; daily|weekly|monthly</span><br><span class="line">    &quot;ignoredFiles&quot;: [</span><br><span class="line">        &quot;*.jpg&quot;,                   &#x2F;&#x2F; ignore by extension</span><br><span class="line">        &quot;image1.png&quot;,              &#x2F;&#x2F; ignore by filename</span><br><span class="line">        &quot;public&#x2F;special_images&#x2F;*&quot;, &#x2F;&#x2F; ignore by folderpath</span><br><span class="line">    ],</span><br><span class="line">    &quot;aggressiveCompression&quot;: &quot;true&quot; &#x2F;&#x2F; true|false</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p><a href="javascript:void(0);" rel="external nofollow noreferrer"><img data-src="/122/copycode-20201120014050171.gif" alt="复制代码" loading="lazy"></a></p>
-<p>还有更多配置项，完整说明请见<a target="_blank" rel="noopener external nofollow noreferrer" href="https://imgbot.net/docs/#configuration">官方文档</a>。</p>
+<p>还有更多配置项，完整说明请见<span class="exturl" data-url="aHR0cHM6Ly9pbWdib3QubmV0L2RvY3MvI2NvbmZpZ3VyYXRpb24=">官方文档<i class="fa fa-external-link-alt"></i></span>。</p>
 <h2 id="Github-Actions自动合并ImgBot的pr"><a href="#Github-Actions自动合并ImgBot的pr" class="headerlink" title="Github Actions自动合并ImgBot的pr"></a>Github Actions自动合并ImgBot的pr</h2><p>上传图片后，很快 ImgBot 就会对图片进行压缩，并在 github 的仓库中发起一个 pull request。手动点击合并按钮对我来说实在是太麻烦了，能不能自动搞呢。有了 actions 没啥不能的，</p>
 <p>在 github actions 配置新增一个文件 .github/workflows/merge.yml。</p>
 <p><a href="javascript:void(0);" rel="external nofollow noreferrer"><img data-src="/122/copycode-20201120014050171.gif" alt="复制代码" loading="lazy"></a></p>
@@ -815,7 +815,7 @@ if(canvas.getContext){
       <a href="https://weilining.github.io/122.html" title="Github 通过 ImgBot 优化图片的方法">https://weilining.github.io/122.html</a>
   </li>
   <li class="post-copyright-license">
-    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener external nofollow noreferrer" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC8="><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
   </li>
 </ul>
 </div>

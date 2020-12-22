@@ -26,7 +26,7 @@
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"weilining.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.1.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"buttons","active":"valine","storage":false,"lazyload":false,"nav":null,"activeClass":"valine"},"motion":{"enable":false,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+    var CONFIG = {"hostname":"weilining.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.1.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"buttons","active":"valine","storage":false,"lazyload":false,"nav":null,"activeClass":"valine"},"motion":{"enable":false,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 <meta name="description" content="默认">
 <meta property="og:type" content="article">
@@ -286,7 +286,7 @@
 </div>
   <div class="links-of-author site-overview-item animated">
       <span class="links-of-author-item">
-        <a href="https://github.com/weilining" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;weilining" rel="noopener external nofollow noreferrer" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3dlaWxpbmluZw==" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;weilining"><i class="fab fa-github fa-fw"></i></span>
       </span>
       <span class="links-of-author-item">
         <a href="/atom.xml" title="RSS → &#x2F;atom.xml"><i class="fa fa-rss fa-fw"></i></a>
@@ -628,7 +628,7 @@ if(canvas.getContext){
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          PicGo 通过 Github 存储和 jsDelivr 加速成稳定快速高效免费的图床<a href="https://github.com/weilining/weilining.cf/edit/main/source/_posts/118.md" class="post-edit-link" title="编辑" rel="noopener external nofollow noreferrer" target="_blank"><i class="fa fa-pen-nib"></i></a>
+          PicGo 通过 Github 存储和 jsDelivr 加速成稳定快速高效免费的图床<span class="exturl post-edit-link" data-url="aHR0cHM6Ly9naXRodWIuY29tL3dlaWxpbmluZy93ZWlsaW5pbmcuY2YvZWRpdC9tYWluL3NvdXJjZS9fcG9zdHMvMTE4Lm1k" title="编辑"><i class="fa fa-pen-nib"></i></span>
         </h1>
 
         <div class="post-meta-container">
@@ -703,11 +703,11 @@ if(canvas.getContext){
 
 <p><img data-src="/118/webp-20201119224756057" alt="img" loading="lazy"></p>
 <h2 id="一、图床对比"><a href="#一、图床对比" class="headerlink" title="一、图床对比"></a>一、图床对比</h2><ol>
-<li>七牛云<br> 官网地址：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://links.jianshu.com/go?to=https://portal.qiniu.com">https://portal.qiniu.com</a><br> 简介：注册认证后有10G永久免费空间，每月10G国内和10G国外流量，速度相当快，七牛云时国内专业CDN服务商，插件支持比较多</li>
-<li>postimg<br> 官网地址：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://links.jianshu.com/go?to=https://postimages.org">https://postimages.org</a><br> 简介：国外的图床，但是速度也很快。永久存储免注册，图片链接支持https，可以删除上传的图片，提供多种图片链接格式。<br> 限制：匿名上传和免费帐户上传的图片仅限于12Mb和10k x 10k像素。高级帐户仅限于24Mb和10k x 10k像素。每批最多限制为1000张图像，如果不够可以创建一个帐户并将多批图像上传到同一个图库中。</li>
-<li>SM.MS<br> 官网地址：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://links.jianshu.com/go?to=https://sm.ms/">https://sm.ms/</a><br> 特点：永久存储免注册，图片链接支持https，可以删除上传的图片，提供多种图片链接格式。<br> 图片上传限制：每个图片最大5M，每次最多上传10张。最近越来越慢了</li>
-<li>极简图床<br> 官网地址：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://links.jianshu.com/go?to=http://jiantuku.com">http://jiantuku.com</a><br> 主要提供图片上传和管理界面，需要用户自己设置微博、七牛云或者阿里云OSS信息</li>
-<li>路过图床<br> 官网地址：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://links.jianshu.com/go?to=https://imgchr.com/">https://imgchr.com/</a><br> 简介：支持免注册上传图片，永久存储，支持HTTPS加密访问和调用图片，提供多种图片链接格式<br> 限制：最大10M。<br> 路过其实速度还可以，但是不支持api上传，使用起来略微麻烦。国内的几大云存储又要收费所以现在安利一种基于github和jsdeliver加速的免费图床。PicGo工具一键上传，操作简单高效，GitHub和jsDelivr都是大厂，不用担心跑路问题，不用担心速度和容量问题，而且完全免费，可以说是目前免费图床的最佳解决方案！</li>
+<li>七牛云<br> 官网地址：<span class="exturl" data-url="aHR0cHM6Ly9saW5rcy5qaWFuc2h1LmNvbS9nbz90bz1odHRwczovL3BvcnRhbC5xaW5pdS5jb20=">https://portal.qiniu.com<i class="fa fa-external-link-alt"></i></span><br> 简介：注册认证后有10G永久免费空间，每月10G国内和10G国外流量，速度相当快，七牛云时国内专业CDN服务商，插件支持比较多</li>
+<li>postimg<br> 官网地址：<span class="exturl" data-url="aHR0cHM6Ly9saW5rcy5qaWFuc2h1LmNvbS9nbz90bz1odHRwczovL3Bvc3RpbWFnZXMub3Jn">https://postimages.org<i class="fa fa-external-link-alt"></i></span><br> 简介：国外的图床，但是速度也很快。永久存储免注册，图片链接支持https，可以删除上传的图片，提供多种图片链接格式。<br> 限制：匿名上传和免费帐户上传的图片仅限于12Mb和10k x 10k像素。高级帐户仅限于24Mb和10k x 10k像素。每批最多限制为1000张图像，如果不够可以创建一个帐户并将多批图像上传到同一个图库中。</li>
+<li>SM.MS<br> 官网地址：<span class="exturl" data-url="aHR0cHM6Ly9saW5rcy5qaWFuc2h1LmNvbS9nbz90bz1odHRwczovL3NtLm1zLw==">https://sm.ms/<i class="fa fa-external-link-alt"></i></span><br> 特点：永久存储免注册，图片链接支持https，可以删除上传的图片，提供多种图片链接格式。<br> 图片上传限制：每个图片最大5M，每次最多上传10张。最近越来越慢了</li>
+<li>极简图床<br> 官网地址：<span class="exturl" data-url="aHR0cHM6Ly9saW5rcy5qaWFuc2h1LmNvbS9nbz90bz1odHRwOi8vamlhbnR1a3UuY29t">http://jiantuku.com<i class="fa fa-external-link-alt"></i></span><br> 主要提供图片上传和管理界面，需要用户自己设置微博、七牛云或者阿里云OSS信息</li>
+<li>路过图床<br> 官网地址：<span class="exturl" data-url="aHR0cHM6Ly9saW5rcy5qaWFuc2h1LmNvbS9nbz90bz1odHRwczovL2ltZ2Noci5jb20v">https://imgchr.com/<i class="fa fa-external-link-alt"></i></span><br> 简介：支持免注册上传图片，永久存储，支持HTTPS加密访问和调用图片，提供多种图片链接格式<br> 限制：最大10M。<br> 路过其实速度还可以，但是不支持api上传，使用起来略微麻烦。国内的几大云存储又要收费所以现在安利一种基于github和jsdeliver加速的免费图床。PicGo工具一键上传，操作简单高效，GitHub和jsDelivr都是大厂，不用担心跑路问题，不用担心速度和容量问题，而且完全免费，可以说是目前免费图床的最佳解决方案！</li>
 </ol>
 <h2 id="二、方法"><a href="#二、方法" class="headerlink" title="二、方法"></a>二、方法</h2><h3 id="1-新建github仓库并生成token"><a href="#1-新建github仓库并生成token" class="headerlink" title="1.新建github仓库并生成token"></a>1.新建github仓库并生成token</h3><p><img data-src="/118/webp-20201119224809319" alt="img" loading="lazy"></p>
 <p><img data-src="/118/webp-20201119224819064" alt="img" loading="lazy"></p>
@@ -717,13 +717,13 @@ if(canvas.getContext){
 <p><img data-src="/118/webp-20201119224848412" alt="img" loading="lazy"></p>
 <p><img data-src="/118/webp-20201119224855161" alt="img" loading="lazy"></p>
 <p>注意：这个token只显示一次所以一次，所以一定要自己保管好</p>
-<h3 id="2-配置picgo"><a href="#2-配置picgo" class="headerlink" title="2.配置picgo"></a>2.配置picgo</h3><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/Molunerfinn/picgo/releases">下载Picgo</a>，picgo可以快捷键上传图片ctrl+shipt+p，并且上传完了自动把图片网址复制到剪切板</p>
+<h3 id="2-配置picgo"><a href="#2-配置picgo" class="headerlink" title="2.配置picgo"></a>2.配置picgo</h3><p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL01vbHVuZXJmaW5uL3BpY2dvL3JlbGVhc2Vz">下载Picgo<i class="fa fa-external-link-alt"></i></span>，picgo可以快捷键上传图片ctrl+shipt+p，并且上传完了自动把图片网址复制到剪切板</p>
 <p><img data-src="/118/webp-20201119224912543" alt="img" loading="lazy"></p>
 <p>picgo配置</p>
 <p><img data-src="/118/webp-20201119224935101" alt="img" loading="lazy"></p>
 <p> 我是使用markdown写作，使用设置将上传的图片按照时间戳命名便于管理，当然也可以按照自己的方式进行管理</p>
 <blockquote>
-<p>设定仓库名：按照【用户名/图床仓库名】的格式填写<br> 设定分支名：【master】<br> 设定Token：粘贴之前生成的【Token】<br> 指定存储路径：填写想要储存的路径，如【blog-img/】，这样就会在仓库下创建一个名为blog-img的文件夹，图片将会储存在此文件夹中<br> 设定自定义域名：它的的作用是，在图片上传后，PicGo会按照【自定义域名+上传的图片名】的方式生成访问链接，放到粘贴板上，因为我们要使用jsDelivr加速访问，所以可以设置为【<a target="_blank" rel="noopener external nofollow noreferrer" href="https://links.jianshu.com/go?to=https://cdn.jsdelivr.net/gh/">https://cdn.jsdelivr.net/gh/</a>用户名/图床仓库名 】</p>
+<p>设定仓库名：按照【用户名/图床仓库名】的格式填写<br> 设定分支名：【master】<br> 设定Token：粘贴之前生成的【Token】<br> 指定存储路径：填写想要储存的路径，如【blog-img/】，这样就会在仓库下创建一个名为blog-img的文件夹，图片将会储存在此文件夹中<br> 设定自定义域名：它的的作用是，在图片上传后，PicGo会按照【自定义域名+上传的图片名】的方式生成访问链接，放到粘贴板上，因为我们要使用jsDelivr加速访问，所以可以设置为【<span class="exturl" data-url="aHR0cHM6Ly9saW5rcy5qaWFuc2h1LmNvbS9nbz90bz1odHRwczovL2Nkbi5qc2RlbGl2ci5uZXQvZ2gv">https://cdn.jsdelivr.net/gh/<i class="fa fa-external-link-alt"></i></span>用户名/图床仓库名 】</p>
 </blockquote>
 <p>完成之后就可以畅快书写，上传直接快捷键完成，复制粘贴，再也不用手动去拖动图片上传了，更过功能尽情去体验吧！</p>
 
@@ -788,7 +788,7 @@ if(canvas.getContext){
       <a href="https://weilining.github.io/118.html" title="PicGo 通过 Github 存储和 jsDelivr 加速成稳定快速高效免费的图床">https://weilining.github.io/118.html</a>
   </li>
   <li class="post-copyright-license">
-    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener external nofollow noreferrer" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC8="><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
   </li>
 </ul>
 </div>

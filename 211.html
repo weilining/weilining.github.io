@@ -26,7 +26,7 @@
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"weilining.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.1.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"buttons","active":"valine","storage":false,"lazyload":false,"nav":null,"activeClass":"valine"},"motion":{"enable":false,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+    var CONFIG = {"hostname":"weilining.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.1.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"buttons","active":"valine","storage":false,"lazyload":false,"nav":null,"activeClass":"valine"},"motion":{"enable":false,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 <meta name="description" content="默认">
 <meta property="og:type" content="article">
@@ -279,7 +279,7 @@
 </div>
   <div class="links-of-author site-overview-item animated">
       <span class="links-of-author-item">
-        <a href="https://github.com/weilining" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;weilining" rel="noopener external nofollow noreferrer" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3dlaWxpbmluZw==" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;weilining"><i class="fab fa-github fa-fw"></i></span>
       </span>
       <span class="links-of-author-item">
         <a href="/atom.xml" title="RSS → &#x2F;atom.xml"><i class="fa fa-rss fa-fw"></i></a>
@@ -621,7 +621,7 @@ if(canvas.getContext){
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          在线编程&&VSCode 实时预览 HTML 页面<a href="https://github.com/weilining/weilining.cf/edit/main/source/_posts/211.md" class="post-edit-link" title="编辑" rel="noopener external nofollow noreferrer" target="_blank"><i class="fa fa-pen-nib"></i></a>
+          在线编程&&VSCode 实时预览 HTML 页面<span class="exturl post-edit-link" data-url="aHR0cHM6Ly9naXRodWIuY29tL3dlaWxpbmluZy93ZWlsaW5pbmcuY2YvZWRpdC9tYWluL3NvdXJjZS9fcG9zdHMvMjExLm1k" title="编辑"><i class="fa fa-pen-nib"></i></span>
         </h1>
 
         <div class="post-meta-container">
@@ -695,8 +695,8 @@ if(canvas.getContext){
         <h2 id="背景："><a href="#背景：" class="headerlink" title="背景："></a>背景：</h2><p>平时写网页时，只有写完代码，然后保存，接下来到浏览器中刷新查看效果，然后不停重复，我们发现很多时间就这样浪费到了这三个步骤上，用户体验很差。</p>
 <a id="more"></a>
 
-<h2 id="使用-codepen-网站"><a href="#使用-codepen-网站" class="headerlink" title="使用 codepen 网站"></a>使用 codepen 网站</h2><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://codepen.io/">codepen</a> 网站有一个功能，就是写完代码时，可以自动实时预览网页效果</p>
-<p>网站链接：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://codepen.io/">https://codepen.io/</a></p>
+<h2 id="使用-codepen-网站"><a href="#使用-codepen-网站" class="headerlink" title="使用 codepen 网站"></a>使用 codepen 网站</h2><p><span class="exturl" data-url="aHR0cHM6Ly9jb2RlcGVuLmlvLw==">codepen<i class="fa fa-external-link-alt"></i></span> 网站有一个功能，就是写完代码时，可以自动实时预览网页效果</p>
+<p>网站链接：<span class="exturl" data-url="aHR0cHM6Ly9jb2RlcGVuLmlvLw==">https://codepen.io/<i class="fa fa-external-link-alt"></i></span></p>
 <p><img data-src="/211/image-1024x596.png" alt="img" loading="lazy"></p>
 <h2 id="VSCode-设置网页代码实时预览"><a href="#VSCode-设置网页代码实时预览" class="headerlink" title="VSCode 设置网页代码实时预览"></a>VSCode 设置网页代码实时预览</h2><p>安装插件 Live Server，然后右键点击 Open with Live Server 即可在浏览器打开文件，此时修改文件内容，浏览器会在文件保存时触发刷新操作，实现实时预览效果。</p>
 <p><img data-src="/211/image-1.png" alt="img" loading="lazy"><img data-src="/211/image-2.png" alt="img" loading="lazy"></p>
@@ -762,7 +762,7 @@ if(canvas.getContext){
       <a href="https://weilining.github.io/211.html" title="在线编程&amp;&amp;VSCode 实时预览 HTML 页面">https://weilining.github.io/211.html</a>
   </li>
   <li class="post-copyright-license">
-    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener external nofollow noreferrer" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC8="><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
   </li>
 </ul>
 </div>

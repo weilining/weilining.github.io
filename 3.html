@@ -26,7 +26,7 @@
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"weilining.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.1.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"buttons","active":"valine","storage":false,"lazyload":false,"nav":null,"activeClass":"valine"},"motion":{"enable":false,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+    var CONFIG = {"hostname":"weilining.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.1.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"buttons","active":"valine","storage":false,"lazyload":false,"nav":null,"activeClass":"valine"},"motion":{"enable":false,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 <meta name="description" content="WordPress在NGINX和Litespeed下的性能对比测试">
 <meta property="og:type" content="article">
@@ -307,7 +307,7 @@
 </div>
   <div class="links-of-author site-overview-item animated">
       <span class="links-of-author-item">
-        <a href="https://github.com/weilining" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;weilining" rel="noopener external nofollow noreferrer" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3dlaWxpbmluZw==" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;weilining"><i class="fab fa-github fa-fw"></i></span>
       </span>
       <span class="links-of-author-item">
         <a href="/atom.xml" title="RSS → &#x2F;atom.xml"><i class="fa fa-rss fa-fw"></i></a>
@@ -649,7 +649,7 @@ if(canvas.getContext){
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          WordPress在NGINX和Litespeed下的性能对比测试<a href="https://github.com/weilining/weilining.cf/edit/main/source/_posts/3.md" class="post-edit-link" title="编辑" rel="noopener external nofollow noreferrer" target="_blank"><i class="fa fa-pen-nib"></i></a>
+          WordPress在NGINX和Litespeed下的性能对比测试<span class="exturl post-edit-link" data-url="aHR0cHM6Ly9naXRodWIuY29tL3dlaWxpbmluZy93ZWlsaW5pbmcuY2YvZWRpdC9tYWluL3NvdXJjZS9fcG9zdHMvMy5tZA==" title="编辑"><i class="fa fa-pen-nib"></i></span>
         </h1>
 
         <div class="post-meta-container">
@@ -720,21 +720,21 @@ if(canvas.getContext){
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>都说Wordpress 在<a target="_blank" rel="noopener external nofollow noreferrer" href="https://2demo.top/tag/litespeed">litespeed</a>下的表现要好于NGINX，但是很少看到有人做<a target="_blank" rel="noopener external nofollow noreferrer" href="https://2demo.top/tag/%E6%B5%8B%E8%AF%95">测试</a>，于是我来做一个对比测试</p>
+        <p>都说Wordpress 在<span class="exturl" data-url="aHR0cHM6Ly8yZGVtby50b3AvdGFnL2xpdGVzcGVlZA==">litespeed<i class="fa fa-external-link-alt"></i></span>下的表现要好于NGINX，但是很少看到有人做<span class="exturl" data-url="aHR0cHM6Ly8yZGVtby50b3AvdGFnLyVFNiVCNSU4QiVFOCVBRiU5NQ==">测试<i class="fa fa-external-link-alt"></i></span>，于是我来做一个对比测试</p>
 <a id="more"></a>
 
-<h2 id="测试平台"><a href="#测试平台" class="headerlink" title="测试平台"></a>测试平台</h2><p>主机：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://2demo.top/tag/%E8%85%BE%E8%AE%AF%E4%BA%91%E8%BD%BB%E9%87%8F">腾讯云轻量</a>HK1C2G版</p>
+<h2 id="测试平台"><a href="#测试平台" class="headerlink" title="测试平台"></a>测试平台</h2><p>主机：<span class="exturl" data-url="aHR0cHM6Ly8yZGVtby50b3AvdGFnLyVFOCU4NSVCRSVFOCVBRSVBRiVFNCVCQSU5MSVFOCVCRCVCQiVFOSU4NyU4Rg==">腾讯云轻量<i class="fa fa-external-link-alt"></i></span>HK1C2G版</p>
 <p>WordPress版本：5.3</p>
-<p>压力测试平台：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://loader.io/">https://loader.io/</a></p>
+<p>压力测试平台：<span class="exturl" data-url="aHR0cHM6Ly9sb2FkZXIuaW8v">https://loader.io/<i class="fa fa-external-link-alt"></i></span></p>
 <p>默认主题，文章为纯文字，txt文档下为34K</p>
-<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://2demo.top/tag/%E8%85%BE%E8%AE%AF%E4%BA%91">腾讯云</a>最近做活动每天上午10点-10点半之间都有199-100劵放出，有需要的可以领一下购买</p>
+<p><span class="exturl" data-url="aHR0cHM6Ly8yZGVtby50b3AvdGFnLyVFOCU4NSVCRSVFOCVBRSVBRiVFNCVCQSU5MQ==">腾讯云<i class="fa fa-external-link-alt"></i></span>最近做活动每天上午10点-10点半之间都有199-100劵放出，有需要的可以领一下购买</p>
 <p><img data-src="/3/aaa212cd913012fb772e749fd8a8d77a-20201022155654320.png" alt="img" loading="lazy"></p>
 <p>腾讯云学生活动也很不错，25岁以下1核2G5M的轻量VPS只要9块/月</p>
 <p>25岁以下自动获得学生资格，25岁以上可以进行学生认证</p>
 <p>每个月9块钱就可以获得1C2G5M1T流量，十分划算有国内服务需求的直接上。</p>
 <p><img data-src="/3/83fc54895dcc8373dba0e59bd5726dcd-20201022155654138.png" alt="img" loading="lazy"></p>
 <p><img data-src="/3/2fb87490bdd326291263173438eae104-20201022155654331.png" alt="img" loading="lazy"></p>
-<p><strong>活动地址直达：</strong><a target="_blank" rel="noopener external nofollow noreferrer" href="https://curl.qcloud.com/hQiFtUjz">https://curl.qcloud.com/hQiFtUjz</a></p>
+<p><strong>活动地址直达：</strong><span class="exturl" data-url="aHR0cHM6Ly9jdXJsLnFjbG91ZC5jb20vaFFpRnRVano=">https://curl.qcloud.com/hQiFtUjz<i class="fa fa-external-link-alt"></i></span></p>
 <h2 id="NGINX"><a href="#NGINX" class="headerlink" title="NGINX"></a>NGINX</h2><h4 id="原生"><a href="#原生" class="headerlink" title="原生"></a>原生</h4><p>先上一个17测看看基本情况</p>
 <p><img data-src="https://img.jpggod.com/file/jpggod/2020/10/21/48b2a008969a4fde4875f20780ff76a9.png" alt="img" loading="lazy"></p>
 <p><img data-src="/3/d3079603a96668d58ef5de5222805abc-20201022155656669.png" alt="img" loading="lazy"></p>
@@ -744,7 +744,7 @@ if(canvas.getContext){
 <p>2500/min</p>
 <p><img data-src="/3/0f8eeb88d97c590fe3dcd8bb50fef6bd-20201022155654451.png" alt="img" loading="lazy"></p>
 <p>和我上次测试负载均衡的结果差不多详情请看</p>
-<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://2demo.top/117.html">利用腾讯云轻量服务器+宝塔快速搭建负载均衡网站</a></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly8yZGVtby50b3AvMTE3Lmh0bWw=">利用腾讯云轻量服务器+宝塔快速搭建负载均衡网站<i class="fa fa-external-link-alt"></i></span></p>
 <p>不过由于WordPress比typecho更吃资源所以表现要差上一些</p>
 <p><strong>GTmetrix测试</strong></p>
 <p>看起来自带的主题真的是经过千锤百炼的</p>
@@ -806,7 +806,7 @@ if(canvas.getContext){
 <p>附上用了LScache之后的17测</p>
 <p><img data-src="/3/d7a532eafabfa5cb17a1760849400e48-20201022155701552.png" alt="img" loading="lazy"></p>
 <p><img data-src="/3/d93221902adddb61c789d4708c9fa19a-20201022155702192.png" alt="img" loading="lazy"></p>
-<h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><p>Litespeed对于WordPress的加速效果要配合Litespeedcache才能突显出来，否则光秃秃的一个LS其实并不比NGINX好，在某些方面甚至是出于劣势的。如果你的WordPress网站流量很大，那么我建议选择LiteSpeed+<a target="_blank" rel="noopener external nofollow noreferrer" href="https://2demo.top/tag/litespeedcache">litespeedcache</a>+redis/memcached更好，当然本次测试的项目比较单一，更多深层次的一些东西也未进行专业测试。大家参考为主，实际选择还得看个人爱好及专业程度</p>
+<h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><p>Litespeed对于WordPress的加速效果要配合Litespeedcache才能突显出来，否则光秃秃的一个LS其实并不比NGINX好，在某些方面甚至是出于劣势的。如果你的WordPress网站流量很大，那么我建议选择LiteSpeed+<span class="exturl" data-url="aHR0cHM6Ly8yZGVtby50b3AvdGFnL2xpdGVzcGVlZGNhY2hl">litespeedcache<i class="fa fa-external-link-alt"></i></span>+redis/memcached更好，当然本次测试的项目比较单一，更多深层次的一些东西也未进行专业测试。大家参考为主，实际选择还得看个人爱好及专业程度</p>
 
     </div>
 
@@ -869,7 +869,7 @@ if(canvas.getContext){
       <a href="https://weilining.github.io/3.html" title="WordPress在NGINX和Litespeed下的性能对比测试">https://weilining.github.io/3.html</a>
   </li>
   <li class="post-copyright-license">
-    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener external nofollow noreferrer" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC8="><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
   </li>
 </ul>
 </div>

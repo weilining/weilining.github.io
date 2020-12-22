@@ -26,7 +26,7 @@
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"weilining.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.1.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"buttons","active":"valine","storage":false,"lazyload":false,"nav":null,"activeClass":"valine"},"motion":{"enable":false,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+    var CONFIG = {"hostname":"weilining.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.1.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"buttons","active":"valine","storage":false,"lazyload":false,"nav":null,"activeClass":"valine"},"motion":{"enable":false,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 <meta name="description" content="技术部和网络部暑假第二次培训">
 <meta property="og:type" content="article">
@@ -288,7 +288,7 @@
 </div>
   <div class="links-of-author site-overview-item animated">
       <span class="links-of-author-item">
-        <a href="https://github.com/weilining" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;weilining" rel="noopener external nofollow noreferrer" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3dlaWxpbmluZw==" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;weilining"><i class="fab fa-github fa-fw"></i></span>
       </span>
       <span class="links-of-author-item">
         <a href="/atom.xml" title="RSS → &#x2F;atom.xml"><i class="fa fa-rss fa-fw"></i></a>
@@ -630,7 +630,7 @@ if(canvas.getContext){
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          技术部和网络部暑假第二次培训<a href="https://github.com/weilining/weilining.cf/edit/main/source/_posts/bljxtrain2.md" class="post-edit-link" title="编辑" rel="noopener external nofollow noreferrer" target="_blank"><i class="fa fa-pen-nib"></i></a>
+          技术部和网络部暑假第二次培训<span class="exturl post-edit-link" data-url="aHR0cHM6Ly9naXRodWIuY29tL3dlaWxpbmluZy93ZWlsaW5pbmcuY2YvZWRpdC9tYWluL3NvdXJjZS9fcG9zdHMvYmxqeHRyYWluMi5tZA==" title="编辑"><i class="fa fa-pen-nib"></i></span>
         </h1>
 
         <div class="post-meta-container">
@@ -710,8 +710,8 @@ if(canvas.getContext){
     <div class="post-body" itemprop="articleBody">
         <p>VMware虚拟机介绍<br>VMware Workstation是VMware公司销售的商业软件产品之一。该工作站软件包含一个用于英特尔x86兼容电脑的虚拟机套装，其允许用户同时创建和运行多个x86虚拟机。每个虚拟机可以运行其安装的操作系统，如（但不限于）Windows、Linux、BSD变生版本。用简单术语来描述就是，VMware Workstation允许一台真实的电脑在一个操作系统中同时打开并运行数个操作系统，其它VMware产品帮助在多个宿主电脑之间管理或移植VMware虚拟机。免费版本为VMware Workstation Player。<br>VMware官方网站提供多个经过预先配置的操作系统和应用程序的免费虚拟盘映像，这之中有不少是社会募捐的。</p>
 <hr>
-<p>步骤<br>1.下载虚拟机<br>我们选择最新版<br>[VMware v12.5.7 简体中文精简特别版本][url]<br>[url]:<a target="_blank" rel="noopener external nofollow noreferrer" href="http://www.zdfans.com/6248.html">http://www.zdfans.com/6248.html</a><br>拉到下面，有下载地址，可以选择百度云下载或者城域网通<br><br>我选择百度云<br><img data-src="/bljxtrain2/1.png" loading="lazy"><br>下载VMware<br><img data-src="/bljxtrain2/2.png" loading="lazy"><br>--<br>2.双击exe文件安装虚拟机<br>一路下一步<br>--<br>3.下载所需要的系统包<br>iso后缀的镜像<br>必须下载--用于服务器[CentOS-6.9-x86_64-LiveDVD.iso][url1]<br>[url1]:<a target="_blank" rel="noopener external nofollow noreferrer" href="https://mirrors.tuna.tsinghua.edu.cn/centos/6.9/isos/x86_64/CentOS-6.9-x86_64-LiveDVD.iso">https://mirrors.tuna.tsinghua.edu.cn/centos/6.9/isos/x86_64/CentOS-6.9-x86_64-LiveDVD.iso</a><br>--<br>4.安装虚拟机系统<br>1.<br><img data-src="/bljxtrain2/3.png" loading="lazy"><br>2.<br><img data-src="/bljxtrain2/4.png" loading="lazy"><br>3.<br><img data-src="/bljxtrain2/5.png" loading="lazy"><br>4.<br><img data-src="/bljxtrain2/7.png" loading="lazy"><br>5.<br><img data-src="/bljxtrain2/8.png" loading="lazy"><br>6.<br><img data-src="/bljxtrain2/9.png" loading="lazy"><br>7.<br><img data-src="/bljxtrain2/10.png" loading="lazy"><br>--<br>5.突发事件，google或必应解决  </p>
-<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://thworld.net/">一年5元的vpn</a> </p>
+<p>步骤<br>1.下载虚拟机<br>我们选择最新版<br>[VMware v12.5.7 简体中文精简特别版本][url]<br>[url]:<span class="exturl" data-url="aHR0cDovL3d3dy56ZGZhbnMuY29tLzYyNDguaHRtbA==">http://www.zdfans.com/6248.html<i class="fa fa-external-link-alt"></i></span><br>拉到下面，有下载地址，可以选择百度云下载或者城域网通<br><br>我选择百度云<br><img data-src="/bljxtrain2/1.png" loading="lazy"><br>下载VMware<br><img data-src="/bljxtrain2/2.png" loading="lazy"><br>--<br>2.双击exe文件安装虚拟机<br>一路下一步<br>--<br>3.下载所需要的系统包<br>iso后缀的镜像<br>必须下载--用于服务器[CentOS-6.9-x86_64-LiveDVD.iso][url1]<br>[url1]:<span class="exturl" data-url="aHR0cHM6Ly9taXJyb3JzLnR1bmEudHNpbmdodWEuZWR1LmNuL2NlbnRvcy82LjkvaXNvcy94ODZfNjQvQ2VudE9TLTYuOS14ODZfNjQtTGl2ZURWRC5pc28=">https://mirrors.tuna.tsinghua.edu.cn/centos/6.9/isos/x86_64/CentOS-6.9-x86_64-LiveDVD.iso<i class="fa fa-external-link-alt"></i></span><br>--<br>4.安装虚拟机系统<br>1.<br><img data-src="/bljxtrain2/3.png" loading="lazy"><br>2.<br><img data-src="/bljxtrain2/4.png" loading="lazy"><br>3.<br><img data-src="/bljxtrain2/5.png" loading="lazy"><br>4.<br><img data-src="/bljxtrain2/7.png" loading="lazy"><br>5.<br><img data-src="/bljxtrain2/8.png" loading="lazy"><br>6.<br><img data-src="/bljxtrain2/9.png" loading="lazy"><br>7.<br><img data-src="/bljxtrain2/10.png" loading="lazy"><br>--<br>5.突发事件，google或必应解决  </p>
+<p><span class="exturl" data-url="aHR0cHM6Ly90aHdvcmxkLm5ldC8=">一年5元的vpn<i class="fa fa-external-link-alt"></i></span> </p>
 <p>6.作业</p>
 <p>1.<strong>linux yum 命令</strong> :包括yum 的语法，常用命令，说明及实例 [写在博客上]</p>
 <p>yum（ Yellow dog Updater, Modified）是一个在Fedora和RedHat以及SUSE中的Shell前端软件包管理器。</p>
@@ -727,7 +727,7 @@ if(canvas.getContext){
 <p>6、系统管理命令:kill,ps,shutdown,su,w ;</p>
 <p>7、系统设置命令:clear,rpm ;</p>
 <p>8、备份压缩命令:gzip,tar,zip ;</p>
-<p><a target="_blank" rel="noopener external nofollow noreferrer" href="http://www.runoob.com/linux/linux-command-manual.html">参考资料</a> </p>
+<p><span class="exturl" data-url="aHR0cDovL3d3dy5ydW5vb2IuY29tL2xpbnV4L2xpbnV4LWNvbW1hbmQtbWFudWFsLmh0bWw=">参考资料<i class="fa fa-external-link-alt"></i></span> </p>
 <p>3.<strong>Linux 系统目录结构</strong>  </p>
 <p>在centos上打开终端，执行命令：</p>
 <blockquote>
@@ -738,7 +738,7 @@ if(canvas.getContext){
 <p><img data-src="http://www.runoob.com/wp-content/uploads/2014/06/4_20.png" alt="4_20" loading="lazy"></p>
 <p>在博客上写出linux 树形目录结构，及目录的解释  </p>
 <p><img data-src="http://www.runoob.com/wp-content/uploads/2014/06/003vPl7Rty6E8kZRlAEdc690.jpg" alt="003vPl7Rty6E8kZRlAEdc&amp;690" loading="lazy"></p>
-<p><a target="_blank" rel="noopener external nofollow noreferrer" href="http://www.runoob.com/linux/linux-system-contents.html">参考资料</a>  </p>
+<p><span class="exturl" data-url="aHR0cDovL3d3dy5ydW5vb2IuY29tL2xpbnV4L2xpbnV4LXN5c3RlbS1jb250ZW50cy5odG1s">参考资料<i class="fa fa-external-link-alt"></i></span>  </p>
 <hr>
 <p>本次作业量大，要连续写几篇文章，所以时间是下周一晚上7点前完成。我会时时关注你们的博客的哦！</p>
 
@@ -797,7 +797,7 @@ if(canvas.getContext){
       <a href="https://weilining.github.io/bljxtrain2.html" title="技术部和网络部暑假第二次培训">https://weilining.github.io/bljxtrain2.html</a>
   </li>
   <li class="post-copyright-license">
-    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener external nofollow noreferrer" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC8="><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
   </li>
 </ul>
 </div>

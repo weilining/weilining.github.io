@@ -26,7 +26,7 @@
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"weilining.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.1.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"buttons","active":"valine","storage":false,"lazyload":false,"nav":null,"activeClass":"valine"},"motion":{"enable":false,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+    var CONFIG = {"hostname":"weilining.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.1.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"buttons","active":"valine","storage":false,"lazyload":false,"nav":null,"activeClass":"valine"},"motion":{"enable":false,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 <meta name="description" content="默认">
 <meta property="og:type" content="article">
@@ -278,7 +278,7 @@
 </div>
   <div class="links-of-author site-overview-item animated">
       <span class="links-of-author-item">
-        <a href="https://github.com/weilining" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;weilining" rel="noopener external nofollow noreferrer" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3dlaWxpbmluZw==" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;weilining"><i class="fab fa-github fa-fw"></i></span>
       </span>
       <span class="links-of-author-item">
         <a href="/atom.xml" title="RSS → &#x2F;atom.xml"><i class="fa fa-rss fa-fw"></i></a>
@@ -620,7 +620,7 @@ if(canvas.getContext){
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Docker Compose WordPress 快速安装<a href="https://github.com/weilining/weilining.cf/edit/main/source/_posts/105.md" class="post-edit-link" title="编辑" rel="noopener external nofollow noreferrer" target="_blank"><i class="fa fa-pen-nib"></i></a>
+          Docker Compose WordPress 快速安装<span class="exturl post-edit-link" data-url="aHR0cHM6Ly9naXRodWIuY29tL3dlaWxpbmluZy93ZWlsaW5pbmcuY2YvZWRpdC9tYWluL3NvdXJjZS9fcG9zdHMvMTA1Lm1k" title="编辑"><i class="fa fa-pen-nib"></i></span>
         </h1>
 
         <div class="post-meta-container">
@@ -701,7 +701,7 @@ if(canvas.getContext){
 <p><code>nginx</code></p>
 <figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="attribute">worker_processes</span>  <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line"><span class="section">events</span> &#123;</span><br><span class="line">    <span class="attribute">worker_connections</span>  <span class="number">1024</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="section">http</span> &#123;</span><br><span class="line">    <span class="attribute">include</span>       mime.types;</span><br><span class="line">    <span class="attribute">default_type</span>  application/octet-stream;</span><br><span class="line">    <span class="attribute">sendfile</span>        <span class="literal">on</span>;</span><br><span class="line">    <span class="attribute">keepalive_timeout</span>  <span class="number">65</span>;</span><br><span class="line">    <span class="section">server</span> &#123;</span><br><span class="line">        <span class="attribute">listen</span>       <span class="number">80</span>;</span><br><span class="line">        <span class="attribute">listen</span>       [::]:<span class="number">80</span>;</span><br><span class="line">        <span class="attribute">server_name</span>  _;</span><br><span class="line">        <span class="attribute">return</span> <span class="number">403</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="section">server</span> &#123;</span><br><span class="line">        <span class="attribute">listen</span>       <span class="number">80</span>;</span><br><span class="line">        <span class="attribute">listen</span>       [::]:<span class="number">80</span>;</span><br><span class="line">        <span class="attribute">server_name</span>  test6.cf;</span><br><span class="line">        <span class="attribute">location</span> / &#123;</span><br><span class="line">            <span class="attribute">proxy_pass</span>   http://192.168.2.190;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<h1 id="官方安装"><a href="#官方安装" class="headerlink" title="官方安装"></a>官方安装</h1><p>您可以使用Docker Compose在由Docker容器构建的隔离环境中轻松运行WordPress。本快速入门指南演示了如何使用Compose设置和运行WordPress。在开始之前，请确保已 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://docs.docker.com/compose/install/">安装Compose</a>。</p>
+<h1 id="官方安装"><a href="#官方安装" class="headerlink" title="官方安装"></a>官方安装</h1><p>您可以使用Docker Compose在由Docker容器构建的隔离环境中轻松运行WordPress。本快速入门指南演示了如何使用Compose设置和运行WordPress。在开始之前，请确保已 <span class="exturl" data-url="aHR0cHM6Ly9kb2NzLmRvY2tlci5jb20vY29tcG9zZS9pbnN0YWxsLw==">安装Compose<i class="fa fa-external-link-alt"></i></span>。</p>
 <h3 id="定义项目"><a href="#定义项目" class="headerlink" title="定义项目"></a>定义项目</h3><ol>
 <li><p>创建一个空的项目目录。</p>
 <p>您可以将目录命名为易于记忆的名称。该目录是您的应用程序映像的上下文。该目录应仅包含用于构建该映像的资源。</p>
@@ -726,7 +726,7 @@ if(canvas.getContext){
 <blockquote>
 <p><strong>注意事项</strong>：</p>
 <ul>
-<li>Docker卷<code>db_data</code>将WordPress所做的所有更新持久化到数据库。<a target="_blank" rel="noopener external nofollow noreferrer" href="https://docs.docker.com/storage/volumes/">了解有关Docker卷的更多信息</a></li>
+<li>Docker卷<code>db_data</code>将WordPress所做的所有更新持久化到数据库。<span class="exturl" data-url="aHR0cHM6Ly9kb2NzLmRvY2tlci5jb20vc3RvcmFnZS92b2x1bWVzLw==">了解有关Docker卷的更多信息<i class="fa fa-external-link-alt"></i></span></li>
 <li>WordPress Multisite仅适用于port<code>80</code>和<code>443</code>。</li>
 </ul>
 </blockquote>
@@ -741,13 +741,13 @@ if(canvas.getContext){
 <blockquote>
 <p><strong>注意</strong>：WordPress网站无法立即在端口上使用，<code>8000</code> 因为容器仍在初始化中，可能需要几分钟才能进行首次加载。</p>
 </blockquote>
-<p>如果您正在使用<a target="_blank" rel="noopener external nofollow noreferrer" href="https://docs.docker.com/machine/">Docker Machine</a>，则可以运行命令 <code>docker-machine ip MACHINE_VM</code>以获取机器地址，然后<code>http://MACHINE_VM_IP:8000</code>在Web浏览器中打开 。</p>
+<p>如果您正在使用<span class="exturl" data-url="aHR0cHM6Ly9kb2NzLmRvY2tlci5jb20vbWFjaGluZS8=">Docker Machine<i class="fa fa-external-link-alt"></i></span>，则可以运行命令 <code>docker-machine ip MACHINE_VM</code>以获取机器地址，然后<code>http://MACHINE_VM_IP:8000</code>在Web浏览器中打开 。</p>
 <p>如果您使用的是Mac的Docker桌面或Windows的Docker桌面，则可以将其 <code>http://localhost</code>用作IP地址，并<code>http://localhost:8000</code>在Web浏览器中打开。</p>
 <p><img data-src="https://docs.docker.com/compose/images/wordpress-lang.png" alt="选择用于WordPress安装的语言" loading="lazy"></p>
 <p><img data-src="https://docs.docker.com/compose/images/wordpress-welcome.png" alt="WordPress欢迎" loading="lazy"></p>
 <h3 id="关机和清理"><a href="#关机和清理" class="headerlink" title="关机和清理"></a>关机和清理</h3><p>该命令<a target="_blank" rel="noopener external nofollow noreferrer" href="https://docs.docker.com/compose/reference/down/"><code>docker-compose down</code></a>将删除容器和默认网络，但会保留WordPress数据库。</p>
 <p>该命令<code>docker-compose down --volumes</code>将删除容器，默认网络和WordPress数据库。</p>
-<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://docs.docker.com/compose/wordpress/#define-the-project">Quickstart: Compose and WordPress</a></p>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><span class="exturl" data-url="aHR0cHM6Ly9kb2NzLmRvY2tlci5jb20vY29tcG9zZS93b3JkcHJlc3MvI2RlZmluZS10aGUtcHJvamVjdA==">Quickstart: Compose and WordPress<i class="fa fa-external-link-alt"></i></span></p>
 
     </div>
 
@@ -810,7 +810,7 @@ if(canvas.getContext){
       <a href="https://weilining.github.io/105.html" title="Docker Compose WordPress 快速安装">https://weilining.github.io/105.html</a>
   </li>
   <li class="post-copyright-license">
-    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener external nofollow noreferrer" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC8="><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
   </li>
 </ul>
 </div>

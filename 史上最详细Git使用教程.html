@@ -26,7 +26,7 @@
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"weilining.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.1.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"buttons","active":"valine","storage":false,"lazyload":false,"nav":null,"activeClass":"valine"},"motion":{"enable":false,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+    var CONFIG = {"hostname":"weilining.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.1.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"buttons","active":"valine","storage":false,"lazyload":false,"nav":null,"activeClass":"valine"},"motion":{"enable":false,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 <meta name="description" content="默认">
 <meta property="og:type" content="article">
@@ -356,7 +356,7 @@
 </div>
   <div class="links-of-author site-overview-item animated">
       <span class="links-of-author-item">
-        <a href="https://github.com/weilining" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;weilining" rel="noopener external nofollow noreferrer" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3dlaWxpbmluZw==" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;weilining"><i class="fab fa-github fa-fw"></i></span>
       </span>
       <span class="links-of-author-item">
         <a href="/atom.xml" title="RSS → &#x2F;atom.xml"><i class="fa fa-rss fa-fw"></i></a>
@@ -698,7 +698,7 @@ if(canvas.getContext){
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          史上最详细Git使用教程<a href="https://github.com/weilining/weilining.cf/edit/main/source/_posts/%E5%8F%B2%E4%B8%8A%E6%9C%80%E8%AF%A6%E7%BB%86Git%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B.md" class="post-edit-link" title="编辑" rel="noopener external nofollow noreferrer" target="_blank"><i class="fa fa-pen-nib"></i></a>
+          史上最详细Git使用教程<span class="exturl post-edit-link" data-url="aHR0cHM6Ly9naXRodWIuY29tL3dlaWxpbmluZy93ZWlsaW5pbmcuY2YvZWRpdC9tYWluL3NvdXJjZS9fcG9zdHMv5Y+y5LiK5pyA6K+m57uGR2l05L2/55So5pWZ56iLLm1k" title="编辑"><i class="fa fa-pen-nib"></i></span>
         </h1>
 
         <div class="post-meta-container">
@@ -777,7 +777,7 @@ if(canvas.getContext){
 <h4 id="SVN与Git的最主要的区别"><a href="#SVN与Git的最主要的区别" class="headerlink" title="SVN与Git的最主要的区别"></a><strong>SVN与Git的最主要的区别</strong></h4><p>SVN是集中式版本控制系统，版本库是集中放在中央服务器的，而干活的时候，用的都是自己的电脑，所以首先要从中央服务器哪里得到最新的版本，然后干活，干完后，需要把自己做完的活推送到中央服务器。集中式版本控制系统是必须联网才能工作，如果在局域网还可以，带宽够大，速度够快，如果在互联网下，如果网速慢的话，就纳闷了。</p>
 <p>   Git是分布式版本控制系统，那么它就没有中央服务器的，每个人的电脑就是一个完整的版本库，这样，工作的时候就不需要联网了，因为版本都是在自己的电脑上。既然每个人的电脑都有一个完整的版本库，那多个人如何协作呢？比如说自己在电脑上改了文件A，其他人也在电脑上改了文件A，这时，你们两之间只需把各自的修改推送给对方，就可以互相看到对方的修改了。</p>
 <h4 id="在windows上如何安装Git"><a href="#在windows上如何安装Git" class="headerlink" title="在windows上如何安装Git"></a><strong>在windows上如何安装Git</strong></h4><p><strong><a target="_blank" rel="noopener external nofollow noreferrer" href="https://images2015.cnblogs.com/blog/762349/201610/762349-20161026115656421-1232561908.png"><img data-src="/%E5%8F%B2%E4%B8%8A%E6%9C%80%E8%AF%A6%E7%BB%86Git%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/762349-20161026115656421-1232561908.png" alt="img" loading="lazy"></a></strong></p>
-<p>  <strong><a target="_blank" rel="noopener external nofollow noreferrer" href="http://pan.baidu.com/s/1bpqprob">http://pan.baidu.com/s/1bpqprob</a> （点此可直接下载安装，建议默认安装，不要改动安装路径）</strong></p>
+<p>  <strong><span class="exturl" data-url="aHR0cDovL3Bhbi5iYWlkdS5jb20vcy8xYnBxcHJvYg==">http://pan.baidu.com/s/1bpqprob<i class="fa fa-external-link-alt"></i></span> （点此可直接下载安装，建议默认安装，不要改动安装路径）</strong></p>
 <p><strong>需要从网上下载一个，然后进行默认安装即可。安装完成后，在开始菜单里面找到 “Git –&gt; Git Bash”,如下：</strong></p>
 <p><strong><a target="_blank" rel="noopener external nofollow noreferrer" href="https://images2015.cnblogs.com/blog/762349/201610/762349-20161026115755015-870706331.png"><img data-src="/%E5%8F%B2%E4%B8%8A%E6%9C%80%E8%AF%A6%E7%BB%86Git%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/762349-20161026115755015-870706331.png" alt="img" loading="lazy"></a></strong></p>
 <p>会弹出一个类似的命令窗口的东西，就说明Git安装成功。如下：</p>
@@ -888,7 +888,7 @@ if(canvas.getContext){
 <p>再来看看我们testgit目录，添加了3个文件了。如下所示：</p>
 <h4 id="远程仓库"><a href="#远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h4><p> 在了解之前，先注册github账号，由于你的本地Git仓库和github仓库之间的传输是通过SSH加密的，所以需要一点设置：</p>
 <p>   第一步：创建SSH Key。在用户主目录下，看看有没有.ssh目录，如果有，再看看这个目录下有没有id_rsa和id_rsa.pub这两个文件，如果有的话，直接跳过此如下命令，如果没有的话，打开命令行，输入如下命令：</p>
-<p>ssh-keygen -t rsa –C “<a href="mailto:&#121;&#x6f;&#117;&#x72;&#x65;&#109;&#97;&#x69;&#x6c;&#x40;&#101;&#x78;&#97;&#x6d;&#112;&#x6c;&#x65;&#46;&#99;&#111;&#109;" rel="external nofollow noreferrer">&#121;&#x6f;&#117;&#x72;&#x65;&#109;&#97;&#x69;&#x6c;&#x40;&#101;&#x78;&#97;&#x6d;&#112;&#x6c;&#x65;&#46;&#99;&#111;&#109;</a>”, 由于我本地此前运行过一次，所以本地有，如下所示：</p>
+<p>ssh-keygen -t rsa –C “<span class="exturl" data-url="bWFpbHRvOiYjeDc5OyYjMTExOyYjeDc1OyYjeDcyOyYjeDY1OyYjMTA5OyYjOTc7JiN4Njk7JiN4NmM7JiM2NDsmIzEwMTsmIzEyMDsmI3g2MTsmIzEwOTsmIzExMjsmI3g2YzsmI3g2NTsmI3gyZTsmI3g2MzsmIzExMTsmI3g2ZDs=">&#x79;&#111;&#x75;&#x72;&#x65;&#109;&#97;&#x69;&#x6c;&#64;&#101;&#120;&#x61;&#109;&#112;&#x6c;&#x65;&#x2e;&#x63;&#111;&#x6d;<i class="fa fa-external-link-alt"></i></span>”, 由于我本地此前运行过一次，所以本地有，如下所示：</p>
 <p> <a target="_blank" rel="noopener external nofollow noreferrer" href="http://ww2.sinaimg.cn/mw690/6941baebgw1eloypq7esij20kx04pt9c.jpg"><img data-src="/%E5%8F%B2%E4%B8%8A%E6%9C%80%E8%AF%A6%E7%BB%86Git%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/6941baebgw1eloypq7esij20kx04pt9c.jpg" alt="img" loading="lazy"></a></p>
 <p>id_rsa是私钥，不能泄露出去，id_rsa.pub是公钥，可以放心地告诉任何人。</p>
 <p>第二步：登录github,打开” settings”中的SSH Keys页面，然后点击“Add SSH Key”,填上任意title，在Key文本框里黏贴id_rsa.pub文件的内容。</p>
@@ -905,7 +905,7 @@ if(canvas.getContext){
 <p><a target="_blank" rel="noopener external nofollow noreferrer" href="http://ww2.sinaimg.cn/mw690/6941baebgw1eloypm6o2gj20si0idwh4.jpg"><img data-src="/%E5%8F%B2%E4%B8%8A%E6%9C%80%E8%AF%A6%E7%BB%86Git%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/6941baebgw1eloypm6o2gj20si0idwh4.jpg" alt="img" loading="lazy"></a></p>
 <p>  目前，在GitHub上的这个<code>testgit</code>仓库还是空的，GitHub告诉我们，可以从这个仓库克隆出新的仓库，也可以把一个已有的本地仓库与之关联，然后，把本地仓库的内容推送到GitHub仓库。</p>
 <p>现在，我们根据GitHub的提示，在本地的<code>testgit</code>仓库下运行命令：</p>
-<p>git remote add origin <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/tugenhua0707/testgit.git">https://github.com/tugenhua0707/testgit.git</a></p>
+<p>git remote add origin <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3R1Z2VuaHVhMDcwNy90ZXN0Z2l0LmdpdA==">https://github.com/tugenhua0707/testgit.git<i class="fa fa-external-link-alt"></i></span></p>
 <p>所有的如下：</p>
 <p> <a target="_blank" rel="noopener external nofollow noreferrer" href="http://ww4.sinaimg.cn/mw690/6941baebgw1eloypk8b34j20hk070764.jpg"><img data-src="/%E5%8F%B2%E4%B8%8A%E6%9C%80%E8%AF%A6%E7%BB%86Git%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/6941baebgw1eloypk8b34j20hk070764.jpg" alt="img" loading="lazy"></a></p>
 <p>把本地库的内容推送到远程，使用 git push命令，实际上是把当前分支master推送到远程。</p>
@@ -1062,9 +1062,9 @@ if(canvas.getContext){
 <p>  git reflog    查看历史记录的版本号id</p>
 <p>  git checkout — XX 把XX文件在工作区的修改全部撤销。</p>
 <p>  git rm XX     删除XX文件</p>
-<p>  git remote add origin <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/ev-power/XiaoYong">https://github.com/ev-power/XiaoYong</a> 关联一个远程库</p>
+<p>  git remote add origin <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2V2LXBvd2VyL1hpYW9Zb25n">https://github.com/ev-power/XiaoYong<i class="fa fa-external-link-alt"></i></span> 关联一个远程库</p>
 <p>  git push –u(第一次要用-u 以后不需要) origin master 把当前master分支推送到远程库</p>
-<p>  git clone <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/ev-power/XiaoYong">https://github.com/ev-power/XiaoYong</a> 从远程库中克隆</p>
+<p>  git clone <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2V2LXBvd2VyL1hpYW9Zb25n">https://github.com/ev-power/XiaoYong<i class="fa fa-external-link-alt"></i></span> 从远程库中克隆</p>
 <p>  git checkout –b dev 创建dev分支 并切换到dev分支上</p>
 <p>  git branch 查看当前所有的分支</p>
 <p>  git checkout master 切换回master分支</p>
@@ -1145,7 +1145,7 @@ if(canvas.getContext){
       <a href="https://weilining.github.io/%E5%8F%B2%E4%B8%8A%E6%9C%80%E8%AF%A6%E7%BB%86Git%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B.html" title="史上最详细Git使用教程">https://weilining.github.io/史上最详细Git使用教程.html</a>
   </li>
   <li class="post-copyright-license">
-    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener external nofollow noreferrer" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC8="><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
   </li>
 </ul>
 </div>

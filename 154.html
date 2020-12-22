@@ -26,7 +26,7 @@
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"weilining.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.1.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"buttons","active":"valine","storage":false,"lazyload":false,"nav":null,"activeClass":"valine"},"motion":{"enable":false,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+    var CONFIG = {"hostname":"weilining.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.1.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"buttons","active":"valine","storage":false,"lazyload":false,"nav":null,"activeClass":"valine"},"motion":{"enable":false,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 <meta name="description" content="默认">
 <meta property="og:type" content="article">
@@ -275,7 +275,7 @@
 </div>
   <div class="links-of-author site-overview-item animated">
       <span class="links-of-author-item">
-        <a href="https://github.com/weilining" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;weilining" rel="noopener external nofollow noreferrer" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3dlaWxpbmluZw==" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;weilining"><i class="fab fa-github fa-fw"></i></span>
       </span>
       <span class="links-of-author-item">
         <a href="/atom.xml" title="RSS → &#x2F;atom.xml"><i class="fa fa-rss fa-fw"></i></a>
@@ -617,7 +617,7 @@ if(canvas.getContext){
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          CentOS搭建Git服务器及权限管理<a href="https://github.com/weilining/weilining.cf/edit/main/source/_posts/154.md" class="post-edit-link" title="编辑" rel="noopener external nofollow noreferrer" target="_blank"><i class="fa fa-pen-nib"></i></a>
+          CentOS搭建Git服务器及权限管理<span class="exturl post-edit-link" data-url="aHR0cHM6Ly9naXRodWIuY29tL3dlaWxpbmluZy93ZWlsaW5pbmcuY2YvZWRpdC9tYWluL3NvdXJjZS9fcG9zdHMvMTU0Lm1k" title="编辑"><i class="fa fa-pen-nib"></i></span>
         </h1>
 
         <div class="post-meta-container">
@@ -707,7 +707,7 @@ if(canvas.getContext){
 <h2 id="3-添加git的管理的账户和设置密码"><a href="#3-添加git的管理的账户和设置密码" class="headerlink" title="3. 添加git的管理的账户和设置密码"></a>3. 添加git的管理的账户和设置密码</h2><p>设置专门管理git的账号非必须，但是建议这么操作。</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 添加git账户</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> adduser git</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 修改git的密码</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> passwd git</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 然后两次输入git的密码确认后。</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 查看git是否安装成功</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> /home &amp;&amp; ls -al</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 如果已经有了git，那么表示成，参考如下：</span></span><br><span class="line">drwxr-xr-x.  5 root root 4096 Apr  4 15:03 .</span><br><span class="line">dr-xr-xr-x. 19 root root 4096 Apr  4 15:05 ..</span><br><span class="line">drwx------  10 git  git  4096 Apr  4 00:26 git</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 默认还给我们分配一个名字叫git的组。</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="4-git的权限管理"><a href="#4-git的权限管理" class="headerlink" title="4. git的权限管理"></a>4. git的权限管理</h2><p>git仓库的权限管理，我们可以手动进行管理和配置，也可以通过其他辅助工具。如果小团队的话，直接通过ssh公钥进行管理即可，如果大点的团队，最好用<a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/sitaramc/gitolite">gitolite</a> 或者 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/res0nat0r/gitosis">gitosis</a>，两者都差不多，一个是Perl开发，一个是Python开发。</p>
+<h2 id="4-git的权限管理"><a href="#4-git的权限管理" class="headerlink" title="4. git的权限管理"></a>4. git的权限管理</h2><p>git仓库的权限管理，我们可以手动进行管理和配置，也可以通过其他辅助工具。如果小团队的话，直接通过ssh公钥进行管理即可，如果大点的团队，最好用<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3NpdGFyYW1jL2dpdG9saXRl">gitolite<i class="fa fa-external-link-alt"></i></span> 或者 <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3JlczBuYXQwci9naXRvc2lz">gitosis<i class="fa fa-external-link-alt"></i></span>，两者都差不多，一个是Perl开发，一个是Python开发。</p>
 <p>以下我分别介绍手动管理权限和使用<code>gitolite</code>管理的方式，<strong>注意两者不兼容，不能混用</strong>。</p>
 <h2 id="5-git的手动权限管理"><a href="#5-git的手动权限管理" class="headerlink" title="5. git的手动权限管理"></a>5. git的手动权限管理</h2><p>经过以上步骤，其实服务器的基本已经配置好，但是需要设置权限和配置远程访问git仓库的方式。我们只介绍ssh的方式，https不做介绍。</p>
 <h3 id="5-1-配置服务端的ssh访问"><a href="#5-1-配置服务端的ssh访问" class="headerlink" title="5.1 配置服务端的ssh访问"></a>5.1 配置服务端的ssh访问</h3><p>切换到git账号,并创建ssh的默认目录和校验公钥的配置文件</p>
@@ -870,7 +870,7 @@ if(canvas.getContext){
       <a href="https://weilining.github.io/154.html" title="CentOS搭建Git服务器及权限管理">https://weilining.github.io/154.html</a>
   </li>
   <li class="post-copyright-license">
-    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener external nofollow noreferrer" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC8="><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
   </li>
 </ul>
 </div>

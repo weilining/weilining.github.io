@@ -26,7 +26,7 @@
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"weilining.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.1.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"buttons","active":"valine","storage":false,"lazyload":false,"nav":null,"activeClass":"valine"},"motion":{"enable":false,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+    var CONFIG = {"hostname":"weilining.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.1.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"buttons","active":"valine","storage":false,"lazyload":false,"nav":null,"activeClass":"valine"},"motion":{"enable":false,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 <meta name="description" content="默认">
 <meta property="og:type" content="article">
@@ -280,7 +280,7 @@
 </div>
   <div class="links-of-author site-overview-item animated">
       <span class="links-of-author-item">
-        <a href="https://github.com/weilining" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;weilining" rel="noopener external nofollow noreferrer" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3dlaWxpbmluZw==" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;weilining"><i class="fab fa-github fa-fw"></i></span>
       </span>
       <span class="links-of-author-item">
         <a href="/atom.xml" title="RSS → &#x2F;atom.xml"><i class="fa fa-rss fa-fw"></i></a>
@@ -622,7 +622,7 @@ if(canvas.getContext){
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          域名递归解析过程被污染 解决方案<a href="https://github.com/weilining/weilining.cf/edit/main/source/_posts/195.md" class="post-edit-link" title="编辑" rel="noopener external nofollow noreferrer" target="_blank"><i class="fa fa-pen-nib"></i></a>
+          域名递归解析过程被污染 解决方案<span class="exturl post-edit-link" data-url="aHR0cHM6Ly9naXRodWIuY29tL3dlaWxpbmluZy93ZWlsaW5pbmcuY2YvZWRpdC9tYWluL3NvdXJjZS9fcG9zdHMvMTk1Lm1k" title="编辑"><i class="fa fa-pen-nib"></i></span>
         </h1>
 
         <div class="post-meta-container">
@@ -694,13 +694,13 @@ if(canvas.getContext){
     
     <div class="post-body" itemprop="articleBody">
         <h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><p>国内DNS污染，国内用户没法正确解析，一般是域名正常解析过程中受到上级网络设施强行阻断，这已超出权威DNS服务能力</p>
-<h2 id="一般建议用户更换业务域名。"><a href="#一般建议用户更换业务域名。" class="headerlink" title="一般建议用户更换业务域名。"></a>一般建议用户更换业务域名。</h2><h2 id="换国外NS，抛弃国内用户，面向国外"><a href="#换国外NS，抛弃国内用户，面向国外" class="headerlink" title="换国外NS，抛弃国内用户，面向国外"></a>换国外NS，抛弃国内用户，面向国外</h2><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dns.google/query?name=xjf.ink&amp;rr_type=A&amp;ecs=">https://dns.google/query?name=xjf.ink&amp;rr_type=A&amp;ecs=</a></p>
+<h2 id="一般建议用户更换业务域名。"><a href="#一般建议用户更换业务域名。" class="headerlink" title="一般建议用户更换业务域名。"></a>一般建议用户更换业务域名。</h2><h2 id="换国外NS，抛弃国内用户，面向国外"><a href="#换国外NS，抛弃国内用户，面向国外" class="headerlink" title="换国外NS，抛弃国内用户，面向国外"></a>换国外NS，抛弃国内用户，面向国外</h2><p><span class="exturl" data-url="aHR0cHM6Ly9kbnMuZ29vZ2xlL3F1ZXJ5P25hbWU9eGpmLmluayZhbXA7cnJfdHlwZT1BJmFtcDtlY3M9">https://dns.google/query?name=xjf.ink&amp;rr_type=A&amp;ecs=<i class="fa fa-external-link-alt"></i></span></p>
 <p>国外正常解析</p>
 <p><img data-src="/195/image-20201211032110825.png" alt="image-20201211032110825" loading="lazy"></p>
 <a id="more"></a>
 
-<h2 id="DNS-在线自检"><a href="#DNS-在线自检" class="headerlink" title="DNS 在线自检"></a>DNS 在线自检</h2><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://zijian.aliyun.com/">https://zijian.aliyun.com/</a></p>
-<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://domaintool.cloud.tencent.com/">https://domaintool.cloud.tencent.com/</a></p>
+<h2 id="DNS-在线自检"><a href="#DNS-在线自检" class="headerlink" title="DNS 在线自检"></a>DNS 在线自检</h2><p><span class="exturl" data-url="aHR0cHM6Ly96aWppYW4uYWxpeXVuLmNvbS8=">https://zijian.aliyun.com/<i class="fa fa-external-link-alt"></i></span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9kb21haW50b29sLmNsb3VkLnRlbmNlbnQuY29tLw==">https://domaintool.cloud.tencent.com/<i class="fa fa-external-link-alt"></i></span></p>
 <p><img data-src="/195/image-20201211031437593.png" alt="image-20201211031437593" loading="lazy"></p>
 <p><img data-src="/195/image-20201211031658864.png" alt="image-20201211031658864" loading="lazy"></p>
 <h2 id="本地自检"><a href="#本地自检" class="headerlink" title="本地自检"></a>本地自检</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">dig xjf.ink +trace</span><br></pre></td></tr></table></figure>
@@ -769,7 +769,7 @@ if(canvas.getContext){
       <a href="https://weilining.github.io/195.html" title="域名递归解析过程被污染 解决方案">https://weilining.github.io/195.html</a>
   </li>
   <li class="post-copyright-license">
-    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener external nofollow noreferrer" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC8="><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
   </li>
 </ul>
 </div>

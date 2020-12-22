@@ -26,7 +26,7 @@
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"weilining.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.1.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"buttons","active":"valine","storage":false,"lazyload":false,"nav":null,"activeClass":"valine"},"motion":{"enable":false,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+    var CONFIG = {"hostname":"weilining.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.1.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"buttons","active":"valine","storage":false,"lazyload":false,"nav":null,"activeClass":"valine"},"motion":{"enable":false,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 <meta name="description" content="默认">
 <meta property="og:type" content="article">
@@ -274,7 +274,7 @@
 </div>
   <div class="links-of-author site-overview-item animated">
       <span class="links-of-author-item">
-        <a href="https://github.com/weilining" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;weilining" rel="noopener external nofollow noreferrer" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3dlaWxpbmluZw==" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;weilining"><i class="fab fa-github fa-fw"></i></span>
       </span>
       <span class="links-of-author-item">
         <a href="/atom.xml" title="RSS → &#x2F;atom.xml"><i class="fa fa-rss fa-fw"></i></a>
@@ -616,7 +616,7 @@ if(canvas.getContext){
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Linux添加/删除用户和用户组<a href="https://github.com/weilining/weilining.cf/edit/main/source/_posts/163.md" class="post-edit-link" title="编辑" rel="noopener external nofollow noreferrer" target="_blank"><i class="fa fa-pen-nib"></i></a>
+          Linux添加/删除用户和用户组<span class="exturl post-edit-link" data-url="aHR0cHM6Ly9naXRodWIuY29tL3dlaWxpbmluZy93ZWlsaW5pbmcuY2YvZWRpdC9tYWluL3NvdXJjZS9fcG9zdHMvMTYzLm1k" title="编辑"><i class="fa fa-pen-nib"></i></span>
         </h1>
 
         <div class="post-meta-container">
@@ -701,7 +701,7 @@ if(canvas.getContext){
 <p>如果添加了用户，添加了组，然后使这个组里的人都可以sudo 到公共账号下</p>
 <p>可以/etc/sudoers.d 下面建立一个文件内容如下 ，就可以是etl组的所有用户都可以无密码的切到etl用户下。</p>
 <p>%etl ALL=(ALL) NOPASSWD: /bin/su etl<br>%etl ALL=(ALL) NOPASSWD: /bin/su - etl</p>
-<p>sudo 具体参考 <a target="_blank" rel="noopener external nofollow noreferrer" href="http://www.cnblogs.com/xd502djj/p/6641475.html">http://www.cnblogs.com/xd502djj/p/6641475.html</a></p>
+<p>sudo 具体参考 <span class="exturl" data-url="aHR0cDovL3d3dy5jbmJsb2dzLmNvbS94ZDUwMmRqai9wLzY2NDE0NzUuaHRtbA==">http://www.cnblogs.com/xd502djj/p/6641475.html<i class="fa fa-external-link-alt"></i></span></p>
 <p>5、临时关闭：在/etc/shadow文件中属于该用户的行的第二个字段（密码）前面加上<em>就可以了。想恢复该用户，去掉</em>即可。</p>
 <p>或者使用如下命令关闭用户账号：<br>passwd peter –l</p>
 <p>重新释放：<br>passwd peter –u</p>
@@ -711,7 +711,7 @@ if(canvas.getContext){
 <p>7、从组中删除用户<br>编辑/etc/group 找到GROUP1那一行，删除 A<br>或者用命令<br>gpasswd -d A GROUP</p>
 <p>8、显示用户信息<br>id user<br>cat /etc/passwd</p>
 <p>更详细的用户和用户组的解说请参考<br>Linux 用户和用户组详细解说<br>本文主要讲述在Linux 系统中用户(user)和用户组(group)管理相应的概念；用户(user)和用户组(group)相关命令的列举；其中也对单用户多任务，多用户多任务也做以解说。</p>
-<p>本篇文章来源于 PHP资讯 原文链接：<a target="_blank" rel="noopener external nofollow noreferrer" href="http://www.phpq.net/linux/linux-add-delete-user-group.html">http://www.phpq.net/linux/linux-add-delete-user-group.html</a></p>
+<p>本篇文章来源于 PHP资讯 原文链接：<span class="exturl" data-url="aHR0cDovL3d3dy5waHBxLm5ldC9saW51eC9saW51eC1hZGQtZGVsZXRlLXVzZXItZ3JvdXAuaHRtbA==">http://www.phpq.net/linux/linux-add-delete-user-group.html<i class="fa fa-external-link-alt"></i></span></p>
 <p>Linux 用户（user）和用户组（group）管理概述</p>
 <p>、理解Linux的单用户多任务，多用户多任务概念；</p>
 <p>Linux 是一个多用户、多任务的操作系统；我们应该了解单用户多任务和多用户多任务的概念；</p>
@@ -824,7 +824,7 @@ if(canvas.getContext){
       <a href="https://weilining.github.io/163.html" title="Linux添加&#x2F;删除用户和用户组">https://weilining.github.io/163.html</a>
   </li>
   <li class="post-copyright-license">
-    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener external nofollow noreferrer" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC8="><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
   </li>
 </ul>
 </div>

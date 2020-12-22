@@ -26,7 +26,7 @@
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"weilining.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.1.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"buttons","active":"valine","storage":false,"lazyload":false,"nav":null,"activeClass":"valine"},"motion":{"enable":false,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+    var CONFIG = {"hostname":"weilining.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.1.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"buttons","active":"valine","storage":false,"lazyload":false,"nav":null,"activeClass":"valine"},"motion":{"enable":false,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 <meta name="description" content="默认">
 <meta property="og:type" content="article">
@@ -275,7 +275,7 @@
 </div>
   <div class="links-of-author site-overview-item animated">
       <span class="links-of-author-item">
-        <a href="https://github.com/weilining" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;weilining" rel="noopener external nofollow noreferrer" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3dlaWxpbmluZw==" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;weilining"><i class="fab fa-github fa-fw"></i></span>
       </span>
       <span class="links-of-author-item">
         <a href="/atom.xml" title="RSS → &#x2F;atom.xml"><i class="fa fa-rss fa-fw"></i></a>
@@ -617,7 +617,7 @@ if(canvas.getContext){
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          将 Valine 切换至 leancloud 国际版<a href="https://github.com/weilining/weilining.cf/edit/main/source/_posts/107-1.md" class="post-edit-link" title="编辑" rel="noopener external nofollow noreferrer" target="_blank"><i class="fa fa-pen-nib"></i></a>
+          将 Valine 切换至 leancloud 国际版<span class="exturl post-edit-link" data-url="aHR0cHM6Ly9naXRodWIuY29tL3dlaWxpbmluZy93ZWlsaW5pbmcuY2YvZWRpdC9tYWluL3NvdXJjZS9fcG9zdHMvMTA3LTEubWQ=" title="编辑"><i class="fa fa-pen-nib"></i></span>
         </h1>
 
         <div class="post-meta-container">
@@ -695,13 +695,13 @@ if(canvas.getContext){
 
 <h3 id="注册-LC-国际版账号"><a href="#注册-LC-国际版账号" class="headerlink" title="注册 LC 国际版账号"></a>注册 LC 国际版账号</h3><p>　　貌似 18 年 10 月之前的国内账号可以直接登录，我就比较倒霉了，刚好是 10 月底注册的 23333 所以还是要重新注册一个账号。<br>　　国际版网址：</p>
 <ul>
-<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://leancloud.app/">https://leancloud.app</a></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly9sZWFuY2xvdWQuYXBwLw==">https://leancloud.app<i class="fa fa-external-link-alt"></i></span></li>
 </ul>
 <p>　　虽然首页是英文，但是你点进去注册的话还是全中文界面，不要被吓到【可能被吓到的只有我而已吧 x<br>　　第二个惊吓是如果你注册的邮箱绑定了 gravatar 貌似会直接被识别？我又吓了一跳 x</p>
 <h3 id="导出-Valine-数据"><a href="#导出-Valine-数据" class="headerlink" title="导出 Valine 数据"></a>导出 Valine 数据</h3><p>　　进入 LC 后台首页，点击应用右上角的齿轮进入设置页面，选择倒数第二项 <code>【数据导出】</code> 。<br>　　然后去掉 <code>限定导出数据起止日期</code>，勾选 <code>限定 Class</code>，在 Class 中选择 <code>_User</code>（用户数据）和 <code>Comment</code>（评论数据），点击【导出】后在你的注册邮箱中就可以接收到对应数据的压缩包。</p>
 <h3 id="修改-hexo-中的-Valine-设置"><a href="#修改-hexo-中的-Valine-设置" class="headerlink" title="修改 hexo 中的 Valine 设置"></a>修改 hexo 中的 Valine 设置</h3><p>　　在国际版的 LC 中新建应用，为了防止你自己搞混，我建议两个应用命名成不同的名字，毕竟这两个页面的 UI 一模一样<br>　　我用的是 Next 主题已经集成了 Valine 评论插件，所以在主题配置文件里直接修改 appid 和 appkey 即可。两个数值的获取可以参考 Valine 的官方教程↓</p>
 <ul>
-<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://valine.js.org/quickstart.html">https://valine.js.org/quickstart.html</a></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly92YWxpbmUuanMub3JnL3F1aWNrc3RhcnQuaHRtbA==">https://valine.js.org/quickstart.html<i class="fa fa-external-link-alt"></i></span></li>
 </ul>
 <p>　　修改好之后 <code>hexo s --debug</code> 打开本地浏览，进入一个之前有过评论的界面刷新一下，如果配置成功的话，你的评论区就会被清空（这就是先修改再导入数据的原因），如果评论还在的话可以尝试一下 <code>hexo clean</code>。<br>　　然后 Valine 是可以在本地浏览中发送评论的，可以发一条评论测试一下，顺利的话国际版的后台也会出现用户和评论的 Class，这个时候就可以开始导入数据了。</p>
 <h3 id="将历史评论导入至国际版"><a href="#将历史评论导入至国际版" class="headerlink" title="将历史评论导入至国际版"></a>将历史评论导入至国际版</h3><p>　　进入应用的存储页面，复制相应的 Class 名，点击 <code>创建 Class</code> 右边的 <code>…</code> 按钮，将 Class 名粘贴后导入相应的数据，导入后的数据似乎是会自动合并的，刚才发送的测试评论也在里面。<br>　　回到 Hexo 本地浏览中确认一下，如果显示无误就可以上传啦~ </p>
@@ -767,7 +767,7 @@ if(canvas.getContext){
       <a href="https://weilining.github.io/107-1.html" title="将 Valine 切换至 leancloud 国际版">https://weilining.github.io/107-1.html</a>
   </li>
   <li class="post-copyright-license">
-    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener external nofollow noreferrer" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC8="><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
   </li>
 </ul>
 </div>

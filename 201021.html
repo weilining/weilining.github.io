@@ -26,7 +26,7 @@
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"weilining.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.1.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"buttons","active":"valine","storage":false,"lazyload":false,"nav":null,"activeClass":"valine"},"motion":{"enable":false,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+    var CONFIG = {"hostname":"weilining.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.1.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"buttons","active":"valine","storage":false,"lazyload":false,"nav":null,"activeClass":"valine"},"motion":{"enable":false,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 <meta name="description" content="默认">
 <meta property="og:type" content="article">
@@ -275,7 +275,7 @@
 </div>
   <div class="links-of-author site-overview-item animated">
       <span class="links-of-author-item">
-        <a href="https://github.com/weilining" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;weilining" rel="noopener external nofollow noreferrer" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3dlaWxpbmluZw==" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;weilining"><i class="fab fa-github fa-fw"></i></span>
       </span>
       <span class="links-of-author-item">
         <a href="/atom.xml" title="RSS → &#x2F;atom.xml"><i class="fa fa-rss fa-fw"></i></a>
@@ -617,7 +617,7 @@ if(canvas.getContext){
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          彻底解决 hexo init 卡顿问题<a href="https://github.com/weilining/weilining.cf/edit/main/source/_posts/201021.md" class="post-edit-link" title="编辑" rel="noopener external nofollow noreferrer" target="_blank"><i class="fa fa-pen-nib"></i></a>
+          彻底解决 hexo init 卡顿问题<span class="exturl post-edit-link" data-url="aHR0cHM6Ly9naXRodWIuY29tL3dlaWxpbmluZy93ZWlsaW5pbmcuY2YvZWRpdC9tYWluL3NvdXJjZS9fcG9zdHMvMjAxMDIxLm1k" title="编辑"><i class="fa fa-pen-nib"></i></span>
         </h1>
 
         <div class="post-meta-container">
@@ -689,22 +689,22 @@ if(canvas.getContext){
     
     <div class="post-body" itemprop="articleBody">
         <p>[TOC]</p>
-<p><code>hexo init blog</code>卡住？<a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.google.com/search?q=%E5%BD%BB%E5%BA%95%E8%A7%A3%E5%86%B3+hexo+init+%E5%8D%A1%E9%A1%BF%E9%97%AE%E9%A2%98&oq=%E5%BD%BB%E5%BA%95%E8%A7%A3%E5%86%B3+hexo+init+%E5%8D%A1%E9%A1%BF%E9%97%AE%E9%A2%98&aqs=chrome..69i57.406j0j1&sourceid=chrome&ie=UTF-8">Google</a>谷姐没好办法，分享下自己办法（其实是在翻译源码换gitee源）</p>
+<p><code>hexo init blog</code>卡住？<span class="exturl" data-url="aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS9zZWFyY2g/cT0lRTUlQkQlQkIlRTUlQkElOTUlRTglQTclQTMlRTUlODYlQjMraGV4bytpbml0KyVFNSU4RCVBMSVFOSVBMSVCRiVFOSU5NyVBRSVFOSVBMiU5OCZvcT0lRTUlQkQlQkIlRTUlQkElOTUlRTglQTclQTMlRTUlODYlQjMraGV4bytpbml0KyVFNSU4RCVBMSVFOSVBMSVCRiVFOSU5NyVBRSVFOSVBMiU5OCZhcXM9Y2hyb21lLi42OWk1Ny40MDZqMGoxJnNvdXJjZWlkPWNocm9tZSZpZT1VVEYtOA==">Google<i class="fa fa-external-link-alt"></i></span>谷姐没好办法，分享下自己办法（其实是在翻译源码换gitee源）</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br><span class="line">git clone https:&#x2F;&#x2F;gitee.com&#x2F;weilining&#x2F;hexo-starter.git blog</span><br><span class="line">cd blog</span><br><span class="line">git submodule init</span><br><span class="line">git submodule update</span><br><span class="line">npm config set registry http:&#x2F;&#x2F;registry.npm.taobao.org</span><br><span class="line">npm i</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure>
 
 
 
 <a id="more"></a>
 
-<h1 id="源码"><a href="#源码" class="headerlink" title="源码"></a>源码</h1><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/hexojs/hexo-cli/blob/master/lib/console/init.js">GitHub</a></p>
+<h1 id="源码"><a href="#源码" class="headerlink" title="源码"></a>源码</h1><p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2hleG9qcy9oZXhvLWNsaS9ibG9iL21hc3Rlci9saWIvY29uc29sZS9pbml0Lmpz">GitHub<i class="fa fa-external-link-alt"></i></span></p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo init blog</span><br></pre></td></tr></table></figure>
 
 <h1 id="解析"><a href="#解析" class="headerlink" title="解析"></a>解析</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;hexojs&#x2F;hexo-starter.git blog</span><br><span class="line">cd blog</span><br><span class="line">git submodule init</span><br><span class="line">git submodule update</span><br><span class="line">npm i</span><br></pre></td></tr></table></figure>
 
 <h1 id="换gitee"><a href="#换gitee" class="headerlink" title="换gitee"></a>换gitee</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;gitee.com&#x2F;weilining&#x2F;hexo-starter.git blog</span><br><span class="line">cd blog</span><br><span class="line">git submodule init</span><br><span class="line">git submodule update</span><br><span class="line">npm config set registry http:&#x2F;&#x2F;registry.npm.taobao.org</span><br><span class="line">npm i</span><br></pre></td></tr></table></figure>
 
-<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://git-scm.com/book/zh/v2/Git-%E5%B7%A5%E5%85%B7-%E5%AD%90%E6%A8%A1%E5%9D%97">Git 工具 - 子模块</a></p>
-<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/hexojs">hexojs</a></p>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><span class="exturl" data-url="aHR0cHM6Ly9naXQtc2NtLmNvbS9ib29rL3poL3YyL0dpdC0lRTUlQjclQTUlRTUlODUlQjctJUU1JUFEJTkwJUU2JUE4JUExJUU1JTlEJTk3">Git 工具 - 子模块<i class="fa fa-external-link-alt"></i></span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2hleG9qcw==">hexojs<i class="fa fa-external-link-alt"></i></span></p>
 
     </div>
 
@@ -767,7 +767,7 @@ if(canvas.getContext){
       <a href="https://weilining.github.io/201021.html" title="彻底解决 hexo init 卡顿问题">https://weilining.github.io/201021.html</a>
   </li>
   <li class="post-copyright-license">
-    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener external nofollow noreferrer" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC8="><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
   </li>
 </ul>
 </div>

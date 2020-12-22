@@ -26,7 +26,7 @@
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"weilining.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.1.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"buttons","active":"valine","storage":false,"lazyload":false,"nav":null,"activeClass":"valine"},"motion":{"enable":false,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+    var CONFIG = {"hostname":"weilining.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.1.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"buttons","active":"valine","storage":false,"lazyload":false,"nav":null,"activeClass":"valine"},"motion":{"enable":false,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 <meta name="description" content="默认">
 <meta property="og:type" content="article">
@@ -319,7 +319,7 @@
 </div>
   <div class="links-of-author site-overview-item animated">
       <span class="links-of-author-item">
-        <a href="https://github.com/weilining" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;weilining" rel="noopener external nofollow noreferrer" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3dlaWxpbmluZw==" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;weilining"><i class="fab fa-github fa-fw"></i></span>
       </span>
       <span class="links-of-author-item">
         <a href="/atom.xml" title="RSS → &#x2F;atom.xml"><i class="fa fa-rss fa-fw"></i></a>
@@ -661,7 +661,7 @@ if(canvas.getContext){
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          将Hexo部署到阿里云轻量服务器（保姆级教程）<a href="https://github.com/weilining/weilining.cf/edit/main/source/_posts/132.md" class="post-edit-link" title="编辑" rel="noopener external nofollow noreferrer" target="_blank"><i class="fa fa-pen-nib"></i></a>
+          将Hexo部署到阿里云轻量服务器（保姆级教程）<span class="exturl post-edit-link" data-url="aHR0cHM6Ly9naXRodWIuY29tL3dlaWxpbmluZy93ZWlsaW5pbmcuY2YvZWRpdC9tYWluL3NvdXJjZS9fcG9zdHMvMTMyLm1k" title="编辑"><i class="fa fa-pen-nib"></i></span>
         </h1>
 
         <div class="post-meta-container">
@@ -736,7 +736,7 @@ if(canvas.getContext){
 <a id="more"></a>
 
 <h2 id="1-前言"><a href="#1-前言" class="headerlink" title="1 前言"></a>1 前言</h2><p>作为有梦想的，有追求的程序员，有一个自己的个人博客简直就是必须品。你可以选择wordpress这种平台，直接使用，在任何地方只要有网络就能写博客。还可以选择hexo这种静态博客，但是发文章就没有那么随心所欲了，要在你部署的电脑上写才行。</p>
-<p>本人之前使用的是hexo+github pages这种方式搭建博客，简单方便，感兴趣的同学可以看我之前写的这篇文章：<a target="_blank" rel="noopener external nofollow noreferrer" href="http://hjxlog.com/19090816.html">Hexo+github pages搭建个人独立网站，绑定域名全教程</a></p>
+<p>本人之前使用的是hexo+github pages这种方式搭建博客，简单方便，感兴趣的同学可以看我之前写的这篇文章：<span class="exturl" data-url="aHR0cDovL2hqeGxvZy5jb20vMTkwOTA4MTYuaHRtbA==">Hexo+github pages搭建个人独立网站，绑定域名全教程<i class="fa fa-external-link-alt"></i></span></p>
 <p>由于github是在国外的，访问速度确实慢了一些，体验有些不好。正巧上学的时候用学生优惠价格购买了几年阿里云轻量服务器，闲着也是闲着，就用来部署hexo好了，加快访问速度。</p>
 <p>因为我是先部署了github pages，所以git安装、NodeJs安装等等都已经实现了，还没安装的有需要可以看我上面那个教程链接。</p>
 <p>在部署的过程中，看了网上很多教程，大多是抄来抄去的，看了很多篇照着做也没有成功过，所以这篇博文是综合网上很多篇博文，加上自己的探索写出来的。网上普遍没有贴图片，看着头大，为了照顾纯小白，我这里贴上图片，一步一步来，保姆级教程。</p>
@@ -745,11 +745,11 @@ if(canvas.getContext){
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1核、2GB内存，系统盘 40GB SSD云盘</span><br></pre></td></tr></table></figure>
 
 <p>操作系统是CentOS 7.3。</p>
-<h2 id="3-本地环境部署"><a href="#3-本地环境部署" class="headerlink" title="3 本地环境部署"></a>3 本地环境部署</h2><p>这部分在我之前写的<a target="_blank" rel="noopener external nofollow noreferrer" href="http://hjxlog.com/19090816.html">Hexo+github pages搭建个人独立网站，绑定域名全教程</a>这里也有，为了方便我直接拿过来这边了。</p>
-<h3 id="3-1-安装nodejs"><a href="#3-1-安装nodejs" class="headerlink" title="3.1 安装nodejs"></a>3.1 安装nodejs</h3><p>因为Hexo需要nodejs环境，因此需要先下载安装Nodejs。点击<a target="_blank" rel="noopener external nofollow noreferrer" href="https://nodejs.org/en/">NodeJs官网</a>，下载最新版本。</p>
+<h2 id="3-本地环境部署"><a href="#3-本地环境部署" class="headerlink" title="3 本地环境部署"></a>3 本地环境部署</h2><p>这部分在我之前写的<span class="exturl" data-url="aHR0cDovL2hqeGxvZy5jb20vMTkwOTA4MTYuaHRtbA==">Hexo+github pages搭建个人独立网站，绑定域名全教程<i class="fa fa-external-link-alt"></i></span>这里也有，为了方便我直接拿过来这边了。</p>
+<h3 id="3-1-安装nodejs"><a href="#3-1-安装nodejs" class="headerlink" title="3.1 安装nodejs"></a>3.1 安装nodejs</h3><p>因为Hexo需要nodejs环境，因此需要先下载安装Nodejs。点击<span class="exturl" data-url="aHR0cHM6Ly9ub2RlanMub3JnL2VuLw==">NodeJs官网<i class="fa fa-external-link-alt"></i></span>，下载最新版本。</p>
 <p><img data-src="/132/2-2019-11-26-21-36-58.png" alt="2-2019-11-26-21-36-58.png" loading="lazy"></p>
 <p>下载好一直next，选择一个文件夹位置在一直next即可完成，这个步骤很简单，就不放图了。</p>
-<h3 id="3-2-安装git"><a href="#3-2-安装git" class="headerlink" title="3.2 安装git"></a>3.2 安装git</h3><p>点击<a target="_blank" rel="noopener external nofollow noreferrer" href="https://git-scm.com/downloads">git官网</a>，下载安装包。<br><img data-src="/132/3-2019-11-26-21-37-4.png" alt="3-2019-11-26-21-37-4.png" loading="lazy"></p>
+<h3 id="3-2-安装git"><a href="#3-2-安装git" class="headerlink" title="3.2 安装git"></a>3.2 安装git</h3><p>点击<span class="exturl" data-url="aHR0cHM6Ly9naXQtc2NtLmNvbS9kb3dubG9hZHM=">git官网<i class="fa fa-external-link-alt"></i></span>，下载安装包。<br><img data-src="/132/3-2019-11-26-21-37-4.png" alt="3-2019-11-26-21-37-4.png" loading="lazy"></p>
 <p>点击next，选择文件夹位置，然后一直next到底就行了，选择默认配置就好，默认配置会将环境变量配置好的，不需要搞得花里胡哨的。安装好后鼠标右击应该有下图这两个选项了，出现就代表安装成功了。<br><img data-src="/132/4-2019-11-26-21-37-10.png" alt="4-2019-11-26-21-37-10.png" loading="lazy"></p>
 <h2 id="4-使用Hexo"><a href="#4-使用Hexo" class="headerlink" title="4 使用Hexo"></a>4 使用Hexo</h2><h3 id="4-1-安装Hexo"><a href="#4-1-安装Hexo" class="headerlink" title="4.1 安装Hexo"></a>4.1 安装Hexo</h3><p>上面环境搭建好之后，在桌面点击鼠标右键，点击 “Git Bash Here” ，输入以下两条命令。</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
@@ -770,9 +770,9 @@ if(canvas.getContext){
 <p>然后再输入命令行进行本地调试，即可看到初始效果啦~</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ hexo s --debug</span><br></pre></td></tr></table></figure>
 
-<p>访问<a target="_blank" rel="noopener external nofollow noreferrer" href="http://localhost:4000/%E5%8D%B3%E5%8F%AF%E7%9C%8B%E5%88%B0%E6%95%88%E6%9E%9C%EF%BC%9A">http://localhost:4000/即可看到效果：</a></p>
+<p>访问<span class="exturl" data-url="aHR0cDovL2xvY2FsaG9zdDo0MDAwLyVFNSU4RCVCMyVFNSU4RiVBRiVFNyU5QyU4QiVFNSU4OCVCMCVFNiU5NSU4OCVFNiU5RSU5QyVFRiVCQyU5QQ==">http://localhost:4000/即可看到效果：<i class="fa fa-external-link-alt"></i></span></p>
 <p><img data-src="/132/8-2019-11-26-21-37-43.png" alt="8-2019-11-26-21-37-43.png" loading="lazy"></p>
-<h3 id="4-3-更换主题为NexT"><a href="#4-3-更换主题为NexT" class="headerlink" title="4.3 更换主题为NexT"></a>4.3 更换主题为NexT</h3><p>上面虽然本地可以调试成功了，但是默认的主题实在不是特别好看。你可以选择去官网选择自己喜欢的主题，<a target="_blank" rel="noopener external nofollow noreferrer" href="https://hexo.io/themes/">官网主题链接https://hexo.io/themes/</a></p>
+<h3 id="4-3-更换主题为NexT"><a href="#4-3-更换主题为NexT" class="headerlink" title="4.3 更换主题为NexT"></a>4.3 更换主题为NexT</h3><p>上面虽然本地可以调试成功了，但是默认的主题实在不是特别好看。你可以选择去官网选择自己喜欢的主题，<span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL3RoZW1lcy8=">官网主题链接https://hexo.io/themes/<i class="fa fa-external-link-alt"></i></span></p>
 <p>本篇教程选择的是当前流行的NexT主题，这个主题是我感觉用过的最好的一个了。</p>
 <h3 id="4-4-下载NexT主题"><a href="#4-4-下载NexT主题" class="headerlink" title="4.4 下载NexT主题"></a>4.4 下载NexT主题</h3><p>进入刚刚你创建的文件夹的themes里，比如我的 E:\HEXO\themes ，鼠标右击选择“Git Bash Here”输入以下两条命令中的一个：（这两个是一样的，只是有同学反应第一条命令不行，第二条就可以。）</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git clone git@github.com:iissnan&#x2F;hexo-theme-next.git</span><br><span class="line"></span><br><span class="line">$ git clone https:&#x2F;&#x2F;github.com&#x2F;iissnan&#x2F;hexo-theme-next</span><br></pre></td></tr></table></figure>
@@ -912,7 +912,7 @@ if(canvas.getContext){
 <p>另外如果忘记了宝塔用户名密码，可以去你服务器终端输入：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd &#x2F;www&#x2F;server&#x2F;panel &amp;&amp; python tools.py panel testpasswd</span><br></pre></td></tr></table></figure>
 
-<p>下图为宝塔解决方案，链接<a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.bt.cn/bbs/thread-1172-1-1.html">忘记Linux 3.X/4.x/5.x/6.x 宝塔面板密码的解决方案</a></p>
+<p>下图为宝塔解决方案，链接<span class="exturl" data-url="aHR0cHM6Ly93d3cuYnQuY24vYmJzL3RocmVhZC0xMTcyLTEtMS5odG1s">忘记Linux 3.X/4.x/5.x/6.x 宝塔面板密码的解决方案<i class="fa fa-external-link-alt"></i></span></p>
 <p><img data-src="/132/19-2019-11-30-16-32-26.png" alt="19-2019-11-30-16-32-26.png" loading="lazy"></p>
 <p>进入面板之后，会提示叫你修改端口，点击”立即修改”,可以看到”面板端口”这时候是8888，自己选一个值，然后先去服务器防火墙上开放这个端口，跟刚刚的”添加规则”操作一样。</p>
 <p>再回到宝塔面板页面将”面板端口”的值修改成你刚刚开放的端口值。</p>
@@ -1033,7 +1033,7 @@ if(canvas.getContext){
       <a href="https://weilining.github.io/132.html" title="将Hexo部署到阿里云轻量服务器（保姆级教程）">https://weilining.github.io/132.html</a>
   </li>
   <li class="post-copyright-license">
-    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener external nofollow noreferrer" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC8="><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
   </li>
 </ul>
 </div>

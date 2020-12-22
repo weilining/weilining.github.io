@@ -26,7 +26,7 @@
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"weilining.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.1.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"buttons","active":"valine","storage":false,"lazyload":false,"nav":null,"activeClass":"valine"},"motion":{"enable":false,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+    var CONFIG = {"hostname":"weilining.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.1.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"buttons","active":"valine","storage":false,"lazyload":false,"nav":null,"activeClass":"valine"},"motion":{"enable":false,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 <meta name="description" content="默认">
 <meta property="og:type" content="article">
@@ -281,7 +281,7 @@
 </div>
   <div class="links-of-author site-overview-item animated">
       <span class="links-of-author-item">
-        <a href="https://github.com/weilining" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;weilining" rel="noopener external nofollow noreferrer" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3dlaWxpbmluZw==" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;weilining"><i class="fab fa-github fa-fw"></i></span>
       </span>
       <span class="links-of-author-item">
         <a href="/atom.xml" title="RSS → &#x2F;atom.xml"><i class="fa fa-rss fa-fw"></i></a>
@@ -623,7 +623,7 @@ if(canvas.getContext){
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          使用 GitHub Actions 把 GitHub 仓库备份到 Gitee、GitLab<a href="https://github.com/weilining/weilining.cf/edit/main/source/_posts/150.md" class="post-edit-link" title="编辑" rel="noopener external nofollow noreferrer" target="_blank"><i class="fa fa-pen-nib"></i></a>
+          使用 GitHub Actions 把 GitHub 仓库备份到 Gitee、GitLab<span class="exturl post-edit-link" data-url="aHR0cHM6Ly9naXRodWIuY29tL3dlaWxpbmluZy93ZWlsaW5pbmcuY2YvZWRpdC9tYWluL3NvdXJjZS9fcG9zdHMvMTUwLm1k" title="编辑"><i class="fa fa-pen-nib"></i></span>
         </h1>
 
         <div class="post-meta-container">
@@ -700,7 +700,7 @@ if(canvas.getContext){
 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>目前开源已经逐渐形成了一种趋势，越来越多的 geeker 加入了开源大军，开源社区也逐渐壮大，推动了技术发展和快速迭代</p>
 <p>作为全球知名的代码托管平台，GitHub、Gitee、GitLab 均拥有不小的用户量，尤其是 GayHub，作为全球最大的同性交友平台，拥有超过 4 千万的用户量，足以说明其在业内的知名度</p>
 <p>但是，对于个人来说，使用一个托管平台就足够了，但是我们又有在其他平台备份的需求，并且希望有更新时能够自动备份</p>
-<p>对于这种需求，解决办法大多是利用 webhook，或者是在本地仓库中 remote add 添加远程仓库，这样就可以 push 到多个远程仓库。但是这些方法较为繁琐，更何况还有更好用的办法——GitHub Actions，有关 GitHub Actions 的一些教程还可参考博客 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://blog.csdn.net/sculpta/article/details/104142607">GitHub Actions 部署爬虫并定时发送邮件</a></p>
+<p>对于这种需求，解决办法大多是利用 webhook，或者是在本地仓库中 remote add 添加远程仓库，这样就可以 push 到多个远程仓库。但是这些方法较为繁琐，更何况还有更好用的办法——GitHub Actions，有关 GitHub Actions 的一些教程还可参考博客 <span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NjdWxwdGEvYXJ0aWNsZS9kZXRhaWxzLzEwNDE0MjYwNw==">GitHub Actions 部署爬虫并定时发送邮件<i class="fa fa-external-link-alt"></i></span></p>
 <h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><h3 id="1-生成-ssh"><a href="#1-生成-ssh" class="headerlink" title="1. 生成 ssh"></a>1. 生成 ssh</h3><p>git bash 中敲入命令，会在 <code>~/.ssh</code> 文件夹下生成 <code>id_rsa.pub</code> 文件和 <code>id_rsa</code> 文件，分别存放公钥和私钥</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;user@email.com&quot;</span><br><span class="line">1</span><br></pre></td></tr></table></figure>
 
@@ -721,7 +721,7 @@ if(canvas.getContext){
 <p>用 VS Code 打开 <code>mirror.yml</code> 或使用 vi 编辑，将下列内容添加其中</p>
 <figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">name:</span> <span class="string">&#x27;GitHub Actions Mirror&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="attr">on:</span> [<span class="string">push</span>, <span class="string">delete</span>]</span><br><span class="line"></span><br><span class="line"><span class="attr">jobs:</span></span><br><span class="line">  <span class="attr">mirror_to_gitee:</span></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-latest</span></span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">&#x27;Checkout&#x27;</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">actions/checkout@v1</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">&#x27;Mirror to gitee&#x27;</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">pixta-dev/repository-mirroring-action@v1</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">target_repo_url:</span></span><br><span class="line">            <span class="string">git@gitee.com:tsund/test.git</span></span><br><span class="line">          <span class="attr">ssh_private_key:</span></span><br><span class="line">            <span class="string">$&#123;&#123;</span> <span class="string">secrets.GITEE_KEY</span> <span class="string">&#125;&#125;</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">mirror_to_gitlab:</span></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-latest</span></span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">&#x27;Checkout&#x27;</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">actions/checkout@v1</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">&#x27;Mirror to gitlab&#x27;</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">pixta-dev/repository-mirroring-action@v1</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">target_repo_url:</span></span><br><span class="line">            <span class="string">git@gitlab.com:tsund/test.git</span></span><br><span class="line">          <span class="attr">ssh_private_key:</span></span><br><span class="line">            <span class="string">$&#123;&#123;</span> <span class="string">secrets.GITLAB_KEY</span> <span class="string">&#125;&#125;</span></span><br></pre></td></tr></table></figure>
 
-<p>其中，使用了 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/marketplace/actions/mirroring-repository">repository-mirroring-action</a>，定义了两个 job，分别负责备份 Gitee 和 GitLab 仓库，<code>target_repo_url</code> 指明目标仓库的 ssh 地址，<code>ssh_private_key</code> 指明 GitHub 仓库中 Secrets 存放的目标仓库的 ssh 私钥</p>
+<p>其中，使用了 <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL21hcmtldHBsYWNlL2FjdGlvbnMvbWlycm9yaW5nLXJlcG9zaXRvcnk=">repository-mirroring-action<i class="fa fa-external-link-alt"></i></span>，定义了两个 job，分别负责备份 Gitee 和 GitLab 仓库，<code>target_repo_url</code> 指明目标仓库的 ssh 地址，<code>ssh_private_key</code> 指明 GitHub 仓库中 Secrets 存放的目标仓库的 ssh 私钥</p>
 <p>配置完成后，向 GitHub 仓库 push 时就会自动备份到 Gitee、GitLab 对应的仓库了</p>
 
     </div>
@@ -785,7 +785,7 @@ if(canvas.getContext){
       <a href="https://weilining.github.io/150.html" title="使用 GitHub Actions 把 GitHub 仓库备份到 Gitee、GitLab">https://weilining.github.io/150.html</a>
   </li>
   <li class="post-copyright-license">
-    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener external nofollow noreferrer" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC8="><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
   </li>
 </ul>
 </div>
