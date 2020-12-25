@@ -6,7 +6,7 @@
   <link href="https://weilining.github.io/atom.xml" rel="self"/>
   
   <link href="https://weilining.github.io/"/>
-  <updated>2020-12-22T07:34:16.000Z</updated>
+  <updated>2020-12-25T16:37:10.000Z</updated>
   <id>https://weilining.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>网页上如何实现禁止复制粘贴以及如何破解</title>
+    <link href="https://weilining.github.io/231.html"/>
+    <id>https://weilining.github.io/231.html</id>
+    <published>2020-12-25T16:37:10.000Z</published>
+    <updated>2020-12-25T16:37:10.000Z</updated>
+    
+    <content type="html"><![CDATA[<a id="more"></a><p> 我们首先来介绍如何实现禁止复制，知道了禁止的方式，再破解就容易了。</p><h1 id="实现禁止复制粘贴"><a href="#实现禁止复制粘贴" class="headerlink" title="实现禁止复制粘贴"></a>实现禁止复制粘贴</h1><p>比较简单，直接上代码：</p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;style type&#x3D;&quot;text&#x2F;css&quot;&gt;</span><br><span class="line">&#x2F;* 最简单的实现禁止复制的方法，采用css方式禁止文字选择，当然这只兼容webkit内核浏览器 *&#x2F;</span><br><span class="line">* &#123; -webkit-user-select: none; &#125;</span><br><span class="line">p &#123;font-family: &#39;Microsoft Yahei&#39;;font-size: 28px;&#125;</span><br><span class="line">input &#123;width: 80%; padding: 10px 20px;&#125;</span><br><span class="line">&lt;&#x2F;style&gt;</span><br><span class="line">&lt;h1&gt;本代码在UC手机浏览器上不生效，其它手机浏览器暂未发现问题、PC全部没问题。&lt;&#x2F;h1&gt;</span><br><span class="line">&lt;p&gt;这是一段示例文字，我无法被选中，也无法按下鼠标右键，即使被选中你也无法复制！&lt;&#x2F;p&gt;</span><br><span class="line">&lt;input type&#x3D;&quot;text&quot; value&#x3D;&quot;文本框中的文字可以选中，但是无法复制粘贴&quot;&#x2F;&gt;</span><br><span class="line">&lt;script type&#x3D;&quot;text&#x2F;javascript&quot;&gt;</span><br><span class="line">&#x2F;&#x2F; 禁止右键菜单</span><br><span class="line">document.oncontextmenu &#x3D; function()&#123; return false; &#125;;</span><br><span class="line">&#x2F;&#x2F; 禁止文字选择</span><br><span class="line">document.onselectstart &#x3D; function()&#123; return false; &#125;;</span><br><span class="line">&#x2F;&#x2F; 禁止复制</span><br><span class="line">document.oncopy &#x3D; function()&#123; return false; &#125;;</span><br><span class="line">&#x2F;&#x2F; 禁止剪切</span><br><span class="line">document.oncut &#x3D; function()&#123; return false; &#125;;</span><br><span class="line">&#x2F;&#x2F; 禁止粘贴</span><br><span class="line">document.onpaste &#x3D; function()&#123; return false; &#125;;</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure><h1 id="破解禁止复制粘贴"><a href="#破解禁止复制粘贴" class="headerlink" title="破解禁止复制粘贴"></a>破解禁止复制粘贴</h1><p>知道如何禁止了，那破解这个限制就容易多了。</p><p>首先，绝大部分限制都是采用js实现的，那我直接禁用js不就OK了么？哈哈，突然发现我太聪明了！假如你使用的是<code>Chrome</code>或者其它国产webkit内核浏览器，按下<code>F12</code>弹出开发者工具，再按下<code>F1</code>弹出设置，勾选<code>Disable JavaScript</code>，再按下<code>ESC</code>键关闭设置（其它浏览器如何禁止JavaScript请自行研究），然后试试是不是可以复制了？</p><p><img data-src="/231/20160817_085956_673_5222.png" alt="img" loading="lazy"></p><p>如果此时仍无法选择文字，找到你要复制文字的地方，看看是不是添加了<code>-webkit-user-select: none</code>的样式，如果有，将其去掉即可：</p><p><img data-src="/231/20160817_090202_264_2841.png" alt="img" loading="lazy"></p><p>到了这里应该就可以自由复制粘贴了，复制完了记得把禁用JavaScript的地方还原回来哦。</p>]]></content>
+    
+    
+    <summary type="html">默认</summary>
+    
+    
+    
+    <category term="默认" scheme="https://weilining.github.io/categories/%E9%BB%98%E8%AE%A4/"/>
+    
+    
+    <category term="默认" scheme="https://weilining.github.io/tags/%E9%BB%98%E8%AE%A4/"/>
+    
+  </entry>
   
   <entry>
     <title>使用 ECharts3.0 在 Hexo 搭建的博客中建一个足迹👣页面</title>
@@ -402,27 +423,6 @@
     <updated>2020-12-16T06:42:55.000Z</updated>
     
     <content type="html"><![CDATA[<a id="more"></a><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang&#x3D;&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;title&gt;Title&lt;&#x2F;title&gt;</span><br><span class="line">&lt;&#x2F;head&gt;</span><br><span class="line">&lt;style&gt;</span><br><span class="line">    * &#123;</span><br><span class="line">        margin: 0;</span><br><span class="line">        padding: 0;</span><br><span class="line">    &#125;</span><br><span class="line">    html &#123;</span><br><span class="line"></span><br><span class="line">        height: 100%;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    body&#123;</span><br><span class="line">        background: url(header-background.jpg) no-repeat;</span><br><span class="line">        background-size: cover;</span><br><span class="line">        height:100%;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;&#x2F;style&gt;</span><br><span class="line">&lt;body &gt;</span><br><span class="line"></span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line">&lt;script src&#x3D;&quot;..&#x2F;js&#x2F;jquery-2.1.4.min.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&lt;script src&#x3D;&quot;js&#x2F;jquery.ripples-min.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    &#x2F;* https:&#x2F;&#x2F;github.com&#x2F;sirxemic&#x2F;jquery.ripples *&#x2F;</span><br><span class="line">    $(document).ready(function() &#123;</span><br><span class="line">        try &#123;</span><br><span class="line">            $(&#39;body&#39;).ripples(&#123;</span><br><span class="line">                resolution: 512,</span><br><span class="line">                dropRadius: 20, &#x2F;&#x2F;px</span><br><span class="line">                perturbance: 0.04,</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;</span><br><span class="line">        catch (e) &#123;</span><br><span class="line">            $(&#39;.error&#39;).show().text(e);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">&lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-    <summary type="html">默认</summary>
-    
-    
-    
-    <category term="默认" scheme="https://weilining.github.io/categories/%E9%BB%98%E8%AE%A4/"/>
-    
-    
-    <category term="默认" scheme="https://weilining.github.io/tags/%E9%BB%98%E8%AE%A4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>在线编程&amp;&amp;VSCode 实时预览 HTML 页面</title>
-    <link href="https://weilining.github.io/211.html"/>
-    <id>https://weilining.github.io/211.html</id>
-    <published>2020-12-16T06:38:04.000Z</published>
-    <updated>2020-12-16T06:38:04.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="背景："><a href="#背景：" class="headerlink" title="背景："></a>背景：</h2><p>平时写网页时，只有写完代码，然后保存，接下来到浏览器中刷新查看效果，然后不停重复，我们发现很多时间就这样浪费到了这三个步骤上，用户体验很差。</p><a id="more"></a><h2 id="使用-codepen-网站"><a href="#使用-codepen-网站" class="headerlink" title="使用 codepen 网站"></a>使用 codepen 网站</h2><p><span class="exturl" data-url="aHR0cHM6Ly9jb2RlcGVuLmlvLw==">codepen<i class="fa fa-external-link-alt"></i></span> 网站有一个功能，就是写完代码时，可以自动实时预览网页效果</p><p>网站链接：<span class="exturl" data-url="aHR0cHM6Ly9jb2RlcGVuLmlvLw==">https://codepen.io/<i class="fa fa-external-link-alt"></i></span></p><p><img data-src="/211/image-1024x596.png" alt="img" loading="lazy"></p><h2 id="VSCode-设置网页代码实时预览"><a href="#VSCode-设置网页代码实时预览" class="headerlink" title="VSCode 设置网页代码实时预览"></a>VSCode 设置网页代码实时预览</h2><p>安装插件 Live Server，然后右键点击 Open with Live Server 即可在浏览器打开文件，此时修改文件内容，浏览器会在文件保存时触发刷新操作，实现实时预览效果。</p><p><img data-src="/211/image-1.png" alt="img" loading="lazy"><img data-src="/211/image-2.png" alt="img" loading="lazy"></p>]]></content>
     
     
     <summary type="html">默认</summary>
