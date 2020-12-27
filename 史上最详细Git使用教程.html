@@ -698,7 +698,7 @@ if(canvas.getContext){
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          史上最详细Git使用教程<span class="exturl post-edit-link" data-url="aHR0cHM6Ly9naXRodWIuY29tL3dlaWxpbmluZy93ZWlsaW5pbmcuY2YvZWRpdC9tYWluL3NvdXJjZS9fcG9zdHMv5Y+y5LiK5pyA6K+m57uGR2l05L2/55So5pWZ56iLLm1k" title="编辑"><i class="fa fa-pen-nib"></i></span>
+          史上最详细Git使用教程<span class="exturl post-edit-link" data-url="aHR0cHM6Ly9naXRodWIuY29tL3dlaWxpbmluZy9ibG9nL2VkaXQvbWFpbi9zb3VyY2UvX3Bvc3RzL+WPsuS4iuacgOivpue7hkdpdOS9v+eUqOaVmeeoiy5tZA==" title="编辑"><i class="fa fa-pen-nib"></i></span>
         </h1>
 
         <div class="post-meta-container">
@@ -888,7 +888,7 @@ if(canvas.getContext){
 <p>再来看看我们testgit目录，添加了3个文件了。如下所示：</p>
 <h4 id="远程仓库"><a href="#远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h4><p> 在了解之前，先注册github账号，由于你的本地Git仓库和github仓库之间的传输是通过SSH加密的，所以需要一点设置：</p>
 <p>   第一步：创建SSH Key。在用户主目录下，看看有没有.ssh目录，如果有，再看看这个目录下有没有id_rsa和id_rsa.pub这两个文件，如果有的话，直接跳过此如下命令，如果没有的话，打开命令行，输入如下命令：</p>
-<p>ssh-keygen -t rsa –C “<span class="exturl" data-url="bWFpbHRvOiYjMTIxOyYjeDZmOyYjMTE3OyYjeDcyOyYjeDY1OyYjeDZkOyYjeDYxOyYjMTA1OyYjeDZjOyYjeDQwOyYjeDY1OyYjMTIwOyYjOTc7JiN4NmQ7JiN4NzA7JiMxMDg7JiN4NjU7JiM0NjsmI3g2MzsmIzExMTsmIzEwOTs=">&#121;&#x6f;&#117;&#x72;&#x65;&#x6d;&#x61;&#105;&#x6c;&#x40;&#x65;&#120;&#97;&#x6d;&#x70;&#108;&#x65;&#46;&#x63;&#111;&#109;<i class="fa fa-external-link-alt"></i></span>”, 由于我本地此前运行过一次，所以本地有，如下所示：</p>
+<p>ssh-keygen -t rsa –C “<span class="exturl" data-url="bWFpbHRvOiYjMTIxOyYjeDZmOyYjMTE3OyYjMTE0OyYjMTAxOyYjMTA5OyYjeDYxOyYjeDY5OyYjMTA4OyYjeDQwOyYjMTAxOyYjMTIwOyYjOTc7JiMxMDk7JiN4NzA7JiN4NmM7JiMxMDE7JiN4MmU7JiN4NjM7JiMxMTE7JiN4NmQ7">&#121;&#x6f;&#117;&#114;&#101;&#109;&#x61;&#x69;&#108;&#x40;&#101;&#120;&#97;&#109;&#x70;&#x6c;&#101;&#x2e;&#x63;&#111;&#x6d;<i class="fa fa-external-link-alt"></i></span>”, 由于我本地此前运行过一次，所以本地有，如下所示：</p>
 <p> <a target="_blank" rel="noopener external nofollow noreferrer" href="http://ww2.sinaimg.cn/mw690/6941baebgw1eloypq7esij20kx04pt9c.jpg"><img data-src="/%E5%8F%B2%E4%B8%8A%E6%9C%80%E8%AF%A6%E7%BB%86Git%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/6941baebgw1eloypq7esij20kx04pt9c.jpg" alt="img" loading="lazy"></a></p>
 <p>id_rsa是私钥，不能泄露出去，id_rsa.pub是公钥，可以放心地告诉任何人。</p>
 <p>第二步：登录github,打开” settings”中的SSH Keys页面，然后点击“Add SSH Key”,填上任意title，在Key文本框里黏贴id_rsa.pub文件的内容。</p>
