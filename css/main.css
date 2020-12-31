@@ -3238,6 +3238,13 @@ mjx-container[display="true"] + br {
     padding: 10px 12px;
   }
 }
+.fa-bilibili {
+  background: url("/images/bilibili.svg");
+  background-position: 50% 75%;
+  background-repeat: no-repeat;
+  height: 1rem;
+  width: 1rem;
+}
 .text-center {
   text-align: center;
 }
