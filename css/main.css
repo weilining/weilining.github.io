@@ -3239,7 +3239,7 @@ mjx-container[display="true"] + br {
   }
 }
 .fa-bilibili {
-  background: url("/images/bilibili.svg");
+  background: url("/images/bilibili-fill.svg");
   background-position: 50% 75%;
   background-repeat: no-repeat;
   height: 1rem;
