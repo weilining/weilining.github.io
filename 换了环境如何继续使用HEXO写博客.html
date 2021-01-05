@@ -319,7 +319,7 @@
 
 <h3 id="操作"><a href="# 操作" class="headerlink" title="操作"></a>操作 </h3><h4 id="一、安装软件"><a href="# 一、安装软件" class="headerlink" title="一、安装软件"></a> 一、安装软件</h4><p>==&gt;<span class="exturl" data-url="aHR0cHM6Ly9ub2RlanMub3JnL2VuLw==">Node.js<i class="fa fa-external-link-alt"></i></span></p>
 <p>==&gt;<span class="exturl" data-url="aHR0cHM6Ly9naXQtc2NtLmNvbS9kb3dubG9hZHM=">Git<i class="fa fa-external-link-alt"></i></span></p>
-<h4 id="二、在 -Github- 官网添加新密钥"><a href="# 二、在 -Github- 官网添加新密钥" class="headerlink" title="二、在 Github 官网添加新密钥"></a>二、在 Github 官网添加新密钥 </h4><p> 在 Git 中输入：ssh-keygen -t rsa -C “<span class="exturl" data-url="bWFpbHRvOiYjMTIxOyYjeDZmOyYjMTE3OyYjMTE0OyYjeDY1OyYjMTA5OyYjeDYxOyYjMTA1OyYjeDZjOyYjNjQ7JiN4NjU7JiN4Nzg7JiM5NzsmIzEwOTsmI3g3MDsmIzEwODsmIzEwMTsmI3gyZTsmI3g2MzsmI3g2ZjsmI3g2ZDs=">&#121;&#x6f;&#117;&#114;&#x65;&#109;&#x61;&#105;&#x6c;&#64;&#x65;&#x78;&#97;&#109;&#x70;&#108;&#101;&#x2e;&#x63;&#x6f;&#x6d;<i class="fa fa-external-link-alt"></i></span>”</p>
+<h4 id="二、在 -Github- 官网添加新密钥"><a href="# 二、在 -Github- 官网添加新密钥" class="headerlink" title="二、在 Github 官网添加新密钥"></a>二、在 Github 官网添加新密钥 </h4><p> 在 Git 中输入：ssh-keygen -t rsa -C “<span class="exturl" data-url="bWFpbHRvOiYjMTIxOyYjeDZmOyYjeDc1OyYjeDcyOyYjMTAxOyYjeDZkOyYjeDYxOyYjeDY5OyYjMTA4OyYjNjQ7JiN4NjU7JiMxMjA7JiN4NjE7JiMxMDk7JiMxMTI7JiMxMDg7JiMxMDE7JiN4MmU7JiN4NjM7JiN4NmY7JiN4NmQ7">&#121;&#x6f;&#x75;&#x72;&#101;&#x6d;&#x61;&#x69;&#108;&#64;&#x65;&#120;&#x61;&#109;&#112;&#108;&#101;&#x2e;&#x63;&#x6f;&#x6d;<i class="fa fa-external-link-alt"></i></span>”</p>
 <p>打开 C:\Users\Administrator.ssh 中的 id_rsa.pub</p>
 <p>复制密钥，在<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3NldHRpbmdzL2tleXMlRTQlQjglQUQlRTYlOTYlQjAlRTUlQkIlQkFTU0g=">https://github.com/settings/keys 中新建 SSH<i class="fa fa-external-link-alt"></i></span> key</p>
 <h4 id="三、源文件拷贝"><a href="# 三、源文件拷贝" class="headerlink" title="三、源文件拷贝"></a>三、源文件拷贝 </h4><p> 将原来电脑上博客目录下必要文件拷到你的新电脑文件夹中，必须拷贝一下几个目录：</p>
@@ -493,9 +493,14 @@
                 console.error('Failed to save visitor count', error);
               });
           } else {
-              leancloudSelector(url).innerText = 'Counter not initialized! More info at console err msg.';
-              console.error('ATTENTION! LeanCloud counter has security bug, see how to solve it here: https://github.com/theme-next/hexo-leancloud-counter-security. \n However, you can still use LeanCloud without security, by setting `security` option to `false`.');
-            
+              Counter('post', '/classes/Counter', { title, url, time: 1 })
+                .then(response => response.json())
+                .then(() => {
+                  leancloudSelector(url).innerText = 1;
+                })
+                .catch(error => {
+                  console.error('Failed to create', error);
+                });
           }
         })
         .catch(error => {
@@ -522,7 +527,7 @@
         });
     }
 
-    const { app_id, app_key, server_url } = {"enable":true,"app_id":"HRkd3dwTmumxAyXGay0OBaBG-MdYXbMMI","app_key":"h5d9BGKgvPpvNYwq5Pdag8gB","server_url":null,"security":true};
+    const { app_id, app_key, server_url } = {"enable":true,"app_id":"lHQrspQPcyolhncxMNqPTtI3-gzGzoHsz","app_key":"76z9Sj56S2LYvHvC4vD4t8yQ","server_url":null,"security":false};
     function fetchData(api_server) {
       const Counter = (method, url, data) => {
         return fetch(`${api_server}/1.1${url}`, {

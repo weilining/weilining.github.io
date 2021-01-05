@@ -27,12 +27,12 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"weilining.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.2.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}};
   </script>
-<meta name="description" content="AV.initialize(&quot;HRkd3dwTmumxAyXGay0OBaBG-MdYXbMMI&quot;, &quot;h5d9BGKgvPpvNYwq5Pdag8gB&quot;);AV.useAVCloudUS();    var time&#x3D;0;   var title&#x3D;&quot;&quot;;   var url&#x3D;&quot;&quot;;   var query &#x3D; new AV.Query(&#39;Counter&#39;);   query.notEqual">
+<meta name="description" content="AV.initialize(&quot;Bu6sP4depeiGP22PIFqz0SmJ-MdYXbMMI&quot;, &quot;jYGDeeOBkTqvrUJDEmqj83q7&quot;);AV.useAVCloudUS();    var time&#x3D;0;   var title&#x3D;&quot;&quot;;   var url&#x3D;&quot;&quot;;   var query &#x3D; new AV.Query(&#39;Counter&#39;);   query.notEqual">
 <meta property="og:type" content="website">
 <meta property="og:title" content="热榜">
 <meta property="og:url" content="https://weilining.github.io/top/index.html">
 <meta property="og:site_name" content="Ln&#39;s Blog">
-<meta property="og:description" content="AV.initialize(&quot;HRkd3dwTmumxAyXGay0OBaBG-MdYXbMMI&quot;, &quot;h5d9BGKgvPpvNYwq5Pdag8gB&quot;);AV.useAVCloudUS();    var time&#x3D;0;   var title&#x3D;&quot;&quot;;   var url&#x3D;&quot;&quot;;   var query &#x3D; new AV.Query(&#39;Counter&#39;);   query.notEqual">
+<meta property="og:description" content="AV.initialize(&quot;Bu6sP4depeiGP22PIFqz0SmJ-MdYXbMMI&quot;, &quot;jYGDeeOBkTqvrUJDEmqj83q7&quot;);AV.useAVCloudUS();    var time&#x3D;0;   var title&#x3D;&quot;&quot;;   var url&#x3D;&quot;&quot;;   var query &#x3D; new AV.Query(&#39;Counter&#39;);   query.notEqual">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-10-01T05:02:36.000Z">
 <meta property="article:modified_time" content="2020-10-01T05:02:36.000Z">
@@ -247,7 +247,7 @@
       <div class="post-body">
           <div id="top" class="pjax"></div>
 <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
-<script>AV.initialize("HRkd3dwTmumxAyXGay0OBaBG-MdYXbMMI", "h5d9BGKgvPpvNYwq5Pdag8gB");AV.useAVCloudUS();</script>
+<script>AV.initialize("Bu6sP4depeiGP22PIFqz0SmJ-MdYXbMMI", "jYGDeeOBkTqvrUJDEmqj83q7");AV.useAVCloudUS();</script>
 <script type="text/javascript">
   var time=0;
   var title="";
@@ -377,9 +377,14 @@
                 console.error('Failed to save visitor count', error);
               });
           } else {
-              leancloudSelector(url).innerText = 'Counter not initialized! More info at console err msg.';
-              console.error('ATTENTION! LeanCloud counter has security bug, see how to solve it here: https://github.com/theme-next/hexo-leancloud-counter-security. \n However, you can still use LeanCloud without security, by setting `security` option to `false`.');
-            
+              Counter('post', '/classes/Counter', { title, url, time: 1 })
+                .then(response => response.json())
+                .then(() => {
+                  leancloudSelector(url).innerText = 1;
+                })
+                .catch(error => {
+                  console.error('Failed to create', error);
+                });
           }
         })
         .catch(error => {
@@ -406,7 +411,7 @@
         });
     }
 
-    const { app_id, app_key, server_url } = {"enable":true,"app_id":"HRkd3dwTmumxAyXGay0OBaBG-MdYXbMMI","app_key":"h5d9BGKgvPpvNYwq5Pdag8gB","server_url":null,"security":true};
+    const { app_id, app_key, server_url } = {"enable":true,"app_id":"lHQrspQPcyolhncxMNqPTtI3-gzGzoHsz","app_key":"76z9Sj56S2LYvHvC4vD4t8yQ","server_url":null,"security":false};
     function fetchData(api_server) {
       const Counter = (method, url, data) => {
         return fetch(`${api_server}/1.1${url}`, {

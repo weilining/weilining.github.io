@@ -342,7 +342,7 @@
 <h4 id="5- 用户会收到邮件如下画面，点击设置密码即可。"><a href="#5- 用户会收到邮件如下画面，点击设置密码即可。" class="headerlink" title="5. 用户会收到邮件如下画面，点击设置密码即可。"></a>5. 用户会收到邮件如下画面，点击设置密码即可。</h4><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://images2018.cnblogs.com/blog/1416119/201806/1416119-20180624221206488-932889468.png"><img data-src="/161/1416119-20180624221206729-1171562142.png" alt="image" loading="lazy"></a></p>
 <p>排错小技巧：在设置邮件服务器比如设置如下：</p>
 <blockquote>
-<p>gitlab_rails[&#39;gitlab_email_from&#39;] = &#39;gitlab@aishangwei.net&#39;<br>gitlab_rails[&#39;gitlab_email_reply_to&#39;] = &#39;gitlab@aishangwei.net&#39;<br>gitlab_rails[&#39;smtp_enable&#39;] = true<br>gitlab_rails[&#39;smtp_address&#39;] = &quot;smtp.mxhichina.com&quot;<br>gitlab_rails[&#39;smtp_port&#39;] = 25<br>gitlab_rails[&#39;smtp_user_name&#39;] = &quot;<span class="exturl" data-url="bWFpbHRvOiYjMTAzOyYjMTA1OyYjMTE2OyYjMTA4OyYjOTc7JiM5ODsmI3g0MDsmIzk3OyYjeDY5OyYjMTE1OyYjeDY4OyYjOTc7JiMxMTA7JiMxMDM7JiN4Nzc7JiN4NjU7JiMxMDU7JiN4MmU7JiMxMTA7JiMxMDE7JiMxMTY7">&#103;&#105;&#116;&#108;&#97;&#98;&#x40;&#97;&#x69;&#115;&#x68;&#97;&#110;&#103;&#x77;&#x65;&#105;&#x2e;&#110;&#101;&#116;<i class="fa fa-external-link-alt"></i></span>&quot;<br>gitlab_rails[&#39;smtp_password&#39;] = &quot;W-123456&quot;<br>gitlab_rails[&#39;smtp_domain&#39;] = &quot;mxhichina.com&quot;<br>gitlab_rails[&#39;smtp_authentication&#39;] = &quot;login&quot;</p>
+<p>gitlab_rails[&#39;gitlab_email_from&#39;] = &#39;gitlab@aishangwei.net&#39;<br>gitlab_rails[&#39;gitlab_email_reply_to&#39;] = &#39;gitlab@aishangwei.net&#39;<br>gitlab_rails[&#39;smtp_enable&#39;] = true<br>gitlab_rails[&#39;smtp_address&#39;] = &quot;smtp.mxhichina.com&quot;<br>gitlab_rails[&#39;smtp_port&#39;] = 25<br>gitlab_rails[&#39;smtp_user_name&#39;] = &quot;<span class="exturl" data-url="bWFpbHRvOiYjMTAzOyYjMTA1OyYjMTE2OyYjeDZjOyYjeDYxOyYjOTg7JiN4NDA7JiN4NjE7JiMxMDU7JiN4NzM7JiMxMDQ7JiN4NjE7JiMxMTA7JiMxMDM7JiMxMTk7JiMxMDE7JiN4Njk7JiM0NjsmIzExMDsmI3g2NTsmI3g3NDs=">&#103;&#105;&#116;&#x6c;&#x61;&#98;&#x40;&#x61;&#105;&#x73;&#104;&#x61;&#110;&#103;&#119;&#101;&#x69;&#46;&#110;&#x65;&#x74;<i class="fa fa-external-link-alt"></i></span>&quot;<br>gitlab_rails[&#39;smtp_password&#39;] = &quot;W-123456&quot;<br>gitlab_rails[&#39;smtp_domain&#39;] = &quot;mxhichina.com&quot;<br>gitlab_rails[&#39;smtp_authentication&#39;] = &quot;login&quot;</p>
 </blockquote>
 <p>设置 完成后运行以下命令测试:</p>
 <blockquote>
@@ -679,9 +679,14 @@
                 console.error('Failed to save visitor count', error);
               });
           } else {
-              leancloudSelector(url).innerText = 'Counter not initialized! More info at console err msg.';
-              console.error('ATTENTION! LeanCloud counter has security bug, see how to solve it here: https://github.com/theme-next/hexo-leancloud-counter-security. \n However, you can still use LeanCloud without security, by setting `security` option to `false`.');
-            
+              Counter('post', '/classes/Counter', { title, url, time: 1 })
+                .then(response => response.json())
+                .then(() => {
+                  leancloudSelector(url).innerText = 1;
+                })
+                .catch(error => {
+                  console.error('Failed to create', error);
+                });
           }
         })
         .catch(error => {
@@ -708,7 +713,7 @@
         });
     }
 
-    const { app_id, app_key, server_url } = {"enable":true,"app_id":"HRkd3dwTmumxAyXGay0OBaBG-MdYXbMMI","app_key":"h5d9BGKgvPpvNYwq5Pdag8gB","server_url":null,"security":true};
+    const { app_id, app_key, server_url } = {"enable":true,"app_id":"lHQrspQPcyolhncxMNqPTtI3-gzGzoHsz","app_key":"76z9Sj56S2LYvHvC4vD4t8yQ","server_url":null,"security":false};
     function fetchData(api_server) {
       const Counter = (method, url, data) => {
         return fetch(`${api_server}/1.1${url}`, {
