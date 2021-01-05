@@ -184,7 +184,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">238</span>
+          <span class="site-state-item-count">237</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -280,13 +280,6 @@
     </span>
 
   
-    <span id="/%E6%8D%A2%E4%BA%86%E7%8E%AF%E5%A2%83%E5%A6%82%E4%BD%95%E7%BB%A7%E7%BB%AD%E4%BD%BF%E7%94%A8HEXO%E5%86%99%E5%8D%9A%E5%AE%A2.html" class="post-meta-item leancloud_visitors" data-flag-title="换了环境如何继续使用 HEXO 写博客" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
       </div>
       <div class="post-meta">
     <span class="post-meta-item" title="本文字数">
@@ -319,7 +312,7 @@
 
 <h3 id="操作"><a href="# 操作" class="headerlink" title="操作"></a>操作 </h3><h4 id="一、安装软件"><a href="# 一、安装软件" class="headerlink" title="一、安装软件"></a> 一、安装软件</h4><p>==&gt;<span class="exturl" data-url="aHR0cHM6Ly9ub2RlanMub3JnL2VuLw==">Node.js<i class="fa fa-external-link-alt"></i></span></p>
 <p>==&gt;<span class="exturl" data-url="aHR0cHM6Ly9naXQtc2NtLmNvbS9kb3dubG9hZHM=">Git<i class="fa fa-external-link-alt"></i></span></p>
-<h4 id="二、在 -Github- 官网添加新密钥"><a href="# 二、在 -Github- 官网添加新密钥" class="headerlink" title="二、在 Github 官网添加新密钥"></a>二、在 Github 官网添加新密钥 </h4><p> 在 Git 中输入：ssh-keygen -t rsa -C “<span class="exturl" data-url="bWFpbHRvOiYjMTIxOyYjeDZmOyYjeDc1OyYjeDcyOyYjMTAxOyYjeDZkOyYjeDYxOyYjeDY5OyYjMTA4OyYjNjQ7JiN4NjU7JiMxMjA7JiN4NjE7JiMxMDk7JiMxMTI7JiMxMDg7JiMxMDE7JiN4MmU7JiN4NjM7JiN4NmY7JiN4NmQ7">&#121;&#x6f;&#x75;&#x72;&#101;&#x6d;&#x61;&#x69;&#108;&#64;&#x65;&#120;&#x61;&#109;&#112;&#108;&#101;&#x2e;&#x63;&#x6f;&#x6d;<i class="fa fa-external-link-alt"></i></span>”</p>
+<h4 id="二、在 -Github- 官网添加新密钥"><a href="# 二、在 -Github- 官网添加新密钥" class="headerlink" title="二、在 Github 官网添加新密钥"></a>二、在 Github 官网添加新密钥 </h4><p> 在 Git 中输入：ssh-keygen -t rsa -C “<span class="exturl" data-url="bWFpbHRvOiYjMTIxOyYjeDZmOyYjMTE3OyYjeDcyOyYjMTAxOyYjMTA5OyYjOTc7JiN4Njk7JiN4NmM7JiM2NDsmIzEwMTsmI3g3ODsmI3g2MTsmIzEwOTsmIzExMjsmIzEwODsmI3g2NTsmIzQ2OyYjeDYzOyYjMTExOyYjeDZkOw==">&#121;&#x6f;&#117;&#x72;&#101;&#109;&#97;&#x69;&#x6c;&#64;&#101;&#x78;&#x61;&#109;&#112;&#108;&#x65;&#46;&#x63;&#111;&#x6d;<i class="fa fa-external-link-alt"></i></span>”</p>
 <p>打开 C:\Users\Administrator.ssh 中的 id_rsa.pub</p>
 <p>复制密钥，在<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3NldHRpbmdzL2tleXMlRTQlQjglQUQlRTYlOTYlQjAlRTUlQkIlQkFTU0g=">https://github.com/settings/keys 中新建 SSH<i class="fa fa-external-link-alt"></i></span> key</p>
 <h4 id="三、源文件拷贝"><a href="# 三、源文件拷贝" class="headerlink" title="三、源文件拷贝"></a>三、源文件拷贝 </h4><p> 将原来电脑上博客目录下必要文件拷到你的新电脑文件夹中，必须拷贝一下几个目录：</p>
@@ -470,97 +463,6 @@
   
 
 
-<script>
-  (function() {
-    function leancloudSelector(url) {
-      url = encodeURI(url);
-      return document.getElementById(url).querySelector('.leancloud-visitors-count');
-    }
-
-    function addCount(Counter) {
-      const visitors = document.querySelector('.leancloud_visitors');
-      const url = decodeURI(visitors.id);
-      const title = visitors.dataset.flagTitle;
-
-      Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({ url })))
-        .then(response => response.json())
-        .then(({ results }) => {
-          if (results.length > 0) {
-            const counter = results[0];
-            leancloudSelector(url).innerText = counter.time + 1;
-            Counter('put', '/classes/Counter/' + counter.objectId, { time: { '__op': 'Increment', 'amount': 1 } })
-              .catch(error => {
-                console.error('Failed to save visitor count', error);
-              });
-          } else {
-              Counter('post', '/classes/Counter', { title, url, time: 1 })
-                .then(response => response.json())
-                .then(() => {
-                  leancloudSelector(url).innerText = 1;
-                })
-                .catch(error => {
-                  console.error('Failed to create', error);
-                });
-          }
-        })
-        .catch(error => {
-          console.error('LeanCloud Counter Error', error);
-        });
-    }
-
-    function showTime(Counter) {
-      const visitors = document.querySelectorAll('.leancloud_visitors');
-      const entries = [...visitors].map(element => {
-        return decodeURI(element.id);
-      });
-
-      Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({ url: { '$in': entries } })))
-        .then(response => response.json())
-        .then(({ results }) => {
-          for (let url of entries) {
-            const target = results.find(item => item.url === url);
-            leancloudSelector(url).innerText = target ? target.time : 0;
-          }
-        })
-        .catch(error => {
-          console.error('LeanCloud Counter Error', error);
-        });
-    }
-
-    const { app_id, app_key, server_url } = {"enable":true,"app_id":"lHQrspQPcyolhncxMNqPTtI3-gzGzoHsz","app_key":"76z9Sj56S2LYvHvC4vD4t8yQ","server_url":null,"security":false};
-    function fetchData(api_server) {
-      const Counter = (method, url, data) => {
-        return fetch(`${api_server}/1.1${url}`, {
-          method,
-          headers: {
-            'X-LC-Id'     : app_id,
-            'X-LC-Key'    : app_key,
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(data)
-        });
-      };
-      if (CONFIG.page.isPost) {
-        if (CONFIG.hostname !== location.hostname) return;
-        addCount(Counter);
-      } else if (document.querySelectorAll('.post-title-link').length >= 1) {
-        showTime(Counter);
-      }
-    }
-
-    const api_server = app_id.slice(-9) === '-MdYXbMMI' ? `https://${app_id.slice(0, 8).toLowerCase()}.api.lncldglobal.com` : server_url;
-
-    if (api_server) {
-      fetchData(api_server);
-    } else {
-      fetch('https://app-router.leancloud.cn/2/route?appId=' + app_id)
-        .then(response => response.json())
-        .then(({ api_server }) => {
-          fetchData('https://' + api_server);
-        });
-    }
-  })();
-</script>
 
 
   <script src="//cdn.jsdelivr.net/npm/quicklink@2.0.0/dist/quicklink.umd.js"></script>

@@ -6,7 +6,7 @@
   <link href="https://weilining.github.io/atom.xml" rel="self"/>
   
   <link href="https://weilining.github.io/"/>
-  <updated>2021-01-05T15:35:16.000Z</updated>
+  <updated>2021-01-04T09:15:13.000Z</updated>
   <id>https://weilining.github.io/</id>
   
   <author>
@@ -15,25 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>Python 从入门到实践（二）</title>
-    <link href="https://weilining.github.io/test.html"/>
-    <id>https://weilining.github.io/test.html</id>
-    <published>2021-01-05T15:35:16.000Z</published>
-    <updated>2021-01-05T15:35:16.000Z</updated>
-    
-    
-    <summary type="html">默认</summary>
-    
-    
-    
-    <category term="默认" scheme="https://weilining.github.io/categories/%E9%BB%98%E8%AE%A4/"/>
-    
-    
-    <category term="默认" scheme="https://weilining.github.io/tags/%E9%BB%98%E8%AE%A4/"/>
-    
-  </entry>
   
   <entry>
     <title>解决 GitHub 网页 githubusercontent 地址无法访问问题</title>
@@ -421,6 +402,27 @@
     <updated>2020-12-20T13:11:50.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="谷歌 404"><a href="# 谷歌 404" class="headerlink" title="谷歌 404"></a> 谷歌 404</h2><p><span class="exturl" data-url="aHR0cHM6Ly9mb250cy5nb29nbGVhcGlzLmNvbS8=">https://fonts.googleapis.com<i class="fa fa-external-link-alt"></i></span></p><a id="more"></a><h2 id="谷歌字体镜像站多吉"><a href="# 谷歌字体镜像站多吉" class="headerlink" title="谷歌字体镜像站多吉"></a> 谷歌字体镜像站多吉 </h2><p><span class="exturl" data-url="aHR0cHM6Ly9mb250cy5kb2dlZG9nZS5jb20v">https://fonts.dogedoge.com<i class="fa fa-external-link-alt"></i></span></p>]]></content>
+    
+    
+    <summary type="html">默认</summary>
+    
+    
+    
+    <category term="默认" scheme="https://weilining.github.io/categories/%E9%BB%98%E8%AE%A4/"/>
+    
+    
+    <category term="默认" scheme="https://weilining.github.io/tags/%E9%BB%98%E8%AE%A4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>网页性能测试工具推荐</title>
+    <link href="https://weilining.github.io/218.html"/>
+    <id>https://weilining.github.io/218.html</id>
+    <published>2020-12-18T09:12:12.000Z</published>
+    <updated>2020-12-18T09:12:12.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="在线"><a href="# 在线" class="headerlink" title="在线"></a> 在线 </h2><p><span class="exturl" data-url="aHR0cHM6Ly93d3cuYWljZXN1LmNuLw==">https://www.aicesu.cn/<i class="fa fa-external-link-alt"></i></span></p><p><span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXJzLmdvb2dsZS5jb20vc3BlZWQvcGFnZXNwZWVkL2luc2lnaHRzLw==">https://developers.google.com/speed/pagespeed/insights/<i class="fa fa-external-link-alt"></i></span></p><a id="more"></a><h2 id="本地"><a href="# 本地" class="headerlink" title="本地"></a> 本地 </h2><p>chrome 的 lighthouse</p>]]></content>
     
     
     <summary type="html">默认</summary>

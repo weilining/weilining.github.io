@@ -264,7 +264,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">238</span>
+          <span class="site-state-item-count">237</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -353,13 +353,6 @@
     </span>
 
   
-    <span id="/%E5%8F%B2%E4%B8%8A%E6%9C%80%E8%AF%A6%E7%BB%86Git%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B.html" class="post-meta-item leancloud_visitors" data-flag-title="史上最详细 Git 使用教程" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
       </div>
       <div class="post-meta">
     <span class="post-meta-item" title="本文字数">
@@ -505,7 +498,7 @@
 <p>再来看看我们 testgit 目录，添加了 3 个文件了。如下所示：</p>
 <h4 id="远程仓库"><a href="# 远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h4><p> 在了解之前，先注册 github 账号，由于你的本地 Git 仓库和 github 仓库之间的传输是通过 SSH 加密的，所以需要一点设置：</p>
 <p>   第一步：创建 SSH Key。在用户主目录下，看看有没有.ssh 目录，如果有，再看看这个目录下有没有 id_rsa 和 id_rsa.pub 这两个文件，如果有的话，直接跳过此如下命令，如果没有的话，打开命令行，输入如下命令：</p>
-<p>ssh-keygen -t rsa –C “<span class="exturl" data-url="bWFpbHRvOiYjeDc5OyYjMTExOyYjeDc1OyYjeDcyOyYjeDY1OyYjeDZkOyYjeDYxOyYjeDY5OyYjMTA4OyYjeDQwOyYjMTAxOyYjeDc4OyYjeDYxOyYjeDZkOyYjeDcwOyYjeDZjOyYjeDY1OyYjNDY7JiN4NjM7JiN4NmY7JiN4NmQ7">&#x79;&#111;&#x75;&#x72;&#x65;&#x6d;&#x61;&#x69;&#108;&#x40;&#101;&#x78;&#x61;&#x6d;&#x70;&#x6c;&#x65;&#46;&#x63;&#x6f;&#x6d;<i class="fa fa-external-link-alt"></i></span>”, 由于我本地此前运行过一次，所以本地有，如下所示：</p>
+<p>ssh-keygen -t rsa –C “<span class="exturl" data-url="bWFpbHRvOiYjMTIxOyYjMTExOyYjMTE3OyYjeDcyOyYjeDY1OyYjeDZkOyYjOTc7JiMxMDU7JiN4NmM7JiN4NDA7JiN4NjU7JiN4Nzg7JiM5NzsmI3g2ZDsmIzExMjsmI3g2YzsmIzEwMTsmIzQ2OyYjeDYzOyYjeDZmOyYjeDZkOw==">&#121;&#111;&#117;&#x72;&#x65;&#x6d;&#97;&#105;&#x6c;&#x40;&#x65;&#x78;&#97;&#x6d;&#112;&#x6c;&#101;&#46;&#x63;&#x6f;&#x6d;<i class="fa fa-external-link-alt"></i></span>”, 由于我本地此前运行过一次，所以本地有，如下所示：</p>
 <p> <a target="_blank" rel="noopener external nofollow noreferrer" href="http://ww2.sinaimg.cn/mw690/6941baebgw1eloypq7esij20kx04pt9c.jpg"><img data-src="/%E5%8F%B2%E4%B8%8A%E6%9C%80%E8%AF%A6%E7%BB%86Git%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/6941baebgw1eloypq7esij20kx04pt9c.jpg" alt="img" loading="lazy"></a></p>
 <p>id_rsa 是私钥，不能泄露出去，id_rsa.pub 是公钥，可以放心地告诉任何人。</p>
 <p>第二步：登录 github, 打开” settings”中的 SSH Keys 页面，然后点击“Add SSH Key”, 填上任意 title，在 Key 文本框里黏贴 id_rsa.pub 文件的内容。</p>
@@ -834,97 +827,6 @@
   
 
 
-<script>
-  (function() {
-    function leancloudSelector(url) {
-      url = encodeURI(url);
-      return document.getElementById(url).querySelector('.leancloud-visitors-count');
-    }
-
-    function addCount(Counter) {
-      const visitors = document.querySelector('.leancloud_visitors');
-      const url = decodeURI(visitors.id);
-      const title = visitors.dataset.flagTitle;
-
-      Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({ url })))
-        .then(response => response.json())
-        .then(({ results }) => {
-          if (results.length > 0) {
-            const counter = results[0];
-            leancloudSelector(url).innerText = counter.time + 1;
-            Counter('put', '/classes/Counter/' + counter.objectId, { time: { '__op': 'Increment', 'amount': 1 } })
-              .catch(error => {
-                console.error('Failed to save visitor count', error);
-              });
-          } else {
-              Counter('post', '/classes/Counter', { title, url, time: 1 })
-                .then(response => response.json())
-                .then(() => {
-                  leancloudSelector(url).innerText = 1;
-                })
-                .catch(error => {
-                  console.error('Failed to create', error);
-                });
-          }
-        })
-        .catch(error => {
-          console.error('LeanCloud Counter Error', error);
-        });
-    }
-
-    function showTime(Counter) {
-      const visitors = document.querySelectorAll('.leancloud_visitors');
-      const entries = [...visitors].map(element => {
-        return decodeURI(element.id);
-      });
-
-      Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({ url: { '$in': entries } })))
-        .then(response => response.json())
-        .then(({ results }) => {
-          for (let url of entries) {
-            const target = results.find(item => item.url === url);
-            leancloudSelector(url).innerText = target ? target.time : 0;
-          }
-        })
-        .catch(error => {
-          console.error('LeanCloud Counter Error', error);
-        });
-    }
-
-    const { app_id, app_key, server_url } = {"enable":true,"app_id":"lHQrspQPcyolhncxMNqPTtI3-gzGzoHsz","app_key":"76z9Sj56S2LYvHvC4vD4t8yQ","server_url":null,"security":false};
-    function fetchData(api_server) {
-      const Counter = (method, url, data) => {
-        return fetch(`${api_server}/1.1${url}`, {
-          method,
-          headers: {
-            'X-LC-Id'     : app_id,
-            'X-LC-Key'    : app_key,
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(data)
-        });
-      };
-      if (CONFIG.page.isPost) {
-        if (CONFIG.hostname !== location.hostname) return;
-        addCount(Counter);
-      } else if (document.querySelectorAll('.post-title-link').length >= 1) {
-        showTime(Counter);
-      }
-    }
-
-    const api_server = app_id.slice(-9) === '-MdYXbMMI' ? `https://${app_id.slice(0, 8).toLowerCase()}.api.lncldglobal.com` : server_url;
-
-    if (api_server) {
-      fetchData(api_server);
-    } else {
-      fetch('https://app-router.leancloud.cn/2/route?appId=' + app_id)
-        .then(response => response.json())
-        .then(({ api_server }) => {
-          fetchData('https://' + api_server);
-        });
-    }
-  })();
-</script>
 
 
   <script src="//cdn.jsdelivr.net/npm/quicklink@2.0.0/dist/quicklink.umd.js"></script>

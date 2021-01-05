@@ -201,7 +201,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">238</span>
+          <span class="site-state-item-count">237</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -290,13 +290,6 @@
     </span>
 
   
-    <span id="/161.html" class="post-meta-item leancloud_visitors" data-flag-title="Gitlab 管理用户、组、权限" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
       </div>
       <div class="post-meta">
     <span class="post-meta-item" title="本文字数">
@@ -342,7 +335,7 @@
 <h4 id="5- 用户会收到邮件如下画面，点击设置密码即可。"><a href="#5- 用户会收到邮件如下画面，点击设置密码即可。" class="headerlink" title="5. 用户会收到邮件如下画面，点击设置密码即可。"></a>5. 用户会收到邮件如下画面，点击设置密码即可。</h4><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://images2018.cnblogs.com/blog/1416119/201806/1416119-20180624221206488-932889468.png"><img data-src="/161/1416119-20180624221206729-1171562142.png" alt="image" loading="lazy"></a></p>
 <p>排错小技巧：在设置邮件服务器比如设置如下：</p>
 <blockquote>
-<p>gitlab_rails[&#39;gitlab_email_from&#39;] = &#39;gitlab@aishangwei.net&#39;<br>gitlab_rails[&#39;gitlab_email_reply_to&#39;] = &#39;gitlab@aishangwei.net&#39;<br>gitlab_rails[&#39;smtp_enable&#39;] = true<br>gitlab_rails[&#39;smtp_address&#39;] = &quot;smtp.mxhichina.com&quot;<br>gitlab_rails[&#39;smtp_port&#39;] = 25<br>gitlab_rails[&#39;smtp_user_name&#39;] = &quot;<span class="exturl" data-url="bWFpbHRvOiYjMTAzOyYjMTA1OyYjMTE2OyYjeDZjOyYjeDYxOyYjOTg7JiN4NDA7JiN4NjE7JiMxMDU7JiN4NzM7JiMxMDQ7JiN4NjE7JiMxMTA7JiMxMDM7JiMxMTk7JiMxMDE7JiN4Njk7JiM0NjsmIzExMDsmI3g2NTsmI3g3NDs=">&#103;&#105;&#116;&#x6c;&#x61;&#98;&#x40;&#x61;&#105;&#x73;&#104;&#x61;&#110;&#103;&#119;&#101;&#x69;&#46;&#110;&#x65;&#x74;<i class="fa fa-external-link-alt"></i></span>&quot;<br>gitlab_rails[&#39;smtp_password&#39;] = &quot;W-123456&quot;<br>gitlab_rails[&#39;smtp_domain&#39;] = &quot;mxhichina.com&quot;<br>gitlab_rails[&#39;smtp_authentication&#39;] = &quot;login&quot;</p>
+<p>gitlab_rails[&#39;gitlab_email_from&#39;] = &#39;gitlab@aishangwei.net&#39;<br>gitlab_rails[&#39;gitlab_email_reply_to&#39;] = &#39;gitlab@aishangwei.net&#39;<br>gitlab_rails[&#39;smtp_enable&#39;] = true<br>gitlab_rails[&#39;smtp_address&#39;] = &quot;smtp.mxhichina.com&quot;<br>gitlab_rails[&#39;smtp_port&#39;] = 25<br>gitlab_rails[&#39;smtp_user_name&#39;] = &quot;<span class="exturl" data-url="bWFpbHRvOiYjeDY3OyYjMTA1OyYjMTE2OyYjeDZjOyYjeDYxOyYjOTg7JiN4NDA7JiN4NjE7JiMxMDU7JiN4NzM7JiN4Njg7JiM5NzsmI3g2ZTsmIzEwMzsmIzExOTsmIzEwMTsmIzEwNTsmI3gyZTsmI3g2ZTsmI3g2NTsmIzExNjs=">&#x67;&#105;&#116;&#x6c;&#x61;&#98;&#x40;&#x61;&#105;&#x73;&#x68;&#97;&#x6e;&#103;&#119;&#101;&#105;&#x2e;&#x6e;&#x65;&#116;<i class="fa fa-external-link-alt"></i></span>&quot;<br>gitlab_rails[&#39;smtp_password&#39;] = &quot;W-123456&quot;<br>gitlab_rails[&#39;smtp_domain&#39;] = &quot;mxhichina.com&quot;<br>gitlab_rails[&#39;smtp_authentication&#39;] = &quot;login&quot;</p>
 </blockquote>
 <p>设置 完成后运行以下命令测试:</p>
 <blockquote>
@@ -656,97 +649,6 @@
   
 
 
-<script>
-  (function() {
-    function leancloudSelector(url) {
-      url = encodeURI(url);
-      return document.getElementById(url).querySelector('.leancloud-visitors-count');
-    }
-
-    function addCount(Counter) {
-      const visitors = document.querySelector('.leancloud_visitors');
-      const url = decodeURI(visitors.id);
-      const title = visitors.dataset.flagTitle;
-
-      Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({ url })))
-        .then(response => response.json())
-        .then(({ results }) => {
-          if (results.length > 0) {
-            const counter = results[0];
-            leancloudSelector(url).innerText = counter.time + 1;
-            Counter('put', '/classes/Counter/' + counter.objectId, { time: { '__op': 'Increment', 'amount': 1 } })
-              .catch(error => {
-                console.error('Failed to save visitor count', error);
-              });
-          } else {
-              Counter('post', '/classes/Counter', { title, url, time: 1 })
-                .then(response => response.json())
-                .then(() => {
-                  leancloudSelector(url).innerText = 1;
-                })
-                .catch(error => {
-                  console.error('Failed to create', error);
-                });
-          }
-        })
-        .catch(error => {
-          console.error('LeanCloud Counter Error', error);
-        });
-    }
-
-    function showTime(Counter) {
-      const visitors = document.querySelectorAll('.leancloud_visitors');
-      const entries = [...visitors].map(element => {
-        return decodeURI(element.id);
-      });
-
-      Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({ url: { '$in': entries } })))
-        .then(response => response.json())
-        .then(({ results }) => {
-          for (let url of entries) {
-            const target = results.find(item => item.url === url);
-            leancloudSelector(url).innerText = target ? target.time : 0;
-          }
-        })
-        .catch(error => {
-          console.error('LeanCloud Counter Error', error);
-        });
-    }
-
-    const { app_id, app_key, server_url } = {"enable":true,"app_id":"lHQrspQPcyolhncxMNqPTtI3-gzGzoHsz","app_key":"76z9Sj56S2LYvHvC4vD4t8yQ","server_url":null,"security":false};
-    function fetchData(api_server) {
-      const Counter = (method, url, data) => {
-        return fetch(`${api_server}/1.1${url}`, {
-          method,
-          headers: {
-            'X-LC-Id'     : app_id,
-            'X-LC-Key'    : app_key,
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(data)
-        });
-      };
-      if (CONFIG.page.isPost) {
-        if (CONFIG.hostname !== location.hostname) return;
-        addCount(Counter);
-      } else if (document.querySelectorAll('.post-title-link').length >= 1) {
-        showTime(Counter);
-      }
-    }
-
-    const api_server = app_id.slice(-9) === '-MdYXbMMI' ? `https://${app_id.slice(0, 8).toLowerCase()}.api.lncldglobal.com` : server_url;
-
-    if (api_server) {
-      fetchData(api_server);
-    } else {
-      fetch('https://app-router.leancloud.cn/2/route?appId=' + app_id)
-        .then(response => response.json())
-        .then(({ api_server }) => {
-          fetchData('https://' + api_server);
-        });
-    }
-  })();
-</script>
 
 
   <script src="//cdn.jsdelivr.net/npm/quicklink@2.0.0/dist/quicklink.umd.js"></script>
