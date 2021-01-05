@@ -540,6 +540,16 @@
 </script>
 
 
+  <script src="//cdn.jsdelivr.net/npm/quicklink@2.0.0/dist/quicklink.umd.js"></script>
+  <script>
+      window.addEventListener('load', () => {
+      quicklink.listen({
+        timeout : 3000,
+        priority: true,
+        ignores : [uri => uri.includes('#'),uri => uri === 'https://weilining.github.io/%E6%9F%A5%E7%9C%8BHexo%E7%9A%84%E6%89%80%E6%9C%89npm%E7%89%88%E6%9C%AC.html',]
+      });
+      });
+  </script>
 
 <script>
 NexT.utils.loadComments('#lv-container', () => {

@@ -450,6 +450,16 @@
 </script>
 
 
+  <script src="//cdn.jsdelivr.net/npm/quicklink@2.0.0/dist/quicklink.umd.js"></script>
+  <script>
+      window.addEventListener('load', () => {
+      quicklink.listen({
+        timeout : 3000,
+        priority: true,
+        ignores : [uri => uri.includes('#'),uri => uri === 'https://weilining.github.io/tags/%E6%8A%80%E6%9C%AF%E9%83%A8/',]
+      });
+      });
+  </script>
 
 
 </body>
