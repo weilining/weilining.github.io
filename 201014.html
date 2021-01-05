@@ -18,7 +18,7 @@
 
 <link rel="stylesheet" href="/css/main.css">
 
-
+<link rel="stylesheet" href="https://fonts.dogedoge.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
@@ -44,7 +44,7 @@
 <link rel="canonical" href="https://weilining.github.io/201014.html">
 
 
-<script data-pjax class="page-configurations">
+<script class="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
@@ -167,7 +167,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%B0%E5%BB%BA%E9%A1%B5%E9%9D%A2"><span class="nav-number">1.</span> <span class="nav-text">新建页面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E8%8F%9C%E5%8D%95%E6%98%BE%E7%A4%BA"><span class="nav-number">2.</span> <span class="nav-text">配置菜单显示</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83"><span class="nav-number">3.</span> <span class="nav-text">参考</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%B0%E5%BB%BA%E9%A1%B5%E9%9D%A2"><span class="nav-number">1.</span> <span class="nav-text">新建页面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E8%8F%9C%E5%8D%95%E6%98%BE%E7%A4%BA"><span class="nav-number">2.</span> <span class="nav-text">配置菜单显示 </span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83"><span class="nav-number">3.</span> <span class="nav-text">参考</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -183,7 +183,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">237</span>
+          <span class="site-state-item-count">238</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -313,23 +313,23 @@
     
     <div class="post-body" itemprop="articleBody">
         <p>[TOC]</p>
-<p>本文基于 leancloud 的数据实现了一个<span class="exturl" data-url="aHR0cHM6Ly90ZGluZy50b3AvdG9wLw==">阅读排行页面<i class="fa fa-external-link-alt"></i></span>。</p>
+<p>本文基于 leancloud 的数据实现了一个 <span class="exturl" data-url="aHR0cHM6Ly90ZGluZy50b3AvdG9wLw=="> 阅读排行页面<i class="fa fa-external-link-alt"></i></span>。</p>
 <a id="more"></a>
 
 
 
-<h2 id="新建页面"><a href="#新建页面" class="headerlink" title="新建页面"></a>新建页面</h2><p><code>hexo n page top</code> 新建页面，会生成 top 目录，编辑其中自动生成的 <code>index.md</code> 文件，将其中的代码替换如下：</p>
+<h2 id="新建页面"><a href="# 新建页面" class="headerlink" title="新建页面"></a>新建页面</h2><p><code>hexo n page top</code> 新建页面，会生成 top 目录，编辑其中自动生成的 <code>index.md</code> 文件，将其中的代码替换如下：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;div id&#x3D;&quot;top&quot;&gt;&lt;&#x2F;div&gt;</span><br><span class="line">&lt;script src&#x3D;&quot;https:&#x2F;&#x2F;cdn1.lncld.net&#x2F;static&#x2F;js&#x2F;av-core-mini-0.6.4.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&lt;script&gt;AV.initialize(&quot;leancloud_appid&quot;, &quot;leancloud_appkey&quot;);&lt;&#x2F;script&gt;</span><br><span class="line">&lt;script type&#x3D;&quot;text&#x2F;javascript&quot;&gt;</span><br><span class="line">  var time&#x3D;0</span><br><span class="line">  var title&#x3D;&quot;&quot;</span><br><span class="line">  var url&#x3D;&quot;&quot;</span><br><span class="line">  var query &#x3D; new AV.Query(&#39;Counter&#39;);</span><br><span class="line">  query.notEqualTo(&#39;id&#39;,0);</span><br><span class="line">  query.descending(&#39;time&#39;);</span><br><span class="line">  query.limit(1000);</span><br><span class="line">  query.find().then(function (todo) &#123;</span><br><span class="line">    for (var i&#x3D;0;i&lt;1000;i++)&#123;</span><br><span class="line">      var result&#x3D;todo[i].attributes;</span><br><span class="line">      time&#x3D;result.time;</span><br><span class="line">      title&#x3D;result.title;</span><br><span class="line">      url&#x3D;result.url;</span><br><span class="line">      var content&#x3D;&quot;&lt;p&gt;&quot;+&quot;&lt;font color&#x3D;&#39;#1C1C1C&#39;&gt;&quot;+&quot;【文章热度:&quot;+time+&quot;℃】&quot;+&quot;&lt;&#x2F;font&gt;&quot;+&quot;&lt;a href&#x3D;&#39;&quot;+&quot;https:&#x2F;&#x2F;tding.top&quot;+url+&quot;&#39;&gt;&quot;+title+&quot;&lt;&#x2F;a&gt;&quot;+&quot;&lt;&#x2F;p&gt;&quot;;</span><br><span class="line">      document.getElementById(&quot;top&quot;).innerHTML+&#x3D;content</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;, function (error) &#123;</span><br><span class="line">    console.log(&quot;error&quot;);</span><br><span class="line">  &#125;);</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
-<p>并将其中的 <code>leancloud_appid</code>、<code>leancloud_appkey</code> 和<strong>页面链接</strong>替换为你的。</p>
+<p>并将其中的 <code>leancloud_appid</code>、<code>leancloud_appkey</code> 和 <strong> 页面链接 </strong> 替换为你的。</p>
 <p>由于一些因素，我后面迁移到了 <span class="exturl" data-url="aHR0cHM6Ly91cy5sZWFuY2xvdWQuY24v">Leancloud 国际版<i class="fa fa-external-link-alt"></i></span>，然后阅读排行榜就无法正常显示了，报出如下错误：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Failed to load resource: the server responded with a status of 403 () us.leancloud.cn&#x2F;1.1&#x2F;classes&#x2F;Counter?redirectByAPI&#x3D;cn:1</span><br></pre></td></tr></table></figure>
 <p>最后发现，美国节点需要调用 <code>AV.useAVCloudUS()</code>，因此以上代码需要修改为：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;div id&#x3D;&quot;top&quot;&gt;&lt;&#x2F;div&gt;</span><br><span class="line">&lt;script src&#x3D;&quot;https:&#x2F;&#x2F;cdn1.lncld.net&#x2F;static&#x2F;js&#x2F;av-core-mini-0.6.4.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&lt;script&gt;AV.initialize(&quot;leancloud_appid&quot;, &quot;leancloud_appkey&quot;);AV.useAVCloudUS();&lt;&#x2F;script&gt;</span><br><span class="line">&lt;script type&#x3D;&quot;text&#x2F;javascript&quot;&gt;</span><br><span class="line">  var time&#x3D;0</span><br><span class="line">  var title&#x3D;&quot;&quot;</span><br><span class="line">  var url&#x3D;&quot;&quot;</span><br><span class="line">  var query &#x3D; new AV.Query(&#39;Counter&#39;);</span><br><span class="line">  query.notEqualTo(&#39;id&#39;,0);</span><br><span class="line">  query.descending(&#39;time&#39;);</span><br><span class="line">  query.limit(1000);</span><br><span class="line">  query.find().then(function (todo) &#123;</span><br><span class="line">    for (var i&#x3D;0;i&lt;1000;i++)&#123;</span><br><span class="line">      var result&#x3D;todo[i].attributes;</span><br><span class="line">      time&#x3D;result.time;</span><br><span class="line">      title&#x3D;result.title;</span><br><span class="line">      url&#x3D;result.url;</span><br><span class="line">      var content&#x3D;&quot;&lt;p&gt;&quot;+&quot;&lt;font color&#x3D;&#39;#FAF0BB&#39;&gt;&quot;+&quot;【文章热度:&quot;+time+&quot;℃】&quot;+&quot;&lt;&#x2F;font&gt;&quot;+&quot;&lt;a href&#x3D;&#39;&quot;+&quot;https:&#x2F;&#x2F;weilining.github.io&quot;+url+&quot;&#39;&gt;&quot;+title+&quot;&lt;&#x2F;a&gt;&quot;+&quot;&lt;&#x2F;p&gt;&quot;;</span><br><span class="line">      document.getElementById(&quot;top&quot;).innerHTML+&#x3D;content</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;, function (error) &#123;</span><br><span class="line">    console.log(&quot;error&quot;);</span><br><span class="line">  &#125;);</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
-<h2 id="配置菜单显示"><a href="#配置菜单显示" class="headerlink" title="配置菜单显示"></a>配置菜单显示</h2><p>编辑主题配置文件 themes\next_config.yml，添加 top：</p>
+<h2 id="配置菜单显示"><a href="# 配置菜单显示" class="headerlink" title="配置菜单显示"></a>配置菜单显示 </h2><p> 编辑主题配置文件 themes\next_config.yml，添加 top：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">menu:</span><br><span class="line">  top: &#x2F;top&#x2F; || fa fa-signal</span><br></pre></td></tr></table></figure>
 <p>新增菜单栏的显示名称 <code>blog/source/_data/languages.yml</code>，同样新增 top 对应的中文：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">zh-CN:</span><br><span class="line">  menu:</span><br><span class="line">    top: 阅读排行</span><br></pre></td></tr></table></figure>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><span class="exturl" data-url="aHR0cHM6Ly90ZGluZy50b3AvYXJjaGl2ZXMvYmFmMWZmZC5odG1s">Hexo-NexT 新增阅读排行页面<i class="fa fa-external-link-alt"></i></span></p>
+<h2 id="参考"><a href="# 参考" class="headerlink" title="参考"></a>参考</h2><p><span class="exturl" data-url="aHR0cHM6Ly90ZGluZy50b3AvYXJjaGl2ZXMvYmFmMWZmZC5odG1s">Hexo-NexT 新增阅读排行页面<i class="fa fa-external-link-alt"></i></span></p>
 
     </div>
 
@@ -338,8 +338,30 @@
     
 
     <footer class="post-footer">
+          <div class="reward-container">
+  <div>Buy me a coffee</div>
+  <button onclick="document.querySelector('.post-reward').classList.toggle('active');">
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/20201122213021.png" alt="Lining Wei 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/434235F3-7A93-4EA4-A7B6-4F6D977F1A89.png" alt="Lining Wei 支付宝">
+        <span>支付宝</span>
+      </div>
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/bitcoin.png" alt="Lining Wei 比特币">
+        <span>比特币</span>
+      </div>
+
+  </div>
+</div>
+
           <div class="post-tags">
-              <a href="/tags/NexT/" rel="tag"># NexT</a>
+              <a href="/tags/NexT/" rel="tag"><i class="fa fa-tag"></i> NexT</a>
           </div>
 
         
@@ -428,43 +450,9 @@
 
   
   <script src="//cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/@next-theme/pjax@0.4.0/pjax.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js"></script>
-<script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/motion.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/next-boot.js"></script><script>
-var pjax = new Pjax({
-  selectors: [
-    'head title',
-    '.page-configurations',
-    '.main-inner',
-    '.post-toc-wrap',
-    '.languages',
-    '.pjax'
-  ],
-  analytics: false,
-  cacheBust: false,
-  scrollRestoration: false,
-  scrollTo: !CONFIG.bookmark.enable
-});
-
-document.addEventListener('pjax:success', () => {
-  pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
-  NexT.boot.refresh();
-  // Define Motion Sequence & Bootstrap Motion.
-  if (CONFIG.motion.enable) {
-    NexT.motion.integrator
-      .init()
-      .add(NexT.motion.middleWares.subMenu)
-      .add(NexT.motion.middleWares.postList)
-      .bootstrap();
-  }
-  const hasTOC = document.querySelector('.post-toc');
-  document.querySelector('.sidebar-inner').classList.toggle('sidebar-nav-active', hasTOC);
-  document.querySelector(hasTOC ? '.sidebar-nav-toc' : '.sidebar-nav-overview').click();
-  NexT.utils.updateSidebarPosition();
-});
-</script>
-
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/motion.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/next-boot.js"></script>
 
   
 
@@ -476,7 +464,7 @@ document.addEventListener('pjax:success', () => {
   
 
 
-<script data-pjax>
+<script>
   (function() {
     function leancloudSelector(url) {
       url = encodeURI(url);
@@ -563,18 +551,7 @@ document.addEventListener('pjax:success', () => {
   })();
 </script>
 
-    <div class="pjax">
 
-  <script src="//cdn.jsdelivr.net/npm/quicklink@2.0.0/dist/quicklink.umd.js"></script>
-  <script>
-      window.addEventListener('load', () => {
-      quicklink.listen({
-        timeout : 3000,
-        priority: true,
-        ignores : [uri => uri.includes('#'),uri => uri === 'https://weilining.github.io/201014.html',]
-      });
-      });
-  </script>
 
 <script>
 NexT.utils.loadComments('#lv-container', () => {
@@ -592,6 +569,5 @@ NexT.utils.loadComments('#lv-container', () => {
 });
 </script>
 
-    </div>
 </body>
 </html>

@@ -18,7 +18,7 @@
 
 <link rel="stylesheet" href="/css/main.css">
 
-
+<link rel="stylesheet" href="https://fonts.dogedoge.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
@@ -29,7 +29,7 @@
   </script>
 <meta name="description" content="默认">
 <meta property="og:type" content="article">
-<meta property="og:title" content="web前端——旋转3D魔方">
+<meta property="og:title" content="web 前端——旋转 3D 魔方">
 <meta property="og:url" content="https://weilining.github.io/213.html">
 <meta property="og:site_name" content="Ln&#39;s Blog">
 <meta property="og:description" content="默认">
@@ -46,7 +46,7 @@
 <link rel="canonical" href="https://weilining.github.io/213.html">
 
 
-<script data-pjax class="page-configurations">
+<script class="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
@@ -55,7 +55,7 @@
     lang   : 'zh-CN'
   };
 </script>
-<title>web前端——旋转3D魔方 | Ln's Blog</title>
+<title>web 前端——旋转 3D 魔方 | Ln's Blog</title>
   
 
 
@@ -169,7 +169,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A03D%E6%95%88%E6%9E%9C"><span class="nav-number">1.</span> <span class="nav-text">添加3D效果</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%95%B4%E4%BD%93%E4%BB%A3%E7%A0%81"><span class="nav-number">2.</span> <span class="nav-text">整体代码</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83"><span class="nav-number">2.1.</span> <span class="nav-text">参考</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0%203D%20%E6%95%88%E6%9E%9C"><span class="nav-number">1.</span> <span class="nav-text"> 添加 3D 效果 </span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%95%B4%E4%BD%93%E4%BB%A3%E7%A0%81"><span class="nav-number">2.</span> <span class="nav-text"> 整体代码 </span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83"><span class="nav-number">2.1.</span> <span class="nav-text"> 参考 </span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -185,7 +185,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">237</span>
+          <span class="site-state-item-count">238</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -250,7 +250,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          web前端——旋转3D魔方
+          web 前端——旋转 3D 魔方
         </h1>
 
         <div class="post-meta-container">
@@ -274,7 +274,7 @@
     </span>
 
   
-    <span id="/213.html" class="post-meta-item leancloud_visitors" data-flag-title="web前端——旋转3D魔方" title="阅读次数">
+    <span id="/213.html" class="post-meta-item leancloud_visitors" data-flag-title="web 前端——旋转 3D 魔方" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
       </span>
@@ -309,24 +309,24 @@
     <div class="post-body" itemprop="articleBody">
         <a id="more"></a>
 
-<p> 盒子布局</p>
-<p>将3D魔方的6个面包裹在一个父盒子中</p>
+<p> 盒子布局 </p>
+<p> 将 3D 魔方的 6 个面包裹在一个父盒子中 </p>
 <p>Html</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;div class&#x3D;&quot;content&quot;&gt;</span><br><span class="line">  &lt;div class&#x3D;&quot;parent&quot;&gt;</span><br><span class="line">    &lt;div class&#x3D;&quot;div1&quot;&gt;上&lt;&#x2F;div&gt;</span><br><span class="line">    &lt;div class&#x3D;&quot;div2&quot;&gt;下&lt;&#x2F;div&gt;</span><br><span class="line">    &lt;div class&#x3D;&quot;div3&quot;&gt;左&lt;&#x2F;div&gt;</span><br><span class="line">    &lt;div class&#x3D;&quot;div4&quot;&gt;右&lt;&#x2F;div&gt;</span><br><span class="line">    &lt;div class&#x3D;&quot;div5&quot;&gt;前&lt;&#x2F;div&gt;</span><br><span class="line">    &lt;div class&#x3D;&quot;div6&quot;&gt;后&lt;&#x2F;div&gt;</span><br><span class="line">  &lt;&#x2F;div&gt;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
-<h1 id="添加3D效果"><a href="#添加3D效果" class="headerlink" title="添加3D效果"></a>添加3D效果</h1><ol>
-<li><p>给父盒子添加相对定位和3D属性</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.parent &#123;</span><br><span class="line">    &#x2F;* 相对定位 *&#x2F;</span><br><span class="line">    position: relative;</span><br><span class="line">    width: 400px;</span><br><span class="line">    height: 400px;</span><br><span class="line">    margin: 200px auto;</span><br><span class="line">    &#x2F;* 3D属性 *&#x2F;</span><br><span class="line">    transform-style: preserve-3d;</span><br><span class="line">    &#x2F;* 旋转动画 *&#x2F;</span><br><span class="line">    animation-name: rotate;</span><br><span class="line">    animation-duration: 10s;</span><br><span class="line">    animation-iteration-count: infinite;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li><p>给子盒子添加绝对定位，并移动、旋转子盒子</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;div class&#x3D;&quot;content&quot;&gt;</span><br><span class="line">  &lt;div class&#x3D;&quot;parent&quot;&gt;</span><br><span class="line">    &lt;div class&#x3D;&quot;div1&quot;&gt; 上 &lt;&#x2F;div&gt;</span><br><span class="line">    &lt;div class&#x3D;&quot;div2&quot;&gt; 下 &lt;&#x2F;div&gt;</span><br><span class="line">    &lt;div class&#x3D;&quot;div3&quot;&gt; 左 &lt;&#x2F;div&gt;</span><br><span class="line">    &lt;div class&#x3D;&quot;div4&quot;&gt; 右 &lt;&#x2F;div&gt;</span><br><span class="line">    &lt;div class&#x3D;&quot;div5&quot;&gt; 前 &lt;&#x2F;div&gt;</span><br><span class="line">    &lt;div class&#x3D;&quot;div6&quot;&gt; 后 &lt;&#x2F;div&gt;</span><br><span class="line">  &lt;&#x2F;div&gt;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+<h1 id="添加 3D 效果"><a href="# 添加 3D 效果" class="headerlink" title="添加 3D 效果"></a> 添加 3D 效果 </h1><ol>
+<li><p> 给父盒子添加相对定位和 3D 属性 </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.parent &#123;</span><br><span class="line">    &#x2F;* 相对定位 *&#x2F;</span><br><span class="line">    position: relative;</span><br><span class="line">    width: 400px;</span><br><span class="line">    height: 400px;</span><br><span class="line">    margin: 200px auto;</span><br><span class="line">    &#x2F;* 3D 属性 *&#x2F;</span><br><span class="line">    transform-style: preserve-3d;</span><br><span class="line">    &#x2F;* 旋转动画 *&#x2F;</span><br><span class="line">    animation-name: rotate;</span><br><span class="line">    animation-duration: 10s;</span><br><span class="line">    animation-iteration-count: infinite;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p> 给子盒子添加绝对定位，并移动、旋转子盒子 </p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.parent&gt;div &#123;</span><br><span class="line">  position: absolute;</span><br><span class="line">  width: 400px;</span><br><span class="line">  height: 400px;</span><br><span class="line">  border: 1px solid pink;</span><br><span class="line">  font-size: 40px;</span><br><span class="line">  line-height: 400px;</span><br><span class="line">  text-align: center;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.div1 &#123;</span><br><span class="line">  top: -50%;</span><br><span class="line">  color: yellow;</span><br><span class="line">  transform: rotateX(90deg);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.div2 &#123;</span><br><span class="line">  top: 50%;</span><br><span class="line">  color: white;</span><br><span class="line">  transform: rotateX(90deg);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.div3 &#123;</span><br><span class="line">  left: -50%;</span><br><span class="line">  color: red;</span><br><span class="line">  transform: rotateY(90deg);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.div4 &#123;</span><br><span class="line">  left: 50%;</span><br><span class="line">  color: orange;</span><br><span class="line">  transform: rotateY(90deg);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.div5 &#123;</span><br><span class="line">  transform: translateZ(200px);</span><br><span class="line">  color: blue;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.div6 &#123;</span><br><span class="line">  transform: translateZ(-200px);</span><br><span class="line">  color: green;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>效果：</p>
+<p> 效果：</p>
 <p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://img-blog.csdnimg.cn/20200626160928538.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MDM2OTkw,size_16,color_FFFFFF,t_70"><img data-src="/213/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MDM2OTkw,size_16,color_FFFFFF,t_70.png" alt="在这里插入图片描述" loading="lazy"></a></p>
 </li>
-<li><p>给父盒子添加动画效果</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.parent &#123;</span><br><span class="line">  &#x2F;* 相对定位 *&#x2F;</span><br><span class="line">  position: relative;</span><br><span class="line">  width: 400px;</span><br><span class="line">  height: 400px;</span><br><span class="line">  margin: 200px auto;</span><br><span class="line">  &#x2F;* 3D属性 *&#x2F;</span><br><span class="line">  transform-style: preserve-3d;</span><br><span class="line">  &#x2F;* 旋转动画 *&#x2F;</span><br><span class="line">  animation-name: rotate;</span><br><span class="line">  animation-duration: 10s;</span><br><span class="line">  animation-iteration-count: infinite;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@keyframes rotate &#123;</span><br><span class="line">  0% &#123;</span><br><span class="line">  	transform: rotateX(0) rotateY(0)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  100% &#123;</span><br><span class="line">  	transform: rotateX(360deg) rotateY(360deg)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="整体代码"><a href="#整体代码" class="headerlink" title="整体代码"></a>整体代码</h1></li>
+<li><p> 给父盒子添加动画效果 </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.parent &#123;</span><br><span class="line">  &#x2F;* 相对定位 *&#x2F;</span><br><span class="line">  position: relative;</span><br><span class="line">  width: 400px;</span><br><span class="line">  height: 400px;</span><br><span class="line">  margin: 200px auto;</span><br><span class="line">  &#x2F;* 3D 属性 *&#x2F;</span><br><span class="line">  transform-style: preserve-3d;</span><br><span class="line">  &#x2F;* 旋转动画 *&#x2F;</span><br><span class="line">  animation-name: rotate;</span><br><span class="line">  animation-duration: 10s;</span><br><span class="line">  animation-iteration-count: infinite;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@keyframes rotate &#123;</span><br><span class="line">  0% &#123;</span><br><span class="line">  	transform: rotateX(0) rotateY(0)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  100% &#123;</span><br><span class="line">  	transform: rotateX(360deg) rotateY(360deg)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="整体代码"><a href="# 整体代码" class="headerlink" title="整体代码"></a> 整体代码 </h1></li>
 </ol>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang&#x3D;&quot;en&quot;&gt;</span><br><span class="line"></span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;meta name&#x3D;&quot;viewport&quot; content&#x3D;&quot;width&#x3D;device-width, initial-scale&#x3D;1.0&quot;&gt;</span><br><span class="line">    &lt;title&gt;旋转魔方&lt;&#x2F;title&gt;</span><br><span class="line">    &lt;style&gt;</span><br><span class="line">        * &#123;</span><br><span class="line">            margin: 0;</span><br><span class="line">            padding: 0;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        body &#123;</span><br><span class="line">            background-color: black;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        .content &#123;</span><br><span class="line">            perspective: 1000px;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        .parent &#123;</span><br><span class="line">            &#x2F;* 相对定位 *&#x2F;</span><br><span class="line">            position: relative;</span><br><span class="line">            width: 400px;</span><br><span class="line">            height: 400px;</span><br><span class="line">            margin: 200px auto;</span><br><span class="line">            &#x2F;* 3D属性 *&#x2F;</span><br><span class="line">            transform-style: preserve-3d;</span><br><span class="line">            &#x2F;* 旋转动画 *&#x2F;</span><br><span class="line">            animation-name: rotate;</span><br><span class="line">            animation-duration: 10s;</span><br><span class="line">            animation-iteration-count: infinite;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        .parent&gt;div &#123;</span><br><span class="line">            position: absolute;</span><br><span class="line">            width: 400px;</span><br><span class="line">            height: 400px;</span><br><span class="line">            border: 1px solid pink;</span><br><span class="line">            font-size: 40px;</span><br><span class="line">            line-height: 400px;</span><br><span class="line">            text-align: center;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        .parent&gt;div:hover &#123;</span><br><span class="line">            background-color: currentColor;</span><br><span class="line">            box-shadow: 0 0 100px currentColor;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        .div1 &#123;</span><br><span class="line">            top: -50%;</span><br><span class="line">            color: yellow;</span><br><span class="line">            transform: rotateX(90deg);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        .div2 &#123;</span><br><span class="line">            top: 50%;</span><br><span class="line">            color: white;</span><br><span class="line">            transform: rotateX(90deg);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        .div3 &#123;</span><br><span class="line">            left: -50%;</span><br><span class="line">            color: red;</span><br><span class="line">            transform: rotateY(90deg);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        .div4 &#123;</span><br><span class="line">            left: 50%;</span><br><span class="line">            color: orange;</span><br><span class="line">            transform: rotateY(90deg);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        .div5 &#123;</span><br><span class="line">            transform: translateZ(200px);</span><br><span class="line">            color: blue;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        .div6 &#123;</span><br><span class="line">            transform: translateZ(-200px);</span><br><span class="line">            color: green;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        @keyframes rotate &#123;</span><br><span class="line">            0% &#123;</span><br><span class="line">                transform: rotateX(0) rotateY(0)</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            100% &#123;</span><br><span class="line">                transform: rotateX(360deg) rotateY(360deg)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;&#x2F;style&gt;</span><br><span class="line">&lt;&#x2F;head&gt;</span><br><span class="line"></span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div class&#x3D;&quot;content&quot;&gt;</span><br><span class="line">        &lt;div class&#x3D;&quot;parent&quot;&gt;</span><br><span class="line">            &lt;div class&#x3D;&quot;div1&quot;&gt;上&lt;&#x2F;div&gt;</span><br><span class="line">            &lt;div class&#x3D;&quot;div2&quot;&gt;下&lt;&#x2F;div&gt;</span><br><span class="line">            &lt;div class&#x3D;&quot;div3&quot;&gt;左&lt;&#x2F;div&gt;</span><br><span class="line">            &lt;div class&#x3D;&quot;div4&quot;&gt;右&lt;&#x2F;div&gt;</span><br><span class="line">            &lt;div class&#x3D;&quot;div5&quot;&gt;前&lt;&#x2F;div&gt;</span><br><span class="line">            &lt;div class&#x3D;&quot;div6&quot;&gt;后&lt;&#x2F;div&gt;</span><br><span class="line">        &lt;&#x2F;div&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line"></span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><span class="exturl" data-url="aHR0cHM6Ly9jaGVueXVueGluLmNuL3Bvc3RzLzc3NDA4NTg1MC5odG1sIyVFNyU5QiU5MiVFNSVBRCU5MCVFNSVCOCU4MyVFNSVCMSU4MA==">https://chenyunxin.cn/posts/774085850.html#%E7%9B%92%E5%AD%90%E5%B8%83%E5%B1%80<i class="fa fa-external-link-alt"></i></span></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang&#x3D;&quot;en&quot;&gt;</span><br><span class="line"></span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;meta name&#x3D;&quot;viewport&quot; content&#x3D;&quot;width&#x3D;device-width, initial-scale&#x3D;1.0&quot;&gt;</span><br><span class="line">    &lt;title&gt; 旋转魔方 &lt;&#x2F;title&gt;</span><br><span class="line">    &lt;style&gt;</span><br><span class="line">        * &#123;</span><br><span class="line">            margin: 0;</span><br><span class="line">            padding: 0;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        body &#123;</span><br><span class="line">            background-color: black;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        .content &#123;</span><br><span class="line">            perspective: 1000px;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        .parent &#123;</span><br><span class="line">            &#x2F;* 相对定位 *&#x2F;</span><br><span class="line">            position: relative;</span><br><span class="line">            width: 400px;</span><br><span class="line">            height: 400px;</span><br><span class="line">            margin: 200px auto;</span><br><span class="line">            &#x2F;* 3D 属性 *&#x2F;</span><br><span class="line">            transform-style: preserve-3d;</span><br><span class="line">            &#x2F;* 旋转动画 *&#x2F;</span><br><span class="line">            animation-name: rotate;</span><br><span class="line">            animation-duration: 10s;</span><br><span class="line">            animation-iteration-count: infinite;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        .parent&gt;div &#123;</span><br><span class="line">            position: absolute;</span><br><span class="line">            width: 400px;</span><br><span class="line">            height: 400px;</span><br><span class="line">            border: 1px solid pink;</span><br><span class="line">            font-size: 40px;</span><br><span class="line">            line-height: 400px;</span><br><span class="line">            text-align: center;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        .parent&gt;div:hover &#123;</span><br><span class="line">            background-color: currentColor;</span><br><span class="line">            box-shadow: 0 0 100px currentColor;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        .div1 &#123;</span><br><span class="line">            top: -50%;</span><br><span class="line">            color: yellow;</span><br><span class="line">            transform: rotateX(90deg);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        .div2 &#123;</span><br><span class="line">            top: 50%;</span><br><span class="line">            color: white;</span><br><span class="line">            transform: rotateX(90deg);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        .div3 &#123;</span><br><span class="line">            left: -50%;</span><br><span class="line">            color: red;</span><br><span class="line">            transform: rotateY(90deg);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        .div4 &#123;</span><br><span class="line">            left: 50%;</span><br><span class="line">            color: orange;</span><br><span class="line">            transform: rotateY(90deg);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        .div5 &#123;</span><br><span class="line">            transform: translateZ(200px);</span><br><span class="line">            color: blue;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        .div6 &#123;</span><br><span class="line">            transform: translateZ(-200px);</span><br><span class="line">            color: green;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        @keyframes rotate &#123;</span><br><span class="line">            0% &#123;</span><br><span class="line">                transform: rotateX(0) rotateY(0)</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            100% &#123;</span><br><span class="line">                transform: rotateX(360deg) rotateY(360deg)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;&#x2F;style&gt;</span><br><span class="line">&lt;&#x2F;head&gt;</span><br><span class="line"></span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div class&#x3D;&quot;content&quot;&gt;</span><br><span class="line">        &lt;div class&#x3D;&quot;parent&quot;&gt;</span><br><span class="line">            &lt;div class&#x3D;&quot;div1&quot;&gt; 上 &lt;&#x2F;div&gt;</span><br><span class="line">            &lt;div class&#x3D;&quot;div2&quot;&gt; 下 &lt;&#x2F;div&gt;</span><br><span class="line">            &lt;div class&#x3D;&quot;div3&quot;&gt; 左 &lt;&#x2F;div&gt;</span><br><span class="line">            &lt;div class&#x3D;&quot;div4&quot;&gt; 右 &lt;&#x2F;div&gt;</span><br><span class="line">            &lt;div class&#x3D;&quot;div5&quot;&gt; 前 &lt;&#x2F;div&gt;</span><br><span class="line">            &lt;div class&#x3D;&quot;div6&quot;&gt; 后 &lt;&#x2F;div&gt;</span><br><span class="line">        &lt;&#x2F;div&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line"></span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="参考"><a href="# 参考" class="headerlink" title="参考"></a> 参考 </h2><p><span class="exturl" data-url="aHR0cHM6Ly9jaGVueXVueGluLmNuL3Bvc3RzLzc3NDA4NTg1MC5odG1sIyVFNyU5QiU5MiVFNSVBRCU5MCVFNSVCOCU4MyVFNSVCMSU4MA==">https://chenyunxin.cn/posts/774085850.html#%E7%9B%92%E5%AD%90%E5%B8%83%E5%B1%80<i class="fa fa-external-link-alt"></i></span></p>
 
     </div>
 
@@ -335,16 +335,38 @@
     
 
     <footer class="post-footer">
+          <div class="reward-container">
+  <div>Buy me a coffee</div>
+  <button onclick="document.querySelector('.post-reward').classList.toggle('active');">
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/20201122213021.png" alt="Lining Wei 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/434235F3-7A93-4EA4-A7B6-4F6D977F1A89.png" alt="Lining Wei 支付宝">
+        <span>支付宝</span>
+      </div>
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/bitcoin.png" alt="Lining Wei 比特币">
+        <span>比特币</span>
+      </div>
+
+  </div>
+</div>
+
           <div class="post-tags">
-              <a href="/tags/%E9%BB%98%E8%AE%A4/" rel="tag"># 默认</a>
+              <a href="/tags/%E9%BB%98%E8%AE%A4/" rel="tag"><i class="fa fa-tag"></i> 默认</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/212.html" rel="prev" title="最简单的jquery.ripples水面涟漪效果">
-                  <i class="fa fa-chevron-left"></i> 最简单的jquery.ripples水面涟漪效果
+                <a href="/212.html" rel="prev" title="最简单的 jquery.ripples 水面涟漪效果">
+                  <i class="fa fa-chevron-left"></i> 最简单的 jquery.ripples 水面涟漪效果
                 </a>
             </div>
             <div class="post-nav-item">
@@ -425,43 +447,9 @@
 
   
   <script src="//cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/@next-theme/pjax@0.4.0/pjax.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js"></script>
-<script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/motion.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/next-boot.js"></script><script>
-var pjax = new Pjax({
-  selectors: [
-    'head title',
-    '.page-configurations',
-    '.main-inner',
-    '.post-toc-wrap',
-    '.languages',
-    '.pjax'
-  ],
-  analytics: false,
-  cacheBust: false,
-  scrollRestoration: false,
-  scrollTo: !CONFIG.bookmark.enable
-});
-
-document.addEventListener('pjax:success', () => {
-  pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
-  NexT.boot.refresh();
-  // Define Motion Sequence & Bootstrap Motion.
-  if (CONFIG.motion.enable) {
-    NexT.motion.integrator
-      .init()
-      .add(NexT.motion.middleWares.subMenu)
-      .add(NexT.motion.middleWares.postList)
-      .bootstrap();
-  }
-  const hasTOC = document.querySelector('.post-toc');
-  document.querySelector('.sidebar-inner').classList.toggle('sidebar-nav-active', hasTOC);
-  document.querySelector(hasTOC ? '.sidebar-nav-toc' : '.sidebar-nav-overview').click();
-  NexT.utils.updateSidebarPosition();
-});
-</script>
-
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/motion.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/next-boot.js"></script>
 
   
 
@@ -473,7 +461,7 @@ document.addEventListener('pjax:success', () => {
   
 
 
-<script data-pjax>
+<script>
   (function() {
     function leancloudSelector(url) {
       url = encodeURI(url);
@@ -560,18 +548,7 @@ document.addEventListener('pjax:success', () => {
   })();
 </script>
 
-    <div class="pjax">
 
-  <script src="//cdn.jsdelivr.net/npm/quicklink@2.0.0/dist/quicklink.umd.js"></script>
-  <script>
-      window.addEventListener('load', () => {
-      quicklink.listen({
-        timeout : 3000,
-        priority: true,
-        ignores : [uri => uri.includes('#'),uri => uri === 'https://weilining.github.io/213.html',]
-      });
-      });
-  </script>
 
 <script>
 NexT.utils.loadComments('#lv-container', () => {
@@ -589,6 +566,5 @@ NexT.utils.loadComments('#lv-container', () => {
 });
 </script>
 
-    </div>
 </body>
 </html>

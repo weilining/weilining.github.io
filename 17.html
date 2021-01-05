@@ -18,7 +18,7 @@
 
 <link rel="stylesheet" href="/css/main.css">
 
-
+<link rel="stylesheet" href="https://fonts.dogedoge.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
@@ -29,7 +29,7 @@
   </script>
 <meta name="description" content="默认">
 <meta property="og:type" content="article">
-<meta property="og:title" content="如何生成&#x2F;添加SSH公钥">
+<meta property="og:title" content="如何生成 &#x2F; 添加 SSH 公钥">
 <meta property="og:url" content="https://weilining.github.io/17.html">
 <meta property="og:site_name" content="Ln&#39;s Blog">
 <meta property="og:description" content="默认">
@@ -48,7 +48,7 @@
 <link rel="canonical" href="https://weilining.github.io/17.html">
 
 
-<script data-pjax class="page-configurations">
+<script class="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
@@ -57,7 +57,7 @@
     lang   : 'zh-CN'
   };
 </script>
-<title>如何生成/添加SSH公钥 | Ln's Blog</title>
+<title>如何生成 / 添加 SSH 公钥 | Ln's Blog</title>
   
 
 
@@ -171,7 +171,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%93%E5%BA%93%E5%85%AC%E9%92%A5%E5%92%8C%E5%8F%AF%E9%83%A8%E7%BD%B2%E5%85%AC%E9%92%A5"><span class="nav-number">1.</span> <span class="nav-text">仓库公钥和可部署公钥</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%93%E5%BA%93%E5%85%AC%E9%92%A5%E5%92%8C%E5%8F%AF%E9%83%A8%E7%BD%B2%E5%85%AC%E9%92%A5"><span class="nav-number">1.</span> <span class="nav-text">仓库公钥和可部署公钥 </span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -187,7 +187,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">237</span>
+          <span class="site-state-item-count">238</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -252,7 +252,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          如何生成/添加SSH公钥
+          如何生成 / 添加 SSH 公钥
         </h1>
 
         <div class="post-meta-container">
@@ -276,7 +276,7 @@
     </span>
 
   
-    <span id="/17.html" class="post-meta-item leancloud_visitors" data-flag-title="如何生成/添加SSH公钥" title="阅读次数">
+    <span id="/17.html" class="post-meta-item leancloud_visitors" data-flag-title="如何生成 / 添加 SSH 公钥" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
       </span>
@@ -311,7 +311,7 @@
     <div class="post-body" itemprop="articleBody">
         <a id="more"></a>
 
-<p> Gitee 提供了基于SSH协议的Git服务，在使用SSH协议访问仓库仓库之前，需要先配置好账户/仓库的SSH公钥。</p>
+<p> Gitee 提供了基于 SSH 协议的 Git 服务，在使用 SSH 协议访问仓库仓库之前，需要先配置好账户 / 仓库的 SSH 公钥。</p>
 <p>你可以按如下命令来生成 sshkey:</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;xxxxx@xxxxx.com&quot;  </span><br><span class="line"># Generating public&#x2F;private rsa key pair...</span><br></pre></td></tr></table></figure>
 <blockquote>
@@ -319,15 +319,15 @@
 </blockquote>
 <p>按照提示完成三次回车，即可生成 ssh key。通过查看 <code>~/.ssh/id_rsa.pub</code> 文件内容，获取到你的 public key</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cat ~&#x2F;.ssh&#x2F;id_rsa.pub</span><br><span class="line"># ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC6eNtGpNGwstc....</span><br></pre></td></tr></table></figure>
-<p><img data-src="/17/170141_5aa5bc98_551147.png" alt="SSH生成" loading="lazy"></p>
+<p><img data-src="/17/170141_5aa5bc98_551147.png" alt="SSH 生成" loading="lazy"></p>
 <p>复制生成后的 ssh key，通过仓库主页 <strong>「管理」-&gt;「部署公钥管理」-&gt;「添加部署公钥」</strong> ，添加生成的 public key 添加到仓库中。</p>
 <p><img data-src="/17/233212_29a62378_551147.png" alt="添加部署公钥" loading="lazy"></p>
 <p>添加后，在终端（Terminal）中输入</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ssh -T git@gitee.com</span><br></pre></td></tr></table></figure>
-<p>首次使用需要确认并添加主机到本机SSH可信列表。若返回 <code>Hi XXX! You&#39;ve successfully authenticated, but Gitee.com does not provide shell access.</code> 内容，则证明添加成功。</p>
-<p><img data-src="/17/170837_4c5ef029_551147.png" alt="SSH添加提示" loading="lazy"></p>
-<p>添加成功后，就可以使用SSH协议对仓库进行操作了。</p>
-<h2 id="仓库公钥和可部署公钥"><a href="#仓库公钥和可部署公钥" class="headerlink" title="仓库公钥和可部署公钥"></a>仓库公钥和可部署公钥</h2><p>为了便于用户在多个项目仓库下使用一套公钥，免于重复部署和管理的繁琐，Gitee 推出了「可部署公钥」功能，支持在一个仓库空间下使用当前账户名下/参与的另一个仓库空间的部署公钥，实现公钥共用。</p>
+<p>首次使用需要确认并添加主机到本机 SSH 可信列表。若返回 <code>Hi XXX! You&#39;ve successfully authenticated, but Gitee.com does not provide shell access.</code> 内容，则证明添加成功。</p>
+<p><img data-src="/17/170837_4c5ef029_551147.png" alt="SSH 添加提示" loading="lazy"></p>
+<p>添加成功后，就可以使用 SSH 协议对仓库进行操作了。</p>
+<h2 id="仓库公钥和可部署公钥"><a href="# 仓库公钥和可部署公钥" class="headerlink" title="仓库公钥和可部署公钥"></a>仓库公钥和可部署公钥 </h2><p> 为了便于用户在多个项目仓库下使用一套公钥，免于重复部署和管理的繁琐，Gitee 推出了「可部署公钥」功能，支持在一个仓库空间下使用当前账户名下 / 参与的另一个仓库空间的部署公钥，实现公钥共用。</p>
 
     </div>
 
@@ -336,8 +336,30 @@
     
 
     <footer class="post-footer">
+          <div class="reward-container">
+  <div>Buy me a coffee</div>
+  <button onclick="document.querySelector('.post-reward').classList.toggle('active');">
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/20201122213021.png" alt="Lining Wei 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/434235F3-7A93-4EA4-A7B6-4F6D977F1A89.png" alt="Lining Wei 支付宝">
+        <span>支付宝</span>
+      </div>
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/bitcoin.png" alt="Lining Wei 比特币">
+        <span>比特币</span>
+      </div>
+
+  </div>
+</div>
+
           <div class="post-tags">
-              <a href="/tags/%E9%BB%98%E8%AE%A4/" rel="tag"># 默认</a>
+              <a href="/tags/%E9%BB%98%E8%AE%A4/" rel="tag"><i class="fa fa-tag"></i> 默认</a>
           </div>
 
         
@@ -349,8 +371,8 @@
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/18.html" rel="next" title="四种方法快速恢复最近关闭的Chrome标签页面">
-                  四种方法快速恢复最近关闭的Chrome标签页面 <i class="fa fa-chevron-right"></i>
+                <a href="/18.html" rel="next" title="四种方法快速恢复最近关闭的 Chrome 标签页面">
+                  四种方法快速恢复最近关闭的 Chrome 标签页面 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
@@ -426,43 +448,9 @@
 
   
   <script src="//cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/@next-theme/pjax@0.4.0/pjax.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js"></script>
-<script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/motion.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/next-boot.js"></script><script>
-var pjax = new Pjax({
-  selectors: [
-    'head title',
-    '.page-configurations',
-    '.main-inner',
-    '.post-toc-wrap',
-    '.languages',
-    '.pjax'
-  ],
-  analytics: false,
-  cacheBust: false,
-  scrollRestoration: false,
-  scrollTo: !CONFIG.bookmark.enable
-});
-
-document.addEventListener('pjax:success', () => {
-  pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
-  NexT.boot.refresh();
-  // Define Motion Sequence & Bootstrap Motion.
-  if (CONFIG.motion.enable) {
-    NexT.motion.integrator
-      .init()
-      .add(NexT.motion.middleWares.subMenu)
-      .add(NexT.motion.middleWares.postList)
-      .bootstrap();
-  }
-  const hasTOC = document.querySelector('.post-toc');
-  document.querySelector('.sidebar-inner').classList.toggle('sidebar-nav-active', hasTOC);
-  document.querySelector(hasTOC ? '.sidebar-nav-toc' : '.sidebar-nav-overview').click();
-  NexT.utils.updateSidebarPosition();
-});
-</script>
-
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/motion.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/next-boot.js"></script>
 
   
 
@@ -474,7 +462,7 @@ document.addEventListener('pjax:success', () => {
   
 
 
-<script data-pjax>
+<script>
   (function() {
     function leancloudSelector(url) {
       url = encodeURI(url);
@@ -561,18 +549,7 @@ document.addEventListener('pjax:success', () => {
   })();
 </script>
 
-    <div class="pjax">
 
-  <script src="//cdn.jsdelivr.net/npm/quicklink@2.0.0/dist/quicklink.umd.js"></script>
-  <script>
-      window.addEventListener('load', () => {
-      quicklink.listen({
-        timeout : 3000,
-        priority: true,
-        ignores : [uri => uri.includes('#'),uri => uri === 'https://weilining.github.io/17.html',]
-      });
-      });
-  </script>
 
 <script>
 NexT.utils.loadComments('#lv-container', () => {
@@ -590,6 +567,5 @@ NexT.utils.loadComments('#lv-container', () => {
 });
 </script>
 
-    </div>
 </body>
 </html>

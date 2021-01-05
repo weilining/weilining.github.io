@@ -18,7 +18,7 @@
 
 <link rel="stylesheet" href="/css/main.css">
 
-
+<link rel="stylesheet" href="https://fonts.dogedoge.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
@@ -44,7 +44,7 @@
 <link rel="canonical" href="https://weilining.github.io/38.html">
 
 
-<script data-pjax class="page-configurations">
+<script class="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
@@ -182,7 +182,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">237</span>
+          <span class="site-state-item-count">238</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -304,29 +304,29 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p> 让我们从一个简单的基于python的多容器应用程序开始。这个示例应用程序由一个Web前端，用于缓存的Redis和作为我们数据库的Postgres组成。使用Docker，Web前端，Redis和Postgres都在单独的容器中运行。</p>
+        <p> 让我们从一个简单的基于 python 的多容器应用程序开始。这个示例应用程序由一个 Web 前端，用于缓存的 Redis 和作为我们数据库的 Postgres 组成。使用 Docker，Web 前端，Redis 和 Postgres 都在单独的容器中运行。</p>
 <a id="more"></a>
 
-<p>您可以使用Docker Compose定义本地开发环境，包括环境变量，需要访问的端口以及要挂载的卷。一切都<code>docker-compose.yml</code>在<code>docker-compose</code>CLI中定义的中定义。</p>
-<p>以下是<code>docker-compose.yml</code>该应用程序的：</p>
+<p>您可以使用 Docker Compose 定义本地开发环境，包括环境变量，需要访问的端口以及要挂载的卷。一切都 <code>docker-compose.yml</code> 在<code>docker-compose</code>CLI 中定义的中定义。</p>
+<p>以下是 <code>docker-compose.yml</code> 该应用程序的：</p>
 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">&#x27;2&#x27;</span></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">web:</span></span><br><span class="line">    <span class="attr">build:</span> <span class="string">.</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&quot;5000:5000&quot;</span></span><br><span class="line">    <span class="attr">env_file:</span> <span class="string">.env</span></span><br><span class="line">    <span class="attr">depends_on:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">db</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">./webapp:/opt/webapp</span></span><br><span class="line">  <span class="attr">db:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">postgres:latest</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&quot;5432:5432&quot;</span></span><br><span class="line">  <span class="attr">redis:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">redis:alpine</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&quot;6379:6379&quot;</span></span><br></pre></td></tr></table></figure>
 <p><strong>网络服务</strong></p>
-<p>第一部分定义了Web服务。它打开端口5000，设置在.env中定义的环境变量，并将本地代码目录安装为卷。</p>
+<p>第一部分定义了 Web 服务。它打开端口 5000，设置在.env 中定义的环境变量，并将本地代码目录安装为卷。</p>
 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">web:</span></span><br><span class="line">    <span class="attr">build:</span> <span class="string">.</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&quot;5000:5000&quot;</span></span><br><span class="line">    <span class="attr">env_file:</span> <span class="string">.env</span></span><br><span class="line">    <span class="attr">depends_on:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">db</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">./webapp:/opt/webapp</span></span><br></pre></td></tr></table></figure>
 <p><strong>数据库服务</strong></p>
-<p>下一个服务是Postgres数据库，它将打开端口5432，并在Docker Hub上使用最新的官方Postgres映像。</p>
+<p>下一个服务是 Postgres 数据库，它将打开端口 5432，并在 Docker Hub 上使用最新的官方 Postgres 映像。</p>
 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">db:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">postgres:latest</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&quot;5432:5432&quot;</span></span><br></pre></td></tr></table></figure>
-<p><strong>Redis服务</strong></p>
-<p>本部分定义了我们的Redis服务，该服务打开端口6379，并使用Docker Hub上的官方Redis映像。</p>
+<p><strong>Redis 服务</strong></p>
+<p>本部分定义了我们的 Redis 服务，该服务打开端口 6379，并使用 Docker Hub 上的官方 Redis 映像。</p>
 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">redis:</span></span><br><span class="line">   <span class="attr">image:</span> <span class="string">redis:alpine</span></span><br><span class="line">   <span class="attr">ports:</span></span><br><span class="line">     <span class="bullet">-</span> <span class="string">&quot;6379:6379&quot;</span></span><br></pre></td></tr></table></figure>
 <p>现在已经在中定义了本地开发环境<code>docker-compose.yml</code>，您可以使用一个命令启动所有这三个服务：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ docker-compose up</span><br></pre></td></tr></table></figure>
 <p>以下命令确认所有三个容器都在运行：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ docker ps</span><br><span class="line">CONTAINER ID        IMAGE                COMMAND</span><br><span class="line">8e422ff92239        python_web           &quot;&#x2F;bin&#x2F;sh -c &#39;python a&quot;</span><br><span class="line">4ac9ecc8a2a3        python_db            &quot;&#x2F;docker-entrypoint.s&quot;</span><br><span class="line">2cbc8febd074        redis:alpine         &quot;docker-entrypoint.sh&quot;</span><br></pre></td></tr></table></figure>
-<p><strong>Docker Compose的好处</strong></p>
-<p>使用Docker并使用Docker Compose定义本地开发环境可为您带来许多好处：</p>
+<p><strong>Docker Compose 的好处</strong></p>
+<p>使用 Docker 并使用 Docker Compose 定义本地开发环境可为您带来许多好处：</p>
 <ul>
-<li>通过在Docker容器中运行Redis和Postgres，您不必在本地计算机上安装或维护软件</li>
+<li>通过在 Docker 容器中运行 Redis 和 Postgres，您不必在本地计算机上安装或维护软件</li>
 <li>您可以将整个本地开发环境检入到源代码管理中，从而使其他开发人员可以更轻松地在项目上进行协作</li>
 <li>您可以使用一个命令启动整个本地开发环境： <code>docker-compose up</code></li>
 </ul>
@@ -338,8 +338,30 @@
     
 
     <footer class="post-footer">
+          <div class="reward-container">
+  <div>Buy me a coffee</div>
+  <button onclick="document.querySelector('.post-reward').classList.toggle('active');">
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/20201122213021.png" alt="Lining Wei 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/434235F3-7A93-4EA4-A7B6-4F6D977F1A89.png" alt="Lining Wei 支付宝">
+        <span>支付宝</span>
+      </div>
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/bitcoin.png" alt="Lining Wei 比特币">
+        <span>比特币</span>
+      </div>
+
+  </div>
+</div>
+
           <div class="post-tags">
-              <a href="/tags/%E9%BB%98%E8%AE%A4/" rel="tag"># 默认</a>
+              <a href="/tags/%E9%BB%98%E8%AE%A4/" rel="tag"><i class="fa fa-tag"></i> 默认</a>
           </div>
 
         
@@ -428,43 +450,9 @@
 
   
   <script src="//cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/@next-theme/pjax@0.4.0/pjax.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js"></script>
-<script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/motion.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/next-boot.js"></script><script>
-var pjax = new Pjax({
-  selectors: [
-    'head title',
-    '.page-configurations',
-    '.main-inner',
-    '.post-toc-wrap',
-    '.languages',
-    '.pjax'
-  ],
-  analytics: false,
-  cacheBust: false,
-  scrollRestoration: false,
-  scrollTo: !CONFIG.bookmark.enable
-});
-
-document.addEventListener('pjax:success', () => {
-  pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
-  NexT.boot.refresh();
-  // Define Motion Sequence & Bootstrap Motion.
-  if (CONFIG.motion.enable) {
-    NexT.motion.integrator
-      .init()
-      .add(NexT.motion.middleWares.subMenu)
-      .add(NexT.motion.middleWares.postList)
-      .bootstrap();
-  }
-  const hasTOC = document.querySelector('.post-toc');
-  document.querySelector('.sidebar-inner').classList.toggle('sidebar-nav-active', hasTOC);
-  document.querySelector(hasTOC ? '.sidebar-nav-toc' : '.sidebar-nav-overview').click();
-  NexT.utils.updateSidebarPosition();
-});
-</script>
-
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/motion.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/next-boot.js"></script>
 
   
 
@@ -476,7 +464,7 @@ document.addEventListener('pjax:success', () => {
   
 
 
-<script data-pjax>
+<script>
   (function() {
     function leancloudSelector(url) {
       url = encodeURI(url);
@@ -563,18 +551,7 @@ document.addEventListener('pjax:success', () => {
   })();
 </script>
 
-    <div class="pjax">
 
-  <script src="//cdn.jsdelivr.net/npm/quicklink@2.0.0/dist/quicklink.umd.js"></script>
-  <script>
-      window.addEventListener('load', () => {
-      quicklink.listen({
-        timeout : 3000,
-        priority: true,
-        ignores : [uri => uri.includes('#'),uri => uri === 'https://weilining.github.io/38.html',]
-      });
-      });
-  </script>
 
 <script>
 NexT.utils.loadComments('#lv-container', () => {
@@ -592,6 +569,5 @@ NexT.utils.loadComments('#lv-container', () => {
 });
 </script>
 
-    </div>
 </body>
 </html>

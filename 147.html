@@ -18,7 +18,7 @@
 
 <link rel="stylesheet" href="/css/main.css">
 
-
+<link rel="stylesheet" href="https://fonts.dogedoge.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
@@ -69,7 +69,7 @@
 <link rel="canonical" href="https://weilining.github.io/147.html">
 
 
-<script data-pjax class="page-configurations">
+<script class="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
@@ -192,7 +192,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#docker%E7%9A%84centos7%E5%AE%89%E8%A3%85"><span class="nav-number">1.</span> <span class="nav-text">docker的centos7安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git%E9%85%8D%E7%BD%AE"><span class="nav-number">2.</span> <span class="nav-text">git配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%89%E8%A3%85git"><span class="nav-number">2.1.</span> <span class="nav-text">服务器安装git</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-2-%E5%88%9B%E5%BB%BA%E4%BB%93%E5%BA%93%E7%9B%AE%E5%BD%95%E5%8F%8A%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE"><span class="nav-number">2.2.</span> <span class="nav-text">6.2 创建仓库目录及相关配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-%E9%85%8D%E7%BD%AENginx"><span class="nav-number">3.</span> <span class="nav-text">7 配置Nginx</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-%E4%BF%AE%E6%94%B9hexo%E9%85%8D%E7%BD%AE"><span class="nav-number">4.</span> <span class="nav-text">8 修改hexo配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-%E5%B0%86%E7%BD%91%E7%AB%99%E6%B7%BB%E5%8A%A0https%E8%AE%BF%E9%97%AE"><span class="nav-number">5.</span> <span class="nav-text">9 将网站添加https访问</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0"><span class="nav-number">6.</span> <span class="nav-text">10 持续更新</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#11-%E6%80%BB%E7%BB%93"><span class="nav-number">7.</span> <span class="nav-text">11 总结</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#docker%20%E7%9A%84%20centos7%20%E5%AE%89%E8%A3%85"><span class="nav-number">1.</span> <span class="nav-text">docker 的 centos7 安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git%20%E9%85%8D%E7%BD%AE"><span class="nav-number">2.</span> <span class="nav-text">git 配置 </span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%89%E8%A3%85%20git"><span class="nav-number">2.1.</span> <span class="nav-text"> 服务器安装 git</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-2-%20%E5%88%9B%E5%BB%BA%E4%BB%93%E5%BA%93%E7%9B%AE%E5%BD%95%E5%8F%8A%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE"><span class="nav-number">2.2.</span> <span class="nav-text">6.2 创建仓库目录及相关配置 </span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-%20%E9%85%8D%E7%BD%AE%20Nginx"><span class="nav-number">3.</span> <span class="nav-text">7 配置 Nginx</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-%20%E4%BF%AE%E6%94%B9%20hexo%20%E9%85%8D%E7%BD%AE"><span class="nav-number">4.</span> <span class="nav-text">8 修改 hexo 配置 </span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-%20%E5%B0%86%E7%BD%91%E7%AB%99%E6%B7%BB%E5%8A%A0%20https%20%E8%AE%BF%E9%97%AE"><span class="nav-number">5.</span> <span class="nav-text">9 将网站添加 https 访问 </span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-%20%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0"><span class="nav-number">6.</span> <span class="nav-text">10 持续更新</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#11-%20%E6%80%BB%E7%BB%93"><span class="nav-number">7.</span> <span class="nav-text">11 总结 </span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -208,7 +208,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">237</span>
+          <span class="site-state-item-count">238</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -330,40 +330,40 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h2 id="docker的centos7安装"><a href="#docker的centos7安装" class="headerlink" title="docker的centos7安装"></a>docker的centos7安装</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker pull centos:7.8.2003</span><br><span class="line">cat &#x2F;etc&#x2F;redhat-release</span><br><span class="line">docker run -d -i -t --name centos_bash centos:7.8.2003 &#x2F;bin&#x2F;bash</span><br><span class="line">docker exec -it centos_bash bash</span><br><span class="line">curl -o &#x2F;etc&#x2F;yum.repos.d&#x2F;CentOS-Base.repo http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;repo&#x2F;Centos-7.repo</span><br><span class="line">yum install -y net-tools</span><br></pre></td></tr></table></figure>
+        <h2 id="docker 的 centos7 安装"><a href="#docker 的 centos7 安装" class="headerlink" title="docker 的 centos7 安装"></a>docker 的 centos7 安装</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker pull centos:7.8.2003</span><br><span class="line">cat &#x2F;etc&#x2F;redhat-release</span><br><span class="line">docker run -d -i -t --name centos_bash centos:7.8.2003 &#x2F;bin&#x2F;bash</span><br><span class="line">docker exec -it centos_bash bash</span><br><span class="line">curl -o &#x2F;etc&#x2F;yum.repos.d&#x2F;CentOS-Base.repo http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;repo&#x2F;Centos-7.repo</span><br><span class="line">yum install -y net-tools</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
 
-<h2 id="git配置"><a href="#git配置" class="headerlink" title="git配置"></a>git配置</h2><h3 id="服务器安装git"><a href="#服务器安装git" class="headerlink" title="服务器安装git"></a>服务器安装git</h3><p>在刚刚的黑框里输入，然后回车：</p>
+<h2 id="git 配置"><a href="#git 配置" class="headerlink" title="git 配置"></a>git 配置 </h2><h3 id="服务器安装 git"><a href="# 服务器安装 git" class="headerlink" title="服务器安装 git"></a> 服务器安装 git</h3><p>在刚刚的黑框里输入，然后回车：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">yum install -y git</span><br></pre></td></tr></table></figure>
 <p><img data-src="/147/image-20201122005214748.png" alt="image-20201122005214748" loading="lazy"></p>
-<p>此时git已经安装成功。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 创建git账户</span><br><span class="line">adduser git</span><br><span class="line"></span><br><span class="line"># 安装sudo命令</span><br><span class="line">su -</span><br><span class="line">yum update -y</span><br><span class="line">yum install -y sudo</span><br><span class="line">sudo -l # 验证是否正确安装了sudo命令</span><br><span class="line"></span><br><span class="line"># 添加git账户权限</span><br><span class="line">chmod 740 &#x2F;etc&#x2F;sudoers</span><br><span class="line">vi &#x2F;etc&#x2F;sudoers</span><br></pre></td></tr></table></figure>
+<p>此时 git 已经安装成功。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 创建 git 账户</span><br><span class="line">adduser git</span><br><span class="line"></span><br><span class="line"># 安装 sudo 命令</span><br><span class="line">su -</span><br><span class="line">yum update -y</span><br><span class="line">yum install -y sudo</span><br><span class="line">sudo -l # 验证是否正确安装了 sudo 命令</span><br><span class="line"></span><br><span class="line"># 添加 git 账户权限</span><br><span class="line">chmod 740 &#x2F;etc&#x2F;sudoers</span><br><span class="line">vi &#x2F;etc&#x2F;sudoers</span><br></pre></td></tr></table></figure>
 <p>点击 <code>/</code> 键，进入查找模式，按下 n 查找下一个，按下 N 查找上一个</p>
 <p><img data-src="/147/image-20201122012543116.png" alt="image-20201122012543116" loading="lazy"></p>
 <p>点击<code>i</code>，添加以下内容，然后按 <code>Esc</code> 键，此时最底下的 —INSERT— 消失，再输入 <code>:wq</code>，即保存退出。</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git     ALL&#x3D;(ALL)     ALL</span><br></pre></td></tr></table></figure>
 <p><img data-src="/147/image-20201122012932747.png" alt="image-20201122012932747" loading="lazy"></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 改回权限</span><br><span class="line">chmod 400 &#x2F;etc&#x2F;sudoers</span><br><span class="line"></span><br><span class="line"># 设置 git 账户密码</span><br><span class="line">sudo passwd git</span><br><span class="line"></span><br><span class="line">#切换至 git 用户，创建～&#x2F;.ssh 文件夹和～&#x2F;.ssh&#x2F;authorized_keys 文件，并赋予相应的权限</span><br><span class="line">su git &amp;&amp; mkdir ~&#x2F;.ssh &amp;&amp; vi ~&#x2F;.ssh&#x2F;authorized_keys</span><br><span class="line"># 按”i” 进入编辑模式，将我们在 win10 中生成的 id_rsa.pub 文件中的公钥复制到 authorized_keys 中，按”esc”，然后按”:wq”，保存退出。</span><br><span class="line"></span><br><span class="line"># 赋予权限</span><br><span class="line">chmod 600 &#x2F;home&#x2F;git&#x2F;.ssh&#x2F;authorized_keys &amp;&amp; chmod 700 &#x2F;home&#x2F;git&#x2F;.ssh</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 改回权限</span><br><span class="line">chmod 400 &#x2F;etc&#x2F;sudoers</span><br><span class="line"></span><br><span class="line"># 设置 git 账户密码</span><br><span class="line">sudo passwd git</span><br><span class="line"></span><br><span class="line"># 切换至 git 用户，创建～&#x2F;.ssh 文件夹和～&#x2F;.ssh&#x2F;authorized_keys 文件，并赋予相应的权限</span><br><span class="line">su git &amp;&amp; mkdir ~&#x2F;.ssh &amp;&amp; vi ~&#x2F;.ssh&#x2F;authorized_keys</span><br><span class="line"># 按”i” 进入编辑模式，将我们在 win10 中生成的 id_rsa.pub 文件中的公钥复制到 authorized_keys 中，按”esc”，然后按”:wq”，保存退出。</span><br><span class="line"></span><br><span class="line"># 赋予权限</span><br><span class="line">chmod 600 &#x2F;home&#x2F;git&#x2F;.ssh&#x2F;authorized_keys &amp;&amp; chmod 700 &#x2F;home&#x2F;git&#x2F;.ssh</span><br></pre></td></tr></table></figure>
 <p>在电脑本地桌面，右键”Git Bash Here”，输入一下命令，其中 SERVER 填写自己的云主机 ip，执行输入 yes 后不用密码说明配置成功了。</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ssh -v git@SERVER</span><br></pre></td></tr></table></figure>
-<p>如果你之前配置过git，可能你会出现以下这种错误。</p>
+<p>如果你之前配置过 git，可能你会出现以下这种错误。</p>
 <p><img data-src="/147/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20191203082833-2019-12-3-8-28-59.png" alt="微信图片_20191203082833-2019-12-3-8-28-59.png" loading="lazy"></p>
 <p>可以看到</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Offending ECDSA key in &#x2F;c&#x2F;Users&#x2F;jonty&#x2F;.ssh&#x2F;known_hosts:2</span><br></pre></td></tr></table></figure>
 <p>是.ssh/known_hosts 这个文件第二行出现冲突了。只要用笔记本打开，将这个文件的第二行删掉即可。</p>
 <p><img data-src="/147/11-2019-11-30-16-29-57.png" alt="11-2019-11-30-16-29-57.png" loading="lazy"></p>
 <p>重新执行刚刚的命令</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ssh -v git@你的服务器ip</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ssh -v git@你的服务器 ip</span><br></pre></td></tr></table></figure>
 <p><img data-src="/147/12-2019-11-30-16-30-12.png" alt="12-2019-11-30-16-30-12.png" loading="lazy"></p>
 <p>这说明已经连接成功了。</p>
-<h3 id="6-2-创建仓库目录及相关配置"><a href="#6-2-创建仓库目录及相关配置" class="headerlink" title="6.2 创建仓库目录及相关配置"></a>6.2 创建仓库目录及相关配置</h3><p>1、创建目录<br>在var目录下创建repo作为Git仓库目录，返回服务端命令行切换到root账户，然后输入：</p>
+<h3 id="6-2- 创建仓库目录及相关配置"><a href="#6-2- 创建仓库目录及相关配置" class="headerlink" title="6.2 创建仓库目录及相关配置"></a>6.2 创建仓库目录及相关配置 </h3><p>1、创建目录<br> 在 var 目录下创建 repo 作为 Git 仓库目录，返回服务端命令行切换到 root 账户，然后输入：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mkdir &#x2F;var&#x2F;repo</span><br></pre></td></tr></table></figure>
 <p><img data-src="/147/13-2019-11-30-16-30-43.png" alt="13-2019-11-30-16-30-43.png" loading="lazy"></p>
 <p>赋予权限：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">chown -R git:git &#x2F;var&#x2F;repo</span><br><span class="line">chmod -R 755 &#x2F;var&#x2F;repo</span><br></pre></td></tr></table></figure>
-<p>接下来创建hexo目录作为网站根目录，并赋予权限：</p>
+<p>接下来创建 hexo 目录作为网站根目录，并赋予权限：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mkdir &#x2F;var&#x2F;hexo</span><br><span class="line">chown -R git:git &#x2F;var&#x2F;hexo</span><br><span class="line">chmod -R 755 &#x2F;var&#x2F;hexo</span><br></pre></td></tr></table></figure>
-<p>接下来创建一个空白的git仓库</p>
+<p>接下来创建一个空白的 git 仓库</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd &#x2F;var&#x2F;repo</span><br><span class="line">git init --bare hexo.git</span><br></pre></td></tr></table></figure>
 <p><img data-src="/147/14-2019-11-30-16-31-7.png" alt="14-2019-11-30-16-31-7.png" loading="lazy"></p>
 <p>创建一个新的 Git 钩子，用于自动部署.</p>
@@ -373,33 +373,33 @@
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#!&#x2F;bin&#x2F;bash</span><br><span class="line">git --work-tree&#x3D;&#x2F;var&#x2F;hexo --git-dir&#x3D;&#x2F;var&#x2F;repo&#x2F;hexo.git checkout -f</span><br></pre></td></tr></table></figure>
 <p>修改权限：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">chown -R git:git &#x2F;var&#x2F;repo&#x2F;hexo.git&#x2F;hooks&#x2F;post-receive</span><br><span class="line">chmod +x &#x2F;var&#x2F;repo&#x2F;hexo.git&#x2F;hooks&#x2F;post-receive</span><br></pre></td></tr></table></figure>
-<p>到这里Git仓库已经搭建完毕了。</p>
-<h2 id="7-配置Nginx"><a href="#7-配置Nginx" class="headerlink" title="7 配置Nginx"></a>7 配置Nginx</h2><p>为了部署和维护，我们使用宝塔面板来一键部署Nginx</p>
+<p>到这里 Git 仓库已经搭建完毕了。</p>
+<h2 id="7- 配置 Nginx"><a href="#7- 配置 Nginx" class="headerlink" title="7 配置 Nginx"></a>7 配置 Nginx</h2><p>为了部署和维护，我们使用宝塔面板来一键部署 Nginx</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">yum install -y wget &amp;&amp; wget -O install.sh http:&#x2F;&#x2F;download.bt.cn&#x2F;install&#x2F;install_6.0.sh &amp;&amp; bash install.sh</span><br></pre></td></tr></table></figure>
 <p>中途输入”y”回车等待一会就好了。在执行结果最后会出现地址，用户名，密码等。</p>
 <p><img data-src="/147/15-2019-11-30-16-31-40.png" alt="15-2019-11-30-16-31-40.png" loading="lazy"></p>
 <p>复制这个地址打开，输入账号密码即可进入宝塔面板。</p>
 <p><img data-src="/147/16-2019-11-30-16-31-50.png" alt="16-2019-11-30-16-31-50.png" loading="lazy"></p>
-<p>注意：这里也有可能你进不去面板页面，是因为你的服务器没有开8888这个端口（具体看你的宝塔面板连接的端口），去阿里云轻量服务器控制台中的“安全”-&gt;“防火墙”，右上角的”添加规则”，添加相应的端口即可。看下面的第二张图。</p>
+<p>注意：这里也有可能你进不去面板页面，是因为你的服务器没有开 8888 这个端口（具体看你的宝塔面板连接的端口），去阿里云轻量服务器控制台中的“安全”-&gt;“防火墙”，右上角的”添加规则”，添加相应的端口即可。看下面的第二张图。</p>
 <p><img data-src="/147/17-2019-11-30-16-32-0.png" alt="17-2019-11-30-16-32-0.png" loading="lazy"></p>
 <p><img data-src="/147/18-2019-11-30-16-32-7.png" alt="18-2019-11-30-16-32-7.png" loading="lazy"></p>
 <p>另外如果忘记了宝塔用户名密码，可以去你服务器终端输入：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd &#x2F;www&#x2F;server&#x2F;panel &amp;&amp; python tools.py panel testpasswd</span><br></pre></td></tr></table></figure>
-<p>下图为宝塔解决方案，链接<span class="exturl" data-url="aHR0cHM6Ly93d3cuYnQuY24vYmJzL3RocmVhZC0xMTcyLTEtMS5odG1s">忘记Linux 3.X/4.x/5.x/6.x 宝塔面板密码的解决方案<i class="fa fa-external-link-alt"></i></span></p>
+<p>下图为宝塔解决方案，链接 <span class="exturl" data-url="aHR0cHM6Ly93d3cuYnQuY24vYmJzL3RocmVhZC0xMTcyLTEtMS5odG1s"> 忘记 Linux 3.X/4.x/5.x/6.x 宝塔面板密码的解决方案<i class="fa fa-external-link-alt"></i></span></p>
 <p><img data-src="/147/19-2019-11-30-16-32-26.png" alt="19-2019-11-30-16-32-26.png" loading="lazy"></p>
-<p>进入面板之后，会提示叫你修改端口，点击”立即修改”,可以看到”面板端口”这时候是8888，自己选一个值，然后先去服务器防火墙上开放这个端口，跟刚刚的”添加规则”操作一样。</p>
+<p>进入面板之后，会提示叫你修改端口，点击”立即修改”, 可以看到”面板端口”这时候是 8888，自己选一个值，然后先去服务器防火墙上开放这个端口，跟刚刚的”添加规则”操作一样。</p>
 <p>再回到宝塔面板页面将”面板端口”的值修改成你刚刚开放的端口值。</p>
 <p>然后需要用新端口，重新进入宝塔面板，就是将原有的链接”:”后面的值改成你的端口即可。</p>
 <p><img data-src="/147/20-2019-11-30-16-32-37.png" alt="20-2019-11-30-16-32-37.png" loading="lazy"></p>
 <p>在宝塔面板，进入软件商店，输入”Nginx”，然后搜索，安装免费的那个。</p>
 <p><img data-src="/147/21-2019-11-30-16-32-50.png" alt="21-2019-11-30-16-32-50.png" loading="lazy"></p>
 <p>等待部署完成。</p>
-<p>部署完成之后，点击网站，添加站点，填写你的域名，没有的话写你的服务器ip地址。其他的不要改。</p>
+<p>部署完成之后，点击网站，添加站点，填写你的域名，没有的话写你的服务器 ip 地址。其他的不要改。</p>
 <p><img data-src="/147/22-2019-11-30-16-33-1.png" alt="22-2019-11-30-16-33-1.png" loading="lazy"></p>
 <p>填写完之后提交，然后点击”设置”</p>
 <p><img data-src="/147/23-2019-11-30-16-33-9.png" alt="23-2019-11-30-16-33-9.png" loading="lazy"></p>
 <p>点击”配置文件”</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">server</span><br><span class="line">&#123;</span><br><span class="line">    listen 80;</span><br><span class="line">    # server_name填写你自己的域名，没有的话填ip</span><br><span class="line">    server_name hjxlog.com;</span><br><span class="line">    index index.php index.html index.htm default.php default.htm default.html;</span><br><span class="line">    # 这里root填写自己的网站根目录，修改为&#x2F;var&#x2F;hexo</span><br><span class="line">    root &#x2F;var&#x2F;hexo;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">server</span><br><span class="line">&#123;</span><br><span class="line">    listen 80;</span><br><span class="line">    # server_name 填写你自己的域名，没有的话填 ip</span><br><span class="line">    server_name hjxlog.com;</span><br><span class="line">    index index.php index.html index.htm default.php default.htm default.html;</span><br><span class="line">    # 这里 root 填写自己的网站根目录，修改为 &#x2F;var&#x2F;hexo</span><br><span class="line">    root &#x2F;var&#x2F;hexo;</span><br></pre></td></tr></table></figure>
 <p>保存，然后选择“设置”-“网站目录”，将网站目录修改成以下，保存。</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;var&#x2F;hexo</span><br></pre></td></tr></table></figure>
 
@@ -408,33 +408,33 @@
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">service bt restart</span><br></pre></td></tr></table></figure>
 
 
-<h2 id="8-修改hexo配置"><a href="#8-修改hexo配置" class="headerlink" title="8 修改hexo配置"></a>8 修改hexo配置</h2><p>进入本地电脑hexo博客的根目录，编辑<strong>站点配置文件 _config.yml</strong>，找到deploy，修改成以下</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  #repo改为repo: git@你的域名:&#x2F;var&#x2F;repo&#x2F;hexo.git</span><br><span class="line">  repo: git@hjxlog.com:&#x2F;var&#x2F;repo&#x2F;hexo.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-<p>最后在本地电脑hexo博客的根目录右击，Git Bash Here，输入以下命令部署</p>
+<h2 id="8- 修改 hexo 配置"><a href="#8- 修改 hexo 配置" class="headerlink" title="8 修改 hexo 配置"></a>8 修改 hexo 配置 </h2><p> 进入本地电脑 hexo 博客的根目录，编辑 <strong> 站点配置文件 _config.yml</strong>，找到 deploy，修改成以下</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  #repo 改为 repo: git@你的域名:&#x2F;var&#x2F;repo&#x2F;hexo.git</span><br><span class="line">  repo: git@hjxlog.com:&#x2F;var&#x2F;repo&#x2F;hexo.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+<p>最后在本地电脑 hexo 博客的根目录右击，Git Bash Here，输入以下命令部署</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo d -g</span><br></pre></td></tr></table></figure>
-<p>这时候可能出现权限问题，导致部署到git失败。</p>
+<p>这时候可能出现权限问题，导致部署到 git 失败。</p>
 <p><img data-src="/147/25-2019-11-30-16-33-43.png" alt="25-2019-11-30-16-33-43.png" loading="lazy"></p>
 <p>在服务器终端输入以下命令即可：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">chown -R git:git &#x2F;var&#x2F;repo&#x2F;</span><br><span class="line">chown -R git:git &#x2F;var&#x2F;hexo&#x2F;</span><br></pre></td></tr></table></figure>
-<p>最后再hexo d -g部署，应该就可以看到部署成功了。</p>
+<p>最后再 hexo d -g 部署，应该就可以看到部署成功了。</p>
 <p><img data-src="/147/26-2019-11-30-16-34-0.png" alt="26-2019-11-30-16-34-0.png" loading="lazy"></p>
-<p>自此，已经将博客从GitHub pages搬到阿里云服务器了。</p>
+<p>自此，已经将博客从 GitHub pages 搬到阿里云服务器了。</p>
 <p><img data-src="/147/27-2019-11-30-16-34-7.png" alt="27-2019-11-30-16-34-7.png" loading="lazy"></p>
-<h2 id="9-将网站添加https访问"><a href="#9-将网站添加https访问" class="headerlink" title="9 将网站添加https访问"></a>9 将网站添加https访问</h2><p>去阿里云申请一个免费的SSL证书，好像要备案，有点忘记了，很快就申请下来了。</p>
+<h2 id="9- 将网站添加 https 访问"><a href="#9- 将网站添加 https 访问" class="headerlink" title="9 将网站添加 https 访问"></a>9 将网站添加 https 访问 </h2><p> 去阿里云申请一个免费的 SSL 证书，好像要备案，有点忘记了，很快就申请下来了。</p>
 <p>进入宝塔面板，”网站”，”设置”，”SSL，”其他证书”</p>
 <p><img data-src="/147/28-2019-11-30-16-34-22.png" alt="28-2019-11-30-16-34-22.png" loading="lazy"></p>
-<p>将你申请的证书*.key以及*.pem内容，粘贴进去然后保存即可。</p>
+<p>将你申请的证书 *.key 以及 *.pem 内容，粘贴进去然后保存即可。</p>
 <p><img data-src="/147/29-2019-11-30-16-34-28.png" alt="29-2019-11-30-16-34-28.png" loading="lazy"></p>
-<h2 id="10-持续更新"><a href="#10-持续更新" class="headerlink" title="10 持续更新"></a>10 持续更新</h2><blockquote>
+<h2 id="10- 持续更新"><a href="#10- 持续更新" class="headerlink" title="10 持续更新"></a>10 持续更新</h2><blockquote>
 <p>2020-03-15 根据评论和邮件反馈遇到的常见问题更新</p>
 </blockquote>
 <p><img data-src="/147/12020-3-15-11-17-2.png" alt="12020-3-15-11-17-2" loading="lazy"></p>
 <p>根据有同学遇到上图这种情况，如果提示</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Could not resolve hostname ***.com: Name or service not known</span><br><span class="line">Please make sure you have the correct access rights</span><br></pre></td></tr></table></figure>
-<p>那么看一下自己的域名是否实名验证成功了，如果已验证。可以ping一下域名看能不能ping得通，有可能是你没有把域名解析到服务器ip地址上了。</p>
-<p>另外，Mac OS可能在配置方面和Windows不太一样。具体问题要具体分析，具体解决了。</p>
-<h2 id="11-总结"><a href="#11-总结" class="headerlink" title="11 总结"></a>11 总结</h2><p>在部署网站的时候，由于之前对Linux没有经验，网络上看到几篇博客，还是没能部署成功，有些博客比如命令中的单词拼写错误，或者前后不衔接，导致部署一直有问题。</p>
-<p>还好在部署的同时去网上学一些Linux基本命令，学到了进入编辑模式，编辑完怎么退出等等。之前看了一篇博客，可能作者默认大家都会了，结果我卡在这里了一下。</p>
+<p>那么看一下自己的域名是否实名验证成功了，如果已验证。可以 ping 一下域名看能不能 ping 得通，有可能是你没有把域名解析到服务器 ip 地址上了。</p>
+<p>另外，Mac OS 可能在配置方面和 Windows 不太一样。具体问题要具体分析，具体解决了。</p>
+<h2 id="11- 总结"><a href="#11- 总结" class="headerlink" title="11 总结"></a>11 总结 </h2><p> 在部署网站的时候，由于之前对 Linux 没有经验，网络上看到几篇博客，还是没能部署成功，有些博客比如命令中的单词拼写错误，或者前后不衔接，导致部署一直有问题。</p>
+<p>还好在部署的同时去网上学一些 Linux 基本命令，学到了进入编辑模式，编辑完怎么退出等等。之前看了一篇博客，可能作者默认大家都会了，结果我卡在这里了一下。</p>
 <p>总的来说，部署还是比较简单的，第一次没成功的同学不要轻易放弃，多去网上找找答案，努力解决问题，加油！</p>
 <p>如果因为看我的博客，在部署过程当中出现任何问题，请私信我或者邮箱联系我，帮助大家一起解决问题。</p>
 
@@ -445,8 +445,30 @@
     
 
     <footer class="post-footer">
+          <div class="reward-container">
+  <div>Buy me a coffee</div>
+  <button onclick="document.querySelector('.post-reward').classList.toggle('active');">
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/20201122213021.png" alt="Lining Wei 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/434235F3-7A93-4EA4-A7B6-4F6D977F1A89.png" alt="Lining Wei 支付宝">
+        <span>支付宝</span>
+      </div>
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/bitcoin.png" alt="Lining Wei 比特币">
+        <span>比特币</span>
+      </div>
+
+  </div>
+</div>
+
           <div class="post-tags">
-              <a href="/tags/%E9%BB%98%E8%AE%A4/" rel="tag"># 默认</a>
+              <a href="/tags/%E9%BB%98%E8%AE%A4/" rel="tag"><i class="fa fa-tag"></i> 默认</a>
           </div>
 
         
@@ -535,43 +557,9 @@
 
   
   <script src="//cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/@next-theme/pjax@0.4.0/pjax.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js"></script>
-<script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/motion.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/next-boot.js"></script><script>
-var pjax = new Pjax({
-  selectors: [
-    'head title',
-    '.page-configurations',
-    '.main-inner',
-    '.post-toc-wrap',
-    '.languages',
-    '.pjax'
-  ],
-  analytics: false,
-  cacheBust: false,
-  scrollRestoration: false,
-  scrollTo: !CONFIG.bookmark.enable
-});
-
-document.addEventListener('pjax:success', () => {
-  pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
-  NexT.boot.refresh();
-  // Define Motion Sequence & Bootstrap Motion.
-  if (CONFIG.motion.enable) {
-    NexT.motion.integrator
-      .init()
-      .add(NexT.motion.middleWares.subMenu)
-      .add(NexT.motion.middleWares.postList)
-      .bootstrap();
-  }
-  const hasTOC = document.querySelector('.post-toc');
-  document.querySelector('.sidebar-inner').classList.toggle('sidebar-nav-active', hasTOC);
-  document.querySelector(hasTOC ? '.sidebar-nav-toc' : '.sidebar-nav-overview').click();
-  NexT.utils.updateSidebarPosition();
-});
-</script>
-
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/motion.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/next-boot.js"></script>
 
   
 
@@ -583,7 +571,7 @@ document.addEventListener('pjax:success', () => {
   
 
 
-<script data-pjax>
+<script>
   (function() {
     function leancloudSelector(url) {
       url = encodeURI(url);
@@ -670,18 +658,7 @@ document.addEventListener('pjax:success', () => {
   })();
 </script>
 
-    <div class="pjax">
 
-  <script src="//cdn.jsdelivr.net/npm/quicklink@2.0.0/dist/quicklink.umd.js"></script>
-  <script>
-      window.addEventListener('load', () => {
-      quicklink.listen({
-        timeout : 3000,
-        priority: true,
-        ignores : [uri => uri.includes('#'),uri => uri === 'https://weilining.github.io/147.html',]
-      });
-      });
-  </script>
 
 <script>
 NexT.utils.loadComments('#lv-container', () => {
@@ -699,6 +676,5 @@ NexT.utils.loadComments('#lv-container', () => {
 });
 </script>
 
-    </div>
 </body>
 </html>

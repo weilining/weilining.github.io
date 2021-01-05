@@ -18,7 +18,7 @@
 
 <link rel="stylesheet" href="/css/main.css">
 
-
+<link rel="stylesheet" href="https://fonts.dogedoge.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
@@ -42,7 +42,7 @@
 <link rel="canonical" href="https://weilining.github.io/categories/%E9%BB%98%E8%AE%A4/page/29/">
 
 
-<script data-pjax class="page-configurations">
+<script class="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
@@ -180,7 +180,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">237</span>
+          <span class="site-state-item-count">238</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -244,6 +244,26 @@
     <header class="post-header">
       <div class="post-meta-container">
         <time itemprop="dateCreated"
+              datetime="2020-11-18T01:15:36+08:00"
+              content="2020-11-18">
+          11-18
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/26.html" itemprop="url">
+            <span itemprop="name">Hexo NexT 添加今日诗词</span>
+          </a>
+      </div>
+
+      
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
               datetime="2020-11-17T14:19:47+08:00"
               content="2020-11-17">
           11-17
@@ -272,7 +292,7 @@
 
       <div class="post-title">
           <a class="post-title-link" href="/%E5%8F%B2%E4%B8%8A%E6%9C%80%E8%AF%A6%E7%BB%86Git%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B.html" itemprop="url">
-            <span itemprop="name">史上最详细Git使用教程</span>
+            <span itemprop="name">史上最详细 Git 使用教程</span>
           </a>
       </div>
 
@@ -292,7 +312,7 @@
 
       <div class="post-title">
           <a class="post-title-link" href="/Git%E5%88%86%E6%94%AF.html" itemprop="url">
-            <span itemprop="name">Git分支</span>
+            <span itemprop="name">Git 分支</span>
           </a>
       </div>
 
@@ -313,26 +333,6 @@
       <div class="post-title">
           <a class="post-title-link" href="/Hexo%E5%8D%9A%E5%AE%A2Next%E4%B8%BB%E9%A2%98SEO%E4%BC%98%E5%8C%96%E6%96%B9%E6%B3%95.html" itemprop="url">
             <span itemprop="name">Hexo NexT SEO 最有用的教程</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2020-11-17T12:31:03+08:00"
-              content="2020-11-17">
-          11-17
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/24.html" itemprop="url">
-            <span itemprop="name">Hexo NexT pc和移动端双壁纸的设置</span>
           </a>
       </div>
 
@@ -411,43 +411,9 @@
 
   
   <script src="//cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/@next-theme/pjax@0.4.0/pjax.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js"></script>
-<script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/motion.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/next-boot.js"></script><script>
-var pjax = new Pjax({
-  selectors: [
-    'head title',
-    '.page-configurations',
-    '.main-inner',
-    '.post-toc-wrap',
-    '.languages',
-    '.pjax'
-  ],
-  analytics: false,
-  cacheBust: false,
-  scrollRestoration: false,
-  scrollTo: !CONFIG.bookmark.enable
-});
-
-document.addEventListener('pjax:success', () => {
-  pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
-  NexT.boot.refresh();
-  // Define Motion Sequence & Bootstrap Motion.
-  if (CONFIG.motion.enable) {
-    NexT.motion.integrator
-      .init()
-      .add(NexT.motion.middleWares.subMenu)
-      .add(NexT.motion.middleWares.postList)
-      .bootstrap();
-  }
-  const hasTOC = document.querySelector('.post-toc');
-  document.querySelector('.sidebar-inner').classList.toggle('sidebar-nav-active', hasTOC);
-  document.querySelector(hasTOC ? '.sidebar-nav-toc' : '.sidebar-nav-overview').click();
-  NexT.utils.updateSidebarPosition();
-});
-</script>
-
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/motion.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/next-boot.js"></script>
 
   
 
@@ -459,7 +425,7 @@ document.addEventListener('pjax:success', () => {
   
 
 
-<script data-pjax>
+<script>
   (function() {
     function leancloudSelector(url) {
       url = encodeURI(url);
@@ -546,20 +512,8 @@ document.addEventListener('pjax:success', () => {
   })();
 </script>
 
-    <div class="pjax">
-
-  <script src="//cdn.jsdelivr.net/npm/quicklink@2.0.0/dist/quicklink.umd.js"></script>
-  <script>
-      window.addEventListener('load', () => {
-      quicklink.listen({
-        timeout : 3000,
-        priority: true,
-        ignores : [uri => uri.includes('#'),uri => uri === 'https://weilining.github.io/categories/%E9%BB%98%E8%AE%A4/page/29/',]
-      });
-      });
-  </script>
 
 
-    </div>
+
 </body>
 </html>

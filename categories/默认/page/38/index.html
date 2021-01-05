@@ -18,7 +18,7 @@
 
 <link rel="stylesheet" href="/css/main.css">
 
-
+<link rel="stylesheet" href="https://fonts.dogedoge.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
@@ -42,7 +42,7 @@
 <link rel="canonical" href="https://weilining.github.io/categories/%E9%BB%98%E8%AE%A4/page/38/">
 
 
-<script data-pjax class="page-configurations">
+<script class="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
@@ -180,7 +180,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">237</span>
+          <span class="site-state-item-count">238</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -244,6 +244,26 @@
     <header class="post-header">
       <div class="post-meta-container">
         <time itemprop="dateCreated"
+              datetime="2020-09-23T12:56:04+08:00"
+              content="2020-09-23">
+          09-23
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/hexo%E7%9A%84next404%E9%A1%B5%E9%9D%A2%E6%95%99%E7%A8%8B.html" itemprop="url">
+            <span itemprop="name">hexo 的 next404 页面教程</span>
+          </a>
+      </div>
+
+      
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
               datetime="2020-09-22T19:52:26+08:00"
               content="2020-09-22">
           09-22
@@ -252,7 +272,7 @@
 
       <div class="post-title">
           <a class="post-title-link" href="/%E6%B8%85%E7%A9%BAGit%E7%BC%93%E5%AD%98.html" itemprop="url">
-            <span itemprop="name">清空Git缓存</span>
+            <span itemprop="name">清空 Git 缓存</span>
           </a>
       </div>
 
@@ -272,7 +292,7 @@
 
       <div class="post-title">
           <a class="post-title-link" href="/%E6%9F%A5%E7%9C%8BHexo%E7%9A%84%E6%89%80%E6%9C%89npm%E7%89%88%E6%9C%AC.html" itemprop="url">
-            <span itemprop="name">查看Hexo的所有npm版本</span>
+            <span itemprop="name">查看 Hexo 的所有 npm 版本</span>
           </a>
       </div>
 
@@ -292,7 +312,7 @@
 
       <div class="post-title">
           <a class="post-title-link" href="/npm%E6%97%A7%E7%89%88%E6%9C%AC%E5%AE%89%E8%A3%85.html" itemprop="url">
-            <span itemprop="name">npm旧版本安装</span>
+            <span itemprop="name">npm 旧版本安装</span>
           </a>
       </div>
 
@@ -312,27 +332,7 @@
 
       <div class="post-title">
           <a class="post-title-link" href="/valine%E5%B0%8F%E7%99%BD%E9%83%BD%E6%87%82%E7%94%A8.html" itemprop="url">
-            <span itemprop="name">Hexo的Next主题使用valine评论系统</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2020-09-20T21:49:49+08:00"
-              content="2020-09-20">
-          09-20
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/git-reset.html" itemprop="url">
-            <span itemprop="name">git版本回退</span>
+            <span itemprop="name">Hexo 的 Next 主题使用 valine 评论系统</span>
           </a>
       </div>
 
@@ -411,43 +411,9 @@
 
   
   <script src="//cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/@next-theme/pjax@0.4.0/pjax.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js"></script>
-<script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/motion.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/next-boot.js"></script><script>
-var pjax = new Pjax({
-  selectors: [
-    'head title',
-    '.page-configurations',
-    '.main-inner',
-    '.post-toc-wrap',
-    '.languages',
-    '.pjax'
-  ],
-  analytics: false,
-  cacheBust: false,
-  scrollRestoration: false,
-  scrollTo: !CONFIG.bookmark.enable
-});
-
-document.addEventListener('pjax:success', () => {
-  pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
-  NexT.boot.refresh();
-  // Define Motion Sequence & Bootstrap Motion.
-  if (CONFIG.motion.enable) {
-    NexT.motion.integrator
-      .init()
-      .add(NexT.motion.middleWares.subMenu)
-      .add(NexT.motion.middleWares.postList)
-      .bootstrap();
-  }
-  const hasTOC = document.querySelector('.post-toc');
-  document.querySelector('.sidebar-inner').classList.toggle('sidebar-nav-active', hasTOC);
-  document.querySelector(hasTOC ? '.sidebar-nav-toc' : '.sidebar-nav-overview').click();
-  NexT.utils.updateSidebarPosition();
-});
-</script>
-
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/motion.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/next-boot.js"></script>
 
   
 
@@ -459,7 +425,7 @@ document.addEventListener('pjax:success', () => {
   
 
 
-<script data-pjax>
+<script>
   (function() {
     function leancloudSelector(url) {
       url = encodeURI(url);
@@ -546,20 +512,8 @@ document.addEventListener('pjax:success', () => {
   })();
 </script>
 
-    <div class="pjax">
-
-  <script src="//cdn.jsdelivr.net/npm/quicklink@2.0.0/dist/quicklink.umd.js"></script>
-  <script>
-      window.addEventListener('load', () => {
-      quicklink.listen({
-        timeout : 3000,
-        priority: true,
-        ignores : [uri => uri.includes('#'),uri => uri === 'https://weilining.github.io/categories/%E9%BB%98%E8%AE%A4/page/38/',]
-      });
-      });
-  </script>
 
 
-    </div>
+
 </body>
 </html>

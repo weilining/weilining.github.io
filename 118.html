@@ -18,7 +18,7 @@
 
 <link rel="stylesheet" href="/css/main.css">
 
-
+<link rel="stylesheet" href="https://fonts.dogedoge.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
@@ -55,7 +55,7 @@
 <link rel="canonical" href="https://weilining.github.io/118.html">
 
 
-<script data-pjax class="page-configurations">
+<script class="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
@@ -178,7 +178,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E5%9B%BE%E5%BA%8A%E5%AF%B9%E6%AF%94"><span class="nav-number">1.</span> <span class="nav-text">一、图床对比</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E6%96%B9%E6%B3%95"><span class="nav-number">2.</span> <span class="nav-text">二、方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E6%96%B0%E5%BB%BAgithub%E4%BB%93%E5%BA%93%E5%B9%B6%E7%94%9F%E6%88%90token"><span class="nav-number">2.1.</span> <span class="nav-text">1.新建github仓库并生成token</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E9%85%8D%E7%BD%AEpicgo"><span class="nav-number">2.2.</span> <span class="nav-text">2.配置picgo</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E5%9B%BE%E5%BA%8A%E5%AF%B9%E6%AF%94"><span class="nav-number">1.</span> <span class="nav-text">一、图床对比</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E6%96%B9%E6%B3%95"><span class="nav-number">2.</span> <span class="nav-text">二、方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%20%E6%96%B0%E5%BB%BA%20github%20%E4%BB%93%E5%BA%93%E5%B9%B6%E7%94%9F%E6%88%90%20token"><span class="nav-number">2.1.</span> <span class="nav-text">1. 新建 github 仓库并生成 token</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%20%E9%85%8D%E7%BD%AE%20picgo"><span class="nav-number">2.2.</span> <span class="nav-text">2. 配置 picgo</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -194,7 +194,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">237</span>
+          <span class="site-state-item-count">238</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -319,28 +319,28 @@
         <a id="more"></a>
 
 <p><img data-src="/118/webp-20201119224756057" alt="img" loading="lazy"></p>
-<h2 id="一、图床对比"><a href="#一、图床对比" class="headerlink" title="一、图床对比"></a>一、图床对比</h2><ol>
-<li>七牛云<br> 官网地址：<span class="exturl" data-url="aHR0cHM6Ly9saW5rcy5qaWFuc2h1LmNvbS9nbz90bz1odHRwczovL3BvcnRhbC5xaW5pdS5jb20=">https://portal.qiniu.com<i class="fa fa-external-link-alt"></i></span><br> 简介：注册认证后有10G永久免费空间，每月10G国内和10G国外流量，速度相当快，七牛云时国内专业CDN服务商，插件支持比较多</li>
-<li>postimg<br> 官网地址：<span class="exturl" data-url="aHR0cHM6Ly9saW5rcy5qaWFuc2h1LmNvbS9nbz90bz1odHRwczovL3Bvc3RpbWFnZXMub3Jn">https://postimages.org<i class="fa fa-external-link-alt"></i></span><br> 简介：国外的图床，但是速度也很快。永久存储免注册，图片链接支持https，可以删除上传的图片，提供多种图片链接格式。<br> 限制：匿名上传和免费帐户上传的图片仅限于12Mb和10k x 10k像素。高级帐户仅限于24Mb和10k x 10k像素。每批最多限制为1000张图像，如果不够可以创建一个帐户并将多批图像上传到同一个图库中。</li>
-<li>SM.MS<br> 官网地址：<span class="exturl" data-url="aHR0cHM6Ly9saW5rcy5qaWFuc2h1LmNvbS9nbz90bz1odHRwczovL3NtLm1zLw==">https://sm.ms/<i class="fa fa-external-link-alt"></i></span><br> 特点：永久存储免注册，图片链接支持https，可以删除上传的图片，提供多种图片链接格式。<br> 图片上传限制：每个图片最大5M，每次最多上传10张。最近越来越慢了</li>
-<li>极简图床<br> 官网地址：<span class="exturl" data-url="aHR0cHM6Ly9saW5rcy5qaWFuc2h1LmNvbS9nbz90bz1odHRwOi8vamlhbnR1a3UuY29t">http://jiantuku.com<i class="fa fa-external-link-alt"></i></span><br> 主要提供图片上传和管理界面，需要用户自己设置微博、七牛云或者阿里云OSS信息</li>
-<li>路过图床<br> 官网地址：<span class="exturl" data-url="aHR0cHM6Ly9saW5rcy5qaWFuc2h1LmNvbS9nbz90bz1odHRwczovL2ltZ2Noci5jb20v">https://imgchr.com/<i class="fa fa-external-link-alt"></i></span><br> 简介：支持免注册上传图片，永久存储，支持HTTPS加密访问和调用图片，提供多种图片链接格式<br> 限制：最大10M。<br> 路过其实速度还可以，但是不支持api上传，使用起来略微麻烦。国内的几大云存储又要收费所以现在安利一种基于github和jsdeliver加速的免费图床。PicGo工具一键上传，操作简单高效，GitHub和jsDelivr都是大厂，不用担心跑路问题，不用担心速度和容量问题，而且完全免费，可以说是目前免费图床的最佳解决方案！</li>
+<h2 id="一、图床对比"><a href="# 一、图床对比" class="headerlink" title="一、图床对比"></a>一、图床对比</h2><ol>
+<li>七牛云<br> 官网地址：<span class="exturl" data-url="aHR0cHM6Ly9saW5rcy5qaWFuc2h1LmNvbS9nbz90bz1odHRwczovL3BvcnRhbC5xaW5pdS5jb20=">https://portal.qiniu.com<i class="fa fa-external-link-alt"></i></span><br> 简介：注册认证后有 10G 永久免费空间，每月 10G 国内和 10G 国外流量，速度相当快，七牛云时国内专业 CDN 服务商，插件支持比较多</li>
+<li>postimg<br> 官网地址：<span class="exturl" data-url="aHR0cHM6Ly9saW5rcy5qaWFuc2h1LmNvbS9nbz90bz1odHRwczovL3Bvc3RpbWFnZXMub3Jn">https://postimages.org<i class="fa fa-external-link-alt"></i></span><br> 简介：国外的图床，但是速度也很快。永久存储免注册，图片链接支持 https，可以删除上传的图片，提供多种图片链接格式。<br> 限制：匿名上传和免费帐户上传的图片仅限于 12Mb 和 10k x 10k 像素。高级帐户仅限于 24Mb 和 10k x 10k 像素。每批最多限制为 1000 张图像，如果不够可以创建一个帐户并将多批图像上传到同一个图库中。</li>
+<li>SM.MS<br> 官网地址：<span class="exturl" data-url="aHR0cHM6Ly9saW5rcy5qaWFuc2h1LmNvbS9nbz90bz1odHRwczovL3NtLm1zLw==">https://sm.ms/<i class="fa fa-external-link-alt"></i></span><br> 特点：永久存储免注册，图片链接支持 https，可以删除上传的图片，提供多种图片链接格式。<br> 图片上传限制：每个图片最大 5M，每次最多上传 10 张。最近越来越慢了</li>
+<li>极简图床<br> 官网地址：<span class="exturl" data-url="aHR0cHM6Ly9saW5rcy5qaWFuc2h1LmNvbS9nbz90bz1odHRwOi8vamlhbnR1a3UuY29t">http://jiantuku.com<i class="fa fa-external-link-alt"></i></span><br> 主要提供图片上传和管理界面，需要用户自己设置微博、七牛云或者阿里云 OSS 信息</li>
+<li>路过图床<br> 官网地址：<span class="exturl" data-url="aHR0cHM6Ly9saW5rcy5qaWFuc2h1LmNvbS9nbz90bz1odHRwczovL2ltZ2Noci5jb20v">https://imgchr.com/<i class="fa fa-external-link-alt"></i></span><br> 简介：支持免注册上传图片，永久存储，支持 HTTPS 加密访问和调用图片，提供多种图片链接格式<br> 限制：最大 10M。<br> 路过其实速度还可以，但是不支持 api 上传，使用起来略微麻烦。国内的几大云存储又要收费所以现在安利一种基于 github 和 jsdeliver 加速的免费图床。PicGo 工具一键上传，操作简单高效，GitHub 和 jsDelivr 都是大厂，不用担心跑路问题，不用担心速度和容量问题，而且完全免费，可以说是目前免费图床的最佳解决方案！</li>
 </ol>
-<h2 id="二、方法"><a href="#二、方法" class="headerlink" title="二、方法"></a>二、方法</h2><h3 id="1-新建github仓库并生成token"><a href="#1-新建github仓库并生成token" class="headerlink" title="1.新建github仓库并生成token"></a>1.新建github仓库并生成token</h3><p><img data-src="/118/webp-20201119224809319" alt="img" loading="lazy"></p>
+<h2 id="二、方法"><a href="# 二、方法" class="headerlink" title="二、方法"></a>二、方法</h2><h3 id="1- 新建 github 仓库并生成 token"><a href="#1- 新建 github 仓库并生成 token" class="headerlink" title="1. 新建 github 仓库并生成 token"></a>1. 新建 github 仓库并生成 token</h3><p><img data-src="/118/webp-20201119224809319" alt="img" loading="lazy"></p>
 <p><img data-src="/118/webp-20201119224819064" alt="img" loading="lazy"></p>
 <p><img data-src="/118/webp-20201119224827336" alt="img" loading="lazy"></p>
 <p><img data-src="/118/webp-20201119224833741" alt="img" loading="lazy"></p>
 <p><img data-src="/118/webp-20201119224841399" alt="img" loading="lazy"></p>
 <p><img data-src="/118/webp-20201119224848412" alt="img" loading="lazy"></p>
 <p><img data-src="/118/webp-20201119224855161" alt="img" loading="lazy"></p>
-<p>注意：这个token只显示一次所以一次，所以一定要自己保管好</p>
-<h3 id="2-配置picgo"><a href="#2-配置picgo" class="headerlink" title="2.配置picgo"></a>2.配置picgo</h3><p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL01vbHVuZXJmaW5uL3BpY2dvL3JlbGVhc2Vz">下载Picgo<i class="fa fa-external-link-alt"></i></span>，picgo可以快捷键上传图片ctrl+shipt+p，并且上传完了自动把图片网址复制到剪切板</p>
+<p>注意：这个 token 只显示一次所以一次，所以一定要自己保管好</p>
+<h3 id="2- 配置 picgo"><a href="#2- 配置 picgo" class="headerlink" title="2. 配置 picgo"></a>2. 配置 picgo</h3><p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL01vbHVuZXJmaW5uL3BpY2dvL3JlbGVhc2Vz">下载 Picgo<i class="fa fa-external-link-alt"></i></span>，picgo 可以快捷键上传图片 ctrl+shipt+p，并且上传完了自动把图片网址复制到剪切板</p>
 <p><img data-src="/118/webp-20201119224912543" alt="img" loading="lazy"></p>
-<p>picgo配置</p>
+<p>picgo 配置</p>
 <p><img data-src="/118/webp-20201119224935101" alt="img" loading="lazy"></p>
-<p> 我是使用markdown写作，使用设置将上传的图片按照时间戳命名便于管理，当然也可以按照自己的方式进行管理</p>
+<p> 我是使用 markdown 写作，使用设置将上传的图片按照时间戳命名便于管理，当然也可以按照自己的方式进行管理</p>
 <blockquote>
-<p>设定仓库名：按照【用户名/图床仓库名】的格式填写<br> 设定分支名：【master】<br> 设定Token：粘贴之前生成的【Token】<br> 指定存储路径：填写想要储存的路径，如【blog-img/】，这样就会在仓库下创建一个名为blog-img的文件夹，图片将会储存在此文件夹中<br> 设定自定义域名：它的的作用是，在图片上传后，PicGo会按照【自定义域名+上传的图片名】的方式生成访问链接，放到粘贴板上，因为我们要使用jsDelivr加速访问，所以可以设置为【<span class="exturl" data-url="aHR0cHM6Ly9saW5rcy5qaWFuc2h1LmNvbS9nbz90bz1odHRwczovL2Nkbi5qc2RlbGl2ci5uZXQvZ2gv">https://cdn.jsdelivr.net/gh/<i class="fa fa-external-link-alt"></i></span>用户名/图床仓库名 】</p>
+<p>设定仓库名：按照【用户名 / 图床仓库名】的格式填写 <br> 设定分支名：【master】<br> 设定 Token：粘贴之前生成的【Token】<br> 指定存储路径：填写想要储存的路径，如【blog-img/】，这样就会在仓库下创建一个名为 blog-img 的文件夹，图片将会储存在此文件夹中<br> 设定自定义域名：它的的作用是，在图片上传后，PicGo 会按照【自定义域名 + 上传的图片名】的方式生成访问链接，放到粘贴板上，因为我们要使用 jsDelivr 加速访问，所以可以设置为【<span class="exturl" data-url="aHR0cHM6Ly9saW5rcy5qaWFuc2h1LmNvbS9nbz90bz1odHRwczovL2Nkbi5qc2RlbGl2ci5uZXQvZ2gv">https://cdn.jsdelivr.net/gh/<i class="fa fa-external-link-alt"></i></span> 用户名 / 图床仓库名 】</p>
 </blockquote>
 <p>完成之后就可以畅快书写，上传直接快捷键完成，复制粘贴，再也不用手动去拖动图片上传了，更过功能尽情去体验吧！</p>
 
@@ -351,8 +351,30 @@
     
 
     <footer class="post-footer">
+          <div class="reward-container">
+  <div>Buy me a coffee</div>
+  <button onclick="document.querySelector('.post-reward').classList.toggle('active');">
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/20201122213021.png" alt="Lining Wei 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/434235F3-7A93-4EA4-A7B6-4F6D977F1A89.png" alt="Lining Wei 支付宝">
+        <span>支付宝</span>
+      </div>
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/bitcoin.png" alt="Lining Wei 比特币">
+        <span>比特币</span>
+      </div>
+
+  </div>
+</div>
+
           <div class="post-tags">
-              <a href="/tags/%E9%BB%98%E8%AE%A4/" rel="tag"># 默认</a>
+              <a href="/tags/%E9%BB%98%E8%AE%A4/" rel="tag"><i class="fa fa-tag"></i> 默认</a>
           </div>
 
         
@@ -441,43 +463,9 @@
 
   
   <script src="//cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/@next-theme/pjax@0.4.0/pjax.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js"></script>
-<script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/motion.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/next-boot.js"></script><script>
-var pjax = new Pjax({
-  selectors: [
-    'head title',
-    '.page-configurations',
-    '.main-inner',
-    '.post-toc-wrap',
-    '.languages',
-    '.pjax'
-  ],
-  analytics: false,
-  cacheBust: false,
-  scrollRestoration: false,
-  scrollTo: !CONFIG.bookmark.enable
-});
-
-document.addEventListener('pjax:success', () => {
-  pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
-  NexT.boot.refresh();
-  // Define Motion Sequence & Bootstrap Motion.
-  if (CONFIG.motion.enable) {
-    NexT.motion.integrator
-      .init()
-      .add(NexT.motion.middleWares.subMenu)
-      .add(NexT.motion.middleWares.postList)
-      .bootstrap();
-  }
-  const hasTOC = document.querySelector('.post-toc');
-  document.querySelector('.sidebar-inner').classList.toggle('sidebar-nav-active', hasTOC);
-  document.querySelector(hasTOC ? '.sidebar-nav-toc' : '.sidebar-nav-overview').click();
-  NexT.utils.updateSidebarPosition();
-});
-</script>
-
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/motion.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/next-boot.js"></script>
 
   
 
@@ -489,7 +477,7 @@ document.addEventListener('pjax:success', () => {
   
 
 
-<script data-pjax>
+<script>
   (function() {
     function leancloudSelector(url) {
       url = encodeURI(url);
@@ -576,18 +564,7 @@ document.addEventListener('pjax:success', () => {
   })();
 </script>
 
-    <div class="pjax">
 
-  <script src="//cdn.jsdelivr.net/npm/quicklink@2.0.0/dist/quicklink.umd.js"></script>
-  <script>
-      window.addEventListener('load', () => {
-      quicklink.listen({
-        timeout : 3000,
-        priority: true,
-        ignores : [uri => uri.includes('#'),uri => uri === 'https://weilining.github.io/118.html',]
-      });
-      });
-  </script>
 
 <script>
 NexT.utils.loadComments('#lv-container', () => {
@@ -605,6 +582,5 @@ NexT.utils.loadComments('#lv-container', () => {
 });
 </script>
 
-    </div>
 </body>
 </html>

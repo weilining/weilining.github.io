@@ -18,7 +18,7 @@
 
 <link rel="stylesheet" href="/css/main.css">
 
-
+<link rel="stylesheet" href="https://fonts.dogedoge.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
@@ -49,7 +49,7 @@
 <link rel="canonical" href="https://weilining.github.io/29.html">
 
 
-<script data-pjax class="page-configurations">
+<script class="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
@@ -172,7 +172,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8E%9F%E5%88%99"><span class="nav-number">1.</span> <span class="nav-text">原则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AD%A5%E9%AA%A4"><span class="nav-number">2.</span> <span class="nav-text">步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D"><span class="nav-number">2.1.</span> <span class="nav-text">自定义域名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B3%E8%81%94%E5%9F%9F%E5%90%8D"><span class="nav-number">2.2.</span> <span class="nav-text">关联域名</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">3.</span> <span class="nav-text">总结</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8E%9F%E5%88%99"><span class="nav-number">1.</span> <span class="nav-text">原则 </span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AD%A5%E9%AA%A4"><span class="nav-number">2.</span> <span class="nav-text">步骤 </span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D"><span class="nav-number">2.1.</span> <span class="nav-text">自定义域名 </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B3%E8%81%94%E5%9F%9F%E5%90%8D"><span class="nav-number">2.2.</span> <span class="nav-text">关联域名 </span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">3.</span> <span class="nav-text">总结 </span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -188,7 +188,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">237</span>
+          <span class="site-state-item-count">238</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -314,20 +314,20 @@
 <a id="more"></a>
 
 <p>之前分享了《<span class="exturl" data-url="aHR0cHM6Ly92aXJjbG91ZC5uZXQvYnVpbGQvZHJpdmUtbGlzdC5odG1s">利用 CloudFlare Workers 等平台零成本运行 Google Drive、OneDrive 文件列表清单程序<i class="fa fa-external-link-alt"></i></span>》，通过这种方法创建的域名的比较长（<code>*.*.workers.dev</code>），不太适合分享，因此考虑使用自己的域名来访问。搜了一番，关于这一块基本上都是一笔带过，写得不清不楚，新手很难入手，故而这里做个记录供参考。</p>
-<h2 id="原则"><a href="#原则" class="headerlink" title="原则"></a>原则</h2><p>只要 CloudFlare CDN 本身支持的域名，都可以作为 CloudFlare Workers 的域名，唯独需要注意的是，<strong>该域名需要托管于 CloudFlare</strong>上，即域名的 Name Service 必须是 CloudFlare。</p>
+<h2 id="原则"><a href="# 原则" class="headerlink" title="原则"></a>原则 </h2><p> 只要 CloudFlare CDN 本身支持的域名，都可以作为 CloudFlare Workers 的域名，唯独需要注意的是，<strong>该域名需要托管于 CloudFlare</strong>上，即域名的 Name Service 必须是 CloudFlare。</p>
 <p>当你使用其他教程设置自定义域名，却无法生效的原因，就是自定义域名没有托管在 CloudFlare 上，博主在这里费了老大劲儿才发现。</p>
-<h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><p>主要分两个步骤，一个是自定义域名添加到 CloudFlare 网络，另一个是将该域名指向 Worker 子域名进行关联。这两个步骤先后顺序没有严格要求。</p>
-<h3 id="自定义域名"><a href="#自定义域名" class="headerlink" title="自定义域名"></a>自定义域名</h3><p>如前面所述，必须将域名（如 <code>vircloud.net</code>）托管于 CloudFlare 才行，在其他 DNS 注册商通过 CNAME 接入是不行的，会出现各种奇形怪状的错误。</p>
+<h2 id="步骤"><a href="# 步骤" class="headerlink" title="步骤"></a>步骤 </h2><p> 主要分两个步骤，一个是自定义域名添加到 CloudFlare 网络，另一个是将该域名指向 Worker 子域名进行关联。这两个步骤先后顺序没有严格要求。</p>
+<h3 id="自定义域名"><a href="# 自定义域名" class="headerlink" title="自定义域名"></a>自定义域名 </h3><p> 如前面所述，必须将域名（如 <code>vircloud.net</code>）托管于 CloudFlare 才行，在其他 DNS 注册商通过 CNAME 接入是不行的，会出现各种奇形怪状的错误。</p>
 <p>域名托管没啥难度，会用 CloudFlare 都会，不再赘述，根据页面提示操作即可：</p>
 <p><img data-src="/29/2070146028.png" alt="添加域名" loading="lazy"></p>
 <p>域名添加成功后，新增一笔 DNS 记录，<code>Name</code>为要作为自定义的子域名（如 <code>od.vircloud.net</code> 就是 <code>od</code>），值无所谓，关键要启用代理（<code>Proxied</code>）：</p>
 <p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://vircloud.net/usr/uploads/2020/01/888077893.png"><img data-src="/29/888077893.png" alt="添加记录" loading="lazy"></a></p>
-<h3 id="关联域名"><a href="#关联域名" class="headerlink" title="关联域名"></a>关联域名</h3><p>创建 <code>Workers</code> 后，切换到<code>域名的 Wokers</code> 页签（注意是域名这里的，在 <code>Workers 里是找不到关联的地方滴</code>），然后点 <code>Add route</code> 添加关联：</p>
+<h3 id="关联域名"><a href="# 关联域名" class="headerlink" title="关联域名"></a>关联域名 </h3><p> 创建 <code>Workers</code> 后，切换到 <code> 域名的 Wokers</code> 页签（注意是域名这里的，在 <code>Workers 里是找不到关联的地方滴</code>），然后点 <code>Add route</code> 添加关联：</p>
 <p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://vircloud.net/usr/uploads/2020/01/2293186136.png"><img data-src="/29/2293186136.png" alt="添加路由" loading="lazy"></a></p>
-<p><code>Route</code> 填写上一步的<code>子域名</code> + <code>/*</code>（如： <code>od.vircloud.net/*</code>），<code>Worker</code> 选择需要自定义域名访问的 <code>Worker</code>，注意是<code>选择</code>，所以需要先创建 Worker 再来关联，表示通过这个自定义域名来访问 <code>Worker</code> 服务：</p>
+<p><code>Route</code> 填写上一步的 <code> 子域名 </code> + <code>/*</code>（如： <code>od.vircloud.net/*</code>），<code>Worker</code> 选择需要自定义域名访问的 <code>Worker</code>，注意是<code> 选择</code>，所以需要先创建 Worker 再来关联，表示通过这个自定义域名来访问 <code>Worker</code> 服务：</p>
 <p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://vircloud.net/usr/uploads/2020/01/3360162157.png"><img data-src="/29/3360162157.png" alt="关联路由" loading="lazy"></a></p>
 <p>完成后就可以通过自定义的域名（如 <code>https://od.vircloud.net</code>）访问 <code>Worker </code>服务了。</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>总结一下，两个关键点：</p>
+<h2 id="总结"><a href="# 总结" class="headerlink" title="总结"></a>总结 </h2><p> 总结一下，两个关键点：</p>
 <ul>
 <li>域名必须托管于 CloudFlare；</li>
 <li>Worker 创建后需添加路由关联；</li>
@@ -340,16 +340,38 @@
     
 
     <footer class="post-footer">
+          <div class="reward-container">
+  <div>Buy me a coffee</div>
+  <button onclick="document.querySelector('.post-reward').classList.toggle('active');">
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/20201122213021.png" alt="Lining Wei 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/434235F3-7A93-4EA4-A7B6-4F6D977F1A89.png" alt="Lining Wei 支付宝">
+        <span>支付宝</span>
+      </div>
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/bitcoin.png" alt="Lining Wei 比特币">
+        <span>比特币</span>
+      </div>
+
+  </div>
+</div>
+
           <div class="post-tags">
-              <a href="/tags/%E9%BB%98%E8%AE%A4/" rel="tag"># 默认</a>
+              <a href="/tags/%E9%BB%98%E8%AE%A4/" rel="tag"><i class="fa fa-tag"></i> 默认</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/28.html" rel="prev" title="CloudFlare 如何开启5秒盾">
-                  <i class="fa fa-chevron-left"></i> CloudFlare 如何开启5秒盾
+                <a href="/28.html" rel="prev" title="CloudFlare 如何开启 5 秒盾">
+                  <i class="fa fa-chevron-left"></i> CloudFlare 如何开启 5 秒盾
                 </a>
             </div>
             <div class="post-nav-item">
@@ -430,43 +452,9 @@
 
   
   <script src="//cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/@next-theme/pjax@0.4.0/pjax.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js"></script>
-<script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/motion.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/next-boot.js"></script><script>
-var pjax = new Pjax({
-  selectors: [
-    'head title',
-    '.page-configurations',
-    '.main-inner',
-    '.post-toc-wrap',
-    '.languages',
-    '.pjax'
-  ],
-  analytics: false,
-  cacheBust: false,
-  scrollRestoration: false,
-  scrollTo: !CONFIG.bookmark.enable
-});
-
-document.addEventListener('pjax:success', () => {
-  pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
-  NexT.boot.refresh();
-  // Define Motion Sequence & Bootstrap Motion.
-  if (CONFIG.motion.enable) {
-    NexT.motion.integrator
-      .init()
-      .add(NexT.motion.middleWares.subMenu)
-      .add(NexT.motion.middleWares.postList)
-      .bootstrap();
-  }
-  const hasTOC = document.querySelector('.post-toc');
-  document.querySelector('.sidebar-inner').classList.toggle('sidebar-nav-active', hasTOC);
-  document.querySelector(hasTOC ? '.sidebar-nav-toc' : '.sidebar-nav-overview').click();
-  NexT.utils.updateSidebarPosition();
-});
-</script>
-
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/motion.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/next-boot.js"></script>
 
   
 
@@ -478,7 +466,7 @@ document.addEventListener('pjax:success', () => {
   
 
 
-<script data-pjax>
+<script>
   (function() {
     function leancloudSelector(url) {
       url = encodeURI(url);
@@ -565,18 +553,7 @@ document.addEventListener('pjax:success', () => {
   })();
 </script>
 
-    <div class="pjax">
 
-  <script src="//cdn.jsdelivr.net/npm/quicklink@2.0.0/dist/quicklink.umd.js"></script>
-  <script>
-      window.addEventListener('load', () => {
-      quicklink.listen({
-        timeout : 3000,
-        priority: true,
-        ignores : [uri => uri.includes('#'),uri => uri === 'https://weilining.github.io/29.html',]
-      });
-      });
-  </script>
 
 <script>
 NexT.utils.loadComments('#lv-container', () => {
@@ -594,6 +571,5 @@ NexT.utils.loadComments('#lv-container', () => {
 });
 </script>
 
-    </div>
 </body>
 </html>

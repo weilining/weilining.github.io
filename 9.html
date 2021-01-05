@@ -18,7 +18,7 @@
 
 <link rel="stylesheet" href="/css/main.css">
 
-
+<link rel="stylesheet" href="https://fonts.dogedoge.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
@@ -44,7 +44,7 @@
 <link rel="canonical" href="https://weilining.github.io/9.html">
 
 
-<script data-pjax class="page-configurations">
+<script class="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
@@ -167,7 +167,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%87%E6%8D%A2root%E8%B4%A6%E6%88%B7"><span class="nav-number">1.</span> <span class="nav-text">切换root账户</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#etc-sudoers%E5%86%85%E5%AE%B9"><span class="nav-number">2.</span> <span class="nav-text">&#x2F;etc&#x2F;sudoers内容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9B%B4%E6%94%B9%E6%9D%83%E9%99%90"><span class="nav-number">3.</span> <span class="nav-text">更改权限</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%87%E6%8D%A2%20root%20%E8%B4%A6%E6%88%B7"><span class="nav-number">1.</span> <span class="nav-text"> 切换 root 账户 </span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#etc-sudoers%20%E5%86%85%E5%AE%B9"><span class="nav-number">2.</span> <span class="nav-text">&#x2F;etc&#x2F;sudoers 内容 </span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9B%B4%E6%94%B9%E6%9D%83%E9%99%90"><span class="nav-number">3.</span> <span class="nav-text"> 更改权限 </span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -183,7 +183,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">237</span>
+          <span class="site-state-item-count">238</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -305,12 +305,12 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>出现<code>sudo: /etc/sudoers is owned by uid 501, should be 0</code></p>
+        <p> 出现 <code>sudo: /etc/sudoers is owned by uid 501, should be 0</code></p>
 <a id="more"></a>
 
-<h2 id="切换root账户"><a href="#切换root账户" class="headerlink" title="切换root账户"></a>切换root账户</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cp sudoers~orig sudoers</span><br></pre></td></tr></table></figure>
-<h2 id="etc-sudoers内容"><a href="#etc-sudoers内容" class="headerlink" title="/etc/sudoers内容"></a>/etc/sudoers内容</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#</span><br><span class="line"># Sample &#x2F;etc&#x2F;sudoers file.</span><br><span class="line">#</span><br><span class="line"># This file MUST be edited with the &#39;visudo&#39; command as root.</span><br><span class="line">#</span><br><span class="line"># See the sudoers man page for the details on how to write a sudoers file.</span><br><span class="line"></span><br><span class="line">##</span><br><span class="line"># Override built-in defaults</span><br><span class="line">##</span><br><span class="line">Defaults	env_reset</span><br><span class="line">Defaults	env_keep +&#x3D; &quot;BLOCKSIZE&quot;</span><br><span class="line">Defaults	env_keep +&#x3D; &quot;COLORFGBG COLORTERM&quot;</span><br><span class="line">Defaults	env_keep +&#x3D; &quot;__CF_USER_TEXT_ENCODING&quot;</span><br><span class="line">Defaults	env_keep +&#x3D; &quot;CHARSET LANG LANGUAGE LC_ALL LC_COLLATE LC_CTYPE&quot;</span><br><span class="line">Defaults	env_keep +&#x3D; &quot;LC_MESSAGES LC_MONETARY LC_NUMERIC LC_TIME&quot;</span><br><span class="line">Defaults	env_keep +&#x3D; &quot;LINES COLUMNS&quot;</span><br><span class="line">Defaults	env_keep +&#x3D; &quot;LSCOLORS&quot;</span><br><span class="line">Defaults	env_keep +&#x3D; &quot;SSH_AUTH_SOCK&quot;</span><br><span class="line">Defaults	env_keep +&#x3D; &quot;TZ&quot;</span><br><span class="line">Defaults	env_keep +&#x3D; &quot;DISPLAY XAUTHORIZATION XAUTHORITY&quot;</span><br><span class="line">Defaults	env_keep +&#x3D; &quot;EDITOR VISUAL&quot;</span><br><span class="line">Defaults	env_keep +&#x3D; &quot;HOME MAIL&quot;</span><br><span class="line"></span><br><span class="line">Defaults	lecture_file &#x3D; &quot;&#x2F;etc&#x2F;sudo_lecture&quot;</span><br><span class="line"></span><br><span class="line">##</span><br><span class="line"># User alias specification</span><br><span class="line">##</span><br><span class="line"># User_Alias	FULLTIMERS &#x3D; millert, mikef, dowdy</span><br><span class="line"></span><br><span class="line">##</span><br><span class="line"># Runas alias specification</span><br><span class="line">##</span><br><span class="line"># Runas_Alias	OP &#x3D; root, operator</span><br><span class="line"></span><br><span class="line">##</span><br><span class="line"># Host alias specification</span><br><span class="line">##</span><br><span class="line"># Host_Alias	CUNETS &#x3D; 128.138.0.0&#x2F;255.255.0.0</span><br><span class="line"># Host_Alias	CSNETS &#x3D; 128.138.243.0, 128.138.204.0&#x2F;24, 128.138.242.0</span><br><span class="line"># Host_Alias	SERVERS &#x3D; master, mail, www, ns</span><br><span class="line"># Host_Alias	CDROM &#x3D; orion, perseus, hercules</span><br><span class="line"></span><br><span class="line">##</span><br><span class="line"># Cmnd alias specification</span><br><span class="line">##</span><br><span class="line"># Cmnd_Alias	PAGERS &#x3D; &#x2F;usr&#x2F;bin&#x2F;more, &#x2F;usr&#x2F;bin&#x2F;pg, &#x2F;usr&#x2F;bin&#x2F;less</span><br><span class="line"></span><br><span class="line">##</span><br><span class="line"># User specification</span><br><span class="line">##</span><br><span class="line"></span><br><span class="line"># root and users in group wheel can run anything on any machine as any user</span><br><span class="line">root		ALL &#x3D; (ALL) ALL</span><br><span class="line">%admin		ALL &#x3D; (ALL) ALL</span><br><span class="line"></span><br><span class="line">## Read drop-in files from &#x2F;private&#x2F;etc&#x2F;sudoers.d</span><br><span class="line">## (the &#39;#&#39; here does not indicate a comment)</span><br><span class="line">#includedir &#x2F;private&#x2F;etc&#x2F;sudoers.d</span><br></pre></td></tr></table></figure>
-<h2 id="更改权限"><a href="#更改权限" class="headerlink" title="更改权限"></a>更改权限</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">chown root:wheel &#x2F;etc&#x2F;sudoers</span><br><span class="line">chmod 440 &#x2F;etc&#x2F;sudoers</span><br></pre></td></tr></table></figure>
+<h2 id="切换 root 账户"><a href="# 切换 root 账户" class="headerlink" title="切换 root 账户"></a> 切换 root 账户 </h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cp sudoers~orig sudoers</span><br></pre></td></tr></table></figure>
+<h2 id="etc-sudoers 内容"><a href="#etc-sudoers 内容" class="headerlink" title="/etc/sudoers 内容"></a>/etc/sudoers 内容 </h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#</span><br><span class="line"># Sample &#x2F;etc&#x2F;sudoers file.</span><br><span class="line">#</span><br><span class="line"># This file MUST be edited with the &#39;visudo&#39; command as root.</span><br><span class="line">#</span><br><span class="line"># See the sudoers man page for the details on how to write a sudoers file.</span><br><span class="line"></span><br><span class="line">##</span><br><span class="line"># Override built-in defaults</span><br><span class="line">##</span><br><span class="line">Defaults	env_reset</span><br><span class="line">Defaults	env_keep +&#x3D; &quot;BLOCKSIZE&quot;</span><br><span class="line">Defaults	env_keep +&#x3D; &quot;COLORFGBG COLORTERM&quot;</span><br><span class="line">Defaults	env_keep +&#x3D; &quot;__CF_USER_TEXT_ENCODING&quot;</span><br><span class="line">Defaults	env_keep +&#x3D; &quot;CHARSET LANG LANGUAGE LC_ALL LC_COLLATE LC_CTYPE&quot;</span><br><span class="line">Defaults	env_keep +&#x3D; &quot;LC_MESSAGES LC_MONETARY LC_NUMERIC LC_TIME&quot;</span><br><span class="line">Defaults	env_keep +&#x3D; &quot;LINES COLUMNS&quot;</span><br><span class="line">Defaults	env_keep +&#x3D; &quot;LSCOLORS&quot;</span><br><span class="line">Defaults	env_keep +&#x3D; &quot;SSH_AUTH_SOCK&quot;</span><br><span class="line">Defaults	env_keep +&#x3D; &quot;TZ&quot;</span><br><span class="line">Defaults	env_keep +&#x3D; &quot;DISPLAY XAUTHORIZATION XAUTHORITY&quot;</span><br><span class="line">Defaults	env_keep +&#x3D; &quot;EDITOR VISUAL&quot;</span><br><span class="line">Defaults	env_keep +&#x3D; &quot;HOME MAIL&quot;</span><br><span class="line"></span><br><span class="line">Defaults	lecture_file &#x3D; &quot;&#x2F;etc&#x2F;sudo_lecture&quot;</span><br><span class="line"></span><br><span class="line">##</span><br><span class="line"># User alias specification</span><br><span class="line">##</span><br><span class="line"># User_Alias	FULLTIMERS &#x3D; millert, mikef, dowdy</span><br><span class="line"></span><br><span class="line">##</span><br><span class="line"># Runas alias specification</span><br><span class="line">##</span><br><span class="line"># Runas_Alias	OP &#x3D; root, operator</span><br><span class="line"></span><br><span class="line">##</span><br><span class="line"># Host alias specification</span><br><span class="line">##</span><br><span class="line"># Host_Alias	CUNETS &#x3D; 128.138.0.0&#x2F;255.255.0.0</span><br><span class="line"># Host_Alias	CSNETS &#x3D; 128.138.243.0, 128.138.204.0&#x2F;24, 128.138.242.0</span><br><span class="line"># Host_Alias	SERVERS &#x3D; master, mail, www, ns</span><br><span class="line"># Host_Alias	CDROM &#x3D; orion, perseus, hercules</span><br><span class="line"></span><br><span class="line">##</span><br><span class="line"># Cmnd alias specification</span><br><span class="line">##</span><br><span class="line"># Cmnd_Alias	PAGERS &#x3D; &#x2F;usr&#x2F;bin&#x2F;more, &#x2F;usr&#x2F;bin&#x2F;pg, &#x2F;usr&#x2F;bin&#x2F;less</span><br><span class="line"></span><br><span class="line">##</span><br><span class="line"># User specification</span><br><span class="line">##</span><br><span class="line"></span><br><span class="line"># root and users in group wheel can run anything on any machine as any user</span><br><span class="line">root		ALL &#x3D; (ALL) ALL</span><br><span class="line">%admin		ALL &#x3D; (ALL) ALL</span><br><span class="line"></span><br><span class="line">## Read drop-in files from &#x2F;private&#x2F;etc&#x2F;sudoers.d</span><br><span class="line">## (the &#39;#&#39; here does not indicate a comment)</span><br><span class="line">#includedir &#x2F;private&#x2F;etc&#x2F;sudoers.d</span><br></pre></td></tr></table></figure>
+<h2 id="更改权限"><a href="# 更改权限" class="headerlink" title="更改权限"></a> 更改权限 </h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">chown root:wheel &#x2F;etc&#x2F;sudoers</span><br><span class="line">chmod 440 &#x2F;etc&#x2F;sudoers</span><br></pre></td></tr></table></figure>
 <p><code>ls -l</code></p>
  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">-r--r-----   1 root   wheel    1563  1  1  2020 sudoers</span><br></pre></td></tr></table></figure>
 
@@ -321,16 +321,38 @@
     
 
     <footer class="post-footer">
+          <div class="reward-container">
+  <div>Buy me a coffee</div>
+  <button onclick="document.querySelector('.post-reward').classList.toggle('active');">
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/20201122213021.png" alt="Lining Wei 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/434235F3-7A93-4EA4-A7B6-4F6D977F1A89.png" alt="Lining Wei 支付宝">
+        <span>支付宝</span>
+      </div>
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/bitcoin.png" alt="Lining Wei 比特币">
+        <span>比特币</span>
+      </div>
+
+  </div>
+</div>
+
           <div class="post-tags">
-              <a href="/tags/%E9%BB%98%E8%AE%A4/" rel="tag"># 默认</a>
+              <a href="/tags/%E9%BB%98%E8%AE%A4/" rel="tag"><i class="fa fa-tag"></i> 默认</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/8.html" rel="prev" title="如何预定义Front-matter的内容">
-                  <i class="fa fa-chevron-left"></i> 如何预定义Front-matter的内容
+                <a href="/8.html" rel="prev" title="如何预定义 Front-matter 的内容">
+                  <i class="fa fa-chevron-left"></i> 如何预定义 Front-matter 的内容
                 </a>
             </div>
             <div class="post-nav-item">
@@ -411,43 +433,9 @@
 
   
   <script src="//cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/@next-theme/pjax@0.4.0/pjax.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js"></script>
-<script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/motion.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/next-boot.js"></script><script>
-var pjax = new Pjax({
-  selectors: [
-    'head title',
-    '.page-configurations',
-    '.main-inner',
-    '.post-toc-wrap',
-    '.languages',
-    '.pjax'
-  ],
-  analytics: false,
-  cacheBust: false,
-  scrollRestoration: false,
-  scrollTo: !CONFIG.bookmark.enable
-});
-
-document.addEventListener('pjax:success', () => {
-  pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
-  NexT.boot.refresh();
-  // Define Motion Sequence & Bootstrap Motion.
-  if (CONFIG.motion.enable) {
-    NexT.motion.integrator
-      .init()
-      .add(NexT.motion.middleWares.subMenu)
-      .add(NexT.motion.middleWares.postList)
-      .bootstrap();
-  }
-  const hasTOC = document.querySelector('.post-toc');
-  document.querySelector('.sidebar-inner').classList.toggle('sidebar-nav-active', hasTOC);
-  document.querySelector(hasTOC ? '.sidebar-nav-toc' : '.sidebar-nav-overview').click();
-  NexT.utils.updateSidebarPosition();
-});
-</script>
-
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/motion.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/next-boot.js"></script>
 
   
 
@@ -459,7 +447,7 @@ document.addEventListener('pjax:success', () => {
   
 
 
-<script data-pjax>
+<script>
   (function() {
     function leancloudSelector(url) {
       url = encodeURI(url);
@@ -546,18 +534,7 @@ document.addEventListener('pjax:success', () => {
   })();
 </script>
 
-    <div class="pjax">
 
-  <script src="//cdn.jsdelivr.net/npm/quicklink@2.0.0/dist/quicklink.umd.js"></script>
-  <script>
-      window.addEventListener('load', () => {
-      quicklink.listen({
-        timeout : 3000,
-        priority: true,
-        ignores : [uri => uri.includes('#'),uri => uri === 'https://weilining.github.io/9.html',]
-      });
-      });
-  </script>
 
 <script>
 NexT.utils.loadComments('#lv-container', () => {
@@ -575,6 +552,5 @@ NexT.utils.loadComments('#lv-container', () => {
 });
 </script>
 
-    </div>
 </body>
 </html>

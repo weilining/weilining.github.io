@@ -18,7 +18,7 @@
 
 <link rel="stylesheet" href="/css/main.css">
 
-
+<link rel="stylesheet" href="https://fonts.dogedoge.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
@@ -29,7 +29,7 @@
   </script>
 <meta name="description" content="默认">
 <meta property="og:type" content="article">
-<meta property="og:title" content="应用nslookup命令查看A记录、MX记录、CNAME记录和NS记录">
+<meta property="og:title" content="应用 nslookup 命令查看 A 记录、MX 记录、CNAME 记录和 NS 记录">
 <meta property="og:url" content="https://weilining.github.io/188.html">
 <meta property="og:site_name" content="Ln&#39;s Blog">
 <meta property="og:description" content="默认">
@@ -55,7 +55,7 @@
 <link rel="canonical" href="https://weilining.github.io/188.html">
 
 
-<script data-pjax class="page-configurations">
+<script class="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
@@ -64,7 +64,7 @@
     lang   : 'zh-CN'
   };
 </script>
-<title>应用nslookup命令查看A记录、MX记录、CNAME记录和NS记录 | Ln's Blog</title>
+<title>应用 nslookup 命令查看 A 记录、MX 记录、CNAME 记录和 NS 记录 | Ln's Blog</title>
   
 
 
@@ -178,7 +178,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">1.</span> <span class="nav-text">总结</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#A%E8%AE%B0%E5%BD%95"><span class="nav-number">1.1.</span> <span class="nav-text">A记录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MX%E8%AE%B0%E5%BD%95"><span class="nav-number">1.2.</span> <span class="nav-text">MX记录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NS%E8%AE%B0%E5%BD%95"><span class="nav-number">1.3.</span> <span class="nav-text">NS记录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CNAME%E8%AE%B0%E5%BD%95"><span class="nav-number">1.4.</span> <span class="nav-text">CNAME记录</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">1.</span> <span class="nav-text">总结</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#A%20%E8%AE%B0%E5%BD%95"><span class="nav-number">1.1.</span> <span class="nav-text">A 记录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MX%20%E8%AE%B0%E5%BD%95"><span class="nav-number">1.2.</span> <span class="nav-text">MX 记录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NS%20%E8%AE%B0%E5%BD%95"><span class="nav-number">1.3.</span> <span class="nav-text">NS 记录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CNAME%20%E8%AE%B0%E5%BD%95"><span class="nav-number">1.4.</span> <span class="nav-text">CNAME 记录</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -194,7 +194,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">237</span>
+          <span class="site-state-item-count">238</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -259,7 +259,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          应用nslookup命令查看A记录、MX记录、CNAME记录和NS记录
+          应用 nslookup 命令查看 A 记录、MX 记录、CNAME 记录和 NS 记录
         </h1>
 
         <div class="post-meta-container">
@@ -283,7 +283,7 @@
     </span>
 
   
-    <span id="/188.html" class="post-meta-item leancloud_visitors" data-flag-title="应用nslookup命令查看A记录、MX记录、CNAME记录和NS记录" title="阅读次数">
+    <span id="/188.html" class="post-meta-item leancloud_visitors" data-flag-title="应用 nslookup 命令查看 A 记录、MX 记录、CNAME 记录和 NS 记录" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
       </span>
@@ -316,52 +316,52 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#非交互</span><br><span class="line">nslookup -query&#x3D;ns weilining.cf</span><br><span class="line">#交互</span><br><span class="line">nslookup  </span><br><span class="line">set type&#x3D;ns</span><br><span class="line">weilining.github.io</span><br><span class="line">exit # 退出nslookup</span><br></pre></td></tr></table></figure>
+        <h2 id="总结"><a href="# 总结" class="headerlink" title="总结"></a>总结</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 非交互</span><br><span class="line">nslookup -query&#x3D;ns weilining.cf</span><br><span class="line"># 交互</span><br><span class="line">nslookup  </span><br><span class="line">set type&#x3D;ns</span><br><span class="line">weilining.github.io</span><br><span class="line">exit # 退出 nslookup</span><br></pre></td></tr></table></figure>
 
 
-<p>nslookup是一种网络管理命令行工具，可用于查询DNS域名和IP地址</p>
-<p>输入指令nslookup</p>
+<p>nslookup 是一种网络管理命令行工具，可用于查询 DNS 域名和 IP 地址</p>
+<p>输入指令 nslookup</p>
 <a id="more"></a>
 
 
 
 <p><img data-src="/188/70-20201207112910667.png" alt="img" loading="lazy"></p>
-<p>默认服务器和Address是当前上网所用的DNS服务器域名和地址</p>
-<h3 id="A记录"><a href="#A记录" class="headerlink" title="A记录"></a>A记录</h3><p>A（Address）记录指的是用来指定主机名或域名对应的IP记录。</p>
-<p>在提示符&gt;后直接输入域名，可以查看该域名的A记录（也可以用set type=a指令设置）：</p>
+<p>默认服务器和 Address 是当前上网所用的 DNS 服务器域名和地址</p>
+<h3 id="A 记录"><a href="#A 记录" class="headerlink" title="A 记录"></a>A 记录</h3><p>A（Address）记录指的是用来指定主机名或域名对应的 IP 记录。</p>
+<p>在提示符 &gt; 后直接输入域名，可以查看该域名的 A 记录（也可以用 set type=a 指令设置）：</p>
 <p><img data-src="/188/70-20201207112910601.png" alt="img" loading="lazy"></p>
-<h3 id="MX记录"><a href="#MX记录" class="headerlink" title="MX记录"></a>MX记录</h3><p>MX（mail exchanger）记录，邮件交换记录，它指向一个邮件服务器，用于电子邮件系统</p>
+<h3 id="MX 记录"><a href="#MX 记录" class="headerlink" title="MX 记录"></a>MX 记录</h3><p>MX（mail exchanger）记录，邮件交换记录，它指向一个邮件服务器，用于电子邮件系统</p>
 <p>发邮件时根据收信人的地址后缀来定位邮件服务器。</p>
-<p>输入set type=mx，再输入域名可查询mx类型记录</p>
+<p>输入 set type=mx，再输入域名可查询 mx 类型记录</p>
 <p><img data-src="/188/70.png" alt="img" loading="lazy"></p>
-<p>MX perference = 10 指MX记录的优先级</p>
-<h3 id="NS记录"><a href="#NS记录" class="headerlink" title="NS记录"></a>NS记录</h3><p>NS（nameserver）记录，用来指定改域名由那个DNS服务器来进行解析。</p>
-<p>先输入set type=ns再输入域名</p>
+<p>MX perference = 10 指 MX 记录的优先级</p>
+<h3 id="NS 记录"><a href="#NS 记录" class="headerlink" title="NS 记录"></a>NS 记录</h3><p>NS（nameserver）记录，用来指定改域名由那个 DNS 服务器来进行解析。</p>
+<p>先输入 set type=ns 再输入域名</p>
 <p><img data-src="/188/70-20201207112910659.png" alt="img" loading="lazy"></p>
-<h3 id="CNAME记录"><a href="#CNAME记录" class="headerlink" title="CNAME记录"></a>CNAME记录</h3><p>cname记录是别名记录，也成为规范名字。这种记录允许将多个名字映射到同一台计算机</p>
-<p>输入set type=cname可以查询</p>
+<h3 id="CNAME 记录"><a href="#CNAME 记录" class="headerlink" title="CNAME 记录"></a>CNAME 记录</h3><p>cname 记录是别名记录，也成为规范名字。这种记录允许将多个名字映射到同一台计算机</p>
+<p>输入 set type=cname 可以查询</p>
 <p><img data-src="/188/70-20201207112910666.png" alt="img" loading="lazy"></p>
-<p><strong>nslookup –qt=类型 目标域名</strong></p>
-<p>　　注意qt必须小写。</p>
+<p><strong>nslookup –qt= 类型 目标域名</strong></p>
+<p>　　注意 qt 必须小写。</p>
 <p>　　类型可以是一下字符，不区分大小写：</p>
-<p>　　A 地址记录(Ipv4)<br>　　AAAA 地址记录（Ipv6）<br>　　AFSDB Andrew文件系统数据库服务器记录（不懂）<br>　　ATMA ATM地址记录（不是自动提款机）<br>　　CNAME 别名记录<br>　　HINFO 硬件配置记录，包括CPU、操作系统信息<br>　　ISDN 域名对应的ISDN号码<br>　　MB 存放指定邮箱的服务器<br>　　MG 邮件组记录<br>　　MINFO 邮件组和邮箱的信息记录<br>　　MR 改名的邮箱记录<br>　　MX 邮件服务器记录<br>　　NS 名字服务器记录<br>　　PTR 反向记录（从IP地址解释域名）<br>　　RP 负责人记录<br>　　RT 路由穿透记录（不懂）<br>　　SRV TCP服务器信息记录（将有大用处）<br>　　TXT 域名对应的文本信息<br>　　X25 域名对应的X.25地址记录</p>
-<p>   看看<span class="exturl" data-url="aHR0cDovL3d3dy53ZWJrYWthLmNvbeeahGNuYW1l6K6w5b2V5ZCnLi8=">www.webkaka.com的CNAME记录吧。<i class="fa fa-external-link-alt"></i></span></p>
+<p>　　A 地址记录(Ipv4)<br>　　AAAA 地址记录（Ipv6）<br>　　AFSDB Andrew 文件系统数据库服务器记录（不懂）<br>　　ATMA ATM 地址记录（不是自动提款机）<br>　　CNAME 别名记录<br>　　HINFO 硬件配置记录，包括 CPU、操作系统信息<br>　　ISDN 域名对应的 ISDN 号码<br>　　MB 存放指定邮箱的服务器<br>　　MG 邮件组记录<br>　　MINFO 邮件组和邮箱的信息记录<br>　　MR 改名的邮箱记录<br>　　MX 邮件服务器记录<br>　　NS 名字服务器记录<br>　　PTR 反向记录（从 IP 地址解释域名）<br>　　RP 负责人记录<br>　　RT 路由穿透记录（不懂）<br>　　SRV TCP 服务器信息记录（将有大用处）<br>　　TXT 域名对应的文本信息<br>　　X25 域名对应的 X.25 地址记录</p>
+<p>   看看<span class="exturl" data-url="aHR0cDovL3d3dy53ZWJrYWthLmNvbSDnmoQgY25hbWUg6K6w5b2V5ZCnLi8=">www.webkaka.com 的 CNAME 记录吧。<i class="fa fa-external-link-alt"></i></span></p>
 <p><img data-src="/188/Center-20201207113116502.jpeg" alt="img" loading="lazy"></p>
-<p>   再看看ns（名字服务器）的记录是怎样的。</p>
+<p>   再看看 ns（名字服务器）的记录是怎样的。</p>
 <p><img data-src="/188/Center.jpeg" alt="img" loading="lazy"></p>
 <p>   说明一下，大家注意一行显示“Non-authoritative answer:”，它的出现代表这个结果是从服务器的缓存中得到的，这不是一个授权的答案。</p>
-<p>   <strong>nslookup [-qt=类型] 目标域名 指定的DNS服务器IP或域名</strong></p>
-<p>   这条指令非常实用，利用它我们可以查到目标域名在各地DNS的解析情况。</p>
-<p>   看看<span class="exturl" data-url="aHR0cDovL3d3dy53ZWJrYWthLmNvbeWcqOWbm+W3neeUteS/oeeahOino+aekOaDheWGtSjlm5vlt53nlLXkv6HnmoRkbnPmmK82MS4xMzkuMi42OSkuLw==">www.webkaka.com在四川电信的解析情况（四川电信的DNS是61.139.2.69）。<i class="fa fa-external-link-alt"></i></span></p>
+<p>   <strong>nslookup [-qt= 类型] 目标域名 指定的 DNS 服务器 IP 或域名</strong></p>
+<p>   这条指令非常实用，利用它我们可以查到目标域名在各地 DNS 的解析情况。</p>
+<p>   看看<span class="exturl" data-url="aHR0cDovL3d3dy53ZWJrYWthLmNvbSDlnKjlm5vlt53nlLXkv6HnmoTop6PmnpDmg4XlhrUo5Zub5bed55S15L+h55qEIGRucyDmmK8gNjEuMTM5LjIuNjkpLi8=">www.webkaka.com 在四川电信的解析情况（四川电信的 DNS 是 61.139.2.69）。<i class="fa fa-external-link-alt"></i></span></p>
 <p> <img data-src="/188/Center-20201207113116485.jpeg" alt="img" loading="lazy"></p>
-<p>   加上类型查询，看看域名的TXT。</p>
+<p>   加上类型查询，看看域名的 TXT。</p>
 <p> <img data-src="/188/Center-20201207113116479.jpeg" alt="img" loading="lazy"></p>
 <p>   <strong>nslookup –d [其他的参数] 目标域名 [指定的服务器地址]</strong></p>
 <p>   这条指令可以检查域名的缓存时间，检查域名的缓存时间需要我们使用一个新的参数：-d</p>
 <p>   请看范例</p>
 <p><img data-src="/188/Center-20201207113116495.jpeg" alt="img" loading="lazy"></p>
-<p>   我们忽略其他的，看看Got answer后面几行，包括了一个ttl数值。这个数值就是域名记录的生存时间。</p>
-<p>   <strong>查询域名DNS服务器的更值得推荐的方法是，使用卡卡网</strong><a target="_blank" rel="noopener external nofollow noreferrer" href="http://www.webkaka.com/dns/"><strong><em>\</em>DNS查询**</strong></a><strong>工具，这是一个网页版在线查询工具，可以从全球30多个地方进行查询，强烈推荐使用。</strong></p>
+<p>   我们忽略其他的，看看 Got answer 后面几行，包括了一个 ttl 数值。这个数值就是域名记录的生存时间。</p>
+<p>   <strong>查询域名 DNS 服务器的更值得推荐的方法是，使用卡卡网 </strong><a target="_blank" rel="noopener external nofollow noreferrer" href="http://www.webkaka.com/dns/"><strong><em>\</em>DNS 查询 **</strong></a><strong> 工具，这是一个网页版在线查询工具，可以从全球 30 多个地方进行查询，强烈推荐使用。</strong></p>
 
     </div>
 
@@ -370,16 +370,38 @@
     
 
     <footer class="post-footer">
+          <div class="reward-container">
+  <div>Buy me a coffee</div>
+  <button onclick="document.querySelector('.post-reward').classList.toggle('active');">
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/20201122213021.png" alt="Lining Wei 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/434235F3-7A93-4EA4-A7B6-4F6D977F1A89.png" alt="Lining Wei 支付宝">
+        <span>支付宝</span>
+      </div>
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/bitcoin.png" alt="Lining Wei 比特币">
+        <span>比特币</span>
+      </div>
+
+  </div>
+</div>
+
           <div class="post-tags">
-              <a href="/tags/%E9%BB%98%E8%AE%A4/" rel="tag"># 默认</a>
+              <a href="/tags/%E9%BB%98%E8%AE%A4/" rel="tag"><i class="fa fa-tag"></i> 默认</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/187.html" rel="prev" title="在Mac OS X上开启ssh服务">
-                  <i class="fa fa-chevron-left"></i> 在Mac OS X上开启ssh服务
+                <a href="/187.html" rel="prev" title="在 Mac OS X 上开启 ssh 服务">
+                  <i class="fa fa-chevron-left"></i> 在 Mac OS X 上开启 ssh 服务
                 </a>
             </div>
             <div class="post-nav-item">
@@ -460,43 +482,9 @@
 
   
   <script src="//cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/@next-theme/pjax@0.4.0/pjax.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js"></script>
-<script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/motion.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/next-boot.js"></script><script>
-var pjax = new Pjax({
-  selectors: [
-    'head title',
-    '.page-configurations',
-    '.main-inner',
-    '.post-toc-wrap',
-    '.languages',
-    '.pjax'
-  ],
-  analytics: false,
-  cacheBust: false,
-  scrollRestoration: false,
-  scrollTo: !CONFIG.bookmark.enable
-});
-
-document.addEventListener('pjax:success', () => {
-  pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
-  NexT.boot.refresh();
-  // Define Motion Sequence & Bootstrap Motion.
-  if (CONFIG.motion.enable) {
-    NexT.motion.integrator
-      .init()
-      .add(NexT.motion.middleWares.subMenu)
-      .add(NexT.motion.middleWares.postList)
-      .bootstrap();
-  }
-  const hasTOC = document.querySelector('.post-toc');
-  document.querySelector('.sidebar-inner').classList.toggle('sidebar-nav-active', hasTOC);
-  document.querySelector(hasTOC ? '.sidebar-nav-toc' : '.sidebar-nav-overview').click();
-  NexT.utils.updateSidebarPosition();
-});
-</script>
-
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/motion.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/next-boot.js"></script>
 
   
 
@@ -508,7 +496,7 @@ document.addEventListener('pjax:success', () => {
   
 
 
-<script data-pjax>
+<script>
   (function() {
     function leancloudSelector(url) {
       url = encodeURI(url);
@@ -595,18 +583,7 @@ document.addEventListener('pjax:success', () => {
   })();
 </script>
 
-    <div class="pjax">
 
-  <script src="//cdn.jsdelivr.net/npm/quicklink@2.0.0/dist/quicklink.umd.js"></script>
-  <script>
-      window.addEventListener('load', () => {
-      quicklink.listen({
-        timeout : 3000,
-        priority: true,
-        ignores : [uri => uri.includes('#'),uri => uri === 'https://weilining.github.io/188.html',]
-      });
-      });
-  </script>
 
 <script>
 NexT.utils.loadComments('#lv-container', () => {
@@ -624,6 +601,5 @@ NexT.utils.loadComments('#lv-container', () => {
 });
 </script>
 
-    </div>
 </body>
 </html>

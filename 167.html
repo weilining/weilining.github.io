@@ -18,7 +18,7 @@
 
 <link rel="stylesheet" href="/css/main.css">
 
-
+<link rel="stylesheet" href="https://fonts.dogedoge.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
@@ -29,7 +29,7 @@
   </script>
 <meta name="description" content="默认">
 <meta property="og:type" content="article">
-<meta property="og:title" content="mac 启动tomcat报错 Permission denied">
+<meta property="og:title" content="mac 启动 tomcat 报错 Permission denied">
 <meta property="og:url" content="https://weilining.github.io/167.html">
 <meta property="og:site_name" content="Ln&#39;s Blog">
 <meta property="og:description" content="默认">
@@ -47,7 +47,7 @@
 <link rel="canonical" href="https://weilining.github.io/167.html">
 
 
-<script data-pjax class="page-configurations">
+<script class="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
@@ -56,7 +56,7 @@
     lang   : 'zh-CN'
   };
 </script>
-<title>mac 启动tomcat报错 Permission denied | Ln's Blog</title>
+<title>mac 启动 tomcat 报错 Permission denied | Ln's Blog</title>
   
 
 
@@ -170,7 +170,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8A%A5%E9%94%99%EF%BC%9A"><span class="nav-number">1.</span> <span class="nav-text">报错：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E7%9A%84%E5%85%B3%E9%94%AE%E5%AD%97%EF%BC%9APermission-denied%E3%80%82"><span class="nav-number">2.</span> <span class="nav-text">问题的关键字：Permission denied。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95%EF%BC%9A"><span class="nav-number">3.</span> <span class="nav-text">解决方法：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%A8tomcat%E7%9B%AE%E5%BD%95%E4%B8%8B%E6%89%93%E5%BC%80%E7%BB%88%E7%AB%AF"><span class="nav-number">3.1.</span> <span class="nav-text">在tomcat目录下打开终端</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B2%E5%91%BD%E4%BB%A4%E4%BF%AE%E6%94%B9%E6%9D%83%E9%99%90"><span class="nav-number">3.2.</span> <span class="nav-text">敲命令修改权限</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B9%8B%E5%90%8E%E5%8F%88%E5%AD%A6%E4%B9%A0%E4%BA%86%E4%B8%8Bmac%E4%B8%8Bchmod%EF%BC%9A"><span class="nav-number">4.</span> <span class="nav-text">之后又学习了下mac下chmod：</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8A%A5%E9%94%99%EF%BC%9A"><span class="nav-number">1.</span> <span class="nav-text">报错：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E7%9A%84%E5%85%B3%E9%94%AE%E5%AD%97%EF%BC%9APermission-denied%E3%80%82"><span class="nav-number">2.</span> <span class="nav-text">问题的关键字：Permission denied。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95%EF%BC%9A"><span class="nav-number">3.</span> <span class="nav-text">解决方法：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%A8%20tomcat%20%E7%9B%AE%E5%BD%95%E4%B8%8B%E6%89%93%E5%BC%80%E7%BB%88%E7%AB%AF"><span class="nav-number">3.1.</span> <span class="nav-text">在 tomcat 目录下打开终端 </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B2%E5%91%BD%E4%BB%A4%E4%BF%AE%E6%94%B9%E6%9D%83%E9%99%90"><span class="nav-number">3.2.</span> <span class="nav-text"> 敲命令修改权限</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B9%8B%E5%90%8E%E5%8F%88%E5%AD%A6%E4%B9%A0%E4%BA%86%E4%B8%8B%20mac%20%E4%B8%8B%20chmod%EF%BC%9A"><span class="nav-number">4.</span> <span class="nav-text">之后又学习了下 mac 下 chmod：</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -186,7 +186,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">237</span>
+          <span class="site-state-item-count">238</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -251,7 +251,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          mac 启动tomcat报错 Permission denied
+          mac 启动 tomcat 报错 Permission denied
         </h1>
 
         <div class="post-meta-container">
@@ -275,7 +275,7 @@
     </span>
 
   
-    <span id="/167.html" class="post-meta-item leancloud_visitors" data-flag-title="mac 启动tomcat报错 Permission denied" title="阅读次数">
+    <span id="/167.html" class="post-meta-item leancloud_visitors" data-flag-title="mac 启动 tomcat 报错 Permission denied" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
       </span>
@@ -308,15 +308,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h2 id="报错："><a href="#报错：" class="headerlink" title="报错："></a>报错：</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">上午11:13 Error running hcrm: Cannot run program &quot;**&#x2F;apache-tomcat-8.0.52&#x2F;bin&#x2F;catalina.sh&quot; (in directory &quot;&#x2F;**&#x2F;Tomcat&#x2F;apache-tomcat-8.0.52&#x2F;bin&quot;): error&#x3D;13, Permission denied</span><br><span class="line"></span><br><span class="line">上午11:13 Error running hcrm: Unable to open debugger port (127.0.0.1:53648): java.net.SocketException &quot;Socket closed&quot;123</span><br></pre></td></tr></table></figure>
-<h2 id="问题的关键字：Permission-denied。"><a href="#问题的关键字：Permission-denied。" class="headerlink" title="问题的关键字：Permission denied。"></a>问题的关键字：Permission denied。</h2><a id="more"></a>
+        <h2 id="报错："><a href="# 报错：" class="headerlink" title="报错："></a>报错：</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">上午 11:13 Error running hcrm: Cannot run program &quot;**&#x2F;apache-tomcat-8.0.52&#x2F;bin&#x2F;catalina.sh&quot; (in directory &quot;&#x2F;**&#x2F;Tomcat&#x2F;apache-tomcat-8.0.52&#x2F;bin&quot;): error&#x3D;13, Permission denied</span><br><span class="line"></span><br><span class="line">上午 11:13 Error running hcrm: Unable to open debugger port (127.0.0.1:53648): java.net.SocketException &quot;Socket closed&quot;123</span><br></pre></td></tr></table></figure>
+<h2 id="问题的关键字：Permission-denied。"><a href="# 问题的关键字：Permission-denied。" class="headerlink" title="问题的关键字：Permission denied。"></a>问题的关键字：Permission denied。</h2><a id="more"></a>
 
 
 
-<h2 id="解决方法："><a href="#解决方法：" class="headerlink" title="解决方法："></a>解决方法：</h2><h3 id="在tomcat目录下打开终端"><a href="#在tomcat目录下打开终端" class="headerlink" title="在tomcat目录下打开终端"></a>在tomcat目录下打开终端</h3><h3 id="敲命令修改权限"><a href="#敲命令修改权限" class="headerlink" title="敲命令修改权限"></a><img data-src="/167/70-20201126045800932.png" alt="这里写图片描述" loading="lazy">敲命令修改权限</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">chmod u+x *.sh1</span><br></pre></td></tr></table></figure>
+<h2 id="解决方法："><a href="# 解决方法：" class="headerlink" title="解决方法："></a>解决方法：</h2><h3 id="在 tomcat 目录下打开终端"><a href="# 在 tomcat 目录下打开终端" class="headerlink" title="在 tomcat 目录下打开终端"></a>在 tomcat 目录下打开终端 </h3><h3 id="敲命令修改权限"><a href="# 敲命令修改权限" class="headerlink" title="敲命令修改权限"></a><img data-src="/167/70-20201126045800932.png" alt="这里写图片描述" loading="lazy"> 敲命令修改权限</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">chmod u+x *.sh1</span><br></pre></td></tr></table></figure>
 <p>如下图，即修改成功：<br><img data-src="/167/70.png" alt="这里写图片描述" loading="lazy"></p>
-<h2 id="之后又学习了下mac下chmod："><a href="#之后又学习了下mac下chmod：" class="headerlink" title="之后又学习了下mac下chmod："></a>之后又学习了下mac下chmod：</h2><p>chmod：是修改用户访问操作权限的命令</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">chmod 用户+操作+权限 文件1</span><br></pre></td></tr></table></figure>
+<h2 id="之后又学习了下 mac 下 chmod："><a href="# 之后又学习了下 mac 下 chmod：" class="headerlink" title="之后又学习了下 mac 下 chmod："></a>之后又学习了下 mac 下 chmod：</h2><p>chmod：是修改用户访问操作权限的命令</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">chmod 用户 + 操作 + 权限 文件 1</span><br></pre></td></tr></table></figure>
 <p>用户：<br>u ：文件拥有者（user）<br>g ：拥有者所在群组（group）<br>o ：其他用户（other）<br>a ：全部用户（all，包含前面三种用户范围）；</p>
 <p>操作：<br>“+” ：增加权限<br>“-” ：取消权限<br>“=” ：赋值权限；</p>
 <p>权限：<br>“r” ：可读（read）<br>“w” ：可写（write）<br>“x” ：可执行（execute）；</p>
@@ -329,8 +329,30 @@
     
 
     <footer class="post-footer">
+          <div class="reward-container">
+  <div>Buy me a coffee</div>
+  <button onclick="document.querySelector('.post-reward').classList.toggle('active');">
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/20201122213021.png" alt="Lining Wei 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/434235F3-7A93-4EA4-A7B6-4F6D977F1A89.png" alt="Lining Wei 支付宝">
+        <span>支付宝</span>
+      </div>
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/bitcoin.png" alt="Lining Wei 比特币">
+        <span>比特币</span>
+      </div>
+
+  </div>
+</div>
+
           <div class="post-tags">
-              <a href="/tags/%E9%BB%98%E8%AE%A4/" rel="tag"># 默认</a>
+              <a href="/tags/%E9%BB%98%E8%AE%A4/" rel="tag"><i class="fa fa-tag"></i> 默认</a>
           </div>
 
         
@@ -419,43 +441,9 @@
 
   
   <script src="//cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/@next-theme/pjax@0.4.0/pjax.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js"></script>
-<script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/motion.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/next-boot.js"></script><script>
-var pjax = new Pjax({
-  selectors: [
-    'head title',
-    '.page-configurations',
-    '.main-inner',
-    '.post-toc-wrap',
-    '.languages',
-    '.pjax'
-  ],
-  analytics: false,
-  cacheBust: false,
-  scrollRestoration: false,
-  scrollTo: !CONFIG.bookmark.enable
-});
-
-document.addEventListener('pjax:success', () => {
-  pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
-  NexT.boot.refresh();
-  // Define Motion Sequence & Bootstrap Motion.
-  if (CONFIG.motion.enable) {
-    NexT.motion.integrator
-      .init()
-      .add(NexT.motion.middleWares.subMenu)
-      .add(NexT.motion.middleWares.postList)
-      .bootstrap();
-  }
-  const hasTOC = document.querySelector('.post-toc');
-  document.querySelector('.sidebar-inner').classList.toggle('sidebar-nav-active', hasTOC);
-  document.querySelector(hasTOC ? '.sidebar-nav-toc' : '.sidebar-nav-overview').click();
-  NexT.utils.updateSidebarPosition();
-});
-</script>
-
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/motion.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/next-boot.js"></script>
 
   
 
@@ -467,7 +455,7 @@ document.addEventListener('pjax:success', () => {
   
 
 
-<script data-pjax>
+<script>
   (function() {
     function leancloudSelector(url) {
       url = encodeURI(url);
@@ -554,18 +542,7 @@ document.addEventListener('pjax:success', () => {
   })();
 </script>
 
-    <div class="pjax">
 
-  <script src="//cdn.jsdelivr.net/npm/quicklink@2.0.0/dist/quicklink.umd.js"></script>
-  <script>
-      window.addEventListener('load', () => {
-      quicklink.listen({
-        timeout : 3000,
-        priority: true,
-        ignores : [uri => uri.includes('#'),uri => uri === 'https://weilining.github.io/167.html',]
-      });
-      });
-  </script>
 
 <script>
 NexT.utils.loadComments('#lv-container', () => {
@@ -583,6 +560,5 @@ NexT.utils.loadComments('#lv-container', () => {
 });
 </script>
 
-    </div>
 </body>
 </html>

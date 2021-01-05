@@ -18,7 +18,7 @@
 
 <link rel="stylesheet" href="/css/main.css">
 
-
+<link rel="stylesheet" href="https://fonts.dogedoge.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
@@ -42,7 +42,7 @@
 <link rel="canonical" href="https://weilining.github.io/archives/page/20/">
 
 
-<script data-pjax class="page-configurations">
+<script class="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
@@ -180,7 +180,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">237</span>
+          <span class="site-state-item-count">238</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -231,10 +231,33 @@
     <div class="post-content">
       <div class="collection-title">
         
-        <span class="collection-header">太棒了! 目前共计 237 篇日志。 继续努力。</span>
+        <span class="collection-header">太棒了! 目前共计 238 篇日志。 继续努力。</span>
       </div>
 
       
+    <div class="collection-year">
+      <span class="collection-header">2018</span>
+    </div>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2018-01-08T22:42:24+08:00"
+              content="2018-01-08">
+          01-08
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/inspire.html" itemprop="url">
+            <span itemprop="name">会玩游戏的人都很厉害！</span>
+          </a>
+      </div>
+
+      
+    </header>
+  </article>
     <div class="collection-year">
       <span class="collection-header">2017</span>
     </div>
@@ -251,7 +274,7 @@
 
       <div class="post-title">
           <a class="post-title-link" href="/bljxtrain3-net.html" itemprop="url">
-            <span itemprop="name">网络部暑假第一次任务-《上网指南》</span>
+            <span itemprop="name">网络部暑假第一次任务 -《上网指南》</span>
           </a>
       </div>
 
@@ -351,7 +374,7 @@
 
       <div class="post-title">
           <a class="post-title-link" href="/macanswer.html" itemprop="url">
-            <span itemprop="name">Macos 10.12.5修改Apache默认根目录</span>
+            <span itemprop="name">Macos 10.12.5 修改 Apache 默认根目录</span>
           </a>
       </div>
 
@@ -371,7 +394,7 @@
 
       <div class="post-title">
           <a class="post-title-link" href="/bljxtrain2-1.html" itemprop="url">
-            <span itemprop="name">传媒部暑期提升2</span>
+            <span itemprop="name">传媒部暑期提升 2</span>
           </a>
       </div>
 
@@ -411,7 +434,7 @@
 
       <div class="post-title">
           <a class="post-title-link" href="/java.html" itemprop="url">
-            <span itemprop="name">BJFU Java 期末考试题(回忆版)</span>
+            <span itemprop="name">BJFU Java 期末考试题 (回忆版)</span>
           </a>
       </div>
 
@@ -491,43 +514,9 @@
 
   
   <script src="//cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/@next-theme/pjax@0.4.0/pjax.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js"></script>
-<script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/motion.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/next-boot.js"></script><script>
-var pjax = new Pjax({
-  selectors: [
-    'head title',
-    '.page-configurations',
-    '.main-inner',
-    '.post-toc-wrap',
-    '.languages',
-    '.pjax'
-  ],
-  analytics: false,
-  cacheBust: false,
-  scrollRestoration: false,
-  scrollTo: !CONFIG.bookmark.enable
-});
-
-document.addEventListener('pjax:success', () => {
-  pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
-  NexT.boot.refresh();
-  // Define Motion Sequence & Bootstrap Motion.
-  if (CONFIG.motion.enable) {
-    NexT.motion.integrator
-      .init()
-      .add(NexT.motion.middleWares.subMenu)
-      .add(NexT.motion.middleWares.postList)
-      .bootstrap();
-  }
-  const hasTOC = document.querySelector('.post-toc');
-  document.querySelector('.sidebar-inner').classList.toggle('sidebar-nav-active', hasTOC);
-  document.querySelector(hasTOC ? '.sidebar-nav-toc' : '.sidebar-nav-overview').click();
-  NexT.utils.updateSidebarPosition();
-});
-</script>
-
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/motion.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/next-boot.js"></script>
 
   
 
@@ -539,7 +528,7 @@ document.addEventListener('pjax:success', () => {
   
 
 
-<script data-pjax>
+<script>
   (function() {
     function leancloudSelector(url) {
       url = encodeURI(url);
@@ -626,7 +615,6 @@ document.addEventListener('pjax:success', () => {
   })();
 </script>
 
-    <div class="pjax">
 
   <script src="//cdn.jsdelivr.net/npm/quicklink@2.0.0/dist/quicklink.umd.js"></script>
   <script>
@@ -640,6 +628,5 @@ document.addEventListener('pjax:success', () => {
   </script>
 
 
-    </div>
 </body>
 </html>

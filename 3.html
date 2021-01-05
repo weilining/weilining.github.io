@@ -18,7 +18,7 @@
 
 <link rel="stylesheet" href="/css/main.css">
 
-
+<link rel="stylesheet" href="https://fonts.dogedoge.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
@@ -29,7 +29,7 @@
   </script>
 <meta name="description" content="WordPress在NGINX和Litespeed下的性能对比测试">
 <meta property="og:type" content="article">
-<meta property="og:title" content="WordPress在NGINX和Litespeed下的性能对比测试">
+<meta property="og:title" content="WordPress 在 NGINX 和 Litespeed 下的性能对比测试">
 <meta property="og:url" content="https://weilining.github.io/3.html">
 <meta property="og:site_name" content="Ln&#39;s Blog">
 <meta property="og:description" content="WordPress在NGINX和Litespeed下的性能对比测试">
@@ -76,7 +76,7 @@
 <link rel="canonical" href="https://weilining.github.io/3.html">
 
 
-<script data-pjax class="page-configurations">
+<script class="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
@@ -85,7 +85,7 @@
     lang   : 'zh-CN'
   };
 </script>
-<title>WordPress在NGINX和Litespeed下的性能对比测试 | Ln's Blog</title>
+<title>WordPress 在 NGINX 和 Litespeed 下的性能对比测试 | Ln's Blog</title>
   
 
 
@@ -199,7 +199,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%8B%E8%AF%95%E5%B9%B3%E5%8F%B0"><span class="nav-number">1.</span> <span class="nav-text">测试平台</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NGINX"><span class="nav-number">2.</span> <span class="nav-text">NGINX</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8E%9F%E7%94%9F"><span class="nav-number">2.0.1.</span> <span class="nav-text">原生</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#wp-super-cache"><span class="nav-number">2.0.2.</span> <span class="nav-text">wp super cache</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Litespeed"><span class="nav-number">3.</span> <span class="nav-text">Litespeed</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8E%9F%E7%94%9F-1"><span class="nav-number">3.0.1.</span> <span class="nav-text">原生</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#LiteSpeedcache"><span class="nav-number">3.0.2.</span> <span class="nav-text">LiteSpeedcache</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%93%E8%AE%BA"><span class="nav-number">4.</span> <span class="nav-text">结论</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%8B%E8%AF%95%E5%B9%B3%E5%8F%B0"><span class="nav-number">1.</span> <span class="nav-text">测试平台 </span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NGINX"><span class="nav-number">2.</span> <span class="nav-text">NGINX</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8E%9F%E7%94%9F"><span class="nav-number">2.0.1.</span> <span class="nav-text">原生 </span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#wp-super-cache"><span class="nav-number">2.0.2.</span> <span class="nav-text">wp super cache</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Litespeed"><span class="nav-number">3.</span> <span class="nav-text">Litespeed</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8E%9F%E7%94%9F%20-1"><span class="nav-number">3.0.1.</span> <span class="nav-text">原生</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#LiteSpeedcache"><span class="nav-number">3.0.2.</span> <span class="nav-text">LiteSpeedcache</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%93%E8%AE%BA"><span class="nav-number">4.</span> <span class="nav-text">结论</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -215,7 +215,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">237</span>
+          <span class="site-state-item-count">238</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -280,7 +280,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          WordPress在NGINX和Litespeed下的性能对比测试
+          WordPress 在 NGINX 和 Litespeed 下的性能对比测试
         </h1>
 
         <div class="post-meta-container">
@@ -304,7 +304,7 @@
     </span>
 
   
-    <span id="/3.html" class="post-meta-item leancloud_visitors" data-flag-title="WordPress在NGINX和Litespeed下的性能对比测试" title="阅读次数">
+    <span id="/3.html" class="post-meta-item leancloud_visitors" data-flag-title="WordPress 在 NGINX 和 Litespeed 下的性能对比测试" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
       </span>
@@ -337,33 +337,33 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>都说Wordpress 在<span class="exturl" data-url="aHR0cHM6Ly8yZGVtby50b3AvdGFnL2xpdGVzcGVlZA==">litespeed<i class="fa fa-external-link-alt"></i></span>下的表现要好于NGINX，但是很少看到有人做<span class="exturl" data-url="aHR0cHM6Ly8yZGVtby50b3AvdGFnLyVFNiVCNSU4QiVFOCVBRiU5NQ==">测试<i class="fa fa-external-link-alt"></i></span>，于是我来做一个对比测试</p>
+        <p>都说 Wordpress 在 <span class="exturl" data-url="aHR0cHM6Ly8yZGVtby50b3AvdGFnL2xpdGVzcGVlZA==">litespeed<i class="fa fa-external-link-alt"></i></span> 下的表现要好于 NGINX，但是很少看到有人做 <span class="exturl" data-url="aHR0cHM6Ly8yZGVtby50b3AvdGFnLyVFNiVCNSU4QiVFOCVBRiU5NQ=="> 测试<i class="fa fa-external-link-alt"></i></span>，于是我来做一个对比测试</p>
 <a id="more"></a>
 
-<h2 id="测试平台"><a href="#测试平台" class="headerlink" title="测试平台"></a>测试平台</h2><p>主机：<span class="exturl" data-url="aHR0cHM6Ly8yZGVtby50b3AvdGFnLyVFOCU4NSVCRSVFOCVBRSVBRiVFNCVCQSU5MSVFOCVCRCVCQiVFOSU4NyU4Rg==">腾讯云轻量<i class="fa fa-external-link-alt"></i></span>HK1C2G版</p>
-<p>WordPress版本：5.3</p>
+<h2 id="测试平台"><a href="# 测试平台" class="headerlink" title="测试平台"></a>测试平台 </h2><p> 主机：<span class="exturl" data-url="aHR0cHM6Ly8yZGVtby50b3AvdGFnLyVFOCU4NSVCRSVFOCVBRSVBRiVFNCVCQSU5MSVFOCVCRCVCQiVFOSU4NyU4Rg==">腾讯云轻量<i class="fa fa-external-link-alt"></i></span>HK1C2G 版</p>
+<p>WordPress 版本：5.3</p>
 <p>压力测试平台：<span class="exturl" data-url="aHR0cHM6Ly9sb2FkZXIuaW8v">https://loader.io/<i class="fa fa-external-link-alt"></i></span></p>
-<p>默认主题，文章为纯文字，txt文档下为34K</p>
-<p><span class="exturl" data-url="aHR0cHM6Ly8yZGVtby50b3AvdGFnLyVFOCU4NSVCRSVFOCVBRSVBRiVFNCVCQSU5MQ==">腾讯云<i class="fa fa-external-link-alt"></i></span>最近做活动每天上午10点-10点半之间都有199-100劵放出，有需要的可以领一下购买</p>
+<p>默认主题，文章为纯文字，txt 文档下为 34K</p>
+<p><span class="exturl" data-url="aHR0cHM6Ly8yZGVtby50b3AvdGFnLyVFOCU4NSVCRSVFOCVBRSVBRiVFNCVCQSU5MQ==">腾讯云 <i class="fa fa-external-link-alt"></i></span> 最近做活动每天上午 10 点 -10 点半之间都有 199-100 劵放出，有需要的可以领一下购买</p>
 <p><img data-src="/3/aaa212cd913012fb772e749fd8a8d77a-20201022155654320.png" alt="img" loading="lazy"></p>
-<p>腾讯云学生活动也很不错，25岁以下1核2G5M的轻量VPS只要9块/月</p>
-<p>25岁以下自动获得学生资格，25岁以上可以进行学生认证</p>
-<p>每个月9块钱就可以获得1C2G5M1T流量，十分划算有国内服务需求的直接上。</p>
+<p>腾讯云学生活动也很不错，25 岁以下 1 核 2G5M 的轻量 VPS 只要 9 块 / 月</p>
+<p>25 岁以下自动获得学生资格，25 岁以上可以进行学生认证</p>
+<p>每个月 9 块钱就可以获得 1C2G5M1T 流量，十分划算有国内服务需求的直接上。</p>
 <p><img data-src="/3/83fc54895dcc8373dba0e59bd5726dcd-20201022155654138.png" alt="img" loading="lazy"></p>
 <p><img data-src="/3/2fb87490bdd326291263173438eae104-20201022155654331.png" alt="img" loading="lazy"></p>
 <p><strong>活动地址直达：</strong><span class="exturl" data-url="aHR0cHM6Ly9jdXJsLnFjbG91ZC5jb20vaFFpRnRVano=">https://curl.qcloud.com/hQiFtUjz<i class="fa fa-external-link-alt"></i></span></p>
-<h2 id="NGINX"><a href="#NGINX" class="headerlink" title="NGINX"></a>NGINX</h2><h4 id="原生"><a href="#原生" class="headerlink" title="原生"></a>原生</h4><p>先上一个17测看看基本情况</p>
+<h2 id="NGINX"><a href="#NGINX" class="headerlink" title="NGINX"></a>NGINX</h2><h4 id="原生"><a href="# 原生" class="headerlink" title="原生"></a>原生 </h4><p> 先上一个 17 测看看基本情况</p>
 <p><img data-src="https://img.jpggod.com/file/jpggod/2020/10/21/48b2a008969a4fde4875f20780ff76a9.png" alt="img" loading="lazy"></p>
 <p><img data-src="/3/d3079603a96668d58ef5de5222805abc-20201022155656669.png" alt="img" loading="lazy"></p>
-<p><strong>loader测试</strong></p>
+<p><strong>loader 测试</strong></p>
 <p>2000/min</p>
 <p><img data-src="https://img.jpggod.com/file/jpggod/2020/10/21/432118efcac760a22c1ebf85d5aae5a5.png" alt="img" loading="lazy"></p>
 <p>2500/min</p>
 <p><img data-src="/3/0f8eeb88d97c590fe3dcd8bb50fef6bd-20201022155654451.png" alt="img" loading="lazy"></p>
 <p>和我上次测试负载均衡的结果差不多详情请看</p>
-<p><span class="exturl" data-url="aHR0cHM6Ly8yZGVtby50b3AvMTE3Lmh0bWw=">利用腾讯云轻量服务器+宝塔快速搭建负载均衡网站<i class="fa fa-external-link-alt"></i></span></p>
-<p>不过由于WordPress比typecho更吃资源所以表现要差上一些</p>
-<p><strong>GTmetrix测试</strong></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly8yZGVtby50b3AvMTE3Lmh0bWw=">利用腾讯云轻量服务器 + 宝塔快速搭建负载均衡网站<i class="fa fa-external-link-alt"></i></span></p>
+<p>不过由于 WordPress 比 typecho 更吃资源所以表现要差上一些</p>
+<p><strong>GTmetrix 测试</strong></p>
 <p>看起来自带的主题真的是经过千锤百炼的</p>
 <p><img data-src="/3/4c800485b789a75587888e6f08ec83e0-20201022155657211.png" alt="img" loading="lazy"></p>
 <p><strong>google pagespeed</strong></p>
@@ -372,7 +372,7 @@
 <p>桌面设备</p>
 <p><img data-src="/3/752dd942390cdd7368754d8199d6de8b-20201022155654970.png" alt="img" loading="lazy"></p>
 <h4 id="wp-super-cache"><a href="#wp-super-cache" class="headerlink" title="wp super cache"></a>wp super cache</h4><p><strong>loader</strong></p>
-<p>开了插件之后可承受并发数变少了，插件占用了一定的资源，所以WordPress能用一个插件解决的就别用两个，尤其是大型插件</p>
+<p>开了插件之后可承受并发数变少了，插件占用了一定的资源，所以 WordPress 能用一个插件解决的就别用两个，尤其是大型插件</p>
 <p><img data-src="/3/2674cb8a02948d78d147006772e7e11f-20201022155655494.png" alt="img" loading="lazy"></p>
 <p><strong>GTmetrix</strong></p>
 <p><img data-src="/3/a86f1b54a232b4f64a95b164295c4ad7-20201022155656551.png" alt="img" loading="lazy"></p>
@@ -382,10 +382,10 @@
 <p>桌面设备</p>
 <p><img data-src="/3/3c9325f7a70c2a1ba6289c011a136e8b-20201022155657313.png" alt="img" loading="lazy"></p>
 <p>开启缓存插件之后加载速度上有了明显的提升，在速度上算的上是一个优秀的网页了。</p>
-<h2 id="Litespeed"><a href="#Litespeed" class="headerlink" title="Litespeed"></a>Litespeed</h2><p>更换程序成功后禁用缓存刷新页面看看是否是LS</p>
+<h2 id="Litespeed"><a href="#Litespeed" class="headerlink" title="Litespeed"></a>Litespeed</h2><p>更换程序成功后禁用缓存刷新页面看看是否是 LS</p>
 <p><img data-src="/3/4635f468db4706ce79e760a9f93797aa-20201022155658683.png" alt="img" loading="lazy"></p>
-<h4 id="原生-1"><a href="#原生-1" class="headerlink" title="原生"></a>原生</h4><p><strong>17ce</strong></p>
-<p>尴尬LS会拖慢网速的吗？</p>
+<h4 id="原生 -1"><a href="# 原生 -1" class="headerlink" title="原生"></a>原生</h4><p><strong>17ce</strong></p>
+<p>尴尬 LS 会拖慢网速的吗？</p>
 <p><img data-src="/3/d0d2526036cc87131365e21093426ec2-20201022155658949.png" alt="img" loading="lazy"></p>
 <p><img data-src="/3/915c69178e9c71b81bccc7fdca68d045-20201022155657757.png" alt="img" loading="lazy"></p>
 <p><strong>gtmetrix</strong></p>
@@ -418,12 +418,12 @@
 <p><img data-src="/3/423de1308e0c2e460e46cf70db392327-20201022155703909.png" alt="img" loading="lazy"></p>
 <p>4000/min</p>
 <p><img data-src="/3/8339587c3a2c5f8a0481c04487b713b2-20201022155701638.png" alt="img" loading="lazy"></p>
-<p>其实我觉得对于LiteSpeed来说4000其实也没有问题，最大的问题估计还是带宽瓶颈，腾讯云的香港轻量服务器给的上传带宽阈值为30m，下图为测4000/min时的上传带宽，就算忽略统计误差也远超30/8*1024=3840KB 了，所以后面延迟增加的原因主要是带宽部分。</p>
+<p>其实我觉得对于 LiteSpeed 来说 4000 其实也没有问题，最大的问题估计还是带宽瓶颈，腾讯云的香港轻量服务器给的上传带宽阈值为 30m，下图为测 4000/min 时的上传带宽，就算忽略统计误差也远超 30/8*1024=3840KB 了，所以后面延迟增加的原因主要是带宽部分。</p>
 <p><img data-src="/3/3f0dacd6e7260492846ab6677f25be22-20201022155701153.png" alt="img" loading="lazy"></p>
-<p>附上用了LScache之后的17测</p>
+<p>附上用了 LScache 之后的 17 测</p>
 <p><img data-src="/3/d7a532eafabfa5cb17a1760849400e48-20201022155701552.png" alt="img" loading="lazy"></p>
 <p><img data-src="/3/d93221902adddb61c789d4708c9fa19a-20201022155702192.png" alt="img" loading="lazy"></p>
-<h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><p>Litespeed对于WordPress的加速效果要配合Litespeedcache才能突显出来，否则光秃秃的一个LS其实并不比NGINX好，在某些方面甚至是出于劣势的。如果你的WordPress网站流量很大，那么我建议选择LiteSpeed+<span class="exturl" data-url="aHR0cHM6Ly8yZGVtby50b3AvdGFnL2xpdGVzcGVlZGNhY2hl">litespeedcache<i class="fa fa-external-link-alt"></i></span>+redis/memcached更好，当然本次测试的项目比较单一，更多深层次的一些东西也未进行专业测试。大家参考为主，实际选择还得看个人爱好及专业程度</p>
+<h2 id="结论"><a href="# 结论" class="headerlink" title="结论"></a>结论</h2><p>Litespeed 对于 WordPress 的加速效果要配合 Litespeedcache 才能突显出来，否则光秃秃的一个 LS 其实并不比 NGINX 好，在某些方面甚至是出于劣势的。如果你的 WordPress 网站流量很大，那么我建议选择 LiteSpeed+<span class="exturl" data-url="aHR0cHM6Ly8yZGVtby50b3AvdGFnL2xpdGVzcGVlZGNhY2hl">litespeedcache<i class="fa fa-external-link-alt"></i></span>+redis/memcached 更好，当然本次测试的项目比较单一，更多深层次的一些东西也未进行专业测试。大家参考为主，实际选择还得看个人爱好及专业程度</p>
 
     </div>
 
@@ -432,8 +432,30 @@
     
 
     <footer class="post-footer">
+          <div class="reward-container">
+  <div>Buy me a coffee</div>
+  <button onclick="document.querySelector('.post-reward').classList.toggle('active');">
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/20201122213021.png" alt="Lining Wei 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/434235F3-7A93-4EA4-A7B6-4F6D977F1A89.png" alt="Lining Wei 支付宝">
+        <span>支付宝</span>
+      </div>
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/bitcoin.png" alt="Lining Wei 比特币">
+        <span>比特币</span>
+      </div>
+
+  </div>
+</div>
+
           <div class="post-tags">
-              <a href="/tags/%E9%BB%98%E8%AE%A4/" rel="tag"># 默认</a>
+              <a href="/tags/%E9%BB%98%E8%AE%A4/" rel="tag"><i class="fa fa-tag"></i> 默认</a>
           </div>
 
         
@@ -445,8 +467,8 @@
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/4.html" rel="next" title="macOS TeamViewer 修改ID">
-                  macOS TeamViewer 修改ID <i class="fa fa-chevron-right"></i>
+                <a href="/4.html" rel="next" title="macOS TeamViewer 修改 ID">
+                  macOS TeamViewer 修改 ID <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
@@ -522,43 +544,9 @@
 
   
   <script src="//cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/@next-theme/pjax@0.4.0/pjax.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js"></script>
-<script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/motion.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/next-boot.js"></script><script>
-var pjax = new Pjax({
-  selectors: [
-    'head title',
-    '.page-configurations',
-    '.main-inner',
-    '.post-toc-wrap',
-    '.languages',
-    '.pjax'
-  ],
-  analytics: false,
-  cacheBust: false,
-  scrollRestoration: false,
-  scrollTo: !CONFIG.bookmark.enable
-});
-
-document.addEventListener('pjax:success', () => {
-  pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
-  NexT.boot.refresh();
-  // Define Motion Sequence & Bootstrap Motion.
-  if (CONFIG.motion.enable) {
-    NexT.motion.integrator
-      .init()
-      .add(NexT.motion.middleWares.subMenu)
-      .add(NexT.motion.middleWares.postList)
-      .bootstrap();
-  }
-  const hasTOC = document.querySelector('.post-toc');
-  document.querySelector('.sidebar-inner').classList.toggle('sidebar-nav-active', hasTOC);
-  document.querySelector(hasTOC ? '.sidebar-nav-toc' : '.sidebar-nav-overview').click();
-  NexT.utils.updateSidebarPosition();
-});
-</script>
-
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/motion.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/next-boot.js"></script>
 
   
 
@@ -570,7 +558,7 @@ document.addEventListener('pjax:success', () => {
   
 
 
-<script data-pjax>
+<script>
   (function() {
     function leancloudSelector(url) {
       url = encodeURI(url);
@@ -657,18 +645,7 @@ document.addEventListener('pjax:success', () => {
   })();
 </script>
 
-    <div class="pjax">
 
-  <script src="//cdn.jsdelivr.net/npm/quicklink@2.0.0/dist/quicklink.umd.js"></script>
-  <script>
-      window.addEventListener('load', () => {
-      quicklink.listen({
-        timeout : 3000,
-        priority: true,
-        ignores : [uri => uri.includes('#'),uri => uri === 'https://weilining.github.io/3.html',]
-      });
-      });
-  </script>
 
 <script>
 NexT.utils.loadComments('#lv-container', () => {
@@ -686,6 +663,5 @@ NexT.utils.loadComments('#lv-container', () => {
 });
 </script>
 
-    </div>
 </body>
 </html>

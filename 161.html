@@ -18,7 +18,7 @@
 
 <link rel="stylesheet" href="/css/main.css">
 
-
+<link rel="stylesheet" href="https://fonts.dogedoge.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
@@ -29,7 +29,7 @@
   </script>
 <meta name="description" content="默认">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Gitlab管理用户、组、权限">
+<meta property="og:title" content="Gitlab 管理用户、组、权限">
 <meta property="og:url" content="https://weilining.github.io/161.html">
 <meta property="og:site_name" content="Ln&#39;s Blog">
 <meta property="og:description" content="默认">
@@ -62,7 +62,7 @@
 <link rel="canonical" href="https://weilining.github.io/161.html">
 
 
-<script data-pjax class="page-configurations">
+<script class="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
@@ -71,7 +71,7 @@
     lang   : 'zh-CN'
   };
 </script>
-<title>Gitlab管理用户、组、权限 | Ln's Blog</title>
+<title>Gitlab 管理用户、组、权限 | Ln's Blog</title>
   
 
 
@@ -185,7 +185,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80-%E6%B7%BB%E5%8A%A0%E7%94%A8%E6%88%B7"><span class="nav-number">1.</span> <span class="nav-text">一. 添加用户</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E7%94%A8root-%E7%AE%A1%E7%90%86%E5%91%98%E7%99%BB%E9%99%86%E3%80%82"><span class="nav-number">1.1.</span> <span class="nav-text">1. 用root 管理员登陆。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E7%82%B9%E5%87%BB%E7%AE%A1%E7%90%86%E5%8C%BA%E5%9F%9F"><span class="nav-number">1.2.</span> <span class="nav-text">2. 点击管理区域</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%E7%82%B9%E5%87%BBNew-User"><span class="nav-number">1.3.</span> <span class="nav-text">3. 点击New User</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-%E8%BE%93%E5%85%A5%E7%94%A8%E6%88%B7%E7%9B%B8%E5%85%B3%E4%BF%A1%E6%81%AF"><span class="nav-number">1.4.</span> <span class="nav-text">4. 输入用户相关信息</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-%E7%94%A8%E6%88%B7%E4%BC%9A%E6%94%B6%E5%88%B0%E9%82%AE%E4%BB%B6%E5%A6%82%E4%B8%8B%E7%94%BB%E9%9D%A2%EF%BC%8C%E7%82%B9%E5%87%BB%E8%AE%BE%E7%BD%AE%E5%AF%86%E7%A0%81%E5%8D%B3%E5%8F%AF%E3%80%82"><span class="nav-number">1.5.</span> <span class="nav-text">5. 用户会收到邮件如下画面，点击设置密码即可。</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C-%E5%88%9B%E5%BB%BA%E7%BB%84"><span class="nav-number">2.</span> <span class="nav-text">二. 创建组</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E4%BD%BF%E7%94%A8%E7%AE%A1%E7%90%86%E5%91%98%E7%99%BB%E9%99%86gitlab%E6%9C%8D%E5%8A%A1%E5%99%A8%E3%80%82"><span class="nav-number">2.1.</span> <span class="nav-text">1. 使用管理员登陆gitlab服务器。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E7%82%B9%E5%87%BB%E7%AE%A1%E7%90%86%E5%8C%BA%E5%9F%9F%E2%80%94Group-Add-group"><span class="nav-number">2.2.</span> <span class="nav-text">2. 点击管理区域—Group-Add group </span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%E4%BE%9D%E6%AC%A1%E5%A1%AB%E5%85%A5%E7%BB%84%E8%B7%AF%E5%BE%84%EF%BC%8C%E5%90%8D%E7%A7%B0%E5%92%8C%E6%8F%8F%E8%BF%B0%E7%AD%89%E4%BF%A1%E6%81%AF"><span class="nav-number">2.3.</span> <span class="nav-text">3. 依次填入组路径，名称和描述等信息</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-%E5%9C%A8%E5%A6%82%E4%B8%8B%E7%94%BB%E9%9D%A2%E9%80%89%E6%8B%A9%E7%94%A8%E6%88%B7%E5%8A%A0%E5%85%A5%E5%88%B0%E5%88%9A%E5%88%9B%E5%BB%BA%E7%9A%84%E7%BB%84%E3%80%81%E6%9D%83%E9%99%90%E7%AD%89-%E3%80%82"><span class="nav-number">2.4.</span> <span class="nav-text">4. 在如下画面选择用户加入到刚创建的组、权限等 。</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89-%E7%94%A8%E6%88%B7%E6%9D%83%E9%99%90"><span class="nav-number">3.</span> <span class="nav-text">三. 用户权限</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E4%BD%BF%E7%94%A8%E7%AE%A1%E7%90%86%E5%91%98%E6%89%93%E5%BC%80%E8%A6%81%E8%AE%BE%E7%BD%AE%E6%9D%83%E9%99%90%E7%9A%84%E9%A1%B9%E7%9B%AE%E3%80%82"><span class="nav-number">3.1.</span> <span class="nav-text">1. 使用管理员打开要设置权限的项目。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E7%82%B9%E5%87%BB%E3%80%90Settings%E3%80%91-%E3%80%90Members%E3%80%91"><span class="nav-number">3.2.</span> <span class="nav-text">2. 点击【Settings】--【Members】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%E6%B7%BB%E5%8A%A0%E5%AE%8C%E6%88%90%E5%90%8E%EF%BC%8C%E5%A6%82%E4%B8%8B%E5%9B%BE%E6%89%80%E7%A4%BA"><span class="nav-number">3.3.</span> <span class="nav-text">3. 添加完成后，如下图所示</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-%E4%B8%8B%E8%A1%A8%E5%AE%8C%E6%95%B4%E7%9A%84%E5%88%97%E5%87%BA%E4%BA%86Guest-Reporter-Developer-Master-Owner%E5%AF%B9%E5%BA%94%E7%9A%84%E6%9D%83%E9%99%90%E3%80%82"><span class="nav-number">3.4.</span> <span class="nav-text">4. 下表完整的列出了Guest,Reporter,Developer,Master,Owner对应的权限。</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80-%E4%BF%9D%E6%8A%A4%E4%B8%BB%E8%A6%81%E5%88%86%E6%94%AF"><span class="nav-number">4.</span> <span class="nav-text">一. 保护主要分支</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E4%BD%BF%E7%94%A8%E7%AE%A1%E7%90%86%E5%91%98%E8%BF%9B%E5%85%A5%E5%88%B0Gitlab%E6%9C%8D%E5%8A%A1%E5%99%A8%E3%80%82"><span class="nav-number">4.1.</span> <span class="nav-text">1. 使用管理员进入到Gitlab服务器。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E5%88%87%E6%8D%A2%E5%88%B0%E4%BD%A0%E6%83%B3%E8%A6%81%E4%BF%9D%E6%8A%A4%E7%9A%84%E9%A1%B9%E7%9B%AE%E3%80%82"><span class="nav-number">4.2.</span> <span class="nav-text">2. 切换到你想要保护的项目。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%E7%82%B9%E5%87%BB%E3%80%90settings%E3%80%91"><span class="nav-number">4.3.</span> <span class="nav-text">3. 点击【settings】</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C-%E9%85%8D%E7%BD%AE%E9%A1%B9%E7%9B%AE%E7%9A%84%E5%8F%AF%E8%A7%81%E6%80%A7"><span class="nav-number">5.</span> <span class="nav-text">二. 配置项目的可见性</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E4%BD%BF%E7%94%A8%E7%AE%A1%E7%90%86%E5%91%98%E8%BF%9B%E5%85%A5%E5%88%B0Gitlab%E6%9C%8D%E5%8A%A1%E5%99%A8%E3%80%82-1"><span class="nav-number">5.1.</span> <span class="nav-text">1. 使用管理员进入到Gitlab服务器。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E5%88%87%E6%8D%A2%E5%88%B0%E4%BD%A0%E6%83%B3%E8%A6%81%E4%BF%9D%E6%8A%A4%E7%9A%84%E9%A1%B9%E7%9B%AE%E3%80%82-1"><span class="nav-number">5.2.</span> <span class="nav-text">2. 切换到你想要保护的项目。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%E7%82%B9%E5%87%BB%E3%80%90settings%E3%80%91-1"><span class="nav-number">5.3.</span> <span class="nav-text">3. 点击【settings】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-%E7%82%B9%E5%87%BB%E3%80%90General%E3%80%91-%E3%80%90Permissions%E3%80%91"><span class="nav-number">5.4.</span> <span class="nav-text">4. 点击【General】-【Permissions】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-number">5.5.</span> <span class="nav-text"></span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-%E5%9C%A8%E4%B8%8B%E5%9B%BE%E7%BA%A2%E8%89%B2%E5%9C%88%E5%86%85%E8%AE%BE%E7%BD%AE%E9%A1%B9%E7%9B%AE%E5%8F%AF%E8%A7%81%E6%80%A7%E3%80%82"><span class="nav-number">5.6.</span> <span class="nav-text">5. 在下图红色圈内设置项目可见性。</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89-%E7%A7%BB%E9%99%A4%E7%94%A8%E6%88%B7"><span class="nav-number">6.</span> <span class="nav-text">三. 移除用户</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E4%BD%BF%E7%94%A8%E7%AE%A1%E7%90%86%E5%91%98%E7%99%BB%E9%99%86Gitlab%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="nav-number">6.1.</span> <span class="nav-text">1. 使用管理员登陆Gitlab服务器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E7%82%B9%E5%87%BB%E7%AE%A1%E7%90%86%E5%8C%BA%E5%9F%9F-1"><span class="nav-number">6.2.</span> <span class="nav-text">2. 点击管理区域</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%E7%82%B9%E5%87%BBUsers"><span class="nav-number">6.3.</span> <span class="nav-text">3. 点击Users.</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-%E7%82%B9%E5%87%BB%E3%80%90Block-User%E3%80%91"><span class="nav-number">6.4.</span> <span class="nav-text">4. 点击【Block User】</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%20-%20%E6%B7%BB%E5%8A%A0%E7%94%A8%E6%88%B7"><span class="nav-number">1.</span> <span class="nav-text">一. 添加用户</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%20%E7%94%A8%20root-%20%E7%AE%A1%E7%90%86%E5%91%98%E7%99%BB%E9%99%86%E3%80%82"><span class="nav-number">1.1.</span> <span class="nav-text">1. 用 root 管理员登陆。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%20%E7%82%B9%E5%87%BB%E7%AE%A1%E7%90%86%E5%8C%BA%E5%9F%9F"><span class="nav-number">1.2.</span> <span class="nav-text">2. 点击管理区域</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%20%E7%82%B9%E5%87%BB%20New-User"><span class="nav-number">1.3.</span> <span class="nav-text">3. 点击 New User</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-%20%E8%BE%93%E5%85%A5%E7%94%A8%E6%88%B7%E7%9B%B8%E5%85%B3%E4%BF%A1%E6%81%AF"><span class="nav-number">1.4.</span> <span class="nav-text">4. 输入用户相关信息</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-%20%E7%94%A8%E6%88%B7%E4%BC%9A%E6%94%B6%E5%88%B0%E9%82%AE%E4%BB%B6%E5%A6%82%E4%B8%8B%E7%94%BB%E9%9D%A2%EF%BC%8C%E7%82%B9%E5%87%BB%E8%AE%BE%E7%BD%AE%E5%AF%86%E7%A0%81%E5%8D%B3%E5%8F%AF%E3%80%82"><span class="nav-number">1.5.</span> <span class="nav-text">5. 用户会收到邮件如下画面，点击设置密码即可。</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%20-%20%E5%88%9B%E5%BB%BA%E7%BB%84"><span class="nav-number">2.</span> <span class="nav-text">二. 创建组</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%20%E4%BD%BF%E7%94%A8%E7%AE%A1%E7%90%86%E5%91%98%E7%99%BB%E9%99%86%20gitlab%20%E6%9C%8D%E5%8A%A1%E5%99%A8%E3%80%82"><span class="nav-number">2.1.</span> <span class="nav-text">1. 使用管理员登陆 gitlab 服务器。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%20%E7%82%B9%E5%87%BB%E7%AE%A1%E7%90%86%E5%8C%BA%E5%9F%9F%E2%80%94Group-Add-group"><span class="nav-number">2.2.</span> <span class="nav-text">2. 点击管理区域—Group-Add group </span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%20%E4%BE%9D%E6%AC%A1%E5%A1%AB%E5%85%A5%E7%BB%84%E8%B7%AF%E5%BE%84%EF%BC%8C%E5%90%8D%E7%A7%B0%E5%92%8C%E6%8F%8F%E8%BF%B0%E7%AD%89%E4%BF%A1%E6%81%AF"><span class="nav-number">2.3.</span> <span class="nav-text">3. 依次填入组路径，名称和描述等信息</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-%20%E5%9C%A8%E5%A6%82%E4%B8%8B%E7%94%BB%E9%9D%A2%E9%80%89%E6%8B%A9%E7%94%A8%E6%88%B7%E5%8A%A0%E5%85%A5%E5%88%B0%E5%88%9A%E5%88%9B%E5%BB%BA%E7%9A%84%E7%BB%84%E3%80%81%E6%9D%83%E9%99%90%E7%AD%89%20-%E3%80%82"><span class="nav-number">2.4.</span> <span class="nav-text">4. 在如下画面选择用户加入到刚创建的组、权限等 。</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%20-%20%E7%94%A8%E6%88%B7%E6%9D%83%E9%99%90"><span class="nav-number">3.</span> <span class="nav-text">三. 用户权限</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%20%E4%BD%BF%E7%94%A8%E7%AE%A1%E7%90%86%E5%91%98%E6%89%93%E5%BC%80%E8%A6%81%E8%AE%BE%E7%BD%AE%E6%9D%83%E9%99%90%E7%9A%84%E9%A1%B9%E7%9B%AE%E3%80%82"><span class="nav-number">3.1.</span> <span class="nav-text">1. 使用管理员打开要设置权限的项目。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%20%E7%82%B9%E5%87%BB%E3%80%90Settings%E3%80%91-%E3%80%90Members%E3%80%91"><span class="nav-number">3.2.</span> <span class="nav-text">2. 点击【Settings】--【Members】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%20%E6%B7%BB%E5%8A%A0%E5%AE%8C%E6%88%90%E5%90%8E%EF%BC%8C%E5%A6%82%E4%B8%8B%E5%9B%BE%E6%89%80%E7%A4%BA"><span class="nav-number">3.3.</span> <span class="nav-text">3. 添加完成后，如下图所示</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-%20%E4%B8%8B%E8%A1%A8%E5%AE%8C%E6%95%B4%E7%9A%84%E5%88%97%E5%87%BA%E4%BA%86%20Guest-Reporter-Developer-Master-Owner%20%E5%AF%B9%E5%BA%94%E7%9A%84%E6%9D%83%E9%99%90%E3%80%82"><span class="nav-number">3.4.</span> <span class="nav-text">4. 下表完整的列出了 Guest,Reporter,Developer,Master,Owner 对应的权限。</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%20-%20%E4%BF%9D%E6%8A%A4%E4%B8%BB%E8%A6%81%E5%88%86%E6%94%AF"><span class="nav-number">4.</span> <span class="nav-text">一. 保护主要分支 </span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%20%E4%BD%BF%E7%94%A8%E7%AE%A1%E7%90%86%E5%91%98%E8%BF%9B%E5%85%A5%E5%88%B0%20Gitlab%20%E6%9C%8D%E5%8A%A1%E5%99%A8%E3%80%82"><span class="nav-number">4.1.</span> <span class="nav-text">1. 使用管理员进入到 Gitlab 服务器。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%20%E5%88%87%E6%8D%A2%E5%88%B0%E4%BD%A0%E6%83%B3%E8%A6%81%E4%BF%9D%E6%8A%A4%E7%9A%84%E9%A1%B9%E7%9B%AE%E3%80%82"><span class="nav-number">4.2.</span> <span class="nav-text">2. 切换到你想要保护的项目。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%20%E7%82%B9%E5%87%BB%E3%80%90settings%E3%80%91"><span class="nav-number">4.3.</span> <span class="nav-text">3. 点击【settings】</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%20-%20%E9%85%8D%E7%BD%AE%E9%A1%B9%E7%9B%AE%E7%9A%84%E5%8F%AF%E8%A7%81%E6%80%A7"><span class="nav-number">5.</span> <span class="nav-text">二. 配置项目的可见性</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%20%E4%BD%BF%E7%94%A8%E7%AE%A1%E7%90%86%E5%91%98%E8%BF%9B%E5%85%A5%E5%88%B0%20Gitlab%20%E6%9C%8D%E5%8A%A1%E5%99%A8%E3%80%82-1"><span class="nav-number">5.1.</span> <span class="nav-text">1. 使用管理员进入到 Gitlab 服务器。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%20%E5%88%87%E6%8D%A2%E5%88%B0%E4%BD%A0%E6%83%B3%E8%A6%81%E4%BF%9D%E6%8A%A4%E7%9A%84%E9%A1%B9%E7%9B%AE%E3%80%82-1"><span class="nav-number">5.2.</span> <span class="nav-text">2. 切换到你想要保护的项目。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%20%E7%82%B9%E5%87%BB%E3%80%90settings%E3%80%91-1"><span class="nav-number">5.3.</span> <span class="nav-text">3. 点击【settings】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-%20%E7%82%B9%E5%87%BB%E3%80%90General%E3%80%91-%E3%80%90Permissions%E3%80%91"><span class="nav-number">5.4.</span> <span class="nav-text">4. 点击【General】-【Permissions】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-number">5.5.</span> <span class="nav-text"></span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-%20%E5%9C%A8%E4%B8%8B%E5%9B%BE%E7%BA%A2%E8%89%B2%E5%9C%88%E5%86%85%E8%AE%BE%E7%BD%AE%E9%A1%B9%E7%9B%AE%E5%8F%AF%E8%A7%81%E6%80%A7%E3%80%82"><span class="nav-number">5.6.</span> <span class="nav-text">5. 在下图红色圈内设置项目可见性。</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%20-%20%E7%A7%BB%E9%99%A4%E7%94%A8%E6%88%B7"><span class="nav-number">6.</span> <span class="nav-text">三. 移除用户</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%20%E4%BD%BF%E7%94%A8%E7%AE%A1%E7%90%86%E5%91%98%E7%99%BB%E9%99%86%20Gitlab%20%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="nav-number">6.1.</span> <span class="nav-text">1. 使用管理员登陆 Gitlab 服务器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%20%E7%82%B9%E5%87%BB%E7%AE%A1%E7%90%86%E5%8C%BA%E5%9F%9F%20-1"><span class="nav-number">6.2.</span> <span class="nav-text">2. 点击管理区域</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%20%E7%82%B9%E5%87%BB%20Users"><span class="nav-number">6.3.</span> <span class="nav-text">3. 点击 Users.</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-%20%E7%82%B9%E5%87%BB%E3%80%90Block-User%E3%80%91"><span class="nav-number">6.4.</span> <span class="nav-text">4. 点击【Block User】</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -201,7 +201,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">237</span>
+          <span class="site-state-item-count">238</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -266,7 +266,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Gitlab管理用户、组、权限
+          Gitlab 管理用户、组、权限
         </h1>
 
         <div class="post-meta-container">
@@ -290,7 +290,7 @@
     </span>
 
   
-    <span id="/161.html" class="post-meta-item leancloud_visitors" data-flag-title="Gitlab管理用户、组、权限" title="阅读次数">
+    <span id="/161.html" class="post-meta-item leancloud_visitors" data-flag-title="Gitlab 管理用户、组、权限" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
       </span>
@@ -336,25 +336,25 @@
 
 
 
-<h3 id="一-添加用户"><a href="#一-添加用户" class="headerlink" title="一. 添加用户"></a>一. 添加用户</h3><h4 id="1-用root-管理员登陆。"><a href="#1-用root-管理员登陆。" class="headerlink" title="1. 用root 管理员登陆。"></a>1. 用root 管理员登陆。</h4><h4 id="2-点击管理区域"><a href="#2-点击管理区域" class="headerlink" title="2. 点击管理区域"></a>2. 点击管理区域</h4><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://images2018.cnblogs.com/blog/1416119/201806/1416119-20180624221204752-654492605.png"><img data-src="/161/1416119-20180624221205048-364793680.png" alt="image" loading="lazy"></a></p>
-<h4 id="3-点击New-User"><a href="#3-点击New-User" class="headerlink" title="3. 点击New User"></a>3. 点击New User</h4><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://images2018.cnblogs.com/blog/1416119/201806/1416119-20180624221205320-2141029336.png"><img data-src="/161/1416119-20180624221205564-738419046.png" alt="image" loading="lazy"></a></p>
-<h4 id="4-输入用户相关信息"><a href="#4-输入用户相关信息" class="headerlink" title="4. 输入用户相关信息"></a>4. 输入用户相关信息</h4><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://images2018.cnblogs.com/blog/1416119/201806/1416119-20180624221205926-14282041.png"><img data-src="/161/1416119-20180624221206206-1291204714.png" alt="image" loading="lazy"></a></p>
-<h4 id="5-用户会收到邮件如下画面，点击设置密码即可。"><a href="#5-用户会收到邮件如下画面，点击设置密码即可。" class="headerlink" title="5. 用户会收到邮件如下画面，点击设置密码即可。"></a>5. 用户会收到邮件如下画面，点击设置密码即可。</h4><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://images2018.cnblogs.com/blog/1416119/201806/1416119-20180624221206488-932889468.png"><img data-src="/161/1416119-20180624221206729-1171562142.png" alt="image" loading="lazy"></a></p>
+<h3 id="一 - 添加用户"><a href="# 一 - 添加用户" class="headerlink" title="一. 添加用户"></a>一. 添加用户</h3><h4 id="1- 用 root- 管理员登陆。"><a href="#1- 用 root- 管理员登陆。" class="headerlink" title="1. 用 root 管理员登陆。"></a>1. 用 root 管理员登陆。</h4><h4 id="2- 点击管理区域"><a href="#2- 点击管理区域" class="headerlink" title="2. 点击管理区域"></a>2. 点击管理区域</h4><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://images2018.cnblogs.com/blog/1416119/201806/1416119-20180624221204752-654492605.png"><img data-src="/161/1416119-20180624221205048-364793680.png" alt="image" loading="lazy"></a></p>
+<h4 id="3- 点击 New-User"><a href="#3- 点击 New-User" class="headerlink" title="3. 点击 New User"></a>3. 点击 New User</h4><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://images2018.cnblogs.com/blog/1416119/201806/1416119-20180624221205320-2141029336.png"><img data-src="/161/1416119-20180624221205564-738419046.png" alt="image" loading="lazy"></a></p>
+<h4 id="4- 输入用户相关信息"><a href="#4- 输入用户相关信息" class="headerlink" title="4. 输入用户相关信息"></a>4. 输入用户相关信息</h4><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://images2018.cnblogs.com/blog/1416119/201806/1416119-20180624221205926-14282041.png"><img data-src="/161/1416119-20180624221206206-1291204714.png" alt="image" loading="lazy"></a></p>
+<h4 id="5- 用户会收到邮件如下画面，点击设置密码即可。"><a href="#5- 用户会收到邮件如下画面，点击设置密码即可。" class="headerlink" title="5. 用户会收到邮件如下画面，点击设置密码即可。"></a>5. 用户会收到邮件如下画面，点击设置密码即可。</h4><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://images2018.cnblogs.com/blog/1416119/201806/1416119-20180624221206488-932889468.png"><img data-src="/161/1416119-20180624221206729-1171562142.png" alt="image" loading="lazy"></a></p>
 <p>排错小技巧：在设置邮件服务器比如设置如下：</p>
 <blockquote>
-<p>gitlab_rails[&#39;gitlab_email_from&#39;] = &#39;gitlab@aishangwei.net&#39;<br>gitlab_rails[&#39;gitlab_email_reply_to&#39;] = &#39;gitlab@aishangwei.net&#39;<br>gitlab_rails[&#39;smtp_enable&#39;] = true<br>gitlab_rails[&#39;smtp_address&#39;] = &quot;smtp.mxhichina.com&quot;<br>gitlab_rails[&#39;smtp_port&#39;] = 25<br>gitlab_rails[&#39;smtp_user_name&#39;] = &quot;<span class="exturl" data-url="bWFpbHRvOiYjMTAzOyYjeDY5OyYjeDc0OyYjMTA4OyYjeDYxOyYjeDYyOyYjeDQwOyYjeDYxOyYjeDY5OyYjMTE1OyYjMTA0OyYjeDYxOyYjMTEwOyYjMTAzOyYjeDc3OyYjeDY1OyYjMTA1OyYjNDY7JiN4NmU7JiN4NjU7JiMxMTY7">&#103;&#x69;&#x74;&#108;&#x61;&#x62;&#x40;&#x61;&#x69;&#115;&#104;&#x61;&#110;&#103;&#x77;&#x65;&#105;&#46;&#x6e;&#x65;&#116;<i class="fa fa-external-link-alt"></i></span>&quot;<br>gitlab_rails[&#39;smtp_password&#39;] = &quot;W-123456&quot;<br>gitlab_rails[&#39;smtp_domain&#39;] = &quot;mxhichina.com&quot;<br>gitlab_rails[&#39;smtp_authentication&#39;] = &quot;login&quot;</p>
+<p>gitlab_rails[&#39;gitlab_email_from&#39;] = &#39;gitlab@aishangwei.net&#39;<br>gitlab_rails[&#39;gitlab_email_reply_to&#39;] = &#39;gitlab@aishangwei.net&#39;<br>gitlab_rails[&#39;smtp_enable&#39;] = true<br>gitlab_rails[&#39;smtp_address&#39;] = &quot;smtp.mxhichina.com&quot;<br>gitlab_rails[&#39;smtp_port&#39;] = 25<br>gitlab_rails[&#39;smtp_user_name&#39;] = &quot;<span class="exturl" data-url="bWFpbHRvOiYjMTAzOyYjeDY5OyYjMTE2OyYjMTA4OyYjeDYxOyYjeDYyOyYjNjQ7JiM5NzsmIzEwNTsmIzExNTsmIzEwNDsmI3g2MTsmIzExMDsmIzEwMzsmIzExOTsmI3g2NTsmI3g2OTsmI3gyZTsmIzExMDsmIzEwMTsmI3g3NDs=">&#103;&#x69;&#116;&#108;&#x61;&#x62;&#64;&#97;&#105;&#115;&#104;&#x61;&#110;&#103;&#119;&#x65;&#x69;&#x2e;&#110;&#101;&#x74;<i class="fa fa-external-link-alt"></i></span>&quot;<br>gitlab_rails[&#39;smtp_password&#39;] = &quot;W-123456&quot;<br>gitlab_rails[&#39;smtp_domain&#39;] = &quot;mxhichina.com&quot;<br>gitlab_rails[&#39;smtp_authentication&#39;] = &quot;login&quot;</p>
 </blockquote>
 <p>设置 完成后运行以下命令测试:</p>
 <blockquote>
 <p>gitlab-rails console</p>
 <p>Notify.test_email(&#39;destination_email@address.com&#39;, &#39;Message Subject&#39;, &#39;Message Body&#39;).deliver_now</p>
 </blockquote>
-<h3 id="二-创建组"><a href="#二-创建组" class="headerlink" title="二. 创建组"></a>二. 创建组</h3><h4 id="1-使用管理员登陆gitlab服务器。"><a href="#1-使用管理员登陆gitlab服务器。" class="headerlink" title="1. 使用管理员登陆gitlab服务器。"></a>1. 使用管理员登陆gitlab服务器。</h4><h4 id="2-点击管理区域—Group-Add-group"><a href="#2-点击管理区域—Group-Add-group" class="headerlink" title="2. 点击管理区域—Group-Add group "></a>2. 点击管理区域—Group-Add group <a target="_blank" rel="noopener external nofollow noreferrer" href="https://images2018.cnblogs.com/blog/1416119/201806/1416119-20180624221206999-955167397.png"><img data-src="/161/1416119-20180624221207294-1813426702.png" alt="image" loading="lazy"></a></h4><h4 id="3-依次填入组路径，名称和描述等信息"><a href="#3-依次填入组路径，名称和描述等信息" class="headerlink" title="3. 依次填入组路径，名称和描述等信息"></a>3. 依次填入组路径，名称和描述等信息</h4><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://images2018.cnblogs.com/blog/1416119/201806/1416119-20180624221207584-617947847.png"><img data-src="/161/1416119-20180624221211190-2068774251.png" alt="image" loading="lazy"></a></p>
-<h4 id="4-在如下画面选择用户加入到刚创建的组、权限等-。"><a href="#4-在如下画面选择用户加入到刚创建的组、权限等-。" class="headerlink" title="4. 在如下画面选择用户加入到刚创建的组、权限等 。"></a>4. 在如下画面选择用户加入到刚创建的组、权限等 。</h4><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://images2018.cnblogs.com/blog/1416119/201806/1416119-20180624221211458-1802014428.png"><img data-src="/161/1416119-20180624221211734-719735163.png" alt="image" loading="lazy"></a></p>
-<h3 id="三-用户权限"><a href="#三-用户权限" class="headerlink" title="三. 用户权限"></a>三. 用户权限</h3><h4 id="1-使用管理员打开要设置权限的项目。"><a href="#1-使用管理员打开要设置权限的项目。" class="headerlink" title="1. 使用管理员打开要设置权限的项目。"></a>1. 使用管理员打开要设置权限的项目。</h4><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://images2018.cnblogs.com/blog/1416119/201806/1416119-20180624221212016-1346397860.png"><img data-src="/161/1416119-20180624221212660-1879509731.png" alt="image" loading="lazy"></a></p>
-<h4 id="2-点击【Settings】-【Members】"><a href="#2-点击【Settings】-【Members】" class="headerlink" title="2. 点击【Settings】--【Members】"></a>2. 点击【Settings】--【Members】</h4><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://images2018.cnblogs.com/blog/1416119/201806/1416119-20180624221212958-822365669.png"><img data-src="/161/1416119-20180624221213325-1506124333.png" alt="image" loading="lazy"></a></p>
-<h4 id="3-添加完成后，如下图所示"><a href="#3-添加完成后，如下图所示" class="headerlink" title="3. 添加完成后，如下图所示"></a>3. 添加完成后，如下图所示</h4><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://images2018.cnblogs.com/blog/1416119/201806/1416119-20180624221213781-1872117458.png"><img data-src="/161/1416119-20180624221214066-1225339005.png" alt="image" loading="lazy"></a></p>
-<h4 id="4-下表完整的列出了Guest-Reporter-Developer-Master-Owner对应的权限。"><a href="#4-下表完整的列出了Guest-Reporter-Developer-Master-Owner对应的权限。" class="headerlink" title="4. 下表完整的列出了Guest,Reporter,Developer,Master,Owner对应的权限。"></a>4. 下表完整的列出了Guest,Reporter,Developer,Master,Owner对应的权限。</h4><table>
+<h3 id="二 - 创建组"><a href="# 二 - 创建组" class="headerlink" title="二. 创建组"></a>二. 创建组</h3><h4 id="1- 使用管理员登陆 gitlab 服务器。"><a href="#1- 使用管理员登陆 gitlab 服务器。" class="headerlink" title="1. 使用管理员登陆 gitlab 服务器。"></a>1. 使用管理员登陆 gitlab 服务器。</h4><h4 id="2- 点击管理区域—Group-Add-group"><a href="#2- 点击管理区域—Group-Add-group" class="headerlink" title="2. 点击管理区域—Group-Add group"></a>2. 点击管理区域—Group-Add group <a target="_blank" rel="noopener external nofollow noreferrer" href="https://images2018.cnblogs.com/blog/1416119/201806/1416119-20180624221206999-955167397.png"><img data-src="/161/1416119-20180624221207294-1813426702.png" alt="image" loading="lazy"></a></h4><h4 id="3- 依次填入组路径，名称和描述等信息"><a href="#3- 依次填入组路径，名称和描述等信息" class="headerlink" title="3. 依次填入组路径，名称和描述等信息"></a>3. 依次填入组路径，名称和描述等信息</h4><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://images2018.cnblogs.com/blog/1416119/201806/1416119-20180624221207584-617947847.png"><img data-src="/161/1416119-20180624221211190-2068774251.png" alt="image" loading="lazy"></a></p>
+<h4 id="4- 在如下画面选择用户加入到刚创建的组、权限等 -。"><a href="#4- 在如下画面选择用户加入到刚创建的组、权限等 -。" class="headerlink" title="4. 在如下画面选择用户加入到刚创建的组、权限等 。"></a>4. 在如下画面选择用户加入到刚创建的组、权限等 。</h4><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://images2018.cnblogs.com/blog/1416119/201806/1416119-20180624221211458-1802014428.png"><img data-src="/161/1416119-20180624221211734-719735163.png" alt="image" loading="lazy"></a></p>
+<h3 id="三 - 用户权限"><a href="# 三 - 用户权限" class="headerlink" title="三. 用户权限"></a>三. 用户权限</h3><h4 id="1- 使用管理员打开要设置权限的项目。"><a href="#1- 使用管理员打开要设置权限的项目。" class="headerlink" title="1. 使用管理员打开要设置权限的项目。"></a>1. 使用管理员打开要设置权限的项目。</h4><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://images2018.cnblogs.com/blog/1416119/201806/1416119-20180624221212016-1346397860.png"><img data-src="/161/1416119-20180624221212660-1879509731.png" alt="image" loading="lazy"></a></p>
+<h4 id="2- 点击【Settings】-【Members】"><a href="#2- 点击【Settings】-【Members】" class="headerlink" title="2. 点击【Settings】--【Members】"></a>2. 点击【Settings】--【Members】</h4><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://images2018.cnblogs.com/blog/1416119/201806/1416119-20180624221212958-822365669.png"><img data-src="/161/1416119-20180624221213325-1506124333.png" alt="image" loading="lazy"></a></p>
+<h4 id="3- 添加完成后，如下图所示"><a href="#3- 添加完成后，如下图所示" class="headerlink" title="3. 添加完成后，如下图所示"></a>3. 添加完成后，如下图所示</h4><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://images2018.cnblogs.com/blog/1416119/201806/1416119-20180624221213781-1872117458.png"><img data-src="/161/1416119-20180624221214066-1225339005.png" alt="image" loading="lazy"></a></p>
+<h4 id="4- 下表完整的列出了 Guest-Reporter-Developer-Master-Owner 对应的权限。"><a href="#4- 下表完整的列出了 Guest-Reporter-Developer-Master-Owner 对应的权限。" class="headerlink" title="4. 下表完整的列出了 Guest,Reporter,Developer,Master,Owner 对应的权限。"></a>4. 下表完整的列出了 Guest,Reporter,Developer,Master,Owner 对应的权限。</h4><table>
 <thead>
 <tr>
 <th></th>
@@ -511,16 +511,16 @@
 </tr>
 </tbody></table>
 <p>Talent without working hard is nothing.</p>
-<h3 id="一-保护主要分支"><a href="#一-保护主要分支" class="headerlink" title="一. 保护主要分支"></a>一. 保护主要分支</h3><p>保护某个分支，不让项目中其它的成员进行改变里面的内容，和不允许他们进行和保护的分支进行合并。当某个分支设置为保护的时候，那么拥有开者者权限或以下的权限都会受到影响。</p>
+<h3 id="一 - 保护主要分支"><a href="# 一 - 保护主要分支" class="headerlink" title="一. 保护主要分支"></a>一. 保护主要分支 </h3><p> 保护某个分支，不让项目中其它的成员进行改变里面的内容，和不允许他们进行和保护的分支进行合并。当某个分支设置为保护的时候，那么拥有开者者权限或以下的权限都会受到影响。</p>
 <p>执行步骤：</p>
-<h4 id="1-使用管理员进入到Gitlab服务器。"><a href="#1-使用管理员进入到Gitlab服务器。" class="headerlink" title="1. 使用管理员进入到Gitlab服务器。"></a>1. 使用管理员进入到Gitlab服务器。</h4><h4 id="2-切换到你想要保护的项目。"><a href="#2-切换到你想要保护的项目。" class="headerlink" title="2. 切换到你想要保护的项目。"></a>2. 切换到你想要保护的项目。</h4><h4 id="3-点击【settings】"><a href="#3-点击【settings】" class="headerlink" title="3. 点击【settings】"></a>3. 点击【settings】</h4><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://images2018.cnblogs.com/blog/1416119/201806/1416119-20180624224928296-105231054.png"><img data-src="/161/1416119-20180624224928962-1772377509.png" alt="image" loading="lazy"></a></p>
-<p>\4. 点击Protection branches.</p>
+<h4 id="1- 使用管理员进入到 Gitlab 服务器。"><a href="#1- 使用管理员进入到 Gitlab 服务器。" class="headerlink" title="1. 使用管理员进入到 Gitlab 服务器。"></a>1. 使用管理员进入到 Gitlab 服务器。</h4><h4 id="2- 切换到你想要保护的项目。"><a href="#2- 切换到你想要保护的项目。" class="headerlink" title="2. 切换到你想要保护的项目。"></a>2. 切换到你想要保护的项目。</h4><h4 id="3- 点击【settings】"><a href="#3- 点击【settings】" class="headerlink" title="3. 点击【settings】"></a>3. 点击【settings】</h4><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://images2018.cnblogs.com/blog/1416119/201806/1416119-20180624224928296-105231054.png"><img data-src="/161/1416119-20180624224928962-1772377509.png" alt="image" loading="lazy"></a></p>
+<p>\4. 点击 Protection branches.</p>
 <p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://images2018.cnblogs.com/blog/1416119/201806/1416119-20180624224929308-473513361.png"><img data-src="/161/1416119-20180624224929986-1523041998.png" alt="image" loading="lazy"></a></p>
-<h3 id="二-配置项目的可见性"><a href="#二-配置项目的可见性" class="headerlink" title="二. 配置项目的可见性"></a>二. 配置项目的可见性</h3><h4 id="1-使用管理员进入到Gitlab服务器。-1"><a href="#1-使用管理员进入到Gitlab服务器。-1" class="headerlink" title="1. 使用管理员进入到Gitlab服务器。"></a>1. 使用管理员进入到Gitlab服务器。</h4><h4 id="2-切换到你想要保护的项目。-1"><a href="#2-切换到你想要保护的项目。-1" class="headerlink" title="2. 切换到你想要保护的项目。"></a>2. 切换到你想要保护的项目。</h4><h4 id="3-点击【settings】-1"><a href="#3-点击【settings】-1" class="headerlink" title="3. 点击【settings】"></a>3. 点击【settings】</h4><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://images2018.cnblogs.com/blog/1416119/201806/1416119-20180624224930301-1974368257.png"><img data-src="/161/1416119-20180624224931220-1926788054.png" alt="image" loading="lazy"></a></p>
-<h4 id="4-点击【General】-【Permissions】"><a href="#4-点击【General】-【Permissions】" class="headerlink" title="4. 点击【General】-【Permissions】"></a>4. 点击【General】-【Permissions】</h4><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://images2018.cnblogs.com/blog/1416119/201806/1416119-20180624224932217-1487456597.png"><img data-src="/161/1416119-20180624224932514-51774612.png" alt="image" loading="lazy"></a></p>
-<h4 id=""><a href="#" class="headerlink" title=""></a></h4><h4 id="5-在下图红色圈内设置项目可见性。"><a href="#5-在下图红色圈内设置项目可见性。" class="headerlink" title="5. 在下图红色圈内设置项目可见性。"></a>5. 在下图红色圈内设置项目可见性。</h4><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://images2018.cnblogs.com/blog/1416119/201806/1416119-20180624224932746-2103315552.png"><img data-src="/161/1416119-20180624224933105-752156846.png" alt="image" loading="lazy"></a></p>
-<h3 id="三-移除用户"><a href="#三-移除用户" class="headerlink" title="三. 移除用户"></a>三. 移除用户</h3><h4 id="1-使用管理员登陆Gitlab服务器"><a href="#1-使用管理员登陆Gitlab服务器" class="headerlink" title="1. 使用管理员登陆Gitlab服务器"></a>1. 使用管理员登陆Gitlab服务器</h4><h4 id="2-点击管理区域-1"><a href="#2-点击管理区域-1" class="headerlink" title="2. 点击管理区域"></a>2. 点击管理区域</h4><h4 id="3-点击Users"><a href="#3-点击Users" class="headerlink" title="3. 点击Users."></a>3. 点击Users.</h4><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://images2018.cnblogs.com/blog/1416119/201806/1416119-20180624224933485-156588963.png"><img data-src="/161/1416119-20180624224933734-1846588942.png" alt="image" loading="lazy"></a></p>
-<h4 id="4-点击【Block-User】"><a href="#4-点击【Block-User】" class="headerlink" title="4. 点击【Block User】"></a>4. 点击【Block User】</h4><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://images2018.cnblogs.com/blog/1416119/201806/1416119-20180624224933987-1225533687.png"><img data-src="/161/1416119-20180624224934237-1199884827.png" alt="image" loading="lazy"></a></p>
+<h3 id="二 - 配置项目的可见性"><a href="# 二 - 配置项目的可见性" class="headerlink" title="二. 配置项目的可见性"></a>二. 配置项目的可见性</h3><h4 id="1- 使用管理员进入到 Gitlab 服务器。-1"><a href="#1- 使用管理员进入到 Gitlab 服务器。-1" class="headerlink" title="1. 使用管理员进入到 Gitlab 服务器。"></a>1. 使用管理员进入到 Gitlab 服务器。</h4><h4 id="2- 切换到你想要保护的项目。-1"><a href="#2- 切换到你想要保护的项目。-1" class="headerlink" title="2. 切换到你想要保护的项目。"></a>2. 切换到你想要保护的项目。</h4><h4 id="3- 点击【settings】-1"><a href="#3- 点击【settings】-1" class="headerlink" title="3. 点击【settings】"></a>3. 点击【settings】</h4><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://images2018.cnblogs.com/blog/1416119/201806/1416119-20180624224930301-1974368257.png"><img data-src="/161/1416119-20180624224931220-1926788054.png" alt="image" loading="lazy"></a></p>
+<h4 id="4- 点击【General】-【Permissions】"><a href="#4- 点击【General】-【Permissions】" class="headerlink" title="4. 点击【General】-【Permissions】"></a>4. 点击【General】-【Permissions】</h4><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://images2018.cnblogs.com/blog/1416119/201806/1416119-20180624224932217-1487456597.png"><img data-src="/161/1416119-20180624224932514-51774612.png" alt="image" loading="lazy"></a></p>
+<h4 id=""><a href="#"class="headerlink"title=""></a></h4><h4 id="5- 在下图红色圈内设置项目可见性。"><a href="#5- 在下图红色圈内设置项目可见性。" class="headerlink" title="5. 在下图红色圈内设置项目可见性。"></a>5. 在下图红色圈内设置项目可见性。</h4><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://images2018.cnblogs.com/blog/1416119/201806/1416119-20180624224932746-2103315552.png"><img data-src="/161/1416119-20180624224933105-752156846.png" alt="image" loading="lazy"></a></p>
+<h3 id="三 - 移除用户"><a href="# 三 - 移除用户" class="headerlink" title="三. 移除用户"></a>三. 移除用户</h3><h4 id="1- 使用管理员登陆 Gitlab 服务器"><a href="#1- 使用管理员登陆 Gitlab 服务器" class="headerlink" title="1. 使用管理员登陆 Gitlab 服务器"></a>1. 使用管理员登陆 Gitlab 服务器</h4><h4 id="2- 点击管理区域 -1"><a href="#2- 点击管理区域 -1" class="headerlink" title="2. 点击管理区域"></a>2. 点击管理区域</h4><h4 id="3- 点击 Users"><a href="#3- 点击 Users" class="headerlink" title="3. 点击 Users."></a>3. 点击 Users.</h4><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://images2018.cnblogs.com/blog/1416119/201806/1416119-20180624224933485-156588963.png"><img data-src="/161/1416119-20180624224933734-1846588942.png" alt="image" loading="lazy"></a></p>
+<h4 id="4- 点击【Block-User】"><a href="#4- 点击【Block-User】" class="headerlink" title="4. 点击【Block User】"></a>4. 点击【Block User】</h4><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://images2018.cnblogs.com/blog/1416119/201806/1416119-20180624224933987-1225533687.png"><img data-src="/161/1416119-20180624224934237-1199884827.png" alt="image" loading="lazy"></a></p>
 <p>Talent without working hard is nothing.</p>
 
     </div>
@@ -530,8 +530,30 @@
     
 
     <footer class="post-footer">
+          <div class="reward-container">
+  <div>Buy me a coffee</div>
+  <button onclick="document.querySelector('.post-reward').classList.toggle('active');">
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/20201122213021.png" alt="Lining Wei 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/434235F3-7A93-4EA4-A7B6-4F6D977F1A89.png" alt="Lining Wei 支付宝">
+        <span>支付宝</span>
+      </div>
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/bitcoin.png" alt="Lining Wei 比特币">
+        <span>比特币</span>
+      </div>
+
+  </div>
+</div>
+
           <div class="post-tags">
-              <a href="/tags/%E9%BB%98%E8%AE%A4/" rel="tag"># 默认</a>
+              <a href="/tags/%E9%BB%98%E8%AE%A4/" rel="tag"><i class="fa fa-tag"></i> 默认</a>
           </div>
 
         
@@ -543,8 +565,8 @@
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/162.html" rel="next" title="Gitlab基本管理">
-                  Gitlab基本管理 <i class="fa fa-chevron-right"></i>
+                <a href="/162.html" rel="next" title="Gitlab 基本管理">
+                  Gitlab 基本管理 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
@@ -620,43 +642,9 @@
 
   
   <script src="//cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/@next-theme/pjax@0.4.0/pjax.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js"></script>
-<script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/motion.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/next-boot.js"></script><script>
-var pjax = new Pjax({
-  selectors: [
-    'head title',
-    '.page-configurations',
-    '.main-inner',
-    '.post-toc-wrap',
-    '.languages',
-    '.pjax'
-  ],
-  analytics: false,
-  cacheBust: false,
-  scrollRestoration: false,
-  scrollTo: !CONFIG.bookmark.enable
-});
-
-document.addEventListener('pjax:success', () => {
-  pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
-  NexT.boot.refresh();
-  // Define Motion Sequence & Bootstrap Motion.
-  if (CONFIG.motion.enable) {
-    NexT.motion.integrator
-      .init()
-      .add(NexT.motion.middleWares.subMenu)
-      .add(NexT.motion.middleWares.postList)
-      .bootstrap();
-  }
-  const hasTOC = document.querySelector('.post-toc');
-  document.querySelector('.sidebar-inner').classList.toggle('sidebar-nav-active', hasTOC);
-  document.querySelector(hasTOC ? '.sidebar-nav-toc' : '.sidebar-nav-overview').click();
-  NexT.utils.updateSidebarPosition();
-});
-</script>
-
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/motion.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/next-boot.js"></script>
 
   
 
@@ -668,7 +656,7 @@ document.addEventListener('pjax:success', () => {
   
 
 
-<script data-pjax>
+<script>
   (function() {
     function leancloudSelector(url) {
       url = encodeURI(url);
@@ -755,18 +743,7 @@ document.addEventListener('pjax:success', () => {
   })();
 </script>
 
-    <div class="pjax">
 
-  <script src="//cdn.jsdelivr.net/npm/quicklink@2.0.0/dist/quicklink.umd.js"></script>
-  <script>
-      window.addEventListener('load', () => {
-      quicklink.listen({
-        timeout : 3000,
-        priority: true,
-        ignores : [uri => uri.includes('#'),uri => uri === 'https://weilining.github.io/161.html',]
-      });
-      });
-  </script>
 
 <script>
 NexT.utils.loadComments('#lv-container', () => {
@@ -784,6 +761,5 @@ NexT.utils.loadComments('#lv-container', () => {
 });
 </script>
 
-    </div>
 </body>
 </html>

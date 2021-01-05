@@ -18,7 +18,7 @@
 
 <link rel="stylesheet" href="/css/main.css">
 
-
+<link rel="stylesheet" href="https://fonts.dogedoge.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
@@ -48,7 +48,7 @@
 <link rel="canonical" href="https://weilining.github.io/204.html">
 
 
-<script data-pjax class="page-configurations">
+<script class="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
@@ -171,7 +171,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#butterfly-%E4%B8%BB%E9%A2%98%E7%9A%84%E5%BC%95%E5%85%A5%E6%96%B9%E6%B3%95"><span class="nav-number">1.</span> <span class="nav-text">butterfly 主题的引入方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E6%BA%90%E7%A0%81%E5%AE%9E%E7%8E%B0%E6%96%B9%E6%B3%95%EF%BC%88%E5%85%B6%E5%AE%83%E4%B8%BB%E9%A2%98%E5%8F%AF%E5%8F%82%E8%80%83%E6%AD%A4%E5%A4%84%EF%BC%89"><span class="nav-number">2.</span> <span class="nav-text">修改源码实现方法（其它主题可参考此处）</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#butterfly-%20%E4%B8%BB%E9%A2%98%E7%9A%84%E5%BC%95%E5%85%A5%E6%96%B9%E6%B3%95"><span class="nav-number">1.</span> <span class="nav-text">butterfly 主题的引入方法 </span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E6%BA%90%E7%A0%81%E5%AE%9E%E7%8E%B0%E6%96%B9%E6%B3%95%EF%BC%88%E5%85%B6%E5%AE%83%E4%B8%BB%E9%A2%98%E5%8F%AF%E5%8F%82%E8%80%83%E6%AD%A4%E5%A4%84%EF%BC%89"><span class="nav-number">2.</span> <span class="nav-text">修改源码实现方法（其它主题可参考此处）</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -187,7 +187,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">237</span>
+          <span class="site-state-item-count">238</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -309,8 +309,8 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h2 id="butterfly-主题的引入方法"><a href="#butterfly-主题的引入方法" class="headerlink" title="butterfly 主题的引入方法"></a>butterfly 主题的引入方法</h2><p>效果就在页脚，是不是很想要？这里简述 butterfly 主题的引入方法，其他主题类似，实在不行建议更换 butterfly 主题</p>
-<p>！！！不要修改源码，若已修改请恢复原样<br>在主题配置的 <code>inject</code> 引入 js: <span class="exturl" data-url="aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL3hpYWJvMi9DRE5AbGF0ZXN0L2Zpc2hlcy5qcw==">https://cdn.jsdelivr.net/gh/xiabo2/CDN@latest/fishes.js<i class="fa fa-external-link-alt"></i></span> <strong>即可</strong></p>
+        <h2 id="butterfly- 主题的引入方法"><a href="#butterfly- 主题的引入方法" class="headerlink" title="butterfly 主题的引入方法"></a>butterfly 主题的引入方法 </h2><p> 效果就在页脚，是不是很想要？这里简述 butterfly 主题的引入方法，其他主题类似，实在不行建议更换 butterfly 主题</p>
+<p>！！！不要修改源码，若已修改请恢复原样 <br> 在主题配置的 <code>inject</code> 引入 js: <span class="exturl" data-url="aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL3hpYWJvMi9DRE5AbGF0ZXN0L2Zpc2hlcy5qcw==">https://cdn.jsdelivr.net/gh/xiabo2/CDN@latest/fishes.js<i class="fa fa-external-link-alt"></i></span> <strong>即可</strong></p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">- &lt;script src&#x3D;&quot;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;gh&#x2F;xiabo2&#x2F;CDN@latest&#x2F;fishes.js&quot;&gt;&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
 <p>调整页脚阴影透明度 <code>themes\butterfly\source\css\_layout\footer.styl</code></p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">background-color: alpha($dark-black, .1)</span><br></pre></td></tr></table></figure>
@@ -318,10 +318,10 @@
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;* 鱼塘固定宽度 *&#x2F;</span><br><span class="line">canvas:not(#ribbon-canvas), #web_bg &#123;</span><br><span class="line">    margin-bottom: -0.5rem;</span><br><span class="line">    display: block;</span><br><span class="line">    width: 100%;</span><br><span class="line">    height: 160px</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
 
-<h2 id="修改源码实现方法（其它主题可参考此处）"><a href="#修改源码实现方法（其它主题可参考此处）" class="headerlink" title="修改源码实现方法（其它主题可参考此处）"></a><strong>修改源码实现方法（其它主题可参考此处）</strong></h2><ol>
+<h2 id="修改源码实现方法（其它主题可参考此处）"><a href="# 修改源码实现方法（其它主题可参考此处）" class="headerlink" title="修改源码实现方法（其它主题可参考此处）"></a><strong>修改源码实现方法（其它主题可参考此处）</strong></h2><ol>
 <li><p>先将扒来的 code 转为 pug</p>
 <p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://cdn.jsdelivr.net/gh/xiabor/img/i/Snipaste_2020-07-05_10-36-45.png"><img data-src="/204/Snipaste_2020-07-05_10-36-45.png" alt="htmltopug" loading="lazy"></a></p>
-<p>写进<code>\themes\butterfly\layout\includes\footer.pug</code>末尾</p>
+<p>写进 <code>\themes\butterfly\layout\includes\footer.pug</code> 末尾</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#jsi-flying-fish-container.container</span><br><span class="line">   script(src&#x3D;&#39;js&#x2F;fish.js&#39;)</span><br><span class="line">style.</span><br><span class="line">   </span><br><span class="line">       @media only screen and (max-width: 767px)&#123;</span><br><span class="line">       #sidebar_search_box input[type&#x3D;text]&#123;width:calc(100% - 24px)&#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></li>
 <li><p>然后在 <code>inject</code> 引入 js: <span class="exturl" data-url="aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL3hpYWJvMi9DRE5AbGF0ZXN0L2Zpc2guanM=">https://cdn.jsdelivr.net/gh/xiabo2/CDN@latest/fish.js<i class="fa fa-external-link-alt"></i></span></p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">- &lt;script src&#x3D;&quot;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;gh&#x2F;xiabo2&#x2F;CDN@latest&#x2F;fish.js&quot;&gt;&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
@@ -336,12 +336,12 @@
 <p>解决办法：<br>很简单，引用 jquery-X.X.X.min.js 这个 js 路径文件到当前页面即可。</p>
 <p><code>&lt;script src=&quot;https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js&quot;&gt;&lt;/script&gt; </code></p>
 <p>建议将 js 保存到本地引用</p>
-<p><code>&lt;script src=&quot;你的路径/jquery.min.js&quot;&gt;&lt;/script&gt;</code></p>
+<p><code>&lt;script src=&quot; 你的路径 /jquery.min.js&quot;&gt;&lt;/script&gt;</code></p>
 <p> 原因二：忽略了 HTML 中 <script> 引入 jQuery 文件的顺序，要把 JQuery 库的引用放到第一个 <script> 引用前面，这样顺序执行后面的 js 文件才能识别 $。</p>
 </li>
 </ol>
 <p>（主题已经引入 jquery）调整了好久，还是没能解决报错，有人催更如何页脚养鱼就直接写出来了，报错交给各位解决吧。</p>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><span class="exturl" data-url="aHR0cHM6Ly94aWFib3IuY29tLzcxNGYuaHRtbCMlRTUlQTYlODIlRTQlQkQlOTUlRTUlOUMlQTglRTklQTElQjUlRTglODQlOUElRTUlODUlQkIlRTklQjElQkM=">https://xiabor.com/714f.html#%E5%A6%82%E4%BD%95%E5%9C%A8%E9%A1%B5%E8%84%9A%E5%85%BB%E9%B1%BC<i class="fa fa-external-link-alt"></i></span></p>
+<h2 id="参考"><a href="# 参考" class="headerlink" title="参考"></a>参考</h2><p><span class="exturl" data-url="aHR0cHM6Ly94aWFib3IuY29tLzcxNGYuaHRtbCMlRTUlQTYlODIlRTQlQkQlOTUlRTUlOUMlQTglRTklQTElQjUlRTglODQlOUElRTUlODUlQkIlRTklQjElQkM=">https://xiabor.com/714f.html#%E5%A6%82%E4%BD%95%E5%9C%A8%E9%A1%B5%E8%84%9A%E5%85%BB%E9%B1%BC<i class="fa fa-external-link-alt"></i></span></p>
 
     </div>
 
@@ -350,16 +350,38 @@
     
 
     <footer class="post-footer">
+          <div class="reward-container">
+  <div>Buy me a coffee</div>
+  <button onclick="document.querySelector('.post-reward').classList.toggle('active');">
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/20201122213021.png" alt="Lining Wei 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/434235F3-7A93-4EA4-A7B6-4F6D977F1A89.png" alt="Lining Wei 支付宝">
+        <span>支付宝</span>
+      </div>
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/bitcoin.png" alt="Lining Wei 比特币">
+        <span>比特币</span>
+      </div>
+
+  </div>
+</div>
+
           <div class="post-tags">
-              <a href="/tags/%E9%BB%98%E8%AE%A4/" rel="tag"># 默认</a>
+              <a href="/tags/%E9%BB%98%E8%AE%A4/" rel="tag"><i class="fa fa-tag"></i> 默认</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/203.html" rel="prev" title="vscode 一行JavaScript格式化">
-                  <i class="fa fa-chevron-left"></i> vscode 一行JavaScript格式化
+                <a href="/203.html" rel="prev" title="vscode 一行 JavaScript 格式化">
+                  <i class="fa fa-chevron-left"></i> vscode 一行 JavaScript 格式化
                 </a>
             </div>
             <div class="post-nav-item">
@@ -440,43 +462,9 @@
 
   
   <script src="//cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/@next-theme/pjax@0.4.0/pjax.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js"></script>
-<script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/motion.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/next-boot.js"></script><script>
-var pjax = new Pjax({
-  selectors: [
-    'head title',
-    '.page-configurations',
-    '.main-inner',
-    '.post-toc-wrap',
-    '.languages',
-    '.pjax'
-  ],
-  analytics: false,
-  cacheBust: false,
-  scrollRestoration: false,
-  scrollTo: !CONFIG.bookmark.enable
-});
-
-document.addEventListener('pjax:success', () => {
-  pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
-  NexT.boot.refresh();
-  // Define Motion Sequence & Bootstrap Motion.
-  if (CONFIG.motion.enable) {
-    NexT.motion.integrator
-      .init()
-      .add(NexT.motion.middleWares.subMenu)
-      .add(NexT.motion.middleWares.postList)
-      .bootstrap();
-  }
-  const hasTOC = document.querySelector('.post-toc');
-  document.querySelector('.sidebar-inner').classList.toggle('sidebar-nav-active', hasTOC);
-  document.querySelector(hasTOC ? '.sidebar-nav-toc' : '.sidebar-nav-overview').click();
-  NexT.utils.updateSidebarPosition();
-});
-</script>
-
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/motion.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/next-boot.js"></script>
 
   
 
@@ -488,7 +476,7 @@ document.addEventListener('pjax:success', () => {
   
 
 
-<script data-pjax>
+<script>
   (function() {
     function leancloudSelector(url) {
       url = encodeURI(url);
@@ -575,18 +563,7 @@ document.addEventListener('pjax:success', () => {
   })();
 </script>
 
-    <div class="pjax">
 
-  <script src="//cdn.jsdelivr.net/npm/quicklink@2.0.0/dist/quicklink.umd.js"></script>
-  <script>
-      window.addEventListener('load', () => {
-      quicklink.listen({
-        timeout : 3000,
-        priority: true,
-        ignores : [uri => uri.includes('#'),uri => uri === 'https://weilining.github.io/204.html',]
-      });
-      });
-  </script>
 
 <script>
 NexT.utils.loadComments('#lv-container', () => {
@@ -604,6 +581,5 @@ NexT.utils.loadComments('#lv-container', () => {
 });
 </script>
 
-    </div>
 </body>
 </html>

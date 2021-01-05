@@ -18,7 +18,7 @@
 
 <link rel="stylesheet" href="/css/main.css">
 
-
+<link rel="stylesheet" href="https://fonts.dogedoge.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
@@ -44,7 +44,7 @@
 <link rel="canonical" href="https://weilining.github.io/friends/">
 
 
-<script data-pjax class="page-configurations">
+<script class="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
@@ -183,7 +183,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">237</span>
+          <span class="site-state-item-count">238</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -255,7 +255,7 @@
 <!-- CSS Code End -->
 
 <p>如果您有意交换友情链接，敬请先将本站添加友链，然后在评论区留言，本站目前仅接受个人博客网站的友链申请（参考下方格式）。为了确保头像显示正确，建议使用 Gravatar 或者 jsDelivr 等服务。如果需要更新博客信息，请留言回复。</p>
-<div class="note success"><p><strong>[本站信息]</strong><br>名称：Ln<br>简介：算法、技术<br>网址：<span class="exturl" data-url="aHR0cHM6Ly93ZWlsaW5pbmcuY2Yv">https://weilining.cf/<i class="fa fa-external-link-alt"></i></span><br>头像：<span class="exturl" data-url="aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL3dlaWxpbmluZy9pbWdAbWFpbi9pbWcvaWNvbi5naWY=">https://cdn.jsdelivr.net/gh/weilining/img@main/img/icon.gif<i class="fa fa-external-link-alt"></i></span></p>
+<div class="note success"><p><strong>[本站信息]</strong><br>名称：Ln<br>简介：算法、技术 <br> 网址：<span class="exturl" data-url="aHR0cHM6Ly93ZWlsaW5pbmcuY2Yv">https://weilining.cf/<i class="fa fa-external-link-alt"></i></span><br>头像：<span class="exturl" data-url="aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL3dlaWxpbmluZy9pbWdAbWFpbi9pbWcvaWNvbi5naWY=">https://cdn.jsdelivr.net/gh/weilining/img@main/img/icon.gif<i class="fa fa-external-link-alt"></i></span></p>
 </div>
 
 <p>请注意，本站将会定期清理长时间无法访问的友链，请您务必确保域名解析正确、https 证书有效且服务器工作正常。若由于此原因导致友情链接失效，本站恕不另行通知。</p>
@@ -333,43 +333,9 @@
 
   
   <script src="//cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/@next-theme/pjax@0.4.0/pjax.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js"></script>
-<script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/motion.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/next-boot.js"></script><script>
-var pjax = new Pjax({
-  selectors: [
-    'head title',
-    '.page-configurations',
-    '.main-inner',
-    '.post-toc-wrap',
-    '.languages',
-    '.pjax'
-  ],
-  analytics: false,
-  cacheBust: false,
-  scrollRestoration: false,
-  scrollTo: !CONFIG.bookmark.enable
-});
-
-document.addEventListener('pjax:success', () => {
-  pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
-  NexT.boot.refresh();
-  // Define Motion Sequence & Bootstrap Motion.
-  if (CONFIG.motion.enable) {
-    NexT.motion.integrator
-      .init()
-      .add(NexT.motion.middleWares.subMenu)
-      .add(NexT.motion.middleWares.postList)
-      .bootstrap();
-  }
-  const hasTOC = document.querySelector('.post-toc');
-  document.querySelector('.sidebar-inner').classList.toggle('sidebar-nav-active', hasTOC);
-  document.querySelector(hasTOC ? '.sidebar-nav-toc' : '.sidebar-nav-overview').click();
-  NexT.utils.updateSidebarPosition();
-});
-</script>
-
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/motion.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/next-boot.js"></script>
 
   
 
@@ -381,7 +347,7 @@ document.addEventListener('pjax:success', () => {
   
 
 
-<script data-pjax>
+<script>
   (function() {
     function leancloudSelector(url) {
       url = encodeURI(url);
@@ -468,18 +434,7 @@ document.addEventListener('pjax:success', () => {
   })();
 </script>
 
-    <div class="pjax">
 
-  <script src="//cdn.jsdelivr.net/npm/quicklink@2.0.0/dist/quicklink.umd.js"></script>
-  <script>
-      window.addEventListener('load', () => {
-      quicklink.listen({
-        timeout : 3000,
-        priority: true,
-        ignores : [uri => uri.includes('#'),uri => uri === 'https://weilining.github.io/friends/',]
-      });
-      });
-  </script>
 
 <script>
 NexT.utils.loadComments('#lv-container', () => {
@@ -497,6 +452,5 @@ NexT.utils.loadComments('#lv-container', () => {
 });
 </script>
 
-    </div>
 </body>
 </html>

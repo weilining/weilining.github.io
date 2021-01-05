@@ -18,7 +18,7 @@
 
 <link rel="stylesheet" href="/css/main.css">
 
-
+<link rel="stylesheet" href="https://fonts.dogedoge.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
@@ -50,7 +50,7 @@
 <link rel="canonical" href="https://weilining.github.io/150.html">
 
 
-<script data-pjax class="page-configurations">
+<script class="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
@@ -173,7 +173,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AD%A5%E9%AA%A4"><span class="nav-number">2.</span> <span class="nav-text">步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E7%94%9F%E6%88%90-ssh"><span class="nav-number">2.1.</span> <span class="nav-text">1. 生成 ssh</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E5%B0%86%E5%85%AC%E9%92%A5%E6%B7%BB%E5%8A%A0%E5%88%B0-GitLab%E3%80%81Gitee"><span class="nav-number">2.2.</span> <span class="nav-text">2. 将公钥添加到 GitLab、Gitee</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E5%B0%86%E7%A7%81%E9%92%A5%E6%B7%BB%E5%8A%A0%E5%88%B0-GitHub-%E4%BB%93%E5%BA%93"><span class="nav-number">2.3.</span> <span class="nav-text">3. 将私钥添加到 GitHub 仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E5%8F%96%E6%B6%88-GitLab-%E4%BB%93%E5%BA%93%E7%9A%84%E5%8F%97%E4%BF%9D%E6%8A%A4%E5%88%86%E6%94%AF"><span class="nav-number">2.4.</span> <span class="nav-text">4. 取消 GitLab 仓库的受保护分支</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-%E9%85%8D%E7%BD%AE-GitHub-Actions"><span class="nav-number">2.5.</span> <span class="nav-text">5. 配置 GitHub Actions</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言 </span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AD%A5%E9%AA%A4"><span class="nav-number">2.</span> <span class="nav-text">步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%20%E7%94%9F%E6%88%90%20-ssh"><span class="nav-number">2.1.</span> <span class="nav-text">1. 生成 ssh</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%20%E5%B0%86%E5%85%AC%E9%92%A5%E6%B7%BB%E5%8A%A0%E5%88%B0%20-GitLab%E3%80%81Gitee"><span class="nav-number">2.2.</span> <span class="nav-text">2. 将公钥添加到 GitLab、Gitee</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%20%E5%B0%86%E7%A7%81%E9%92%A5%E6%B7%BB%E5%8A%A0%E5%88%B0%20-GitHub-%20%E4%BB%93%E5%BA%93"><span class="nav-number">2.3.</span> <span class="nav-text">3. 将私钥添加到 GitHub 仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%20%E5%8F%96%E6%B6%88%20-GitLab-%20%E4%BB%93%E5%BA%93%E7%9A%84%E5%8F%97%E4%BF%9D%E6%8A%A4%E5%88%86%E6%94%AF"><span class="nav-number">2.4.</span> <span class="nav-text">4. 取消 GitLab 仓库的受保护分支 </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-%20%E9%85%8D%E7%BD%AE%20-GitHub-Actions"><span class="nav-number">2.5.</span> <span class="nav-text">5. 配置 GitHub Actions</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -189,7 +189,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">237</span>
+          <span class="site-state-item-count">238</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -314,23 +314,23 @@
         <p><img data-src="/150/github.jpg" alt="img" loading="lazy"></p>
 <a id="more"></a>
 
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>目前开源已经逐渐形成了一种趋势，越来越多的 geeker 加入了开源大军，开源社区也逐渐壮大，推动了技术发展和快速迭代</p>
+<h2 id="前言"><a href="# 前言" class="headerlink" title="前言"></a>前言 </h2><p> 目前开源已经逐渐形成了一种趋势，越来越多的 geeker 加入了开源大军，开源社区也逐渐壮大，推动了技术发展和快速迭代</p>
 <p>作为全球知名的代码托管平台，GitHub、Gitee、GitLab 均拥有不小的用户量，尤其是 GayHub，作为全球最大的同性交友平台，拥有超过 4 千万的用户量，足以说明其在业内的知名度</p>
 <p>但是，对于个人来说，使用一个托管平台就足够了，但是我们又有在其他平台备份的需求，并且希望有更新时能够自动备份</p>
 <p>对于这种需求，解决办法大多是利用 webhook，或者是在本地仓库中 remote add 添加远程仓库，这样就可以 push 到多个远程仓库。但是这些方法较为繁琐，更何况还有更好用的办法——GitHub Actions，有关 GitHub Actions 的一些教程还可参考博客 <span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NjdWxwdGEvYXJ0aWNsZS9kZXRhaWxzLzEwNDE0MjYwNw==">GitHub Actions 部署爬虫并定时发送邮件<i class="fa fa-external-link-alt"></i></span></p>
-<h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><h3 id="1-生成-ssh"><a href="#1-生成-ssh" class="headerlink" title="1. 生成 ssh"></a>1. 生成 ssh</h3><p>git bash 中敲入命令，会在 <code>~/.ssh</code> 文件夹下生成 <code>id_rsa.pub</code> 文件和 <code>id_rsa</code> 文件，分别存放公钥和私钥</p>
+<h2 id="步骤"><a href="# 步骤" class="headerlink" title="步骤"></a>步骤</h2><h3 id="1- 生成 -ssh"><a href="#1- 生成 -ssh" class="headerlink" title="1. 生成 ssh"></a>1. 生成 ssh</h3><p>git bash 中敲入命令，会在 <code>~/.ssh</code> 文件夹下生成 <code>id_rsa.pub</code> 文件和 <code>id_rsa</code> 文件，分别存放公钥和私钥</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;user@email.com&quot;</span><br><span class="line">1</span><br></pre></td></tr></table></figure>
-<h3 id="2-将公钥添加到-GitLab、Gitee"><a href="#2-将公钥添加到-GitLab、Gitee" class="headerlink" title="2. 将公钥添加到 GitLab、Gitee"></a>2. 将公钥添加到 GitLab、Gitee</h3><p>Gitee: 「设置」–&gt;「安全设置」–&gt;「SSH公钥」</p>
+<h3 id="2- 将公钥添加到 -GitLab、Gitee"><a href="#2- 将公钥添加到 -GitLab、Gitee" class="headerlink" title="2. 将公钥添加到 GitLab、Gitee"></a>2. 将公钥添加到 GitLab、Gitee</h3><p>Gitee: 「设置」–&gt;「安全设置」–&gt;「SSH 公钥」</p>
 <p><img data-src="/150/1.png" alt="img" loading="lazy"></p>
 <p>GitLab: 「Settings」–&gt;「SSH Keys」</p>
 <p><img data-src="/150/2.png" alt="img" loading="lazy"></p>
-<h3 id="3-将私钥添加到-GitHub-仓库"><a href="#3-将私钥添加到-GitHub-仓库" class="headerlink" title="3. 将私钥添加到 GitHub 仓库"></a>3. 将私钥添加到 GitHub 仓库</h3><p>GitHub Repository: 「Settings」–&gt;「Secrets」</p>
+<h3 id="3- 将私钥添加到 -GitHub- 仓库"><a href="#3- 将私钥添加到 -GitHub- 仓库" class="headerlink" title="3. 将私钥添加到 GitHub 仓库"></a>3. 将私钥添加到 GitHub 仓库</h3><p>GitHub Repository: 「Settings」–&gt;「Secrets」</p>
 <p><img data-src="/150/4.png" alt="img" loading="lazy"></p>
-<h3 id="4-取消-GitLab-仓库的受保护分支"><a href="#4-取消-GitLab-仓库的受保护分支" class="headerlink" title="4. 取消 GitLab 仓库的受保护分支"></a>4. 取消 GitLab 仓库的受保护分支</h3><p>由于 GitLab 仓库分支默认会受保护，即无法强制推送，如果不取消会报以下错误</p>
+<h3 id="4- 取消 -GitLab- 仓库的受保护分支"><a href="#4- 取消 -GitLab- 仓库的受保护分支" class="headerlink" title="4. 取消 GitLab 仓库的受保护分支"></a>4. 取消 GitLab 仓库的受保护分支 </h3><p> 由于 GitLab 仓库分支默认会受保护，即无法强制推送，如果不取消会报以下错误</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">GitLab: You are not allowed to force push code to a protected branch on this project.</span><br><span class="line">1</span><br></pre></td></tr></table></figure>
 <p>GitLab Repository: 「Settings」–&gt;「Repository」–&gt;「Protected Branches」</p>
 <p><img data-src="/150/3.png" alt="img" loading="lazy"></p>
-<h3 id="5-配置-GitHub-Actions"><a href="#5-配置-GitHub-Actions" class="headerlink" title="5. 配置 GitHub Actions"></a>5. 配置 GitHub Actions</h3><p>git bash 中敲入命令</p>
+<h3 id="5- 配置 -GitHub-Actions"><a href="#5- 配置 -GitHub-Actions" class="headerlink" title="5. 配置 GitHub Actions"></a>5. 配置 GitHub Actions</h3><p>git bash 中敲入命令</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">mkdir -p .github/workflows &amp;&amp; touch .github/workflows/mirror.yml</span><br><span class="line">1</span><br></pre></td></tr></table></figure>
 <p>用 VS Code 打开 <code>mirror.yml</code> 或使用 vi 编辑，将下列内容添加其中</p>
 <figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">name:</span> <span class="string">&#x27;GitHub Actions Mirror&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="attr">on:</span> [<span class="string">push</span>, <span class="string">delete</span>]</span><br><span class="line"></span><br><span class="line"><span class="attr">jobs:</span></span><br><span class="line">  <span class="attr">mirror_to_gitee:</span></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-latest</span></span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">&#x27;Checkout&#x27;</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">actions/checkout@v1</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">&#x27;Mirror to gitee&#x27;</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">pixta-dev/repository-mirroring-action@v1</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">target_repo_url:</span></span><br><span class="line">            <span class="string">git@gitee.com:tsund/test.git</span></span><br><span class="line">          <span class="attr">ssh_private_key:</span></span><br><span class="line">            <span class="string">$&#123;&#123;</span> <span class="string">secrets.GITEE_KEY</span> <span class="string">&#125;&#125;</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">mirror_to_gitlab:</span></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-latest</span></span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">&#x27;Checkout&#x27;</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">actions/checkout@v1</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">&#x27;Mirror to gitlab&#x27;</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">pixta-dev/repository-mirroring-action@v1</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">target_repo_url:</span></span><br><span class="line">            <span class="string">git@gitlab.com:tsund/test.git</span></span><br><span class="line">          <span class="attr">ssh_private_key:</span></span><br><span class="line">            <span class="string">$&#123;&#123;</span> <span class="string">secrets.GITLAB_KEY</span> <span class="string">&#125;&#125;</span></span><br></pre></td></tr></table></figure>
@@ -344,16 +344,38 @@
     
 
     <footer class="post-footer">
+          <div class="reward-container">
+  <div>Buy me a coffee</div>
+  <button onclick="document.querySelector('.post-reward').classList.toggle('active');">
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/20201122213021.png" alt="Lining Wei 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/434235F3-7A93-4EA4-A7B6-4F6D977F1A89.png" alt="Lining Wei 支付宝">
+        <span>支付宝</span>
+      </div>
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/bitcoin.png" alt="Lining Wei 比特币">
+        <span>比特币</span>
+      </div>
+
+  </div>
+</div>
+
           <div class="post-tags">
-              <a href="/tags/%E9%BB%98%E8%AE%A4/" rel="tag"># 默认</a>
+              <a href="/tags/%E9%BB%98%E8%AE%A4/" rel="tag"><i class="fa fa-tag"></i> 默认</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/149.html" rel="prev" title="Centos 报错解决办法'/etc/sudoers': No such file or directory">
-                  <i class="fa fa-chevron-left"></i> Centos 报错解决办法'/etc/sudoers': No such file or directory
+                <a href="/149.html" rel="prev" title="Centos 报错解决办法 '/etc/sudoers': No such file or directory">
+                  <i class="fa fa-chevron-left"></i> Centos 报错解决办法 '/etc/sudoers': No such file or directory
                 </a>
             </div>
             <div class="post-nav-item">
@@ -434,43 +456,9 @@
 
   
   <script src="//cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/@next-theme/pjax@0.4.0/pjax.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js"></script>
-<script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/motion.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/next-boot.js"></script><script>
-var pjax = new Pjax({
-  selectors: [
-    'head title',
-    '.page-configurations',
-    '.main-inner',
-    '.post-toc-wrap',
-    '.languages',
-    '.pjax'
-  ],
-  analytics: false,
-  cacheBust: false,
-  scrollRestoration: false,
-  scrollTo: !CONFIG.bookmark.enable
-});
-
-document.addEventListener('pjax:success', () => {
-  pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
-  NexT.boot.refresh();
-  // Define Motion Sequence & Bootstrap Motion.
-  if (CONFIG.motion.enable) {
-    NexT.motion.integrator
-      .init()
-      .add(NexT.motion.middleWares.subMenu)
-      .add(NexT.motion.middleWares.postList)
-      .bootstrap();
-  }
-  const hasTOC = document.querySelector('.post-toc');
-  document.querySelector('.sidebar-inner').classList.toggle('sidebar-nav-active', hasTOC);
-  document.querySelector(hasTOC ? '.sidebar-nav-toc' : '.sidebar-nav-overview').click();
-  NexT.utils.updateSidebarPosition();
-});
-</script>
-
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/motion.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/next-boot.js"></script>
 
   
 
@@ -482,7 +470,7 @@ document.addEventListener('pjax:success', () => {
   
 
 
-<script data-pjax>
+<script>
   (function() {
     function leancloudSelector(url) {
       url = encodeURI(url);
@@ -569,18 +557,7 @@ document.addEventListener('pjax:success', () => {
   })();
 </script>
 
-    <div class="pjax">
 
-  <script src="//cdn.jsdelivr.net/npm/quicklink@2.0.0/dist/quicklink.umd.js"></script>
-  <script>
-      window.addEventListener('load', () => {
-      quicklink.listen({
-        timeout : 3000,
-        priority: true,
-        ignores : [uri => uri.includes('#'),uri => uri === 'https://weilining.github.io/150.html',]
-      });
-      });
-  </script>
 
 <script>
 NexT.utils.loadComments('#lv-container', () => {
@@ -598,6 +575,5 @@ NexT.utils.loadComments('#lv-container', () => {
 });
 </script>
 
-    </div>
 </body>
 </html>

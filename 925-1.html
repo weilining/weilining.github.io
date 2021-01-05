@@ -18,7 +18,7 @@
 
 <link rel="stylesheet" href="/css/main.css">
 
-
+<link rel="stylesheet" href="https://fonts.dogedoge.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
@@ -45,7 +45,7 @@
 <link rel="canonical" href="https://weilining.github.io/925-1.html">
 
 
-<script data-pjax class="page-configurations">
+<script class="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
@@ -168,7 +168,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%96%B9%E6%A1%88"><span class="nav-number">1.</span> <span class="nav-text">方案</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%96%B9%E6%A1%88"><span class="nav-number">1.</span> <span class="nav-text">方案 </span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -184,7 +184,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">237</span>
+          <span class="site-state-item-count">238</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -314,15 +314,15 @@
     
     <div class="post-body" itemprop="articleBody">
         <blockquote>
-<p>特别喜欢原来自己网站的<strong>最近文章</strong>功能，之前也花了很多精力设计。最近文章可以很方便的看到本博客最近更新了哪些内容，可惜Hexo的Next主题并没有这个功能，那我就把它加上来。网上的参考文章都是针对较老版本的Swig文件，而现在Hexo已经迁移到了NJK模板上，所以这个修改花了我个把小时才完成。</p>
+<p>特别喜欢原来自己网站的 <strong> 最近文章 </strong> 功能，之前也花了很多精力设计。最近文章可以很方便的看到本博客最近更新了哪些内容，可惜 Hexo 的 Next 主题并没有这个功能，那我就把它加上来。网上的参考文章都是针对较老版本的 Swig 文件，而现在 Hexo 已经迁移到了 NJK 模板上，所以这个修改花了我个把小时才完成。</p>
 </blockquote>
 <a id="more"></a>
 
-<h1 id="方案"><a href="#方案" class="headerlink" title="方案"></a>方案</h1><p>新建<code>source/_data/sidebar.njk</code>文件，内容如下：</p>
+<h1 id="方案"><a href="# 方案" class="headerlink" title="方案"></a>方案 </h1><p> 新建 <code>source/_data/sidebar.njk</code> 文件，内容如下：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;# RecentPosts #&#125;</span><br><span class="line">&#123;%- if theme.recent_posts %&#125;</span><br><span class="line">  &lt;div class&#x3D;&quot;links-of-recent-posts motion-element&quot;&gt;</span><br><span class="line">    &lt;div class&#x3D;&quot;links-of-recent-posts-title&quot;&gt;</span><br><span class="line">      &#123;%- if theme.recent_posts.icon %&#125;</span><br><span class="line">      &lt;i class&#x3D;&quot;&#123;&#123; theme.recent_posts.icon &#125;&#125; fa-fw&quot;&gt;&lt;&#x2F;i&gt;</span><br><span class="line">      &#123;%- endif %&#125;</span><br><span class="line">      &#123;&#123; theme.recent_posts.title &#125;&#125;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">    &lt;ul class&#x3D;&quot;links-of-recent-posts-list&quot;&gt;</span><br><span class="line">      &#123;%- set posts &#x3D; site.posts.sort(&#39;date&#39;, &#39;desc&#39;).toArray() %&#125;</span><br><span class="line">      &#123;%- for post in posts.slice(&#39;0&#39;, theme.recent_posts.max_count) %&#125;</span><br><span class="line">        &lt;li class&#x3D;&quot;links-of-recent-posts-item&quot;&gt;</span><br><span class="line">          &#123;&#123; next_url(post.path, post.title, &#123;title: post.path&#125;) &#125;&#125;</span><br><span class="line">        &lt;&#x2F;li&gt;</span><br><span class="line">      &#123;%- endfor %&#125;</span><br><span class="line">    &lt;&#x2F;ul&gt;</span><br><span class="line">  &lt;&#x2F;div&gt;</span><br><span class="line">&#123;%- endif %&#125;</span><br></pre></td></tr></table></figure>
-<p>修改<code>_config.next.yml</code>，打开custom_file_path中的sidebar和style两个内容，并新增recent_posts内容。</p>
+<p>修改<code>_config.next.yml</code>，打开 custom_file_path 中的 sidebar 和 style 两个内容，并新增 recent_posts 内容。</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Define custom file paths.</span><br><span class="line"># Create your custom files in site directory &#96;source&#x2F;_data&#96; and uncomment needed files below.</span><br><span class="line">custom_file_path:</span><br><span class="line">  #head: source&#x2F;_data&#x2F;head.njk</span><br><span class="line">  #header: source&#x2F;_data&#x2F;header.njk</span><br><span class="line">  sidebar: source&#x2F;_data&#x2F;sidebar.njk</span><br><span class="line">  #postMeta: source&#x2F;_data&#x2F;post-meta.njk</span><br><span class="line">  #postBodyEnd: source&#x2F;_data&#x2F;post-body-end.njk</span><br><span class="line">  #footer: source&#x2F;_data&#x2F;footer.njk</span><br><span class="line">  #bodyEnd: source&#x2F;_data&#x2F;body-end.njk</span><br><span class="line">  #variable: source&#x2F;_data&#x2F;variables.styl</span><br><span class="line">  #mixin: source&#x2F;_data&#x2F;mixins.styl</span><br><span class="line">  style: source&#x2F;_data&#x2F;styles.styl</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">recent_posts:</span><br><span class="line"># 块标题</span><br><span class="line">  title: 最近文章</span><br><span class="line"># 图标</span><br><span class="line">  icon: fa fa-history</span><br><span class="line"># 最多多少文章链接</span><br><span class="line">  max_count: 18</span><br></pre></td></tr></table></figure>
-<p>剩下的，需要修改styl文件，美化界面。新增<code>source/_data/styles.styl</code>文件：</p>
+<p>剩下的，需要修改 styl 文件，美化界面。新增 <code>source/_data/styles.styl</code> 文件：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 近期文章</span><br><span class="line">.links-of-recent-posts</span><br><span class="line">  font-size: 0.8125em</span><br><span class="line">  margin-top: 10px</span><br><span class="line"></span><br><span class="line">.links-of-recent-posts-title</span><br><span class="line">  font-size: 1.03em</span><br><span class="line">  font-weight: 600</span><br><span class="line">  margin-top: 0</span><br><span class="line"></span><br><span class="line">.links-of-recent-posts-list</span><br><span class="line">  list-style: none</span><br><span class="line">  margin: 0</span><br><span class="line">  padding: 0</span><br></pre></td></tr></table></figure>
 <p>P.S. 以上内容可以根据个人需要进行调整。</p>
 <p>参考</p>
@@ -335,9 +335,31 @@
     
 
     <footer class="post-footer">
+          <div class="reward-container">
+  <div>Buy me a coffee</div>
+  <button onclick="document.querySelector('.post-reward').classList.toggle('active');">
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/20201122213021.png" alt="Lining Wei 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/434235F3-7A93-4EA4-A7B6-4F6D977F1A89.png" alt="Lining Wei 支付宝">
+        <span>支付宝</span>
+      </div>
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/bitcoin.png" alt="Lining Wei 比特币">
+        <span>比特币</span>
+      </div>
+
+  </div>
+</div>
+
           <div class="post-tags">
-              <a href="/tags/NexT/" rel="tag"># NexT</a>
-              <a href="/tags/%E9%BB%98%E8%AE%A4/" rel="tag"># 默认</a>
+              <a href="/tags/NexT/" rel="tag"><i class="fa fa-tag"></i> NexT</a>
+              <a href="/tags/%E9%BB%98%E8%AE%A4/" rel="tag"><i class="fa fa-tag"></i> 默认</a>
           </div>
 
         
@@ -349,8 +371,8 @@
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/926-1.html" rel="next" title="使用Typora添加数学公式">
-                  使用Typora添加数学公式 <i class="fa fa-chevron-right"></i>
+                <a href="/926-1.html" rel="next" title="使用 Typora 添加数学公式">
+                  使用 Typora 添加数学公式 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
@@ -426,43 +448,9 @@
 
   
   <script src="//cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/@next-theme/pjax@0.4.0/pjax.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js"></script>
-<script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/motion.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/next-boot.js"></script><script>
-var pjax = new Pjax({
-  selectors: [
-    'head title',
-    '.page-configurations',
-    '.main-inner',
-    '.post-toc-wrap',
-    '.languages',
-    '.pjax'
-  ],
-  analytics: false,
-  cacheBust: false,
-  scrollRestoration: false,
-  scrollTo: !CONFIG.bookmark.enable
-});
-
-document.addEventListener('pjax:success', () => {
-  pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
-  NexT.boot.refresh();
-  // Define Motion Sequence & Bootstrap Motion.
-  if (CONFIG.motion.enable) {
-    NexT.motion.integrator
-      .init()
-      .add(NexT.motion.middleWares.subMenu)
-      .add(NexT.motion.middleWares.postList)
-      .bootstrap();
-  }
-  const hasTOC = document.querySelector('.post-toc');
-  document.querySelector('.sidebar-inner').classList.toggle('sidebar-nav-active', hasTOC);
-  document.querySelector(hasTOC ? '.sidebar-nav-toc' : '.sidebar-nav-overview').click();
-  NexT.utils.updateSidebarPosition();
-});
-</script>
-
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/motion.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/next-boot.js"></script>
 
   
 
@@ -474,7 +462,7 @@ document.addEventListener('pjax:success', () => {
   
 
 
-<script data-pjax>
+<script>
   (function() {
     function leancloudSelector(url) {
       url = encodeURI(url);
@@ -561,18 +549,7 @@ document.addEventListener('pjax:success', () => {
   })();
 </script>
 
-    <div class="pjax">
 
-  <script src="//cdn.jsdelivr.net/npm/quicklink@2.0.0/dist/quicklink.umd.js"></script>
-  <script>
-      window.addEventListener('load', () => {
-      quicklink.listen({
-        timeout : 3000,
-        priority: true,
-        ignores : [uri => uri.includes('#'),uri => uri === 'https://weilining.github.io/925-1.html',]
-      });
-      });
-  </script>
 
 <script>
 NexT.utils.loadComments('#lv-container', () => {
@@ -590,6 +567,5 @@ NexT.utils.loadComments('#lv-container', () => {
 });
 </script>
 
-    </div>
 </body>
 </html>

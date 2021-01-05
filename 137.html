@@ -18,7 +18,7 @@
 
 <link rel="stylesheet" href="/css/main.css">
 
-
+<link rel="stylesheet" href="https://fonts.dogedoge.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
@@ -46,7 +46,7 @@
 <link rel="canonical" href="https://weilining.github.io/137.html">
 
 
-<script data-pjax class="page-configurations">
+<script class="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
@@ -184,7 +184,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">237</span>
+          <span class="site-state-item-count">238</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -314,7 +314,7 @@
 <p>项目地址：<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3N0ZXZlbmpvZXpoYW5nL2xpdmUyZC13aWRnZXQ=">live2d-widget<i class="fa fa-external-link-alt"></i></span></p>
 <p>克隆这个仓库到服务器上，并配置 <code>autoload.js</code>，修改其中的链接为各文件的绝对地址，即可在网页中添加 Live2D 看板娘（かんばんむすめ）。<br>相对于市面上广为流传的版本，笔者对触发动作和语言进行了魔改（针对 Hexo NexT 主题），调整了图标样式、元素定位，并解决了 CSS 的前缀等问题。<br>更多内容可以参考项目文档及下方链接。<br><strong>快来把萌萌哒的看板娘抱回家吧！</strong></p>
 <hr>
-<p>参考文章：<br><span class="exturl" data-url="aHR0cHM6Ly93d3cuZmdocnNoLm5ldC9wb3N0LzEyMy5odG1s">网页添加 Live2D 看板娘<i class="fa fa-external-link-alt"></i></span><br><span class="exturl" data-url="aHR0cHM6Ly9pbWphZC5jbi9hcmNoaXZlcy9sYWIvYWRkLWR5bmFtaWMtcG9zdGVyLWdpcmwtd2l0aC1saXZlMmQtdG8teW91ci1ibG9nLTAy">给博客添加能动的看板娘 (Live2D)- 将其添加到网页上吧<i class="fa fa-external-link-alt"></i></span></p>
+<p>参考文章：<br><span class="exturl" data-url="aHR0cHM6Ly93d3cuZmdocnNoLm5ldC9wb3N0LzEyMy5odG1s">网页添加 Live2D 看板娘 <i class="fa fa-external-link-alt"></i></span><br><span class="exturl" data-url="aHR0cHM6Ly9pbWphZC5jbi9hcmNoaXZlcy9sYWIvYWRkLWR5bmFtaWMtcG9zdGVyLWdpcmwtd2l0aC1saXZlMmQtdG8teW91ci1ibG9nLTAy"> 给博客添加能动的看板娘 (Live2D)- 将其添加到网页上吧<i class="fa fa-external-link-alt"></i></span></p>
 <p>本文更新于 2019 年 12 月 30 日：<br>即日起本插件不再依赖于 jQuery。</p>
 <p>本文更新于 2020 年 4 月：<br>如果修改 fork 之后的版本，并通过 jsDelivr 的 CDN 加载，请务必创建新的 git tag，否则改动不会生效。具体操作见仓库 README 中的说明。 </p>
 
@@ -325,8 +325,30 @@
     
 
     <footer class="post-footer">
+          <div class="reward-container">
+  <div>Buy me a coffee</div>
+  <button onclick="document.querySelector('.post-reward').classList.toggle('active');">
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/20201122213021.png" alt="Lining Wei 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/434235F3-7A93-4EA4-A7B6-4F6D977F1A89.png" alt="Lining Wei 支付宝">
+        <span>支付宝</span>
+      </div>
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/bitcoin.png" alt="Lining Wei 比特币">
+        <span>比特币</span>
+      </div>
+
+  </div>
+</div>
+
           <div class="post-tags">
-              <a href="/tags/%E9%BB%98%E8%AE%A4/" rel="tag"># 默认</a>
+              <a href="/tags/%E9%BB%98%E8%AE%A4/" rel="tag"><i class="fa fa-tag"></i> 默认</a>
           </div>
 
         
@@ -415,43 +437,9 @@
 
   
   <script src="//cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/@next-theme/pjax@0.4.0/pjax.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js"></script>
-<script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/motion.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/next-boot.js"></script><script>
-var pjax = new Pjax({
-  selectors: [
-    'head title',
-    '.page-configurations',
-    '.main-inner',
-    '.post-toc-wrap',
-    '.languages',
-    '.pjax'
-  ],
-  analytics: false,
-  cacheBust: false,
-  scrollRestoration: false,
-  scrollTo: !CONFIG.bookmark.enable
-});
-
-document.addEventListener('pjax:success', () => {
-  pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
-  NexT.boot.refresh();
-  // Define Motion Sequence & Bootstrap Motion.
-  if (CONFIG.motion.enable) {
-    NexT.motion.integrator
-      .init()
-      .add(NexT.motion.middleWares.subMenu)
-      .add(NexT.motion.middleWares.postList)
-      .bootstrap();
-  }
-  const hasTOC = document.querySelector('.post-toc');
-  document.querySelector('.sidebar-inner').classList.toggle('sidebar-nav-active', hasTOC);
-  document.querySelector(hasTOC ? '.sidebar-nav-toc' : '.sidebar-nav-overview').click();
-  NexT.utils.updateSidebarPosition();
-});
-</script>
-
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/motion.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/next-boot.js"></script>
 
   
 
@@ -463,7 +451,7 @@ document.addEventListener('pjax:success', () => {
   
 
 
-<script data-pjax>
+<script>
   (function() {
     function leancloudSelector(url) {
       url = encodeURI(url);
@@ -550,18 +538,7 @@ document.addEventListener('pjax:success', () => {
   })();
 </script>
 
-    <div class="pjax">
 
-  <script src="//cdn.jsdelivr.net/npm/quicklink@2.0.0/dist/quicklink.umd.js"></script>
-  <script>
-      window.addEventListener('load', () => {
-      quicklink.listen({
-        timeout : 3000,
-        priority: true,
-        ignores : [uri => uri.includes('#'),uri => uri === 'https://weilining.github.io/137.html',]
-      });
-      });
-  </script>
 
 <script>
 NexT.utils.loadComments('#lv-container', () => {
@@ -579,6 +556,5 @@ NexT.utils.loadComments('#lv-container', () => {
 });
 </script>
 
-    </div>
 </body>
 </html>

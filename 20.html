@@ -18,7 +18,7 @@
 
 <link rel="stylesheet" href="/css/main.css">
 
-
+<link rel="stylesheet" href="https://fonts.dogedoge.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
@@ -29,7 +29,7 @@
   </script>
 <meta name="description" content="默认">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Windows下Nginx的启动、停止、重启等命令">
+<meta property="og:title" content="Windows 下 Nginx 的启动、停止、重启等命令">
 <meta property="og:url" content="https://weilining.github.io/20.html">
 <meta property="og:site_name" content="Ln&#39;s Blog">
 <meta property="og:description" content="默认">
@@ -44,7 +44,7 @@
 <link rel="canonical" href="https://weilining.github.io/20.html">
 
 
-<script data-pjax class="page-configurations">
+<script class="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
@@ -53,7 +53,7 @@
     lang   : 'zh-CN'
   };
 </script>
-<title>Windows下Nginx的启动、停止、重启等命令 | Ln's Blog</title>
+<title>Windows 下 Nginx 的启动、停止、重启等命令 | Ln's Blog</title>
   
 
 
@@ -182,7 +182,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">237</span>
+          <span class="site-state-item-count">238</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -247,7 +247,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Windows下Nginx的启动、停止、重启等命令
+          Windows 下 Nginx 的启动、停止、重启等命令
         </h1>
 
         <div class="post-meta-container">
@@ -271,7 +271,7 @@
     </span>
 
   
-    <span id="/20.html" class="post-meta-item leancloud_visitors" data-flag-title="Windows下Nginx的启动、停止、重启等命令" title="阅读次数">
+    <span id="/20.html" class="post-meta-item leancloud_visitors" data-flag-title="Windows 下 Nginx 的启动、停止、重启等命令" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
       </span>
@@ -306,25 +306,25 @@
     <div class="post-body" itemprop="articleBody">
         <a id="more"></a>
 
-<p> 在Windows下使用Nginx，我们需要掌握一些基本的操作命令，比如：启动、停止Nginx服务，重新载入Nginx等，下面我就进行一些简单的介绍。</p>
-<p>假设你安装在 C:\server\nginx-1.0.2目录下，</p>
-<p>cmd命令进入安装文件；</p>
+<p> 在 Windows 下使用 Nginx，我们需要掌握一些基本的操作命令，比如：启动、停止 Nginx 服务，重新载入 Nginx 等，下面我就进行一些简单的介绍。</p>
+<p> 假设你安装在 C:\server\nginx-1.0.2 目录下，</p>
+<p>cmd 命令进入安装文件；</p>
 <p><strong>1、启动：</strong></p>
 <p>C:\server\nginx-1.0.2&gt;start nginx</p>
-<p>或</p>
+<p> 或 </p>
 <p>C:\server\nginx-1.0.2&gt;nginx.exe</p>
-<p>注：建议使用第一种，第二种会使你的cmd窗口一直处于执行中，不能进行其他命令操作。</p>
+<p> 注：建议使用第一种，第二种会使你的 cmd 窗口一直处于执行中，不能进行其他命令操作。</p>
 <p><strong>2、停止：</strong></p>
 <p>C:\server\nginx-1.0.2&gt;nginx.exe -s stop</p>
-<p>或</p>
+<p> 或 </p>
 <p>C:\server\nginx-1.0.2&gt;nginx.exe -s quit</p>
-<p>注：stop是快速停止nginx，可能并不保存相关信息；quit是完整有序的停止nginx，并保存相关信息。</p>
-<p><strong>3、重新载入Nginx：</strong></p>
+<p> 注：stop 是快速停止 nginx，可能并不保存相关信息；quit 是完整有序的停止 nginx，并保存相关信息。</p>
+<p><strong>3、重新载入 Nginx：</strong></p>
 <p>C:\server\nginx-1.0.2&gt;nginx.exe -s reload</p>
-<p>当配置信息修改，需要重新载入这些配置时使用此命令。</p>
+<p> 当配置信息修改，需要重新载入这些配置时使用此命令。</p>
 <p><strong>4、重新打开日志文件：</strong></p>
 <p>C:\server\nginx-1.0.2&gt;nginx.exe -s reopen</p>
-<p><strong>5、查看Nginx版本：</strong></p>
+<p><strong>5、查看 Nginx 版本：</strong></p>
 <p>C:\server\nginx-1.0.2&gt;nginx -v</p>
 
     </div>
@@ -334,8 +334,30 @@
     
 
     <footer class="post-footer">
+          <div class="reward-container">
+  <div>Buy me a coffee</div>
+  <button onclick="document.querySelector('.post-reward').classList.toggle('active');">
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/20201122213021.png" alt="Lining Wei 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/434235F3-7A93-4EA4-A7B6-4F6D977F1A89.png" alt="Lining Wei 支付宝">
+        <span>支付宝</span>
+      </div>
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/bitcoin.png" alt="Lining Wei 比特币">
+        <span>比特币</span>
+      </div>
+
+  </div>
+</div>
+
           <div class="post-tags">
-              <a href="/tags/%E9%BB%98%E8%AE%A4/" rel="tag"># 默认</a>
+              <a href="/tags/%E9%BB%98%E8%AE%A4/" rel="tag"><i class="fa fa-tag"></i> 默认</a>
           </div>
 
         
@@ -424,43 +446,9 @@
 
   
   <script src="//cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/@next-theme/pjax@0.4.0/pjax.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js"></script>
-<script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/motion.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/next-boot.js"></script><script>
-var pjax = new Pjax({
-  selectors: [
-    'head title',
-    '.page-configurations',
-    '.main-inner',
-    '.post-toc-wrap',
-    '.languages',
-    '.pjax'
-  ],
-  analytics: false,
-  cacheBust: false,
-  scrollRestoration: false,
-  scrollTo: !CONFIG.bookmark.enable
-});
-
-document.addEventListener('pjax:success', () => {
-  pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
-  NexT.boot.refresh();
-  // Define Motion Sequence & Bootstrap Motion.
-  if (CONFIG.motion.enable) {
-    NexT.motion.integrator
-      .init()
-      .add(NexT.motion.middleWares.subMenu)
-      .add(NexT.motion.middleWares.postList)
-      .bootstrap();
-  }
-  const hasTOC = document.querySelector('.post-toc');
-  document.querySelector('.sidebar-inner').classList.toggle('sidebar-nav-active', hasTOC);
-  document.querySelector(hasTOC ? '.sidebar-nav-toc' : '.sidebar-nav-overview').click();
-  NexT.utils.updateSidebarPosition();
-});
-</script>
-
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/motion.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/next-boot.js"></script>
 
   
 
@@ -472,7 +460,7 @@ document.addEventListener('pjax:success', () => {
   
 
 
-<script data-pjax>
+<script>
   (function() {
     function leancloudSelector(url) {
       url = encodeURI(url);
@@ -559,18 +547,7 @@ document.addEventListener('pjax:success', () => {
   })();
 </script>
 
-    <div class="pjax">
 
-  <script src="//cdn.jsdelivr.net/npm/quicklink@2.0.0/dist/quicklink.umd.js"></script>
-  <script>
-      window.addEventListener('load', () => {
-      quicklink.listen({
-        timeout : 3000,
-        priority: true,
-        ignores : [uri => uri.includes('#'),uri => uri === 'https://weilining.github.io/20.html',]
-      });
-      });
-  </script>
 
 <script>
 NexT.utils.loadComments('#lv-container', () => {
@@ -588,6 +565,5 @@ NexT.utils.loadComments('#lv-container', () => {
 });
 </script>
 
-    </div>
 </body>
 </html>

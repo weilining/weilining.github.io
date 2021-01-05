@@ -18,7 +18,7 @@
 
 <link rel="stylesheet" href="/css/main.css">
 
-
+<link rel="stylesheet" href="https://fonts.dogedoge.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
@@ -29,7 +29,7 @@
   </script>
 <meta name="description" content="默认">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Git笔记">
+<meta property="og:title" content="Git 笔记">
 <meta property="og:url" content="https://weilining.github.io/178.html">
 <meta property="og:site_name" content="Ln&#39;s Blog">
 <meta property="og:description" content="默认">
@@ -44,7 +44,7 @@
 <link rel="canonical" href="https://weilining.github.io/178.html">
 
 
-<script data-pjax class="page-configurations">
+<script class="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
@@ -53,7 +53,7 @@
     lang   : 'zh-CN'
   };
 </script>
-<title>Git笔记 | Ln's Blog</title>
+<title>Git 笔记 | Ln's Blog</title>
   
 
 
@@ -167,7 +167,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#git-add-%E5%92%8C-git-add-%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">1.</span> <span class="nav-text">git add . 和 git add * 的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%A0%E9%99%A4-GitHub-%E4%B8%8A-repository-%E9%87%8C%E7%9A%84%E6%96%87%E4%BB%B6"><span class="nav-number">2.</span> <span class="nav-text">删除 GitHub 上 repository 里的文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%92%A4%E9%94%80-git-commit-%E7%9A%84%E5%86%85%E5%AE%B9"><span class="nav-number">3.</span> <span class="nav-text">撤销 git commit 的内容</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#git-add-%20%E5%92%8C%20-git-add-%20%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">1.</span> <span class="nav-text">git add . 和 git add * 的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%A0%E9%99%A4%20-GitHub-%20%E4%B8%8A%20-repository-%20%E9%87%8C%E7%9A%84%E6%96%87%E4%BB%B6"><span class="nav-number">2.</span> <span class="nav-text">删除 GitHub 上 repository 里的文件 </span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%92%A4%E9%94%80%20-git-commit-%20%E7%9A%84%E5%86%85%E5%AE%B9"><span class="nav-number">3.</span> <span class="nav-text">撤销 git commit 的内容</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -183,7 +183,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">237</span>
+          <span class="site-state-item-count">238</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -248,7 +248,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Git笔记
+          Git 笔记
         </h1>
 
         <div class="post-meta-container">
@@ -272,7 +272,7 @@
     </span>
 
   
-    <span id="/178.html" class="post-meta-item leancloud_visitors" data-flag-title="Git笔记" title="阅读次数">
+    <span id="/178.html" class="post-meta-item leancloud_visitors" data-flag-title="Git 笔记" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
       </span>
@@ -310,15 +310,15 @@
 
 
 
-<h2 id="git-add-和-git-add-的区别"><a href="#git-add-和-git-add-的区别" class="headerlink" title="git add . 和 git add * 的区别"></a>git add . 和 git add * 的区别</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git add .：把本地所有untrack的文件都加入暂存区，并且会根据.gitignore做过滤</span><br><span class="line"></span><br><span class="line">git add *：忽略.gitignore把任何文件都加入</span><br></pre></td></tr></table></figure>
+<h2 id="git-add- 和 -git-add- 的区别"><a href="#git-add- 和 -git-add- 的区别" class="headerlink" title="git add . 和 git add * 的区别"></a>git add . 和 git add * 的区别</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git add .：把本地所有 untrack 的文件都加入暂存区，并且会根据.gitignore 做过滤</span><br><span class="line"></span><br><span class="line">git add *：忽略.gitignore 把任何文件都加入</span><br></pre></td></tr></table></figure>
 
 
-<h2 id="删除-GitHub-上-repository-里的文件"><a href="#删除-GitHub-上-repository-里的文件" class="headerlink" title="删除 GitHub 上 repository 里的文件"></a>删除 GitHub 上 repository 里的文件</h2><p>代码 push 到 GitHub 上后，便 rm 了本地 repository 的某个文件，如何也删除掉 GitHub 上的这个文件呢</p>
+<h2 id="删除 -GitHub- 上 -repository- 里的文件"><a href="# 删除 -GitHub- 上 -repository- 里的文件" class="headerlink" title="删除 GitHub 上 repository 里的文件"></a>删除 GitHub 上 repository 里的文件 </h2><p> 代码 push 到 GitHub 上后，便 rm 了本地 repository 的某个文件，如何也删除掉 GitHub 上的这个文件呢</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -a -m &quot;&quot;</span><br><span class="line">git push</span><br></pre></td></tr></table></figure>
-<p>git add 只能加入原来没有被跟踪的文件,没有把删除这个行为也加入版本控制，-commit时添加 -a 选项。</p>
-<h2 id="撤销-git-commit-的内容"><a href="#撤销-git-commit-的内容" class="headerlink" title="撤销 git commit 的内容"></a>撤销 git commit 的内容</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git reset --soft HEAD^</span><br></pre></td></tr></table></figure>
-<p>HEAD^的意思是上一个版本，也可以写成HEAD~1</p>
-<p>如果你进行了2次commit，想都撤回，可以使用HEAD~2</p>
+<p>git add 只能加入原来没有被跟踪的文件, 没有把删除这个行为也加入版本控制，-commit 时添加 -a 选项。</p>
+<h2 id="撤销 -git-commit- 的内容"><a href="# 撤销 -git-commit- 的内容" class="headerlink" title="撤销 git commit 的内容"></a>撤销 git commit 的内容</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git reset --soft HEAD^</span><br></pre></td></tr></table></figure>
+<p>HEAD^ 的意思是上一个版本，也可以写成 HEAD~1</p>
+<p>如果你进行了 2 次 commit，想都撤回，可以使用 HEAD~2</p>
 <p>其他参数：</p>
 <table>
 <thead>
@@ -329,20 +329,20 @@
 </thead>
 <tbody><tr>
 <td>–mixed</td>
-<td>不删除工作空间改动代码，撤销commit，并且撤销git add . 操作。<br/>这个为默认参数，git reset –mixed HEAD^ 和 git reset HEAD^ 效果是一样的。</td>
+<td>不删除工作空间改动代码，撤销 commit，并且撤销 git add . 操作。<br/>这个为默认参数，git reset –mixed HEAD^ 和 git reset HEAD^ 效果是一样的。</td>
 </tr>
 <tr>
 <td>–soft</td>
-<td>不删除工作空间改动代码，撤销commit，不撤销git add .</td>
+<td>不删除工作空间改动代码，撤销 commit，不撤销 git add .</td>
 </tr>
 <tr>
 <td>–hard</td>
-<td>删除工作空间改动代码，撤销commit，撤销git add .<br/>注意完成这个操作后，就恢复到了上一次的commit状态。</td>
+<td>删除工作空间改动代码，撤销 commit，撤销 git add .<br/>注意完成这个操作后，就恢复到了上一次的 commit 状态。</td>
 </tr>
 </tbody></table>
-<p>如果commit注释写错了，只是想改一下注释，只需要：</p>
+<p>如果 commit 注释写错了，只是想改一下注释，只需要：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git commit --amend</span><br></pre></td></tr></table></figure>
-<p>此时会进入默认vim编辑器，修改注释完毕后保存就好了。</p>
+<p>此时会进入默认 vim 编辑器，修改注释完毕后保存就好了。</p>
 
     </div>
 
@@ -351,8 +351,30 @@
     
 
     <footer class="post-footer">
+          <div class="reward-container">
+  <div>Buy me a coffee</div>
+  <button onclick="document.querySelector('.post-reward').classList.toggle('active');">
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/20201122213021.png" alt="Lining Wei 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/434235F3-7A93-4EA4-A7B6-4F6D977F1A89.png" alt="Lining Wei 支付宝">
+        <span>支付宝</span>
+      </div>
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/bitcoin.png" alt="Lining Wei 比特币">
+        <span>比特币</span>
+      </div>
+
+  </div>
+</div>
+
           <div class="post-tags">
-              <a href="/tags/%E9%BB%98%E8%AE%A4/" rel="tag"># 默认</a>
+              <a href="/tags/%E9%BB%98%E8%AE%A4/" rel="tag"><i class="fa fa-tag"></i> 默认</a>
           </div>
 
         
@@ -441,43 +463,9 @@
 
   
   <script src="//cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/@next-theme/pjax@0.4.0/pjax.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js"></script>
-<script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/motion.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/next-boot.js"></script><script>
-var pjax = new Pjax({
-  selectors: [
-    'head title',
-    '.page-configurations',
-    '.main-inner',
-    '.post-toc-wrap',
-    '.languages',
-    '.pjax'
-  ],
-  analytics: false,
-  cacheBust: false,
-  scrollRestoration: false,
-  scrollTo: !CONFIG.bookmark.enable
-});
-
-document.addEventListener('pjax:success', () => {
-  pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
-  NexT.boot.refresh();
-  // Define Motion Sequence & Bootstrap Motion.
-  if (CONFIG.motion.enable) {
-    NexT.motion.integrator
-      .init()
-      .add(NexT.motion.middleWares.subMenu)
-      .add(NexT.motion.middleWares.postList)
-      .bootstrap();
-  }
-  const hasTOC = document.querySelector('.post-toc');
-  document.querySelector('.sidebar-inner').classList.toggle('sidebar-nav-active', hasTOC);
-  document.querySelector(hasTOC ? '.sidebar-nav-toc' : '.sidebar-nav-overview').click();
-  NexT.utils.updateSidebarPosition();
-});
-</script>
-
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/motion.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/next-boot.js"></script>
 
   
 
@@ -489,7 +477,7 @@ document.addEventListener('pjax:success', () => {
   
 
 
-<script data-pjax>
+<script>
   (function() {
     function leancloudSelector(url) {
       url = encodeURI(url);
@@ -576,18 +564,7 @@ document.addEventListener('pjax:success', () => {
   })();
 </script>
 
-    <div class="pjax">
 
-  <script src="//cdn.jsdelivr.net/npm/quicklink@2.0.0/dist/quicklink.umd.js"></script>
-  <script>
-      window.addEventListener('load', () => {
-      quicklink.listen({
-        timeout : 3000,
-        priority: true,
-        ignores : [uri => uri.includes('#'),uri => uri === 'https://weilining.github.io/178.html',]
-      });
-      });
-  </script>
 
 <script>
 NexT.utils.loadComments('#lv-container', () => {
@@ -605,6 +582,5 @@ NexT.utils.loadComments('#lv-container', () => {
 });
 </script>
 
-    </div>
 </body>
 </html>

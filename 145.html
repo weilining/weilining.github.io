@@ -18,7 +18,7 @@
 
 <link rel="stylesheet" href="/css/main.css">
 
-
+<link rel="stylesheet" href="https://fonts.dogedoge.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
@@ -29,7 +29,7 @@
   </script>
 <meta name="description" content="默认">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Docker里安装centos8镜像">
+<meta property="og:title" content="Docker 里安装 centos8 镜像">
 <meta property="og:url" content="https://weilining.github.io/145.html">
 <meta property="og:site_name" content="Ln&#39;s Blog">
 <meta property="og:description" content="默认">
@@ -54,7 +54,7 @@
 <link rel="canonical" href="https://weilining.github.io/145.html">
 
 
-<script data-pjax class="page-configurations">
+<script class="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
@@ -63,7 +63,7 @@
     lang   : 'zh-CN'
   };
 </script>
-<title>Docker里安装centos8镜像 | Ln's Blog</title>
+<title>Docker 里安装 centos8 镜像 | Ln's Blog</title>
   
 
 
@@ -177,7 +177,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8B%89%E5%8F%96centos8%E9%95%9C%E5%83%8F"><span class="nav-number">1.</span> <span class="nav-text">拉取centos8镜像</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Centos%E7%89%88%E6%9C%AC"><span class="nav-number">2.</span> <span class="nav-text">Centos版本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%8E%B7%E5%8F%96IMAGE-ID"><span class="nav-number">3.</span> <span class="nav-text">获取IMAGE ID</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%AF%E5%8A%A8%E9%95%9C%E5%83%8Fcentos8"><span class="nav-number">4.</span> <span class="nav-text">启动镜像centos8</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%8E%B7%E5%8F%96CONTAINER-ID"><span class="nav-number">5.</span> <span class="nav-text">获取CONTAINER ID</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%9B%E5%85%A5%E5%AE%B9%E5%99%A8"><span class="nav-number">6.</span> <span class="nav-text">进入容器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%9B%E5%85%A5%E5%90%8E%E5%8F%91%E7%8E%B0%E6%B2%A1%E6%9C%89ifconfig"><span class="nav-number">7.</span> <span class="nav-text">进入后发现没有ifconfig</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#yum%E5%AE%89%E8%A3%85"><span class="nav-number">7.1.</span> <span class="nav-text">yum安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A6%82%E6%9E%9C%E8%A7%89%E5%BE%97%E6%85%A2%EF%BC%8C%E5%8F%AF%E4%BB%A5%E6%8D%A2%E9%98%BF%E9%87%8C%E6%BA%90"><span class="nav-number">7.2.</span> <span class="nav-text">如果觉得慢，可以换阿里源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%88%E6%9E%9C%E7%88%86%E6%A3%9A"><span class="nav-number">7.3.</span> <span class="nav-text">效果爆棚</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8B%89%E5%8F%96%20centos8%20%E9%95%9C%E5%83%8F"><span class="nav-number">1.</span> <span class="nav-text">拉取 centos8 镜像 </span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Centos%20%E7%89%88%E6%9C%AC"><span class="nav-number">2.</span> <span class="nav-text">Centos 版本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%8E%B7%E5%8F%96%20IMAGE-ID"><span class="nav-number">3.</span> <span class="nav-text">获取IMAGE ID</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%AF%E5%8A%A8%E9%95%9C%E5%83%8F%20centos8"><span class="nav-number">4.</span> <span class="nav-text">启动镜像 centos8</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%8E%B7%E5%8F%96%20CONTAINER-ID"><span class="nav-number">5.</span> <span class="nav-text">获取CONTAINER ID</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%9B%E5%85%A5%E5%AE%B9%E5%99%A8"><span class="nav-number">6.</span> <span class="nav-text">进入容器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%9B%E5%85%A5%E5%90%8E%E5%8F%91%E7%8E%B0%E6%B2%A1%E6%9C%89%20ifconfig"><span class="nav-number">7.</span> <span class="nav-text">进入后发现没有 ifconfig</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#yum%20%E5%AE%89%E8%A3%85"><span class="nav-number">7.1.</span> <span class="nav-text">yum 安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A6%82%E6%9E%9C%E8%A7%89%E5%BE%97%E6%85%A2%EF%BC%8C%E5%8F%AF%E4%BB%A5%E6%8D%A2%E9%98%BF%E9%87%8C%E6%BA%90"><span class="nav-number">7.2.</span> <span class="nav-text">如果觉得慢，可以换阿里源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%88%E6%9E%9C%E7%88%86%E6%A3%9A"><span class="nav-number">7.3.</span> <span class="nav-text">效果爆棚</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -193,7 +193,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">237</span>
+          <span class="site-state-item-count">238</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -258,7 +258,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Docker里安装centos8镜像
+          Docker 里安装 centos8 镜像
         </h1>
 
         <div class="post-meta-container">
@@ -282,7 +282,7 @@
     </span>
 
   
-    <span id="/145.html" class="post-meta-item leancloud_visitors" data-flag-title="Docker里安装centos8镜像" title="阅读次数">
+    <span id="/145.html" class="post-meta-item leancloud_visitors" data-flag-title="Docker 里安装 centos8 镜像" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
       </span>
@@ -315,29 +315,29 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h2 id="拉取centos8镜像"><a href="#拉取centos8镜像" class="headerlink" title="拉取centos8镜像"></a>拉取centos8镜像</h2><p>如果觉得慢记得换源</p>
+        <h2 id="拉取 centos8 镜像"><a href="# 拉取 centos8 镜像" class="headerlink" title="拉取 centos8 镜像"></a>拉取 centos8 镜像 </h2><p> 如果觉得慢记得换源</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;debug&quot;: true,</span><br><span class="line">  &quot;experimental&quot;: false,</span><br><span class="line">  &quot;registry-mirrors&quot;: [</span><br><span class="line">    &quot;https:&#x2F;&#x2F;9cpn8tt6.mirror.aliyuncs.com&quot;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>拉取<code>Centos8.2.2</code></p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker pull centos:8.2.2004</span><br></pre></td></tr></table></figure>
 <p><img data-src="/145/image-20201122002702333.png" alt="image-20201122002702333" loading="lazy"></p>
 <a id="more"></a>
 
-<h2 id="Centos版本"><a href="#Centos版本" class="headerlink" title="Centos版本"></a>Centos版本</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cat &#x2F;etc&#x2F;redhat-release</span><br></pre></td></tr></table></figure>
+<h2 id="Centos 版本"><a href="#Centos 版本" class="headerlink" title="Centos 版本"></a>Centos 版本</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cat &#x2F;etc&#x2F;redhat-release</span><br></pre></td></tr></table></figure>
 <p><img data-src="/145/image-20201122002131126.png" alt="image-20201122002131126" loading="lazy"></p>
-<h2 id="获取IMAGE-ID"><a href="#获取IMAGE-ID" class="headerlink" title="获取IMAGE ID"></a>获取<code>IMAGE ID</code></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker images</span><br></pre></td></tr></table></figure>
+<h2 id="获取 IMAGE-ID"><a href="# 获取 IMAGE-ID" class="headerlink" title="获取 IMAGE ID"></a>获取<code>IMAGE ID</code></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker images</span><br></pre></td></tr></table></figure>
 <p><img data-src="/145/image-20201122002742593.png" alt="image-20201122002742593" loading="lazy"></p>
-<h2 id="启动镜像centos8"><a href="#启动镜像centos8" class="headerlink" title="启动镜像centos8"></a>启动镜像centos8</h2><p>如果不指定 /bin/bash，容器运行后会自动停止</p>
+<h2 id="启动镜像 centos8"><a href="# 启动镜像 centos8" class="headerlink" title="启动镜像 centos8"></a>启动镜像 centos8</h2><p>如果不指定 /bin/bash，容器运行后会自动停止</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker run -d -i -t &lt;IMAGE ID&gt; &#x2F;bin&#x2F;bash</span><br></pre></td></tr></table></figure>
 <p><img data-src="/145/image-20201122002907469.png" alt="image-20201122002907469" loading="lazy"></p>
-<h2 id="获取CONTAINER-ID"><a href="#获取CONTAINER-ID" class="headerlink" title="获取CONTAINER ID"></a>获取<code>CONTAINER ID</code></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker ps</span><br></pre></td></tr></table></figure>
+<h2 id="获取 CONTAINER-ID"><a href="# 获取 CONTAINER-ID" class="headerlink" title="获取 CONTAINER ID"></a>获取<code>CONTAINER ID</code></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker ps</span><br></pre></td></tr></table></figure>
 <p><img data-src="/145/image-20201122002955999.png" alt="image-20201122002955999" loading="lazy"></p>
-<h2 id="进入容器"><a href="#进入容器" class="headerlink" title="进入容器"></a>进入容器</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker exec -it &lt;CONTAINER ID&gt; bash</span><br></pre></td></tr></table></figure>
+<h2 id="进入容器"><a href="# 进入容器" class="headerlink" title="进入容器"></a>进入容器</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker exec -it &lt;CONTAINER ID&gt; bash</span><br></pre></td></tr></table></figure>
 <p><img data-src="/145/image-20201122003029517.png" alt="image-20201122003029517" loading="lazy"></p>
-<h2 id="进入后发现没有ifconfig"><a href="#进入后发现没有ifconfig" class="headerlink" title="进入后发现没有ifconfig"></a>进入后发现没有ifconfig</h2><p><img data-src="/145/image-20201122003044455.png" alt="image-20201122003044455" loading="lazy"></p>
-<h3 id="yum安装"><a href="#yum安装" class="headerlink" title="yum安装"></a>yum安装</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">yum install -y net-tools</span><br></pre></td></tr></table></figure>
-<h3 id="如果觉得慢，可以换阿里源"><a href="#如果觉得慢，可以换阿里源" class="headerlink" title="如果觉得慢，可以换阿里源"></a>如果觉得慢，可以换阿里源</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">curl -o &#x2F;etc&#x2F;yum.repos.d&#x2F;CentOS-Base.repo http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;repo&#x2F;Centos-8.repo</span><br></pre></td></tr></table></figure>
+<h2 id="进入后发现没有 ifconfig"><a href="# 进入后发现没有 ifconfig" class="headerlink" title="进入后发现没有 ifconfig"></a>进入后发现没有 ifconfig</h2><p><img data-src="/145/image-20201122003044455.png" alt="image-20201122003044455" loading="lazy"></p>
+<h3 id="yum 安装"><a href="#yum 安装" class="headerlink" title="yum 安装"></a>yum 安装</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">yum install -y net-tools</span><br></pre></td></tr></table></figure>
+<h3 id="如果觉得慢，可以换阿里源"><a href="# 如果觉得慢，可以换阿里源" class="headerlink" title="如果觉得慢，可以换阿里源"></a>如果觉得慢，可以换阿里源</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">curl -o &#x2F;etc&#x2F;yum.repos.d&#x2F;CentOS-Base.repo http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;repo&#x2F;Centos-8.repo</span><br></pre></td></tr></table></figure>
 <p><img data-src="/145/image-20201122003220008.png" alt="image-20201122003220008" loading="lazy"></p>
-<h3 id="效果爆棚"><a href="#效果爆棚" class="headerlink" title="效果爆棚"></a>效果爆棚</h3><p><img data-src="/145/image-20201122003425530.png" alt="image-20201122003425530" loading="lazy"></p>
+<h3 id="效果爆棚"><a href="# 效果爆棚" class="headerlink" title="效果爆棚"></a>效果爆棚</h3><p><img data-src="/145/image-20201122003425530.png" alt="image-20201122003425530" loading="lazy"></p>
 
     </div>
 
@@ -346,8 +346,30 @@
     
 
     <footer class="post-footer">
+          <div class="reward-container">
+  <div>Buy me a coffee</div>
+  <button onclick="document.querySelector('.post-reward').classList.toggle('active');">
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/20201122213021.png" alt="Lining Wei 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/434235F3-7A93-4EA4-A7B6-4F6D977F1A89.png" alt="Lining Wei 支付宝">
+        <span>支付宝</span>
+      </div>
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/bitcoin.png" alt="Lining Wei 比特币">
+        <span>比特币</span>
+      </div>
+
+  </div>
+</div>
+
           <div class="post-tags">
-              <a href="/tags/%E9%BB%98%E8%AE%A4/" rel="tag"># 默认</a>
+              <a href="/tags/%E9%BB%98%E8%AE%A4/" rel="tag"><i class="fa fa-tag"></i> 默认</a>
           </div>
 
         
@@ -436,43 +458,9 @@
 
   
   <script src="//cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/@next-theme/pjax@0.4.0/pjax.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js"></script>
-<script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/motion.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/next-boot.js"></script><script>
-var pjax = new Pjax({
-  selectors: [
-    'head title',
-    '.page-configurations',
-    '.main-inner',
-    '.post-toc-wrap',
-    '.languages',
-    '.pjax'
-  ],
-  analytics: false,
-  cacheBust: false,
-  scrollRestoration: false,
-  scrollTo: !CONFIG.bookmark.enable
-});
-
-document.addEventListener('pjax:success', () => {
-  pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
-  NexT.boot.refresh();
-  // Define Motion Sequence & Bootstrap Motion.
-  if (CONFIG.motion.enable) {
-    NexT.motion.integrator
-      .init()
-      .add(NexT.motion.middleWares.subMenu)
-      .add(NexT.motion.middleWares.postList)
-      .bootstrap();
-  }
-  const hasTOC = document.querySelector('.post-toc');
-  document.querySelector('.sidebar-inner').classList.toggle('sidebar-nav-active', hasTOC);
-  document.querySelector(hasTOC ? '.sidebar-nav-toc' : '.sidebar-nav-overview').click();
-  NexT.utils.updateSidebarPosition();
-});
-</script>
-
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/motion.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/next-boot.js"></script>
 
   
 
@@ -484,7 +472,7 @@ document.addEventListener('pjax:success', () => {
   
 
 
-<script data-pjax>
+<script>
   (function() {
     function leancloudSelector(url) {
       url = encodeURI(url);
@@ -571,18 +559,7 @@ document.addEventListener('pjax:success', () => {
   })();
 </script>
 
-    <div class="pjax">
 
-  <script src="//cdn.jsdelivr.net/npm/quicklink@2.0.0/dist/quicklink.umd.js"></script>
-  <script>
-      window.addEventListener('load', () => {
-      quicklink.listen({
-        timeout : 3000,
-        priority: true,
-        ignores : [uri => uri.includes('#'),uri => uri === 'https://weilining.github.io/145.html',]
-      });
-      });
-  </script>
 
 <script>
 NexT.utils.loadComments('#lv-container', () => {
@@ -600,6 +577,5 @@ NexT.utils.loadComments('#lv-container', () => {
 });
 </script>
 
-    </div>
 </body>
 </html>

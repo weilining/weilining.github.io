@@ -18,7 +18,7 @@
 
 <link rel="stylesheet" href="/css/main.css">
 
-
+<link rel="stylesheet" href="https://fonts.dogedoge.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
@@ -29,7 +29,7 @@
   </script>
 <meta name="description" content="用 GitHub Actions 自动化发布Hexo网站到 GitHub Pages">
 <meta property="og:type" content="article">
-<meta property="og:title" content="用 GitHub Actions 自动化发布Hexo网站到 GitHub Pages">
+<meta property="og:title" content="用 GitHub Actions 自动化发布 Hexo 网站到 GitHub Pages">
 <meta property="og:url" content="https://weilining.github.io/GitHubActions.html">
 <meta property="og:site_name" content="Ln&#39;s Blog">
 <meta property="og:description" content="用 GitHub Actions 自动化发布Hexo网站到 GitHub Pages">
@@ -45,7 +45,7 @@
 <link rel="canonical" href="https://weilining.github.io/GitHubActions.html">
 
 
-<script data-pjax class="page-configurations">
+<script class="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
@@ -54,7 +54,7 @@
     lang   : 'zh-CN'
   };
 </script>
-<title>用 GitHub Actions 自动化发布Hexo网站到 GitHub Pages | Ln's Blog</title>
+<title>用 GitHub Actions 自动化发布 Hexo 网站到 GitHub Pages | Ln's Blog</title>
   
 
 
@@ -168,7 +168,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%87%86%E5%A4%87Hexo%E7%BD%91%E7%AB%99"><span class="nav-number">1.</span> <span class="nav-text">准备Hexo网站</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%87%86%E5%A4%87%E7%A7%98%E9%92%A5"><span class="nav-number">2.</span> <span class="nav-text">准备秘钥</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%85%8D%E7%BD%AEHexo%E7%9A%84-config-yml"><span class="nav-number">3.</span> <span class="nav-text">配置Hexo的_config.yml</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE-GitHub-Actions"><span class="nav-number">4.</span> <span class="nav-text">配置 GitHub Actions</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%87%86%E5%A4%87%20Hexo%20%E7%BD%91%E7%AB%99"><span class="nav-number">1.</span> <span class="nav-text">准备 Hexo 网站</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%87%86%E5%A4%87%E7%A7%98%E9%92%A5"><span class="nav-number">2.</span> <span class="nav-text">准备秘钥 </span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%20Hexo%20%E7%9A%84%20-config-yml"><span class="nav-number">3.</span> <span class="nav-text">配置 Hexo 的_config.yml</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%20-GitHub-Actions"><span class="nav-number">4.</span> <span class="nav-text">配置 GitHub Actions</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -184,7 +184,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">237</span>
+          <span class="site-state-item-count">238</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -249,7 +249,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          用 GitHub Actions 自动化发布Hexo网站到 GitHub Pages
+          用 GitHub Actions 自动化发布 Hexo 网站到 GitHub Pages
         </h1>
 
         <div class="post-meta-container">
@@ -280,7 +280,7 @@
     </span>
 
   
-    <span id="/GitHubActions.html" class="post-meta-item leancloud_visitors" data-flag-title="用 GitHub Actions 自动化发布Hexo网站到 GitHub Pages" title="阅读次数">
+    <span id="/GitHubActions.html" class="post-meta-item leancloud_visitors" data-flag-title="用 GitHub Actions 自动化发布 Hexo 网站到 GitHub Pages" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
       </span>
@@ -314,21 +314,21 @@
     
     <div class="post-body" itemprop="articleBody">
         <p>说实话不用每次都执行一大长串部署指令真的香啊！</p>
-<h1 id="准备Hexo网站"><a href="#准备Hexo网站" class="headerlink" title="准备Hexo网站"></a>准备Hexo网站</h1><ol>
-<li>在本地建立一个Hexo站点，可以参考<span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL3poLWNuL2RvY3Mv">官方快速开始文档<i class="fa fa-external-link-alt"></i></span>。</li>
-<li>建立两个GitHub仓库，分别叫<code>blog</code>（私有的）和<code>你的GitHub用户名.github.io</code>（共有的）。前者用来存储博客源文件，后者用于挂载GitHub Pages。</li>
-<li>将本地的博客源文件推送到<code>blog</code>仓库。</li>
+<h1 id="准备 Hexo 网站"><a href="# 准备 Hexo 网站" class="headerlink" title="准备 Hexo 网站"></a>准备 Hexo 网站</h1><ol>
+<li>在本地建立一个 Hexo 站点，可以参考 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL3poLWNuL2RvY3Mv"> 官方快速开始文档<i class="fa fa-external-link-alt"></i></span>。</li>
+<li>建立两个 GitHub 仓库，分别叫 <code>blog</code>（私有的）和<code> 你的 GitHub 用户名.github.io</code>（共有的）。前者用来存储博客源文件，后者用于挂载 GitHub Pages。</li>
+<li>将本地的博客源文件推送到 <code>blog</code> 仓库。</li>
 </ol>
 <a id="more"></a>
 
-<h1 id="准备秘钥"><a href="#准备秘钥" class="headerlink" title="准备秘钥"></a>准备秘钥</h1><p>为了方便运行GitHub Actions时登录GitHub账号，我们使用SSH方式登录。</p>
-<p>使用ssh-keygen生成一组公私秘钥对</p>
+<h1 id="准备秘钥"><a href="# 准备秘钥" class="headerlink" title="准备秘钥"></a>准备秘钥 </h1><p> 为了方便运行 GitHub Actions 时登录 GitHub 账号，我们使用 SSH 方式登录。</p>
+<p>使用 ssh-keygen 生成一组公私秘钥对</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -b 4096 -f ~/.ssh/github-actions-deploy</span><br></pre></td></tr></table></figure>
-<p>在<code>Settings</code>-&gt;<code>SSH and GPG keys</code>添加刚刚生成的公钥，名称随意。 在<code>blog</code>仓库的<code>Settings</code>-&gt;<code>Secrets</code>里添加刚刚生成的私钥，名称为 <code>ACTION_DEPLOY_KEY</code>。</p>
-<h1 id="配置Hexo的-config-yml"><a href="#配置Hexo的-config-yml" class="headerlink" title="配置Hexo的_config.yml"></a>配置Hexo的_config.yml</h1><p>添加部署配置。</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: https://hexo.io/docs/deployment.html</span></span><br><span class="line"><span class="attr">deploy:</span></span><br><span class="line"><span class="bullet">-</span> <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">git@github.com:bulabula.git</span> <span class="comment"># 使用仓库的ssh地址</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
-<h1 id="配置-GitHub-Actions"><a href="#配置-GitHub-Actions" class="headerlink" title="配置 GitHub Actions"></a>配置 GitHub Actions</h1><p>在<code>blog</code>仓库的<code>Actions</code>选项卡下点击新建<code>workflow</code>，编写如下配置。</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">name:</span> <span class="string">Deploy</span> <span class="string">Blog</span></span><br><span class="line"></span><br><span class="line"><span class="attr">on:</span> [<span class="string">push</span>] <span class="comment"># 当有新push时运行</span></span><br><span class="line"></span><br><span class="line"><span class="attr">jobs:</span></span><br><span class="line">  <span class="attr">build:</span> <span class="comment"># 一项叫做build的任务</span></span><br><span class="line"></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-latest</span> <span class="comment"># 在最新版的Ubuntu系统下运行</span></span><br><span class="line">    </span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Checkout</span> <span class="comment"># 将仓库内master分支的内容下载到工作目录</span></span><br><span class="line">      <span class="attr">uses:</span> <span class="string">actions/checkout@v1</span> <span class="comment"># 脚本来自 https://github.com/actions/checkout</span></span><br><span class="line">      </span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Use</span> <span class="string">Node.js</span> <span class="number">10.</span><span class="string">x</span> <span class="comment"># 配置Node环境</span></span><br><span class="line">      <span class="attr">uses:</span> <span class="string">actions/setup-node@v1</span> <span class="comment"># 配置脚本来自 https://github.com/actions/setup-node</span></span><br><span class="line">      <span class="attr">with:</span></span><br><span class="line">        <span class="attr">node-version:</span> <span class="string">&quot;10.x&quot;</span></span><br><span class="line">    </span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Setup</span> <span class="string">Hexo</span> <span class="string">env</span></span><br><span class="line">      <span class="attr">env:</span></span><br><span class="line">        <span class="attr">ACTION_DEPLOY_KEY:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.ACTION_DEPLOY_KEY</span> <span class="string">&#125;&#125;</span></span><br><span class="line">      <span class="attr">run:</span> <span class="string">|</span></span><br><span class="line">        <span class="comment"># set up private key for deploy</span></span><br><span class="line">        <span class="string">mkdir</span> <span class="string">-p</span> <span class="string">~/.ssh/</span></span><br><span class="line">        <span class="string">echo</span> <span class="string">&quot;$ACTION_DEPLOY_KEY&quot;</span> <span class="string">|</span> <span class="string">tr</span> <span class="string">-d</span> <span class="string">&#x27;\r&#x27;</span> <span class="string">&gt;</span> <span class="string">~/.ssh/id_rsa</span> <span class="comment"># 配置秘钥</span></span><br><span class="line">        <span class="string">chmod</span> <span class="number">600</span> <span class="string">~/.ssh/id_rsa</span></span><br><span class="line">        <span class="string">ssh-keyscan</span> <span class="string">github.com</span> <span class="string">&gt;&gt;</span> <span class="string">~/.ssh/known_hosts</span></span><br><span class="line">        <span class="comment"># set git infomation</span></span><br><span class="line">        <span class="string">git</span> <span class="string">config</span> <span class="string">--global</span> <span class="string">user.name</span> <span class="string">&#x27;bulabula&#x27;</span> <span class="comment"># 换成你自己的邮箱和名字</span></span><br><span class="line">        <span class="string">git</span> <span class="string">config</span> <span class="string">--global</span> <span class="string">user.email</span> <span class="string">&#x27;bulabula@athorx.com&#x27;</span></span><br><span class="line">        <span class="comment"># install dependencies</span></span><br><span class="line">        <span class="string">npm</span> <span class="string">i</span> <span class="string">-g</span> <span class="string">hexo-cli</span> <span class="comment"># 安装hexo</span></span><br><span class="line">        <span class="string">npm</span> <span class="string">i</span></span><br><span class="line">  </span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Deploy</span></span><br><span class="line">      <span class="attr">run:</span> <span class="string">|</span></span><br><span class="line">        <span class="comment"># publish</span></span><br><span class="line">        <span class="string">hexo</span> <span class="string">generate</span> <span class="string">&amp;&amp;</span> <span class="string">hexo</span> <span class="string">deploy</span> <span class="comment"># 执行部署程序</span></span><br></pre></td></tr></table></figure>
+<p>在 <code>Settings</code>-&gt;<code>SSH and GPG keys</code> 添加刚刚生成的公钥，名称随意。 在 <code>blog</code> 仓库的 <code>Settings</code>-&gt;<code>Secrets</code> 里添加刚刚生成的私钥，名称为 <code>ACTION_DEPLOY_KEY</code>。</p>
+<h1 id="配置 Hexo 的 -config-yml"><a href="# 配置 Hexo 的 -config-yml" class="headerlink" title="配置 Hexo 的_config.yml"></a>配置 Hexo 的_config.yml</h1><p>添加部署配置。</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: https://hexo.io/docs/deployment.html</span></span><br><span class="line"><span class="attr">deploy:</span></span><br><span class="line"><span class="bullet">-</span> <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">git@github.com:bulabula.git</span> <span class="comment"># 使用仓库的 ssh 地址</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
+<h1 id="配置 -GitHub-Actions"><a href="# 配置 -GitHub-Actions" class="headerlink" title="配置 GitHub Actions"></a>配置 GitHub Actions</h1><p>在 <code>blog</code> 仓库的 <code>Actions</code> 选项卡下点击新建<code>workflow</code>，编写如下配置。</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">name:</span> <span class="string">Deploy</span> <span class="string">Blog</span></span><br><span class="line"></span><br><span class="line"><span class="attr">on:</span> [<span class="string">push</span>] <span class="comment"># 当有新 push 时运行</span></span><br><span class="line"></span><br><span class="line"><span class="attr">jobs:</span></span><br><span class="line">  <span class="attr">build:</span> <span class="comment"># 一项叫做 build 的任务</span></span><br><span class="line"></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-latest</span> <span class="comment"># 在最新版的 Ubuntu 系统下运行</span></span><br><span class="line">    </span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Checkout</span> <span class="comment"># 将仓库内 master 分支的内容下载到工作目录</span></span><br><span class="line">      <span class="attr">uses:</span> <span class="string">actions/checkout@v1</span> <span class="comment"># 脚本来自 https://github.com/actions/checkout</span></span><br><span class="line">      </span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Use</span> <span class="string">Node.js</span> <span class="number">10.</span><span class="string">x</span> <span class="comment"># 配置 Node 环境</span></span><br><span class="line">      <span class="attr">uses:</span> <span class="string">actions/setup-node@v1</span> <span class="comment"># 配置脚本来自 https://github.com/actions/setup-node</span></span><br><span class="line">      <span class="attr">with:</span></span><br><span class="line">        <span class="attr">node-version:</span> <span class="string">&quot;10.x&quot;</span></span><br><span class="line">    </span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Setup</span> <span class="string">Hexo</span> <span class="string">env</span></span><br><span class="line">      <span class="attr">env:</span></span><br><span class="line">        <span class="attr">ACTION_DEPLOY_KEY:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.ACTION_DEPLOY_KEY</span> <span class="string">&#125;&#125;</span></span><br><span class="line">      <span class="attr">run:</span> <span class="string">|</span></span><br><span class="line">        <span class="comment"># set up private key for deploy</span></span><br><span class="line">        <span class="string">mkdir</span> <span class="string">-p</span> <span class="string">~/.ssh/</span></span><br><span class="line">        <span class="string">echo</span> <span class="string">&quot;$ACTION_DEPLOY_KEY&quot;</span> <span class="string">|</span> <span class="string">tr</span> <span class="string">-d</span> <span class="string">&#x27;\r&#x27;</span> <span class="string">&gt;</span> <span class="string">~/.ssh/id_rsa</span> <span class="comment"># 配置秘钥</span></span><br><span class="line">        <span class="string">chmod</span> <span class="number">600</span> <span class="string">~/.ssh/id_rsa</span></span><br><span class="line">        <span class="string">ssh-keyscan</span> <span class="string">github.com</span> <span class="string">&gt;&gt;</span> <span class="string">~/.ssh/known_hosts</span></span><br><span class="line">        <span class="comment"># set git infomation</span></span><br><span class="line">        <span class="string">git</span> <span class="string">config</span> <span class="string">--global</span> <span class="string">user.name</span> <span class="string">&#x27;bulabula&#x27;</span> <span class="comment"># 换成你自己的邮箱和名字</span></span><br><span class="line">        <span class="string">git</span> <span class="string">config</span> <span class="string">--global</span> <span class="string">user.email</span> <span class="string">&#x27;bulabula@athorx.com&#x27;</span></span><br><span class="line">        <span class="comment"># install dependencies</span></span><br><span class="line">        <span class="string">npm</span> <span class="string">i</span> <span class="string">-g</span> <span class="string">hexo-cli</span> <span class="comment"># 安装 hexo</span></span><br><span class="line">        <span class="string">npm</span> <span class="string">i</span></span><br><span class="line">  </span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Deploy</span></span><br><span class="line">      <span class="attr">run:</span> <span class="string">|</span></span><br><span class="line">        <span class="comment"># publish</span></span><br><span class="line">        <span class="string">hexo</span> <span class="string">generate</span> <span class="string">&amp;&amp;</span> <span class="string">hexo</span> <span class="string">deploy</span> <span class="comment"># 执行部署程序</span></span><br></pre></td></tr></table></figure>
 
 
 
@@ -343,9 +343,31 @@
     
 
     <footer class="post-footer">
+          <div class="reward-container">
+  <div>Buy me a coffee</div>
+  <button onclick="document.querySelector('.post-reward').classList.toggle('active');">
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/20201122213021.png" alt="Lining Wei 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/434235F3-7A93-4EA4-A7B6-4F6D977F1A89.png" alt="Lining Wei 支付宝">
+        <span>支付宝</span>
+      </div>
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/bitcoin.png" alt="Lining Wei 比特币">
+        <span>比特币</span>
+      </div>
+
+  </div>
+</div>
+
           <div class="post-tags">
-              <a href="/tags/%E8%B0%B7%E6%AD%8C%E6%94%B6%E5%BD%95/" rel="tag"># 谷歌收录</a>
-              <a href="/tags/%E9%BB%98%E8%AE%A4/" rel="tag"># 默认</a>
+              <a href="/tags/%E8%B0%B7%E6%AD%8C%E6%94%B6%E5%BD%95/" rel="tag"><i class="fa fa-tag"></i> 谷歌收录</a>
+              <a href="/tags/%E9%BB%98%E8%AE%A4/" rel="tag"><i class="fa fa-tag"></i> 默认</a>
           </div>
 
         
@@ -434,43 +456,9 @@
 
   
   <script src="//cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/@next-theme/pjax@0.4.0/pjax.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js"></script>
-<script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/motion.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/next-boot.js"></script><script>
-var pjax = new Pjax({
-  selectors: [
-    'head title',
-    '.page-configurations',
-    '.main-inner',
-    '.post-toc-wrap',
-    '.languages',
-    '.pjax'
-  ],
-  analytics: false,
-  cacheBust: false,
-  scrollRestoration: false,
-  scrollTo: !CONFIG.bookmark.enable
-});
-
-document.addEventListener('pjax:success', () => {
-  pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
-  NexT.boot.refresh();
-  // Define Motion Sequence & Bootstrap Motion.
-  if (CONFIG.motion.enable) {
-    NexT.motion.integrator
-      .init()
-      .add(NexT.motion.middleWares.subMenu)
-      .add(NexT.motion.middleWares.postList)
-      .bootstrap();
-  }
-  const hasTOC = document.querySelector('.post-toc');
-  document.querySelector('.sidebar-inner').classList.toggle('sidebar-nav-active', hasTOC);
-  document.querySelector(hasTOC ? '.sidebar-nav-toc' : '.sidebar-nav-overview').click();
-  NexT.utils.updateSidebarPosition();
-});
-</script>
-
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/motion.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/next-boot.js"></script>
 
   
 
@@ -482,7 +470,7 @@ document.addEventListener('pjax:success', () => {
   
 
 
-<script data-pjax>
+<script>
   (function() {
     function leancloudSelector(url) {
       url = encodeURI(url);
@@ -569,18 +557,7 @@ document.addEventListener('pjax:success', () => {
   })();
 </script>
 
-    <div class="pjax">
 
-  <script src="//cdn.jsdelivr.net/npm/quicklink@2.0.0/dist/quicklink.umd.js"></script>
-  <script>
-      window.addEventListener('load', () => {
-      quicklink.listen({
-        timeout : 3000,
-        priority: true,
-        ignores : [uri => uri.includes('#'),uri => uri === 'https://weilining.github.io/GitHubActions.html',]
-      });
-      });
-  </script>
 
 <script>
 NexT.utils.loadComments('#lv-container', () => {
@@ -598,6 +575,5 @@ NexT.utils.loadComments('#lv-container', () => {
 });
 </script>
 
-    </div>
 </body>
 </html>

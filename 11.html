@@ -18,7 +18,7 @@
 
 <link rel="stylesheet" href="/css/main.css">
 
-
+<link rel="stylesheet" href="https://fonts.dogedoge.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
@@ -54,7 +54,7 @@
 <link rel="canonical" href="https://weilining.github.io/11.html">
 
 
-<script data-pjax class="page-configurations">
+<script class="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
@@ -192,7 +192,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">237</span>
+          <span class="site-state-item-count">238</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -316,40 +316,40 @@
     <div class="post-body" itemprop="articleBody">
         <a id="more"></a>
 
-<p> 与github交互时可能会报如下错误：</p>
+<p> 与 github 交互时可能会报如下错误：</p>
 <p><img data-src="/11/webp-20201116003441992" alt="img" loading="lazy"></p>
-<p>原因是SSH keys没有设置或者过期了，SSH keys 可以在没有密码的情况下信任当前工作的计算机。<br> 解决办法是生成并设置SSH keys，具体步骤如下：</p>
+<p>原因是 SSH keys 没有设置或者过期了，SSH keys 可以在没有密码的情况下信任当前工作的计算机。<br> 解决办法是生成并设置 SSH keys，具体步骤如下：</p>
 <ul>
-<li>通过命令<code>cd ~/.ssh</code>切换到当前计算机当前用户的.ssh目录下：</li>
+<li>通过命令 <code>cd ~/.ssh</code> 切换到当前计算机当前用户的.ssh 目录下：</li>
 </ul>
 <p><img data-src="/11/webp-20201116003418216" alt="img" loading="lazy"></p>
 <ul>
-<li>通过命令<code>ssh-keygen</code>生成SSH key：</li>
+<li>通过命令 <code>ssh-keygen</code> 生成 SSH key：</li>
 </ul>
 <p><img data-src="/11/webp-20201116003413763" alt="img" loading="lazy"></p>
-<p>windows下建议通过git bash进行否则可能会报错：</p>
+<p>windows 下建议通过 git bash 进行否则可能会报错：</p>
 <p><img data-src="/11/webp-20201116003409986" alt="img" loading="lazy"></p>
 <ul>
-<li>根据命令<code>ssh-keygen</code>提示输入key要存储的位置以及密码：</li>
+<li>根据命令 <code>ssh-keygen</code> 提示输入 key 要存储的位置以及密码：</li>
 </ul>
 <p><img data-src="/11/webp-20201116003405874" alt="img" loading="lazy"></p>
 <ul>
-<li>生成key后在指定要存储的地方找到<code>id_rsa.pub</code>：</li>
+<li>生成 key 后在指定要存储的地方找到<code>id_rsa.pub</code>：</li>
 </ul>
 <p><img data-src="/11/webp-20201116003401728" alt="img" loading="lazy"></p>
 <ul>
-<li>在github的Settings中新建一个SSH key，将<code>id_rsa.pub</code>中的内容复制到Key中：</li>
+<li>在 github 的 Settings 中新建一个 SSH key，将 <code>id_rsa.pub</code> 中的内容复制到 Key 中：</li>
 </ul>
 <p><img data-src="/11/webp-20201116003350205" alt="img" loading="lazy"></p>
 <ul>
-<li>配置git的用户名和邮箱：</li>
+<li>配置 git 的用户名和邮箱：</li>
 </ul>
 <p><img data-src="/11/webp-20201116003343911" alt="img" loading="lazy"></p>
 <ul>
-<li>通过命令<code>ssh-add</code>解决每次操作都需要输入key的密码的问题：</li>
+<li>通过命令 <code>ssh-add</code> 解决每次操作都需要输入 key 的密码的问题：</li>
 </ul>
 <p><img data-src="/11/webp-20201116003319272" alt="img" loading="lazy"></p>
-<p>以上操作均在windows 10 上进行，linux和mac os下的解决方案类似，不赘述了。<br> 问题解决完毕，可以愉快地玩耍了！</p>
+<p>以上操作均在 windows 10 上进行，linux 和 mac os 下的解决方案类似，不赘述了。<br> 问题解决完毕，可以愉快地玩耍了！</p>
 
     </div>
 
@@ -358,8 +358,30 @@
     
 
     <footer class="post-footer">
+          <div class="reward-container">
+  <div>Buy me a coffee</div>
+  <button onclick="document.querySelector('.post-reward').classList.toggle('active');">
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/20201122213021.png" alt="Lining Wei 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/434235F3-7A93-4EA4-A7B6-4F6D977F1A89.png" alt="Lining Wei 支付宝">
+        <span>支付宝</span>
+      </div>
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/bitcoin.png" alt="Lining Wei 比特币">
+        <span>比特币</span>
+      </div>
+
+  </div>
+</div>
+
           <div class="post-tags">
-              <a href="/tags/%E9%BB%98%E8%AE%A4/" rel="tag"># 默认</a>
+              <a href="/tags/%E9%BB%98%E8%AE%A4/" rel="tag"><i class="fa fa-tag"></i> 默认</a>
           </div>
 
         
@@ -448,43 +470,9 @@
 
   
   <script src="//cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/@next-theme/pjax@0.4.0/pjax.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js"></script>
-<script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/motion.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/next-boot.js"></script><script>
-var pjax = new Pjax({
-  selectors: [
-    'head title',
-    '.page-configurations',
-    '.main-inner',
-    '.post-toc-wrap',
-    '.languages',
-    '.pjax'
-  ],
-  analytics: false,
-  cacheBust: false,
-  scrollRestoration: false,
-  scrollTo: !CONFIG.bookmark.enable
-});
-
-document.addEventListener('pjax:success', () => {
-  pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
-  NexT.boot.refresh();
-  // Define Motion Sequence & Bootstrap Motion.
-  if (CONFIG.motion.enable) {
-    NexT.motion.integrator
-      .init()
-      .add(NexT.motion.middleWares.subMenu)
-      .add(NexT.motion.middleWares.postList)
-      .bootstrap();
-  }
-  const hasTOC = document.querySelector('.post-toc');
-  document.querySelector('.sidebar-inner').classList.toggle('sidebar-nav-active', hasTOC);
-  document.querySelector(hasTOC ? '.sidebar-nav-toc' : '.sidebar-nav-overview').click();
-  NexT.utils.updateSidebarPosition();
-});
-</script>
-
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/motion.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/next-boot.js"></script>
 
   
 
@@ -496,7 +484,7 @@ document.addEventListener('pjax:success', () => {
   
 
 
-<script data-pjax>
+<script>
   (function() {
     function leancloudSelector(url) {
       url = encodeURI(url);
@@ -583,18 +571,7 @@ document.addEventListener('pjax:success', () => {
   })();
 </script>
 
-    <div class="pjax">
 
-  <script src="//cdn.jsdelivr.net/npm/quicklink@2.0.0/dist/quicklink.umd.js"></script>
-  <script>
-      window.addEventListener('load', () => {
-      quicklink.listen({
-        timeout : 3000,
-        priority: true,
-        ignores : [uri => uri.includes('#'),uri => uri === 'https://weilining.github.io/11.html',]
-      });
-      });
-  </script>
 
 <script>
 NexT.utils.loadComments('#lv-container', () => {
@@ -612,6 +589,5 @@ NexT.utils.loadComments('#lv-container', () => {
 });
 </script>
 
-    </div>
 </body>
 </html>

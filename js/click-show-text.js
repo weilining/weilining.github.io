@@ -1,8 +1,6 @@
-(function () {
-  const $dom = document.getElementById("click-show-text");
+(function () {const $dom = document.getElementById("click-show-text");
   let config = null;
-  config = {
-    mobile: $dom.getAttribute("data-mobile"),
+  config = {mobile: $dom.getAttribute("data-mobile"),
     text: $dom.getAttribute("data-text"),
     fontSize: $dom.getAttribute("data-fontsize"),
     random: $dom.getAttribute("data-random"),
@@ -10,30 +8,24 @@
   if (
     config.mobile === "false" &&
     /Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)
-  ) {
-    return;
-  }
+  ) {return;}
 
   const randomColor = function () {
     const colorElements = "0,1,2,3,4,5,6,7,8,9,a,b,c,d,e,f";
     const colorArray = colorElements.split(",");
     let color = "#";
-    for (let i = 0; i < 6; i++) {
-      color += colorArray[Math.floor(Math.random() * 16)];
+    for (let i = 0; i < 6; i++) {color += colorArray[Math.floor(Math.random() * 16)];
     }
     return color;
   };
 
   let aIdx = 0;
 
-  document.body.addEventListener("click", function (e) {
-    const text = config.text.split(",");
+  document.body.addEventListener("click", function (e) {const text = config.text.split(",");
     const $span = document.createElement("span");
-    if (config.random === "true") {
-      aIdx = Math.floor(Math.random() * text.length);
+    if (config.random === "true") {aIdx = Math.floor(Math.random() * text.length);
       $span.textContent = text[aIdx];
-    } else {
-      $span.textContent = text[aIdx];
+    } else {$span.textContent = text[aIdx];
       aIdx = (aIdx + 1) % text.length;
     }
 
@@ -65,10 +57,8 @@
       $span.style.opacity = opacityValue;
       const newTime = new Date().getTime();
       const diff = newTime - initTime;
-      if (diff < 600) {
-        window.requestAnimationFrame(animate);
-      } else {
-        $span.remove();
+      if (diff < 600) {window.requestAnimationFrame(animate);
+      } else {$span.remove();
       }
     }
     window.requestAnimationFrame(animate);
@@ -88,8 +78,7 @@
     window.mozRequestAnimationFrame ||
     window.webkitRequestAnimationFrame ||
     window.msRequestAnimationFrame ||
-    function (e) {
-      window.setTimeout(e, 1e3 / 60);
+    function (e) {window.setTimeout(e, 1e3 / 60);
     };
   window.requestAnimationFrame = t;
   const i = document.getElementById("snow"),
@@ -99,18 +88,15 @@
     s = -100,
     d = [];
   (i.width = window.innerWidth), (i.height = window.innerHeight);
-  const h = () => {
-      n.clearRect(0, 0, i.width, i.height);
+  const h = () => {n.clearRect(0, 0, i.width, i.height);
       const r = e.minDist;
-      for (let t = 0; t < o; t++) {
-        let o = d[t];
+      for (let t = 0; t < o; t++) {let o = d[t];
         const h = a,
           m = s,
           w = o.x,
           c = o.y,
           p = Math.sqrt((h - w) * (h - w) + (m - c) * (m - c));
-        if (p < r) {
-          const e = (h - w) / p,
+        if (p < r) {const e = (h - w) / p,
             t = (m - c) / p,
             i = r / (p * p) / 2;
           (o.velX -= i * e), (o.velY -= i * t);
@@ -120,19 +106,17 @@
               o.speed - o.velY > 0.01 &&
               (o.velY += 0.01 * (o.speed - o.velY)),
             (o.velX += Math.cos((o.step += 0.05)) * o.stepSize);
-        (n.fillStyle = "rgba(" + e.color + ", " + o.opacity + ")"),
+        (n.fillStyle = "rgba(" + e.color + "," + o.opacity + ")"),
           (o.y += o.velY),
           (o.x += o.velX),
-          (o.y >= i.height || o.y <= 0) && l(o),
-          (o.x >= i.width || o.x <= 0) && l(o),
+          (o.y>= i.height || o.y <= 0) && l(o),
+          (o.x>= i.width || o.x <= 0) && l(o),
           n.beginPath(),
           n.arc(o.x, o.y, o.size, 0, 2 * Math.PI),
-          n.fill();
-      }
+          n.fill();}
       t(h);
     },
-    l = (e) => {
-      (e.x = Math.floor(Math.random() * i.width)),
+    l = (e) => {(e.x = Math.floor(Math.random() * i.width)),
         (e.y = 0),
         (e.size = 3 * Math.random() + 2),
         (e.speed = 1 * Math.random() + 0.5),
@@ -140,15 +124,11 @@
         (e.velX = 0),
         (e.opacity = 0.5 * Math.random() + 0.3);
     };
-  document.addEventListener("mousemove", (e) => {
-    (a = e.clientX), (s = e.clientY);
+  document.addEventListener("mousemove", (e) => {(a = e.clientX), (s = e.clientY);
   }),
-    window.addEventListener("resize", () => {
-      (i.width = window.innerWidth), (i.height = window.innerHeight);
+    window.addEventListener("resize", () => {(i.width = window.innerWidth), (i.height = window.innerHeight);
     }),
-    (() => {
-      for (let t = 0; t < o; t++) {
-        const t = Math.floor(Math.random() * i.width),
+    (() => {for (let t = 0; t < o; t++) {const t = Math.floor(Math.random() * i.width),
           n = Math.floor(Math.random() * i.height),
           o = 3 * Math.random() + e.size,
           a = 1 * Math.random() + e.speed,
@@ -166,6 +146,4 @@
           opacity: s,
         });
       }
-      h();
-    })();
-})();
+      h();})();})();

@@ -18,7 +18,7 @@
 
 <link rel="stylesheet" href="/css/main.css">
 
-
+<link rel="stylesheet" href="https://fonts.dogedoge.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
@@ -29,7 +29,7 @@
   </script>
 <meta name="description" content="以GitHub为例">
 <meta property="og:type" content="article">
-<meta property="og:title" content="22端口被防火墙关闭如何用git">
+<meta property="og:title" content="22 端口被防火墙关闭如何用 git">
 <meta property="og:url" content="https://weilining.github.io/129.html">
 <meta property="og:site_name" content="Ln&#39;s Blog">
 <meta property="og:description" content="以GitHub为例">
@@ -44,7 +44,7 @@
 <link rel="canonical" href="https://weilining.github.io/129.html">
 
 
-<script data-pjax class="page-configurations">
+<script class="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
@@ -53,7 +53,7 @@
     lang   : 'zh-CN'
   };
 </script>
-<title>22端口被防火墙关闭如何用git | Ln's Blog</title>
+<title>22 端口被防火墙关闭如何用 git | Ln's Blog</title>
   
 
 
@@ -167,7 +167,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9C%A8-HTTPS-%E7%AB%AF%E5%8F%A3%E4%BD%BF%E7%94%A8-SSH"><span class="nav-number">1.</span> <span class="nav-text">在 HTTPS 端口使用 SSH</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%AF%E7%94%A8%E9%80%9A%E8%BF%87-HTTPS-%E7%9A%84-SSH-%E8%BF%9E%E6%8E%A5"><span class="nav-number">2.</span> <span class="nav-text">启用通过 HTTPS 的 SSH 连接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83"><span class="nav-number">3.</span> <span class="nav-text">参考</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9C%A8%20-HTTPS-%20%E7%AB%AF%E5%8F%A3%E4%BD%BF%E7%94%A8%20-SSH"><span class="nav-number">1.</span> <span class="nav-text">在 HTTPS 端口使用 SSH</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%AF%E7%94%A8%E9%80%9A%E8%BF%87%20-HTTPS-%20%E7%9A%84%20-SSH-%20%E8%BF%9E%E6%8E%A5"><span class="nav-number">2.</span> <span class="nav-text">启用通过 HTTPS 的 SSH 连接 </span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83"><span class="nav-number">3.</span> <span class="nav-text">参考</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -183,7 +183,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">237</span>
+          <span class="site-state-item-count">238</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -248,7 +248,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          22端口被防火墙关闭如何用git
+          22 端口被防火墙关闭如何用 git
         </h1>
 
         <div class="post-meta-container">
@@ -272,7 +272,7 @@
     </span>
 
   
-    <span id="/129.html" class="post-meta-item leancloud_visitors" data-flag-title="22端口被防火墙关闭如何用git" title="阅读次数">
+    <span id="/129.html" class="post-meta-item leancloud_visitors" data-flag-title="22 端口被防火墙关闭如何用 git" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
       </span>
@@ -305,19 +305,19 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h2 id="在-HTTPS-端口使用-SSH"><a href="#在-HTTPS-端口使用-SSH" class="headerlink" title="在 HTTPS 端口使用 SSH"></a>在 HTTPS 端口使用 SSH</h2><a id="more"></a>
+        <h2 id="在 -HTTPS- 端口使用 -SSH"><a href="# 在 -HTTPS- 端口使用 -SSH" class="headerlink" title="在 HTTPS 端口使用 SSH"></a>在 HTTPS 端口使用 SSH</h2><a id="more"></a>
 
-<p>有时，防火墙会完全拒绝允许 SSH 连接。 如果无法选择使用<span class="exturl" data-url="aHR0cHM6Ly9kb2NzLmdpdGh1Yi5jb20vY24vZnJlZS1wcm8tdGVhbUBsYXRlc3QvZ2l0aHViL3VzaW5nLWdpdC9jYWNoaW5nLXlvdXItZ2l0aHViLWNyZWRlbnRpYWxzLWluLWdpdA==">具有凭据缓存的 HTTPS 克隆<i class="fa fa-external-link-alt"></i></span>，您可以尝试使用通过 HTTPS 端口建立的 SSH 连接克隆。 大多数防火墙规则应允许此操作，但代理服务器可能会干扰。</p>
+<p>有时，防火墙会完全拒绝允许 SSH 连接。 如果无法选择使用 <span class="exturl" data-url="aHR0cHM6Ly9kb2NzLmdpdGh1Yi5jb20vY24vZnJlZS1wcm8tdGVhbUBsYXRlc3QvZ2l0aHViL3VzaW5nLWdpdC9jYWNoaW5nLXlvdXItZ2l0aHViLWNyZWRlbnRpYWxzLWluLWdpdA=="> 具有凭据缓存的 HTTPS 克隆<i class="fa fa-external-link-alt"></i></span>，您可以尝试使用通过 HTTPS 端口建立的 SSH 连接克隆。 大多数防火墙规则应允许此操作，但代理服务器可能会干扰。</p>
 <p><strong>GitHub Enterprise 用户</strong>：目前不支持通过 HTTPS 端口上的 SSH 访问 GitHub Enterprise。</p>
 <p>要测试通过 HTTPS 端口的 SSH 是否可行，请运行以下 SSH 命令：</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> ssh -T -p 443 git@ssh.github.com</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> Hi username! You<span class="string">&#x27;ve successfully authenticated, but GitHub does not</span></span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> provide shell access.</span></span><br></pre></td></tr></table></figure>
-<p>如果这样有效，万事大吉！ 如果无效，您可能需要<span class="exturl" data-url="aHR0cHM6Ly9kb2NzLmdpdGh1Yi5jb20vY24vZnJlZS1wcm8tdGVhbUBsYXRlc3QvYXJ0aWNsZXMvZXJyb3ItcGVybWlzc2lvbi1kZW5pZWQtcHVibGlja2V5">遵循我们的故障排除指南<i class="fa fa-external-link-alt"></i></span>。</p>
-<h2 id="启用通过-HTTPS-的-SSH-连接"><a href="#启用通过-HTTPS-的-SSH-连接" class="headerlink" title="启用通过 HTTPS 的 SSH 连接"></a>启用通过 HTTPS 的 SSH 连接</h2><p>如果您能在端口 443 上通过 SSH 连接到 <code>git@ssh.github.com</code>，则可以覆盖您的 SSH 设置以强制与 GitHub 的任何连接均通过该服务器和端口运行。</p>
+<p>如果这样有效，万事大吉！ 如果无效，您可能需要 <span class="exturl" data-url="aHR0cHM6Ly9kb2NzLmdpdGh1Yi5jb20vY24vZnJlZS1wcm8tdGVhbUBsYXRlc3QvYXJ0aWNsZXMvZXJyb3ItcGVybWlzc2lvbi1kZW5pZWQtcHVibGlja2V5"> 遵循我们的故障排除指南<i class="fa fa-external-link-alt"></i></span>。</p>
+<h2 id="启用通过 -HTTPS- 的 -SSH- 连接"><a href="# 启用通过 -HTTPS- 的 -SSH- 连接" class="headerlink" title="启用通过 HTTPS 的 SSH 连接"></a>启用通过 HTTPS 的 SSH 连接 </h2><p> 如果您能在端口 443 上通过 SSH 连接到 <code>git@ssh.github.com</code>，则可以覆盖您的 SSH 设置以强制与 GitHub 的任何连接均通过该服务器和端口运行。</p>
 <p>要在您的 ssh 配置中设置此项，编辑位于 <code>~/.ssh/config</code> 的文件，添加以下部分：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Host github.com</span><br><span class="line">  Hostname ssh.github.com</span><br><span class="line">  Port 443</span><br></pre></td></tr></table></figure>
 <p>您可以通过再次连接到 GitHub 测试此项是否有效：</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> ssh -T git@github.com</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> Hi username! You<span class="string">&#x27;ve successfully authenticated, but GitHub does not</span></span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> provide shell access.</span></span><br></pre></td></tr></table></figure>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><span class="exturl" data-url="aHR0cHM6Ly9oZWxwLmdpdGh1Yi5jb20vYXJ0aWNsZXMvdXNpbmctc3NoLW92ZXItdGhlLWh0dHBzLXBvcnQv">https://help.github.com/articles/using-ssh-over-the-https-port/<i class="fa fa-external-link-alt"></i></span></p>
+<h2 id="参考"><a href="# 参考" class="headerlink" title="参考"></a>参考</h2><p><span class="exturl" data-url="aHR0cHM6Ly9oZWxwLmdpdGh1Yi5jb20vYXJ0aWNsZXMvdXNpbmctc3NoLW92ZXItdGhlLWh0dHBzLXBvcnQv">https://help.github.com/articles/using-ssh-over-the-https-port/<i class="fa fa-external-link-alt"></i></span></p>
 
     </div>
 
@@ -326,16 +326,38 @@
     
 
     <footer class="post-footer">
+          <div class="reward-container">
+  <div>Buy me a coffee</div>
+  <button onclick="document.querySelector('.post-reward').classList.toggle('active');">
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/20201122213021.png" alt="Lining Wei 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/434235F3-7A93-4EA4-A7B6-4F6D977F1A89.png" alt="Lining Wei 支付宝">
+        <span>支付宝</span>
+      </div>
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/bitcoin.png" alt="Lining Wei 比特币">
+        <span>比特币</span>
+      </div>
+
+  </div>
+</div>
+
           <div class="post-tags">
-              <a href="/tags/%E9%BB%98%E8%AE%A4/" rel="tag"># 默认</a>
+              <a href="/tags/%E9%BB%98%E8%AE%A4/" rel="tag"><i class="fa fa-tag"></i> 默认</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/128.html" rel="prev" title="换端口的解决git clone 失败问题">
-                  <i class="fa fa-chevron-left"></i> 换端口的解决git clone 失败问题
+                <a href="/128.html" rel="prev" title="换端口的解决 git clone 失败问题">
+                  <i class="fa fa-chevron-left"></i> 换端口的解决 git clone 失败问题
                 </a>
             </div>
             <div class="post-nav-item">
@@ -416,43 +438,9 @@
 
   
   <script src="//cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/@next-theme/pjax@0.4.0/pjax.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js"></script>
-<script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/motion.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/next-boot.js"></script><script>
-var pjax = new Pjax({
-  selectors: [
-    'head title',
-    '.page-configurations',
-    '.main-inner',
-    '.post-toc-wrap',
-    '.languages',
-    '.pjax'
-  ],
-  analytics: false,
-  cacheBust: false,
-  scrollRestoration: false,
-  scrollTo: !CONFIG.bookmark.enable
-});
-
-document.addEventListener('pjax:success', () => {
-  pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
-  NexT.boot.refresh();
-  // Define Motion Sequence & Bootstrap Motion.
-  if (CONFIG.motion.enable) {
-    NexT.motion.integrator
-      .init()
-      .add(NexT.motion.middleWares.subMenu)
-      .add(NexT.motion.middleWares.postList)
-      .bootstrap();
-  }
-  const hasTOC = document.querySelector('.post-toc');
-  document.querySelector('.sidebar-inner').classList.toggle('sidebar-nav-active', hasTOC);
-  document.querySelector(hasTOC ? '.sidebar-nav-toc' : '.sidebar-nav-overview').click();
-  NexT.utils.updateSidebarPosition();
-});
-</script>
-
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/motion.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/next-boot.js"></script>
 
   
 
@@ -464,7 +452,7 @@ document.addEventListener('pjax:success', () => {
   
 
 
-<script data-pjax>
+<script>
   (function() {
     function leancloudSelector(url) {
       url = encodeURI(url);
@@ -551,18 +539,7 @@ document.addEventListener('pjax:success', () => {
   })();
 </script>
 
-    <div class="pjax">
 
-  <script src="//cdn.jsdelivr.net/npm/quicklink@2.0.0/dist/quicklink.umd.js"></script>
-  <script>
-      window.addEventListener('load', () => {
-      quicklink.listen({
-        timeout : 3000,
-        priority: true,
-        ignores : [uri => uri.includes('#'),uri => uri === 'https://weilining.github.io/129.html',]
-      });
-      });
-  </script>
 
 <script>
 NexT.utils.loadComments('#lv-container', () => {
@@ -580,6 +557,5 @@ NexT.utils.loadComments('#lv-container', () => {
 });
 </script>
 
-    </div>
 </body>
 </html>
