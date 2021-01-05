@@ -4,15 +4,13 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.2.0">
+<meta name="generator" content="Hexo 5.3.0">
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.jsdelivr.net/gh/weilining/img@main/img/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.jsdelivr.net/gh/weilining/img@main/img/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="https://cdn.jsdelivr.net/gh/weilining/img@main/img/favicon-16x16-next.png">
-  <link rel="mask-icon" href="https://cdn.jsdelivr.net/gh/weilining/img@main/img/logo.svg" color="#222">
-  <meta http-equiv="Cache-Control" content="no-transform">
-  <meta http-equiv="Cache-Control" content="no-siteapp">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
   <meta name="google-site-verification" content="OjGymv9uAqWYDsr-E-j6DG2k1_mPXsDQF77kgEK0nz8">
   <meta name="msvalidate.01" content="5C84BC77E02800759CE29C4ACCE487BD">
   <meta name="yandex-verification" content="06c62a93328de5da">
@@ -20,13 +18,14 @@
 
 <link rel="stylesheet" href="/css/main.css">
 
-<link rel="stylesheet" href="https://fonts.dogedoge.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
 
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"weilining.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.1.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"buttons","active":"valine","storage":false,"lazyload":false,"nav":null,"activeClass":"valine"},"motion":{"enable":false,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+    var CONFIG = {"hostname":"weilining.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.2.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}};
   </script>
 <meta name="description" content="默认">
 <meta property="og:type" content="article">
@@ -69,22 +68,7 @@
 </script>
 <title>Gitlab基本管理 | Ln's Blog</title>
   
-    <script>
-      function sendPageView() {
-        if (CONFIG.hostname !== location.hostname) return;
-        var uid = localStorage.getItem('uid') || (Math.random() + '.' + Math.random());
-        localStorage.setItem('uid', uid);
-        navigator.sendBeacon('https://www.google-analytics.com/collect', new URLSearchParams({
-          v  : 1,
-          tid: 'G-33WZ1RR3T8',
-          cid: uid,
-          t  : 'pageview',
-          dp : encodeURIComponent(location.pathname)
-        }));
-      }
-      document.addEventListener('pjax:complete', sendPageView);
-      sendPageView();
-    </script>
+
 
 
 
@@ -126,14 +110,14 @@
 <link rel="alternate" href="/atom.xml" title="Ln's Blog" type="application/atom+xml">
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage">
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
   <div class="headband"></div>
 
   <main class="main">
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏">
+    <div class="toggle" aria-label="切换导航栏" role="button">
         <span class="toggle-line"></span>
         <span class="toggle-line"></span>
         <span class="toggle-line"></span>
@@ -152,7 +136,6 @@
 
   <div class="site-nav-right">
     <div class="toggle popup-trigger">
-        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
 </div>
@@ -161,77 +144,22 @@
 
 <nav class="site-nav">
   <ul class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa fa-bell fa-fw"></i>首页</a>
-
-  </li>
-        <li class="menu-item menu-item-top">
-
-    <a href="/top/" rel="section"><i class="fa fa-signal fa-fw"></i>热榜</a>
-
-  </li>
-        <li class="menu-item menu-item-about">
-
-    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
-
-  </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
-
-  </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
-
-  </li>
-        <li class="menu-item menu-item-friends">
-
-    <a href="/friends/" rel="section"><i class="fa fa-globe-asia fa-fw"></i>朋友们</a>
-
-  </li>
-      <li class="menu-item menu-item-search">
-        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
-        </a>
-      </li>
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-bell fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-top"><a href="/top/" rel="section"><i class="fa fa-signal fa-fw"></i>热榜</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
   </ul>
 </nav>
 
 
 
-  <div class="search-pop-overlay">
-    <div class="popup search-popup"><div class="search-header">
-  <span class="search-icon">
-    <i class="fa fa-search"></i>
-  </span>
-  <div class="search-input-container">
-    <input autocomplete="off" autocapitalize="off" maxlength="80"
-           placeholder="搜索..." spellcheck="false"
-           type="search" class="search-input">
-  </div>
-  <span class="popup-btn-close">
-    <i class="fa fa-times-circle"></i>
-  </span>
-</div>
-<div class="search-result-container no-result">
-  <div class="search-result-icon">
-    <i class="fa fa-spinner fa-pulse fa-5x"></i>
-  </div>
-</div>
-
-    </div>
-  </div>
 
 </div>
         
   
-  <div class="toggle sidebar-toggle">
+  <div class="toggle sidebar-toggle" role="button">
     <span class="toggle-line"></span>
     <span class="toggle-line"></span>
     <span class="toggle-line"></span>
@@ -251,15 +179,13 @@
 
       <div class="sidebar-panel-container">
         <!--noindex-->
-        <section class="post-toc-wrap sidebar-panel">
+        <div class="post-toc-wrap sidebar-panel">
             <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80-%E5%88%9B%E5%BB%BAGitlab%E4%B8%AD%E7%AC%AC%E4%B8%80%E4%B8%AA%E9%A1%B9%E7%9B%AE"><span class="nav-number">1.</span> <span class="nav-text">一. 创建Gitlab中第一个项目</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-Gitlab%E9%A1%B9%E7%9B%AE%E7%9A%84%E5%8F%AF%E8%A7%81%E7%B1%BB%E5%9E%8B%E6%9C%89%E4%B8%89%E7%A7%8D%E7%BA%A7%E5%88%AB%E3%80%82"><span class="nav-number">1.1.</span> <span class="nav-text">1. Gitlab项目的可见类型有三种级别。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E6%94%B9%E5%8F%98%E5%8F%AF%E8%A7%81%E7%BA%A7%E5%88%AB%E6%AD%A5%E9%AA%A4%EF%BC%9A"><span class="nav-number">1.2.</span> <span class="nav-text">2. 改变可见级别步骤：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%EF%BC%881%EF%BC%89%E8%BF%9B%E5%85%A5%E9%A1%B9%E7%9B%AE%E8%A7%86%E5%9B%BE"><span class="nav-number">1.2.1.</span> <span class="nav-text">（1）进入项目视图</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%EF%BC%882%EF%BC%89%E7%82%B9%E5%87%BB%E7%BC%96%E8%BE%91%E6%8C%89%E9%92%AE"><span class="nav-number">1.2.2.</span> <span class="nav-text">（2）点击编辑按钮</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%EF%BC%883%EF%BC%89%E6%94%B9%E5%8F%98%E5%8F%AF%E8%A7%81%E7%BA%A7%E5%88%AB%E9%80%89%E9%A1%B9%E3%80%82"><span class="nav-number">1.2.3.</span> <span class="nav-text">（3）改变可见级别选项。</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE%E6%AD%A5%E9%AA%A4"><span class="nav-number">1.3.</span> <span class="nav-text">3. 创建项目步骤</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C-%E5%9C%A8Unix%E3%80%81Linux%E7%B3%BB%E7%BB%9F%E4%B8%8A%E4%BA%A7%E7%94%9FSSH-key%E3%80%82"><span class="nav-number">2.</span> <span class="nav-text">二. 在Unix、Linux系统上产生SSH key。</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E5%AE%9E%E9%AA%8C%E7%8E%AF%E5%A2%83%EF%BC%9A"><span class="nav-number">2.1.</span> <span class="nav-text">1. 实验环境：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E5%AE%9E%E9%AA%8C%E6%AD%A5%E9%AA%A4%EF%BC%9A"><span class="nav-number">2.2.</span> <span class="nav-text">2. 实验步骤：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%EF%BC%881%EF%BC%89%E9%A6%96%E5%85%88%E6%9D%A5%E6%A3%80%E6%9F%A5%E4%B8%80%E4%B8%8B%E6%98%AF%E5%90%A6%E5%B7%B2%E7%BB%8F%E5%AD%98%E5%9C%A8ssh-key%E3%80%82-%E6%89%A7%E8%A1%8C%E4%BB%A5%E4%B8%8B%E5%91%BD%E4%BB%A4%E6%9D%A5%E6%A3%80%E6%9F%A5%E6%98%AF%E5%90%A6%E6%9C%89%E6%96%87%E4%BB%B6id-rsa-pub%E6%88%96%E8%80%85id-dsa-pub"><span class="nav-number">2.2.1.</span> <span class="nav-text">（1）首先来检查一下是否已经存在ssh key。 执行以下命令来检查是否有文件id_rsa.pub或者id_dsa.pub.</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E6%89%A7%E8%A1%8C%E4%BB%A5%E4%B8%8B%E5%91%BD%E4%BB%A4%E6%9D%A5%E4%BA%A7%E7%94%9FSSH-KEY%E6%96%87%E4%BB%B6%E3%80%82"><span class="nav-number">2.2.2.</span> <span class="nav-text">(2) 执行以下命令来产生SSH-KEY文件。</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89-%E5%9C%A8Windows-%E4%B8%BB%E6%9C%BA%E4%B8%8A%E4%BA%A7%E7%94%9FSSH-Key%E6%96%87%E4%BB%B6%E3%80%82"><span class="nav-number">3.</span> <span class="nav-text">三. 在Windows 主机上产生SSH-Key文件。</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%EF%BC%881%EF%BC%89%E5%9C%A8%E4%BB%A5%E4%B8%8B%E7%BD%91%E5%9D%80%E8%BF%9B%E8%A1%8C%E4%B8%8B%E8%BD%BDhttps-git-scm-com-downloads%EF%BC%8C%E5%AE%89%E8%A3%85%EF%BC%8C%E5%85%B7%E4%BD%93%E6%AD%A5%E9%AA%A4%EF%BC%88%E7%95%A5%EF%BC%89%E3%80%82"><span class="nav-number">3.1.</span> <span class="nav-text">（1）在以下网址进行下载https:&#x2F;&#x2F;git-scm.com&#x2F;downloads，安装，具体步骤（略）。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%EF%BC%882%EF%BC%89%E6%89%93%E5%BC%80Git%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%AA%97%E5%8F%A3%E3%80%82"><span class="nav-number">3.2.</span> <span class="nav-text">（2）打开Git命令行窗口。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%EF%BC%883%EF%BC%89%E6%89%A7%E8%A1%8C%E4%BB%A5%E4%B8%8B%E5%91%BD%E4%BB%A4%E4%BA%A7%E7%94%9FSSH-KEY%E6%96%87%E4%BB%B6"><span class="nav-number">3.3.</span> <span class="nav-text">（3）执行以下命令产生SSH-KEY文件</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%9B-%E6%B7%BB%E5%8A%A0SSH-key%E6%96%87%E4%BB%B6%E5%88%B0Gitlab%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="nav-number">4.</span> <span class="nav-text">四. 添加SSH key文件到Gitlab服务器</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%EF%BC%881%EF%BC%89%E6%89%BE%E5%88%B0%E5%A6%82%E4%B8%8B%E4%BD%8D%E7%BD%AE%E3%80%82"><span class="nav-number">4.1.</span> <span class="nav-text">（1）找到如下位置。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%EF%BC%882%EF%BC%89%E6%8A%8A%E6%88%91%E4%BB%AC%E7%AC%AC%E4%BA%8C%E6%AD%A5%E6%88%96%E8%80%85%E7%AC%AC%E4%B8%89%E6%AD%A5%E4%BA%A7%E7%94%9F%E7%9A%84%E5%AF%86%E9%92%A5%E5%85%AC%E9%92%A5%E6%94%BE%E5%9C%A8%E6%AD%A4%E5%A4%84%E3%80%82"><span class="nav-number">4.2.</span> <span class="nav-text">（2）把我们第二步或者第三步产生的密钥公钥放在此处。</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#LINUX%E4%B8%8A%E6%9F%A5%E7%9C%8B%E5%85%AC%E9%92%A5%E5%86%85%E5%AE%B9%EF%BC%9A"><span class="nav-number">4.2.1.</span> <span class="nav-text">LINUX上查看公钥内容：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#WINDOWS-%E6%9F%A5%E7%9C%8B%E5%85%AC%E9%92%A5%E5%86%85%E5%AE%B9%EF%BC%9A"><span class="nav-number">4.2.2.</span> <span class="nav-text">WINDOWS 查看公钥内容：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%94-%E5%9C%A8%E6%9C%AC%E5%9C%B0%E5%88%9B%E5%BB%BA%E7%AC%AC%E4%B8%80%E4%B8%AAgit-%E9%A1%B9%E7%9B%AE%E3%80%82"><span class="nav-number">5.</span> <span class="nav-text">五. 在本地创建第一个git 项目。</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%EF%BC%881%EF%BC%89%E6%89%93%E5%BC%80windows%E4%B8%8Bgit%E7%9A%84%E7%AA%97%E5%8F%A3%E7%BB%88%E7%AB%AF%E6%88%96%E8%80%85LINUX%E4%B8%8B%E7%9A%84%E7%BB%88%E7%AB%AF%E3%80%82"><span class="nav-number">5.1.</span> <span class="nav-text">（1）打开windows下git的窗口终端或者LINUX下的终端。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%EF%BC%882%EF%BC%89%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AAsuper-git%E6%96%87%E4%BB%B6%E5%A4%B9%EF%BC%8C%E7%84%B6%E5%90%8E%E5%88%87%E6%8D%A2%E5%88%B0%E8%AF%A5%E6%96%87%E4%BB%B6%E5%A4%B9%E3%80%82"><span class="nav-number">5.2.</span> <span class="nav-text">（2）创建一个super-git文件夹，然后切换到该文件夹。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%EF%BC%883%EF%BC%89%E4%BD%BF%E8%AF%A5%E6%96%87%E4%BB%B6%E5%A4%B9%E4%BD%9C%E4%B8%BAGit%E9%A1%B9%E7%9B%AE-%EF%BC%8C%E9%9C%80%E8%A6%81%E5%91%8A%E8%AF%89Git%E5%8E%BB%E7%9B%91%E6%8E%A7%E8%AF%A5%E6%96%87%E4%BB%B6%E5%A4%B9%E3%80%82%E6%89%A7%E8%A1%8C%E4%BB%A5%E4%B8%8B%E5%91%BD%E4%BB%A4%E3%80%82"><span class="nav-number">5.3.</span> <span class="nav-text">（3）使该文件夹作为Git项目 ，需要告诉Git去监控该文件夹。执行以下命令。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%EF%BC%884%EF%BC%89%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E6%96%87%E4%BB%B6%E5%B9%B6%E6%8A%8A%E5%AE%83%E6%B7%BB%E5%8A%A0%E5%88%B0%E5%BA%93%E4%B8%AD%EF%BC%8C%E8%AF%A5%E6%96%87%E4%BB%B6%E5%90%8D%E5%AD%97%E5%91%BD%E5%90%8D%E4%B8%BAREADME-md"><span class="nav-number">5.4.</span> <span class="nav-text">（4）创建一个文件并把它添加到库中，该文件名字命名为README.md</span></a></li><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-number">5.5.</span> <span class="nav-text"></span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%EF%BC%885%EF%BC%89%E6%B7%BB%E5%8A%A0%E6%96%B0%E6%96%87%E4%BB%B6%E5%88%B0Git%EF%BC%8C%E6%89%A7%E8%A1%8C%E4%BB%A5%E4%B8%8B%E5%91%BD%E4%BB%A4%E3%80%82"><span class="nav-number">5.6.</span> <span class="nav-text">（5）添加新文件到Git，执行以下命令。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%EF%BC%886%EF%BC%89%E6%8F%90%E4%BA%A4%E6%96%87%E4%BB%B6%E5%88%B0%E6%9C%AC%E5%9C%B0%E5%BA%93%E3%80%82"><span class="nav-number">5.7.</span> <span class="nav-text">（6）提交文件到本地库。</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%AD-%E5%88%BB%E9%9A%86%E4%BB%93%E5%BA%93%E5%92%8C%E6%8E%A8%E9%80%81%E4%BB%A3%E7%A0%81%E5%88%B0%E4%BB%93%E5%BA%93"><span class="nav-number">6.</span> <span class="nav-text">六. 刻隆仓库和推送代码到仓库</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%EF%BC%881%EF%BC%89%E6%89%BE%E5%88%B0%E6%83%B3%E8%A6%81%E5%88%BB%E9%9A%86%E4%BB%93%E5%BA%93%E7%9A%84%E5%9C%B0%E5%9D%80%EF%BC%8C%E6%A0%B7%E5%BC%8F%E5%A6%82%E4%B8%8B%EF%BC%9A"><span class="nav-number">6.1.</span> <span class="nav-text">（1）找到想要刻隆仓库的地址，样式如下：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%EF%BC%882%EF%BC%89%E4%BD%BF%E7%94%A8%E4%BB%A5%E4%B8%8B%E5%91%BD%E4%BB%A4%E8%BF%9B%E8%A1%8C%E5%88%BB%E9%9A%86%E3%80%82"><span class="nav-number">6.2.</span> <span class="nav-text">（2）使用以下命令进行刻隆。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%EF%BC%883%EF%BC%89%E8%BF%9B%E5%85%A5%E6%88%91%E4%BB%AC%E5%88%BB%E9%9A%86%E7%9A%84%E6%96%87%E4%BB%B6%E5%A4%B9%EF%BC%8C%E5%8F%AF%E4%BB%A5%E9%80%9A%E8%BF%87%E4%BB%A5%E4%B8%8B%E5%91%BD%E4%BB%A4%E6%9F%A5%E7%9C%8B%E6%98%AF%E5%90%A6%E6%98%AFGIT%E6%96%87%E4%BB%B6%E5%A4%B9%E3%80%82"><span class="nav-number">6.3.</span> <span class="nav-text">（3）进入我们刻隆的文件夹，可以通过以下命令查看是否是GIT文件夹。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#-1"><span class="nav-number">6.4.</span> <span class="nav-text"></span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%EF%BC%884%EF%BC%89%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E6%96%87%E4%BB%B6%E3%80%82"><span class="nav-number">6.5.</span> <span class="nav-text">（4）创建一个文件。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%EF%BC%885%EF%BC%89%E6%B7%BB%E5%8A%A0%E8%BF%99%E4%B8%AA%E6%96%87%E4%BB%B6%E5%88%B0stage%E7%8A%B6%E6%80%81%E3%80%82"><span class="nav-number">6.6.</span> <span class="nav-text">（5）添加这个文件到stage状态。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%EF%BC%886%EF%BC%89%E6%89%A7%E8%A1%8C%E4%BB%A5%E4%B8%8B%E5%91%BD%E4%BB%A4%EF%BC%8C%E6%8F%90%E4%BA%A4%E8%BF%99%E4%B8%AA%E6%94%B9%E5%8F%98%E3%80%82"><span class="nav-number">6.7.</span> <span class="nav-text">（6）执行以下命令，提交这个改变。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%EF%BC%887%EF%BC%89%E6%8A%8A%E8%AF%A5%E6%96%87%E4%BB%B6%E6%8E%A8%E9%80%81%E5%88%B0gitlab%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E3%80%82"><span class="nav-number">6.8.</span> <span class="nav-text">（7）把该文件推送到gitlab服务器上。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%EF%BC%888-%E5%9C%A8Gitlab%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E6%9F%A5%E7%9C%8B%E4%BF%A1%E6%81%AF%E5%A6%82%E4%B8%8B%EF%BC%9A"><span class="nav-number">6.9.</span> <span class="nav-text">（8) 在Gitlab服务器上查看信息如下：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80-Gitlab%E5%88%86%E6%94%AF"><span class="nav-number">7.</span> <span class="nav-text">一. Gitlab分支</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E5%88%87%E6%8D%A2%E5%88%B0%E9%A1%B9%E7%9B%AE%E4%BD%8D%E7%BD%AE%E3%80%82"><span class="nav-number">7.1.</span> <span class="nav-text">1. 切换到项目位置。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E9%A1%B9%E7%9B%AE%E7%9A%84%E4%B8%80%E6%96%B0%E5%88%86%E6%94%AF%E3%80%82"><span class="nav-number">7.2.</span> <span class="nav-text">2. 创建一个项目的一新分支。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%E5%88%87%E6%8D%A2%E5%88%B0%E6%96%B0%E5%BB%BA%E7%9A%84%E5%88%86%E6%94%AF%E4%B8%8B%E3%80%82"><span class="nav-number">7.3.</span> <span class="nav-text">3. 切换到新建的分支下。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-%E7%AC%AC2%E6%AD%A5%E5%92%8C%E7%AC%AC3%E6%AD%A5%E5%8F%AF%E4%BB%A5%E5%90%88%E5%B9%B6%E6%88%90%E4%B8%80%E6%AD%A5%E3%80%82"><span class="nav-number">7.4.</span> <span class="nav-text">4. 第2步和第3步可以合并成一步。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-%E6%94%B9%E5%8F%98%E6%96%87%E4%BB%B6%E7%9A%84%E5%86%85%E5%AE%B9%E3%80%82"><span class="nav-number">7.5.</span> <span class="nav-text">5. 改变文件的内容。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-%E6%8F%90%E4%BA%A4%E8%BF%99%E4%B8%AA%E6%94%B9%E5%8F%98"><span class="nav-number">7.6.</span> <span class="nav-text">6. 提交这个改变</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-%E6%8E%A8%E9%80%81%E5%88%86%E6%94%AF%E5%88%B0gitlab%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="nav-number">7.7.</span> <span class="nav-text">7. 推送分支到gitlab服务器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-%E5%9C%A8Gitlab%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%9F%A5%E7%9C%8B%E6%88%91%E4%BB%AC%E6%8E%A8%E9%80%81%E7%9A%84%E5%88%86%E6%94%AF"><span class="nav-number">7.8.</span> <span class="nav-text">8. 在Gitlab服务器查看我们推送的分支</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-%E4%BB%8E%E4%BB%A5%E4%B8%8B%E5%9B%BE%E5%8F%AF%E4%BB%A5%E7%9C%8B%E5%88%B0%E5%88%9B%E5%BB%BA%E7%9A%84%E5%88%86%E6%94%AFfirst-branch%E5%92%8Cmaster%E5%88%86%E6%94%AF%E3%80%82"><span class="nav-number">7.9.</span> <span class="nav-text">9. 从以下图可以看到创建的分支first-branch和master分支。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#10-%E5%88%87%E6%8D%A2%E5%88%B0master%E5%88%86%E6%94%AF%E3%80%82"><span class="nav-number">7.10.</span> <span class="nav-text">10. 切换到master分支。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#-2"><span class="nav-number">7.11.</span> <span class="nav-text"></span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#11-%E5%90%88%E5%B9%B6first-branch%E5%88%86%E6%94%AF%E5%88%B0master%E5%88%86%E6%94%AF%E3%80%82"><span class="nav-number">7.12.</span> <span class="nav-text">11. 合并first-branch分支到master分支。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#12-%E4%BB%8E%E7%AC%AC11%E6%AD%A5%E8%BE%93%E5%87%BA%E7%9A%84%E4%BF%A1%E6%81%AF%E5%8F%AF%E4%BB%A5%E7%9C%8B%E5%88%B0%EF%BC%8C%E7%BB%99%E6%88%91%E4%BB%AC%E4%B8%80%E4%B8%AA%E6%9C%BA%E4%BC%9A%E5%8E%BB%E6%94%B9%E5%8F%98%E6%8F%90%E4%BA%A4%E7%9A%84%E4%BF%A1%E6%81%AF%E3%80%82%E5%9C%A8%E6%88%91%E4%BB%AC%E4%BF%9D%E5%AD%98%E5%92%8C%E5%85%B3%E9%97%AD%E7%BC%96%E8%BE%91%E5%99%A8%E7%9A%84%E6%97%B6%E5%80%99%EF%BC%8C%E8%BF%99%E4%B8%AA%E5%88%86%E6%94%AF%E5%B0%86%E4%BC%9A%E5%90%88%E5%B9%B6%EF%BC%8C%E5%85%B7%E4%BD%93%E4%BF%A1%E6%81%AF%E5%A6%82%E4%B8%8B"><span class="nav-number">7.13.</span> <span class="nav-text">12. 从第11步输出的信息可以看到，给我们一个机会去改变提交的信息。在我们保存和关闭编辑器的时候，这个分支将会合并，具体信息如下.</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#13-%E6%8E%A8%E9%80%81%E6%94%B9%E5%8F%98%E5%88%B0Gitlab%E4%B8%8A%E7%9A%84master"><span class="nav-number">7.14.</span> <span class="nav-text">13. 推送改变到Gitlab上的master.</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#14-%E5%88%A0%E9%99%A4%E6%89%80%E5%88%9B%E5%BB%BA%E7%9A%84%E5%88%86%E6%94%AF%E3%80%82"><span class="nav-number">7.15.</span> <span class="nav-text">14. 删除所创建的分支。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#15-%E5%9C%A8gitlab%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E6%9F%A5%E7%9C%8B%E4%BF%A1%E6%81%AF%E5%A6%82%E4%B8%8B%E3%80%82"><span class="nav-number">7.16.</span> <span class="nav-text">15. 在gitlab服务器上查看信息如下。</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C-%E6%89%A7%E8%A1%8Crebase%E6%93%8D%E4%BD%9C"><span class="nav-number">8.</span> <span class="nav-text">二. 执行rebase操作</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E4%BD%BF%E7%94%A8%E7%BB%88%E7%AB%AF%E8%BF%9B%E5%85%A5%E5%88%B0cookbook%E9%A1%B9%E7%9B%AE%EF%BC%8C%E5%B9%B6%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%88%86%E6%94%AF%E3%80%82"><span class="nav-number">8.1.</span> <span class="nav-text">1. 使用终端进入到cookbook项目，并创建一个分支。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E6%96%B0%E7%9A%84%E6%96%87%E4%BB%B6%E5%B9%B6%E6%8F%90%E4%BA%A4%E5%AE%83%E3%80%82"><span class="nav-number">8.2.</span> <span class="nav-text">2. 创建一个新的文件并提交它。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%E5%88%87%E6%8D%A2%E5%88%B0master%E5%88%86%E6%94%AF%E3%80%82"><span class="nav-number">8.3.</span> <span class="nav-text">3. 切换到master分支。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-%E5%81%87%E5%A6%82%E5%85%88%E5%89%8D%E6%8E%A8%E9%80%81%E8%BF%87%E4%BB%A3%E7%A0%81%E5%88%86%E6%94%AF%E5%88%B0Gitlab%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%8C%E5%86%8D%E6%89%A7%E8%A1%8Crebase%EF%BC%8C%E9%82%A3%E4%B9%88%E5%9C%A8%E6%8E%A8%E9%80%81%E6%97%B6%E5%80%99%EF%BC%8C%E5%8F%AF%E8%83%BD%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BC%9A%E6%8A%A5%E9%94%99%E3%80%82%E4%B8%BA%E4%BA%86%E5%85%8B%E6%9C%8D%E8%BF%99%E4%B8%AA%E9%97%AE%E9%A2%98%EF%BC%8C%E5%8F%AF%E4%BB%A5%E4%BD%BF%E7%94%A8-f%E5%8F%82%E6%95%B0%E3%80%82"><span class="nav-number">8.4.</span> <span class="nav-text">4. 假如先前推送过代码分支到Gitlab服务器，再执行rebase，那么在推送时候，可能服务器会报错。为了克服这个问题，可以使用-f参数。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-%E5%9C%A8master%E5%88%86%E6%94%AF%E4%B8%8A%E5%88%9B%E5%BB%BA%E6%8F%90%E4%BA%A4%E3%80%82"><span class="nav-number">8.5.</span> <span class="nav-text">5. 在master分支上创建提交。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-%E5%88%87%E6%8D%A2%E5%88%B0rebase-branch-%E5%88%86%E6%94%AF"><span class="nav-number">8.6.</span> <span class="nav-text">6. 切换到rebase-branch 分支</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89-%E6%8C%A4%E5%8E%8B%E6%8F%90%E4%BA%A4%E4%BF%A1%E6%81%AF%EF%BC%88Squashing-your-commits%EF%BC%89"><span class="nav-number">9.</span> <span class="nav-text">三. 挤压提交信息（Squashing your commits）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E8%BF%9B%E5%85%A5%E5%88%B0cookbook%E9%A1%B9%E7%9B%AE%EF%BC%8C%E5%B9%B6%E5%88%87%E6%8D%A2%E5%88%B0squash-branch%E5%88%86%E6%94%AF%E3%80%82"><span class="nav-number">9.1.</span> <span class="nav-text">1. 进入到cookbook项目，并切换到squash-branch分支。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E5%9C%A8squash-branch%E5%88%86%E6%94%AF%E4%B8%8B%E5%88%9B%E5%BB%BA%E4%B8%A4%E4%B8%AA%E6%8F%90%E4%BA%A4-%EF%BC%8C%E5%B9%B6%E6%8A%8A%E5%AE%83%E4%B8%A4%E4%B8%AA%E6%8F%90%E4%BA%A4%E6%8C%A4%E5%8E%8B%E5%88%B0%E4%B8%80%E8%B5%B7%E3%80%82"><span class="nav-number">9.2.</span> <span class="nav-text">2. 在squash-branch分支下创建两个提交 ，并把它两个提交挤压到一起。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%E9%80%9A%E8%BF%87%E4%BB%A5%E4%B8%8B%E5%91%BD%E4%BB%A4%E5%8F%AF%E4%BB%A5%E6%9F%A5%E7%9C%8B%E6%88%91%E4%BB%AC%E7%9A%84%E6%8F%90%E4%BA%A4%E5%8E%86%E5%8F%B2%E3%80%82"><span class="nav-number">9.3.</span> <span class="nav-text">3. 通过以下命令可以查看我们的提交历史。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-%E6%8A%8Awip1%E5%92%8Cwip2%E7%9A%84%E6%8F%90%E4%BA%A4%E4%BF%A1%E6%81%AF%E6%8C%A4%E5%8E%8B%E5%9C%A8%E4%B8%80%E4%B8%AA%E6%9B%B4%E5%A5%BD%E7%9A%84%E6%8F%90%E4%BA%A4%E4%BF%A1%E6%81%AF%E4%B8%AD%EF%BC%8C%E6%89%A7%E8%A1%8C%E4%BB%A5%E4%B8%8B%E5%91%BD%E4%BB%A4%E3%80%82%E6%AD%A4%E6%97%B6%E4%BC%9A%E6%89%93%E5%BC%80%E4%B8%80%E4%B8%AA%E7%BC%96%E8%BE%91%E5%99%A8%E3%80%82"><span class="nav-number">9.4.</span> <span class="nav-text">4. 把wip1和wip2的提交信息挤压在一个更好的提交信息中，执行以下命令。此时会打开一个编辑器。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-%E7%AC%AC4%E6%AD%A5%E7%BC%96%E8%BE%91%E4%BF%9D%E5%AD%98%E5%90%8E%EF%BC%8CGit%E4%BC%9A%E6%89%93%E5%BC%80%E5%8F%A6%E5%A4%96%E4%B8%80%E4%B8%AA%E7%BC%96%E8%BE%91%E7%AA%97%E5%8F%A3%EF%BC%8C%E5%9C%A8%E8%BF%99%E4%B8%AA%E7%AA%97%E5%8F%A3%E4%B8%AD%EF%BC%8C%E7%BC%96%E8%BE%91%E6%8F%90%E4%BA%A4%E4%BF%A1%E6%81%AF%E5%B9%B6%E4%BF%9D%E5%AD%98%E3%80%82%E4%BC%9A%E5%BC%B9%E5%87%BA%E5%A6%82%E4%B8%8B%E7%94%BB%E9%9D%A2%E3%80%82"><span class="nav-number">9.5.</span> <span class="nav-text">5. 第4步编辑保存后，Git会打开另外一个编辑窗口，在这个窗口中，编辑提交信息并保存。会弹出如下画面。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#-3"><span class="nav-number">9.6.</span> <span class="nav-text"></span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-push%E8%AF%A5%E5%88%86%E6%94%AF%E5%88%B0gitlab%E6%9C%8D%E5%8A%A1%E5%99%A8%E3%80%82"><span class="nav-number">9.7.</span> <span class="nav-text">6. push该分支到gitlab服务器。</span></a></li></ol></li></ol></div>
-        </section>
+        </div>
         <!--/noindex-->
 
-        <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview-wrap sidebar-panel">
           <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="Lining Wei"
-      src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/icon.gif">
   <p class="site-author-name" itemprop="name">Lining Wei</p>
   <div class="site-description" itemprop="description">算法、技术</div>
 </div>
@@ -286,309 +212,10 @@
       </div>
   </nav>
 </div>
-  <div class="links-of-author site-overview-item animated">
-      <span class="links-of-author-item">
-        <span class="exturl" data-url="aHR0cHM6Ly9zcGFjZS5iaWxpYmlsaS5jb20vdXNlcmlkLw==" title="Bilibili → https:&#x2F;&#x2F;space.bilibili.com&#x2F;userid&#x2F;"><i class="fab fa-bilibili fa-fw"></i></span>
-      </span>
-      <span class="links-of-author-item">
-        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3dlaWxpbmluZw==" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;weilining"><i class="fab fa-github fa-fw"></i></span>
-      </span>
-      <span class="links-of-author-item">
-        <a href="/atom.xml" title="RSS → &#x2F;atom.xml"><i class="fa fa-rss fa-fw"></i></a>
-      </span>
-  </div>
 
 
-  <div class="links-of-blogroll site-overview-item animated">
-    <div class="links-of-blogroll-title"><i class="fa fa-university fa-fw"></i>
-      链接
-    </div>
-    <ul class="links-of-blogroll-list">
-        <li class="links-of-blogroll-item">
-          <a href="https://weilining.github.io/" title="https:&#x2F;&#x2F;weilining.github.io">Ln</a>
-        </li>
-    </ul>
-  </div>
 
-  <div class="links-of-recent-posts motion-element">
-    <div class="links-of-recent-posts-title">
-        <i class="fa fa-history fa-fw"></i>
-      最近文章
-    </div>
-    <ul class="links-of-recent-posts-list">
-        <li class="links-of-recent-posts-item">
-          <a href="/237.html" title="237.html">解决GitHub网页githubusercontent地址无法访问问题</a>
-        </li>
-    </ul>
-  </div>
-<div style="">
-  <canvas id="canvas" style="width:60%;">当前浏览器不支持canvas，请更换浏览器后再试</canvas>
-</div>
-<script>
-(function(){
-
-   var digit=
-    [
-        [
-            [0,0,1,1,1,0,0],
-            [0,1,1,0,1,1,0],
-            [1,1,0,0,0,1,1],
-            [1,1,0,0,0,1,1],
-            [1,1,0,0,0,1,1],
-            [1,1,0,0,0,1,1],
-            [1,1,0,0,0,1,1],
-            [1,1,0,0,0,1,1],
-            [0,1,1,0,1,1,0],
-            [0,0,1,1,1,0,0]
-        ],//0
-        [
-            [0,0,0,1,1,0,0],
-            [0,1,1,1,1,0,0],
-            [0,0,0,1,1,0,0],
-            [0,0,0,1,1,0,0],
-            [0,0,0,1,1,0,0],
-            [0,0,0,1,1,0,0],
-            [0,0,0,1,1,0,0],
-            [0,0,0,1,1,0,0],
-            [0,0,0,1,1,0,0],
-            [1,1,1,1,1,1,1]
-        ],//1
-        [
-            [0,1,1,1,1,1,0],
-            [1,1,0,0,0,1,1],
-            [0,0,0,0,0,1,1],
-            [0,0,0,0,1,1,0],
-            [0,0,0,1,1,0,0],
-            [0,0,1,1,0,0,0],
-            [0,1,1,0,0,0,0],
-            [1,1,0,0,0,0,0],
-            [1,1,0,0,0,1,1],
-            [1,1,1,1,1,1,1]
-        ],//2
-        [
-            [1,1,1,1,1,1,1],
-            [0,0,0,0,0,1,1],
-            [0,0,0,0,1,1,0],
-            [0,0,0,1,1,0,0],
-            [0,0,1,1,1,0,0],
-            [0,0,0,0,1,1,0],
-            [0,0,0,0,0,1,1],
-            [0,0,0,0,0,1,1],
-            [1,1,0,0,0,1,1],
-            [0,1,1,1,1,1,0]
-        ],//3
-        [
-            [0,0,0,0,1,1,0],
-            [0,0,0,1,1,1,0],
-            [0,0,1,1,1,1,0],
-            [0,1,1,0,1,1,0],
-            [1,1,0,0,1,1,0],
-            [1,1,1,1,1,1,1],
-            [0,0,0,0,1,1,0],
-            [0,0,0,0,1,1,0],
-            [0,0,0,0,1,1,0],
-            [0,0,0,1,1,1,1]
-        ],//4
-        [
-            [1,1,1,1,1,1,1],
-            [1,1,0,0,0,0,0],
-            [1,1,0,0,0,0,0],
-            [1,1,1,1,1,1,0],
-            [0,0,0,0,0,1,1],
-            [0,0,0,0,0,1,1],
-            [0,0,0,0,0,1,1],
-            [0,0,0,0,0,1,1],
-            [1,1,0,0,0,1,1],
-            [0,1,1,1,1,1,0]
-        ],//5
-        [
-            [0,0,0,0,1,1,0],
-            [0,0,1,1,0,0,0],
-            [0,1,1,0,0,0,0],
-            [1,1,0,0,0,0,0],
-            [1,1,0,1,1,1,0],
-            [1,1,0,0,0,1,1],
-            [1,1,0,0,0,1,1],
-            [1,1,0,0,0,1,1],
-            [1,1,0,0,0,1,1],
-            [0,1,1,1,1,1,0]
-        ],//6
-        [
-            [1,1,1,1,1,1,1],
-            [1,1,0,0,0,1,1],
-            [0,0,0,0,1,1,0],
-            [0,0,0,0,1,1,0],
-            [0,0,0,1,1,0,0],
-            [0,0,0,1,1,0,0],
-            [0,0,1,1,0,0,0],
-            [0,0,1,1,0,0,0],
-            [0,0,1,1,0,0,0],
-            [0,0,1,1,0,0,0]
-        ],//7
-        [
-            [0,1,1,1,1,1,0],
-            [1,1,0,0,0,1,1],
-            [1,1,0,0,0,1,1],
-            [1,1,0,0,0,1,1],
-            [0,1,1,1,1,1,0],
-            [1,1,0,0,0,1,1],
-            [1,1,0,0,0,1,1],
-            [1,1,0,0,0,1,1],
-            [1,1,0,0,0,1,1],
-            [0,1,1,1,1,1,0]
-        ],//8
-        [
-            [0,1,1,1,1,1,0],
-            [1,1,0,0,0,1,1],
-            [1,1,0,0,0,1,1],
-            [1,1,0,0,0,1,1],
-            [0,1,1,1,0,1,1],
-            [0,0,0,0,0,1,1],
-            [0,0,0,0,0,1,1],
-            [0,0,0,0,1,1,0],
-            [0,0,0,1,1,0,0],
-            [0,1,1,0,0,0,0]
-        ],//9
-        [
-            [0,0,0,0,0,0,0],
-            [0,0,1,1,1,0,0],
-            [0,0,1,1,1,0,0],
-            [0,0,1,1,1,0,0],
-            [0,0,0,0,0,0,0],
-            [0,0,0,0,0,0,0],
-            [0,0,1,1,1,0,0],
-            [0,0,1,1,1,0,0],
-            [0,0,1,1,1,0,0],
-            [0,0,0,0,0,0,0]
-        ]//:
-    ];
-
-var canvas = document.getElementById('canvas');
-
-if(canvas.getContext){
-    var cxt = canvas.getContext('2d');
-    //声明canvas的宽高
-    var H = 100,W = 700;
-    canvas.height = H;
-    canvas.width = W;
-    cxt.fillStyle = '#f00';
-    cxt.fillRect(10,10,50,50);
-
-    //存储时间数据
-    var data = [];
-    //存储运动的小球
-    var balls = [];
-    //设置粒子半径
-    var R = canvas.height/20-1;
-    (function(){
-        var temp = /(\d)(\d):(\d)(\d):(\d)(\d)/.exec(new Date());
-        //存储时间数字，由十位小时、个位小时、冒号、十位分钟、个位分钟、冒号、十位秒钟、个位秒钟这7个数字组成
-        data.push(temp[1],temp[2],10,temp[3],temp[4],10,temp[5],temp[6]);
-    })();
-
-    /*生成点阵数字*/
-    function renderDigit(index,num){
-        for(var i = 0; i < digit[num].length; i++){
-            for(var j = 0; j < digit[num][i].length; j++){
-                if(digit[num][i][j] == 1){
-                    cxt.beginPath();
-                    //cxt.fillStyle = '#f00';/*红色数字*/
-                    //cxt.fillStyle = '#fff';/*白色数字*/
-                    cxt.fillStyle = '#FAF0BB';/*代码黄数字*/
-                    cxt.arc(14*(R+2)*index + j*2*(R+1)+(R+1),i*2*(R+1)+(R+1),R,0,2*Math.PI);
-                    cxt.closePath();
-                    cxt.fill();
-                }
-            }
-        }
-    }
-
-    /*更新时钟*/
-    function updateDigitTime(){
-        var changeNumArray = [];
-        var temp = /(\d)(\d):(\d)(\d):(\d)(\d)/.exec(new Date());
-        var NewData = [];
-        NewData.push(temp[1],temp[2],10,temp[3],temp[4],10,temp[5],temp[6]);
-        for(var i = data.length-1; i >=0 ; i--){
-            //时间发生变化
-            if(NewData[i] !== data[i]){
-                //将变化的数字值和在data数组中的索引存储在changeNumArray数组中
-                changeNumArray.push(i+'_'+(Number(data[i])+1)%10);
-            }
-        }
-        //增加小球
-        for(var i = 0; i< changeNumArray.length; i++){
-            addBalls.apply(this,changeNumArray[i].split('_'));
-        }
-        data = NewData.concat();
-    }
-
-    /*更新小球状态*/
-    function updateBalls(){
-        for(var i = 0; i < balls.length; i++){
-            balls[i].stepY += balls[i].disY;
-            balls[i].x += balls[i].stepX;
-            balls[i].y += balls[i].stepY;
-            if(balls[i].x > W + R || balls[i].y > H + R){
-                balls.splice(i,1);
-                i--;
-            }
-        }
-    }
-
-    /*增加要运动的小球*/
-    function addBalls(index,num){
-        var numArray = [1,2,3];
-        var colorArray =  ["#3BE","#09C","#A6C","#93C","#9C0","#690","#FB3","#F80","#F44","#C00"];
-        for(var i = 0; i < digit[num].length; i++){
-            for(var j = 0; j < digit[num][i].length; j++){
-                if(digit[num][i][j] == 1){
-                    var ball = {
-                        x:14*(R+2)*index + j*2*(R+1)+(R+1),
-                        y:i*2*(R+1)+(R+1),
-                        stepX:Math.floor(Math.random() * 4 -2),
-                        stepY:-2*numArray[Math.floor(Math.random()*numArray.length)],
-                        color:colorArray[Math.floor(Math.random()*colorArray.length)],
-                        disY:1
-                    };
-                    balls.push(ball);
-                }
-            }
-        }
-    }
-
-    /*渲染*/
-    function render(){
-        //重置画布宽度，达到清空画布的效果
-        canvas.height = 100;
-        //渲染时钟
-        for(var i = 0; i < data.length; i++){
-            renderDigit(i,data[i]);
-        }
-        //渲染小球
-        for(var i = 0; i < balls.length; i++){
-            cxt.beginPath();
-            cxt.arc(balls[i].x,balls[i].y,R,0,2*Math.PI);
-            cxt.fillStyle = balls[i].color;
-            cxt.closePath();
-            cxt.fill();
-        }
-    }
-
-    clearInterval(oTimer);
-    var oTimer = setInterval(function(){
-        //更新时钟
-        updateDigitTime();
-        //更新小球状态
-        updateBalls();
-        //渲染
-        render();
-    },50);
-}
-
-})();
-</script>
-        </section>
+        </div>
       </div>
     </div>
   </aside>
@@ -598,11 +225,10 @@ if(canvas.getContext){
     </header>
 
     
-  <div class="back-to-top">
+  <div class="back-to-top" role="button">
     <i class="fa fa-arrow-up"></i>
     <span>0%</span>
   </div>
-  <div class="reading-progress-bar"></div>
 
 <noscript>
   <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
@@ -623,7 +249,7 @@ if(canvas.getContext){
     <link itemprop="mainEntityOfPage" href="https://weilining.github.io/162.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/weilining/img@main/img/icon.gif">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="Lining Wei">
       <meta itemprop="description" content="算法、技术">
     </span>
@@ -633,7 +259,7 @@ if(canvas.getContext){
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Gitlab基本管理<span class="exturl post-edit-link" data-url="aHR0cHM6Ly9naXRodWIuY29tL3dlaWxpbmluZy9ibG9nL2VkaXQvbWFpbi9zb3VyY2UvX3Bvc3RzLzE2Mi5tZA==" title="编辑"><i class="fa fa-pen-nib"></i></span>
+          Gitlab基本管理
         </h1>
 
         <div class="post-meta-container">
@@ -664,20 +290,6 @@ if(canvas.getContext){
       <span class="post-meta-item-text">阅读次数：</span>
       <span class="leancloud-visitors-count"></span>
     </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">评论：</span>
-    
-    <a title="valine" href="/162.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/162.html" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
       </div>
       <div class="post-meta">
     <span class="post-meta-item" title="本文字数">
@@ -749,7 +361,7 @@ if(canvas.getContext){
 </blockquote>
 <h3 id="六-刻隆仓库和推送代码到仓库"><a href="#六-刻隆仓库和推送代码到仓库" class="headerlink" title="六. 刻隆仓库和推送代码到仓库"></a>六. 刻隆仓库和推送代码到仓库</h3><h4 id="（1）找到想要刻隆仓库的地址，样式如下："><a href="#（1）找到想要刻隆仓库的地址，样式如下：" class="headerlink" title="（1）找到想要刻隆仓库的地址，样式如下："></a>（1）找到想要刻隆仓库的地址，样式如下：</h4><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://images2018.cnblogs.com/blog/1416119/201806/1416119-20180624155529359-2097663760.png"><img data-src="/162/1416119-20180624155529626-1633480197.png" alt="image" loading="lazy"></a></p>
 <h4 id="（2）使用以下命令进行刻隆。"><a href="#（2）使用以下命令进行刻隆。" class="headerlink" title="（2）使用以下命令进行刻隆。"></a>（2）使用以下命令进行刻隆。</h4><blockquote>
-<p>mike@win10-001 MINGW64 ~/cookbook<br>$ git clone <span class="exturl" data-url="bWFpbHRvOiYjeDY3OyYjMTA1OyYjMTE2OyYjNjQ7JiMxMDM7JiMxMDU7JiN4NzQ7JiMxMDg7JiN4NjE7JiN4NjI7JiM0NjsmI3g2MTsmIzEwNTsmIzExNTsmI3g2ODsmIzk3OyYjMTEwOyYjMTAzOyYjeDc3OyYjMTAxOyYjMTA1OyYjeDJlOyYjeDZlOyYjeDY1OyYjMTE2Ow==">&#x67;&#105;&#116;&#64;&#103;&#105;&#x74;&#108;&#x61;&#x62;&#46;&#x61;&#105;&#115;&#x68;&#97;&#110;&#103;&#x77;&#101;&#105;&#x2e;&#x6e;&#x65;&#116;<i class="fa fa-external-link-alt"></i></span>:root/cookbook.git<br>Cloning into &#39;cookbook&#39;...<br>The authenticity of host &#39;gitlab.aishangwei.net (192.168.2.201)&#39; can&#39;t be established.<br>ECDSA key fingerprint is SHA256:HvXTteW8UQ0MtxDAlMhL9XNOElAVV69d8nDsWjixrXI.<br>Are you sure you want to continue connecting (yes/no)? yes<br>Warning: Permanently added &#39;gitlab.aishangwei.net,192.168.2.201&#39; (ECDSA) to the list of known hosts.<br>warning: You appear to have cloned an empty repository.</p>
+<p>mike@win10-001 MINGW64 ~/cookbook<br>$ git clone <span class="exturl" data-url="bWFpbHRvOiYjeDY3OyYjeDY5OyYjMTE2OyYjNjQ7JiN4Njc7JiMxMDU7JiMxMTY7JiN4NmM7JiM5NzsmI3g2MjsmI3gyZTsmIzk3OyYjeDY5OyYjMTE1OyYjMTA0OyYjeDYxOyYjMTEwOyYjMTAzOyYjMTE5OyYjMTAxOyYjeDY5OyYjeDJlOyYjeDZlOyYjMTAxOyYjMTE2Ow==">&#x67;&#x69;&#116;&#64;&#x67;&#105;&#116;&#x6c;&#97;&#x62;&#x2e;&#97;&#x69;&#115;&#104;&#x61;&#110;&#103;&#119;&#101;&#x69;&#x2e;&#x6e;&#101;&#116;<i class="fa fa-external-link-alt"></i></span>:root/cookbook.git<br>Cloning into &#39;cookbook&#39;...<br>The authenticity of host &#39;gitlab.aishangwei.net (192.168.2.201)&#39; can&#39;t be established.<br>ECDSA key fingerprint is SHA256:HvXTteW8UQ0MtxDAlMhL9XNOElAVV69d8nDsWjixrXI.<br>Are you sure you want to continue connecting (yes/no)? yes<br>Warning: Permanently added &#39;gitlab.aishangwei.net,192.168.2.201&#39; (ECDSA) to the list of known hosts.<br>warning: You appear to have cloned an empty repository.</p>
 </blockquote>
 <h4 id="（3）进入我们刻隆的文件夹，可以通过以下命令查看是否是GIT文件夹。"><a href="#（3）进入我们刻隆的文件夹，可以通过以下命令查看是否是GIT文件夹。" class="headerlink" title="（3）进入我们刻隆的文件夹，可以通过以下命令查看是否是GIT文件夹。"></a>（3）进入我们刻隆的文件夹，可以通过以下命令查看是否是GIT文件夹。</h4><blockquote>
 <p>$ git status<br>On branch master</p>
@@ -824,7 +436,6 @@ if(canvas.getContext){
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git push origin rebase-branch –f</span><br></pre></td></tr></table></figure>
 </blockquote>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
-
 <h4 id="5-在master分支上创建提交。"><a href="#5-在master分支上创建提交。" class="headerlink" title="5. 在master分支上创建提交。"></a>5. 在master分支上创建提交。</h4><blockquote>
 <p>mike@win10-001 MINGW64 ~/cookbook/cookbook (master)<br>$ echo &quot;1&quot; &gt;&gt; README.md</p>
 <p>mike@win10-001 MINGW64 ~/cookbook/cookbook (master)<br>$ git add .<br>warning: LF will be replaced by CRLF in README.md.<br>The file will have its original line endings in your working directory.</p>
@@ -870,69 +481,10 @@ if(canvas.getContext){
     
     
     
-      
-  <div class="popular-posts-header">相关文章</div>
-  <ul class="popular-posts">
-    <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/10.html" rel="bookmark">Visual Studio Code 文件比较</a></div>
-    </li>
-    <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/1016.html" rel="bookmark">最方便的 Hexo 部署</a></div>
-    </li>
-    <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/105-1.html" rel="bookmark">WordPress 面板切换语言</a></div>
-    </li>
-    <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/105.html" rel="bookmark">Docker Compose WordPress 快速安装</a></div>
-    </li>
-    <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/106-1.html" rel="bookmark">彻底解决国内npm/yarn安装包很慢问题</a></div>
-    </li>
-  </ul>
-
 
     <footer class="post-footer">
-          <div class="reward-container">
-  <div>Buy me a coffee</div>
-  <button onclick="document.querySelector('.post-reward').classList.toggle('active');">
-    赞赏
-  </button>
-  <div class="post-reward">
-      <div>
-        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/20201122213021.png" alt="Lining Wei 微信">
-        <span>微信</span>
-      </div>
-      <div>
-        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/434235F3-7A93-4EA4-A7B6-4F6D977F1A89.png" alt="Lining Wei 支付宝">
-        <span>支付宝</span>
-      </div>
-      <div>
-        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/bitcoin.png" alt="Lining Wei 比特币">
-        <span>比特币</span>
-      </div>
-
-  </div>
-</div>
-
-          
-
-<div class="post-copyright">
-<ul>
-  <li class="post-copyright-author">
-      <strong>本文博主： </strong>Lining Wei
-  </li>
-  <li class="post-copyright-link">
-      <strong>本文链接：</strong>
-      <a href="https://weilining.github.io/162.html" title="Gitlab基本管理">https://weilining.github.io/162.html</a>
-  </li>
-  <li class="post-copyright-license">
-    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC8="><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
-  </li>
-</ul>
-</div>
-
           <div class="post-tags">
-              <a href="/tags/%E9%BB%98%E8%AE%A4/" rel="tag"><i class="fa fa-tag"></i> 默认</a>
+              <a href="/tags/%E9%BB%98%E8%AE%A4/" rel="tag"># 默认</a>
           </div>
 
         
@@ -958,45 +510,7 @@ if(canvas.getContext){
 
 
 
-      <div class="comment-button-group">
-          <a class="btn comment-button livere">livere</a>
-          <a class="btn comment-button valine">valine</a>
-      </div>
-        <div class="comment-position livere">
-          
-  <div class="comments">
-    <div id="lv-container" data-id="city" data-uid="MTAyMC81MTYyOC8yODEwOQ=="></div>
-  </div>
-  
-        </div>
-        <div class="comment-position valine">
-          <div class="comments" id="valine-comments"></div>
-        </div>
-      <script data-pjax>
-        (function() {
-          const commentButton = document.querySelectorAll('.comment-button');
-            commentButton.forEach(element => {
-            const commentClass = element.classList[2];
-            element.addEventListener('click', () => {
-              commentButton.forEach(active => active.classList.toggle('active', active === element));
-              document.querySelectorAll('.comment-position').forEach(active => active.classList.toggle('active', active.classList.contains(commentClass)));
-              if (CONFIG.comments.storage) {
-                localStorage.setItem('comments_active', commentClass);
-              }
-            });
-          });
-          let { activeClass } = CONFIG.comments;
-          if (CONFIG.comments.storage) {
-            activeClass = localStorage.getItem('comments_active') || activeClass;
-          }
-          if (activeClass) {
-            const activeButton = document.querySelector(`.comment-button.${activeClass}`);
-            if (activeButton) {
-              activeButton.click();
-            }
-          }
-        })();
-      </script>
+    <div class="comments" id="lv-container" data-id="city" data-uid="MTAyMC81MTYyOC8yODEwOQ=="></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -1027,29 +541,29 @@ if(canvas.getContext){
 
 
 <div class="copyright">
-  &copy; 2015 – 
+  &copy; 
   <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">Ln</span>
+  <span class="author" itemprop="copyrightHolder">Lining Wei</span>
 </div>
 <div class="wordcount">
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-      <span>站点总字数：</span>
     <span title="站点总字数">347k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-      <span>站点阅读时长 &asymp;</span>
     <span title="站点阅读时长">5:15</span>
   </span>
-</div><script src="https://cdn.jsdelivr.net/npm/canvas-matrix.js@0/canvas-matrix.min.js"></script>
+</div>
+  <div class="powered-by">由 <span class="exturl theme-link" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & <span class="exturl theme-link" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZw==">NexT.Gemini</span> 强力驱动
+  </div>
 
     </div>
   </footer>
@@ -1059,8 +573,7 @@ if(canvas.getContext){
   <script src="//cdn.jsdelivr.net/npm/@next-theme/pjax@0.4.0/pjax.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js"></script>
-<script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.1.0/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.1.0/source/js/next-boot.js"></script><script>
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/motion.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/next-boot.js"></script><script>
 var pjax = new Pjax({
   selectors: [
     'head title',
@@ -1097,8 +610,6 @@ document.addEventListener('pjax:success', () => {
 
   
 
-<script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.1.0/source/js/local-search.js"></script>
-
 
 
 
@@ -1107,11 +618,94 @@ document.addEventListener('pjax:success', () => {
   
 
 
+<script data-pjax>
+  (function() {
+    function leancloudSelector(url) {
+      url = encodeURI(url);
+      return document.getElementById(url).querySelector('.leancloud-visitors-count');
+    }
 
+    function addCount(Counter) {
+      const visitors = document.querySelector('.leancloud_visitors');
+      const url = decodeURI(visitors.id);
+      const title = visitors.dataset.flagTitle;
+
+      Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({ url })))
+        .then(response => response.json())
+        .then(({ results }) => {
+          if (results.length > 0) {
+            const counter = results[0];
+            leancloudSelector(url).innerText = counter.time + 1;
+            Counter('put', '/classes/Counter/' + counter.objectId, { time: { '__op': 'Increment', 'amount': 1 } })
+              .catch(error => {
+                console.error('Failed to save visitor count', error);
+              });
+          } else {
+              leancloudSelector(url).innerText = 'Counter not initialized! More info at console err msg.';
+              console.error('ATTENTION! LeanCloud counter has security bug, see how to solve it here: https://github.com/theme-next/hexo-leancloud-counter-security. \n However, you can still use LeanCloud without security, by setting `security` option to `false`.');
+            
+          }
+        })
+        .catch(error => {
+          console.error('LeanCloud Counter Error', error);
+        });
+    }
+
+    function showTime(Counter) {
+      const visitors = document.querySelectorAll('.leancloud_visitors');
+      const entries = [...visitors].map(element => {
+        return decodeURI(element.id);
+      });
+
+      Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({ url: { '$in': entries } })))
+        .then(response => response.json())
+        .then(({ results }) => {
+          for (let url of entries) {
+            const target = results.find(item => item.url === url);
+            leancloudSelector(url).innerText = target ? target.time : 0;
+          }
+        })
+        .catch(error => {
+          console.error('LeanCloud Counter Error', error);
+        });
+    }
+
+    const { app_id, app_key, server_url } = {"enable":true,"app_id":"CY5HvvaX6B7MHSPAUt7AJNp1-MdYXbMMI","app_key":"LRXpMJ2P3huqVJg8CmKR8gYw","server_url":null,"security":true};
+    function fetchData(api_server) {
+      const Counter = (method, url, data) => {
+        return fetch(`${api_server}/1.1${url}`, {
+          method,
+          headers: {
+            'X-LC-Id'     : app_id,
+            'X-LC-Key'    : app_key,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data)
+        });
+      };
+      if (CONFIG.page.isPost) {
+        if (CONFIG.hostname !== location.hostname) return;
+        addCount(Counter);
+      } else if (document.querySelectorAll('.post-title-link').length >= 1) {
+        showTime(Counter);
+      }
+    }
+
+    const api_server = app_id.slice(-9) === '-MdYXbMMI' ? `https://${app_id.slice(0, 8).toLowerCase()}.api.lncldglobal.com` : server_url;
+
+    if (api_server) {
+      fetchData(api_server);
+    } else {
+      fetch('https://app-router.leancloud.cn/2/route?appId=' + app_id)
+        .then(response => response.json())
+        .then(({ api_server }) => {
+          fetchData('https://' + api_server);
+        });
+    }
+  })();
+</script>
 
     <div class="pjax">
-
-  
 
   <script src="//cdn.jsdelivr.net/npm/quicklink@2.0.0/dist/quicklink.umd.js"></script>
   <script>
@@ -1140,19 +734,9 @@ NexT.utils.loadComments('#lv-container', () => {
 });
 </script>
 
-<script>
-NexT.utils.loadComments('#valine-comments', () => {
-  NexT.utils.getScript('//cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', () => {
-    new Valine(Object.assign({"enable":true,"appId":"CY5HvvaX6B7MHSPAUt7AJNp1-MdYXbMMI","appKey":"LRXpMJ2P3huqVJg8CmKR8gYw","serverURLs":null,"placeholder":"来都来了，不撩一句嘛~，留言记得在上面留下【邮箱】，方便收到回复通知~","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"lang":"zh-cn","visitor":true,"comment_count":true,"recordIP":false,"enableQQ":false,"requiredFields":[]}, {
-      el: '#valine-comments',
-      path: "/162.html",
-      serverURLs: "https://cy5hvvax.api.lncldglobal.com"
-    }));
-  }, window.Valine);
-});
-</script>
 
 
+<script id="click-show-text" src="/js/click-show-text.js" data-mobile="false" data-text="富强,民主,文明,和谐,自由,平等,公正,法治,爱国,敬业,诚信,友善" data-fontsize="20px" data-random="false" async></script>
     </div>
 </body>
 </html>
