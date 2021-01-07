@@ -6,7 +6,7 @@
   <link href="https://weilining.github.io/atom.xml" rel="self"/>
   
   <link href="https://weilining.github.io/"/>
-  <updated>2021-01-04T09:15:13.000Z</updated>
+  <updated>2021-01-07T06:52:07.000Z</updated>
   <id>https://weilining.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Visual Studio Code 插件推荐</title>
+    <link href="https://weilining.github.io/238.html"/>
+    <id>https://weilining.github.io/238.html</id>
+    <published>2021-01-07T06:52:07.000Z</published>
+    <updated>2021-01-07T06:52:07.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>VS Code 是目前最受欢迎的代码编辑器之一，也是大多数 Web 开发人员的首选武器。没错，它快速，高效并且具有强大的功能，使其成为用于开发几乎所有东西的非常强大的工具。</p><p> 以下是一些我最喜欢的扩展，以下排名不分先后。</p><h3 id="HTML-CSS-Support"><a href="#HTML-CSS-Support" class="headerlink" title="HTML CSS Support"></a><strong>HTML CSS Support</strong></h3><p><img data-src="/238/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FhYWh0bWw=,size_16,color_FFFFFF,t_70.jpeg" alt="img" loading="lazy"></p><p> 此扩展名使您可以在 HTML 文档中添加对 CSS 文件的支持。因此，您将获得类属性和名称完成，id 属性完成和远程 CSS 文件等功能。因此，您可以将引导 CDN 添加为远程 CSS，以在代码中获取类名称完成！酷吧？</p><p> 将 Bootstrap CDN 添加为远程：</p><figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&quot;css.remoteStyleSheets&quot;: [&quot;https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css&quot;],</span><br></pre></td></tr></table></figure><p> 运作方式如下：</p><p><img data-src="/238/20210105095737545.gif" alt="img" loading="lazy"></p><p> 从市场下载：<span class="exturl" data-url="aHR0cHM6Ly9tYXJrZXRwbGFjZS52aXN1YWxzdHVkaW8uY29tL2l0ZW1zP2l0ZW1OYW1lPWVjbWVsLnZzY29kZS1odG1sLWNzcw==">HTML CSS 支持 <i class="fa fa-external-link-alt"></i></span></p><p> 安装次数：390 万 </p><h3 id="Live-Server"><a href="#Live-Server" class="headerlink" title="Live Server"></a>Live Server</h3><p><img data-src="/238/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FhYWh0bWw=,size_16,color_FFFFFF,t_70-20210107145621588.jpeg" alt="img" loading="lazy"></p><p> 必备服务器是实时服务器。它允许您使用实时服务器打开任何 HTML 文件。因此，对文件所做的任何更改都会在保存文件时反映出来。当您使用 React 时，可以将其视为热重载。它为我节省了很多时间，因为我不必继续刷新标签来查看新更改。只需保存文件，您的更改将立即反映出来！</p><p> 看起来是这样的：</p><p><img data-src="/238/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FhYWh0bWw=,size_16,color_FFFFFF,t_70-20210107145621774.jpeg" alt="img" loading="lazy"></p><p> 从市场上下载：<span class="exturl" data-url="aHR0cHM6Ly9tYXJrZXRwbGFjZS52aXN1YWxzdHVkaW8uY29tL2l0ZW1zP2l0ZW1OYW1lPXJpdHdpY2tkZXkuTGl2ZVNlcnZlcg==">Live Server<i class="fa fa-external-link-alt"></i></span></p><p> 安装次数：870 万 </p><h3 id="Bracket-Pair-Colorizer-2"><a href="#Bracket-Pair-Colorizer-2" class="headerlink" title="Bracket Pair Colorizer 2"></a>Bracket Pair Colorizer 2</h3><p><img data-src="/238/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FhYWh0bWw=,size_16,color_FFFFFF,t_70-20210107145621642.jpeg" alt="img" loading="lazy"></p><p> 此扩展名允许使用相同的颜色来识别匹配的括号对。这对任何形式的嵌套代码都非常有用，因为它可以轻松识别特定括号的右括号。</p><p><img data-src="/238/20210105100112693.gif" alt="img" loading="lazy"></p><p> 使用情况如下：</p><p><img data-src="/238/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FhYWh0bWw=,size_16,color_FFFFFF,t_70-20210107145621691.jpeg" alt="img" loading="lazy"></p><p> 从市场下载：<span class="exturl" data-url="aHR0cHM6Ly9tYXJrZXRwbGFjZS52aXN1YWxzdHVkaW8uY29tL2l0ZW1zP2l0ZW1OYW1lPUNvZW5yYWFkUy5icmFja2V0LXBhaXItY29sb3JpemVyLTI=">Bracket Pair Colorizer 2<i class="fa fa-external-link-alt"></i></span></p><p> 安装次数：130 万 </p><h3 id="indent-rainbow"><a href="#indent-rainbow" class="headerlink" title="indent-rainbow"></a>indent-rainbow</h3><p><img data-src="/238/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FhYWh0bWw=,size_16,color_FFFFFF,t_70-20210107145621891.jpeg" alt="img" loading="lazy"></p><p> 扩展名使代码中的凹痕变色，使您可以更轻松地编写和理解代码，因为一眼就能识别出不同的凹痕黑色。</p><p><img data-src="/238/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FhYWh0bWw=,size_16,color_FFFFFF,t_70-20210107145622066.jpeg" alt="img" loading="lazy"></p><p> 从市场下载：<span class="exturl" data-url="aHR0cHM6Ly9tYXJrZXRwbGFjZS52aXN1YWxzdHVkaW8uY29tL2l0ZW1zP2l0ZW1OYW1lPW9kZXJ3YXQuaW5kZW50LXJhaW5ib3c=">Indent Rainbow<i class="fa fa-external-link-alt"></i></span></p><p> 安装次数：110 万 </p><hr><h3 id="Prettier-Code-formatter"><a href="#Prettier-Code-formatter" class="headerlink" title="Prettier - Code formatter"></a>Prettier - Code formatter</h3><p><img data-src="/238/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FhYWh0bWw=,size_16,color_FFFFFF,t_70-20210107145622004.jpeg" alt="img" loading="lazy"></p><p> 任何开发人员的必备扩展。使用 Prettier，您可以轻松地自动设置代码格式，并且在大多数情况下都可以正常工作。</p><p> 要将更漂亮的格式设置为默认格式程序，请使用打开命令选项板，<code>ctrl+shift+p</code> 然后搜索 <code>Open Settings (JSON)</code>。打开设置后，在其中添加以下行：</p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&quot;editor.defaultFormatter&quot;</span>: <span class="string">&quot;esbenp.prettier-vscode&quot;</span>,</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="string">&quot;editor.formatOnSave&quot;</span>: true,</span><br></pre></td></tr></table></figure><p> 现在，每次保存代码时，漂亮的代码都会自动正确格式化。</p><p> 运作方式如下：</p><p><img data-src="/238/20210105100418995.gif" alt="img" loading="lazy"></p><p> 从市场下载：<span class="exturl" data-url="aHR0cHM6Ly9tYXJrZXRwbGFjZS52aXN1YWxzdHVkaW8uY29tL2l0ZW1zP2l0ZW1OYW1lPWVzYmVucC5wcmV0dGllci12c2NvZGU="> 更漂亮 <i class="fa fa-external-link-alt"></i></span></p><p> 安装次数：8.2M</p><h3 id="GitLens-Git-supercharged"><a href="#GitLens-Git-supercharged" class="headerlink" title="GitLens-Git supercharged"></a>GitLens-Git supercharged</h3><p><img data-src="/238/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FhYWh0bWw=,size_16,color_FFFFFF,t_70-20210107145622010.jpeg" alt="img" loading="lazy"></p><p>Gitlens 增强了 VS Code 中内置的 Git 功能。它允许可视化代码作者，存储库视图，行悬停等等！您必须使用它来了解其全部潜力。</p><p><img data-src="/238/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FhYWh0bWw=,size_16,color_FFFFFF,t_70.png" alt="img" loading="lazy"></p><p> 从市场下载：<span class="exturl" data-url="aHR0cHM6Ly9tYXJrZXRwbGFjZS52aXN1YWxzdHVkaW8uY29tL2l0ZW1zP2l0ZW1OYW1lPWVhbW9kaW8uZ2l0bGVucw==">Gitlens<i class="fa fa-external-link-alt"></i></span></p><p> 安装次数：6.3M</p><h3 id="JavaScript-ES6-code-snippets"><a href="#JavaScript-ES6-code-snippets" class="headerlink" title="JavaScript (ES6) code snippets"></a>JavaScript (ES6) code snippets</h3><p><img data-src="/238/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FhYWh0bWw=,size_16,color_FFFFFF,t_70-20210107145622263.jpeg" alt="img" loading="lazy"></p><p> 如果您是 JavaScript 开发人员，那么会喜欢的。它为您提供各种 JS 代码片段，以使您的生活更轻松，并且您的编码时间更短！</p><p> 这是一个简单的例子：</p><p><img data-src="/238/20210105101027140.gif" alt="img" loading="lazy"></p><p> 安装次数：450 万 </p><h3 id="ES7-React-Redux-GraphQL-React-Native-snippets"><a href="#ES7-React-Redux-GraphQL-React-Native-snippets" class="headerlink" title="ES7 React/Redux/GraphQL/React-Native snippets"></a>ES7 React/Redux/GraphQL/React-Native snippets</h3><p><img data-src="/238/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FhYWh0bWw=,size_16,color_FFFFFF,t_70-20210107145622303.jpeg" alt="img" loading="lazy"></p><p> 另一个节省时间的好方法！该扩展提供了 React，Redux 甚至 JavaScript 的代码片段。因此，您可以在几秒钟内生成无聊的样板代码，从而可以自由地实现实际功能。</p><p>⚡这是一个 React 代码段：</p><p><img data-src="/238/20210105101120598.gif" alt="img" loading="lazy"></p><p>🚀这是 Redux 片段：</p><p><img data-src="/238/20210105101142264.gif" alt="img" loading="lazy"></p><p> 从市场下载：<span class="exturl" data-url="aHR0cHM6Ly9tYXJrZXRwbGFjZS52aXN1YWxzdHVkaW8uY29tL2l0ZW1zP2l0ZW1OYW1lPWRzem5hamRlci5lczctcmVhY3QtanMtc25pcHBldHM=">ES7 React / Redux / GraphQL / React-Native 片段 <i class="fa fa-external-link-alt"></i></span></p><p> 安装次数：180 万 </p><h3 id="Angular-Snippets-Version-9"><a href="#Angular-Snippets-Version-9" class="headerlink" title="Angular Snippets (Version 9)"></a>Angular Snippets (Version 9)</h3><p><img data-src="/238/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FhYWh0bWw=,size_16,color_FFFFFF,t_70-20210107145622608.jpeg" alt="img" loading="lazy"></p><p> 我不能独自离开 Angular 开发人员吗？extension 与 React 代码段类似，此扩展使您可以快速生成 Angular 代码段，从而节省了时间和精力！</p><p> 运作方式如下：</p><p><img data-src="/238/20210105101257946.gif" alt="img" loading="lazy"></p><p> 从市场下载：<span class="exturl" data-url="aHR0cHM6Ly9tYXJrZXRwbGFjZS52aXN1YWxzdHVkaW8uY29tL2l0ZW1zP2l0ZW1OYW1lPWpvaG5wYXBhLkFuZ3VsYXIy">Angular 代码段（版本 9）<i class="fa fa-external-link-alt"></i></span></p><p> 安装次数：2.1M</p><h3 id="Markdown-All-in-One"><a href="#Markdown-All-in-One" class="headerlink" title="Markdown All in One"></a>Markdown All in One</h3><p><img data-src="/238/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FhYWh0bWw=,size_16,color_FFFFFF,t_70-20210107145622809.jpeg" alt="img" loading="lazy"></p><p> 如果您想处理任何类型的 markdown 文件（无论是 GitHub 项目的 README 文件还是其他文件），这都是必须具备的功能，此扩展名将使您的生活更轻松。功能包括实时预览，生成内容，键盘快捷键，将 markdown 打印为 HTML 等等！</p><p>📜生成目录：</p><p><img data-src="/238/20210105101413705.gif" alt="img" loading="lazy"></p><p>Mark Markdown 文件的实时预览：</p><p><img data-src="/238/20210105101520560.gif" alt="img" loading="lazy"></p><p> 从市场下载：<span class="exturl" data-url="aHR0cHM6Ly9tYXJrZXRwbGFjZS52aXN1YWxzdHVkaW8uY29tL2l0ZW1zP2l0ZW1OYW1lPXl6aGFuZy5tYXJrZG93bi1hbGwtaW4tb25l">Markdown 合而为一 <i class="fa fa-external-link-alt"></i></span></p><p> 安装次数：170 万 </p>]]></content>
+    
+    
+    <summary type="html">默认</summary>
+    
+    
+    
+    <category term="默认" scheme="https://weilining.github.io/categories/%E9%BB%98%E8%AE%A4/"/>
+    
+    
+    <category term="默认" scheme="https://weilining.github.io/tags/%E9%BB%98%E8%AE%A4/"/>
+    
+  </entry>
   
   <entry>
     <title>解决 GitHub 网页 githubusercontent 地址无法访问问题</title>
@@ -402,27 +423,6 @@
     <updated>2020-12-20T13:11:50.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="谷歌 404"><a href="# 谷歌 404" class="headerlink" title="谷歌 404"></a> 谷歌 404</h2><p><span class="exturl" data-url="aHR0cHM6Ly9mb250cy5nb29nbGVhcGlzLmNvbS8=">https://fonts.googleapis.com<i class="fa fa-external-link-alt"></i></span></p><a id="more"></a><h2 id="谷歌字体镜像站多吉"><a href="# 谷歌字体镜像站多吉" class="headerlink" title="谷歌字体镜像站多吉"></a> 谷歌字体镜像站多吉 </h2><p><span class="exturl" data-url="aHR0cHM6Ly9mb250cy5kb2dlZG9nZS5jb20v">https://fonts.dogedoge.com<i class="fa fa-external-link-alt"></i></span></p>]]></content>
-    
-    
-    <summary type="html">默认</summary>
-    
-    
-    
-    <category term="默认" scheme="https://weilining.github.io/categories/%E9%BB%98%E8%AE%A4/"/>
-    
-    
-    <category term="默认" scheme="https://weilining.github.io/tags/%E9%BB%98%E8%AE%A4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>网页性能测试工具推荐</title>
-    <link href="https://weilining.github.io/218.html"/>
-    <id>https://weilining.github.io/218.html</id>
-    <published>2020-12-18T09:12:12.000Z</published>
-    <updated>2020-12-18T09:12:12.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="在线"><a href="# 在线" class="headerlink" title="在线"></a> 在线 </h2><p><span class="exturl" data-url="aHR0cHM6Ly93d3cuYWljZXN1LmNuLw==">https://www.aicesu.cn/<i class="fa fa-external-link-alt"></i></span></p><p><span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXJzLmdvb2dsZS5jb20vc3BlZWQvcGFnZXNwZWVkL2luc2lnaHRzLw==">https://developers.google.com/speed/pagespeed/insights/<i class="fa fa-external-link-alt"></i></span></p><a id="more"></a><h2 id="本地"><a href="# 本地" class="headerlink" title="本地"></a> 本地 </h2><p>chrome 的 lighthouse</p>]]></content>
     
     
     <summary type="html">默认</summary>

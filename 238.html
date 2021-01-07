@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.3.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.jsdelivr.net/gh/weilining/img@main/img/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.jsdelivr.net/gh/weilining/img@main/img/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://cdn.jsdelivr.net/gh/weilining/img@main/img/favicon-16x16-next.png">
+  <link rel="mask-icon" href="https://cdn.jsdelivr.net/gh/weilining/img@main/img/logo.svg" color="#222">
+  <meta name="google-site-verification" content="OjGymv9uAqWYDsr-E-j6DG2k1_mPXsDQF77kgEK0nz8">
+  <meta name="msvalidate.01" content="5C84BC77E02800759CE29C4ACCE487BD">
+  <meta name="yandex-verification" content="06c62a93328de5da">
+  <meta name="baidu-site-verification" content="code-wFDrn4lvkD">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.dogedoge.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext" media="print" onload='this.media="all"'>
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css" media="print" onload='this.media="all"'>
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" media="print" onload='this.media="all"'>
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"weilining.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.2.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+  </script>
+<meta name="description" content="默认">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Visual Studio Code 插件推荐">
+<meta property="og:url" content="https://weilining.github.io/238.html">
+<meta property="og:site_name" content="Ln&#39;s Blog">
+<meta property="og:description" content="默认">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://weilining.github.io/238/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FhYWh0bWw=,size_16,color_FFFFFF,t_70.jpeg">
+<meta property="og:image" content="https://weilining.github.io/238/20210105095737545.gif">
+<meta property="og:image" content="https://weilining.github.io/238/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FhYWh0bWw=,size_16,color_FFFFFF,t_70-20210107145621588.jpeg">
+<meta property="og:image" content="https://weilining.github.io/238/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FhYWh0bWw=,size_16,color_FFFFFF,t_70-20210107145621774.jpeg">
+<meta property="og:image" content="https://weilining.github.io/238/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FhYWh0bWw=,size_16,color_FFFFFF,t_70-20210107145621642.jpeg">
+<meta property="og:image" content="https://weilining.github.io/238/20210105100112693.gif">
+<meta property="og:image" content="https://weilining.github.io/238/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FhYWh0bWw=,size_16,color_FFFFFF,t_70-20210107145621691.jpeg">
+<meta property="og:image" content="https://weilining.github.io/238/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FhYWh0bWw=,size_16,color_FFFFFF,t_70-20210107145621891.jpeg">
+<meta property="og:image" content="https://weilining.github.io/238/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FhYWh0bWw=,size_16,color_FFFFFF,t_70-20210107145622066.jpeg">
+<meta property="og:image" content="https://weilining.github.io/238/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FhYWh0bWw=,size_16,color_FFFFFF,t_70-20210107145622004.jpeg">
+<meta property="og:image" content="https://weilining.github.io/238/20210105100418995.gif">
+<meta property="og:image" content="https://weilining.github.io/238/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FhYWh0bWw=,size_16,color_FFFFFF,t_70-20210107145622010.jpeg">
+<meta property="og:image" content="https://weilining.github.io/238/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FhYWh0bWw=,size_16,color_FFFFFF,t_70.png">
+<meta property="og:image" content="https://weilining.github.io/238/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FhYWh0bWw=,size_16,color_FFFFFF,t_70-20210107145622263.jpeg">
+<meta property="og:image" content="https://weilining.github.io/238/20210105101027140.gif">
+<meta property="og:image" content="https://weilining.github.io/238/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FhYWh0bWw=,size_16,color_FFFFFF,t_70-20210107145622303.jpeg">
+<meta property="og:image" content="https://weilining.github.io/238/20210105101120598.gif">
+<meta property="og:image" content="https://weilining.github.io/238/20210105101142264.gif">
+<meta property="og:image" content="https://weilining.github.io/238/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FhYWh0bWw=,size_16,color_FFFFFF,t_70-20210107145622608.jpeg">
+<meta property="og:image" content="https://weilining.github.io/238/20210105101257946.gif">
+<meta property="og:image" content="https://weilining.github.io/238/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FhYWh0bWw=,size_16,color_FFFFFF,t_70-20210107145622809.jpeg">
+<meta property="og:image" content="https://weilining.github.io/238/20210105101413705.gif">
+<meta property="og:image" content="https://weilining.github.io/238/20210105101520560.gif">
+<meta property="article:published_time" content="2021-01-07T06:52:07.000Z">
+<meta property="article:modified_time" content="2021-01-07T06:52:07.000Z">
+<meta property="article:author" content="Lining Wei">
+<meta property="article:tag" content="默认">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://weilining.github.io/238/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FhYWh0bWw=,size_16,color_FFFFFF,t_70.jpeg">
+
+
+<link rel="canonical" href="https://weilining.github.io/238.html">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+<title>Visual Studio Code 插件推荐 | Ln's Blog</title>
+  
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="Ln's Blog" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Ln's Blog</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">有朋自远方来，不亦乐乎</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-bell fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#HTML-CSS-Support"><span class="nav-number">1.</span> <span class="nav-text">HTML CSS Support</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Live-Server"><span class="nav-number">2.</span> <span class="nav-text">Live Server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Bracket-Pair-Colorizer-2"><span class="nav-number">3.</span> <span class="nav-text">Bracket Pair Colorizer 2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#indent-rainbow"><span class="nav-number">4.</span> <span class="nav-text">indent-rainbow</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Prettier-Code-formatter"><span class="nav-number">5.</span> <span class="nav-text">Prettier - Code formatter</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GitLens-Git-supercharged"><span class="nav-number">6.</span> <span class="nav-text">GitLens-Git supercharged</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JavaScript-ES6-code-snippets"><span class="nav-number">7.</span> <span class="nav-text">JavaScript (ES6) code snippets</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ES7-React-Redux-GraphQL-React-Native-snippets"><span class="nav-number">8.</span> <span class="nav-text">ES7 React&#x2F;Redux&#x2F;GraphQL&#x2F;React-Native snippets</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Angular-Snippets-Version-9"><span class="nav-number">9.</span> <span class="nav-text">Angular Snippets (Version 9)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Markdown-All-in-One"><span class="nav-number">10.</span> <span class="nav-text">Markdown All in One</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Lining Wei"
+      src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/icon.gif">
+  <p class="site-author-name" itemprop="name">Lining Wei</p>
+  <div class="site-description" itemprop="description">算法、技术</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">238</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">35</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://weilining.github.io/238.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/weilining/img@main/img/icon.gif">
+      <meta itemprop="name" content="Lining Wei">
+      <meta itemprop="description" content="算法、技术">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ln's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Visual Studio Code 插件推荐
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-01-07 14:52:07" itemprop="dateCreated datePublished" datetime="2021-01-07T14:52:07+08:00">2021-01-07</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E9%BB%98%E8%AE%A4/" itemprop="url" rel="index"><span itemprop="name">默认</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.8k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>2 分钟</span>
+    </span>
+</div>
+
+            <div class="post-description">默认</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>VS Code 是目前最受欢迎的代码编辑器之一，也是大多数 Web 开发人员的首选武器。没错，它快速，高效并且具有强大的功能，使其成为用于开发几乎所有东西的非常强大的工具。</p>
+<p> 以下是一些我最喜欢的扩展，以下排名不分先后。</p>
+<h3 id="HTML-CSS-Support"><a href="#HTML-CSS-Support" class="headerlink" title="HTML CSS Support"></a><strong>HTML CSS Support</strong></h3><p><img data-src="/238/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FhYWh0bWw=,size_16,color_FFFFFF,t_70.jpeg" alt="img" loading="lazy"></p>
+<p> 此扩展名使您可以在 HTML 文档中添加对 CSS 文件的支持。因此，您将获得类属性和名称完成，id 属性完成和远程 CSS 文件等功能。因此，您可以将引导 CDN 添加为远程 CSS，以在代码中获取类名称完成！酷吧？</p>
+<p> 将 Bootstrap CDN 添加为远程：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&quot;css.remoteStyleSheets&quot;: [&quot;https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css&quot;],</span><br></pre></td></tr></table></figure>
+<p> 运作方式如下：</p>
+<p><img data-src="/238/20210105095737545.gif" alt="img" loading="lazy"></p>
+<p> 从市场下载：<span class="exturl" data-url="aHR0cHM6Ly9tYXJrZXRwbGFjZS52aXN1YWxzdHVkaW8uY29tL2l0ZW1zP2l0ZW1OYW1lPWVjbWVsLnZzY29kZS1odG1sLWNzcw==">HTML CSS 支持 <i class="fa fa-external-link-alt"></i></span></p>
+<p> 安装次数：390 万 </p>
+<h3 id="Live-Server"><a href="#Live-Server" class="headerlink" title="Live Server"></a>Live Server</h3><p><img data-src="/238/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FhYWh0bWw=,size_16,color_FFFFFF,t_70-20210107145621588.jpeg" alt="img" loading="lazy"></p>
+<p> 必备服务器是实时服务器。它允许您使用实时服务器打开任何 HTML 文件。因此，对文件所做的任何更改都会在保存文件时反映出来。当您使用 React 时，可以将其视为热重载。它为我节省了很多时间，因为我不必继续刷新标签来查看新更改。只需保存文件，您的更改将立即反映出来！</p>
+<p> 看起来是这样的：</p>
+<p><img data-src="/238/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FhYWh0bWw=,size_16,color_FFFFFF,t_70-20210107145621774.jpeg" alt="img" loading="lazy"></p>
+<p> 从市场上下载：<span class="exturl" data-url="aHR0cHM6Ly9tYXJrZXRwbGFjZS52aXN1YWxzdHVkaW8uY29tL2l0ZW1zP2l0ZW1OYW1lPXJpdHdpY2tkZXkuTGl2ZVNlcnZlcg==">Live Server<i class="fa fa-external-link-alt"></i></span></p>
+<p> 安装次数：870 万 </p>
+<h3 id="Bracket-Pair-Colorizer-2"><a href="#Bracket-Pair-Colorizer-2" class="headerlink" title="Bracket Pair Colorizer 2"></a>Bracket Pair Colorizer 2</h3><p><img data-src="/238/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FhYWh0bWw=,size_16,color_FFFFFF,t_70-20210107145621642.jpeg" alt="img" loading="lazy"></p>
+<p> 此扩展名允许使用相同的颜色来识别匹配的括号对。这对任何形式的嵌套代码都非常有用，因为它可以轻松识别特定括号的右括号。</p>
+<p><img data-src="/238/20210105100112693.gif" alt="img" loading="lazy"></p>
+<p> 使用情况如下：</p>
+<p><img data-src="/238/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FhYWh0bWw=,size_16,color_FFFFFF,t_70-20210107145621691.jpeg" alt="img" loading="lazy"></p>
+<p> 从市场下载：<span class="exturl" data-url="aHR0cHM6Ly9tYXJrZXRwbGFjZS52aXN1YWxzdHVkaW8uY29tL2l0ZW1zP2l0ZW1OYW1lPUNvZW5yYWFkUy5icmFja2V0LXBhaXItY29sb3JpemVyLTI=">Bracket Pair Colorizer 2<i class="fa fa-external-link-alt"></i></span></p>
+<p> 安装次数：130 万 </p>
+<h3 id="indent-rainbow"><a href="#indent-rainbow" class="headerlink" title="indent-rainbow"></a>indent-rainbow</h3><p><img data-src="/238/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FhYWh0bWw=,size_16,color_FFFFFF,t_70-20210107145621891.jpeg" alt="img" loading="lazy"></p>
+<p> 扩展名使代码中的凹痕变色，使您可以更轻松地编写和理解代码，因为一眼就能识别出不同的凹痕黑色。</p>
+<p><img data-src="/238/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FhYWh0bWw=,size_16,color_FFFFFF,t_70-20210107145622066.jpeg" alt="img" loading="lazy"></p>
+<p> 从市场下载：<span class="exturl" data-url="aHR0cHM6Ly9tYXJrZXRwbGFjZS52aXN1YWxzdHVkaW8uY29tL2l0ZW1zP2l0ZW1OYW1lPW9kZXJ3YXQuaW5kZW50LXJhaW5ib3c=">Indent Rainbow<i class="fa fa-external-link-alt"></i></span></p>
+<p> 安装次数：110 万 </p>
+<hr>
+<h3 id="Prettier-Code-formatter"><a href="#Prettier-Code-formatter" class="headerlink" title="Prettier - Code formatter"></a>Prettier - Code formatter</h3><p><img data-src="/238/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FhYWh0bWw=,size_16,color_FFFFFF,t_70-20210107145622004.jpeg" alt="img" loading="lazy"></p>
+<p> 任何开发人员的必备扩展。使用 Prettier，您可以轻松地自动设置代码格式，并且在大多数情况下都可以正常工作。</p>
+<p> 要将更漂亮的格式设置为默认格式程序，请使用打开命令选项板，<code>ctrl+shift+p</code> 然后搜索 <code>Open Settings (JSON)</code>。打开设置后，在其中添加以下行：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&quot;editor.defaultFormatter&quot;</span>: <span class="string">&quot;esbenp.prettier-vscode&quot;</span>,</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="string">&quot;editor.formatOnSave&quot;</span>: true,</span><br></pre></td></tr></table></figure>
+<p> 现在，每次保存代码时，漂亮的代码都会自动正确格式化。</p>
+<p> 运作方式如下：</p>
+<p><img data-src="/238/20210105100418995.gif" alt="img" loading="lazy"></p>
+<p> 从市场下载：<span class="exturl" data-url="aHR0cHM6Ly9tYXJrZXRwbGFjZS52aXN1YWxzdHVkaW8uY29tL2l0ZW1zP2l0ZW1OYW1lPWVzYmVucC5wcmV0dGllci12c2NvZGU="> 更漂亮 <i class="fa fa-external-link-alt"></i></span></p>
+<p> 安装次数：8.2M</p>
+<h3 id="GitLens-Git-supercharged"><a href="#GitLens-Git-supercharged" class="headerlink" title="GitLens-Git supercharged"></a>GitLens-Git supercharged</h3><p><img data-src="/238/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FhYWh0bWw=,size_16,color_FFFFFF,t_70-20210107145622010.jpeg" alt="img" loading="lazy"></p>
+<p>Gitlens 增强了 VS Code 中内置的 Git 功能。它允许可视化代码作者，存储库视图，行悬停等等！您必须使用它来了解其全部潜力。</p>
+<p><img data-src="/238/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FhYWh0bWw=,size_16,color_FFFFFF,t_70.png" alt="img" loading="lazy"></p>
+<p> 从市场下载：<span class="exturl" data-url="aHR0cHM6Ly9tYXJrZXRwbGFjZS52aXN1YWxzdHVkaW8uY29tL2l0ZW1zP2l0ZW1OYW1lPWVhbW9kaW8uZ2l0bGVucw==">Gitlens<i class="fa fa-external-link-alt"></i></span></p>
+<p> 安装次数：6.3M</p>
+<h3 id="JavaScript-ES6-code-snippets"><a href="#JavaScript-ES6-code-snippets" class="headerlink" title="JavaScript (ES6) code snippets"></a>JavaScript (ES6) code snippets</h3><p><img data-src="/238/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FhYWh0bWw=,size_16,color_FFFFFF,t_70-20210107145622263.jpeg" alt="img" loading="lazy"></p>
+<p> 如果您是 JavaScript 开发人员，那么会喜欢的。它为您提供各种 JS 代码片段，以使您的生活更轻松，并且您的编码时间更短！</p>
+<p> 这是一个简单的例子：</p>
+<p><img data-src="/238/20210105101027140.gif" alt="img" loading="lazy"></p>
+<p> 安装次数：450 万 </p>
+<h3 id="ES7-React-Redux-GraphQL-React-Native-snippets"><a href="#ES7-React-Redux-GraphQL-React-Native-snippets" class="headerlink" title="ES7 React/Redux/GraphQL/React-Native snippets"></a>ES7 React/Redux/GraphQL/React-Native snippets</h3><p><img data-src="/238/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FhYWh0bWw=,size_16,color_FFFFFF,t_70-20210107145622303.jpeg" alt="img" loading="lazy"></p>
+<p> 另一个节省时间的好方法！该扩展提供了 React，Redux 甚至 JavaScript 的代码片段。因此，您可以在几秒钟内生成无聊的样板代码，从而可以自由地实现实际功能。</p>
+<p>⚡这是一个 React 代码段：</p>
+<p><img data-src="/238/20210105101120598.gif" alt="img" loading="lazy"></p>
+<p>🚀这是 Redux 片段：</p>
+<p><img data-src="/238/20210105101142264.gif" alt="img" loading="lazy"></p>
+<p> 从市场下载：<span class="exturl" data-url="aHR0cHM6Ly9tYXJrZXRwbGFjZS52aXN1YWxzdHVkaW8uY29tL2l0ZW1zP2l0ZW1OYW1lPWRzem5hamRlci5lczctcmVhY3QtanMtc25pcHBldHM=">ES7 React / Redux / GraphQL / React-Native 片段 <i class="fa fa-external-link-alt"></i></span></p>
+<p> 安装次数：180 万 </p>
+<h3 id="Angular-Snippets-Version-9"><a href="#Angular-Snippets-Version-9" class="headerlink" title="Angular Snippets (Version 9)"></a>Angular Snippets (Version 9)</h3><p><img data-src="/238/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FhYWh0bWw=,size_16,color_FFFFFF,t_70-20210107145622608.jpeg" alt="img" loading="lazy"></p>
+<p> 我不能独自离开 Angular 开发人员吗？extension 与 React 代码段类似，此扩展使您可以快速生成 Angular 代码段，从而节省了时间和精力！</p>
+<p> 运作方式如下：</p>
+<p><img data-src="/238/20210105101257946.gif" alt="img" loading="lazy"></p>
+<p> 从市场下载：<span class="exturl" data-url="aHR0cHM6Ly9tYXJrZXRwbGFjZS52aXN1YWxzdHVkaW8uY29tL2l0ZW1zP2l0ZW1OYW1lPWpvaG5wYXBhLkFuZ3VsYXIy">Angular 代码段（版本 9）<i class="fa fa-external-link-alt"></i></span></p>
+<p> 安装次数：2.1M</p>
+<h3 id="Markdown-All-in-One"><a href="#Markdown-All-in-One" class="headerlink" title="Markdown All in One"></a>Markdown All in One</h3><p><img data-src="/238/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FhYWh0bWw=,size_16,color_FFFFFF,t_70-20210107145622809.jpeg" alt="img" loading="lazy"></p>
+<p> 如果您想处理任何类型的 markdown 文件（无论是 GitHub 项目的 README 文件还是其他文件），这都是必须具备的功能，此扩展名将使您的生活更轻松。功能包括实时预览，生成内容，键盘快捷键，将 markdown 打印为 HTML 等等！</p>
+<p>📜生成目录：</p>
+<p><img data-src="/238/20210105101413705.gif" alt="img" loading="lazy"></p>
+<p>Mark Markdown 文件的实时预览：</p>
+<p><img data-src="/238/20210105101520560.gif" alt="img" loading="lazy"></p>
+<p> 从市场下载：<span class="exturl" data-url="aHR0cHM6Ly9tYXJrZXRwbGFjZS52aXN1YWxzdHVkaW8uY29tL2l0ZW1zP2l0ZW1OYW1lPXl6aGFuZy5tYXJrZG93bi1hbGwtaW4tb25l">Markdown 合而为一 <i class="fa fa-external-link-alt"></i></span></p>
+<p> 安装次数：170 万 </p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>Buy me a coffee</div>
+  <button onclick="document.querySelector('.post-reward').classList.toggle('active');">
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/20201122213021.png" alt="Lining Wei 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/434235F3-7A93-4EA4-A7B6-4F6D977F1A89.png" alt="Lining Wei 支付宝">
+        <span>支付宝</span>
+      </div>
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/bitcoin.png" alt="Lining Wei 比特币">
+        <span>比特币</span>
+      </div>
+
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E9%BB%98%E8%AE%A4/" rel="tag"><i class="fa fa-tag"></i> 默认</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/237.html" rel="prev" title="解决 GitHub 网页 githubusercontent 地址无法访问问题">
+                  <i class="fa fa-chevron-left"></i> 解决 GitHub 网页 githubusercontent 地址无法访问问题
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments" id="lv-container" data-id="city" data-uid="MTAyMC81MTYyOC8yODEwOQ=="></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 2015 – 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Ln</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">349k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">5:17</span>
+  </span>
+</div>
+
+<div><canvas id="snow" style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:99999;pointer-events:none"></canvas></div>
+
+
+<script id="click-show-text" src="/js/click-show-text.js" data-mobile="false" data-text="富强,民主,文明,和谐,自由,平等,公正,法治,爱国,敬业,诚信,友善" data-fontsize="20px" data-random="false" async></script>
+
+    </div>
+  </footer>
+
+  
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/motion.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/next-boot.js"></script>
+
+  
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.2.0/source/js/local-search.js"></script>
+
+
+
+
+
+
+  
+
+
+
+
+  <script src="//cdn.jsdelivr.net/npm/quicklink@2.0.0/dist/quicklink.umd.js"></script>
+  <script>
+      window.addEventListener('load', () => {
+      quicklink.listen({
+        timeout : 3000,
+        priority: true,
+        ignores : [uri => uri.includes('#'),uri => uri === 'https://weilining.github.io/238.html',]
+      });
+      });
+  </script>
+
+<script>
+NexT.utils.loadComments('#lv-container', () => {
+  window.livereOptions = {
+    refer: "238.html"
+  };
+  (function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+    if (typeof LivereTower === 'function') { return; }
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+    e.parentNode.insertBefore(j, e);
+  })(document, 'script');
+});
+</script>
+
+</body>
+</html>
