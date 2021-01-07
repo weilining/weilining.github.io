@@ -6,7 +6,7 @@
   <link href="https://weilining.github.io/atom.xml" rel="self"/>
   
   <link href="https://weilining.github.io/"/>
-  <updated>2021-01-07T06:52:07.000Z</updated>
+  <updated>2021-01-07T07:37:42.000Z</updated>
   <id>https://weilining.github.io/</id>
   
   <author>
@@ -15,6 +15,40 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>vscode 如何通过文件名查找文件</title>
+    <link href="https://weilining.github.io/240.html"/>
+    <id>https://weilining.github.io/240.html</id>
+    <published>2021-01-07T07:37:42.000Z</published>
+    <updated>2021-01-07T07:37:42.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img data-src="/240/5df7332fd38a2850.jpg" alt="img" loading="lazy"></p><p> 按快捷键 ctrl+p 可以弹出一个小窗，在上面的输入框输入文件名，下拉框点击一个文件 </p><p><img data-src="/240/1576481654530099.png" alt="bee99109cf1e14cde44d324736d194b.png" loading="lazy"></p><p> 搜索的时候，是不分大小写的，而且匹配文件名的多个部分。例如搜索 do，可以匹配到 DBconfig.js 这个文件 </p><p><img data-src="/240/1576481677312431.png" alt="a5593634d4ffd6815e118f49ba3e18c.png" loading="lazy"></p><p> 按 ctrl+shift+p 或者按 f1 也会打开这个搜索框，不过按 f1 打开的搜索框是搜索命令的。去掉 &gt; 符号以后，它就是搜索文件名的搜索框了 </p><p><img data-src="/240/1576481702722912.png" alt="589d43c03eb6fc83f54fb0ed69d9e07.png" loading="lazy"></p><p> 相关文章教程推荐：<span class="exturl" data-url="aHR0cHM6Ly93d3cucGhwLmNuL3Rvb2wvdnNjb2RlLw==">vscode 教程 <i class="fa fa-external-link-alt"></i></span></p><p> 以上就是 vscode 如何通过文件名查找文件的详细内容，更多请关注 php 中文网其它相关文章！</p><p><a href="javascript:;"><em></em> 微信 </a></p><p><a href="javascript:;"><em></em></a> </p>]]></content>
+    
+    
+    <summary type="html">默认</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>vscode 怎么设置可以搜索包含 node_modules 中的文件?</title>
+    <link href="https://weilining.github.io/239.html"/>
+    <id>https://weilining.github.io/239.html</id>
+    <published>2021-01-07T07:30:07.000Z</published>
+    <updated>2021-01-07T07:30:07.000Z</updated>
+    
+    <content type="html"><![CDATA[<p> 搜索的时候，只需要点击那个齿轮图标就可以临时禁用 exclude 和 ignore 的设置。就可以什么都搜了！</p><p><img data-src="/239/v2-f1cbc54afe75fdce164cec590348f3c8_hd.jpg" alt="img" loading="lazy">![img](data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1454' height='646'></svg>)</p><p>----------------------- 下面是原答案 -------------</p><p> 默认 node_modules 是被 exclude，可以修改这里的设置。</p><p><img data-src="/239/v2-706ee10cbf23b33f41351cc3b7c64638_hd.jpg" alt="img" loading="lazy">![img](data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1390' height='812'></svg>)</p><p> 改成这样：</p><figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">&quot;search.exclude&quot;</span>: &#123;</span><br><span class="line">        <span class="attr">&quot;**/node_modules&quot;</span>:<span class="literal">false</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">&quot;search.useIgnoreFiles&quot;</span>:<span class="literal">false</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p> 最好还是不要开启搜索 node_modules 里的内容。</p><p> 可以试一下下面这个 Extension：</p><p><a href="https://link.zhihu.com/?target=https://marketplace.visualstudio.com/items?itemName=jasonnutter.search-node-modules">Search node_modules - Visual Studio Marketplacemarketplace.visualstudio.com<img data-src="/239/v2-f13ea1e76fb0ec5130dc009fb7ea1078_ipico.jpg" alt="图标" loading="lazy"></a></p><p><img data-src="/239/v2-2b680fcd33f3e94dda18ca1b3890263b_hd.gif" alt="img" loading="lazy">![img](data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='728' height='320'></svg>)</p>]]></content>
+    
+    
+    <summary type="html">默认</summary>
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Visual Studio Code 插件推荐</title>
@@ -381,48 +415,6 @@
     <updated>2020-12-20T14:45:25.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="官网"><a href="# 官网" class="headerlink" title="官网"></a> 官网 </h2><p><span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIuYWxpeXVuLmNvbS9taXJyb3IvTlBNP2Zyb209dG5wbQ==">https://developer.aliyun.com/mirror/NPM?from=tnpm<i class="fa fa-external-link-alt"></i></span></p><a id="more"></a><h2 id="安装方法"><a href="# 安装方法" class="headerlink" title="安装方法"></a> 安装方法 </h2><p>win&amp;&amp;Linux</p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install -g cnpm --registry&#x3D;https:&#x2F;&#x2F;registry.npm.taobao.org</span><br></pre></td></tr></table></figure><p>Mac</p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo npm install -g cnpm --registry&#x3D;https:&#x2F;&#x2F;registry.npm.taobao.org</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-    <summary type="html">默认</summary>
-    
-    
-    
-    <category term="默认" scheme="https://weilining.github.io/categories/%E9%BB%98%E8%AE%A4/"/>
-    
-    
-    <category term="默认" scheme="https://weilining.github.io/tags/%E9%BB%98%E8%AE%A4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>谷歌的镜像站</title>
-    <link href="https://weilining.github.io/220.html"/>
-    <id>https://weilining.github.io/220.html</id>
-    <published>2020-12-20T13:26:42.000Z</published>
-    <updated>2020-12-20T13:26:42.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="欢迎访问 google 镜像"><a href="# 欢迎访问 google 镜像" class="headerlink" title="欢迎访问 google 镜像"></a> 欢迎访问 google 镜像 </h2><a id="more"></a><p> google.iapk.cc</p>]]></content>
-    
-    
-    <summary type="html">默认</summary>
-    
-    
-    
-    <category term="默认" scheme="https://weilining.github.io/categories/%E9%BB%98%E8%AE%A4/"/>
-    
-    
-    <category term="默认" scheme="https://weilining.github.io/tags/%E9%BB%98%E8%AE%A4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Google Fonts 的好朋友 dogedoge</title>
-    <link href="https://weilining.github.io/219.html"/>
-    <id>https://weilining.github.io/219.html</id>
-    <published>2020-12-20T13:11:50.000Z</published>
-    <updated>2020-12-20T13:11:50.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="谷歌 404"><a href="# 谷歌 404" class="headerlink" title="谷歌 404"></a> 谷歌 404</h2><p><span class="exturl" data-url="aHR0cHM6Ly9mb250cy5nb29nbGVhcGlzLmNvbS8=">https://fonts.googleapis.com<i class="fa fa-external-link-alt"></i></span></p><a id="more"></a><h2 id="谷歌字体镜像站多吉"><a href="# 谷歌字体镜像站多吉" class="headerlink" title="谷歌字体镜像站多吉"></a> 谷歌字体镜像站多吉 </h2><p><span class="exturl" data-url="aHR0cHM6Ly9mb250cy5kb2dlZG9nZS5jb20v">https://fonts.dogedoge.com<i class="fa fa-external-link-alt"></i></span></p>]]></content>
     
     
     <summary type="html">默认</summary>
