@@ -333,7 +333,7 @@
 
 <h3 id="操作"><a href="# 操作" class="headerlink" title="操作"></a>操作 </h3><h4 id="一、安装软件"><a href="# 一、安装软件" class="headerlink" title="一、安装软件"></a> 一、安装软件</h4><p>==&gt;<span class="exturl" data-url="aHR0cHM6Ly9ub2RlanMub3JnL2VuLw==">Node.js<i class="fa fa-external-link-alt"></i></span></p>
 <p>==&gt;<span class="exturl" data-url="aHR0cHM6Ly9naXQtc2NtLmNvbS9kb3dubG9hZHM=">Git<i class="fa fa-external-link-alt"></i></span></p>
-<h4 id="二、在 -Github- 官网添加新密钥"><a href="# 二、在 -Github- 官网添加新密钥" class="headerlink" title="二、在 Github 官网添加新密钥"></a>二、在 Github 官网添加新密钥 </h4><p> 在 Git 中输入：ssh-keygen -t rsa -C “<span class="exturl" data-url="bWFpbHRvOiYjMTIxOyYjeDZmOyYjeDc1OyYjMTE0OyYjMTAxOyYjeDZkOyYjeDYxOyYjeDY5OyYjMTA4OyYjeDQwOyYjeDY1OyYjeDc4OyYjeDYxOyYjeDZkOyYjeDcwOyYjMTA4OyYjeDY1OyYjeDJlOyYjOTk7JiN4NmY7JiMxMDk7">youremail@example.com<i class="fa fa-external-link-alt"></i></span>”</p>
+<h4 id="二、在 -Github- 官网添加新密钥"><a href="# 二、在 -Github- 官网添加新密钥" class="headerlink" title="二、在 Github 官网添加新密钥"></a>二、在 Github 官网添加新密钥 </h4><p> 在 Git 中输入：ssh-keygen -t rsa -C “<span class="exturl" data-url="bWFpbHRvOiYjMTIxOyYjeDZmOyYjMTE3OyYjMTE0OyYjMTAxOyYjeDZkOyYjOTc7JiMxMDU7JiN4NmM7JiM2NDsmI3g2NTsmI3g3ODsmI3g2MTsmI3g2ZDsmI3g3MDsmI3g2YzsmIzEwMTsmI3gyZTsmI3g2MzsmIzExMTsmIzEwOTs=">youremail@example.com<i class="fa fa-external-link-alt"></i></span>”</p>
 <p>打开 C:\Users\Administrator.ssh 中的 id_rsa.pub</p>
 <p>复制密钥，在<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3NldHRpbmdzL2tleXMlRTQlQjglQUQlRTYlOTYlQjAlRTUlQkIlQkFTU0g=">https://github.com/settings/keys 中新建 SSH<i class="fa fa-external-link-alt"></i></span> key</p>
 <h4 id="三、源文件拷贝"><a href="# 三、源文件拷贝" class="headerlink" title="三、源文件拷贝"></a>三、源文件拷贝 </h4><p> 将原来电脑上博客目录下必要文件拷到你的新电脑文件夹中，必须拷贝一下几个目录：</p>
@@ -463,7 +463,7 @@
 <div><canvas id="snow" style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:99999;pointer-events:none"></canvas></div>
 
 
-
+<script id="click-show-text" src="/js/click-show-text.js" data-mobile="false" data-text="富强,民主,文明,和谐,自由,平等,公正,法治,爱国,敬业,诚信,友善" data-fontsize="20px" data-random="false" async=""></script>
 
     </div>
   </footer>
@@ -488,13 +488,7 @@
 
 
   <script src="//cdn.jsdelivr.net/npm/quicklink@2.0.0/dist/quicklink.umd.js"></script>
-  
-
-
-
-
-
-<script src="/bundle.js"></script><script>
+  <script>
       window.addEventListener('load', () => {
       quicklink.listen({
         timeout : 3000,
@@ -502,8 +496,9 @@
         ignores : [uri => uri.includes('#'),uri => uri === 'https://weilining.github.io/%E6%8D%A2%E4%BA%86%E7%8E%AF%E5%A2%83%E5%A6%82%E4%BD%95%E7%BB%A7%E7%BB%AD%E4%BD%BF%E7%94%A8HEXO%E5%86%99%E5%8D%9A%E5%AE%A2.html',]
       });
       });
-  ;
+  </script>
 
+<script>
 NexT.utils.loadComments('#lv-container', () => {
   window.livereOptions = {
     refer: "换了环境如何继续使用HEXO写博客.html"
@@ -517,4 +512,8 @@ NexT.utils.loadComments('#lv-container', () => {
     e.parentNode.insertBefore(j, e);
   })(document, 'script');
 });
-</script></body></html>
+</script>
+
+
+
+</body></html>

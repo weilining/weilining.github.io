@@ -445,7 +445,7 @@
 <div><canvas id="snow" style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:99999;pointer-events:none"></canvas></div>
 
 
-
+<script id="click-show-text" src="/js/click-show-text.js" data-mobile="false" data-text="富强,民主,文明,和谐,自由,平等,公正,法治,爱国,敬业,诚信,友善" data-fontsize="20px" data-random="false" async=""></script>
 
     </div>
   </footer>
@@ -470,13 +470,7 @@
 
 
   <script src="//cdn.jsdelivr.net/npm/quicklink@2.0.0/dist/quicklink.umd.js"></script>
-  
-
-
-
-
-
-<script src="/bundle.js"></script><script>
+  <script>
       window.addEventListener('load', () => {
       quicklink.listen({
         timeout : 3000,
@@ -484,8 +478,9 @@
         ignores : [uri => uri.includes('#'),uri => uri === 'https://weilining.github.io/%E6%9F%A5%E7%9C%8BHexo%E7%9A%84%E6%89%80%E6%9C%89npm%E7%89%88%E6%9C%AC.html',]
       });
       });
-  ;
+  </script>
 
+<script>
 NexT.utils.loadComments('#lv-container', () => {
   window.livereOptions = {
     refer: "查看Hexo的所有npm版本.html"
@@ -499,4 +494,8 @@ NexT.utils.loadComments('#lv-container', () => {
     e.parentNode.insertBefore(j, e);
   })(document, 'script');
 });
-</script></body></html>
+</script>
+
+
+
+</body></html>

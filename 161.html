@@ -356,7 +356,7 @@
 <h4 id="5- 用户会收到邮件如下画面，点击设置密码即可。"><a href="#5- 用户会收到邮件如下画面，点击设置密码即可。" class="headerlink" title="5. 用户会收到邮件如下画面，点击设置密码即可。"></a>5. 用户会收到邮件如下画面，点击设置密码即可。</h4><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://images2018.cnblogs.com/blog/1416119/201806/1416119-20180624221206488-932889468.png"><img data-src="/161/1416119-20180624221206729-1171562142.png" alt="image" loading="lazy"></a></p>
 <p>排错小技巧：在设置邮件服务器比如设置如下：</p>
 <blockquote>
-<p>gitlab_rails['gitlab_email_from'] = 'gitlab@aishangwei.net'<br>gitlab_rails['gitlab_email_reply_to'] = 'gitlab@aishangwei.net'<br>gitlab_rails['smtp_enable'] = true<br>gitlab_rails['smtp_address'] = "smtp.mxhichina.com"<br>gitlab_rails['smtp_port'] = 25<br>gitlab_rails['smtp_user_name'] = "<span class="exturl" data-url="bWFpbHRvOiYjeDY3OyYjMTA1OyYjeDc0OyYjeDZjOyYjeDYxOyYjOTg7JiM2NDsmI3g2MTsmIzEwNTsmIzExNTsmIzEwNDsmI3g2MTsmI3g2ZTsmI3g2NzsmIzExOTsmI3g2NTsmI3g2OTsmIzQ2OyYjMTEwOyYjeDY1OyYjeDc0Ow==">gitlab@aishangwei.net<i class="fa fa-external-link-alt"></i></span>"<br>gitlab_rails['smtp_password'] = "W-123456"<br>gitlab_rails['smtp_domain'] = "mxhichina.com"<br>gitlab_rails['smtp_authentication'] = "login"</p>
+<p>gitlab_rails['gitlab_email_from'] = 'gitlab@aishangwei.net'<br>gitlab_rails['gitlab_email_reply_to'] = 'gitlab@aishangwei.net'<br>gitlab_rails['smtp_enable'] = true<br>gitlab_rails['smtp_address'] = "smtp.mxhichina.com"<br>gitlab_rails['smtp_port'] = 25<br>gitlab_rails['smtp_user_name'] = "<span class="exturl" data-url="bWFpbHRvOiYjMTAzOyYjeDY5OyYjMTE2OyYjMTA4OyYjeDYxOyYjOTg7JiM2NDsmI3g2MTsmIzEwNTsmI3g3MzsmIzEwNDsmIzk3OyYjMTEwOyYjMTAzOyYjeDc3OyYjMTAxOyYjMTA1OyYjeDJlOyYjeDZlOyYjMTAxOyYjMTE2Ow==">gitlab@aishangwei.net<i class="fa fa-external-link-alt"></i></span>"<br>gitlab_rails['smtp_password'] = "W-123456"<br>gitlab_rails['smtp_domain'] = "mxhichina.com"<br>gitlab_rails['smtp_authentication'] = "login"</p>
 </blockquote>
 <p>设置 完成后运行以下命令测试:</p>
 <blockquote>
@@ -649,7 +649,7 @@
 <div><canvas id="snow" style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:99999;pointer-events:none"></canvas></div>
 
 
-
+<script id="click-show-text" src="/js/click-show-text.js" data-mobile="false" data-text="富强,民主,文明,和谐,自由,平等,公正,法治,爱国,敬业,诚信,友善" data-fontsize="20px" data-random="false" async=""></script>
 
     </div>
   </footer>
@@ -674,13 +674,7 @@
 
 
   <script src="//cdn.jsdelivr.net/npm/quicklink@2.0.0/dist/quicklink.umd.js"></script>
-  
-
-
-
-
-
-<script src="/bundle.js"></script><script>
+  <script>
       window.addEventListener('load', () => {
       quicklink.listen({
         timeout : 3000,
@@ -688,8 +682,9 @@
         ignores : [uri => uri.includes('#'),uri => uri === 'https://weilining.github.io/161.html',]
       });
       });
-  ;
+  </script>
 
+<script>
 NexT.utils.loadComments('#lv-container', () => {
   window.livereOptions = {
     refer: "161.html"
@@ -703,4 +698,8 @@ NexT.utils.loadComments('#lv-container', () => {
     e.parentNode.insertBefore(j, e);
   })(document, 'script');
 });
-</script></body></html>
+</script>
+
+
+
+</body></html>

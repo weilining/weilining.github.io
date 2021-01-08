@@ -444,7 +444,7 @@
 <div><canvas id="snow" style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:99999;pointer-events:none"></canvas></div>
 
 
-
+<script id="click-show-text" src="/js/click-show-text.js" data-mobile="false" data-text="富强,民主,文明,和谐,自由,平等,公正,法治,爱国,敬业,诚信,友善" data-fontsize="20px" data-random="false" async=""></script>
 
     </div>
   </footer>
@@ -469,13 +469,7 @@
 
 
   <script src="//cdn.jsdelivr.net/npm/quicklink@2.0.0/dist/quicklink.umd.js"></script>
-  
-
-
-
-
-
-<script src="/bundle.js"></script><script>
+  <script>
       window.addEventListener('load', () => {
       quicklink.listen({
         timeout : 3000,
@@ -483,8 +477,9 @@
         ignores : [uri => uri.includes('#'),uri => uri === 'https://weilining.github.io/git-reset.html',]
       });
       });
-  ;
+  </script>
 
+<script>
 NexT.utils.loadComments('#lv-container', () => {
   window.livereOptions = {
     refer: "git-reset.html"
@@ -498,4 +493,8 @@ NexT.utils.loadComments('#lv-container', () => {
     e.parentNode.insertBefore(j, e);
   })(document, 'script');
 });
-</script></body></html>
+</script>
+
+
+
+</body></html>
