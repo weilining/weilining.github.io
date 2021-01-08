@@ -1,4 +1,6 @@
-<!DOCTYPE html><html lang="zh-CN"><head>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
@@ -14,12 +16,12 @@
   <meta name="yandex-verification" content="06c62a93328de5da">
   <meta name="baidu-site-verification" content="code-wFDrn4lvkD">
 
+<link rel="stylesheet" href="/css/main.css">
 
+<link rel="stylesheet" href="https://fonts.dogedoge.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
-
-
-
-  
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
@@ -29,7 +31,7 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="域名递归解析过程被污染 解决方案">
 <meta property="og:url" content="https://weilining.github.io/195.html">
-<meta property="og:site_name" content="Ln's Blog">
+<meta property="og:site_name" content="Ln&#39;s Blog">
 <meta property="og:description" content="默认">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://weilining.github.io/195/image-20201211032110825.png">
@@ -98,13 +100,13 @@
 </noscript>
 
 <link rel="alternate" href="/atom.xml" title="Ln's Blog" type="application/atom+xml">
-<script>function loadCss(l){var d=document,h=d.head,s=d.createElement('link');s.rel='stylesheet';s.href=l;!function e(f){if (d.body)return f();setTimeout(function(){e(f)})}(function(){h.appendChild(s);});}loadCss('/style.css');loadCss('https://fonts.dogedoge.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext');loadCss('//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css');loadCss('//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css');</script><noscript><link rel="stylesheet" href="/style.css"><link rel="stylesheet" href="https://fonts.dogedoge.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&amp;display=swap&amp;subset=latin,latin-ext"><link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css"><link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css"></noscript></head>
+</head>
 
-<body itemscope="" itemtype="http://schema.org/WebPage" class="use-motion">
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
   <div class="headband"></div>
 
   <main class="main">
-    <header class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
     <div class="toggle" aria-label="切换导航栏" role="button">
@@ -155,7 +157,9 @@
     <i class="fa fa-search"></i>
   </span>
   <div class="search-input-container">
-    <input autocomplete="off" autocapitalize="off" maxlength="80" placeholder="搜索..." spellcheck="false" type="search" class="search-input">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
   </div>
   <span class="popup-btn-close" role="button">
     <i class="fa fa-times-circle"></i>
@@ -194,13 +198,14 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%93%E8%AE%BA"><span class="nav-number">1.</span> <span class="nav-text">结论 </span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E8%88%AC%E5%BB%BA%E8%AE%AE%E7%94%A8%E6%88%B7%E6%9B%B4%E6%8D%A2%E4%B8%9A%E5%8A%A1%E5%9F%9F%E5%90%8D%E3%80%82"><span class="nav-number">2.</span> <span class="nav-text">一般建议用户更换业务域名。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8D%A2%E5%9B%BD%E5%A4%96%20NS%EF%BC%8C%E6%8A%9B%E5%BC%83%E5%9B%BD%E5%86%85%E7%94%A8%E6%88%B7%EF%BC%8C%E9%9D%A2%E5%90%91%E5%9B%BD%E5%A4%96"><span class="nav-number">3.</span> <span class="nav-text">换国外 NS，抛弃国内用户，面向国外</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DNS-%20%E5%9C%A8%E7%BA%BF%E8%87%AA%E6%A3%80"><span class="nav-number">4.</span> <span class="nav-text">DNS 在线自检</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%AC%E5%9C%B0%E8%87%AA%E6%A3%80"><span class="nav-number">5.</span> <span class="nav-text">本地自检</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%93%E8%AE%BA"><span class="nav-number">1.</span> <span class="nav-text">结论</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E8%88%AC%E5%BB%BA%E8%AE%AE%E7%94%A8%E6%88%B7%E6%9B%B4%E6%8D%A2%E4%B8%9A%E5%8A%A1%E5%9F%9F%E5%90%8D%E3%80%82"><span class="nav-number">2.</span> <span class="nav-text">一般建议用户更换业务域名。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8D%A2%E5%9B%BD%E5%A4%96NS%EF%BC%8C%E6%8A%9B%E5%BC%83%E5%9B%BD%E5%86%85%E7%94%A8%E6%88%B7%EF%BC%8C%E9%9D%A2%E5%90%91%E5%9B%BD%E5%A4%96"><span class="nav-number">3.</span> <span class="nav-text">换国外NS，抛弃国内用户，面向国外</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DNS-%E5%9C%A8%E7%BA%BF%E8%87%AA%E6%A3%80"><span class="nav-number">4.</span> <span class="nav-text">DNS 在线自检</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%AC%E5%9C%B0%E8%87%AA%E6%A3%80"><span class="nav-number">5.</span> <span class="nav-text">本地自检</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
         <div class="site-overview-wrap sidebar-panel">
-          <div class="site-author site-overview-item animated" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="Lining Wei" src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/icon.gif">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Lining Wei"
+      src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/icon.gif">
   <p class="site-author-name" itemprop="name">Lining Wei</p>
   <div class="site-description" itemprop="description">算法、技术</div>
 </div>
@@ -209,7 +214,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">240</span>
+          <span class="site-state-item-count">241</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -260,16 +265,16 @@
   
   
 
-  <article itemscope="" itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://weilining.github.io/195.html">
 
-    <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/weilining/img@main/img/icon.gif">
       <meta itemprop="name" content="Lining Wei">
       <meta itemprop="description" content="算法、技术">
     </span>
 
-    <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Ln's Blog">
     </span>
       <header class="post-header">
@@ -292,7 +297,7 @@
         <i class="far fa-folder"></i>
       </span>
       <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
           <a href="/categories/%E9%BB%98%E8%AE%A4/" itemprop="url" rel="index"><span itemprop="name">默认</span></a>
         </span>
     </span>
@@ -311,7 +316,7 @@
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
-      <span class="post-meta-item-text">阅读时长 ≈</span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
       <span>1 分钟</span>
     </span>
 </div>
@@ -324,18 +329,18 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h2 id="结论"><a href="# 结论" class="headerlink" title="结论"></a>结论 </h2><p> 国内 DNS 污染，国内用户没法正确解析，一般是域名正常解析过程中受到上级网络设施强行阻断，这已超出权威 DNS 服务能力</p>
-<h2 id="一般建议用户更换业务域名。"><a href="# 一般建议用户更换业务域名。" class="headerlink" title="一般建议用户更换业务域名。"></a>一般建议用户更换业务域名。</h2><h2 id="换国外 NS，抛弃国内用户，面向国外"><a href="# 换国外 NS，抛弃国内用户，面向国外" class="headerlink" title="换国外 NS，抛弃国内用户，面向国外"></a>换国外 NS，抛弃国内用户，面向国外</h2><p><span class="exturl" data-url="aHR0cHM6Ly9kbnMuZ29vZ2xlL3F1ZXJ5P25hbWU9eGpmLmluayZhbXA7cnJfdHlwZT1BJmFtcDtlY3M9">https://dns.google/query?name=xjf.ink&amp;rr_type=A&amp;ecs=<i class="fa fa-external-link-alt"></i></span></p>
+        <h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><p>国内DNS污染，国内用户没法正确解析，一般是域名正常解析过程中受到上级网络设施强行阻断，这已超出权威DNS服务能力</p>
+<h2 id="一般建议用户更换业务域名。"><a href="#一般建议用户更换业务域名。" class="headerlink" title="一般建议用户更换业务域名。"></a>一般建议用户更换业务域名。</h2><h2 id="换国外NS，抛弃国内用户，面向国外"><a href="#换国外NS，抛弃国内用户，面向国外" class="headerlink" title="换国外NS，抛弃国内用户，面向国外"></a>换国外NS，抛弃国内用户，面向国外</h2><p><span class="exturl" data-url="aHR0cHM6Ly9kbnMuZ29vZ2xlL3F1ZXJ5P25hbWU9eGpmLmluayZhbXA7cnJfdHlwZT1BJmFtcDtlY3M9">https://dns.google/query?name=xjf.ink&amp;rr_type=A&amp;ecs=<i class="fa fa-external-link-alt"></i></span></p>
 <p>国外正常解析</p>
 <p><img data-src="/195/image-20201211032110825.png" alt="image-20201211032110825" loading="lazy"></p>
 <a id="more"></a>
 
-<h2 id="DNS- 在线自检"><a href="#DNS- 在线自检" class="headerlink" title="DNS 在线自检"></a>DNS 在线自检</h2><p><span class="exturl" data-url="aHR0cHM6Ly96aWppYW4uYWxpeXVuLmNvbS8=">https://zijian.aliyun.com/<i class="fa fa-external-link-alt"></i></span></p>
+<h2 id="DNS-在线自检"><a href="#DNS-在线自检" class="headerlink" title="DNS 在线自检"></a>DNS 在线自检</h2><p><span class="exturl" data-url="aHR0cHM6Ly96aWppYW4uYWxpeXVuLmNvbS8=">https://zijian.aliyun.com/<i class="fa fa-external-link-alt"></i></span></p>
 <p><span class="exturl" data-url="aHR0cHM6Ly9kb21haW50b29sLmNsb3VkLnRlbmNlbnQuY29tLw==">https://domaintool.cloud.tencent.com/<i class="fa fa-external-link-alt"></i></span></p>
 <p><img data-src="/195/image-20201211031437593.png" alt="image-20201211031437593" loading="lazy"></p>
 <p><img data-src="/195/image-20201211031658864.png" alt="image-20201211031658864" loading="lazy"></p>
-<h2 id="本地自检"><a href="# 本地自检" class="headerlink" title="本地自检"></a>本地自检</h2><figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">dig xjf.ink +trace</span><br></pre></td></tr></tbody></table></figure>
-<p>您也可以通过命令 dig+trace 测试，本地 DNS 向根 DNS 服务器查询时，直接返回了 IP 地址，则一般可判断为在 DNS 查询在根 DNS 服务器处就被阻断。</p>
+<h2 id="本地自检"><a href="#本地自检" class="headerlink" title="本地自检"></a>本地自检</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">dig xjf.ink +trace</span><br></pre></td></tr></table></figure>
+<p>您也可以通过命令dig+trace测试，本地DNS向根DNS服务器查询时，直接返回了IP地址，则一般可判断为在DNS查询在根DNS服务器处就被阻断。</p>
 <p><img data-src="/195/image-20201211031807320.png" alt="image-20201211031807320" loading="lazy"></p>
 
     </div>
@@ -425,7 +430,7 @@
 
 
 <div class="copyright">
-  © 2015 – 
+  &copy; 2015 – 
   <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
@@ -437,7 +442,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">349k</span>
+    <span title="站点总字数">350k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
@@ -450,7 +455,7 @@
 <div><canvas id="snow" style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:99999;pointer-events:none"></canvas></div>
 
 
-<script id="click-show-text" src="/js/click-show-text.js" data-mobile="false" data-text="富强,民主,文明,和谐,自由,平等,公正,法治,爱国,敬业,诚信,友善" data-fontsize="20px" data-random="false" async=""></script>
+<script id="click-show-text" src="/js/click-show-text.js" data-mobile="false" data-text="富强,民主,文明,和谐,自由,平等,公正,法治,爱国,敬业,诚信,友善" data-fontsize="20px" data-random="false" async></script>
 
     </div>
   </footer>
@@ -501,6 +506,5 @@ NexT.utils.loadComments('#lv-container', () => {
 });
 </script>
 
-
-
-</body></html>
+</body>
+</html>

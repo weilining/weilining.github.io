@@ -1,4 +1,6 @@
-<!DOCTYPE html><html lang="zh-CN"><head>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
@@ -14,12 +16,12 @@
   <meta name="yandex-verification" content="06c62a93328de5da">
   <meta name="baidu-site-verification" content="code-wFDrn4lvkD">
 
+<link rel="stylesheet" href="/css/main.css">
 
+<link rel="stylesheet" href="https://fonts.dogedoge.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
-
-
-
-  
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
@@ -29,7 +31,7 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo 个人博客部署到 CentOS 个人服务器">
 <meta property="og:url" content="https://weilining.github.io/133.html">
-<meta property="og:site_name" content="Ln's Blog">
+<meta property="og:site_name" content="Ln&#39;s Blog">
 <meta property="og:description" content="默认">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-11-20T19:24:12.000Z">
@@ -93,13 +95,13 @@
 </noscript>
 
 <link rel="alternate" href="/atom.xml" title="Ln's Blog" type="application/atom+xml">
-<script>function loadCss(l){var d=document,h=d.head,s=d.createElement('link');s.rel='stylesheet';s.href=l;!function e(f){if (d.body)return f();setTimeout(function(){e(f)})}(function(){h.appendChild(s);});}loadCss('/style.css');loadCss('https://fonts.dogedoge.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext');loadCss('//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css');loadCss('//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css');</script><noscript><link rel="stylesheet" href="/style.css"><link rel="stylesheet" href="https://fonts.dogedoge.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&amp;display=swap&amp;subset=latin,latin-ext"><link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css"><link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css"></noscript></head>
+</head>
 
-<body itemscope="" itemtype="http://schema.org/WebPage" class="use-motion">
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
   <div class="headband"></div>
 
   <main class="main">
-    <header class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
     <div class="toggle" aria-label="切换导航栏" role="button">
@@ -150,7 +152,9 @@
     <i class="fa fa-search"></i>
   </span>
   <div class="search-input-container">
-    <input autocomplete="off" autocapitalize="off" maxlength="80" placeholder="搜索..." spellcheck="false" type="search" class="search-input">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
   </div>
   <span class="popup-btn-close" role="button">
     <i class="fa fa-times-circle"></i>
@@ -189,13 +193,14 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%AE%E6%A0%87"><span class="nav-number">1.</span> <span class="nav-text">目标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C"><span class="nav-number">2.</span> <span class="nav-text">准备工作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE"><span class="nav-number">3.</span> <span class="nav-text">服务器配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%AC%E5%9C%B0%E9%85%8D%E7%BD%AE"><span class="nav-number">4.</span> <span class="nav-text">本地配置 </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%83%A8%E7%BD%B2%E6%AD%A5%E9%AA%A4"><span class="nav-number">5.</span> <span class="nav-text">部署步骤</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%93%E6%9D%9F%E8%AF%AD"><span class="nav-number">6.</span> <span class="nav-text">结束语 </span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%AE%E6%A0%87"><span class="nav-number">1.</span> <span class="nav-text">目标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C"><span class="nav-number">2.</span> <span class="nav-text">准备工作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE"><span class="nav-number">3.</span> <span class="nav-text">服务器配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%AC%E5%9C%B0%E9%85%8D%E7%BD%AE"><span class="nav-number">4.</span> <span class="nav-text">本地配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%83%A8%E7%BD%B2%E6%AD%A5%E9%AA%A4"><span class="nav-number">5.</span> <span class="nav-text">部署步骤</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%93%E6%9D%9F%E8%AF%AD"><span class="nav-number">6.</span> <span class="nav-text">结束语</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
         <div class="site-overview-wrap sidebar-panel">
-          <div class="site-author site-overview-item animated" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="Lining Wei" src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/icon.gif">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Lining Wei"
+      src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/icon.gif">
   <p class="site-author-name" itemprop="name">Lining Wei</p>
   <div class="site-description" itemprop="description">算法、技术</div>
 </div>
@@ -204,7 +209,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">240</span>
+          <span class="site-state-item-count">241</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -255,16 +260,16 @@
   
   
 
-  <article itemscope="" itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://weilining.github.io/133.html">
 
-    <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/weilining/img@main/img/icon.gif">
       <meta itemprop="name" content="Lining Wei">
       <meta itemprop="description" content="算法、技术">
     </span>
 
-    <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Ln's Blog">
     </span>
       <header class="post-header">
@@ -287,7 +292,7 @@
         <i class="far fa-folder"></i>
       </span>
       <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
           <a href="/categories/%E9%BB%98%E8%AE%A4/" itemprop="url" rel="index"><span itemprop="name">默认</span></a>
         </span>
     </span>
@@ -306,7 +311,7 @@
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
-      <span class="post-meta-item-text">阅读时长 ≈</span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
       <span>3 分钟</span>
     </span>
 </div>
@@ -322,21 +327,21 @@
         <p><span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL3poLWNuLw==">Hexo<i class="fa fa-external-link-alt"></i></span> 一个快速，简单和强大的博客框架，基于 Node.js。</p>
 <a id="more"></a>
 
-<h3 id="目标"><a href="# 目标" class="headerlink" title="目标"></a>目标</h3><ul>
+<h3 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h3><ul>
 <li>在一台 CentOS 7.2 的 ECS 云服务器上快速部署基于 Hexo 的博客站点</li>
 <li>可以在本地简洁快速发布一篇博文到个人云服务器上, 用于个人站点展示</li>
 </ul>
-<h3 id="准备工作"><a href="# 准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><ul>
-<li>你能操作的个人电脑 PC * 1 台</li>
-<li>自己能控制的服务器 Sever * 1 台</li>
+<h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><ul>
+<li>你能操作的个人电脑PC * 1台</li>
+<li>自己能控制的服务器Sever * 1台</li>
 </ul>
-<h3 id="服务器配置"><a href="# 服务器配置" class="headerlink" title="服务器配置"></a>服务器配置</h3><blockquote>
+<h3 id="服务器配置"><a href="#服务器配置" class="headerlink" title="服务器配置"></a>服务器配置</h3><blockquote>
 <p>默认 ROOT 权限登录</p>
 </blockquote>
 <ul>
 <li><p><strong>安装 Git Nginx</strong><br>升级 CentOS 所有包，包括系统版本内核升级</p>
-<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">yum -y update</span><br><span class="line">yum install -y git nginx</span><br></pre></td></tr></tbody></table></figure></li>
-<li><p><strong>Nginx 配置 </strong><br> 创建文件目录, 用于博客站点文件存放, 并更改目录读写权限</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">yum -y update</span><br><span class="line">yum install -y git nginx</span><br></pre></td></tr></table></figure></li>
+<li><p><strong>Nginx 配置</strong><br>创建文件目录, 用于博客站点文件存放, 并更改目录读写权限</p>
 </li>
 </ul>
 <ol>
@@ -345,20 +350,20 @@
 <li>-R 755 /data/www/hexo</li>
 </ol>
 <p>添加 index.html 用于检测配置 Nginx 是否成功</p>
-<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">vim /data/www/hexo/index.html</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">vim &#x2F;data&#x2F;www&#x2F;hexo&#x2F;index.html</span><br></pre></td></tr></table></figure>
 <p>添加如下代码:</p>
-<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">  &lt;head&gt;</span><br><span class="line">    &lt;title&gt;&lt;/title&gt;</span><br><span class="line">    &lt;meta charset="UTF-8"&gt;</span><br><span class="line">  &lt;/head&gt;</span><br><span class="line">  &lt;body&gt;</span><br><span class="line">    &lt;p&gt;Nginx running&lt;/p&gt;</span><br><span class="line">  &lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">  &lt;head&gt;</span><br><span class="line">    &lt;title&gt;&lt;&#x2F;title&gt;</span><br><span class="line">    &lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;</span><br><span class="line">  &lt;&#x2F;head&gt;</span><br><span class="line">  &lt;body&gt;</span><br><span class="line">    &lt;p&gt;Nginx running&lt;&#x2F;p&gt;</span><br><span class="line">  &lt;&#x2F;body&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
 <p>配置 Nginx 服务器</p>
-<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">vim /etc/nginx/nginx.conf</span><br><span class="line"></span><br><span class="line"># vim 查找: /listen 80</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">vim &#x2F;etc&#x2F;nginx&#x2F;nginx.conf</span><br><span class="line"></span><br><span class="line"># vim 查找: &#x2F;listen 80</span><br></pre></td></tr></table></figure>
 <p>通过 vim 查找功能找到如下代码, 并修改</p>
-<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">......</span><br><span class="line">server {</span><br><span class="line">      listen       80 default_server;</span><br><span class="line">      listen       [::]:80 default_server;</span><br><span class="line">      server_name  www.xxx.com; # 填写个人域名</span><br><span class="line">      root         /data/www/hexo;</span><br><span class="line">  }</span><br><span class="line">......</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">......</span><br><span class="line">server &#123;</span><br><span class="line">      listen       80 default_server;</span><br><span class="line">      listen       [::]:80 default_server;</span><br><span class="line">      server_name  www.xxx.com; # 填写个人域名</span><br><span class="line">      root         &#x2F;data&#x2F;www&#x2F;hexo;</span><br><span class="line">  &#125;</span><br><span class="line">......</span><br></pre></td></tr></table></figure>
 <p>访问服务器 IP 或者域名显示</p>
 <blockquote>
 <p>Nginx running</p>
 </blockquote>
 <p>Nginx 配置成功</p>
 <ul>
-<li><strong>Git 配置 </strong><br> 创建文件目录, 用于私人 Git 仓库搭建, 并更改目录读写权限</li>
+<li><strong>Git 配置</strong><br>创建文件目录, 用于私人 Git 仓库搭建, 并更改目录读写权限</li>
 </ul>
 <ol>
 <li>-p /data/GitLibrary</li>
@@ -366,56 +371,56 @@
 <li>-R 755 /data/GitLibrary</li>
 </ol>
 <p>Git 初始化裸库</p>
-<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">cd /data/GitLibrary</span><br><span class="line">git init --bare hexo.git</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd &#x2F;data&#x2F;GitLibrary</span><br><span class="line">git init --bare hexo.git</span><br></pre></td></tr></table></figure>
 <p>创建 Git 钩子(hook)</p>
-<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">vim /data/GitLibrary/hexo.git/hooks/post-receive</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">vim &#x2F;data&#x2F;GitLibrary&#x2F;hexo.git&#x2F;hooks&#x2F;post-receive</span><br></pre></td></tr></table></figure>
 <p>用于指定 Git 的源代码 和 Git 配置文件</p>
-<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line">git --work-tree=/data/www/hexo --git-dir=/data/GitLibrary/hexo.git checkout -f</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#!&#x2F;bin&#x2F;bash</span><br><span class="line">git --work-tree&#x3D;&#x2F;data&#x2F;www&#x2F;hexo --git-dir&#x3D;&#x2F;data&#x2F;GitLibrary&#x2F;hexo.git checkout -f</span><br></pre></td></tr></table></figure>
 <p>保存并退出后, 给该文件添加可执行权限</p>
-<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">chmod +x /data/GitLibrary/hexo.git/hooks/post-receive</span><br></pre></td></tr></tbody></table></figure>
-<h3 id="本地配置"><a href="# 本地配置" class="headerlink" title="本地配置"></a>本地配置 </h3><p> 这篇文章在 MacOS 上安装 node.js Git Hexo 等</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">chmod +x &#x2F;data&#x2F;GitLibrary&#x2F;hexo.git&#x2F;hooks&#x2F;post-receive</span><br></pre></td></tr></table></figure>
+<h3 id="本地配置"><a href="#本地配置" class="headerlink" title="本地配置"></a>本地配置</h3><p>这篇文章在 MacOS 上安装 node.js Git Hexo等</p>
 <blockquote>
 <p>Windows &amp; Linux 可搜索对应平台软件安装</p>
 </blockquote>
 <ul>
 <li><p><strong>安装 Git</strong><br>在 Terminal.app(终端) 中输入:</p>
-<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">xcode-select --install</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">xcode-select --install</span><br></pre></td></tr></table></figure>
 <p>按照提示完成安装, 最后在 Terminal 中输入</p>
-<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">git -v</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git -v</span><br></pre></td></tr></table></figure>
 <p>如下显示, 表示 Git 安装成功</p>
-<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">git version 2.11.0 (Apple Git-81)</span><br></pre></td></tr></tbody></table></figure></li>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git version 2.11.0 (Apple Git-81)</span><br></pre></td></tr></table></figure></li>
 <li><p><strong>安装 Node.js 和 Npm</strong><br>Node.js 安装在 MacOS 中需要用到 Homebrew 进行安装管理</p>
 <blockquote>
 <p>Homebrew 在 MacOS 里类似于 CentOS 的 yum</p>
 </blockquote>
 <p>在 Terminal 输入:</p>
-<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;usr&#x2F;bin&#x2F;ruby -e &quot;$(curl -fsSL https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Homebrew&#x2F;install&#x2F;master&#x2F;install)&quot;</span><br></pre></td></tr></table></figure>
 <p>使用 Homebrew 安装 Node.js</p>
-<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">brew install node</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">brew install node</span><br></pre></td></tr></table></figure>
 <p>在 Terminal 中键入类似的命令, 如下显示, 表示 Node 和 Npm 安装成功</p>
-<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">node -v</span><br><span class="line">v7.10.0</span><br><span class="line">npm -v</span><br><span class="line">4.2.0</span><br></pre></td></tr></tbody></table></figure></li>
-<li><p><strong>安装 Hexo 及相关插件 </strong><br> 全局安装 hexo-cli 和 hexo-server</p>
-<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">npm install hexo-cli hexo-server hexo-deployer-git -g</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">node -v</span><br><span class="line">v7.10.0</span><br><span class="line">npm -v</span><br><span class="line">4.2.0</span><br></pre></td></tr></table></figure></li>
+<li><p><strong>安装 Hexo 及相关插件</strong><br>全局安装 hexo-cli 和 hexo-server</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-cli hexo-server hexo-deployer-git -g</span><br></pre></td></tr></table></figure>
 <p>安装完成后, 在本地初始化博客站点搭建</p>
-<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">hexo init ~/myBlog</span><br><span class="line"></span><br><span class="line"># ~/myBlog 即本地存放路径</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo init ~&#x2F;myBlog</span><br><span class="line"></span><br><span class="line"># ~&#x2F;myBlog 即本地存放路径</span><br></pre></td></tr></table></figure>
 <p>完成安装, 便可以在本地路径查看项目</p>
 </li>
-<li><p><strong>本地 Hexo 配置 </strong><br> 进人~/myBlog 目录, 修改 Hexo 博客站点配置文件 <em>_config.yml</em>, 如下修改:</p>
-<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">title: 页面标题     // 页面标题</span><br><span class="line">subtitle: 小标题     // 小标题</span><br><span class="line">description: 描述     // 描述</span><br><span class="line">author: 作者       // 作者</span><br><span class="line">language: zh-Hans     // 语言</span><br><span class="line">timezone:       // 时区</span><br><span class="line"></span><br><span class="line"># URL</span><br><span class="line">### If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'</span><br><span class="line">url: http://leyliu.com      // 个人域名</span><br><span class="line"></span><br><span class="line">......</span><br><span class="line"></span><br><span class="line"># Deployment</span><br><span class="line">### Docs: https://hexo.io/docs/deployment.html</span><br><span class="line">deploy:     // 发布对应的 github 账号</span><br><span class="line">type: git</span><br><span class="line">repo: root@leyliu.com:/data/GitLibrary/hexo  // 用户名 @域名或 IP 地址:/data/GitLibrary/hexo</span><br><span class="line">branch: master</span><br></pre></td></tr></tbody></table></figure>
-<h3 id="部署步骤"><a href="# 部署步骤" class="headerlink" title="部署步骤"></a>部署步骤</h3></li>
+<li><p><strong>本地 Hexo 配置</strong><br>进人~/myBlog 目录, 修改 Hexo 博客站点配置文件 <em>_config.yml</em>, 如下修改:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">title: 页面标题     &#x2F;&#x2F;页面标题</span><br><span class="line">subtitle: 小标题     &#x2F;&#x2F;小标题</span><br><span class="line">description: 描述     &#x2F;&#x2F;描述</span><br><span class="line">author: 作者       &#x2F;&#x2F;作者</span><br><span class="line">language: zh-Hans     &#x2F;&#x2F;语言</span><br><span class="line">timezone:       &#x2F;&#x2F;时区</span><br><span class="line"></span><br><span class="line"># URL</span><br><span class="line">### If your site is put in a subdirectory, set url as &#39;http:&#x2F;&#x2F;yoursite.com&#x2F;child&#39; and root as &#39;&#x2F;child&#x2F;&#39;</span><br><span class="line">url: http:&#x2F;&#x2F;leyliu.com      &#x2F;&#x2F;个人域名</span><br><span class="line"></span><br><span class="line">......</span><br><span class="line"></span><br><span class="line"># Deployment</span><br><span class="line">### Docs: https:&#x2F;&#x2F;hexo.io&#x2F;docs&#x2F;deployment.html</span><br><span class="line">deploy:     &#x2F;&#x2F;发布对应的github账号</span><br><span class="line">type: git</span><br><span class="line">repo: root@leyliu.com:&#x2F;data&#x2F;GitLibrary&#x2F;hexo  &#x2F;&#x2F;用户名@域名或 IP 地址:&#x2F;data&#x2F;GitLibrary&#x2F;hexo</span><br><span class="line">branch: master</span><br></pre></td></tr></table></figure>
+<h3 id="部署步骤"><a href="#部署步骤" class="headerlink" title="部署步骤"></a>部署步骤</h3></li>
 </ul>
 <p>将本地部署到服务器</p>
 <ul>
 <li><p>清除缓存</p>
-<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></tbody></table></figure></li>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure></li>
 <li><p>生成静态页面:</p>
-<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></tbody></table></figure></li>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure></li>
 <li><p>将本地静态页面目录部署到云服务器</p>
-<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
 <p>完成 Hexo 个人博客网站搭建, 通过服务器 IP 或者域名即可访问</p>
 </li>
 </ul>
-<h3 id="结束语"><a href="# 结束语" class="headerlink" title="结束语"></a>结束语 </h3><p> 以上就是我个人采用 Hexo+ 云服务器搭建个人博客的全部流程，较为完整地介绍了 Hexo 博客的安装及简单配置，服务端如何配置通过 Git 部署 Nginx 及 Linux 简单应用。<br>在云服务器上创建私有 Git 仓库, 通过 Git 钩子，将 Hexo 生成的博客静态页面文件，推送到 Nginx 服务的托管目录, 完成部署。</p>
+<h3 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h3><p>以上就是我个人采用Hexo+云服务器搭建个人博客的全部流程，较为完整地介绍了 Hexo 博客的安装及简单配置，服务端如何配置通过 Git 部署 Nginx 及 Linux 简单应用。<br>在云服务器上创建私有 Git 仓库, 通过 Git 钩子，将 Hexo 生成的博客静态页面文件，推送到 Nginx 服务的托管目录, 完成部署。</p>
 <p>如有疑问, 可留言或者搜索引擎解决</p>
 
     </div>
@@ -455,13 +460,13 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/132.html" rel="prev" title="将 Hexo 部署到阿里云轻量服务器（保姆级教程）">
-                  <i class="fa fa-chevron-left"></i> 将 Hexo 部署到阿里云轻量服务器（保姆级教程）
+                <a href="/132.html" rel="prev" title="将Hexo部署到阿里云轻量服务器（保姆级教程）">
+                  <i class="fa fa-chevron-left"></i> 将Hexo部署到阿里云轻量服务器（保姆级教程）
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/134.html" rel="next" title="segmentfault 不登陆复制方法">
-                  segmentfault 不登陆复制方法 <i class="fa fa-chevron-right"></i>
+                <a href="/134.html" rel="next" title="segmentfault不登陆复制方法">
+                  segmentfault不登陆复制方法 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
@@ -505,7 +510,7 @@
 
 
 <div class="copyright">
-  © 2015 – 
+  &copy; 2015 – 
   <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
@@ -517,7 +522,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">349k</span>
+    <span title="站点总字数">350k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
@@ -530,7 +535,7 @@
 <div><canvas id="snow" style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:99999;pointer-events:none"></canvas></div>
 
 
-<script id="click-show-text" src="/js/click-show-text.js" data-mobile="false" data-text="富强,民主,文明,和谐,自由,平等,公正,法治,爱国,敬业,诚信,友善" data-fontsize="20px" data-random="false" async=""></script>
+<script id="click-show-text" src="/js/click-show-text.js" data-mobile="false" data-text="富强,民主,文明,和谐,自由,平等,公正,法治,爱国,敬业,诚信,友善" data-fontsize="20px" data-random="false" async></script>
 
     </div>
   </footer>
@@ -581,6 +586,5 @@ NexT.utils.loadComments('#lv-container', () => {
 });
 </script>
 
-
-
-</body></html>
+</body>
+</html>

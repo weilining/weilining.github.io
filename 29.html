@@ -1,4 +1,6 @@
-<!DOCTYPE html><html lang="zh-CN"><head>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
@@ -14,12 +16,12 @@
   <meta name="yandex-verification" content="06c62a93328de5da">
   <meta name="baidu-site-verification" content="code-wFDrn4lvkD">
 
+<link rel="stylesheet" href="/css/main.css">
 
+<link rel="stylesheet" href="https://fonts.dogedoge.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
-
-
-
-  
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
@@ -29,7 +31,7 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="Cloudflare Workers 自定义域名">
 <meta property="og:url" content="https://weilining.github.io/29.html">
-<meta property="og:site_name" content="Ln's Blog">
+<meta property="og:site_name" content="Ln&#39;s Blog">
 <meta property="og:description" content="默认">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://weilining.github.io/29/2070146028.png">
@@ -98,13 +100,13 @@
 </noscript>
 
 <link rel="alternate" href="/atom.xml" title="Ln's Blog" type="application/atom+xml">
-<script>function loadCss(l){var d=document,h=d.head,s=d.createElement('link');s.rel='stylesheet';s.href=l;!function e(f){if (d.body)return f();setTimeout(function(){e(f)})}(function(){h.appendChild(s);});}loadCss('/style.css');loadCss('https://fonts.dogedoge.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext');loadCss('//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css');loadCss('//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css');</script><noscript><link rel="stylesheet" href="/style.css"><link rel="stylesheet" href="https://fonts.dogedoge.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&amp;display=swap&amp;subset=latin,latin-ext"><link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css"><link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css"></noscript></head>
+</head>
 
-<body itemscope="" itemtype="http://schema.org/WebPage" class="use-motion">
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
   <div class="headband"></div>
 
   <main class="main">
-    <header class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
     <div class="toggle" aria-label="切换导航栏" role="button">
@@ -155,7 +157,9 @@
     <i class="fa fa-search"></i>
   </span>
   <div class="search-input-container">
-    <input autocomplete="off" autocapitalize="off" maxlength="80" placeholder="搜索..." spellcheck="false" type="search" class="search-input">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
   </div>
   <span class="popup-btn-close" role="button">
     <i class="fa fa-times-circle"></i>
@@ -194,13 +198,14 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8E%9F%E5%88%99"><span class="nav-number">1.</span> <span class="nav-text">原则 </span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AD%A5%E9%AA%A4"><span class="nav-number">2.</span> <span class="nav-text">步骤 </span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D"><span class="nav-number">2.1.</span> <span class="nav-text">自定义域名 </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B3%E8%81%94%E5%9F%9F%E5%90%8D"><span class="nav-number">2.2.</span> <span class="nav-text">关联域名 </span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">3.</span> <span class="nav-text">总结 </span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8E%9F%E5%88%99"><span class="nav-number">1.</span> <span class="nav-text">原则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AD%A5%E9%AA%A4"><span class="nav-number">2.</span> <span class="nav-text">步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D"><span class="nav-number">2.1.</span> <span class="nav-text">自定义域名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B3%E8%81%94%E5%9F%9F%E5%90%8D"><span class="nav-number">2.2.</span> <span class="nav-text">关联域名</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">3.</span> <span class="nav-text">总结</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
         <div class="site-overview-wrap sidebar-panel">
-          <div class="site-author site-overview-item animated" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="Lining Wei" src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/icon.gif">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Lining Wei"
+      src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/icon.gif">
   <p class="site-author-name" itemprop="name">Lining Wei</p>
   <div class="site-description" itemprop="description">算法、技术</div>
 </div>
@@ -209,7 +214,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">240</span>
+          <span class="site-state-item-count">241</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -260,16 +265,16 @@
   
   
 
-  <article itemscope="" itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://weilining.github.io/29.html">
 
-    <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/weilining/img@main/img/icon.gif">
       <meta itemprop="name" content="Lining Wei">
       <meta itemprop="description" content="算法、技术">
     </span>
 
-    <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Ln's Blog">
     </span>
       <header class="post-header">
@@ -292,7 +297,7 @@
         <i class="far fa-folder"></i>
       </span>
       <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
           <a href="/categories/%E9%BB%98%E8%AE%A4/" itemprop="url" rel="index"><span itemprop="name">默认</span></a>
         </span>
     </span>
@@ -311,7 +316,7 @@
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
-      <span class="post-meta-item-text">阅读时长 ≈</span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
       <span>1 分钟</span>
     </span>
 </div>
@@ -328,20 +333,20 @@
 <a id="more"></a>
 
 <p>之前分享了《<span class="exturl" data-url="aHR0cHM6Ly92aXJjbG91ZC5uZXQvYnVpbGQvZHJpdmUtbGlzdC5odG1s">利用 CloudFlare Workers 等平台零成本运行 Google Drive、OneDrive 文件列表清单程序<i class="fa fa-external-link-alt"></i></span>》，通过这种方法创建的域名的比较长（<code>*.*.workers.dev</code>），不太适合分享，因此考虑使用自己的域名来访问。搜了一番，关于这一块基本上都是一笔带过，写得不清不楚，新手很难入手，故而这里做个记录供参考。</p>
-<h2 id="原则"><a href="# 原则" class="headerlink" title="原则"></a>原则 </h2><p> 只要 CloudFlare CDN 本身支持的域名，都可以作为 CloudFlare Workers 的域名，唯独需要注意的是，<strong>该域名需要托管于 CloudFlare</strong>上，即域名的 Name Service 必须是 CloudFlare。</p>
+<h2 id="原则"><a href="#原则" class="headerlink" title="原则"></a>原则</h2><p>只要 CloudFlare CDN 本身支持的域名，都可以作为 CloudFlare Workers 的域名，唯独需要注意的是，<strong>该域名需要托管于 CloudFlare</strong>上，即域名的 Name Service 必须是 CloudFlare。</p>
 <p>当你使用其他教程设置自定义域名，却无法生效的原因，就是自定义域名没有托管在 CloudFlare 上，博主在这里费了老大劲儿才发现。</p>
-<h2 id="步骤"><a href="# 步骤" class="headerlink" title="步骤"></a>步骤 </h2><p> 主要分两个步骤，一个是自定义域名添加到 CloudFlare 网络，另一个是将该域名指向 Worker 子域名进行关联。这两个步骤先后顺序没有严格要求。</p>
-<h3 id="自定义域名"><a href="# 自定义域名" class="headerlink" title="自定义域名"></a>自定义域名 </h3><p> 如前面所述，必须将域名（如 <code>vircloud.net</code>）托管于 CloudFlare 才行，在其他 DNS 注册商通过 CNAME 接入是不行的，会出现各种奇形怪状的错误。</p>
+<h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><p>主要分两个步骤，一个是自定义域名添加到 CloudFlare 网络，另一个是将该域名指向 Worker 子域名进行关联。这两个步骤先后顺序没有严格要求。</p>
+<h3 id="自定义域名"><a href="#自定义域名" class="headerlink" title="自定义域名"></a>自定义域名</h3><p>如前面所述，必须将域名（如 <code>vircloud.net</code>）托管于 CloudFlare 才行，在其他 DNS 注册商通过 CNAME 接入是不行的，会出现各种奇形怪状的错误。</p>
 <p>域名托管没啥难度，会用 CloudFlare 都会，不再赘述，根据页面提示操作即可：</p>
 <p><img data-src="/29/2070146028.png" alt="添加域名" loading="lazy"></p>
 <p>域名添加成功后，新增一笔 DNS 记录，<code>Name</code>为要作为自定义的子域名（如 <code>od.vircloud.net</code> 就是 <code>od</code>），值无所谓，关键要启用代理（<code>Proxied</code>）：</p>
 <p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://vircloud.net/usr/uploads/2020/01/888077893.png"><img data-src="/29/888077893.png" alt="添加记录" loading="lazy"></a></p>
-<h3 id="关联域名"><a href="# 关联域名" class="headerlink" title="关联域名"></a>关联域名 </h3><p> 创建 <code>Workers</code> 后，切换到 <code> 域名的 Wokers</code> 页签（注意是域名这里的，在 <code>Workers 里是找不到关联的地方滴</code>），然后点 <code>Add route</code> 添加关联：</p>
+<h3 id="关联域名"><a href="#关联域名" class="headerlink" title="关联域名"></a>关联域名</h3><p>创建 <code>Workers</code> 后，切换到<code>域名的 Wokers</code> 页签（注意是域名这里的，在 <code>Workers 里是找不到关联的地方滴</code>），然后点 <code>Add route</code> 添加关联：</p>
 <p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://vircloud.net/usr/uploads/2020/01/2293186136.png"><img data-src="/29/2293186136.png" alt="添加路由" loading="lazy"></a></p>
-<p><code>Route</code> 填写上一步的 <code> 子域名 </code> + <code>/*</code>（如： <code>od.vircloud.net/*</code>），<code>Worker</code> 选择需要自定义域名访问的 <code>Worker</code>，注意是<code> 选择</code>，所以需要先创建 Worker 再来关联，表示通过这个自定义域名来访问 <code>Worker</code> 服务：</p>
+<p><code>Route</code> 填写上一步的<code>子域名</code> + <code>/*</code>（如： <code>od.vircloud.net/*</code>），<code>Worker</code> 选择需要自定义域名访问的 <code>Worker</code>，注意是<code>选择</code>，所以需要先创建 Worker 再来关联，表示通过这个自定义域名来访问 <code>Worker</code> 服务：</p>
 <p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://vircloud.net/usr/uploads/2020/01/3360162157.png"><img data-src="/29/3360162157.png" alt="关联路由" loading="lazy"></a></p>
 <p>完成后就可以通过自定义的域名（如 <code>https://od.vircloud.net</code>）访问 <code>Worker </code>服务了。</p>
-<h2 id="总结"><a href="# 总结" class="headerlink" title="总结"></a>总结 </h2><p> 总结一下，两个关键点：</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>总结一下，两个关键点：</p>
 <ul>
 <li>域名必须托管于 CloudFlare；</li>
 <li>Worker 创建后需添加路由关联；</li>
@@ -384,8 +389,8 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/28.html" rel="prev" title="CloudFlare 如何开启 5 秒盾">
-                  <i class="fa fa-chevron-left"></i> CloudFlare 如何开启 5 秒盾
+                <a href="/28.html" rel="prev" title="CloudFlare 如何开启5秒盾">
+                  <i class="fa fa-chevron-left"></i> CloudFlare 如何开启5秒盾
                 </a>
             </div>
             <div class="post-nav-item">
@@ -434,7 +439,7 @@
 
 
 <div class="copyright">
-  © 2015 – 
+  &copy; 2015 – 
   <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
@@ -446,7 +451,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">349k</span>
+    <span title="站点总字数">350k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
@@ -459,7 +464,7 @@
 <div><canvas id="snow" style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:99999;pointer-events:none"></canvas></div>
 
 
-<script id="click-show-text" src="/js/click-show-text.js" data-mobile="false" data-text="富强,民主,文明,和谐,自由,平等,公正,法治,爱国,敬业,诚信,友善" data-fontsize="20px" data-random="false" async=""></script>
+<script id="click-show-text" src="/js/click-show-text.js" data-mobile="false" data-text="富强,民主,文明,和谐,自由,平等,公正,法治,爱国,敬业,诚信,友善" data-fontsize="20px" data-random="false" async></script>
 
     </div>
   </footer>
@@ -510,6 +515,5 @@ NexT.utils.loadComments('#lv-container', () => {
 });
 </script>
 
-
-
-</body></html>
+</body>
+</html>

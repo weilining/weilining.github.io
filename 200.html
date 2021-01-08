@@ -1,4 +1,6 @@
-<!DOCTYPE html><html lang="zh-CN"><head>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
@@ -14,12 +16,12 @@
   <meta name="yandex-verification" content="06c62a93328de5da">
   <meta name="baidu-site-verification" content="code-wFDrn4lvkD">
 
+<link rel="stylesheet" href="/css/main.css">
 
+<link rel="stylesheet" href="https://fonts.dogedoge.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
-
-
-
-  
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
@@ -29,7 +31,7 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo 官方加进度条">
 <meta property="og:url" content="https://weilining.github.io/200.html">
-<meta property="og:site_name" content="Ln's Blog">
+<meta property="og:site_name" content="Ln&#39;s Blog">
 <meta property="og:description" content="默认">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-12-13T17:12:39.000Z">
@@ -93,13 +95,13 @@
 </noscript>
 
 <link rel="alternate" href="/atom.xml" title="Ln's Blog" type="application/atom+xml">
-<script>function loadCss(l){var d=document,h=d.head,s=d.createElement('link');s.rel='stylesheet';s.href=l;!function e(f){if (d.body)return f();setTimeout(function(){e(f)})}(function(){h.appendChild(s);});}loadCss('/style.css');loadCss('https://fonts.dogedoge.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext');loadCss('//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css');loadCss('//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css');</script><noscript><link rel="stylesheet" href="/style.css"><link rel="stylesheet" href="https://fonts.dogedoge.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&amp;display=swap&amp;subset=latin,latin-ext"><link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css"><link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css"></noscript></head>
+</head>
 
-<body itemscope="" itemtype="http://schema.org/WebPage" class="use-motion">
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
   <div class="headband"></div>
 
   <main class="main">
-    <header class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
     <div class="toggle" aria-label="切换导航栏" role="button">
@@ -150,7 +152,9 @@
     <i class="fa fa-search"></i>
   </span>
   <div class="search-input-container">
-    <input autocomplete="off" autocapitalize="off" maxlength="80" placeholder="搜索..." spellcheck="false" type="search" class="search-input">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
   </div>
   <span class="popup-btn-close" role="button">
     <i class="fa fa-times-circle"></i>
@@ -189,13 +193,14 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%98%E6%96%B9"><span class="nav-number">1.</span> <span class="nav-text">官方</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Butterfly%20%E5%BC%95%E5%85%A5%E5%BC%B9%E7%90%83"><span class="nav-number">2.</span> <span class="nav-text">Butterfly 引入弹球</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Butterfly%20%E5%BC%95%E5%85%A5%E5%8A%A0%E8%BD%BD%E8%BD%AC%E5%9C%88%E5%8A%A8%E7%94%BB"><span class="nav-number">3.</span> <span class="nav-text">Butterfly 引入加载转圈动画 </span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Butterfly%20%E5%BC%95%E5%85%A5%E7%99%BE%E5%88%86%E6%AF%94"><span class="nav-number">4.</span> <span class="nav-text">Butterfly 引入百分比</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E4%B8%BB%E9%A2%98%E5%BC%95%E5%85%A5%E8%BF%9B%E5%BA%A6%E6%9D%A1"><span class="nav-number">5.</span> <span class="nav-text">其他主题引入进度条</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#js"><span class="nav-number">5.1.</span> <span class="nav-text">js</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BC%B9%E7%90%83%E7%9A%84%20css"><span class="nav-number">5.1.1.</span> <span class="nav-text">弹球的 css</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E8%BF%9B%E5%BA%A6%E6%9D%A1%20css"><span class="nav-number">5.2.</span> <span class="nav-text">其他进度条 css</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%98%E6%96%B9"><span class="nav-number">1.</span> <span class="nav-text">官方</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Butterfly%E5%BC%95%E5%85%A5%E5%BC%B9%E7%90%83"><span class="nav-number">2.</span> <span class="nav-text">Butterfly引入弹球</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Butterfly%E5%BC%95%E5%85%A5%E5%8A%A0%E8%BD%BD%E8%BD%AC%E5%9C%88%E5%8A%A8%E7%94%BB"><span class="nav-number">3.</span> <span class="nav-text">Butterfly引入加载转圈动画</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Butterfly%E5%BC%95%E5%85%A5%E7%99%BE%E5%88%86%E6%AF%94"><span class="nav-number">4.</span> <span class="nav-text">Butterfly引入百分比</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E4%B8%BB%E9%A2%98%E5%BC%95%E5%85%A5%E8%BF%9B%E5%BA%A6%E6%9D%A1"><span class="nav-number">5.</span> <span class="nav-text">其他主题引入进度条</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#js"><span class="nav-number">5.1.</span> <span class="nav-text">js</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BC%B9%E7%90%83%E7%9A%84css"><span class="nav-number">5.1.1.</span> <span class="nav-text">弹球的css</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E8%BF%9B%E5%BA%A6%E6%9D%A1css"><span class="nav-number">5.2.</span> <span class="nav-text">其他进度条css</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
         <div class="site-overview-wrap sidebar-panel">
-          <div class="site-author site-overview-item animated" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="Lining Wei" src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/icon.gif">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Lining Wei"
+      src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/icon.gif">
   <p class="site-author-name" itemprop="name">Lining Wei</p>
   <div class="site-description" itemprop="description">算法、技术</div>
 </div>
@@ -204,7 +209,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">240</span>
+          <span class="site-state-item-count">241</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -255,16 +260,16 @@
   
   
 
-  <article itemscope="" itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://weilining.github.io/200.html">
 
-    <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/weilining/img@main/img/icon.gif">
       <meta itemprop="name" content="Lining Wei">
       <meta itemprop="description" content="算法、技术">
     </span>
 
-    <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Ln's Blog">
     </span>
       <header class="post-header">
@@ -287,7 +292,7 @@
         <i class="far fa-folder"></i>
       </span>
       <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
           <a href="/categories/%E9%BB%98%E8%AE%A4/" itemprop="url" rel="index"><span itemprop="name">默认</span></a>
         </span>
     </span>
@@ -306,7 +311,7 @@
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
-      <span class="post-meta-item-text">阅读时长 ≈</span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
       <span>2 分钟</span>
     </span>
 </div>
@@ -319,19 +324,19 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h2 id="官方"><a href="# 官方" class="headerlink" title="官方"></a>官方</h2><p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0NvZGVCeVphY2gvcGFjZQ==">https://github.com/CodeByZach/pace<i class="fa fa-external-link-alt"></i></span></p>
+        <h2 id="官方"><a href="#官方" class="headerlink" title="官方"></a>官方</h2><p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0NvZGVCeVphY2gvcGFjZQ==">https://github.com/CodeByZach/pace<i class="fa fa-external-link-alt"></i></span></p>
 <a id="more"></a>
 
-<h2 id="Butterfly 引入弹球"><a href="#Butterfly 引入弹球" class="headerlink" title="Butterfly 引入弹球"></a>Butterfly 引入弹球</h2><p>Butterfly 3.4.0</p>
-<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">inject:</span><br><span class="line">  head:</span><br><span class="line">    - &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/CodeByZach/pace/themes/pink/pace-theme-bounce.css"&gt;</span><br><span class="line">  bottom:</span><br><span class="line">    - &lt;script defer src="https://rmt.dogedoge.com/fetch/~/source/jsdelivr/gh/CodeByZach/pace/pace.min.js"&gt;&lt;/script&gt;</span><br></pre></td></tr></tbody></table></figure>
-<h2 id="Butterfly 引入加载转圈动画"><a href="#Butterfly 引入加载转圈动画" class="headerlink" title="Butterfly 引入加载转圈动画"></a>Butterfly 引入加载转圈动画 </h2><p> 官方 css：<span class="exturl" data-url="aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL0NvZGVCeVphY2gvcGFjZUAxLjIuMy90aGVtZXMvcGluay9wYWNlLXRoZW1lLWZsYXNoLmNzcw==">https://cdn.jsdelivr.net/gh/CodeByZach/pace@1.2.3/themes/pink/pace-theme-flash.css<i class="fa fa-external-link-alt"></i></span></p>
-<p>魔改 css：<span class="exturl" data-url="aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL3hpbmdqaWFodWkvbW9kaWZ5QDIuMC4wL3BhY2UvdGhlbWVzL3BpbmsvcGFjZS10aGVtZS1mbGFzaC5jc3M=">https://cdn.jsdelivr.net/gh/xingjiahui/modify@2.0.0/pace/themes/pink/pace-theme-flash.css<i class="fa fa-external-link-alt"></i></span></p>
-<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">inject:</span><br><span class="line">  head:</span><br><span class="line">    - &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/xingjiahui/modify@2.0.0/pace/themes/pink/pace-theme-flash.css"&gt;</span><br><span class="line">  bottom:</span><br><span class="line">    - &lt;script defer src="https://rmt.dogedoge.com/fetch/~/source/jsdelivr/gh/CodeByZach/pace/pace.min.js"&gt;&lt;/script&gt;</span><br></pre></td></tr></tbody></table></figure>
-<h2 id="Butterfly 引入百分比"><a href="#Butterfly 引入百分比" class="headerlink" title="Butterfly 引入百分比"></a>Butterfly 引入百分比</h2><figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">inject:</span><br><span class="line">  head:</span><br><span class="line">    - &lt;link rel="stylesheet" href="https://rmt.dogedoge.com/fetch/~/source/jsdelivr/gh/CodeByZach/pace/themes/silver/pace-theme-big-counter.css"&gt;</span><br><span class="line">  bottom:</span><br><span class="line">    - &lt;script defer src="https://rmt.dogedoge.com/fetch/~/source/jsdelivr/gh/CodeByZach/pace/pace.min.js"&gt;&lt;/script&gt;</span><br></pre></td></tr></tbody></table></figure>
-<h2 id="其他主题引入进度条"><a href="# 其他主题引入进度条" class="headerlink" title="其他主题引入进度条"></a>其他主题引入进度条</h2><p>js 必须引入，css 任选其一</p>
+<h2 id="Butterfly引入弹球"><a href="#Butterfly引入弹球" class="headerlink" title="Butterfly引入弹球"></a>Butterfly引入弹球</h2><p>Butterfly 3.4.0</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">inject:</span><br><span class="line">  head:</span><br><span class="line">    - &lt;link rel&#x3D;&quot;stylesheet&quot; href&#x3D;&quot;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;gh&#x2F;CodeByZach&#x2F;pace&#x2F;themes&#x2F;pink&#x2F;pace-theme-bounce.css&quot;&gt;</span><br><span class="line">  bottom:</span><br><span class="line">    - &lt;script defer src&#x3D;&quot;https:&#x2F;&#x2F;rmt.dogedoge.com&#x2F;fetch&#x2F;~&#x2F;source&#x2F;jsdelivr&#x2F;gh&#x2F;CodeByZach&#x2F;pace&#x2F;pace.min.js&quot;&gt;&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="Butterfly引入加载转圈动画"><a href="#Butterfly引入加载转圈动画" class="headerlink" title="Butterfly引入加载转圈动画"></a>Butterfly引入加载转圈动画</h2><p>官方css：<span class="exturl" data-url="aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL0NvZGVCeVphY2gvcGFjZUAxLjIuMy90aGVtZXMvcGluay9wYWNlLXRoZW1lLWZsYXNoLmNzcw==">https://cdn.jsdelivr.net/gh/CodeByZach/pace@1.2.3/themes/pink/pace-theme-flash.css<i class="fa fa-external-link-alt"></i></span></p>
+<p>魔改css：<span class="exturl" data-url="aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL3hpbmdqaWFodWkvbW9kaWZ5QDIuMC4wL3BhY2UvdGhlbWVzL3BpbmsvcGFjZS10aGVtZS1mbGFzaC5jc3M=">https://cdn.jsdelivr.net/gh/xingjiahui/modify@2.0.0/pace/themes/pink/pace-theme-flash.css<i class="fa fa-external-link-alt"></i></span></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">inject:</span><br><span class="line">  head:</span><br><span class="line">    - &lt;link rel&#x3D;&quot;stylesheet&quot; href&#x3D;&quot;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;gh&#x2F;xingjiahui&#x2F;modify@2.0.0&#x2F;pace&#x2F;themes&#x2F;pink&#x2F;pace-theme-flash.css&quot;&gt;</span><br><span class="line">  bottom:</span><br><span class="line">    - &lt;script defer src&#x3D;&quot;https:&#x2F;&#x2F;rmt.dogedoge.com&#x2F;fetch&#x2F;~&#x2F;source&#x2F;jsdelivr&#x2F;gh&#x2F;CodeByZach&#x2F;pace&#x2F;pace.min.js&quot;&gt;&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="Butterfly引入百分比"><a href="#Butterfly引入百分比" class="headerlink" title="Butterfly引入百分比"></a>Butterfly引入百分比</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">inject:</span><br><span class="line">  head:</span><br><span class="line">    - &lt;link rel&#x3D;&quot;stylesheet&quot; href&#x3D;&quot;https:&#x2F;&#x2F;rmt.dogedoge.com&#x2F;fetch&#x2F;~&#x2F;source&#x2F;jsdelivr&#x2F;gh&#x2F;CodeByZach&#x2F;pace&#x2F;themes&#x2F;silver&#x2F;pace-theme-big-counter.css&quot;&gt;</span><br><span class="line">  bottom:</span><br><span class="line">    - &lt;script defer src&#x3D;&quot;https:&#x2F;&#x2F;rmt.dogedoge.com&#x2F;fetch&#x2F;~&#x2F;source&#x2F;jsdelivr&#x2F;gh&#x2F;CodeByZach&#x2F;pace&#x2F;pace.min.js&quot;&gt;&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="其他主题引入进度条"><a href="#其他主题引入进度条" class="headerlink" title="其他主题引入进度条"></a>其他主题引入进度条</h2><p>js必须引入，css任选其一</p>
 <h3 id="js"><a href="#js" class="headerlink" title="js"></a>js</h3><p><span class="exturl" data-url="aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL0NvZGVCeVphY2gvcGFjZS9wYWNlLm1pbi5qcw==">https://cdn.jsdelivr.net/gh/CodeByZach/pace/pace.min.js<i class="fa fa-external-link-alt"></i></span></p>
-<h4 id="弹球的 css"><a href="# 弹球的 css" class="headerlink" title="弹球的 css"></a>弹球的 css</h4><figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">https://cdn.jsdelivr.net/gh/CodeByZach/pace/themes/pink/pace-theme-bounce.css</span><br></pre></td></tr></tbody></table></figure>
-<h3 id="其他进度条 css"><a href="# 其他进度条 css" class="headerlink" title="其他进度条 css"></a>其他进度条 css</h3><p>这里找<span class="exturl" data-url="aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL0NvZGVCeVphY2gvcGFjZS90aGVtZXM=">https://cdn.jsdelivr.net/gh/CodeByZach/pace/themes<i class="fa fa-external-link-alt"></i></span></p>
+<h4 id="弹球的css"><a href="#弹球的css" class="headerlink" title="弹球的css"></a>弹球的css</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;gh&#x2F;CodeByZach&#x2F;pace&#x2F;themes&#x2F;pink&#x2F;pace-theme-bounce.css</span><br></pre></td></tr></table></figure>
+<h3 id="其他进度条css"><a href="#其他进度条css" class="headerlink" title="其他进度条css"></a>其他进度条css</h3><p>这里找<span class="exturl" data-url="aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL0NvZGVCeVphY2gvcGFjZS90aGVtZXM=">https://cdn.jsdelivr.net/gh/CodeByZach/pace/themes<i class="fa fa-external-link-alt"></i></span></p>
 
     </div>
 
@@ -370,8 +375,8 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/199.html" rel="prev" title="dogedoge 代替 baidu 和 jsdelivr">
-                  <i class="fa fa-chevron-left"></i> dogedoge 代替 baidu 和 jsdelivr
+                <a href="/199.html" rel="prev" title="dogedoge 代替baidu和jsdelivr">
+                  <i class="fa fa-chevron-left"></i> dogedoge 代替baidu和jsdelivr
                 </a>
             </div>
             <div class="post-nav-item">
@@ -420,7 +425,7 @@
 
 
 <div class="copyright">
-  © 2015 – 
+  &copy; 2015 – 
   <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
@@ -432,7 +437,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">349k</span>
+    <span title="站点总字数">350k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
@@ -445,7 +450,7 @@
 <div><canvas id="snow" style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:99999;pointer-events:none"></canvas></div>
 
 
-<script id="click-show-text" src="/js/click-show-text.js" data-mobile="false" data-text="富强,民主,文明,和谐,自由,平等,公正,法治,爱国,敬业,诚信,友善" data-fontsize="20px" data-random="false" async=""></script>
+<script id="click-show-text" src="/js/click-show-text.js" data-mobile="false" data-text="富强,民主,文明,和谐,自由,平等,公正,法治,爱国,敬业,诚信,友善" data-fontsize="20px" data-random="false" async></script>
 
     </div>
   </footer>
@@ -496,6 +501,5 @@ NexT.utils.loadComments('#lv-container', () => {
 });
 </script>
 
-
-
-</body></html>
+</body>
+</html>

@@ -1,4 +1,6 @@
-<!DOCTYPE html><html lang="zh-CN"><head>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
@@ -14,12 +16,12 @@
   <meta name="yandex-verification" content="06c62a93328de5da">
   <meta name="baidu-site-verification" content="code-wFDrn4lvkD">
 
+<link rel="stylesheet" href="/css/main.css">
 
+<link rel="stylesheet" href="https://fonts.dogedoge.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
-
-
-
-  
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
@@ -27,9 +29,9 @@
   </script>
 <meta name="description" content="默认">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Windows 本地部署 Hexo 到 Coding 配 git 的教程">
+<meta property="og:title" content="Windows 本地部署 Hexo 到 Coding 配git的教程">
 <meta property="og:url" content="https://weilining.github.io/114.html">
-<meta property="og:site_name" content="Ln's Blog">
+<meta property="og:site_name" content="Ln&#39;s Blog">
 <meta property="og:description" content="默认">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-11-19T13:13:56.000Z">
@@ -51,7 +53,7 @@
     lang   : 'zh-CN'
   };
 </script>
-<title>Windows 本地部署 Hexo 到 Coding 配 git 的教程 | Ln's Blog</title>
+<title>Windows 本地部署 Hexo 到 Coding 配git的教程 | Ln's Blog</title>
   
 
 
@@ -93,13 +95,13 @@
 </noscript>
 
 <link rel="alternate" href="/atom.xml" title="Ln's Blog" type="application/atom+xml">
-<script>function loadCss(l){var d=document,h=d.head,s=d.createElement('link');s.rel='stylesheet';s.href=l;!function e(f){if (d.body)return f();setTimeout(function(){e(f)})}(function(){h.appendChild(s);});}loadCss('/style.css');loadCss('https://fonts.dogedoge.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext');loadCss('//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css');loadCss('//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css');</script><noscript><link rel="stylesheet" href="/style.css"><link rel="stylesheet" href="https://fonts.dogedoge.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&amp;display=swap&amp;subset=latin,latin-ext"><link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css"><link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css"></noscript></head>
+</head>
 
-<body itemscope="" itemtype="http://schema.org/WebPage" class="use-motion">
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
   <div class="headband"></div>
 
   <main class="main">
-    <header class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
     <div class="toggle" aria-label="切换导航栏" role="button">
@@ -150,7 +152,9 @@
     <i class="fa fa-search"></i>
   </span>
   <div class="search-input-container">
-    <input autocomplete="off" autocapitalize="off" maxlength="80" placeholder="搜索..." spellcheck="false" type="search" class="search-input">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
   </div>
   <span class="popup-btn-close" role="button">
     <i class="fa fa-times-circle"></i>
@@ -189,13 +193,14 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%20-config-yml"><span class="nav-number">1.</span> <span class="nav-text">配置_config.yml</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%20hexo-deployer-git"><span class="nav-number">2.</span> <span class="nav-text">安装 hexo-deployer-git</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%84%E8%A7%88"><span class="nav-number">3.</span> <span class="nav-text">预览</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AE%20-git-%20%E7%94%A8%E6%88%B7%E5%90%8D%E5%92%8C%E9%82%AE%E7%AE%B1"><span class="nav-number">4.</span> <span class="nav-text">设置 git 用户名和邮箱 </span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%83%A8%E7%BD%B2%E5%88%B0%20Coding"><span class="nav-number">5.</span> <span class="nav-text">部署到 Coding</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE-config-yml"><span class="nav-number">1.</span> <span class="nav-text">配置_config.yml</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85hexo-deployer-git"><span class="nav-number">2.</span> <span class="nav-text">安装hexo-deployer-git</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%84%E8%A7%88"><span class="nav-number">3.</span> <span class="nav-text">预览</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AE-git-%E7%94%A8%E6%88%B7%E5%90%8D%E5%92%8C%E9%82%AE%E7%AE%B1"><span class="nav-number">4.</span> <span class="nav-text">设置 git 用户名和邮箱</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%83%A8%E7%BD%B2%E5%88%B0Coding"><span class="nav-number">5.</span> <span class="nav-text">部署到Coding</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
         <div class="site-overview-wrap sidebar-panel">
-          <div class="site-author site-overview-item animated" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="Lining Wei" src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/icon.gif">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Lining Wei"
+      src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/icon.gif">
   <p class="site-author-name" itemprop="name">Lining Wei</p>
   <div class="site-description" itemprop="description">算法、技术</div>
 </div>
@@ -204,7 +209,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">240</span>
+          <span class="site-state-item-count">241</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -255,21 +260,21 @@
   
   
 
-  <article itemscope="" itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://weilining.github.io/114.html">
 
-    <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/weilining/img@main/img/icon.gif">
       <meta itemprop="name" content="Lining Wei">
       <meta itemprop="description" content="算法、技术">
     </span>
 
-    <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Ln's Blog">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Windows 本地部署 Hexo 到 Coding 配 git 的教程
+          Windows 本地部署 Hexo 到 Coding 配git的教程
         </h1>
 
         <div class="post-meta-container">
@@ -287,7 +292,7 @@
         <i class="far fa-folder"></i>
       </span>
       <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
           <a href="/categories/%E9%BB%98%E8%AE%A4/" itemprop="url" rel="index"><span itemprop="name">默认</span></a>
         </span>
     </span>
@@ -306,7 +311,7 @@
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
-      <span class="post-meta-item-text">阅读时长 ≈</span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
       <span>1 分钟</span>
     </span>
 </div>
@@ -319,14 +324,14 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h2 id="配置 -config-yml"><a href="# 配置 -config-yml" class="headerlink" title="配置_config.yml"></a>配置_config.yml</h2><a id="more"></a>
+        <h2 id="配置-config-yml"><a href="#配置-config-yml" class="headerlink" title="配置_config.yml"></a>配置_config.yml</h2><a id="more"></a>
 
-<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">deploy: # 定义部署</span><br><span class="line">  - type: git</span><br><span class="line">    repository:</span><br><span class="line">      coding: git@e.coding.net:</span><br><span class="line">    branch: master</span><br></pre></td></tr></tbody></table></figure>
-<h2 id="安装 hexo-deployer-git"><a href="# 安装 hexo-deployer-git" class="headerlink" title="安装 hexo-deployer-git"></a>安装 hexo-deployer-git</h2><figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">npm config set registry http://registry.npm.taobao.org</span><br><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></tbody></table></figure>
-<h2 id="预览"><a href="# 预览" class="headerlink" title="预览"></a>预览</h2><figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">npm i</span><br><span class="line">hexo cl &amp;&amp; hexo s</span><br></pre></td></tr></tbody></table></figure>
-<h2 id="设置 -git- 用户名和邮箱"><a href="# 设置 -git- 用户名和邮箱" class="headerlink" title="设置 git 用户名和邮箱"></a>设置 git 用户名和邮箱 </h2><p> 在 Git 中 <strong> 依次 </strong> 输入以下指令：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">git config --global user.email "you@example.com"</span><br><span class="line">git config --global user.name "Your Name"</span><br></pre></td></tr></tbody></table></figure>
-<h2 id="部署到 Coding"><a href="# 部署到 Coding" class="headerlink" title="部署到 Coding"></a>部署到 Coding</h2><figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">hexo cl &amp;&amp; hexo g &amp;&amp; hexo d</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">deploy: # 定义部署</span><br><span class="line">  - type: git</span><br><span class="line">    repository:</span><br><span class="line">      coding: git@e.coding.net:</span><br><span class="line">    branch: master</span><br></pre></td></tr></table></figure>
+<h2 id="安装hexo-deployer-git"><a href="#安装hexo-deployer-git" class="headerlink" title="安装hexo-deployer-git"></a>安装hexo-deployer-git</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm config set registry http:&#x2F;&#x2F;registry.npm.taobao.org</span><br><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<h2 id="预览"><a href="#预览" class="headerlink" title="预览"></a>预览</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm i</span><br><span class="line">hexo cl &amp;&amp; hexo s</span><br></pre></td></tr></table></figure>
+<h2 id="设置-git-用户名和邮箱"><a href="#设置-git-用户名和邮箱" class="headerlink" title="设置 git 用户名和邮箱"></a>设置 git 用户名和邮箱</h2><p>在Git中<strong>依次</strong>输入以下指令：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git config --global user.email &quot;you@example.com&quot;</span><br><span class="line">git config --global user.name &quot;Your Name&quot;</span><br></pre></td></tr></table></figure>
+<h2 id="部署到Coding"><a href="#部署到Coding" class="headerlink" title="部署到Coding"></a>部署到Coding</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo cl &amp;&amp; hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></figure>
 
 
 
@@ -376,8 +381,8 @@
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/115.html" rel="next" title="Windows 本地部署 Hexo 到 Coding 配 deploy 的教程">
-                  Windows 本地部署 Hexo 到 Coding 配 deploy 的教程 <i class="fa fa-chevron-right"></i>
+                <a href="/115.html" rel="next" title="Windows 本地部署 Hexo 到 Coding 配deploy的教程">
+                  Windows 本地部署 Hexo 到 Coding 配deploy的教程 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
@@ -421,7 +426,7 @@
 
 
 <div class="copyright">
-  © 2015 – 
+  &copy; 2015 – 
   <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
@@ -433,7 +438,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">349k</span>
+    <span title="站点总字数">350k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
@@ -446,7 +451,7 @@
 <div><canvas id="snow" style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:99999;pointer-events:none"></canvas></div>
 
 
-<script id="click-show-text" src="/js/click-show-text.js" data-mobile="false" data-text="富强,民主,文明,和谐,自由,平等,公正,法治,爱国,敬业,诚信,友善" data-fontsize="20px" data-random="false" async=""></script>
+<script id="click-show-text" src="/js/click-show-text.js" data-mobile="false" data-text="富强,民主,文明,和谐,自由,平等,公正,法治,爱国,敬业,诚信,友善" data-fontsize="20px" data-random="false" async></script>
 
     </div>
   </footer>
@@ -497,6 +502,5 @@ NexT.utils.loadComments('#lv-container', () => {
 });
 </script>
 
-
-
-</body></html>
+</body>
+</html>

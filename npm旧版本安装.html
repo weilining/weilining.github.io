@@ -1,4 +1,6 @@
-<!DOCTYPE html><html lang="zh-CN"><head>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
@@ -14,12 +16,12 @@
   <meta name="yandex-verification" content="06c62a93328de5da">
   <meta name="baidu-site-verification" content="code-wFDrn4lvkD">
 
+<link rel="stylesheet" href="/css/main.css">
 
+<link rel="stylesheet" href="https://fonts.dogedoge.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
-
-
-
-  
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
@@ -27,9 +29,9 @@
   </script>
 <meta name="description" content="默认">
 <meta property="og:type" content="article">
-<meta property="og:title" content="npm 旧版本安装">
+<meta property="og:title" content="npm旧版本安装">
 <meta property="og:url" content="https://weilining.github.io/npm%E6%97%A7%E7%89%88%E6%9C%AC%E5%AE%89%E8%A3%85.html">
-<meta property="og:site_name" content="Ln's Blog">
+<meta property="og:site_name" content="Ln&#39;s Blog">
 <meta property="og:description" content="默认">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://weilining.github.io/npm%E6%97%A7%E7%89%88%E6%9C%AC%E5%AE%89%E8%A3%85/image-20200922183327733.png">
@@ -57,7 +59,7 @@
     lang   : 'zh-CN'
   };
 </script>
-<title>npm 旧版本安装 | Ln's Blog</title>
+<title>npm旧版本安装 | Ln's Blog</title>
   
 
 
@@ -99,13 +101,13 @@
 </noscript>
 
 <link rel="alternate" href="/atom.xml" title="Ln's Blog" type="application/atom+xml">
-<script>function loadCss(l){var d=document,h=d.head,s=d.createElement('link');s.rel='stylesheet';s.href=l;!function e(f){if (d.body)return f();setTimeout(function(){e(f)})}(function(){h.appendChild(s);});}loadCss('/style.css');loadCss('https://fonts.dogedoge.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext');loadCss('//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css');loadCss('//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css');</script><noscript><link rel="stylesheet" href="/style.css"><link rel="stylesheet" href="https://fonts.dogedoge.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&amp;display=swap&amp;subset=latin,latin-ext"><link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css"><link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css"></noscript></head>
+</head>
 
-<body itemscope="" itemtype="http://schema.org/WebPage" class="use-motion">
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
   <div class="headband"></div>
 
   <main class="main">
-    <header class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
     <div class="toggle" aria-label="切换导航栏" role="button">
@@ -156,7 +158,9 @@
     <i class="fa fa-search"></i>
   </span>
   <div class="search-input-container">
-    <input autocomplete="off" autocapitalize="off" maxlength="80" placeholder="搜索..." spellcheck="false" type="search" class="search-input">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
   </div>
   <span class="popup-btn-close" role="button">
     <i class="fa fa-times-circle"></i>
@@ -195,13 +199,14 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%98%E7%BD%91%E6%9F%A5%20npm%20%E5%8C%85%E4%B8%8B%E6%9C%89%E4%BB%80%E4%B9%88%E7%89%88%E6%9C%AC"><span class="nav-number">1.</span> <span class="nav-text"> 官网查 npm 包下有什么版本 </span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8D%B8%E8%BD%BD%E5%8E%9F%E6%9D%A5%E7%89%88%E6%9C%AC%EF%BC%8C%E5%AE%89%E8%A3%85%E6%8C%87%E5%AE%9A%E7%89%88%E6%9C%AC"><span class="nav-number">2.</span> <span class="nav-text"> 卸载原来版本，安装指定版本 </span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#END"><span class="nav-number">3.</span> <span class="nav-text">END</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%98%E7%BD%91%E6%9F%A5npm%E5%8C%85%E4%B8%8B%E6%9C%89%E4%BB%80%E4%B9%88%E7%89%88%E6%9C%AC"><span class="nav-number">1.</span> <span class="nav-text">官网查npm包下有什么版本</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8D%B8%E8%BD%BD%E5%8E%9F%E6%9D%A5%E7%89%88%E6%9C%AC%EF%BC%8C%E5%AE%89%E8%A3%85%E6%8C%87%E5%AE%9A%E7%89%88%E6%9C%AC"><span class="nav-number">2.</span> <span class="nav-text">卸载原来版本，安装指定版本</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#END"><span class="nav-number">3.</span> <span class="nav-text">END</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
         <div class="site-overview-wrap sidebar-panel">
-          <div class="site-author site-overview-item animated" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="Lining Wei" src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/icon.gif">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Lining Wei"
+      src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/icon.gif">
   <p class="site-author-name" itemprop="name">Lining Wei</p>
   <div class="site-description" itemprop="description">算法、技术</div>
 </div>
@@ -210,7 +215,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">240</span>
+          <span class="site-state-item-count">241</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -261,21 +266,21 @@
   
   
 
-  <article itemscope="" itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://weilining.github.io/npm%E6%97%A7%E7%89%88%E6%9C%AC%E5%AE%89%E8%A3%85.html">
 
-    <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/weilining/img@main/img/icon.gif">
       <meta itemprop="name" content="Lining Wei">
       <meta itemprop="description" content="算法、技术">
     </span>
 
-    <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Ln's Blog">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          npm 旧版本安装
+          npm旧版本安装
         </h1>
 
         <div class="post-meta-container">
@@ -300,7 +305,7 @@
         <i class="far fa-folder"></i>
       </span>
       <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
           <a href="/categories/%E9%BB%98%E8%AE%A4/" itemprop="url" rel="index"><span itemprop="name">默认</span></a>
         </span>
     </span>
@@ -319,7 +324,7 @@
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
-      <span class="post-meta-item-text">阅读时长 ≈</span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
       <span>1 分钟</span>
     </span>
 </div>
@@ -335,14 +340,14 @@
         <p>[TOC]</p>
 <a id="more"></a>
 
-<p>2.1.0 版本的 hexo-generator-sitemap，换成安装 1.2.0 版本 </p>
-<h1 id="官网查 npm 包下有什么版本"><a href="# 官网查 npm 包下有什么版本" class="headerlink" title="官网查 npm 包下有什么版本"></a> 官网查 npm 包下有什么版本 </h1><p><span class="exturl" data-url="aHR0cHM6Ly93d3cubnBtanMuY29tLw==">https://www.npmjs.com/<i class="fa fa-external-link-alt"></i></span></p>
+<p>2.1.0版本的hexo-generator-sitemap，换成安装1.2.0版本</p>
+<h1 id="官网查npm包下有什么版本"><a href="#官网查npm包下有什么版本" class="headerlink" title="官网查npm包下有什么版本"></a>官网查npm包下有什么版本</h1><p><span class="exturl" data-url="aHR0cHM6Ly93d3cubnBtanMuY29tLw==">https://www.npmjs.com/<i class="fa fa-external-link-alt"></i></span></p>
 <p><img data-src="/npm%E6%97%A7%E7%89%88%E6%9C%AC%E5%AE%89%E8%A3%85/image-20200922183327733.png" alt="image-20200922183327733" loading="lazy"></p>
 <p><img data-src="/npm%E6%97%A7%E7%89%88%E6%9C%AC%E5%AE%89%E8%A3%85/image-20200922183354580.png" alt="image-20200922183354580" loading="lazy"></p>
 <p><img data-src="/npm%E6%97%A7%E7%89%88%E6%9C%AC%E5%AE%89%E8%A3%85/image-20200922183406647.png" alt="image-20200922183406647" loading="lazy"></p>
 <p><img data-src="/npm%E6%97%A7%E7%89%88%E6%9C%AC%E5%AE%89%E8%A3%85/image-20200922183426037.png" alt="image-20200922183426037" loading="lazy"></p>
-<h1 id="卸载原来版本，安装指定版本"><a href="# 卸载原来版本，安装指定版本" class="headerlink" title="卸载原来版本，安装指定版本"></a> 卸载原来版本，安装指定版本 </h1><p>npm install 包名 @版本号 --save</p>
-<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">npm uninstall hexo-generator-sitemap --save</span><br><span class="line">npm install hexo-generator-sitemap@1.2.0 --save</span><br></pre></td></tr></tbody></table></figure>
+<h1 id="卸载原来版本，安装指定版本"><a href="#卸载原来版本，安装指定版本" class="headerlink" title="卸载原来版本，安装指定版本"></a>卸载原来版本，安装指定版本</h1><p>npm install 包名@版本号 --save</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm uninstall hexo-generator-sitemap --save</span><br><span class="line">npm install hexo-generator-sitemap@1.2.0 --save</span><br></pre></td></tr></table></figure>
 <h1 id="END"><a href="#END" class="headerlink" title="END"></a>END</h1>
     </div>
 
@@ -382,13 +387,13 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/valine%E5%B0%8F%E7%99%BD%E9%83%BD%E6%87%82%E7%94%A8.html" rel="prev" title="Hexo 的 Next 主题使用 valine 评论系统">
-                  <i class="fa fa-chevron-left"></i> Hexo 的 Next 主题使用 valine 评论系统
+                <a href="/valine%E5%B0%8F%E7%99%BD%E9%83%BD%E6%87%82%E7%94%A8.html" rel="prev" title="Hexo的Next主题使用valine评论系统">
+                  <i class="fa fa-chevron-left"></i> Hexo的Next主题使用valine评论系统
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/%E6%9F%A5%E7%9C%8BHexo%E7%9A%84%E6%89%80%E6%9C%89npm%E7%89%88%E6%9C%AC.html" rel="next" title="查看 Hexo 的所有 npm 版本">
-                  查看 Hexo 的所有 npm 版本 <i class="fa fa-chevron-right"></i>
+                <a href="/%E6%9F%A5%E7%9C%8BHexo%E7%9A%84%E6%89%80%E6%9C%89npm%E7%89%88%E6%9C%AC.html" rel="next" title="查看Hexo的所有npm版本">
+                  查看Hexo的所有npm版本 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
@@ -432,7 +437,7 @@
 
 
 <div class="copyright">
-  © 2015 – 
+  &copy; 2015 – 
   <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
@@ -444,7 +449,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">349k</span>
+    <span title="站点总字数">350k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
@@ -457,7 +462,7 @@
 <div><canvas id="snow" style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:99999;pointer-events:none"></canvas></div>
 
 
-<script id="click-show-text" src="/js/click-show-text.js" data-mobile="false" data-text="富强,民主,文明,和谐,自由,平等,公正,法治,爱国,敬业,诚信,友善" data-fontsize="20px" data-random="false" async=""></script>
+<script id="click-show-text" src="/js/click-show-text.js" data-mobile="false" data-text="富强,民主,文明,和谐,自由,平等,公正,法治,爱国,敬业,诚信,友善" data-fontsize="20px" data-random="false" async></script>
 
     </div>
   </footer>
@@ -508,6 +513,5 @@ NexT.utils.loadComments('#lv-container', () => {
 });
 </script>
 
-
-
-</body></html>
+</body>
+</html>

@@ -1,4 +1,6 @@
-<!DOCTYPE html><html lang="zh-CN"><head>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
@@ -14,12 +16,12 @@
   <meta name="yandex-verification" content="06c62a93328de5da">
   <meta name="baidu-site-verification" content="code-wFDrn4lvkD">
 
+<link rel="stylesheet" href="/css/main.css">
 
+<link rel="stylesheet" href="https://fonts.dogedoge.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
-
-
-
-  
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
@@ -27,9 +29,9 @@
   </script>
 <meta name="description" content="默认">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Gitalk 评论插件配置">
+<meta property="og:title" content="Gitalk评论插件配置">
 <meta property="og:url" content="https://weilining.github.io/Gitalk.html">
-<meta property="og:site_name" content="Ln's Blog">
+<meta property="og:site_name" content="Ln&#39;s Blog">
 <meta property="og:description" content="默认">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://exception-image-bucket.oss-cn-hangzhou.aliyuncs.com/155877662687759">
@@ -64,7 +66,7 @@
     lang   : 'zh-CN'
   };
 </script>
-<title>Gitalk 评论插件配置 | Ln's Blog</title>
+<title>Gitalk评论插件配置 | Ln's Blog</title>
   
 
 
@@ -106,13 +108,13 @@
 </noscript>
 
 <link rel="alternate" href="/atom.xml" title="Ln's Blog" type="application/atom+xml">
-<script>function loadCss(l){var d=document,h=d.head,s=d.createElement('link');s.rel='stylesheet';s.href=l;!function e(f){if (d.body)return f();setTimeout(function(){e(f)})}(function(){h.appendChild(s);});}loadCss('/style.css');loadCss('https://fonts.dogedoge.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext');loadCss('//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css');loadCss('//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css');</script><noscript><link rel="stylesheet" href="/style.css"><link rel="stylesheet" href="https://fonts.dogedoge.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&amp;display=swap&amp;subset=latin,latin-ext"><link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css"><link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css"></noscript></head>
+</head>
 
-<body itemscope="" itemtype="http://schema.org/WebPage" class="use-motion">
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
   <div class="headband"></div>
 
   <main class="main">
-    <header class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
     <div class="toggle" aria-label="切换导航栏" role="button">
@@ -163,7 +165,9 @@
     <i class="fa fa-search"></i>
   </span>
   <div class="search-input-container">
-    <input autocomplete="off" autocapitalize="off" maxlength="80" placeholder="搜索..." spellcheck="false" type="search" class="search-input">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
   </div>
   <span class="popup-btn-close" role="button">
     <i class="fa fa-times-circle"></i>
@@ -202,13 +206,14 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E4%BB%80%E4%B9%88%E6%98%AF%20-Gitalk"><span class="nav-number">1.</span> <span class="nav-text">一、什么是 Gitalk</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81Gitalk-%20%E7%89%B9%E6%80%A7"><span class="nav-number">2.</span> <span class="nav-text">二、Gitalk 特性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E4%BD%BF%E7%94%A8%20-Gitalk"><span class="nav-number">3.</span> <span class="nav-text">三、为什么要使用 Gitalk</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B%E3%80%81Gitalk-%20%E5%AE%89%E8%A3%85"><span class="nav-number">4.</span> <span class="nav-text">四、Gitalk 安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%94%E3%80%81%E4%B8%BA%E4%BD%A0%E7%9A%84%E4%B8%AA%E7%AB%99%E9%9B%86%E6%88%90%20-Gitalk"><span class="nav-number">5.</span> <span class="nav-text">五、为你的个站集成 Gitalk</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%AD%E3%80%81%E4%BD%A0%E5%8F%AF%E8%83%BD%E4%BC%9A%E7%A2%B0%E5%88%B0%E7%9A%84%E5%9D%91"><span class="nav-number">6.</span> <span class="nav-text">六、你可能会碰到的坑</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#6-1-%20%E6%9C%AA%E6%89%BE%E5%88%B0%E7%9B%B8%E5%85%B3%E7%9A%84%20issue%20%E8%AF%84%E8%AE%BA%EF%BC%8C%E8%AF%B7%E8%81%94%E7%B3%BB%20xxx%20%E5%88%9D%E5%A7%8B%E5%8C%96%E5%88%9B%E5%BB%BA"><span class="nav-number">6.1.</span> <span class="nav-text">6.1 未找到相关的 issue 评论，请联系 xxx 初始化创建</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-2-Error-Not-Found"><span class="nav-number">6.2.</span> <span class="nav-text">6.2 Error: Not Found.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-3-Error-Validation-Failed"><span class="nav-number">6.3.</span> <span class="nav-text">6.3 Error: Validation Failed.</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%83%E3%80%81%E6%9C%80%E7%BB%88%E6%95%88%E6%9E%9C"><span class="nav-number">7.</span> <span class="nav-text">七、最终效果 </span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E4%BB%80%E4%B9%88%E6%98%AF-Gitalk"><span class="nav-number">1.</span> <span class="nav-text">一、什么是 Gitalk</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81Gitalk-%E7%89%B9%E6%80%A7"><span class="nav-number">2.</span> <span class="nav-text">二、Gitalk 特性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E4%BD%BF%E7%94%A8-Gitalk"><span class="nav-number">3.</span> <span class="nav-text">三、为什么要使用 Gitalk</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B%E3%80%81Gitalk-%E5%AE%89%E8%A3%85"><span class="nav-number">4.</span> <span class="nav-text">四、Gitalk 安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%94%E3%80%81%E4%B8%BA%E4%BD%A0%E7%9A%84%E4%B8%AA%E7%AB%99%E9%9B%86%E6%88%90-Gitalk"><span class="nav-number">5.</span> <span class="nav-text">五、为你的个站集成 Gitalk</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%AD%E3%80%81%E4%BD%A0%E5%8F%AF%E8%83%BD%E4%BC%9A%E7%A2%B0%E5%88%B0%E7%9A%84%E5%9D%91"><span class="nav-number">6.</span> <span class="nav-text">六、你可能会碰到的坑</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#6-1-%E6%9C%AA%E6%89%BE%E5%88%B0%E7%9B%B8%E5%85%B3%E7%9A%84issue%E8%AF%84%E8%AE%BA%EF%BC%8C%E8%AF%B7%E8%81%94%E7%B3%BBxxx%E5%88%9D%E5%A7%8B%E5%8C%96%E5%88%9B%E5%BB%BA"><span class="nav-number">6.1.</span> <span class="nav-text">6.1 未找到相关的issue评论，请联系xxx初始化创建</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-2-Error-Not-Found"><span class="nav-number">6.2.</span> <span class="nav-text">6.2 Error: Not Found.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-3-Error-Validation-Failed"><span class="nav-number">6.3.</span> <span class="nav-text">6.3 Error: Validation Failed.</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%83%E3%80%81%E6%9C%80%E7%BB%88%E6%95%88%E6%9E%9C"><span class="nav-number">7.</span> <span class="nav-text">七、最终效果</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
         <div class="site-overview-wrap sidebar-panel">
-          <div class="site-author site-overview-item animated" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="Lining Wei" src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/icon.gif">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Lining Wei"
+      src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/icon.gif">
   <p class="site-author-name" itemprop="name">Lining Wei</p>
   <div class="site-description" itemprop="description">算法、技术</div>
 </div>
@@ -217,7 +222,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">240</span>
+          <span class="site-state-item-count">241</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -268,21 +273,21 @@
   
   
 
-  <article itemscope="" itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://weilining.github.io/Gitalk.html">
 
-    <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/weilining/img@main/img/icon.gif">
       <meta itemprop="name" content="Lining Wei">
       <meta itemprop="description" content="算法、技术">
     </span>
 
-    <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Ln's Blog">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Gitalk 评论插件配置
+          Gitalk评论插件配置
         </h1>
 
         <div class="post-meta-container">
@@ -307,7 +312,7 @@
         <i class="far fa-folder"></i>
       </span>
       <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
           <a href="/categories/Hexo/" itemprop="url" rel="index"><span itemprop="name">Hexo</span></a>
         </span>
     </span>
@@ -326,7 +331,7 @@
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
-      <span class="post-meta-item-text">阅读时长 ≈</span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
       <span>3 分钟</span>
     </span>
 </div>
@@ -339,7 +344,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h2 id="一、什么是 -Gitalk"><a href="# 一、什么是 -Gitalk" class="headerlink" title="一、什么是 Gitalk"></a>一、什么是 Gitalk</h2><p>Gitalk 的官方网站地址是: <span class="exturl" data-url="aHR0cHM6Ly9naXRhbGsuZ2l0aHViLmlvLw==">https://gitalk.github.io<i class="fa fa-external-link-alt"></i></span></p>
+        <h2 id="一、什么是-Gitalk"><a href="#一、什么是-Gitalk" class="headerlink" title="一、什么是 Gitalk"></a>一、什么是 Gitalk</h2><p>Gitalk 的官方网站地址是: <span class="exturl" data-url="aHR0cHM6Ly9naXRhbGsuZ2l0aHViLmlvLw==">https://gitalk.github.io<i class="fa fa-external-link-alt"></i></span></p>
 <a id="more"></a>
 
 <p><img data-src="https://exception-image-bucket.oss-cn-hangzhou.aliyuncs.com/155877662687759" alt="Gitalk" loading="lazy"></p>
@@ -347,44 +352,44 @@
 <blockquote>
 <p>Gitalk 是一个基于 GitHub Issue 和 Preact 开发的评论插件。</p>
 </blockquote>
-<h2 id="二、Gitalk- 特性"><a href="# 二、Gitalk- 特性" class="headerlink" title="二、Gitalk 特性"></a>二、Gitalk 特性</h2><ul>
+<h2 id="二、Gitalk-特性"><a href="#二、Gitalk-特性" class="headerlink" title="二、Gitalk 特性"></a>二、Gitalk 特性</h2><ul>
 <li>使用 GitHub 登录</li>
 <li>支持多语言 [en, zh-CN, zh-TW, es-ES, fr, ru]</li>
 <li>支持个人或组织</li>
 <li>无干扰模式（设置 distractionFreeMode 为 true 开启）</li>
 <li>快捷键提交评论 （cmd|ctrl + enter）</li>
 </ul>
-<h2 id="三、为什么要使用 -Gitalk"><a href="# 三、为什么要使用 -Gitalk" class="headerlink" title="三、为什么要使用 Gitalk"></a>三、为什么要使用 Gitalk</h2><p>其实国内也有很多易于集成的评论插件，如多说、友言等。国外呢，用的比较多的就是 Dispus 了。这其中小哈使用过的有多说和 Dispus。</p>
+<h2 id="三、为什么要使用-Gitalk"><a href="#三、为什么要使用-Gitalk" class="headerlink" title="三、为什么要使用 Gitalk"></a>三、为什么要使用 Gitalk</h2><p>其实国内也有很多易于集成的评论插件，如多说、友言等。国外呢，用的比较多的就是 Dispus 了。这其中小哈使用过的有多说和 Dispus。</p>
 <p>先说说 Dispus, 由于服务器架设在国外，访问速度首先是个问题，第二个就是注册了，界面全英文，对一些小白想要快速集成评论功能的，也是相当不友好的；另外，Dispus 仅支持国外一些社交账号登录，如 Fackbook, Google, Twritter 等，我想你的个人博客一定还是国内用户访问多些，选它的话，需要思量一下了。</p>
 <p>当然，追求逼格，当我没说，哈哈！</p>
 <p><img data-src="https://exception-image-bucket.oss-cn-hangzhou.aliyuncs.com/155877745701119" alt="当我没说" loading="lazy"></p>
-<p>在来说说国内的多说、友言，集成很方便，由于在国内，访问速度也是棒棒哒。而它们支持国内各种社交账号登录，如 QQ，微博等。也正是因为留言的门槛低了，导致了一些素质较低的键盘侠随意登录评论，你可能花了很长时间写的一篇博文，他们评论两个字：傻 X ！ 就给你怼的怀疑人生！</p>
+<p>在来说说国内的多说、友言，集成很方便，由于在国内，访问速度也是棒棒哒。而它们支持国内各种社交账号登录，如 QQ，微博等。也正是因为留言的门槛低了，导致了一些素质较低的键盘侠随意登录评论，你可能花了很长时间写的一篇博文，他们评论两个字：傻X ！ 就给你怼的怀疑人生！</p>
 <p><img data-src="https://exception-image-bucket.oss-cn-hangzhou.aliyuncs.com/155877780621786" alt="img" loading="lazy"></p>
 <p>所以小哈选择了 Gitalk, 它限制了只有 GitHub 用户才能登录评论，还世界一片清净，哈哈！</p>
 <p><img data-src="https://exception-image-bucket.oss-cn-hangzhou.aliyuncs.com/155877794365187" alt="img" loading="lazy"></p>
-<h2 id="四、Gitalk- 安装"><a href="# 四、Gitalk- 安装" class="headerlink" title="四、Gitalk 安装"></a>四、Gitalk 安装</h2><p>Gitalk 安装有两种方式：</p>
+<h2 id="四、Gitalk-安装"><a href="#四、Gitalk-安装" class="headerlink" title="四、Gitalk 安装"></a>四、Gitalk 安装</h2><p>Gitalk 安装有两种方式：</p>
 <ul>
 <li>直接引入</li>
 </ul>
-<figure class="highlight js"><table><tbody><tr><td class="code"><pre><span class="line">&lt;link rel=<span class="string">"stylesheet"</span> href=<span class="string">"https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"</span>&gt;</span><br><span class="line">&lt;script src=<span class="string">"https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"</span>&gt;&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- or --&gt;</span><br><span class="line"></span><br><span class="line">&lt;link rel=<span class="string">"stylesheet"</span> href=<span class="string">"https://unpkg.com/gitalk/dist/gitalk.css"</span>&gt;</span><br><span class="line">&lt;script src=<span class="string">"https://unpkg.com/gitalk/dist/gitalk.min.js"</span>&gt;&lt;/script&gt;</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&lt;link rel=<span class="string">&quot;stylesheet&quot;</span> href=<span class="string">&quot;https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css&quot;</span>&gt;</span><br><span class="line">&lt;script src=<span class="string">&quot;https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js&quot;</span>&gt;&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- or --&gt;</span><br><span class="line"></span><br><span class="line">&lt;link rel=<span class="string">&quot;stylesheet&quot;</span> href=<span class="string">&quot;https://unpkg.com/gitalk/dist/gitalk.css&quot;</span>&gt;</span><br><span class="line">&lt;script src=<span class="string">&quot;https://unpkg.com/gitalk/dist/gitalk.min.js&quot;</span>&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
 <ul>
 <li>npm 安装</li>
 </ul>
-<figure class="highlight cmd"><table><tbody><tr><td class="code"><pre><span class="line">npm i --save gitalk</span><br><span class="line">import 'gitalk/dist/gitalk.css'</span><br><span class="line">import Gitalk from 'gitalk'</span><br></pre></td></tr></tbody></table></figure>
-<h2 id="五、为你的个站集成 -Gitalk"><a href="# 五、为你的个站集成 -Gitalk" class="headerlink" title="五、为你的个站集成 Gitalk"></a>五、为你的个站集成 Gitalk</h2><p>首先，添加一个 <code>div</code> 容器：</p>
-<figure class="highlight html"><table><tbody><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"gitalk-container"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">npm i --save gitalk</span><br><span class="line">import &#x27;gitalk/dist/gitalk.css&#x27;</span><br><span class="line">import Gitalk from &#x27;gitalk&#x27;</span><br></pre></td></tr></table></figure>
+<h2 id="五、为你的个站集成-Gitalk"><a href="#五、为你的个站集成-Gitalk" class="headerlink" title="五、为你的个站集成 Gitalk"></a>五、为你的个站集成 Gitalk</h2><p>首先，添加一个 <code>div</code> 容器：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;gitalk-container&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>添加下面的 javascript 代码来生成 Gitalk 插件：</p>
-<figure class="highlight js"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> gitalk = <span class="keyword">new</span> Gitalk({</span><br><span class="line">  clientID: <span class="string">'GitHub Application Client ID'</span>,</span><br><span class="line">  clientSecret: <span class="string">'GitHub Application Client Secret'</span>,</span><br><span class="line">  repo: <span class="string">'GitHub repo'</span>,</span><br><span class="line">  owner: <span class="string">'GitHub repo owner'</span>,</span><br><span class="line">  admin: [<span class="string">'GitHub repo owner and collaborators, only these guys can initialize github issues'</span>],</span><br><span class="line">  id: location.pathname,      <span class="comment">// 请确保你的 location 连接小于 50 个字符，否则，插件会生成失败</span></span><br><span class="line">  distractionFreeMode: <span class="literal">false</span>  <span class="comment">// 专注模式</span></span><br><span class="line">})</span><br><span class="line"></span><br><span class="line">gitalk.render(<span class="string">'gitalk-container'</span>)</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> gitalk = <span class="keyword">new</span> Gitalk(&#123;</span><br><span class="line">  clientID: <span class="string">&#x27;GitHub Application Client ID&#x27;</span>,</span><br><span class="line">  clientSecret: <span class="string">&#x27;GitHub Application Client Secret&#x27;</span>,</span><br><span class="line">  repo: <span class="string">&#x27;GitHub repo&#x27;</span>,</span><br><span class="line">  owner: <span class="string">&#x27;GitHub repo owner&#x27;</span>,</span><br><span class="line">  admin: [<span class="string">&#x27;GitHub repo owner and collaborators, only these guys can initialize github issues&#x27;</span>],</span><br><span class="line">  id: location.pathname,      <span class="comment">// 请确保你的 location 连接小于 50 个字符，否则，插件会生成失败</span></span><br><span class="line">  distractionFreeMode: <span class="literal">false</span>  <span class="comment">// 专注模式</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">gitalk.render(<span class="string">&#x27;gitalk-container&#x27;</span>)</span><br></pre></td></tr></table></figure>
 <p>看完上面这段 javascripte 代码，你肯定很疑惑，clientID、clientSecret 是个啥？</p>
 <p>别急！你需要先申请 <strong>GitHub Application</strong>，没有的话，通过这个网址去申请：<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3NldHRpbmdzL2FwcGxpY2F0aW9ucy9uZXc=">https://github.com/settings/applications/new<i class="fa fa-external-link-alt"></i></span>, 跳转页面如下：</p>
 <p><img data-src="https://exception-image-bucket.oss-cn-hangzhou.aliyuncs.com/155877885060577" alt="Github OAuth 应用注册" loading="lazy"></p>
 <p>点击注册：</p>
 <p><img data-src="https://exception-image-bucket.oss-cn-hangzhou.aliyuncs.com/155877889622767" alt="img" loading="lazy"></p>
 <p>填写好 <code>clientID</code> 与 <code>clientSecret</code>， 你还需要单独新建一个仓库，或者一个你已经创建好的仓库名称到 <code>repo</code> 项中。<code>owner</code> 和 <code>admin</code> 填写你的个人 ID 即可。</p>
-<p><img data-src="https://exception-image-bucket.oss-cn-hangzhou.aliyuncs.com/155877931357515" alt="Github 个人 ID" loading="lazy"></p>
+<p><img data-src="https://exception-image-bucket.oss-cn-hangzhou.aliyuncs.com/155877931357515" alt="Github 个人ID" loading="lazy"></p>
 <p>最终，下哈的填写的参数如下，小伙伴们根据自己个人情况填写自己的：</p>
-<figure class="highlight js"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> gitalk = <span class="keyword">new</span> Gitalk({</span><br><span class="line">    clientID: <span class="string">'6b60cd90107d766'</span>,</span><br><span class="line">    clientSecret: <span class="string">'aaef1f960ce2a61393b8f173b672b'</span>,</span><br><span class="line">    repo: <span class="string">'weiwosuoai.github.io'</span>,</span><br><span class="line">    owner: <span class="string">'weiwosuoai'</span>,</span><br><span class="line">    admin: [<span class="string">'weiwosuoai'</span>],</span><br><span class="line">    id: location.pathname,</span><br><span class="line">    distractionFreeMode: <span class="literal">false</span></span><br><span class="line">})</span><br></pre></td></tr></tbody></table></figure>
-<h2 id="六、你可能会碰到的坑"><a href="# 六、你可能会碰到的坑" class="headerlink" title="六、你可能会碰到的坑"></a>六、你可能会碰到的坑</h2><h3 id="6-1- 未找到相关的 issue 评论，请联系 xxx 初始化创建"><a href="#6-1- 未找到相关的 issue 评论，请联系 xxx 初始化创建" class="headerlink" title="6.1 未找到相关的 issue 评论，请联系 xxx 初始化创建"></a>6.1 未找到相关的 issue 评论，请联系 xxx 初始化创建</h3><p><img data-src="https://exception-image-bucket.oss-cn-hangzhou.aliyuncs.com/155877963599027" alt="img" loading="lazy"></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> gitalk = <span class="keyword">new</span> Gitalk(&#123;</span><br><span class="line">    clientID: <span class="string">&#x27;6b60cd90107d766&#x27;</span>,</span><br><span class="line">    clientSecret: <span class="string">&#x27;aaef1f960ce2a61393b8f173b672b&#x27;</span>,</span><br><span class="line">    repo: <span class="string">&#x27;weiwosuoai.github.io&#x27;</span>,</span><br><span class="line">    owner: <span class="string">&#x27;weiwosuoai&#x27;</span>,</span><br><span class="line">    admin: [<span class="string">&#x27;weiwosuoai&#x27;</span>],</span><br><span class="line">    id: location.pathname,</span><br><span class="line">    distractionFreeMode: <span class="literal">false</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="六、你可能会碰到的坑"><a href="#六、你可能会碰到的坑" class="headerlink" title="六、你可能会碰到的坑"></a>六、你可能会碰到的坑</h2><h3 id="6-1-未找到相关的issue评论，请联系xxx初始化创建"><a href="#6-1-未找到相关的issue评论，请联系xxx初始化创建" class="headerlink" title="6.1 未找到相关的issue评论，请联系xxx初始化创建"></a>6.1 未找到相关的issue评论，请联系xxx初始化创建</h3><p><img data-src="https://exception-image-bucket.oss-cn-hangzhou.aliyuncs.com/155877963599027" alt="img" loading="lazy"></p>
 <p>出现这总情况是因为博主未给文章评论初始化，博主只需要登录 GitHub 账户即可。如果你登录后，返回了首页，说明你的配置可能有问题，再检查一下 gitalk 个项参数是否正确。</p>
 <h3 id="6-2-Error-Not-Found"><a href="#6-2-Error-Not-Found" class="headerlink" title="6.2 Error: Not Found."></a>6.2 Error: Not Found.</h3><p><img data-src="https://exception-image-bucket.oss-cn-hangzhou.aliyuncs.com/155877981928794" alt="img" loading="lazy"></p>
 <p>未能正确找到仓库 repo，检查一下你的仓库是否配置正确。</p>
@@ -395,13 +400,13 @@
 <p>PS: label 标签就是文章页面的链接地址，如果地址过长，会导致加载 Gitalk 插件失败。</p>
 </blockquote>
 <p>小哈的解决版本是，对 localtion.pathname 做了一个截取，只取 50 个字符：</p>
-<figure class="highlight js"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">// 截取字符串</span></span><br><span class="line"><span class="keyword">var</span> title = location.pathname.substr(<span class="number">0</span>, <span class="number">50</span>);</span><br><span class="line"><span class="keyword">var</span> gitalk = <span class="keyword">new</span> Gitalk({</span><br><span class="line">    clientID: <span class="string">'6b60cd9017d766'</span>,</span><br><span class="line">    clientSecret: <span class="string">'aaef1f960ce2a6c0bec583e1e1393b8'</span>,</span><br><span class="line">    repo: <span class="string">'weiwosuoai.github.io'</span>,</span><br><span class="line">    owner: <span class="string">'weiwosuoai'</span>,</span><br><span class="line">    admin: [<span class="string">'weiwosuoai'</span>],</span><br><span class="line">    id: title,</span><br><span class="line">    distractionFreeMode: <span class="literal">false</span></span><br><span class="line">})</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 截取字符串</span></span><br><span class="line"><span class="keyword">var</span> title = location.pathname.substr(<span class="number">0</span>, <span class="number">50</span>);</span><br><span class="line"><span class="keyword">var</span> gitalk = <span class="keyword">new</span> Gitalk(&#123;</span><br><span class="line">    clientID: <span class="string">&#x27;6b60cd9017d766&#x27;</span>,</span><br><span class="line">    clientSecret: <span class="string">&#x27;aaef1f960ce2a6c0bec583e1e1393b8&#x27;</span>,</span><br><span class="line">    repo: <span class="string">&#x27;weiwosuoai.github.io&#x27;</span>,</span><br><span class="line">    owner: <span class="string">&#x27;weiwosuoai&#x27;</span>,</span><br><span class="line">    admin: [<span class="string">&#x27;weiwosuoai&#x27;</span>],</span><br><span class="line">    id: title,</span><br><span class="line">    distractionFreeMode: <span class="literal">false</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <p>还有另外一些解决方案，如 MD5 等。可参考链接：<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2dpdGFsay9naXRhbGsvaXNzdWVzLzEwMg==">https://github.com/gitalk/gitalk/issues/102<i class="fa fa-external-link-alt"></i></span></p>
-<h2 id="七、最终效果"><a href="# 七、最终效果" class="headerlink" title="七、最终效果"></a>七、最终效果 </h2><p> 好了，到这里，坑基本上都踩完了，让我们来看看最终的效果咋样！</p>
+<h2 id="七、最终效果"><a href="#七、最终效果" class="headerlink" title="七、最终效果"></a>七、最终效果</h2><p>好了，到这里，坑基本上都踩完了，让我们来看看最终的效果咋样！</p>
 <p><img data-src="https://exception-image-bucket.oss-cn-hangzhou.aliyuncs.com/155878040609134" alt="img" loading="lazy"></p>
 <p>怎么样，还不错哟，赶快集成到你的个人博客当中去吧。</p>
 <p>参考</p>
-<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line"></span><br><span class="line">https://www.cnblogs.com/quanxiaoha/p/10925401.html</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">https:&#x2F;&#x2F;www.cnblogs.com&#x2F;quanxiaoha&#x2F;p&#x2F;10925401.html</span><br></pre></td></tr></table></figure>
 
     </div>
 
@@ -445,8 +450,8 @@
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/Valine%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F.html" rel="next" title="Valine 评论系统">
-                  Valine 评论系统 <i class="fa fa-chevron-right"></i>
+                <a href="/Valine%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F.html" rel="next" title="Valine评论系统">
+                  Valine评论系统 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
@@ -490,7 +495,7 @@
 
 
 <div class="copyright">
-  © 2015 – 
+  &copy; 2015 – 
   <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
@@ -502,7 +507,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">349k</span>
+    <span title="站点总字数">350k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
@@ -515,7 +520,7 @@
 <div><canvas id="snow" style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:99999;pointer-events:none"></canvas></div>
 
 
-<script id="click-show-text" src="/js/click-show-text.js" data-mobile="false" data-text="富强,民主,文明,和谐,自由,平等,公正,法治,爱国,敬业,诚信,友善" data-fontsize="20px" data-random="false" async=""></script>
+<script id="click-show-text" src="/js/click-show-text.js" data-mobile="false" data-text="富强,民主,文明,和谐,自由,平等,公正,法治,爱国,敬业,诚信,友善" data-fontsize="20px" data-random="false" async></script>
 
     </div>
   </footer>
@@ -566,6 +571,5 @@ NexT.utils.loadComments('#lv-container', () => {
 });
 </script>
 
-
-
-</body></html>
+</body>
+</html>

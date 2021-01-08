@@ -1,4 +1,6 @@
-<!DOCTYPE html><html lang="zh-CN"><head>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
@@ -14,12 +16,12 @@
   <meta name="yandex-verification" content="06c62a93328de5da">
   <meta name="baidu-site-verification" content="code-wFDrn4lvkD">
 
+<link rel="stylesheet" href="/css/main.css">
 
+<link rel="stylesheet" href="https://fonts.dogedoge.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
-
-
-
-  
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
@@ -29,7 +31,7 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="linux 命令行 光标移动技巧等">
 <meta property="og:url" content="https://weilining.github.io/186.html">
-<meta property="og:site_name" content="Ln's Blog">
+<meta property="og:site_name" content="Ln&#39;s Blog">
 <meta property="og:description" content="默认">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-12-06T16:32:14.000Z">
@@ -93,13 +95,13 @@
 </noscript>
 
 <link rel="alternate" href="/atom.xml" title="Ln's Blog" type="application/atom+xml">
-<script>function loadCss(l){var d=document,h=d.head,s=d.createElement('link');s.rel='stylesheet';s.href=l;!function e(f){if (d.body)return f();setTimeout(function(){e(f)})}(function(){h.appendChild(s);});}loadCss('/style.css');loadCss('https://fonts.dogedoge.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext');loadCss('//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css');loadCss('//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css');</script><noscript><link rel="stylesheet" href="/style.css"><link rel="stylesheet" href="https://fonts.dogedoge.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&amp;display=swap&amp;subset=latin,latin-ext"><link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css"><link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css"></noscript></head>
+</head>
 
-<body itemscope="" itemtype="http://schema.org/WebPage" class="use-motion">
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
   <div class="headband"></div>
 
   <main class="main">
-    <header class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
     <div class="toggle" aria-label="切换导航栏" role="button">
@@ -150,7 +152,9 @@
     <i class="fa fa-search"></i>
   </span>
   <div class="search-input-container">
-    <input autocomplete="off" autocapitalize="off" maxlength="80" placeholder="搜索..." spellcheck="false" type="search" class="search-input">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
   </div>
   <span class="popup-btn-close" role="button">
     <i class="fa fa-times-circle"></i>
@@ -193,8 +197,9 @@
         <!--/noindex-->
 
         <div class="site-overview-wrap sidebar-panel">
-          <div class="site-author site-overview-item animated" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="Lining Wei" src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/icon.gif">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Lining Wei"
+      src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/icon.gif">
   <p class="site-author-name" itemprop="name">Lining Wei</p>
   <div class="site-description" itemprop="description">算法、技术</div>
 </div>
@@ -203,7 +208,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">240</span>
+          <span class="site-state-item-count">241</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -254,16 +259,16 @@
   
   
 
-  <article itemscope="" itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://weilining.github.io/186.html">
 
-    <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/weilining/img@main/img/icon.gif">
       <meta itemprop="name" content="Lining Wei">
       <meta itemprop="description" content="算法、技术">
     </span>
 
-    <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Ln's Blog">
     </span>
       <header class="post-header">
@@ -286,7 +291,7 @@
         <i class="far fa-folder"></i>
       </span>
       <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
           <a href="/categories/%E9%BB%98%E8%AE%A4/" itemprop="url" rel="index"><span itemprop="name">默认</span></a>
         </span>
     </span>
@@ -305,7 +310,7 @@
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
-      <span class="post-meta-item-text">阅读时长 ≈</span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
       <span>1 分钟</span>
     </span>
 </div>
@@ -318,16 +323,16 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">ctrl a # 跳头</span><br><span class="line">ctrl e # 跳尾</span><br><span class="line">ctrl u # 删光标前内容</span><br></pre></td></tr></tbody></table></figure>
+        <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ctrl a # 跳头</span><br><span class="line">ctrl e # 跳尾</span><br><span class="line">ctrl u # 删光标前内容</span><br></pre></td></tr></table></figure>
 
 
 
 
 <a id="more"></a>
 
-<p> 看一个真正的专家操作命令行绝对是一种很好的体验 - 光标在单词之间来回穿梭，命令行不同的滚动。<br>在这里强烈建立适应 GUI 节目的开发者尝试一下在提示符下面工作。<br>但是事情也不是那么简单，还是需要知道“如何去做”。在单词之间跳转，使用 Ctrl+ 左右键。</p>
-<p>Ctrl+a 跳到本行的行首，<br>Ctrl+e 则跳到页尾。<br>Ctrl+u 删除当前光标前面的文字 <br>ctrl+k- 删除当前光标后面的文字<br>Ctrl+w 和 Alt+d- 对于当前的单词进行删除操作，w 删除光标前面的单词的字符，d 则删除后面的字符<br>Alt+Backsapce- 删除当前光标后面的单词，<br> 如果删除错误，使用 Ctrl+y 进行恢复 Ctrl+L 进行清屏操作</p>
-<p>ctrl+a: 光标移到行首。<br>ctrl+b: 光标左移一个字母<br>ctrl+c: 杀死当前进程。<br>ctrl+d: 退出当前 Shell。<br>ctrl+e: 光标移到行尾。<br>ctrl+h: 删除光标前一个字符，同 backspace 键相同。<br>ctrl+k: 清除光标后至行尾的内容。<br>ctrl+l: 清屏，相当于 clear。<br>ctrl+r: 搜索之前打过的命令。会有一个提示，根据你输入的关键字进行搜索 bash 的 history<br>ctrl+u: 清除光标前至行首间的所有内容。<br>ctrl+w: 移除光标前的一个单词<br>ctrl+t: 交换光标位置前的两个字符<br>ctrl+y: 粘贴或者恢复上次的删除<br>ctrl+d: 删除光标所在字母; 注意和 backspace 以及 ctrl+h 的区别，这 2 个是删除光标前的字符<br>ctrl+f: 光标右移<br>ctrl+z : 把当前进程转到后台运行，使用’ fg ‘命令恢复。比如 top -d1 然后 ctrl+z ，到后台，然后 fg, 重新恢复<br>esc 组合<br>esc+d: 删除光标后的一个词<br>esc+f: 往右跳一个词<br>esc+b: 往左跳一个词<br>esc+t: 交换光标位置前的两个单词。</p>
+<p> 看一个真正的专家操作命令行绝对是一种很好的体验-光标在单词之间来回穿梭，命令行不同的滚动。<br>在这里强烈建立适应GUI节目的开发者尝试一下在提示符下面工作。<br>但是事情也不是那么简单，还是需要知道“如何去做”。在单词之间跳转，使用Ctrl+左右键。</p>
+<p>Ctrl+a跳到本行的行首，<br>Ctrl+e则跳到页尾。<br>Ctrl+u删除当前光标前面的文字<br>ctrl+k-删除当前光标后面的文字<br>Ctrl+w和Alt+d-对于当前的单词进行删除操作，w删除光标前面的单词的字符，d则删除后面的字符<br>Alt+Backsapce-删除当前光标后面的单词，<br>如果删除错误，使用Ctrl+y进行恢复Ctrl+L进行清屏操作</p>
+<p>ctrl+a:光标移到行首。<br>ctrl+b:光标左移一个字母<br>ctrl+c:杀死当前进程。<br>ctrl+d:退出当前 Shell。<br>ctrl+e:光标移到行尾。<br>ctrl+h:删除光标前一个字符，同 backspace 键相同。<br>ctrl+k:清除光标后至行尾的内容。<br>ctrl+l:清屏，相当于clear。<br>ctrl+r:搜索之前打过的命令。会有一个提示，根据你输入的关键字进行搜索bash的history<br>ctrl+u: 清除光标前至行首间的所有内容。<br>ctrl+w: 移除光标前的一个单词<br>ctrl+t: 交换光标位置前的两个字符<br>ctrl+y: 粘贴或者恢复上次的删除<br>ctrl+d: 删除光标所在字母;注意和backspace以及ctrl+h的区别，这2个是删除光标前的字符<br>ctrl+f: 光标右移<br>ctrl+z : 把当前进程转到后台运行，使用’ fg ‘命令恢复。比如top -d1 然后ctrl+z ，到后台，然后fg,重新恢复<br>esc组合<br>esc+d: 删除光标后的一个词<br>esc+f: 往右跳一个词<br>esc+b: 往左跳一个词<br>esc+t: 交换光标位置前的两个单词。</p>
 
     </div>
 
@@ -366,13 +371,13 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/185.html" rel="prev" title="git 仓库删除所有提交历史记录，成为一个干净的新仓库">
-                  <i class="fa fa-chevron-left"></i> git 仓库删除所有提交历史记录，成为一个干净的新仓库
+                <a href="/185.html" rel="prev" title="git仓库删除所有提交历史记录，成为一个干净的新仓库">
+                  <i class="fa fa-chevron-left"></i> git仓库删除所有提交历史记录，成为一个干净的新仓库
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/187.html" rel="next" title="在 Mac OS X 上开启 ssh 服务">
-                  在 Mac OS X 上开启 ssh 服务 <i class="fa fa-chevron-right"></i>
+                <a href="/187.html" rel="next" title="在Mac OS X上开启ssh服务">
+                  在Mac OS X上开启ssh服务 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
@@ -416,7 +421,7 @@
 
 
 <div class="copyright">
-  © 2015 – 
+  &copy; 2015 – 
   <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
@@ -428,7 +433,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">349k</span>
+    <span title="站点总字数">350k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
@@ -441,7 +446,7 @@
 <div><canvas id="snow" style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:99999;pointer-events:none"></canvas></div>
 
 
-<script id="click-show-text" src="/js/click-show-text.js" data-mobile="false" data-text="富强,民主,文明,和谐,自由,平等,公正,法治,爱国,敬业,诚信,友善" data-fontsize="20px" data-random="false" async=""></script>
+<script id="click-show-text" src="/js/click-show-text.js" data-mobile="false" data-text="富强,民主,文明,和谐,自由,平等,公正,法治,爱国,敬业,诚信,友善" data-fontsize="20px" data-random="false" async></script>
 
     </div>
   </footer>
@@ -492,6 +497,5 @@ NexT.utils.loadComments('#lv-container', () => {
 });
 </script>
 
-
-
-</body></html>
+</body>
+</html>

@@ -1,4 +1,6 @@
-<!DOCTYPE html><html lang="zh-CN"><head>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
@@ -14,12 +16,12 @@
   <meta name="yandex-verification" content="06c62a93328de5da">
   <meta name="baidu-site-verification" content="code-wFDrn4lvkD">
 
+<link rel="stylesheet" href="/css/main.css">
 
+<link rel="stylesheet" href="https://fonts.dogedoge.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
-
-
-
-  
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
@@ -29,7 +31,7 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="Github 通过 ImgBot 优化图片的方法">
 <meta property="og:url" content="https://weilining.github.io/122.html">
-<meta property="og:site_name" content="Ln's Blog">
+<meta property="og:site_name" content="Ln&#39;s Blog">
 <meta property="og:description" content="默认">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://weilining.github.io/122/1365470-20200203203153734-1938623814.png">
@@ -102,13 +104,13 @@
 </noscript>
 
 <link rel="alternate" href="/atom.xml" title="Ln's Blog" type="application/atom+xml">
-<script>function loadCss(l){var d=document,h=d.head,s=d.createElement('link');s.rel='stylesheet';s.href=l;!function e(f){if (d.body)return f();setTimeout(function(){e(f)})}(function(){h.appendChild(s);});}loadCss('/style.css');loadCss('https://fonts.dogedoge.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext');loadCss('//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css');loadCss('//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css');</script><noscript><link rel="stylesheet" href="/style.css"><link rel="stylesheet" href="https://fonts.dogedoge.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&amp;display=swap&amp;subset=latin,latin-ext"><link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css"><link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css"></noscript></head>
+</head>
 
-<body itemscope="" itemtype="http://schema.org/WebPage" class="use-motion">
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
   <div class="headband"></div>
 
   <main class="main">
-    <header class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
     <div class="toggle" aria-label="切换导航栏" role="button">
@@ -159,7 +161,9 @@
     <i class="fa fa-search"></i>
   </span>
   <div class="search-input-container">
-    <input autocomplete="off" autocapitalize="off" maxlength="80" placeholder="搜索..." spellcheck="false" type="search" class="search-input">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
   </div>
   <span class="popup-btn-close" role="button">
     <i class="fa fa-times-circle"></i>
@@ -198,13 +202,14 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%80%E4%BB%8B"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%20ImgBot"><span class="nav-number">2.</span> <span class="nav-text">安装 ImgBot</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%20ImgBot%20%E5%8E%8B%E7%BC%A9%E5%9B%BE%E7%89%87"><span class="nav-number">3.</span> <span class="nav-text">使用 ImgBot 压缩图片 </span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AE%20ImgBot"><span class="nav-number">4.</span> <span class="nav-text">设置 ImgBot</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Github-Actions%20%E8%87%AA%E5%8A%A8%E5%90%88%E5%B9%B6%20ImgBot%20%E7%9A%84%20pr"><span class="nav-number">5.</span> <span class="nav-text">Github Actions 自动合并 ImgBot 的 pr</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%80%E4%BB%8B"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85ImgBot"><span class="nav-number">2.</span> <span class="nav-text">安装ImgBot</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8ImgBot%E5%8E%8B%E7%BC%A9%E5%9B%BE%E7%89%87"><span class="nav-number">3.</span> <span class="nav-text">使用ImgBot压缩图片</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AEImgBot"><span class="nav-number">4.</span> <span class="nav-text">设置ImgBot</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Github-Actions%E8%87%AA%E5%8A%A8%E5%90%88%E5%B9%B6ImgBot%E7%9A%84pr"><span class="nav-number">5.</span> <span class="nav-text">Github Actions自动合并ImgBot的pr</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
         <div class="site-overview-wrap sidebar-panel">
-          <div class="site-author site-overview-item animated" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="Lining Wei" src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/icon.gif">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Lining Wei"
+      src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/icon.gif">
   <p class="site-author-name" itemprop="name">Lining Wei</p>
   <div class="site-description" itemprop="description">算法、技术</div>
 </div>
@@ -213,7 +218,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">240</span>
+          <span class="site-state-item-count">241</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -264,16 +269,16 @@
   
   
 
-  <article itemscope="" itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://weilining.github.io/122.html">
 
-    <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/weilining/img@main/img/icon.gif">
       <meta itemprop="name" content="Lining Wei">
       <meta itemprop="description" content="算法、技术">
     </span>
 
-    <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Ln's Blog">
     </span>
       <header class="post-header">
@@ -296,7 +301,7 @@
         <i class="far fa-folder"></i>
       </span>
       <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
           <a href="/categories/%E9%BB%98%E8%AE%A4/" itemprop="url" rel="index"><span itemprop="name">默认</span></a>
         </span>
     </span>
@@ -315,7 +320,7 @@
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
-      <span class="post-meta-item-text">阅读时长 ≈</span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
       <span>2 分钟</span>
     </span>
 </div>
@@ -328,13 +333,13 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>我在逛 Github 学生优惠包是看到 <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL21hcmtldHBsYWNlL2ltZ2JvdA==">ImgBot<i class="fa fa-external-link-alt"></i></span>，它说能自己优化图像，于是尝试了一下。</p>
+        <p>我在逛Github学生优惠包是看到 <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL21hcmtldHBsYWNlL2ltZ2JvdA==">ImgBot<i class="fa fa-external-link-alt"></i></span>，它说能自己优化图像，于是尝试了一下。</p>
 <a id="more"></a>
 
-<h2 id="简介"><a href="# 简介" class="headerlink" title="简介"></a>简介</h2><blockquote>
+<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><blockquote>
 <p>ImgBot 是一个为你节省时间优化图片的机器人。优化图片意味着不牺牲图片质量和更小的文件大小。 安装后不久，你会收到一个优化图片的 pull request。合并这个 pull request 就行了！Imgbot 会伴随你的工作，保持图片的优化。 ImgBot 默认使用无损压缩。</p>
 </blockquote>
-<h2 id="安装 ImgBot"><a href="# 安装 ImgBot" class="headerlink" title="安装 ImgBot"></a>安装 ImgBot</h2><p>因为我已经安装了 ImgBot 了，所以文字与截图上的可能有点出入</p>
+<h2 id="安装ImgBot"><a href="#安装ImgBot" class="headerlink" title="安装ImgBot"></a>安装ImgBot</h2><p>因为我已经安装了 ImgBot 了，所以文字与截图上的可能有点出入</p>
 <p>首先来到 <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL21hcmtldHBsYWNlL2ltZ2JvdA==">GitHub Market<i class="fa fa-external-link-alt"></i></span>，点击 <code>Set up a free trial</code></p>
 <p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://img2018.cnblogs.com/i-beta/1365470/202002/1365470-20200203203153734-1938623814.png"><img data-src="/122/1365470-20200203203153734-1938623814.png" alt="img" loading="lazy"></a></p>
 <p>然后选择 <code>Open Source</code> (也就是免费的那个方案)，然后点击 <code>Install it for free</code></p>
@@ -343,26 +348,26 @@
 <p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://img2018.cnblogs.com/i-beta/1365470/202002/1365470-20200203203321102-1314390488.png"><img data-src="/122/1365470-20200203203321102-1314390488.png" alt="img" loading="lazy"></a></p>
 <p>看到这个页面就说明 ImgBot 服务已经成功的安装到你的 GitHub 账户上了</p>
 <p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://img2018.cnblogs.com/i-beta/1365470/202002/1365470-20200203203349401-472036306.png"><img data-src="/122/1365470-20200203203349401-472036306.png" alt="img" loading="lazy"></a></p>
-<h2 id="使用 ImgBot 压缩图片"><a href="# 使用 ImgBot 压缩图片" class="headerlink" title="使用 ImgBot 压缩图片"></a>使用 ImgBot 压缩图片 </h2><p> 将 ImgBot 服务安装到你的 GitHub 账户上后，ImgBot 就会自动递归寻找并压缩 Git 仓库中的图片文件 (如果图片比较多，这一步可能回花费几天的时间)，压缩好后会向你提一个像这样的 PR。</p>
-<p>确保你选的仓库有图片，不然不会收到 PR。</p>
+<h2 id="使用ImgBot压缩图片"><a href="#使用ImgBot压缩图片" class="headerlink" title="使用ImgBot压缩图片"></a>使用ImgBot压缩图片</h2><p>将 ImgBot 服务安装到你的 GitHub 账户上后，ImgBot 就会自动递归寻找并压缩 Git 仓库中的图片文件 (如果图片比较多，这一步可能回花费几天的时间)，压缩好后会向你提一个像这样的 PR。</p>
+<p>确保你选的仓库有图片，不然不会收到PR。</p>
 <p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://img2018.cnblogs.com/i-beta/1365470/202002/1365470-20200203203534979-1011170824.png"><img data-src="/122/1365470-20200203203534979-1011170824.png" alt="img" loading="lazy"></a></p>
 <p>你可以点开 <code>Datails</code> 查看压缩前后大小、压缩率等细节，确认无误后，点击 <code>Merge pull request</code> 开始合并</p>
 <p>再输入 commit 信息，点击 <code>Confirm merge</code></p>
-<h2 id="设置 ImgBot"><a href="# 设置 ImgBot" class="headerlink" title="设置 ImgBot"></a>设置 ImgBot</h2><p>ImgBot 默认是无损压缩的，可以按需进行 <span class="exturl" data-url="aHR0cHM6Ly9pbWdib3QubmV0L2RvY3MvI2NvbmZpZ3VyYXRpb24="> 配置 <i class="fa fa-external-link-alt"></i></span> 为有损压缩，对文件大小进一步压榨。配置方法是在根目录下添加 <code>.imgbotconfig</code> 文件</p>
+<h2 id="设置ImgBot"><a href="#设置ImgBot" class="headerlink" title="设置ImgBot"></a>设置ImgBot</h2><p>ImgBot 默认是无损压缩的，可以按需进行<span class="exturl" data-url="aHR0cHM6Ly9pbWdib3QubmV0L2RvY3MvI2NvbmZpZ3VyYXRpb24=">配置<i class="fa fa-external-link-alt"></i></span>为有损压缩，对文件大小进一步压榨。配置方法是在根目录下添加 <code>.imgbotconfig</code> 文件</p>
 <p>目前有三个配置项：</p>
 <ul>
 <li><p>提交 PR 的频率：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">"schedule"</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&quot;schedule&quot;</span><br></pre></td></tr></table></figure>
 <ul>
 <li>选项：<code>daily</code> | <code>weekly</code> | <code>monthly</code></li>
 </ul>
 </li>
-<li><p>排除的文件：<code>"ignoredFiles"</code></p>
+<li><p>排除的文件：<code>&quot;ignoredFiles&quot;</code></p>
 <ul>
 <li>选项：被排除文件的路径，支持通配符<code>*</code></li>
 </ul>
 </li>
-<li><p>是否使用有损压缩方式 (压缩率更高)：<code>"aggressiveCompression"</code></p>
+<li><p>是否使用有损压缩方式 (压缩率更高)：<code>&quot;aggressiveCompression&quot;</code></p>
 <ul>
 <li>选项：<code>true</code> | <code>false</code></li>
 </ul>
@@ -370,17 +375,17 @@
 </ul>
 <p>以下是较为完整的例子：</p>
 <p><a href="javascript:void(0);" rel="external nofollow noreferrer"><img data-src="/122/copycode-20201120014050171.gif" alt="复制代码" loading="lazy"></a></p>
-<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">{</span><br><span class="line">    "schedule": "daily", // daily|weekly|monthly</span><br><span class="line">    "ignoredFiles": [</span><br><span class="line">        "*.jpg",                   // ignore by extension</span><br><span class="line">        "image1.png",              // ignore by filename</span><br><span class="line">        "public/special_images/*", // ignore by folderpath</span><br><span class="line">    ],</span><br><span class="line">    "aggressiveCompression": "true" // true|false</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;schedule&quot;: &quot;daily&quot;, &#x2F;&#x2F; daily|weekly|monthly</span><br><span class="line">    &quot;ignoredFiles&quot;: [</span><br><span class="line">        &quot;*.jpg&quot;,                   &#x2F;&#x2F; ignore by extension</span><br><span class="line">        &quot;image1.png&quot;,              &#x2F;&#x2F; ignore by filename</span><br><span class="line">        &quot;public&#x2F;special_images&#x2F;*&quot;, &#x2F;&#x2F; ignore by folderpath</span><br><span class="line">    ],</span><br><span class="line">    &quot;aggressiveCompression&quot;: &quot;true&quot; &#x2F;&#x2F; true|false</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><a href="javascript:void(0);" rel="external nofollow noreferrer"><img data-src="/122/copycode-20201120014050171.gif" alt="复制代码" loading="lazy"></a></p>
-<p>还有更多配置项，完整说明请见 <span class="exturl" data-url="aHR0cHM6Ly9pbWdib3QubmV0L2RvY3MvI2NvbmZpZ3VyYXRpb24="> 官方文档<i class="fa fa-external-link-alt"></i></span>。</p>
-<h2 id="Github-Actions 自动合并 ImgBot 的 pr"><a href="#Github-Actions 自动合并 ImgBot 的 pr" class="headerlink" title="Github Actions 自动合并 ImgBot 的 pr"></a>Github Actions 自动合并 ImgBot 的 pr</h2><p>上传图片后，很快 ImgBot 就会对图片进行压缩，并在 github 的仓库中发起一个 pull request。手动点击合并按钮对我来说实在是太麻烦了，能不能自动搞呢。有了 actions 没啥不能的，</p>
+<p>还有更多配置项，完整说明请见<span class="exturl" data-url="aHR0cHM6Ly9pbWdib3QubmV0L2RvY3MvI2NvbmZpZ3VyYXRpb24=">官方文档<i class="fa fa-external-link-alt"></i></span>。</p>
+<h2 id="Github-Actions自动合并ImgBot的pr"><a href="#Github-Actions自动合并ImgBot的pr" class="headerlink" title="Github Actions自动合并ImgBot的pr"></a>Github Actions自动合并ImgBot的pr</h2><p>上传图片后，很快 ImgBot 就会对图片进行压缩，并在 github 的仓库中发起一个 pull request。手动点击合并按钮对我来说实在是太麻烦了，能不能自动搞呢。有了 actions 没啥不能的，</p>
 <p>在 github actions 配置新增一个文件 .github/workflows/merge.yml。</p>
 <p><a href="javascript:void(0);" rel="external nofollow noreferrer"><img data-src="/122/copycode-20201120014050171.gif" alt="复制代码" loading="lazy"></a></p>
-<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">name: Merge Imgbot</span><br><span class="line"></span><br><span class="line">on:</span><br><span class="line">  pull_request:</span><br><span class="line">    types:</span><br><span class="line">      - opened</span><br><span class="line">      - ready_for_review</span><br><span class="line">  pull_request_review:</span><br><span class="line">    types:</span><br><span class="line">      - submitted</span><br><span class="line">  status: {}</span><br><span class="line"></span><br><span class="line">jobs:</span><br><span class="line">  automerge:</span><br><span class="line">    runs-on: ubuntu-latest</span><br><span class="line">    steps:</span><br><span class="line">      - name: automerge</span><br><span class="line">        uses: "pascalgn/automerge-action@v0.6.1"</span><br><span class="line">        env:</span><br><span class="line">          GITHUB_TOKEN: "${{ secrets.GIT_MERGE_TOKEN }}"</span><br><span class="line">          MERGE_LABELS: ""</span><br><span class="line">          MERGE_METHOD: "squash"</span><br><span class="line">          MERGE_COMMIT_MESSAGE: "pull-request-description"</span><br><span class="line">          MERGE_FORKS: "false"</span><br><span class="line">          MERGE_RETRIES: "2"</span><br><span class="line">          MERGE_RETRY_SLEEP: "10000"</span><br><span class="line">          UPDATE_METHOD: "rebase"</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">name: Merge Imgbot</span><br><span class="line"></span><br><span class="line">on:</span><br><span class="line">  pull_request:</span><br><span class="line">    types:</span><br><span class="line">      - opened</span><br><span class="line">      - ready_for_review</span><br><span class="line">  pull_request_review:</span><br><span class="line">    types:</span><br><span class="line">      - submitted</span><br><span class="line">  status: &#123;&#125;</span><br><span class="line"></span><br><span class="line">jobs:</span><br><span class="line">  automerge:</span><br><span class="line">    runs-on: ubuntu-latest</span><br><span class="line">    steps:</span><br><span class="line">      - name: automerge</span><br><span class="line">        uses: &quot;pascalgn&#x2F;automerge-action@v0.6.1&quot;</span><br><span class="line">        env:</span><br><span class="line">          GITHUB_TOKEN: &quot;$&#123;&#123; secrets.GIT_MERGE_TOKEN &#125;&#125;&quot;</span><br><span class="line">          MERGE_LABELS: &quot;&quot;</span><br><span class="line">          MERGE_METHOD: &quot;squash&quot;</span><br><span class="line">          MERGE_COMMIT_MESSAGE: &quot;pull-request-description&quot;</span><br><span class="line">          MERGE_FORKS: &quot;false&quot;</span><br><span class="line">          MERGE_RETRIES: &quot;2&quot;</span><br><span class="line">          MERGE_RETRY_SLEEP: &quot;10000&quot;</span><br><span class="line">          UPDATE_METHOD: &quot;rebase&quot;</span><br></pre></td></tr></table></figure>
 <p><a href="javascript:void(0);" rel="external nofollow noreferrer"><img data-src="/122/copycode-20201120014050171.gif" alt="复制代码" loading="lazy"></a></p>
 <p>这个 actions 配置中用到了 pascalgn/automerge-action，简化了对于 pull request 的操作。 </p>
-<p>这里用到了 secrets 保存 github access token，和上一步配置 PicGo 用到的 token 一样，没用过的话可在账号设置 Setting--&gt;Developersettings--&gt;Personal access tokens 生成（注意不是项目的 Settings）。</p>
-<p>将这个 token 填到项目 Settings--&gt;Secrets，名称为 GIT_MERGE_TOKEN。 </p>
+<p>这里用到了 secrets 保存 github access token，和上一步配置 PicGo 用到的 token 一样，没用过的话可在账号设置Setting--&gt;Developersettings--&gt;Personal access tokens 生成（注意不是项目的Settings）。</p>
+<p>将这个token填到项目Settings--&gt;Secrets，名称为GIT_MERGE_TOKEN。 </p>
 
     </div>
 
@@ -424,8 +429,8 @@
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/123.html" rel="next" title="一条命令解决 git 各种疑难杂症">
-                  一条命令解决 git 各种疑难杂症 <i class="fa fa-chevron-right"></i>
+                <a href="/123.html" rel="next" title="一条命令解决git各种疑难杂症">
+                  一条命令解决git各种疑难杂症 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
@@ -469,7 +474,7 @@
 
 
 <div class="copyright">
-  © 2015 – 
+  &copy; 2015 – 
   <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
@@ -481,7 +486,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">349k</span>
+    <span title="站点总字数">350k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
@@ -494,7 +499,7 @@
 <div><canvas id="snow" style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:99999;pointer-events:none"></canvas></div>
 
 
-<script id="click-show-text" src="/js/click-show-text.js" data-mobile="false" data-text="富强,民主,文明,和谐,自由,平等,公正,法治,爱国,敬业,诚信,友善" data-fontsize="20px" data-random="false" async=""></script>
+<script id="click-show-text" src="/js/click-show-text.js" data-mobile="false" data-text="富强,民主,文明,和谐,自由,平等,公正,法治,爱国,敬业,诚信,友善" data-fontsize="20px" data-random="false" async></script>
 
     </div>
   </footer>
@@ -545,6 +550,5 @@ NexT.utils.loadComments('#lv-container', () => {
 });
 </script>
 
-
-
-</body></html>
+</body>
+</html>

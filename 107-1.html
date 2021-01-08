@@ -1,4 +1,6 @@
-<!DOCTYPE html><html lang="zh-CN"><head>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
@@ -14,12 +16,12 @@
   <meta name="yandex-verification" content="06c62a93328de5da">
   <meta name="baidu-site-verification" content="code-wFDrn4lvkD">
 
+<link rel="stylesheet" href="/css/main.css">
 
+<link rel="stylesheet" href="https://fonts.dogedoge.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
-
-
-
-  
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
@@ -29,7 +31,7 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="将 Valine 切换至 leancloud 国际版">
 <meta property="og:url" content="https://weilining.github.io/107-1.html">
-<meta property="og:site_name" content="Ln's Blog">
+<meta property="og:site_name" content="Ln&#39;s Blog">
 <meta property="og:description" content="默认">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-10-07T06:24:48.000Z">
@@ -93,13 +95,13 @@
 </noscript>
 
 <link rel="alternate" href="/atom.xml" title="Ln's Blog" type="application/atom+xml">
-<script>function loadCss(l){var d=document,h=d.head,s=d.createElement('link');s.rel='stylesheet';s.href=l;!function e(f){if (d.body)return f();setTimeout(function(){e(f)})}(function(){h.appendChild(s);});}loadCss('/style.css');loadCss('https://fonts.dogedoge.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext');loadCss('//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css');loadCss('//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css');</script><noscript><link rel="stylesheet" href="/style.css"><link rel="stylesheet" href="https://fonts.dogedoge.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&amp;display=swap&amp;subset=latin,latin-ext"><link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css"><link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css"></noscript></head>
+</head>
 
-<body itemscope="" itemtype="http://schema.org/WebPage" class="use-motion">
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
   <div class="headband"></div>
 
   <main class="main">
-    <header class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
     <div class="toggle" aria-label="切换导航栏" role="button">
@@ -150,7 +152,9 @@
     <i class="fa fa-search"></i>
   </span>
   <div class="search-input-container">
-    <input autocomplete="off" autocapitalize="off" maxlength="80" placeholder="搜索..." spellcheck="false" type="search" class="search-input">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
   </div>
   <span class="popup-btn-close" role="button">
     <i class="fa fa-times-circle"></i>
@@ -189,13 +193,14 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B3%A8%E5%86%8C%20-LC-%20%E5%9B%BD%E9%99%85%E7%89%88%E8%B4%A6%E5%8F%B7"><span class="nav-number">1.</span> <span class="nav-text">注册 LC 国际版账号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%BC%E5%87%BA%20-Valine-%20%E6%95%B0%E6%8D%AE"><span class="nav-number">2.</span> <span class="nav-text">导出 Valine 数据 </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%20-hexo-%20%E4%B8%AD%E7%9A%84%20-Valine-%20%E8%AE%BE%E7%BD%AE"><span class="nav-number">3.</span> <span class="nav-text">修改 hexo 中的 Valine 设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B0%86%E5%8E%86%E5%8F%B2%E8%AF%84%E8%AE%BA%E5%AF%BC%E5%85%A5%E8%87%B3%E5%9B%BD%E9%99%85%E7%89%88"><span class="nav-number">4.</span> <span class="nav-text">将历史评论导入至国际版 </span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B3%A8%E5%86%8C-LC-%E5%9B%BD%E9%99%85%E7%89%88%E8%B4%A6%E5%8F%B7"><span class="nav-number">1.</span> <span class="nav-text">注册 LC 国际版账号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%BC%E5%87%BA-Valine-%E6%95%B0%E6%8D%AE"><span class="nav-number">2.</span> <span class="nav-text">导出 Valine 数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9-hexo-%E4%B8%AD%E7%9A%84-Valine-%E8%AE%BE%E7%BD%AE"><span class="nav-number">3.</span> <span class="nav-text">修改 hexo 中的 Valine 设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B0%86%E5%8E%86%E5%8F%B2%E8%AF%84%E8%AE%BA%E5%AF%BC%E5%85%A5%E8%87%B3%E5%9B%BD%E9%99%85%E7%89%88"><span class="nav-number">4.</span> <span class="nav-text">将历史评论导入至国际版</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
         <div class="site-overview-wrap sidebar-panel">
-          <div class="site-author site-overview-item animated" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="Lining Wei" src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/icon.gif">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Lining Wei"
+      src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/icon.gif">
   <p class="site-author-name" itemprop="name">Lining Wei</p>
   <div class="site-description" itemprop="description">算法、技术</div>
 </div>
@@ -204,7 +209,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">240</span>
+          <span class="site-state-item-count">241</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -255,16 +260,16 @@
   
   
 
-  <article itemscope="" itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://weilining.github.io/107-1.html">
 
-    <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/weilining/img@main/img/icon.gif">
       <meta itemprop="name" content="Lining Wei">
       <meta itemprop="description" content="算法、技术">
     </span>
 
-    <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Ln's Blog">
     </span>
       <header class="post-header">
@@ -287,7 +292,7 @@
         <i class="far fa-folder"></i>
       </span>
       <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
           <a href="/categories/%E9%BB%98%E8%AE%A4/" itemprop="url" rel="index"><span itemprop="name">默认</span></a>
         </span>
     </span>
@@ -306,7 +311,7 @@
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
-      <span class="post-meta-item-text">阅读时长 ≈</span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
       <span>1 分钟</span>
     </span>
 </div>
@@ -324,18 +329,18 @@
 
 
 
-<h3 id="注册 -LC- 国际版账号"><a href="# 注册 -LC- 国际版账号" class="headerlink" title="注册 LC 国际版账号"></a>注册 LC 国际版账号</h3><p>　　貌似 18 年 10 月之前的国内账号可以直接登录，我就比较倒霉了，刚好是 10 月底注册的 23333 所以还是要重新注册一个账号。<br>　　国际版网址：</p>
+<h3 id="注册-LC-国际版账号"><a href="#注册-LC-国际版账号" class="headerlink" title="注册 LC 国际版账号"></a>注册 LC 国际版账号</h3><p>　　貌似 18 年 10 月之前的国内账号可以直接登录，我就比较倒霉了，刚好是 10 月底注册的 23333 所以还是要重新注册一个账号。<br>　　国际版网址：</p>
 <ul>
 <li><span class="exturl" data-url="aHR0cHM6Ly9sZWFuY2xvdWQuYXBwLw==">https://leancloud.app<i class="fa fa-external-link-alt"></i></span></li>
 </ul>
 <p>　　虽然首页是英文，但是你点进去注册的话还是全中文界面，不要被吓到【可能被吓到的只有我而已吧 x<br>　　第二个惊吓是如果你注册的邮箱绑定了 gravatar 貌似会直接被识别？我又吓了一跳 x</p>
-<h3 id="导出 -Valine- 数据"><a href="# 导出 -Valine- 数据" class="headerlink" title="导出 Valine 数据"></a>导出 Valine 数据 </h3><p>　　进入 LC 后台首页，点击应用右上角的齿轮进入设置页面，选择倒数第二项 <code>【数据导出】</code> 。<br>　　然后去掉 <code> 限定导出数据起止日期 </code>，勾选 <code> 限定 Class</code>，在 Class 中选择 <code>_User</code>（用户数据）和 <code>Comment</code>（评论数据），点击【导出】后在你的注册邮箱中就可以接收到对应数据的压缩包。</p>
-<h3 id="修改 -hexo- 中的 -Valine- 设置"><a href="# 修改 -hexo- 中的 -Valine- 设置" class="headerlink" title="修改 hexo 中的 Valine 设置"></a>修改 hexo 中的 Valine 设置</h3><p>　　在国际版的 LC 中新建应用，为了防止你自己搞混，我建议两个应用命名成不同的名字，毕竟这两个页面的 UI 一模一样<br>　　我用的是 Next 主题已经集成了 Valine 评论插件，所以在主题配置文件里直接修改 appid 和 appkey 即可。两个数值的获取可以参考 Valine 的官方教程↓</p>
+<h3 id="导出-Valine-数据"><a href="#导出-Valine-数据" class="headerlink" title="导出 Valine 数据"></a>导出 Valine 数据</h3><p>　　进入 LC 后台首页，点击应用右上角的齿轮进入设置页面，选择倒数第二项 <code>【数据导出】</code> 。<br>　　然后去掉 <code>限定导出数据起止日期</code>，勾选 <code>限定 Class</code>，在 Class 中选择 <code>_User</code>（用户数据）和 <code>Comment</code>（评论数据），点击【导出】后在你的注册邮箱中就可以接收到对应数据的压缩包。</p>
+<h3 id="修改-hexo-中的-Valine-设置"><a href="#修改-hexo-中的-Valine-设置" class="headerlink" title="修改 hexo 中的 Valine 设置"></a>修改 hexo 中的 Valine 设置</h3><p>　　在国际版的 LC 中新建应用，为了防止你自己搞混，我建议两个应用命名成不同的名字，毕竟这两个页面的 UI 一模一样<br>　　我用的是 Next 主题已经集成了 Valine 评论插件，所以在主题配置文件里直接修改 appid 和 appkey 即可。两个数值的获取可以参考 Valine 的官方教程↓</p>
 <ul>
 <li><span class="exturl" data-url="aHR0cHM6Ly92YWxpbmUuanMub3JnL3F1aWNrc3RhcnQuaHRtbA==">https://valine.js.org/quickstart.html<i class="fa fa-external-link-alt"></i></span></li>
 </ul>
 <p>　　修改好之后 <code>hexo s --debug</code> 打开本地浏览，进入一个之前有过评论的界面刷新一下，如果配置成功的话，你的评论区就会被清空（这就是先修改再导入数据的原因），如果评论还在的话可以尝试一下 <code>hexo clean</code>。<br>　　然后 Valine 是可以在本地浏览中发送评论的，可以发一条评论测试一下，顺利的话国际版的后台也会出现用户和评论的 Class，这个时候就可以开始导入数据了。</p>
-<h3 id="将历史评论导入至国际版"><a href="# 将历史评论导入至国际版" class="headerlink" title="将历史评论导入至国际版"></a>将历史评论导入至国际版 </h3><p>　　进入应用的存储页面，复制相应的 Class 名，点击 <code> 创建 Class</code> 右边的 <code>…</code> 按钮，将 Class 名粘贴后导入相应的数据，导入后的数据似乎是会自动合并的，刚才发送的测试评论也在里面。<br>　　回到 Hexo 本地浏览中确认一下，如果显示无误就可以上传啦~ </p>
+<h3 id="将历史评论导入至国际版"><a href="#将历史评论导入至国际版" class="headerlink" title="将历史评论导入至国际版"></a>将历史评论导入至国际版</h3><p>　　进入应用的存储页面，复制相应的 Class 名，点击 <code>创建 Class</code> 右边的 <code>…</code> 按钮，将 Class 名粘贴后导入相应的数据，导入后的数据似乎是会自动合并的，刚才发送的测试评论也在里面。<br>　　回到 Hexo 本地浏览中确认一下，如果显示无误就可以上传啦~ </p>
 
     </div>
 
@@ -424,7 +429,7 @@
 
 
 <div class="copyright">
-  © 2015 – 
+  &copy; 2015 – 
   <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
@@ -436,7 +441,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">349k</span>
+    <span title="站点总字数">350k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
@@ -449,7 +454,7 @@
 <div><canvas id="snow" style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:99999;pointer-events:none"></canvas></div>
 
 
-<script id="click-show-text" src="/js/click-show-text.js" data-mobile="false" data-text="富强,民主,文明,和谐,自由,平等,公正,法治,爱国,敬业,诚信,友善" data-fontsize="20px" data-random="false" async=""></script>
+<script id="click-show-text" src="/js/click-show-text.js" data-mobile="false" data-text="富强,民主,文明,和谐,自由,平等,公正,法治,爱国,敬业,诚信,友善" data-fontsize="20px" data-random="false" async></script>
 
     </div>
   </footer>
@@ -500,6 +505,5 @@ NexT.utils.loadComments('#lv-container', () => {
 });
 </script>
 
-
-
-</body></html>
+</body>
+</html>

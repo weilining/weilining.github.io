@@ -1,4 +1,6 @@
-<!DOCTYPE html><html lang="zh-CN"><head>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
@@ -14,12 +16,12 @@
   <meta name="yandex-verification" content="06c62a93328de5da">
   <meta name="baidu-site-verification" content="code-wFDrn4lvkD">
 
+<link rel="stylesheet" href="/css/main.css">
 
+<link rel="stylesheet" href="https://fonts.dogedoge.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
-
-
-
-  
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
@@ -27,9 +29,9 @@
   </script>
 <meta name="description" content="默认">
 <meta property="og:type" content="article">
-<meta property="og:title" content="gitlab 如何创建项目和添加成员">
+<meta property="og:title" content="gitlab如何创建项目和添加成员">
 <meta property="og:url" content="https://weilining.github.io/158.html">
-<meta property="og:site_name" content="Ln's Blog">
+<meta property="og:site_name" content="Ln&#39;s Blog">
 <meta property="og:description" content="默认">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://weilining.github.io/158/20190216122001434.png">
@@ -57,7 +59,7 @@
     lang   : 'zh-CN'
   };
 </script>
-<title>gitlab 如何创建项目和添加成员 | Ln's Blog</title>
+<title>gitlab如何创建项目和添加成员 | Ln's Blog</title>
   
 
 
@@ -99,13 +101,13 @@
 </noscript>
 
 <link rel="alternate" href="/atom.xml" title="Ln's Blog" type="application/atom+xml">
-<script>function loadCss(l){var d=document,h=d.head,s=d.createElement('link');s.rel='stylesheet';s.href=l;!function e(f){if (d.body)return f();setTimeout(function(){e(f)})}(function(){h.appendChild(s);});}loadCss('/style.css');loadCss('https://fonts.dogedoge.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext');loadCss('//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css');loadCss('//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css');</script><noscript><link rel="stylesheet" href="/style.css"><link rel="stylesheet" href="https://fonts.dogedoge.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&amp;display=swap&amp;subset=latin,latin-ext"><link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css"><link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css"></noscript></head>
+</head>
 
-<body itemscope="" itemtype="http://schema.org/WebPage" class="use-motion">
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
   <div class="headband"></div>
 
   <main class="main">
-    <header class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
     <div class="toggle" aria-label="切换导航栏" role="button">
@@ -156,7 +158,9 @@
     <i class="fa fa-search"></i>
   </span>
   <div class="search-input-container">
-    <input autocomplete="off" autocapitalize="off" maxlength="80" placeholder="搜索..." spellcheck="false" type="search" class="search-input">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
   </div>
   <span class="popup-btn-close" role="button">
     <i class="fa fa-times-circle"></i>
@@ -199,8 +203,9 @@
         <!--/noindex-->
 
         <div class="site-overview-wrap sidebar-panel">
-          <div class="site-author site-overview-item animated" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="Lining Wei" src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/icon.gif">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Lining Wei"
+      src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/icon.gif">
   <p class="site-author-name" itemprop="name">Lining Wei</p>
   <div class="site-description" itemprop="description">算法、技术</div>
 </div>
@@ -209,7 +214,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">240</span>
+          <span class="site-state-item-count">241</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -260,21 +265,21 @@
   
   
 
-  <article itemscope="" itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://weilining.github.io/158.html">
 
-    <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/weilining/img@main/img/icon.gif">
       <meta itemprop="name" content="Lining Wei">
       <meta itemprop="description" content="算法、技术">
     </span>
 
-    <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Ln's Blog">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          gitlab 如何创建项目和添加成员
+          gitlab如何创建项目和添加成员
         </h1>
 
         <div class="post-meta-container">
@@ -292,7 +297,7 @@
         <i class="far fa-folder"></i>
       </span>
       <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
           <a href="/categories/%E9%BB%98%E8%AE%A4/" itemprop="url" rel="index"><span itemprop="name">默认</span></a>
         </span>
     </span>
@@ -311,7 +316,7 @@
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
-      <span class="post-meta-item-text">阅读时长 ≈</span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
       <span>1 分钟</span>
     </span>
 </div>
@@ -324,18 +329,18 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p> 企业内部使用 git 管理代码一般是搭建一个 gitlab 服务，在 gitlab 上面创建项目然后来管理项目代码和文档信息，在新创建的项目上添加组成员，将成员添加到组里。下面就来简单的介绍下 </p>
+        <p> 企业内部使用git管理代码一般是搭建一个gitlab服务，在gitlab上面创建项目然后来管理项目代码和文档信息，在新创建的项目上添加组成员，将成员添加到组里。下面就来简单的介绍下</p>
 <a id="more"></a>
 
-<p>1. 访问 gitlab 服务地址，然后登陆之后，在首页就可以看到 New Project 的绿色按钮，点击创建新的项目 </p>
+<p>1.访问gitlab服务地址，然后登陆之后，在首页就可以看到New Project的绿色按钮，点击创建新的项目</p>
 <p><img data-src="/158/20190216122001434.png" alt="img" loading="lazy"></p>
-<p>2. 输入项目名称，项目描述信息，然后选择可见级别，这里如果是企业项目，选择 Private，在创建项目的时候，还可以选择从 github 等平台导入。</p>
+<p>2.输入项目名称，项目描述信息，然后选择可见级别，这里如果是企业项目，选择Private，在创建项目的时候，还可以选择从github等平台导入。</p>
 <p><img data-src="/158/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYXNvaHVhaQ==,size_16,color_FFFFFF,t_70-20201123153003402.png" alt="img" loading="lazy"></p>
-<p>3. 创建完成之后，可以查看项目访问地址，以及描述信息 </p>
+<p>3.创建完成之后，可以查看项目访问地址，以及描述信息</p>
 <p><img data-src="/158/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYXNvaHVhaQ==,size_16,color_FFFFFF,t_70-20201123153003378.png" alt="img" loading="lazy"></p>
-<p>4. 设置项目成员，点击设置 Settings，选择 Members</p>
+<p>4.设置项目成员，点击设置Settings，选择Members</p>
 <p><img data-src="/158/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYXNvaHVhaQ==,size_16,color_FFFFFF,t_70.png" alt="img" loading="lazy"></p>
-<p>5. 添加成员到项目中 </p>
+<p>5.添加成员到项目中</p>
 <p><img data-src="/158/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYXNvaHVhaQ==,size_16,color_FFFFFF,t_70-20201123153003376.png" alt="img" loading="lazy"></p>
 
     </div>
@@ -375,8 +380,8 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/157.html" rel="prev" title="Gitlab 添加组、创建用户和项目、权限管理">
-                  <i class="fa fa-chevron-left"></i> Gitlab 添加组、创建用户和项目、权限管理
+                <a href="/157.html" rel="prev" title="Gitlab添加组、创建用户和项目、权限管理">
+                  <i class="fa fa-chevron-left"></i> Gitlab添加组、创建用户和项目、权限管理
                 </a>
             </div>
             <div class="post-nav-item">
@@ -425,7 +430,7 @@
 
 
 <div class="copyright">
-  © 2015 – 
+  &copy; 2015 – 
   <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
@@ -437,7 +442,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">349k</span>
+    <span title="站点总字数">350k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
@@ -450,7 +455,7 @@
 <div><canvas id="snow" style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:99999;pointer-events:none"></canvas></div>
 
 
-<script id="click-show-text" src="/js/click-show-text.js" data-mobile="false" data-text="富强,民主,文明,和谐,自由,平等,公正,法治,爱国,敬业,诚信,友善" data-fontsize="20px" data-random="false" async=""></script>
+<script id="click-show-text" src="/js/click-show-text.js" data-mobile="false" data-text="富强,民主,文明,和谐,自由,平等,公正,法治,爱国,敬业,诚信,友善" data-fontsize="20px" data-random="false" async></script>
 
     </div>
   </footer>
@@ -501,6 +506,5 @@ NexT.utils.loadComments('#lv-container', () => {
 });
 </script>
 
-
-
-</body></html>
+</body>
+</html>

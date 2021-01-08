@@ -1,4 +1,6 @@
-<!DOCTYPE html><html lang="zh-CN"><head>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
@@ -14,12 +16,12 @@
   <meta name="yandex-verification" content="06c62a93328de5da">
   <meta name="baidu-site-verification" content="code-wFDrn4lvkD">
 
+<link rel="stylesheet" href="/css/main.css">
 
+<link rel="stylesheet" href="https://fonts.dogedoge.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
-
-
-
-  
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
@@ -29,7 +31,7 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="免费的图床">
 <meta property="og:url" content="https://weilining.github.io/177.html">
-<meta property="og:site_name" content="Ln's Blog">
+<meta property="og:site_name" content="Ln&#39;s Blog">
 <meta property="og:description" content="默认">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://weilining.github.io/177/6689e9310134b.jpg">
@@ -102,13 +104,13 @@
 </noscript>
 
 <link rel="alternate" href="/atom.xml" title="Ln's Blog" type="application/atom+xml">
-<script>function loadCss(l){var d=document,h=d.head,s=d.createElement('link');s.rel='stylesheet';s.href=l;!function e(f){if (d.body)return f();setTimeout(function(){e(f)})}(function(){h.appendChild(s);});}loadCss('/style.css');loadCss('https://fonts.dogedoge.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext');loadCss('//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css');loadCss('//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css');</script><noscript><link rel="stylesheet" href="/style.css"><link rel="stylesheet" href="https://fonts.dogedoge.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&amp;display=swap&amp;subset=latin,latin-ext"><link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css"><link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css"></noscript></head>
+</head>
 
-<body itemscope="" itemtype="http://schema.org/WebPage" class="use-motion">
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
   <div class="headband"></div>
 
   <main class="main">
-    <header class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
     <div class="toggle" aria-label="切换导航栏" role="button">
@@ -159,7 +161,9 @@
     <i class="fa fa-search"></i>
   </span>
   <div class="search-input-container">
-    <input autocomplete="off" autocapitalize="off" maxlength="80" placeholder="搜索..." spellcheck="false" type="search" class="search-input">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
   </div>
   <span class="popup-btn-close" role="button">
     <i class="fa fa-times-circle"></i>
@@ -198,13 +202,14 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%AC%E5%85%B1%E5%9B%BE%E5%BA%8A"><span class="nav-number">1.</span> <span class="nav-text">公共图床</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#SM-MS"><span class="nav-number">1.1.</span> <span class="nav-text">SM.MS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Imgur"><span class="nav-number">1.2.</span> <span class="nav-text">Imgur</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8E%BB%E4%B8%8D%E5%9B%BE%E5%BA%8A"><span class="nav-number">1.3.</span> <span class="nav-text">去不图床</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B7%AF%E8%BF%87%E5%9B%BE%E5%BA%8A"><span class="nav-number">1.4.</span> <span class="nav-text">路过图床</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Postimage"><span class="nav-number">1.5.</span> <span class="nav-text">Postimage</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%8A%98%E8%85%BE"><span class="nav-number">2.</span> <span class="nav-text">折腾 </span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#GitHub-jsDelivr"><span class="nav-number">2.1.</span> <span class="nav-text">GitHub + jsDelivr</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NPM-%20%E9%95%9C%E5%83%8F"><span class="nav-number">2.2.</span> <span class="nav-text">NPM + 镜像 </span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95"><span class="nav-number">2.2.1.</span> <span class="nav-text">使用方法 </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8E%A8%E8%8D%90%E7%9A%84%E9%95%9C%E5%83%8F"><span class="nav-number">2.2.2.</span> <span class="nav-text">推荐的镜像</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B5%8B%E8%AF%95%E5%9B%BE%E7%89%87"><span class="nav-number">2.2.3.</span> <span class="nav-text">测试图片</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#LeanCloud"><span class="nav-number">2.3.</span> <span class="nav-text">LeanCloud</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#UniCloud"><span class="nav-number">2.4.</span> <span class="nav-text">UniCloud</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#UniCloud-1"><span class="nav-number">2.5.</span> <span class="nav-text">UniCloud</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A3%E7%90%86"><span class="nav-number">2.6.</span> <span class="nav-text">代理</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%AC%E5%85%B1%E5%9B%BE%E5%BA%8A"><span class="nav-number">1.</span> <span class="nav-text">公共图床</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#SM-MS"><span class="nav-number">1.1.</span> <span class="nav-text">SM.MS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Imgur"><span class="nav-number">1.2.</span> <span class="nav-text">Imgur</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8E%BB%E4%B8%8D%E5%9B%BE%E5%BA%8A"><span class="nav-number">1.3.</span> <span class="nav-text">去不图床</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B7%AF%E8%BF%87%E5%9B%BE%E5%BA%8A"><span class="nav-number">1.4.</span> <span class="nav-text">路过图床</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Postimage"><span class="nav-number">1.5.</span> <span class="nav-text">Postimage</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%8A%98%E8%85%BE"><span class="nav-number">2.</span> <span class="nav-text">折腾</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#GitHub-jsDelivr"><span class="nav-number">2.1.</span> <span class="nav-text">GitHub + jsDelivr</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NPM-%E9%95%9C%E5%83%8F"><span class="nav-number">2.2.</span> <span class="nav-text">NPM + 镜像</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95"><span class="nav-number">2.2.1.</span> <span class="nav-text">使用方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8E%A8%E8%8D%90%E7%9A%84%E9%95%9C%E5%83%8F"><span class="nav-number">2.2.2.</span> <span class="nav-text">推荐的镜像</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B5%8B%E8%AF%95%E5%9B%BE%E7%89%87"><span class="nav-number">2.2.3.</span> <span class="nav-text">测试图片</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#LeanCloud"><span class="nav-number">2.3.</span> <span class="nav-text">LeanCloud</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#UniCloud"><span class="nav-number">2.4.</span> <span class="nav-text">UniCloud</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#UniCloud-1"><span class="nav-number">2.5.</span> <span class="nav-text">UniCloud</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A3%E7%90%86"><span class="nav-number">2.6.</span> <span class="nav-text">代理</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
         <div class="site-overview-wrap sidebar-panel">
-          <div class="site-author site-overview-item animated" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="Lining Wei" src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/icon.gif">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Lining Wei"
+      src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/icon.gif">
   <p class="site-author-name" itemprop="name">Lining Wei</p>
   <div class="site-description" itemprop="description">算法、技术</div>
 </div>
@@ -213,7 +218,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">240</span>
+          <span class="site-state-item-count">241</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -264,16 +269,16 @@
   
   
 
-  <article itemscope="" itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://weilining.github.io/177.html">
 
-    <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/weilining/img@main/img/icon.gif">
       <meta itemprop="name" content="Lining Wei">
       <meta itemprop="description" content="算法、技术">
     </span>
 
-    <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Ln's Blog">
     </span>
       <header class="post-header">
@@ -296,7 +301,7 @@
         <i class="far fa-folder"></i>
       </span>
       <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
           <a href="/categories/%E9%BB%98%E8%AE%A4/" itemprop="url" rel="index"><span itemprop="name">默认</span></a>
         </span>
     </span>
@@ -315,7 +320,7 @@
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
-      <span class="post-meta-item-text">阅读时长 ≈</span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
       <span>3 分钟</span>
     </span>
 </div>
@@ -329,13 +334,13 @@
     
     <div class="post-body" itemprop="articleBody">
         <p> 前言</p>
-<p>本文将介绍一些 <strong> 免费 </strong> 的图床，可以供博客 / 日常使用。</p>
+<p>本文将介绍一些<strong>免费</strong>的图床，可以供博客/日常使用。</p>
 <p>每个图床都会给出测试链接供测试，无法访问或图片丢失则代表图床失效。</p>
 <a id="more"></a>
 
-<h1 id="公共图床"><a href="# 公共图床" class="headerlink" title="公共图床"></a>公共图床</h1><h2 id="SM-MS"><a href="#SM-MS" class="headerlink" title="SM.MS"></a>SM.MS</h2><p><span class="exturl" data-url="aHR0cHM6Ly9zbS5tcy8=">https://sm.ms<i class="fa fa-external-link-alt"></i></span></p>
+<h1 id="公共图床"><a href="#公共图床" class="headerlink" title="公共图床"></a>公共图床</h1><h2 id="SM-MS"><a href="#SM-MS" class="headerlink" title="SM.MS"></a>SM.MS</h2><p><span class="exturl" data-url="aHR0cHM6Ly9zbS5tcy8=">https://sm.ms<i class="fa fa-external-link-alt"></i></span></p>
 <p>曾经图床的域名有备案并使用国内 CDN，但后来因为滥用被吊销。</p>
-<p>现在使用的是 CloudFlare，国内访问 <strong> 效果不好 </strong> 甚至无法访问，不建议使用。</p>
+<p>现在使用的是 CloudFlare，国内访问<strong>效果不好</strong>甚至无法访问，不建议使用。</p>
 <p>测试图片：</p>
 <blockquote>
 <p>为避免影响访问速度，此处使用超链接，点击即可看到。</p>
@@ -343,27 +348,27 @@
 <p><span class="exturl" data-url="aHR0cHM6Ly9pLmxvbGkubmV0LzIwMjAvMTEvMjcvcU51ZEJWSWNHSGUxNHZtLmpwZw==">SM.MS 测试图片<i class="fa fa-external-link-alt"></i></span></p>
 <hr>
 <h2 id="Imgur"><a href="#Imgur" class="headerlink" title="Imgur"></a>Imgur</h2><p><span class="exturl" data-url="aHR0cHM6Ly9pbWd1ci5jb20v">https://imgur.com<i class="fa fa-external-link-alt"></i></span></p>
-<p>国外一家图片托管服务商，你可以选择注册或不注册，同样的，拖拽上传，永久保留，其 SLA 有着相当高的保证。</p>
-<p>然而很可惜的是，Imgur 并不能在国内正常访问。你也可以尝试使用 <span class="exturl" data-url="aHR0cHM6Ly93d3cueWZ1bi50b3AvcG9zdC9zYXZlLXlvdXItaW1hZ2UvIyVFNCVCQiVBMyVFNyU5MCU4Ng=="># 代理<i class="fa fa-external-link-alt"></i></span> 解决</p>
+<p>国外一家图片托管服务商，你可以选择注册或不注册，同样的，拖拽上传，永久保留，其SLA有着相当高的保证。</p>
+<p>然而很可惜的是，Imgur 并不能在国内正常访问。你也可以尝试使用 <span class="exturl" data-url="aHR0cHM6Ly93d3cueWZ1bi50b3AvcG9zdC9zYXZlLXlvdXItaW1hZ2UvIyVFNCVCQiVBMyVFNyU5MCU4Ng==">#代理<i class="fa fa-external-link-alt"></i></span> 解决</p>
 <p>测试图片：</p>
 <blockquote>
 <p>为避免影响访问速度，此处使用超链接，点击即可看到。</p>
 </blockquote>
 <p><span class="exturl" data-url="aHR0cHM6Ly9pLmltZ3VyLmNvbS9OQVRIS2MyLmpwZWc=">Imgur 测试图片<i class="fa fa-external-link-alt"></i></span></p>
 <hr>
-<h2 id="去不图床"><a href="# 去不图床" class="headerlink" title="去不图床"></a>去不图床</h2><p><span class="exturl" data-url="aHR0cHM6Ly83YnUudG9wLw==">https://7bu.top/<i class="fa fa-external-link-alt"></i></span></p>
-<p>由 <span class="exturl" data-url="aHR0cHM6Ly9kdXNheXMuY29tLzI0MS8="> 杜老师 <i class="fa fa-external-link-alt"></i></span> 提供的个人公益图床，存储于阿里和腾讯的对象存储。</p>
+<h2 id="去不图床"><a href="#去不图床" class="headerlink" title="去不图床"></a>去不图床</h2><p><span class="exturl" data-url="aHR0cHM6Ly83YnUudG9wLw==">https://7bu.top/<i class="fa fa-external-link-alt"></i></span></p>
+<p>由<span class="exturl" data-url="aHR0cHM6Ly9kdXNheXMuY29tLzI0MS8=">杜老师<i class="fa fa-external-link-alt"></i></span>提供的个人公益图床，存储于阿里和腾讯的对象存储。</p>
 <p>官方保证 SLA&gt;=99% ，目前来看是一个不错的选择。</p>
 <p>当然，毕竟是个人维护的图床，能不能永久撑下去还是个问题。</p>
 <p>如果您需要搭配 PicGo/uPic，请参考以下的配置：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">接口地址：https://7bu.top/api/upload</span><br><span class="line">POST 参数：image</span><br><span class="line">回调 JSON：data.urlCopy</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">接口地址：https:&#x2F;&#x2F;7bu.top&#x2F;api&#x2F;upload</span><br><span class="line">POST 参数：image</span><br><span class="line">回调 JSON：data.urlCopy</span><br></pre></td></tr></table></figure>
 <p>测试图片：</p>
 <p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://7.dusays.com/2020/11/27/6689e9310134b.jpg"><img data-src="/177/6689e9310134b.jpg" alt="去不图床" loading="lazy"></a></p>
 <p><span class="exturl" data-url="aHR0cHM6Ly83LmR1c2F5cy5jb20vMjAyMC8xMS8yNy82Njg5ZTkzMTAxMzRiLmpwZw==">去不图床<i class="fa fa-external-link-alt"></i></span></p>
 <p>去不图床所使用的 CDN 面向的是中国大陆，海外大概率解析到一些很辣鸡的节点。</p>
 <hr>
-<h2 id="路过图床"><a href="# 路过图床" class="headerlink" title="路过图床"></a>路过图床</h2><p><span class="exturl" data-url="aHR0cHM6Ly9pbWdjaHIuY29tLw==">https://imgchr.com<i class="fa fa-external-link-alt"></i></span></p>
-<p>支持永久存储图片，全球 CDN 加速。官方宣称『图床从 2011 年至今都稳定运行』。</p>
+<h2 id="路过图床"><a href="#路过图床" class="headerlink" title="路过图床"></a>路过图床</h2><p><span class="exturl" data-url="aHR0cHM6Ly9pbWdjaHIuY29tLw==">https://imgchr.com<i class="fa fa-external-link-alt"></i></span></p>
+<p>支持永久存储图片，全球CDN加速。官方宣称『图床从2011年至今都稳定运行』。</p>
 <p>测试图片：</p>
 <p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://s3.ax1x.com/2020/11/27/DrM4XQ.jpg"><img data-src="/177/DrM4XQ.jpg" alt="路过图床" loading="lazy"></a></p>
 <p><span class="exturl" data-url="aHR0cHM6Ly9zMy5heDF4LmNvbS8yMDIwLzExLzI3L0RyTTRYUS5qcGc=">路过图床<i class="fa fa-external-link-alt"></i></span></p>
@@ -376,35 +381,35 @@
 <p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://i.postimg.cc/CF6g03Jx/th.jpg?dl=1"><img data-src="/177/th.jpg" alt="Postimage" loading="lazy"></a></p>
 <p><span class="exturl" data-url="aHR0cHM6Ly9pLnBvc3RpbWcuY2MvQ0Y2ZzAzSngvdGguanBnP2RsPTE=">Postimage<i class="fa fa-external-link-alt"></i></span></p>
 <hr>
-<h1 id="折腾"><a href="# 折腾" class="headerlink" title="折腾"></a>折腾 </h1><h2 id="GitHub-jsDelivr"><a href="#GitHub-jsDelivr" class="headerlink" title="GitHub + jsDelivr"></a>GitHub + jsDelivr</h2><p><strong> 网上有许多的教程，此处不再演示。</strong></p>
+<h1 id="折腾"><a href="#折腾" class="headerlink" title="折腾"></a>折腾</h1><h2 id="GitHub-jsDelivr"><a href="#GitHub-jsDelivr" class="headerlink" title="GitHub + jsDelivr"></a>GitHub + jsDelivr</h2><p><strong>网上有许多的教程，此处不再演示。</strong></p>
 <p>jsDelivr 非常稳定，国外使用 CloudFlare，国内有网宿节点，速度非常之快。</p>
 <p>测试图片：</p>
 <p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://cdn.jsdelivr.net/gh/MyBlog-GitHub/image-upload@main/uPic/th.jpg"><img data-src="/177/th-20201130215439149.jpg" alt="jsDelivr" loading="lazy"></a></p>
 <p><span class="exturl" data-url="aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL015QmxvZy1HaXRIdWIvaW1hZ2UtdXBsb2FkQG1haW4vdVBpYy90aC5qcGc=">jsDelivr<i class="fa fa-external-link-alt"></i></span></p>
 <hr>
-<h2 id="NPM- 镜像"><a href="#NPM- 镜像" class="headerlink" title="NPM + 镜像"></a>NPM + 镜像 </h2><p> 我们可以使用 NPM 作为图床的储存。</p>
+<h2 id="NPM-镜像"><a href="#NPM-镜像" class="headerlink" title="NPM + 镜像"></a>NPM + 镜像</h2><p>我们可以使用 NPM 作为图床的储存。</p>
 <p>再搭配上各种镜像调用，速度扛扛滴。</p>
-<h3 id="使用方法"><a href="# 使用方法" class="headerlink" title="使用方法"></a>使用方法 </h3><p> 您应该拥有基本的 <code>npm</code> 环境，如没有，请安装。</p>
+<h3 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h3><p>您应该拥有基本的 <code>npm</code> 环境，如没有，请安装。</p>
 <p>安装教程可以参阅互联网，有很多可供参考。</p>
 <p>首先，新建一个文件夹存放文件。</p>
 <p>然后打开 <code>cmd</code> 或 终端，进入目录并输入以下命令 <strong>登录 NPM</strong> ：</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">npm loginCopy</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm loginCopy</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>如果没有账号的，请前往 <span class="exturl" data-url="aHR0cHM6Ly9ucG1qcy5jb20v">NPM<i class="fa fa-external-link-alt"></i></span> 注册账号</p>
 </blockquote>
 <p>紧接着输入以下命令：</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">npm init <span class="comment"># 生成包文件</span></span><br><span class="line">npm publish <span class="comment"># 发布包 Copy</span></span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm init <span class="comment"># 生成包文件</span></span><br><span class="line">npm publish <span class="comment"># 发布包Copy</span></span><br></pre></td></tr></table></figure>
 <p>请注意，如果你之前用过淘宝镜像，那么请先手动切回官方源：</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> registry https://registry.npmjs.orgCopy</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> registry https://registry.npmjs.orgCopy</span><br></pre></td></tr></table></figure>
 <p>每次更新完包内存放的图片后，你应该修改 <code>package.json</code> 文件内的版本号（向上增加），然后再次运行 <code>npm publish</code> 发布包。</p>
-<h3 id="推荐的镜像"><a href="# 推荐的镜像" class="headerlink" title="推荐的镜像"></a>推荐的镜像</h3><figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">https://cdn.jsdelivr.net/npm/  <span class="comment"># jsDelivr，网宿节点</span></span><br><span class="line">https://unpkg.zhimg.com/ <span class="comment"># 知乎，阿里节点</span></span><br><span class="line">https://code.bdstatic.com/npm/ <span class="comment"># 百度，网宿节点【拉取慢，不推荐】</span></span><br><span class="line">https://shadow.elemecdn.com/npm/ <span class="comment"># 饿了么，网宿节点 Copy</span></span><br><span class="line">[镜像链接]/[包名]@[版本]/[文件名]</span><br><span class="line"></span><br><span class="line"><span class="comment"># https://cdn.jsdelivr.net/npm/mdt-for-typecho@0.4.2/screenshot.png</span></span><br><span class="line"><span class="comment"># https://unpkg.zhimg.com/mdt-for-typecho@0.4.2/screenshot.png</span></span><br><span class="line"><span class="comment"># https://code.bdstatic.com/npm/mdt-for-typecho@0.4.2/screenshot.png</span></span><br><span class="line"><span class="comment"># https://shadow.elemecdn.com/npm/mdt-for-typecho@0.4.2/screenshot.pngCopy</span></span><br></pre></td></tr></tbody></table></figure>
-<h3 id="测试图片"><a href="# 测试图片" class="headerlink" title="测试图片"></a>测试图片</h3><blockquote>
+<h3 id="推荐的镜像"><a href="#推荐的镜像" class="headerlink" title="推荐的镜像"></a>推荐的镜像</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">https://cdn.jsdelivr.net/npm/  <span class="comment"># jsDelivr，网宿节点</span></span><br><span class="line">https://unpkg.zhimg.com/ <span class="comment"># 知乎，阿里节点</span></span><br><span class="line">https://code.bdstatic.com/npm/ <span class="comment"># 百度，网宿节点【拉取慢，不推荐】</span></span><br><span class="line">https://shadow.elemecdn.com/npm/ <span class="comment"># 饿了么，网宿节点Copy</span></span><br><span class="line">[镜像链接]/[包名]@[版本]/[文件名]</span><br><span class="line"></span><br><span class="line"><span class="comment"># https://cdn.jsdelivr.net/npm/mdt-for-typecho@0.4.2/screenshot.png</span></span><br><span class="line"><span class="comment"># https://unpkg.zhimg.com/mdt-for-typecho@0.4.2/screenshot.png</span></span><br><span class="line"><span class="comment"># https://code.bdstatic.com/npm/mdt-for-typecho@0.4.2/screenshot.png</span></span><br><span class="line"><span class="comment"># https://shadow.elemecdn.com/npm/mdt-for-typecho@0.4.2/screenshot.pngCopy</span></span><br></pre></td></tr></table></figure>
+<h3 id="测试图片"><a href="#测试图片" class="headerlink" title="测试图片"></a>测试图片</h3><blockquote>
 <p>图片太多，这里使用超链接，点击就可以看到。</p>
 </blockquote>
 <p>jsDelivr：<span class="exturl" data-url="aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L25wbS9tZHQtZm9yLXR5cGVjaG9AMC40LjIvc2NyZWVuc2hvdC5wbmc=">jsDelivr+NPM<i class="fa fa-external-link-alt"></i></span></p>
-<p>知乎：<span class="exturl" data-url="aHR0cHM6Ly91bnBrZy56aGltZy5jb20vbWR0LWZvci10eXBlY2hvQDAuNC4yL3NjcmVlbnNob3QucG5n">知乎 +NPM<i class="fa fa-external-link-alt"></i></span></p>
-<p>百度：<span class="exturl" data-url="aHR0cHM6Ly9jb2RlLmJkc3RhdGljLmNvbS9ucG0vbWR0LWZvci10eXBlY2hvQDAuNC4yL3NjcmVlbnNob3QucG5n">百度 +NPM<i class="fa fa-external-link-alt"></i></span></p>
-<p>饿了么：<span class="exturl" data-url="aHR0cHM6Ly9zaGFkb3cuZWxlbWVjZG4uY29tL25wbS9tZHQtZm9yLXR5cGVjaG9AMC40LjIvc2NyZWVuc2hvdC5wbmc=">饿了么 +NPM<i class="fa fa-external-link-alt"></i></span></p>
+<p>知乎：<span class="exturl" data-url="aHR0cHM6Ly91bnBrZy56aGltZy5jb20vbWR0LWZvci10eXBlY2hvQDAuNC4yL3NjcmVlbnNob3QucG5n">知乎+NPM<i class="fa fa-external-link-alt"></i></span></p>
+<p>百度：<span class="exturl" data-url="aHR0cHM6Ly9jb2RlLmJkc3RhdGljLmNvbS9ucG0vbWR0LWZvci10eXBlY2hvQDAuNC4yL3NjcmVlbnNob3QucG5n">百度+NPM<i class="fa fa-external-link-alt"></i></span></p>
+<p>饿了么：<span class="exturl" data-url="aHR0cHM6Ly9zaGFkb3cuZWxlbWVjZG4uY29tL25wbS9tZHQtZm9yLXR5cGVjaG9AMC40LjIvc2NyZWVuc2hvdC5wbmc=">饿了么+NPM<i class="fa fa-external-link-alt"></i></span></p>
 <hr>
 <h2 id="LeanCloud"><a href="#LeanCloud" class="headerlink" title="LeanCloud"></a>LeanCloud</h2><p><span class="exturl" data-url="aHR0cHM6Ly9sZWFuY2xvdWQuY24v">https://leancloud.cn<i class="fa fa-external-link-alt"></i></span> / <span class="exturl" data-url="aHR0cHM6Ly9sZWFuY2xvdWQuYXBwLw==">https://leancloud.app<i class="fa fa-external-link-alt"></i></span><br>注册一个 LeanCloud 账号，此处不再赘述。</p>
 <p>创建一个 App，进入 <code>存储 -&gt; 文件</code>，点击「上传」并上传图片。</p>
@@ -426,10 +431,10 @@
 <p>点击右侧的「详情」即可查看图片地址，预览等信息。<br><a target="_blank" rel="noopener external nofollow noreferrer" href="https://cdn.jsdelivr.net/gh/MyBlog-GitHub/image-upload@main/uPic/iYKvJz.png"><img data-src="/177/iYKvJz.png" alt="进入详情" loading="lazy"></a></p>
 <p><span class="exturl" data-url="aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL015QmxvZy1HaXRIdWIvaW1hZ2UtdXBsb2FkQG1haW4vdVBpYy9pWUt2SnoucG5n">进入详情<i class="fa fa-external-link-alt"></i></span></p>
 <p>测试图片：</p>
-<h2 id="UniCloud-1"><a href="#UniCloud-1" class="headerlink" title="UniCloud"></a><a target="_blank" rel="noopener external nofollow noreferrer" href="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-aliyun-qvxxidugllx169a140/51632140-309a-11eb-8a36-ebb87efcf8c0.jpg"><img data-src="/177/51632140-309a-11eb-8a36-ebb87efcf8c0.jpg" alt="UniCloud" loading="lazy">UniCloud</a></h2><h2 id="代理"><a href="# 代理" class="headerlink" title="代理"></a>代理</h2><p>Imgur 在国内已经无法访问了，但是，我们可以利用服务器代理啊！</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">https://search.pstatic.net/common/?src= <span class="comment"># 国内网宿，只能加载特定图床图片如 Imgur [1]</span></span><br><span class="line">https://imageproxy.pimg.tw/resize?url= <span class="comment"># Akamai 节点，无限制 [2]</span></span><br><span class="line">https://images.weserv.nl/?url= <span class="comment"># CloudFlare 节点 [3]</span></span><br><span class="line">https://pic1.xuehuaimg.com/proxy/ <span class="comment"># CloudFlare 节点 [4]Copy</span></span><br></pre></td></tr></tbody></table></figure>
+<h2 id="UniCloud-1"><a href="#UniCloud-1" class="headerlink" title="UniCloud"></a><a target="_blank" rel="noopener external nofollow noreferrer" href="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-aliyun-qvxxidugllx169a140/51632140-309a-11eb-8a36-ebb87efcf8c0.jpg"><img data-src="/177/51632140-309a-11eb-8a36-ebb87efcf8c0.jpg" alt="UniCloud" loading="lazy">UniCloud</a></h2><h2 id="代理"><a href="#代理" class="headerlink" title="代理"></a>代理</h2><p>Imgur 在国内已经无法访问了，但是，我们可以利用服务器代理啊！</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">https://search.pstatic.net/common/?src= <span class="comment"># 国内网宿，只能加载特定图床图片如 Imgur [1]</span></span><br><span class="line">https://imageproxy.pimg.tw/resize?url= <span class="comment"># Akamai 节点，无限制 [2]</span></span><br><span class="line">https://images.weserv.nl/?url= <span class="comment"># CloudFlare 节点 [3]</span></span><br><span class="line">https://pic1.xuehuaimg.com/proxy/ <span class="comment"># CloudFlare 节点 [4]Copy</span></span><br></pre></td></tr></table></figure>
 <p>我们就以代理 Imgur 的图片为例，原链接：<span class="exturl" data-url="aHR0cHM6Ly9pLmltZ3VyLmNvbS9OQVRIS2MyLmpwZWc=">https://i.imgur.com/NATHKc2.jpeg<i class="fa fa-external-link-alt"></i></span></p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">https://search.pstatic.net/common/?src=https://i.imgur.com/NATHKc2.jpeg</span><br><span class="line">https://imageproxy.pimg.tw/resize?url=https://i.imgur.com/NATHKc2.jpeg</span><br><span class="line">https://images.weserv.nl/?url=https://i.imgur.com/NATHKc2.jpeg</span><br><span class="line">https://pic1.xuehuaimg.com/proxy/https://i.imgur.com/NATHKc2.jpegCopy</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">https://search.pstatic.net/common/?src=https://i.imgur.com/NATHKc2.jpeg</span><br><span class="line">https://imageproxy.pimg.tw/resize?url=https://i.imgur.com/NATHKc2.jpeg</span><br><span class="line">https://images.weserv.nl/?url=https://i.imgur.com/NATHKc2.jpeg</span><br><span class="line">https://pic1.xuehuaimg.com/proxy/https://i.imgur.com/NATHKc2.jpegCopy</span><br></pre></td></tr></table></figure>
 <p>测试图片：</p>
 <blockquote>
 <p>图片太多，这里使用超链接，点击就可以看到。</p>
@@ -479,13 +484,13 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/176.html" rel="prev" title="Privacy Pass 无法跳过 cf 验证">
-                  <i class="fa fa-chevron-left"></i> Privacy Pass 无法跳过 cf 验证
+                <a href="/176.html" rel="prev" title="Privacy Pass 无法跳过cf验证">
+                  <i class="fa fa-chevron-left"></i> Privacy Pass 无法跳过cf验证
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/178.html" rel="next" title="Git 笔记">
-                  Git 笔记 <i class="fa fa-chevron-right"></i>
+                <a href="/178.html" rel="next" title="Git笔记">
+                  Git笔记 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
@@ -529,7 +534,7 @@
 
 
 <div class="copyright">
-  © 2015 – 
+  &copy; 2015 – 
   <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
@@ -541,7 +546,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">349k</span>
+    <span title="站点总字数">350k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
@@ -554,7 +559,7 @@
 <div><canvas id="snow" style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:99999;pointer-events:none"></canvas></div>
 
 
-<script id="click-show-text" src="/js/click-show-text.js" data-mobile="false" data-text="富强,民主,文明,和谐,自由,平等,公正,法治,爱国,敬业,诚信,友善" data-fontsize="20px" data-random="false" async=""></script>
+<script id="click-show-text" src="/js/click-show-text.js" data-mobile="false" data-text="富强,民主,文明,和谐,自由,平等,公正,法治,爱国,敬业,诚信,友善" data-fontsize="20px" data-random="false" async></script>
 
     </div>
   </footer>
@@ -605,6 +610,5 @@ NexT.utils.loadComments('#lv-container', () => {
 });
 </script>
 
-
-
-</body></html>
+</body>
+</html>

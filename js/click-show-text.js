@@ -1,5 +1,171 @@
-!function(){const t=document.getElementById("click-show-text");let e=null;if(e={mobile:t.getAttribute("data-mobile"),text:t.getAttribute("data-text"),fontSize:t.getAttribute("data-fontsize"),random:t.getAttribute("data-random")},"false"===e.mobile&&/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent))return;let n=0;document.body.addEventListener("click",(function(t){const o=e.text.split(","),i=document.createElement("span");"true"===e.random?(n=Math.floor(Math.random()*o.length),i.textContent=o[n]):(i.textContent=o[n],n=(n+1)%o.length);const a=t.pageX;let d=t.pageY-20;i.style.cssText=`\n\t\tz-index: 150;\n\t\ttop: ${d}px;\n\t\tleft: ${a-20}px;\n\t\tposition: absolute;\n\t\tfont-weight: bold;\n\t\tcolor: ${function(){const t="0,1,2,3,4,5,6,7,8,9,a,b,c,d,e,f".split(",");let e="#";for(let n=0;n<6;n++)e+=t[Math.floor(16*Math.random())];return e}()};\n\t\tcursor: default;\n\t\tfont-size: ${e.fontSize||"inherit"};\n\t\tword-break: break-word;\n\t  `,this.appendChild(i);
-// animation
-const r=(new Date).getTime();let l=1;window.requestAnimationFrame((function t(){d--,l-=.02,i.style.top=d+"px",i.style.opacity=l,(new Date).getTime()-r<600?window.requestAnimationFrame(t):i.remove()}))}));
-// 雪花
-let o=100,i=150,a="255, 255, 255",d=2,r=.5,l=.2,s=.5;const h=window.requestAnimationFrame||window.mozRequestAnimationFrame||window.webkitRequestAnimationFrame||window.msRequestAnimationFrame||function(t){window.setTimeout(t,1e3/60)};window.requestAnimationFrame=h;const m=document.getElementById("snow"),c=m.getContext("2d"),w=o;let u=-100,p=-100,f=[];m.width=window.innerWidth,m.height=window.innerHeight;const g=()=>{c.clearRect(0,0,m.width,m.height);const t=i;for(let e=0;e<w;e++){let n=f[e];const o=u,i=p,d=n.x,r=n.y,l=Math.sqrt((o-d)*(o-d)+(i-r)*(i-r));if(l<t){const e=(o-d)/l,a=(i-r)/l,s=t/(l*l)/2;n.velX-=s*e,n.velY-=s*a}else n.velX*=.98,n.velY<n.speed&&n.speed-n.velY>.01&&(n.velY+=.01*(n.speed-n.velY)),n.velX+=Math.cos(n.step+=.05)*n.stepSize;c.fillStyle="rgba("+a+","+n.opacity+")",n.y+=n.velY,n.x+=n.velX,(n.y>=m.height||n.y<=0)&&v(n),(n.x>=m.width||n.x<=0)&&v(n),c.beginPath(),c.arc(n.x,n.y,n.size,0,2*Math.PI),c.fill()}h(g)},v=t=>{t.x=Math.floor(Math.random()*m.width),t.y=0,t.size=3*Math.random()+2,t.speed=1*Math.random()+.5,t.velY=t.speed,t.velX=0,t.opacity=.5*Math.random()+.3};document.addEventListener("mousemove",t=>{u=t.clientX,p=t.clientY}),window.addEventListener("resize",()=>{m.width=window.innerWidth,m.height=window.innerHeight}),(()=>{for(let t=0;t<w;t++){const t=Math.floor(Math.random()*m.width),e=Math.floor(Math.random()*m.height),n=3*Math.random()+d,o=1*Math.random()+r,i=.5*Math.random()+l;f.push({speed:o,velX:0,velY:o,x:t,y:e,size:n,stepSize:Math.random()/30*s,step:0,angle:180,opacity:i})}g()})()}();
+(function () {
+  const $dom = document.getElementById("click-show-text");
+  let config = null;
+  config = {
+    mobile: $dom.getAttribute("data-mobile"),
+    text: $dom.getAttribute("data-text"),
+    fontSize: $dom.getAttribute("data-fontsize"),
+    random: $dom.getAttribute("data-random"),
+  };
+  if (
+    config.mobile === "false" &&
+    /Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)
+  ) {
+    return;
+  }
+
+  const randomColor = function () {
+    const colorElements = "0,1,2,3,4,5,6,7,8,9,a,b,c,d,e,f";
+    const colorArray = colorElements.split(",");
+    let color = "#";
+    for (let i = 0; i < 6; i++) {
+      color += colorArray[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  };
+
+  let aIdx = 0;
+
+  document.body.addEventListener("click", function (e) {
+    const text = config.text.split(",");
+    const $span = document.createElement("span");
+    if (config.random === "true") {
+      aIdx = Math.floor(Math.random() * text.length);
+      $span.textContent = text[aIdx];
+    } else {
+      $span.textContent = text[aIdx];
+      aIdx = (aIdx + 1) % text.length;
+    }
+
+    const x = e.pageX;
+    const y = e.pageY;
+    let top = y - 20;
+
+    $span.style.cssText = `
+		z-index: 150;
+		top: ${top}px;
+		left: ${x - 20}px;
+		position: absolute;
+		font-weight: bold;
+		color: ${randomColor()};
+		cursor: default;
+		font-size: ${config.fontSize || "inherit"};
+		word-break: break-word;
+	  `;
+    this.appendChild($span);
+
+    // animation
+    const initTime = new Date().getTime();
+    let opacityValue = 1;
+
+    function animate() {
+      top--;
+      opacityValue = opacityValue - 0.02;
+      $span.style.top = top + "px";
+      $span.style.opacity = opacityValue;
+      const newTime = new Date().getTime();
+      const diff = newTime - initTime;
+      if (diff < 600) {
+        window.requestAnimationFrame(animate);
+      } else {
+        $span.remove();
+      }
+    }
+    window.requestAnimationFrame(animate);
+  });
+  // 雪花
+  let e = {
+    flakeCount: 100,
+    minDist: 150,
+    color: "255, 255, 255",
+    size: 2,
+    speed: 0.5,
+    opacity: 0.2,
+    stepsize: 0.5,
+  };
+  const t =
+    window.requestAnimationFrame ||
+    window.mozRequestAnimationFrame ||
+    window.webkitRequestAnimationFrame ||
+    window.msRequestAnimationFrame ||
+    function (e) {
+      window.setTimeout(e, 1e3 / 60);
+    };
+  window.requestAnimationFrame = t;
+  const i = document.getElementById("snow"),
+    n = i.getContext("2d"),
+    o = e.flakeCount;
+  let a = -100,
+    s = -100,
+    d = [];
+  (i.width = window.innerWidth), (i.height = window.innerHeight);
+  const h = () => {
+      n.clearRect(0, 0, i.width, i.height);
+      const r = e.minDist;
+      for (let t = 0; t < o; t++) {
+        let o = d[t];
+        const h = a,
+          m = s,
+          w = o.x,
+          c = o.y,
+          p = Math.sqrt((h - w) * (h - w) + (m - c) * (m - c));
+        if (p < r) {
+          const e = (h - w) / p,
+            t = (m - c) / p,
+            i = r / (p * p) / 2;
+          (o.velX -= i * e), (o.velY -= i * t);
+        } else
+          (o.velX *= 0.98),
+            o.velY < o.speed &&
+              o.speed - o.velY > 0.01 &&
+              (o.velY += 0.01 * (o.speed - o.velY)),
+            (o.velX += Math.cos((o.step += 0.05)) * o.stepSize);
+        (n.fillStyle = "rgba(" + e.color + ", " + o.opacity + ")"),
+          (o.y += o.velY),
+          (o.x += o.velX),
+          (o.y >= i.height || o.y <= 0) && l(o),
+          (o.x >= i.width || o.x <= 0) && l(o),
+          n.beginPath(),
+          n.arc(o.x, o.y, o.size, 0, 2 * Math.PI),
+          n.fill();
+      }
+      t(h);
+    },
+    l = (e) => {
+      (e.x = Math.floor(Math.random() * i.width)),
+        (e.y = 0),
+        (e.size = 3 * Math.random() + 2),
+        (e.speed = 1 * Math.random() + 0.5),
+        (e.velY = e.speed),
+        (e.velX = 0),
+        (e.opacity = 0.5 * Math.random() + 0.3);
+    };
+  document.addEventListener("mousemove", (e) => {
+    (a = e.clientX), (s = e.clientY);
+  }),
+    window.addEventListener("resize", () => {
+      (i.width = window.innerWidth), (i.height = window.innerHeight);
+    }),
+    (() => {
+      for (let t = 0; t < o; t++) {
+        const t = Math.floor(Math.random() * i.width),
+          n = Math.floor(Math.random() * i.height),
+          o = 3 * Math.random() + e.size,
+          a = 1 * Math.random() + e.speed,
+          s = 0.5 * Math.random() + e.opacity;
+        d.push({
+          speed: a,
+          velX: 0,
+          velY: a,
+          x: t,
+          y: n,
+          size: o,
+          stepSize: (Math.random() / 30) * e.stepsize,
+          step: 0,
+          angle: 180,
+          opacity: s,
+        });
+      }
+      h();
+    })();
+})();

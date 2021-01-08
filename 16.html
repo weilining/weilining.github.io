@@ -1,4 +1,6 @@
-<!DOCTYPE html><html lang="zh-CN"><head>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
@@ -14,12 +16,12 @@
   <meta name="yandex-verification" content="06c62a93328de5da">
   <meta name="baidu-site-verification" content="code-wFDrn4lvkD">
 
+<link rel="stylesheet" href="/css/main.css">
 
+<link rel="stylesheet" href="https://fonts.dogedoge.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
-
-
-
-  
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
@@ -29,7 +31,7 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="初识及安装 Hexo">
 <meta property="og:url" content="https://weilining.github.io/16.html">
-<meta property="og:site_name" content="Ln's Blog">
+<meta property="og:site_name" content="Ln&#39;s Blog">
 <meta property="og:description" content="默认">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-11-16T04:34:11.000Z">
@@ -93,13 +95,13 @@
 </noscript>
 
 <link rel="alternate" href="/atom.xml" title="Ln's Blog" type="application/atom+xml">
-<script>function loadCss(l){var d=document,h=d.head,s=d.createElement('link');s.rel='stylesheet';s.href=l;!function e(f){if (d.body)return f();setTimeout(function(){e(f)})}(function(){h.appendChild(s);});}loadCss('/style.css');loadCss('https://fonts.dogedoge.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext');loadCss('//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css');loadCss('//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css');</script><noscript><link rel="stylesheet" href="/style.css"><link rel="stylesheet" href="https://fonts.dogedoge.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&amp;display=swap&amp;subset=latin,latin-ext"><link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css"><link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css"></noscript></head>
+</head>
 
-<body itemscope="" itemtype="http://schema.org/WebPage" class="use-motion">
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
   <div class="headband"></div>
 
   <main class="main">
-    <header class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
     <div class="toggle" aria-label="切换导航栏" role="button">
@@ -150,7 +152,9 @@
     <i class="fa fa-search"></i>
   </span>
   <div class="search-input-container">
-    <input autocomplete="off" autocapitalize="off" maxlength="80" placeholder="搜索..." spellcheck="false" type="search" class="search-input">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
   </div>
   <span class="popup-btn-close" role="button">
     <i class="fa fa-times-circle"></i>
@@ -189,13 +193,14 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%20-Hexo%EF%BC%9F"><span class="nav-number">1.</span> <span class="nav-text">什么是 Hexo？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85"><span class="nav-number">2.</span> <span class="nav-text">安装 </span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E5%89%8D%E6%8F%90"><span class="nav-number">2.1.</span> <span class="nav-text">安装前提 </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%20-Git"><span class="nav-number">2.2.</span> <span class="nav-text">安装 Git</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%20-Node-js"><span class="nav-number">2.3.</span> <span class="nav-text">安装 Node.js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%20-Hexo"><span class="nav-number">2.4.</span> <span class="nav-text">安装 Hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%9B%E9%98%B6%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8"><span class="nav-number">2.5.</span> <span class="nav-text">进阶安装和使用 </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Node-js-%20%E7%89%88%E6%9C%AC%E9%99%90%E5%88%B6"><span class="nav-number">2.6.</span> <span class="nav-text">Node.js 版本限制</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF-Hexo%EF%BC%9F"><span class="nav-number">1.</span> <span class="nav-text">什么是 Hexo？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85"><span class="nav-number">2.</span> <span class="nav-text">安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E5%89%8D%E6%8F%90"><span class="nav-number">2.1.</span> <span class="nav-text">安装前提</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-Git"><span class="nav-number">2.2.</span> <span class="nav-text">安装 Git</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-Node-js"><span class="nav-number">2.3.</span> <span class="nav-text">安装 Node.js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-Hexo"><span class="nav-number">2.4.</span> <span class="nav-text">安装 Hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%9B%E9%98%B6%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8"><span class="nav-number">2.5.</span> <span class="nav-text">进阶安装和使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Node-js-%E7%89%88%E6%9C%AC%E9%99%90%E5%88%B6"><span class="nav-number">2.6.</span> <span class="nav-text">Node.js 版本限制</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
         <div class="site-overview-wrap sidebar-panel">
-          <div class="site-author site-overview-item animated" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="Lining Wei" src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/icon.gif">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Lining Wei"
+      src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/icon.gif">
   <p class="site-author-name" itemprop="name">Lining Wei</p>
   <div class="site-description" itemprop="description">算法、技术</div>
 </div>
@@ -204,7 +209,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">240</span>
+          <span class="site-state-item-count">241</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -255,16 +260,16 @@
   
   
 
-  <article itemscope="" itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://weilining.github.io/16.html">
 
-    <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/weilining/img@main/img/icon.gif">
       <meta itemprop="name" content="Lining Wei">
       <meta itemprop="description" content="算法、技术">
     </span>
 
-    <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Ln's Blog">
     </span>
       <header class="post-header">
@@ -287,7 +292,7 @@
         <i class="far fa-folder"></i>
       </span>
       <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
           <a href="/categories/%E9%BB%98%E8%AE%A4/" itemprop="url" rel="index"><span itemprop="name">默认</span></a>
         </span>
     </span>
@@ -306,7 +311,7 @@
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
-      <span class="post-meta-item-text">阅读时长 ≈</span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
       <span>1 分钟</span>
     </span>
 </div>
@@ -323,18 +328,18 @@
 
 
 
-<h2 id="什么是 -Hexo？"><a href="# 什么是 -Hexo？" class="headerlink" title="什么是 Hexo？"></a>什么是 Hexo？</h2><p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 <span class="exturl" data-url="aHR0cDovL2RhcmluZ2ZpcmViYWxsLm5ldC9wcm9qZWN0cy9tYXJrZG93bi8=">Markdown<i class="fa fa-external-link-alt"></i></span>（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
+<h2 id="什么是-Hexo？"><a href="#什么是-Hexo？" class="headerlink" title="什么是 Hexo？"></a>什么是 Hexo？</h2><p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 <span class="exturl" data-url="aHR0cDovL2RhcmluZ2ZpcmViYWxsLm5ldC9wcm9qZWN0cy9tYXJrZG93bi8=">Markdown<i class="fa fa-external-link-alt"></i></span>（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
 <iframe src="https://www.youtube.com/embed/PsXWbI2Mqu0" frameborder="0" loading="lazy" allowfullscreen="" style="box-sizing: inherit; margin: 1em 0px; padding: 0px; border: 0px; outline: 0px; font-weight: inherit; font-style: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline;"></iframe>
 
-<h2 id="安装"><a href="# 安装" class="headerlink" title="安装"></a>安装 </h2><p> 安装 Hexo 只需几分钟时间，若您在安装过程中遇到问题或无法找到解决方式，请 <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2hleG9qcy9oZXhvL2lzc3Vlcw=="> 提交问题<i class="fa fa-external-link-alt"></i></span>，我们会尽力解决您的问题。</p>
-<h3 id="安装前提"><a href="# 安装前提" class="headerlink" title="安装前提"></a>安装前提 </h3><p> 安装 Hexo 相当简单，只需要先安装下列应用程序即可：</p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>安装 Hexo 只需几分钟时间，若您在安装过程中遇到问题或无法找到解决方式，请<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2hleG9qcy9oZXhvL2lzc3Vlcw==">提交问题<i class="fa fa-external-link-alt"></i></span>，我们会尽力解决您的问题。</p>
+<h3 id="安装前提"><a href="#安装前提" class="headerlink" title="安装前提"></a>安装前提</h3><p>安装 Hexo 相当简单，只需要先安装下列应用程序即可：</p>
 <ul>
 <li><span class="exturl" data-url="aHR0cDovL25vZGVqcy5vcmcv">Node.js<i class="fa fa-external-link-alt"></i></span> (Node.js 版本需不低于 10.13，建议使用 Node.js 12.0 及以上版本)</li>
 <li><span class="exturl" data-url="aHR0cDovL2dpdC1zY20uY29tLw==">Git<i class="fa fa-external-link-alt"></i></span></li>
 </ul>
 <p>如果您的电脑中已经安装上述必备程序，那么恭喜您！你可以直接前往 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL3poLWNuL2RvY3MvIyVFNSVBRSU4OSVFOCVBMyU4NS1IZXhv">安装 Hexo<i class="fa fa-external-link-alt"></i></span> 步骤。</p>
 <p>如果您的电脑中尚未安装所需要的程序，请根据以下安装指示完成安装。</p>
-<h3 id="安装 -Git"><a href="# 安装 -Git" class="headerlink" title="安装 Git"></a>安装 Git</h3><ul>
+<h3 id="安装-Git"><a href="#安装-Git" class="headerlink" title="安装 Git"></a>安装 Git</h3><ul>
 <li>Windows：下载并安装 <span class="exturl" data-url="aHR0cHM6Ly9naXQtc2NtLmNvbS9kb3dubG9hZC93aW4=">git<i class="fa fa-external-link-alt"></i></span>.</li>
 <li>Mac：使用 <span class="exturl" data-url="aHR0cDovL214Y2wuZ2l0aHViLmNvbS9ob21lYnJldy8=">Homebrew<i class="fa fa-external-link-alt"></i></span>, <span class="exturl" data-url="aHR0cDovL3d3dy5tYWNwb3J0cy5vcmcv">MacPorts<i class="fa fa-external-link-alt"></i></span> 或者下载 <span class="exturl" data-url="aHR0cDovL3NvdXJjZWZvcmdlLm5ldC9wcm9qZWN0cy9naXQtb3N4LWluc3RhbGxlci8=">安装程序<i class="fa fa-external-link-alt"></i></span>。</li>
 <li>Linux (Ubuntu, Debian)：<code>sudo apt-get install git-core</code></li>
@@ -348,7 +353,7 @@
 <p>Windows 用户</p>
 <p>对于中国大陆地区用户，可以前往 <span class="exturl" data-url="aHR0cHM6Ly9ucG0udGFvYmFvLm9yZy9taXJyb3JzL2dpdC1mb3Itd2luZG93cy8=">淘宝 Git for Windows 镜像<i class="fa fa-external-link-alt"></i></span> 下载 git 安装包。</p>
 </blockquote>
-<h3 id="安装 -Node-js"><a href="# 安装 -Node-js" class="headerlink" title="安装 Node.js"></a>安装 Node.js</h3><p>Node.js 为大多数平台提供了官方的 <span class="exturl" data-url="aHR0cHM6Ly9ub2RlanMub3JnL2VuL2Rvd25sb2FkLw==">安装程序 <i class="fa fa-external-link-alt"></i></span>。对于中国大陆地区用户，可以前往 <span class="exturl" data-url="aHR0cHM6Ly9ucG0udGFvYmFvLm9yZy9taXJyb3JzL25vZGU="> 淘宝 Node.js 镜像<i class="fa fa-external-link-alt"></i></span> 下载。</p>
+<h3 id="安装-Node-js"><a href="#安装-Node-js" class="headerlink" title="安装 Node.js"></a>安装 Node.js</h3><p>Node.js 为大多数平台提供了官方的 <span class="exturl" data-url="aHR0cHM6Ly9ub2RlanMub3JnL2VuL2Rvd25sb2FkLw==">安装程序<i class="fa fa-external-link-alt"></i></span>。对于中国大陆地区用户，可以前往 <span class="exturl" data-url="aHR0cHM6Ly9ucG0udGFvYmFvLm9yZy9taXJyb3JzL25vZGU=">淘宝 Node.js 镜像<i class="fa fa-external-link-alt"></i></span> 下载。</p>
 <p>其它的安装方法：</p>
 <ul>
 <li>Windows：通过 <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2phc29uZ2luL252cy8=">nvs<i class="fa fa-external-link-alt"></i></span>（推荐）或者<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL252bS1zaC9udm0=">nvm<i class="fa fa-external-link-alt"></i></span> 安装。</li>
@@ -363,23 +368,23 @@
 </blockquote>
 <blockquote>
 <p>For Mac / Linux 用户</p>
-<p>如果在尝试安装 Hexo 的过程中出现 <code>EACCES</code> 权限错误，请遵循 <span class="exturl" data-url="aHR0cHM6Ly9kb2NzLm5wbWpzLmNvbS9yZXNvbHZpbmctZWFjY2VzLXBlcm1pc3Npb25zLWVycm9ycy13aGVuLWluc3RhbGxpbmctcGFja2FnZXMtZ2xvYmFsbHk=">由 npmjs 发布的指导 <i class="fa fa-external-link-alt"></i></span> 修复该问题。强烈建议 <strong> 不要</strong> 使用 root、sudo 等方法覆盖权限</p>
+<p>如果在尝试安装 Hexo 的过程中出现 <code>EACCES</code> 权限错误，请遵循 <span class="exturl" data-url="aHR0cHM6Ly9kb2NzLm5wbWpzLmNvbS9yZXNvbHZpbmctZWFjY2VzLXBlcm1pc3Npb25zLWVycm9ycy13aGVuLWluc3RhbGxpbmctcGFja2FnZXMtZ2xvYmFsbHk=">由 npmjs 发布的指导<i class="fa fa-external-link-alt"></i></span> 修复该问题。强烈建议 <strong>不要</strong> 使用 root、sudo 等方法覆盖权限</p>
 </blockquote>
 <blockquote>
 <p>Linux</p>
 <p>If you installed Node.js using Snap, you may need to manually run <code>npm install</code> in the target folder when <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3MvY29tbWFuZHMjaW5pdA==">initializing<i class="fa fa-external-link-alt"></i></span> a blog.</p>
 </blockquote>
-<h3 id="安装 -Hexo"><a href="# 安装 -Hexo" class="headerlink" title="安装 Hexo"></a>安装 Hexo</h3><p>所有必备的应用程序安装完成后，即可使用 npm 安装 Hexo。</p>
-<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></tbody></table></figure>
-<h3 id="进阶安装和使用"><a href="# 进阶安装和使用" class="headerlink" title="进阶安装和使用"></a>进阶安装和使用 </h3><p> 对于熟悉 npm 的进阶用户，可以仅局部安装 <code>hexo</code> 包。</p>
-<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">$ npm install hexo</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="安装-Hexo"><a href="#安装-Hexo" class="headerlink" title="安装 Hexo"></a>安装 Hexo</h3><p>所有必备的应用程序安装完成后，即可使用 npm 安装 Hexo。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+<h3 id="进阶安装和使用"><a href="#进阶安装和使用" class="headerlink" title="进阶安装和使用"></a>进阶安装和使用</h3><p>对于熟悉 npm 的进阶用户，可以仅局部安装 <code>hexo</code> 包。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ npm install hexo</span><br></pre></td></tr></table></figure>
 <p>安装以后，可以使用以下两种方式执行 Hexo：</p>
 <ol>
 <li><p><code>npx hexo &lt;command&gt;</code></p>
 </li>
 <li><p>将 Hexo 所在的目录下的 <code>node_modules</code> 添加到环境变量之中即可直接使用 <code>hexo &lt;command&gt;</code>：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">echo 'PATH="$PATH:./node_modules/.bin"' &gt;&gt; ~/.profile</span><br></pre></td></tr></tbody></table></figure>
-<h3 id="Node-js- 版本限制"><a href="#Node-js- 版本限制" class="headerlink" title="Node.js 版本限制"></a>Node.js 版本限制</h3></li>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">echo &#39;PATH&#x3D;&quot;$PATH:.&#x2F;node_modules&#x2F;.bin&quot;&#39; &gt;&gt; ~&#x2F;.profile</span><br></pre></td></tr></table></figure>
+<h3 id="Node-js-版本限制"><a href="#Node-js-版本限制" class="headerlink" title="Node.js 版本限制"></a>Node.js 版本限制</h3></li>
 </ol>
 <p>我们强烈建议永远安装最新版本的 Hexo，以及 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL3poLWNuL2RvY3MvIyVFNSVBRSU4OSVFOCVBMyU4NSVFNSU4OSU4RCVFNiU4RiU5MA==">推荐的 Node.js 版本<i class="fa fa-external-link-alt"></i></span>。</p>
 <table>
@@ -461,8 +466,8 @@
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/17.html" rel="next" title="如何生成 / 添加 SSH 公钥">
-                  如何生成 / 添加 SSH 公钥 <i class="fa fa-chevron-right"></i>
+                <a href="/17.html" rel="next" title="如何生成/添加SSH公钥">
+                  如何生成/添加SSH公钥 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
@@ -506,7 +511,7 @@
 
 
 <div class="copyright">
-  © 2015 – 
+  &copy; 2015 – 
   <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
@@ -518,7 +523,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">349k</span>
+    <span title="站点总字数">350k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
@@ -531,7 +536,7 @@
 <div><canvas id="snow" style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:99999;pointer-events:none"></canvas></div>
 
 
-<script id="click-show-text" src="/js/click-show-text.js" data-mobile="false" data-text="富强,民主,文明,和谐,自由,平等,公正,法治,爱国,敬业,诚信,友善" data-fontsize="20px" data-random="false" async=""></script>
+<script id="click-show-text" src="/js/click-show-text.js" data-mobile="false" data-text="富强,民主,文明,和谐,自由,平等,公正,法治,爱国,敬业,诚信,友善" data-fontsize="20px" data-random="false" async></script>
 
     </div>
   </footer>
@@ -582,6 +587,5 @@ NexT.utils.loadComments('#lv-container', () => {
 });
 </script>
 
-
-
-</body></html>
+</body>
+</html>

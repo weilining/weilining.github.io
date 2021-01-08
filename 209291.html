@@ -1,4 +1,6 @@
-<!DOCTYPE html><html lang="zh-CN"><head>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
@@ -14,12 +16,12 @@
   <meta name="yandex-verification" content="06c62a93328de5da">
   <meta name="baidu-site-verification" content="code-wFDrn4lvkD">
 
+<link rel="stylesheet" href="/css/main.css">
 
+<link rel="stylesheet" href="https://fonts.dogedoge.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
-
-
-
-  
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
@@ -29,7 +31,7 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo NexT 加载性能优化">
 <meta property="og:url" content="https://weilining.github.io/209291.html">
-<meta property="og:site_name" content="Ln's Blog">
+<meta property="og:site_name" content="Ln&#39;s Blog">
 <meta property="og:description" content="Hexo NexT 加载性能优化">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-09-28T16:44:04.000Z">
@@ -96,13 +98,13 @@
 </noscript>
 
 <link rel="alternate" href="/atom.xml" title="Ln's Blog" type="application/atom+xml">
-<script>function loadCss(l){var d=document,h=d.head,s=d.createElement('link');s.rel='stylesheet';s.href=l;!function e(f){if (d.body)return f();setTimeout(function(){e(f)})}(function(){h.appendChild(s);});}loadCss('/style.css');loadCss('https://fonts.dogedoge.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext');loadCss('//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css');loadCss('//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css');</script><noscript><link rel="stylesheet" href="/style.css"><link rel="stylesheet" href="https://fonts.dogedoge.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&amp;display=swap&amp;subset=latin,latin-ext"><link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css"><link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css"></noscript></head>
+</head>
 
-<body itemscope="" itemtype="http://schema.org/WebPage" class="use-motion">
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
   <div class="headband"></div>
 
   <main class="main">
-    <header class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
     <div class="toggle" aria-label="切换导航栏" role="button">
@@ -153,7 +155,9 @@
     <i class="fa fa-search"></i>
   </span>
   <div class="search-input-container">
-    <input autocomplete="off" autocapitalize="off" maxlength="80" placeholder="搜索..." spellcheck="false" type="search" class="search-input">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
   </div>
   <span class="popup-btn-close" role="button">
     <i class="fa fa-times-circle"></i>
@@ -192,13 +196,14 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%90%AF%E7%94%A8%20-Quicklink-%20%E9%A2%84%E5%8A%A0%E8%BD%BD"><span class="nav-number">1.</span> <span class="nav-text">启用 Quicklink 预加载 </span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quicklink-%20%E5%8E%9F%E7%90%86%E7%AE%80%E4%BB%8B"><span class="nav-number">1.1.</span> <span class="nav-text">Quicklink 原理简介 </span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE"><span class="nav-number">1.2.</span> <span class="nav-text">配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%AF%E7%94%A8%20-CDN"><span class="nav-number">1.3.</span> <span class="nav-text">启用 CDN</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%A1%B5%E9%9D%A2%E5%8A%A0%E8%BD%BD%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95"><span class="nav-number">2.</span> <span class="nav-text">页面加载性能测试 </span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%90%AF%E7%94%A8-Quicklink-%E9%A2%84%E5%8A%A0%E8%BD%BD"><span class="nav-number">1.</span> <span class="nav-text">启用 Quicklink 预加载</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quicklink-%E5%8E%9F%E7%90%86%E7%AE%80%E4%BB%8B"><span class="nav-number">1.1.</span> <span class="nav-text">Quicklink 原理简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE"><span class="nav-number">1.2.</span> <span class="nav-text">配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%AF%E7%94%A8-CDN"><span class="nav-number">1.3.</span> <span class="nav-text">启用 CDN</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%A1%B5%E9%9D%A2%E5%8A%A0%E8%BD%BD%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95"><span class="nav-number">2.</span> <span class="nav-text">页面加载性能测试</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
         <div class="site-overview-wrap sidebar-panel">
-          <div class="site-author site-overview-item animated" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="Lining Wei" src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/icon.gif">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Lining Wei"
+      src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/icon.gif">
   <p class="site-author-name" itemprop="name">Lining Wei</p>
   <div class="site-description" itemprop="description">算法、技术</div>
 </div>
@@ -207,7 +212,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">240</span>
+          <span class="site-state-item-count">241</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -258,16 +263,16 @@
   
   
 
-  <article itemscope="" itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://weilining.github.io/209291.html">
 
-    <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/weilining/img@main/img/icon.gif">
       <meta itemprop="name" content="Lining Wei">
       <meta itemprop="description" content="算法、技术">
     </span>
 
-    <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Ln's Blog">
     </span>
       <header class="post-header">
@@ -297,7 +302,7 @@
         <i class="far fa-folder"></i>
       </span>
       <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
           <a href="/categories/Hexo/" itemprop="url" rel="index"><span itemprop="name">Hexo</span></a>
         </span>
     </span>
@@ -316,7 +321,7 @@
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
-      <span class="post-meta-item-text">阅读时长 ≈</span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
       <span>1 分钟</span>
     </span>
 </div>
@@ -330,16 +335,16 @@
     
     <div class="post-body" itemprop="articleBody">
         <p>[TOC]</p>
-<h1 id="启用 -Quicklink- 预加载"><a href="# 启用 -Quicklink- 预加载" class="headerlink" title="启用 Quicklink 预加载"></a>启用 Quicklink 预加载 </h1><p> 近来，Google Chrome Labs 推出了 quicklink，用以实现链接资源的预加载（prefetch）。</p>
+<h1 id="启用-Quicklink-预加载"><a href="#启用-Quicklink-预加载" class="headerlink" title="启用 Quicklink 预加载"></a>启用 Quicklink 预加载</h1><p>近来，Google Chrome Labs 推出了 quicklink，用以实现链接资源的预加载（prefetch）。</p>
 <a id="more"></a>
 
-<h2 id="Quicklink- 原理简介"><a href="#Quicklink- 原理简介" class="headerlink" title="Quicklink 原理简介"></a>Quicklink 原理简介 </h2><p> 当我们提到性能优化，往往都会着眼于当前用户访问的这个页面，通过压缩资源大小、删减不必要资源、加快页面解析渲染等方式提升用户的访问速度；而 quicklink 用了另一种思路：我预先帮你加载（获取）接下来最可能要用的资源，这样之后真正使用到该资源（链接）时就会感觉非常顺畅。</p>
-<h2 id="配置"><a href="# 配置" class="headerlink" title="配置"></a>配置</h2><p><code>_config.next.yml</code> </p>
-<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">quicklink:</span><br><span class="line">  enable: true</span><br><span class="line">  home: true</span><br><span class="line">  archive: true</span><br><span class="line">  delay: true</span><br><span class="line">  timeout: 3000</span><br><span class="line">  priority: true</span><br><span class="line">  ignores:</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="Quicklink-原理简介"><a href="#Quicklink-原理简介" class="headerlink" title="Quicklink 原理简介"></a>Quicklink 原理简介</h2><p>当我们提到性能优化，往往都会着眼于当前用户访问的这个页面，通过压缩资源大小、删减不必要资源、加快页面解析渲染等方式提升用户的访问速度；而 quicklink 用了另一种思路：我预先帮你加载（获取）接下来最可能要用的资源，这样之后真正使用到该资源（链接）时就会感觉非常顺畅。</p>
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p><code>_config.next.yml</code> </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">quicklink:</span><br><span class="line">  enable: true</span><br><span class="line">  home: true</span><br><span class="line">  archive: true</span><br><span class="line">  delay: true</span><br><span class="line">  timeout: 3000</span><br><span class="line">  priority: true</span><br><span class="line">  ignores:</span><br></pre></td></tr></table></figure>
 <p>注意：<strong>Quicklink 需要安装依赖</strong>。</p>
-<h2 id="启用 -CDN"><a href="# 启用 -CDN" class="headerlink" title="启用 CDN"></a>启用 CDN</h2><p><code>_config.next.yml</code> </p>
-<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">vendors:</span><br><span class="line">  quicklink: //cdn.jsdelivr.net/npm/quicklink@1/dist/quicklink.umd.js</span><br></pre></td></tr></tbody></table></figure>
-<h1 id="页面加载性能测试"><a href="# 页面加载性能测试" class="headerlink" title="页面加载性能测试"></a>页面加载性能测试 </h1><p> 现在我们可以测试下页面加载性能。</p>
+<h2 id="启用-CDN"><a href="#启用-CDN" class="headerlink" title="启用 CDN"></a>启用 CDN</h2><p><code>_config.next.yml</code> </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">vendors:</span><br><span class="line">  quicklink: &#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;quicklink@1&#x2F;dist&#x2F;quicklink.umd.js</span><br></pre></td></tr></table></figure>
+<h1 id="页面加载性能测试"><a href="#页面加载性能测试" class="headerlink" title="页面加载性能测试"></a>页面加载性能测试</h1><p>现在我们可以测试下页面加载性能。</p>
 <p>Google PageSpeed Insights 可用于帮助分析网页加载速度瓶颈，该网站将会针对指定域名进行在线测试，并提供一份详细的页面加载分析报告，报告中还会根据页面资源加载情况给出合理的优化建议及预期优化效果，因此用户可以有的放矢的进行性能优化专项整改。</p>
 <ul>
 <li><span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXJzLmdvb2dsZS5jb20vc3BlZWQvcGFnZXNwZWVkL2luc2lnaHRzLw==">Google PageSpeed Insights<i class="fa fa-external-link-alt"></i></span></li>
@@ -435,7 +440,7 @@
 
 
 <div class="copyright">
-  © 2015 – 
+  &copy; 2015 – 
   <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
@@ -447,7 +452,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">349k</span>
+    <span title="站点总字数">350k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
@@ -460,7 +465,7 @@
 <div><canvas id="snow" style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:99999;pointer-events:none"></canvas></div>
 
 
-<script id="click-show-text" src="/js/click-show-text.js" data-mobile="false" data-text="富强,民主,文明,和谐,自由,平等,公正,法治,爱国,敬业,诚信,友善" data-fontsize="20px" data-random="false" async=""></script>
+<script id="click-show-text" src="/js/click-show-text.js" data-mobile="false" data-text="富强,民主,文明,和谐,自由,平等,公正,法治,爱国,敬业,诚信,友善" data-fontsize="20px" data-random="false" async></script>
 
     </div>
   </footer>
@@ -511,6 +516,5 @@ NexT.utils.loadComments('#lv-container', () => {
 });
 </script>
 
-
-
-</body></html>
+</body>
+</html>
