@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
+<!DOCTYPE html><html lang="zh-CN"><head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
@@ -16,12 +14,12 @@
   <meta name="yandex-verification" content="06c62a93328de5da">
   <meta name="baidu-site-verification" content="code-wFDrn4lvkD">
 
-<link rel="stylesheet" href="/css/main.css">
 
-<link rel="stylesheet" href="https://fonts.dogedoge.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext" media="print" onload='this.media="all"'>
 
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css" media="print" onload='this.media="all"'>
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" media="print" onload='this.media="all"'>
+
+
+
+  
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
@@ -31,7 +29,7 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="CentOS 搭建 Git 服务器及权限管理">
 <meta property="og:url" content="https://weilining.github.io/154.html">
-<meta property="og:site_name" content="Ln&#39;s Blog">
+<meta property="og:site_name" content="Ln's Blog">
 <meta property="og:description" content="默认">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-11-22T19:36:54.000Z">
@@ -95,13 +93,13 @@
 </noscript>
 
 <link rel="alternate" href="/atom.xml" title="Ln's Blog" type="application/atom+xml">
-</head>
+<script>function loadCss(l){var d=document,h=d.head,s=d.createElement('link');s.rel='stylesheet';s.href=l;!function e(f){if (d.body)return f();setTimeout(function(){e(f)})}(function(){h.appendChild(s);});}loadCss('/style.css');loadCss('https://fonts.dogedoge.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext');loadCss('//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css');loadCss('//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css');</script><noscript><link rel="stylesheet" href="/style.css"><link rel="stylesheet" href="https://fonts.dogedoge.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&amp;display=swap&amp;subset=latin,latin-ext"><link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css"><link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css"></noscript></head>
 
-<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+<body itemscope="" itemtype="http://schema.org/WebPage" class="use-motion">
   <div class="headband"></div>
 
   <main class="main">
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+    <header class="header" itemscope="" itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
     <div class="toggle" aria-label="切换导航栏" role="button">
@@ -152,9 +150,7 @@
     <i class="fa fa-search"></i>
   </span>
   <div class="search-input-container">
-    <input autocomplete="off" autocapitalize="off" maxlength="80"
-           placeholder="搜索..." spellcheck="false"
-           type="search" class="search-input">
+    <input autocomplete="off" autocapitalize="off" maxlength="80" placeholder="搜索..." spellcheck="false" type="search" class="search-input">
   </div>
   <span class="popup-btn-close" role="button">
     <i class="fa fa-times-circle"></i>
@@ -198,9 +194,8 @@
         <!--/noindex-->
 
         <div class="site-overview-wrap sidebar-panel">
-          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="Lining Wei"
-      src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/icon.gif">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Lining Wei" src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/icon.gif">
   <p class="site-author-name" itemprop="name">Lining Wei</p>
   <div class="site-description" itemprop="description">算法、技术</div>
 </div>
@@ -260,16 +255,16 @@
   
   
 
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+  <article itemscope="" itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://weilining.github.io/154.html">
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/weilining/img@main/img/icon.gif">
       <meta itemprop="name" content="Lining Wei">
       <meta itemprop="description" content="算法、技术">
     </span>
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Ln's Blog">
     </span>
       <header class="post-header">
@@ -292,7 +287,7 @@
         <i class="far fa-folder"></i>
       </span>
       <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
           <a href="/categories/%E9%BB%98%E8%AE%A4/" itemprop="url" rel="index"><span itemprop="name">默认</span></a>
         </span>
     </span>
@@ -311,7 +306,7 @@
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span class="post-meta-item-text">阅读时长 ≈</span>
       <span>5 分钟</span>
     </span>
 </div>
@@ -332,19 +327,19 @@
 
 
 
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> ssh -V</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 输出以下表示没问题，可以继续。 版本可能不一致，能用即可。</span></span><br><span class="line">OpenSSH_6.6.1p1, OpenSSL 1.0.1e-fips 11 Feb 2013</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> ssh -V</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 输出以下表示没问题，可以继续。 版本可能不一致，能用即可。</span></span><br><span class="line">OpenSSH_6.6.1p1, OpenSSL 1.0.1e-fips 11 Feb 2013</span><br></pre></td></tr></tbody></table></figure>
 <blockquote>
 <p>避免系统环境和其他的不一致，请核对您系统的版本，其他发行版请对应修改。</p>
 </blockquote>
 <h2 id="2- 安装 git"><a href="#2- 安装 git" class="headerlink" title="2. 安装 git"></a>2. 安装 git</h2><p>建议以下操作都切换到 root</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 请确保您切换到了 root 账户</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> su root</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> yum install -y git</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 验证是否安装成功</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> git --version</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 输出如下内容表示成功：</span></span><br><span class="line">git version x.x.x.x</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 请确保您切换到了 root 账户</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> su root</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> yum install -y git</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 验证是否安装成功</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> git --version</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 输出如下内容表示成功：</span></span><br><span class="line">git version x.x.x.x</span><br></pre></td></tr></tbody></table></figure>
 <h2 id="3- 添加 git 的管理的账户和设置密码"><a href="#3- 添加 git 的管理的账户和设置密码" class="headerlink" title="3. 添加 git 的管理的账户和设置密码"></a>3. 添加 git 的管理的账户和设置密码 </h2><p> 设置专门管理 git 的账号非必须，但是建议这么操作。</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 添加 git 账户</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> adduser git</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 修改 git 的密码</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> passwd git</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 然后两次输入 git 的密码确认后。</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 查看 git 是否安装成功</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> /home &amp;&amp; ls -al</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 如果已经有了 git，那么表示成，参考如下：</span></span><br><span class="line">drwxr-xr-x.  5 root root 4096 Apr  4 15:03 .</span><br><span class="line">dr-xr-xr-x. 19 root root 4096 Apr  4 15:05 ..</span><br><span class="line">drwx------  10 git  git  4096 Apr  4 00:26 git</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 默认还给我们分配一个名字叫 git 的组。</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 添加 git 账户</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> adduser git</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 修改 git 的密码</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> passwd git</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 然后两次输入 git 的密码确认后。</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 查看 git 是否安装成功</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> /home &amp;&amp; ls -al</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 如果已经有了 git，那么表示成，参考如下：</span></span><br><span class="line">drwxr-xr-x.  5 root root 4096 Apr  4 15:03 .</span><br><span class="line">dr-xr-xr-x. 19 root root 4096 Apr  4 15:05 ..</span><br><span class="line">drwx------  10 git  git  4096 Apr  4 00:26 git</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 默认还给我们分配一个名字叫 git 的组。</span></span><br></pre></td></tr></tbody></table></figure>
 <h2 id="4-git 的权限管理"><a href="#4-git 的权限管理" class="headerlink" title="4. git 的权限管理"></a>4. git 的权限管理</h2><p>git 仓库的权限管理，我们可以手动进行管理和配置，也可以通过其他辅助工具。如果小团队的话，直接通过 ssh 公钥进行管理即可，如果大点的团队，最好用<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3NpdGFyYW1jL2dpdG9saXRl">gitolite<i class="fa fa-external-link-alt"></i></span> 或者 <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3JlczBuYXQwci9naXRvc2lz">gitosis<i class="fa fa-external-link-alt"></i></span>，两者都差不多，一个是 Perl 开发，一个是 Python 开发。</p>
 <p>以下我分别介绍手动管理权限和使用 <code>gitolite</code> 管理的方式，<strong>注意两者不兼容，不能混用</strong>。</p>
 <h2 id="5-git 的手动权限管理"><a href="#5-git 的手动权限管理" class="headerlink" title="5. git 的手动权限管理"></a>5. git 的手动权限管理 </h2><p> 经过以上步骤，其实服务器的基本已经配置好，但是需要设置权限和配置远程访问 git 仓库的方式。我们只介绍 ssh 的方式，https 不做介绍。</p>
 <h3 id="5-1- 配置服务端的 ssh 访问"><a href="#5-1- 配置服务端的 ssh 访问" class="headerlink" title="5.1 配置服务端的 ssh 访问"></a>5.1 配置服务端的 ssh 访问 </h3><p> 切换到 git 账号, 并创建 ssh 的默认目录和校验公钥的配置文件</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 1. 切换到 git 账号</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> su git</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 2. 进入 git 账户的主目录</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> /home/git</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 3. 创建.ssh 的配置，如果此文件夹已经存在请忽略此步。</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> mkdir .ssh</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 4. 进入刚创建的.ssh 目录并创建 authorized_keys 文件, 此文件存放客户端远程访问的 ssh 的公钥。</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> /home/git/.ssh</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> touch authorized_keys</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 5. 设置权限，此步骤不能省略，而且权限值也不要改，不然会报错。</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> chmod 700 /home/git/.ssh/</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> chmod 600 /home/git/.ssh/authorized_keys</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 1. 切换到 git 账号</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> su git</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 2. 进入 git 账户的主目录</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> /home/git</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 3. 创建.ssh 的配置，如果此文件夹已经存在请忽略此步。</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> mkdir .ssh</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 4. 进入刚创建的.ssh 目录并创建 authorized_keys 文件, 此文件存放客户端远程访问的 ssh 的公钥。</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> /home/git/.ssh</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> touch authorized_keys</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 5. 设置权限，此步骤不能省略，而且权限值也不要改，不然会报错。</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> chmod 700 /home/git/.ssh/</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> chmod 600 /home/git/.ssh/authorized_keys</span></span><br></pre></td></tr></tbody></table></figure>
 <p>此时，服务端的配置基本完成。接下需要把客户端的公钥拷贝到 <code>authorized_keys</code> 文件中。</p>
 <h3 id="5-2- 配置客户端的 ssh 私钥并上传服务器"><a href="#5-2- 配置客户端的 ssh 私钥并上传服务器" class="headerlink" title="5.2 配置客户端的 ssh 私钥并上传服务器"></a>5.2 配置客户端的 ssh 私钥并上传服务器 </h3><p> 以下是客户端创建 ssh 私钥和拷贝的过程，如果您有私钥越过创建私钥的过程。</p>
 <p>请用您的客户端进入终端（如果只有一台电脑，可以用不同的账号模拟不同客户端）</p>
@@ -352,55 +347,55 @@
 <p>检查是否已经拥有 ssh 公钥和私钥：进入用户的主目录。</p>
 <p>用户主目录：<br> Windows 系统：<code>C:\Users\ 用户名</code><br> Linux 系统：<code>/home/ 用户名</code><br> Mac 系统：<code>/Users/ 用户名</code></p>
 <p>然后查看是否有 <code>.ssh</code> 文件夹，此文件夹下是否有如下几个文件。</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"># 用户主目录的 <span class="selector-class">.ssh</span> 文件夹下</span><br><span class="line"><span class="selector-class">.ssh</span></span><br><span class="line">├── <span class="selector-tag">id_rsa</span></span><br><span class="line">└── <span class="selector-tag">id_rsa</span><span class="selector-class">.pub</span>  # 我们要用的私钥</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tbody><tr><td class="code"><pre><span class="line"># 用户主目录的 <span class="selector-class">.ssh</span> 文件夹下</span><br><span class="line"><span class="selector-class">.ssh</span></span><br><span class="line">├── <span class="selector-tag">id_rsa</span></span><br><span class="line">└── <span class="selector-tag">id_rsa</span><span class="selector-class">.pub</span>  # 我们要用的私钥</span><br></pre></td></tr></tbody></table></figure>
 <p>如果没有，那么用 ssh-keygen 创建 ssh 的私钥。</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> ssh-keygen -t rsa</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 接下来，三个回车默认即可。</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> ssh-keygen -t rsa</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 接下来，三个回车默认即可。</span></span><br></pre></td></tr></tbody></table></figure>
 <p>创建私钥成功后，在查看用户目录是否有意加有了公钥文件 id_rsa.pub</p>
 <p><strong>第二步： 拷贝私钥到 git 的服务器</strong></p>
 <p>如何把客户端的文件拷贝到服务器端，我建议用 <code>scp</code> 命令进行拷贝。</p>
 <p>以下以 mac 系统为例：</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 首先进入我的用户主目录的.ssh 目录下，注意用户名 xxx 替换成自己的</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> /Users/xxx/.ssh</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 以下命令是：把本地的 id_rsa.pub 文件拷贝到 aicoder.com 服务器，登录 aicoder.com 服务的账号是 git。</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 冒号后面默认就是 git 账号的主目录，最后文件被保存成 laoma.pub</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 注意：把域名换成你自己的或者 ip，最后的文件名可以自己定，后面还有用。</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> scp ./id_rsa.pub git@aicoder.com:.ssh/laoma.pub</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 首先进入我的用户主目录的.ssh 目录下，注意用户名 xxx 替换成自己的</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> /Users/xxx/.ssh</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 以下命令是：把本地的 id_rsa.pub 文件拷贝到 aicoder.com 服务器，登录 aicoder.com 服务的账号是 git。</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 冒号后面默认就是 git 账号的主目录，最后文件被保存成 laoma.pub</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 注意：把域名换成你自己的或者 ip，最后的文件名可以自己定，后面还有用。</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> scp ./id_rsa.pub git@aicoder.com:.ssh/laoma.pub</span></span><br></pre></td></tr></tbody></table></figure>
 <h3 id="5-3- 服务器端添加客户端的 SSH 公钥"><a href="#5-3- 服务器端添加客户端的 SSH 公钥" class="headerlink" title="5.3 服务器端添加客户端的 SSH 公钥"></a>5.3 服务器端添加客户端的 SSH 公钥 </h3><p> 切换到服务器端，把刚才上传的 laoma.pub 文件的内容添加到 authorized_keys 中，就可以允许客户端 ssh 访问了。</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 切换到 git 账户</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> su git</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> /home/git/.ssh</span></span><br><span class="line"></span><br><span class="line"><span class="meta">$</span><span class="bash"> ls -al</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 查看一下.ssh 目录是否有 authorized_keys 和 laoma.pub 文件</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> .</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> |-- authorized_keys</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> `-- laoma.pub</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 如果有，那么进行下面的把 laoma.pub 文件中的内容添加到 authorized_keys 中.</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> cat laoma.pub &gt;&gt; authorized_keys</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> &gt;&gt; 是在文件后面追加的意思，主要如果用其他编辑器，每个 ssh 的 pub 要单独一行，建议用 cat 命令方便简单。</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 切换到 git 账户</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> su git</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> /home/git/.ssh</span></span><br><span class="line"></span><br><span class="line"><span class="meta">$</span><span class="bash"> ls -al</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 查看一下.ssh 目录是否有 authorized_keys 和 laoma.pub 文件</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> .</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> |-- authorized_keys</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> `-- laoma.pub</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 如果有，那么进行下面的把 laoma.pub 文件中的内容添加到 authorized_keys 中.</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> cat laoma.pub &gt;&gt; authorized_keys</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> &gt;&gt; 是在文件后面追加的意思，主要如果用其他编辑器，每个 ssh 的 pub 要单独一行，建议用 cat 命令方便简单。</span></span><br></pre></td></tr></tbody></table></figure>
 <p>到此为止，您配置的客户端应该可以 ssh 的方式直接用 git 账号登录服务器。(当然不安全，后面可以控制)</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 在客户端用 ssh 测试连接远程服务器, 请将域名 aicoder.com 换成你的 ip 地址或者域名</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> ssh git@aicoder.com</span>    </span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 第一次连接有警告，输入 yes 继续即可。如果可以连接上，那么恭喜你的 ssh 配置已经可以了。</span> </span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 在客户端用 ssh 测试连接远程服务器, 请将域名 aicoder.com 换成你的 ip 地址或者域名</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> ssh git@aicoder.com</span>    </span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 第一次连接有警告，输入 yes 继续即可。如果可以连接上，那么恭喜你的 ssh 配置已经可以了。</span> </span><br></pre></td></tr></tbody></table></figure>
 <h3 id="5-4- 服务器端创建测试 git 仓库"><a href="#5-4- 服务器端创建测试 git 仓库" class="headerlink" title="5.4 服务器端创建测试 git 仓库"></a>5.4 服务器端创建测试 git 仓库 </h3><p> 进入服务器的终端。</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 切换到 git 账号</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> su git</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 进入 git 账号的用户主目录。</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> /home/git</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 在用户主目录下创建 test.git 仓库的文件夹</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> mkdir test.git  &amp;&amp; <span class="built_in">cd</span> test.git</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 在 test.git 目录下初始化 git 仓库</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> git init --bare</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 输出如下内容，表示成功</span></span><br><span class="line">Initialized empty Git repository in /home/git/test.git/</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 切换到 git 账号</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> su git</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 进入 git 账号的用户主目录。</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> /home/git</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 在用户主目录下创建 test.git 仓库的文件夹</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> mkdir test.git  &amp;&amp; <span class="built_in">cd</span> test.git</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 在 test.git 目录下初始化 git 仓库</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> git init --bare</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 输出如下内容，表示成功</span></span><br><span class="line">Initialized empty Git repository in /home/git/test.git/</span><br></pre></td></tr></tbody></table></figure>
 <blockquote>
 <p>git init --bare 是在当前目录创建一个裸仓库，也就是说没有工作区的文件，直接把 git 仓库隐藏的文件放在当前目录下，此目录仅用于存储仓库的历史版本等数据。</p>
 </blockquote>
 <p>此时，客户端就可以进行 clone 或者 remote add 此仓库了。</p>
 <h3 id="5-5- 客户端测试连接 git 远程仓库"><a href="#5-5- 客户端测试连接 git 远程仓库" class="headerlink" title="5.5 客户端测试连接 git 远程仓库"></a>5.5 客户端测试连接 git 远程仓库 </h3><p> 客户端，可以新建一个文件夹，初始化一个仓库，然后跟远程服务器上的空仓库建立连接。</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 以下 shell 代码，纯手写没有验证，如果有错误请自行纠正。</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> mkdir demos &amp;&amp; <span class="built_in">cd</span> demos</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> git init</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> touch a.txt</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">echo</span> <span class="string">&#x27;aicoder.com&#x27;</span> &gt;&gt; a.txt</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> git add .</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> git commit -m <span class="string">&#x27;the first commit&#x27;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 把当前仓库跟远程仓库添映射</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> git remote add origin git@aicoder.com:test.git</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 把当前仓库 push 到远程仓库。</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> git push -u origin master</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 以下 shell 代码，纯手写没有验证，如果有错误请自行纠正。</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> mkdir demos &amp;&amp; <span class="built_in">cd</span> demos</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> git init</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> touch a.txt</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">echo</span> <span class="string">'aicoder.com'</span> &gt;&gt; a.txt</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> git add .</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> git commit -m <span class="string">'the first commit'</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 把当前仓库跟远程仓库添映射</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> git remote add origin git@aicoder.com:test.git</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 把当前仓库 push 到远程仓库。</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> git push -u origin master</span></span><br></pre></td></tr></tbody></table></figure>
 <p>到此为止，我们就可以尽情的享用 git 私服了，但是！但是！但是！客户端可以直接 ssh 登录啊，这是 bug，也是不安全的隐患，且看下面怎么禁用 git 账号的 shell 登录。</p>
 <h3 id="5-6- 禁止客户端 shell 登录"><a href="#5-6- 禁止客户端 shell 登录" class="headerlink" title="5.6 禁止客户端 shell 登录"></a>5.6 禁止客户端 shell 登录 </h3><p> 因为前面我们添加了客户端的 ssh 的公钥到远程服务器，所以客户端可以直接通过 shell 远程登录服务器，这不安全，也不是我们想要的。且看下面如何禁用 shell 登录：</p>
 <p>第一步：<br> 给 <code>/home/git</code> 下面创建 <code>git-shell-commands</code> 目录，并把目录的拥有者设置为 git 账户。可以直接用 git 账号登录服务器终端操作。</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> su git</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> mkdir /home/git/git-shell-commands</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> su git</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> mkdir /home/git/git-shell-commands</span></span><br></pre></td></tr></tbody></table></figure>
 <blockquote>
 <p>此文件夹是 git-shell 用到的目录，需要我们手动创建，不然报错：fatal: Interactive git shell is not enabled. hint: ~/git-shell-commands should exist and have read and execute access.</p>
 </blockquote>
 <p>第二步：修改 <code>/etc/passwd</code> 文件，修改</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> vim /etc/passwd</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 可以通过 vim 的正则搜索快速定位到这行，  命名模式下  :/git:x</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 找到这句, 注意 1000 可能是别的数字</span></span><br><span class="line">git:x:1000:1000::/home/git:/bin/bash</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 改为：</span></span><br><span class="line">git:x:1000:1000::/home/git:/bin/git-shell</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 最好不要直接改，可以先复制一行，然后注释掉一行，修改一行，保留原始的，这就是经验！！！</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> vim 快捷键： 命令模式下：yy 复制行， p 粘贴  0 光标到行首 $ 到行尾 x 删除一个字符  i 进入插入模式</span> </span><br><span class="line"><span class="meta">#</span><span class="bash"> 修改完后退出保存：  esc 进入命令模式， 输入：:wq!   保存退出。</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> vim /etc/passwd</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 可以通过 vim 的正则搜索快速定位到这行，  命名模式下  :/git:x</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 找到这句, 注意 1000 可能是别的数字</span></span><br><span class="line">git:x:1000:1000::/home/git:/bin/bash</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 改为：</span></span><br><span class="line">git:x:1000:1000::/home/git:/bin/git-shell</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 最好不要直接改，可以先复制一行，然后注释掉一行，修改一行，保留原始的，这就是经验！！！</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> vim 快捷键： 命令模式下：yy 复制行， p 粘贴  0 光标到行首 $ 到行尾 x 删除一个字符  i 进入插入模式</span> </span><br><span class="line"><span class="meta">#</span><span class="bash"> 修改完后退出保存：  esc 进入命令模式， 输入：:wq!   保存退出。</span></span><br></pre></td></tr></tbody></table></figure>
 <p>好了，此时我们就不用担心客户端通过 shell 登录，只允许使用 git-shell 进行管理 git 的仓库。</p>
 <p>如果有其他小伙伴要连接 git 服务器，仅需要把他的公钥也添加到 authorized_keys 即可。</p>
 <h2 id="7-git 的自动权限管理：gitolite（不要跟上面的步骤混做！！！）"><a href="#7-git 的自动权限管理：gitolite（不要跟上面的步骤混做！！！）" class="headerlink" title="7. git 的自动权限管理：gitolite（不要跟上面的步骤混做！！！）"></a>7. git 的自动权限管理：gitolite（不要跟上面的步骤混做！！！）</h2><p>如果团队大点的，我们可以用 <code>gitolite</code> 管理，而且使用很方便。</p>
 <h3 id="7-1-gitolite 的安装和配置"><a href="#7-1-gitolite 的安装和配置" class="headerlink" title="7.1 gitolite 的安装和配置"></a>7.1 gitolite 的安装和配置 </h3><p> 以下配置此承接第 5，如果第 6 步您已经操作，请注意 <strong> 第二步的说明</strong>。</p>
 <p><strong>第一步：添加 <code>gitolite</code> 依赖的 <code>perl</code> 的包</strong></p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> yum install <span class="string">&#x27;perl(Data::Dumper)&#x27;</span></span> </span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> yum install <span class="string">'perl(Data::Dumper)'</span></span> </span><br></pre></td></tr></tbody></table></figure>
 <p><strong>第二步：清空服务器端配置的 ssh 的公钥</strong></p>
 <p>确保：<code>/home/git/.ssh/authorized_keys</code>文件是空的，或者不存在。如果已经存在，建议你把他改名即可，比如：authorized_keys.bak</p>
 <p><strong>第三步：上传管理员的客户端的 ssh 公钥到服务器</strong></p>
 <p>把你管理员电脑的 ssh 的 <code>id_rsa.pub</code> 文件拷贝到服务器的： $HOME/YourName.pub</p>
 <p>YourName 可以自定义，最好根据不同伙伴的名字命名。</p>
 <p>参考：</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> mac 客户端</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> scp /Users/fly/.ssh/id_rsa.pub git@aicoder.com:malun.pub</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> mac 客户端</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> scp /Users/fly/.ssh/id_rsa.pub git@aicoder.com:malun.pub</span></span><br></pre></td></tr></tbody></table></figure>
 <p><strong>第四步：安装配置 gitolite</strong></p>
 <p>用 git 账号登录，并执行如下命令。</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 切换到 git 账号</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> su git</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 进入 git 主目录</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> /home/git</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 下载 gitolite 的仓库</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> git <span class="built_in">clone</span> https://github.com/sitaramc/gitolite</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 创建 bin 文件夹，必须！！！</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> mkdir -p <span class="variable">$HOME</span>/bin</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 用下载下来的仓库中的 insall 执行安装操作，指向的目录就是上一命令行创建的目录</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> ./gitolite 二进制 /install -to <span class="variable">$HOME</span>/bin</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 把上传到服务器的 管理员的公钥 setup 到 gitolite 中，注意：YourName.pub 改成你自己的文件名。</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> ~/bin/gitolite setup -pk ~/YourName.pub</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 此时安装配完成后，查看 git 主目录</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> ls /home/git</span></span><br><span class="line">drwxr-xr-x   7 git  git  4096 Apr  3 23:50 bin               # 我们创建的存放 gitolite 二进制</span><br><span class="line">drwxrwxr-x   6 git  git  4096 Apr  3 23:40 gitolite</span><br><span class="line">drwx------   6 git  git  4096 Apr  3 23:52 .gitolite</span><br><span class="line">-rw-------   1 git  git  7130 Apr  3 23:52 .gitolite.rc</span><br><span class="line">-rw-------   1 git  git   398 Apr  3 23:39 malun.pub         # 管理员的公钥</span><br><span class="line">drwxrw----   3 git  git  4096 Apr  3 23:40 .pki</span><br><span class="line">-rw-------   1 git  git    19 Apr  4 00:26 projects.list     # 仓库列表（gitolite 自动创建）</span><br><span class="line">drwx------   5 git  git  4096 Apr  4 00:26 repositories      # 存放所有仓库文件夹</span><br><span class="line">drwx------   2 git  git  4096 Apr  4 15:50 .ssh</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> repositories 目录下已经有了两个 git 仓库了。</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> .</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> |-- gitolite-admin.git    <span class="comment"># 管理配置权限的仓库</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> `-- testing.git           <span class="comment"># 测试仓库</span></span></span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 切换到 git 账号</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> su git</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 进入 git 主目录</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> /home/git</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 下载 gitolite 的仓库</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> git <span class="built_in">clone</span> https://github.com/sitaramc/gitolite</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 创建 bin 文件夹，必须！！！</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> mkdir -p <span class="variable">$HOME</span>/bin</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 用下载下来的仓库中的 insall 执行安装操作，指向的目录就是上一命令行创建的目录</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> ./gitolite 二进制 /install -to <span class="variable">$HOME</span>/bin</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 把上传到服务器的 管理员的公钥 setup 到 gitolite 中，注意：YourName.pub 改成你自己的文件名。</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> ~/bin/gitolite setup -pk ~/YourName.pub</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 此时安装配完成后，查看 git 主目录</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> ls /home/git</span></span><br><span class="line">drwxr-xr-x   7 git  git  4096 Apr  3 23:50 bin               # 我们创建的存放 gitolite 二进制</span><br><span class="line">drwxrwxr-x   6 git  git  4096 Apr  3 23:40 gitolite</span><br><span class="line">drwx------   6 git  git  4096 Apr  3 23:52 .gitolite</span><br><span class="line">-rw-------   1 git  git  7130 Apr  3 23:52 .gitolite.rc</span><br><span class="line">-rw-------   1 git  git   398 Apr  3 23:39 malun.pub         # 管理员的公钥</span><br><span class="line">drwxrw----   3 git  git  4096 Apr  3 23:40 .pki</span><br><span class="line">-rw-------   1 git  git    19 Apr  4 00:26 projects.list     # 仓库列表（gitolite 自动创建）</span><br><span class="line">drwx------   5 git  git  4096 Apr  4 00:26 repositories      # 存放所有仓库文件夹</span><br><span class="line">drwx------   2 git  git  4096 Apr  4 15:50 .ssh</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> repositories 目录下已经有了两个 git 仓库了。</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> .</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> |-- gitolite-admin.git    <span class="comment"># 管理配置权限的仓库</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> `-- testing.git           <span class="comment"># 测试仓库</span></span></span><br></pre></td></tr></tbody></table></figure>
 <p>好了，到此位置，管理员就可以直接把默认的远程管理的仓库 gitolite-admin 直接 clone 到本地进行管理 git 服务了。</p>
 <p><strong>第五步：管理员在本地管理和配置服务器端的仓库</strong></p>
 <p>下载服务器端的远程管理仓库</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 下载远程管理仓库, 请把 aicoder.com 换成你自己服务器的域名或者 ip</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> git <span class="built_in">clone</span> git@aicoder.com:gitolite-admin</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> gitolite-admin</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 目录结构如下：</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> .</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> ├── conf                <span class="comment"># 配置文件夹</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> │   └── gitolite.conf   <span class="comment"># 配置权限的文件</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> └── keydir              <span class="comment"># 客户端的公钥文件夹，所有伙伴的公钥要放到此目录下</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash">     └── malun.pub</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 下载远程管理仓库, 请把 aicoder.com 换成你自己服务器的域名或者 ip</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> git <span class="built_in">clone</span> git@aicoder.com:gitolite-admin</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> gitolite-admin</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 目录结构如下：</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> .</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> ├── conf                <span class="comment"># 配置文件夹</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> │   └── gitolite.conf   <span class="comment"># 配置权限的文件</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> └── keydir              <span class="comment"># 客户端的公钥文件夹，所有伙伴的公钥要放到此目录下</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash">     └── malun.pub</span></span><br></pre></td></tr></tbody></table></figure>
 <h3 id="7-2-gitolite 的权限配置"><a href="#7-2-gitolite 的权限配置" class="headerlink" title="7.2 gitolite 的权限配置"></a>7.2 gitolite 的权限配置</h3><ul>
 <li><p>添加其他开发的小伙伴</p>
 <p>把小伙伴的公钥发给管理员。管理员添加到 <code>gitolite-admin</code> 仓库的 <code>keydir</code> 目录下, 注意文件名字格式为<code>username.pub</code>,username 就是配置权限时的用户名。</p>
@@ -416,12 +411,12 @@
 <p>参考：</p>
 </li>
 </ul>
-  <figure class="highlight dart"><table><tr><td class="code"><pre><span class="line"><span class="meta">@admin</span> = malun  </span><br><span class="line"><span class="meta">@om</span> = malun bcd  </span><br><span class="line">  </span><br><span class="line">repo gitolite-admin  </span><br><span class="line">    RW+     =   malun </span><br><span class="line">  </span><br><span class="line">repo testing  </span><br><span class="line">    RW+     =   <span class="meta">@all</span>  </span><br><span class="line">  </span><br><span class="line">repo om  </span><br><span class="line">    RW+     =   <span class="meta">@admin</span>  </span><br><span class="line">    RW+ master = <span class="meta">@admin</span>  </span><br><span class="line">    RW+ dev  =   <span class="meta">@om</span>  </span><br></pre></td></tr></table></figure>
+  <figure class="highlight dart"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">@admin</span> = malun  </span><br><span class="line"><span class="meta">@om</span> = malun bcd  </span><br><span class="line">  </span><br><span class="line">repo gitolite-admin  </span><br><span class="line">    RW+     =   malun </span><br><span class="line">  </span><br><span class="line">repo testing  </span><br><span class="line">    RW+     =   <span class="meta">@all</span>  </span><br><span class="line">  </span><br><span class="line">repo om  </span><br><span class="line">    RW+     =   <span class="meta">@admin</span>  </span><br><span class="line">    RW+ master = <span class="meta">@admin</span>  </span><br><span class="line">    RW+ dev  =   <span class="meta">@om</span>  </span><br></pre></td></tr></tbody></table></figure>
 <ul>
 <li>应用修改到服务器端</li>
 </ul>
 <p>做好配置后，由管理员把修改 push 到服务器端，会自动处理。</p>
-<figure class="highlight ruby"><table><tr><td class="code"><pre><span class="line"><span class="variable">$ </span>git add conf</span><br><span class="line"><span class="variable">$ </span>git add keydir</span><br><span class="line"><span class="variable">$ </span>git commit -m <span class="string">&quot;added foo, gave access to alice, bob, carol&quot;</span></span><br><span class="line"><span class="variable">$ </span>git push</span><br></pre></td></tr></table></figure>
+<figure class="highlight ruby"><table><tbody><tr><td class="code"><pre><span class="line"><span class="variable">$ </span>git add conf</span><br><span class="line"><span class="variable">$ </span>git add keydir</span><br><span class="line"><span class="variable">$ </span>git commit -m <span class="string">"added foo, gave access to alice, bob, carol"</span></span><br><span class="line"><span class="variable">$ </span>git push</span><br></pre></td></tr></tbody></table></figure>
 <p>此时登录服务端，查看 <code>/home/git/repositories/</code> 目录下是否增加了对应的仓库了呢？</p>
 <h2 id="总结"><a href="# 总结" class="headerlink" title="总结"></a>总结 </h2><p> 其实配置这些并不繁琐，但是需要你有一定的 linux 的经验，当然你也可以选择使用 <code>GitLab</code> 或者<code>Github</code>。</p>
 <p>最后希望能帮到你。</p>
@@ -513,7 +508,7 @@
 
 
 <div class="copyright">
-  &copy; 2015 – 
+  © 2015 – 
   <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
@@ -538,7 +533,7 @@
 <div><canvas id="snow" style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:99999;pointer-events:none"></canvas></div>
 
 
-<script id="click-show-text" src="/js/click-show-text.js" data-mobile="false" data-text="富强,民主,文明,和谐,自由,平等,公正,法治,爱国,敬业,诚信,友善" data-fontsize="20px" data-random="false" async></script>
+
 
     </div>
   </footer>
@@ -563,7 +558,13 @@
 
 
   <script src="//cdn.jsdelivr.net/npm/quicklink@2.0.0/dist/quicklink.umd.js"></script>
-  <script>
+  
+
+
+
+
+
+<script src="/bundle.js"></script><script>
       window.addEventListener('load', () => {
       quicklink.listen({
         timeout : 3000,
@@ -571,9 +572,8 @@
         ignores : [uri => uri.includes('#'),uri => uri === 'https://weilining.github.io/154.html',]
       });
       });
-  </script>
+  ;
 
-<script>
 NexT.utils.loadComments('#lv-container', () => {
   window.livereOptions = {
     refer: "154.html"
@@ -587,7 +587,4 @@ NexT.utils.loadComments('#lv-container', () => {
     e.parentNode.insertBefore(j, e);
   })(document, 'script');
 });
-</script>
-
-</body>
-</html>
+</script></body></html>
