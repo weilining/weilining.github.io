@@ -6,7 +6,7 @@
   <link href="https://weilining.github.io/atom.xml" rel="self"/>
   
   <link href="https://weilining.github.io/"/>
-  <updated>2021-01-08T18:27:16.000Z</updated>
+  <updated>2021-01-15T13:07:22.000Z</updated>
   <id>https://weilining.github.io/</id>
   
   <author>
@@ -15,6 +15,40 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hexo next 随机友情链接</title>
+    <link href="https://weilining.github.io/243.html"/>
+    <id>https://weilining.github.io/243.html</id>
+    <published>2021-01-15T13:07:22.000Z</published>
+    <updated>2021-01-15T13:07:22.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>友情链接下加入</p><p><code>blog/source/friends/index.md</code></p><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 朋友们</span><br><span class="line">type: friends</span><br><span class="line">date: 2020-10-20 17:50:49</span><br><span class="line">updated: 2020-10-20 17:50:49</span><br><span class="line">comments: true</span><br><span class="line">toc: false</span><br><span class="line">sitemap: false</span><br><span class="line">---</span><br><span class="line">以下是本站的友情链接。排名不分先后，每次刷新会随机排列。</span><br><span class="line">&#123;% linkgrid %&#125;</span><br><span class="line">Theme NexT1 | https://theme-next.js.org/ | Stay Simple. Stay NexT. | /images/apple-touch-icon-next.png</span><br><span class="line">Theme NexT2 | https://theme-next.js.org/ | Stay Simple. Stay NexT. | /images/apple-touch-icon-next.png</span><br><span class="line">Theme NexT3 | https://theme-next.js.org/ | Stay Simple. Stay NexT. | /images/apple-touch-icon-next.png</span><br><span class="line">Theme NexT4 | https://theme-next.js.org/ | Stay Simple. Stay NexT. | /images/apple-touch-icon-next.png</span><br><span class="line">% Theme NexT | https://theme-next.js.org/ | Stay Simple. Stay NexT. | /images/apple-touch-icon-next.png</span><br><span class="line">&#123;% endlinkgrid %&#125;</span><br><span class="line"></span><br><span class="line">如果您有意交换友情链接，敬请先将本站添加友链，然后在评论区留言，本站目前仅接受个人博客网站的友链申请（参考下方格式）。为了确保头像显示正确，建议使用 Gravatar 或者 jsDelivr 等服务。如果需要更新博客信息，请留言回复。</span><br><span class="line"></span><br><span class="line">&#123;% note success %&#125;</span><br><span class="line"><span class="strong">**[本站信息]**</span></span><br><span class="line">名称：Ln</span><br><span class="line">简介：算法、技术</span><br><span class="line">网址：https://weilining.cf/</span><br><span class="line">头像：https://cdn.jsdelivr.net/gh/weilining/img@main/img/icon.gif</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">请注意，本站将会定期清理长时间无法访问的友链，请您务必确保域名解析正确、https 证书有效且服务器工作正常。若由于此原因导致友情链接失效，本站恕不另行通知。</span><br><span class="line">&lt;!-- http://www.matrix67.com/blog/archives/879 --&gt;</span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">script</span> <span class="attr">data-pjax</span>=<span class="string">&quot;&quot;</span>&gt;</span></span></span><br><span class="line">(() =&gt; &#123;</span><br><span class="line">const target = document.querySelector(&#x27;.link-grid&#x27;);</span><br><span class="line">[...target.children].sort(() =&gt; Math.random() - 0.5).forEach(item =&gt; target.appendChild(item));</span><br><span class="line">&#125;)();</span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+    <summary type="html">默认</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>hexo next 友情链接</title>
+    <link href="https://weilining.github.io/242.html"/>
+    <id>https://weilining.github.io/242.html</id>
+    <published>2021-01-15T13:03:30.000Z</published>
+    <updated>2021-01-15T13:03:30.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="创建一个页面"><a href="#创建一个页面" class="headerlink" title="创建一个页面"></a>创建一个页面</h2> <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npx hexo new page friends</span><br></pre></td></tr></table></figure><h2 id="写友联"><a href="#写友联" class="headerlink" title="写友联"></a>写友联</h2><p><code>blog/source/friends/index.md</code></p><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 朋友们</span><br><span class="line">type: friends</span><br><span class="line">date: 2020-10-20 17:50:49</span><br><span class="line">updated: 2020-10-20 17:50:49</span><br><span class="line">comments: true</span><br><span class="line">toc: false</span><br><span class="line">sitemap: false</span><br><span class="line">---</span><br><span class="line">以下是本站的友情链接。排名不分先后，每次刷新会随机排列。</span><br><span class="line">&#123;% linkgrid %&#125;</span><br><span class="line">Theme NexT1 | https://theme-next.js.org/ | Stay Simple. Stay NexT. | /images/apple-touch-icon-next.png</span><br><span class="line">Theme NexT2 | https://theme-next.js.org/ | Stay Simple. Stay NexT. | /images/apple-touch-icon-next.png</span><br><span class="line">Theme NexT3 | https://theme-next.js.org/ | Stay Simple. Stay NexT. | /images/apple-touch-icon-next.png</span><br><span class="line">Theme NexT4 | https://theme-next.js.org/ | Stay Simple. Stay NexT. | /images/apple-touch-icon-next.png</span><br><span class="line">% Theme NexT | https://theme-next.js.org/ | Stay Simple. Stay NexT. | /images/apple-touch-icon-next.png</span><br><span class="line">&#123;% endlinkgrid %&#125;</span><br><span class="line"></span><br><span class="line">如果您有意交换友情链接，敬请先将本站添加友链，然后在评论区留言，本站目前仅接受个人博客网站的友链申请（参考下方格式）。为了确保头像显示正确，建议使用 Gravatar 或者 jsDelivr 等服务。如果需要更新博客信息，请留言回复。</span><br><span class="line"></span><br><span class="line">&#123;% note success %&#125;</span><br><span class="line"><span class="strong">**[本站信息]**</span></span><br><span class="line">名称：Ln</span><br><span class="line">简介：算法、技术</span><br><span class="line">网址：https://weilining.cf/</span><br><span class="line">头像：https://cdn.jsdelivr.net/gh/weilining/img@main/img/icon.gif</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">请注意，本站将会定期清理长时间无法访问的友链，请您务必确保域名解析正确、https 证书有效且服务器工作正常。若由于此原因导致友情链接失效，本站恕不另行通知。</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+    <summary type="html">默认</summary>
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>sed实现直接修改文件内容</title>
@@ -369,48 +403,6 @@
     <updated>2020-12-21T03:29:55.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="官网"><a href="#官网" class="headerlink" title="官网"></a>官网</h2><p><span class="exturl" data-url="aHR0cHM6Ly9mb250YXdlc29tZS5jb20vaWNvbnM/ZD1nYWxsZXJ5">https://fontawesome.com/icons?d=gallery<i class="fa fa-external-link-alt"></i></span></p><p>镜像<span class="exturl" data-url="aHR0cHM6Ly9mb250YXdlc29tZS5kYXNoZ2FtZS5jb20v">https://fontawesome.dashgame.com/<i class="fa fa-external-link-alt"></i></span></p><a id="more"></a><h2 id="引入库"><a href="#引入库" class="headerlink" title="引入库"></a>引入库</h2><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css&quot;</span> <span class="attr">media</span>=<span class="string">&quot;print&quot;</span> <span class="attr">onload</span>=<span class="string">&quot;this.media=&#x27;all&#x27;&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;fab fa-qq&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-    <summary type="html">默认</summary>
-    
-    
-    
-    <category term="默认" scheme="https://weilining.github.io/categories/%E9%BB%98%E8%AE%A4/"/>
-    
-    
-    <category term="默认" scheme="https://weilining.github.io/tags/%E9%BB%98%E8%AE%A4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>博客点击qq跳转聊天教程</title>
-    <link href="https://weilining.github.io/223.html"/>
-    <id>https://weilining.github.io/223.html</id>
-    <published>2020-12-21T03:03:15.000Z</published>
-    <updated>2020-12-21T03:03:15.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="申请"><a href="#申请" class="headerlink" title="申请"></a>申请</h2><p>进入腾讯互动状态代码生成页面<span class="exturl" data-url="aHR0cDovL3dwLnFxLmNvbS8lRTUlQkMlODAlRTUlQTclOEIlRTclOTQlOUYlRTYlODglOTAlRTclOUElODQlRTglQUUlQkUlRTclQkQlQUUlRUYlQkMlOUE=">http://wp.qq.com/开始生成的设置：<i class="fa fa-external-link-alt"></i></span></p><a id="more"></a><h2 id="获取代码"><a href="#获取代码" class="headerlink" title="获取代码"></a>获取代码</h2><p>点击<code>推广工具</code>并强制刷新下</p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;a target&#x3D;&quot;_blank&quot; href&#x3D;&quot;http:&#x2F;&#x2F;wpa.qq.com&#x2F;msgrd?v&#x3D;3&amp;uin&#x3D;157668997&amp;site&#x3D;qq&amp;menu&#x3D;yes&quot;&gt;&lt;img border&#x3D;&quot;0&quot; src&#x3D;&quot;http:&#x2F;&#x2F;wpa.qq.com&#x2F;pa?p&#x3D;2:157668997:41&quot; alt&#x3D;&quot;点击这里给我发消息&quot; title&#x3D;&quot;点击这里给我发消息&quot;&#x2F;&gt;&lt;&#x2F;a&gt;</span><br></pre></td></tr></table></figure><p>只需要<code>href</code></p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">http:&#x2F;&#x2F;wpa.qq.com&#x2F;msgrd?v&#x3D;3&amp;uin&#x3D;157668997&amp;site&#x3D;qq&amp;menu&#x3D;yes</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-    <summary type="html">默认</summary>
-    
-    
-    
-    <category term="默认" scheme="https://weilining.github.io/categories/%E9%BB%98%E8%AE%A4/"/>
-    
-    
-    <category term="默认" scheme="https://weilining.github.io/tags/%E9%BB%98%E8%AE%A4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>浅谈package.json中dependencies和devDependencies区别</title>
-    <link href="https://weilining.github.io/222.html"/>
-    <id>https://weilining.github.io/222.html</id>
-    <published>2020-12-20T14:54:18.000Z</published>
-    <updated>2020-12-20T14:54:18.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="dependencies："><a href="#dependencies：" class="headerlink" title="dependencies："></a>dependencies：</h2><p>应用能够正常运行依赖的包。这种 dependencies 是最常见的，用户在使用 npm install 安装你的包时会自动安装这些依赖。用户发布环境，依赖的包不仅开发环境能够使用，生产环境也能使用。</p><p>举例：element-ui，vue等。<br>npm i 【包名】–save/-s</p><a id="more"></a><h2 id="devDependencies："><a href="#devDependencies：" class="headerlink" title="devDependencies："></a>devDependencies：</h2><p>开发应用时所依赖的工具包。通常是一些开发、测试、打包工具，例如 webpack、ESLint、Mocha。应用正常运行并不依赖于这些包，用户在使用 npm install 安装你的包时也不会安装这些依赖。</p><p>举例：less-loader,webpack,sass-loader等。</p><p>npm i 【包名】–save dev/-d</p>]]></content>
     
     
     <summary type="html">默认</summary>
