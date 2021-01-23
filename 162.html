@@ -146,6 +146,7 @@
 <nav class="site-nav">
   <ul class="main-menu menu">
         <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-bell fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-top"><a href="/top/" rel="section"><i class="fa fa-signal fa-fw"></i>热榜</a></li>
         <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
         <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
         <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
@@ -312,6 +313,14 @@
     </span>
 
   
+    <span id="/162.html" class="post-meta-item leancloud_visitors" data-flag-title="Gitlab基本管理" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+  
       </div>
       <div class="post-meta">
     <span class="post-meta-item" title="本文字数">
@@ -383,7 +392,7 @@
 </blockquote>
 <h3 id="六-刻隆仓库和推送代码到仓库"><a href="#六-刻隆仓库和推送代码到仓库" class="headerlink" title="六. 刻隆仓库和推送代码到仓库"></a>六. 刻隆仓库和推送代码到仓库</h3><h4 id="（1）找到想要刻隆仓库的地址，样式如下："><a href="#（1）找到想要刻隆仓库的地址，样式如下：" class="headerlink" title="（1）找到想要刻隆仓库的地址，样式如下："></a>（1）找到想要刻隆仓库的地址，样式如下：</h4><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://images2018.cnblogs.com/blog/1416119/201806/1416119-20180624155529359-2097663760.png"><img data-src="/162/1416119-20180624155529626-1633480197.png" alt="image" loading="lazy"></a></p>
 <h4 id="（2）使用以下命令进行刻隆。"><a href="#（2）使用以下命令进行刻隆。" class="headerlink" title="（2）使用以下命令进行刻隆。"></a>（2）使用以下命令进行刻隆。</h4><blockquote>
-<p>mike@win10-001 MINGW64 ~/cookbook<br>$ git clone <span class="exturl" data-url="bWFpbHRvOiYjeDY3OyYjeDY5OyYjeDc0OyYjNjQ7JiN4Njc7JiN4Njk7JiN4NzQ7JiMxMDg7JiN4NjE7JiM5ODsmI3gyZTsmIzk3OyYjeDY5OyYjeDczOyYjMTA0OyYjOTc7JiN4NmU7JiMxMDM7JiMxMTk7JiN4NjU7JiN4Njk7JiM0NjsmIzExMDsmI3g2NTsmI3g3NDs=">&#x67;&#x69;&#x74;&#64;&#x67;&#x69;&#x74;&#108;&#x61;&#98;&#x2e;&#97;&#x69;&#x73;&#104;&#97;&#x6e;&#103;&#119;&#x65;&#x69;&#46;&#110;&#x65;&#x74;<i class="fa fa-external-link-alt"></i></span>:root/cookbook.git<br>Cloning into &#39;cookbook&#39;...<br>The authenticity of host &#39;gitlab.aishangwei.net (192.168.2.201)&#39; can&#39;t be established.<br>ECDSA key fingerprint is SHA256:HvXTteW8UQ0MtxDAlMhL9XNOElAVV69d8nDsWjixrXI.<br>Are you sure you want to continue connecting (yes/no)? yes<br>Warning: Permanently added &#39;gitlab.aishangwei.net,192.168.2.201&#39; (ECDSA) to the list of known hosts.<br>warning: You appear to have cloned an empty repository.</p>
+<p>mike@win10-001 MINGW64 ~/cookbook<br>$ git clone <span class="exturl" data-url="bWFpbHRvOiYjMTAzOyYjeDY5OyYjMTE2OyYjNjQ7JiMxMDM7JiN4Njk7JiMxMTY7JiN4NmM7JiM5NzsmIzk4OyYjeDJlOyYjeDYxOyYjMTA1OyYjeDczOyYjMTA0OyYjOTc7JiMxMTA7JiN4Njc7JiN4Nzc7JiN4NjU7JiN4Njk7JiN4MmU7JiN4NmU7JiN4NjU7JiN4NzQ7">&#103;&#x69;&#116;&#64;&#103;&#x69;&#116;&#x6c;&#97;&#98;&#x2e;&#x61;&#105;&#x73;&#104;&#97;&#110;&#x67;&#x77;&#x65;&#x69;&#x2e;&#x6e;&#x65;&#x74;<i class="fa fa-external-link-alt"></i></span>:root/cookbook.git<br>Cloning into &#39;cookbook&#39;...<br>The authenticity of host &#39;gitlab.aishangwei.net (192.168.2.201)&#39; can&#39;t be established.<br>ECDSA key fingerprint is SHA256:HvXTteW8UQ0MtxDAlMhL9XNOElAVV69d8nDsWjixrXI.<br>Are you sure you want to continue connecting (yes/no)? yes<br>Warning: Permanently added &#39;gitlab.aishangwei.net,192.168.2.201&#39; (ECDSA) to the list of known hosts.<br>warning: You appear to have cloned an empty repository.</p>
 </blockquote>
 <h4 id="（3）进入我们刻隆的文件夹，可以通过以下命令查看是否是GIT文件夹。"><a href="#（3）进入我们刻隆的文件夹，可以通过以下命令查看是否是GIT文件夹。" class="headerlink" title="（3）进入我们刻隆的文件夹，可以通过以下命令查看是否是GIT文件夹。"></a>（3）进入我们刻隆的文件夹，可以通过以下命令查看是否是GIT文件夹。</h4><blockquote>
 <p>$ git status<br>On branch master</p>
@@ -554,7 +563,20 @@
 
 
 
-    <div class="comments" id="lv-container" data-id="city" data-uid="MTAyMC81MTYyOC8yODEwOQ=="></div>
+      <div class="tabs tabs-comment">
+        <ul class="nav-tabs">
+            <li class="tab"><a href="#comment-valine">valine</a></li>
+            <li class="tab"><a href="#comment-livere">livere</a></li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane valine" id="comment-valine">
+              <div class="comments" id="valine-comments"></div>
+            </div>
+            <div class="tab-pane livere" id="comment-livere">
+              <div class="comments" id="lv-container" data-id="city" data-uid="MTAyMC81MTYyOC8yODEwOQ=="></div>
+            </div>
+        </div>
+      </div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -645,6 +667,18 @@
       });
       });
   </script>
+
+<script>
+NexT.utils.loadComments('#valine-comments', () => {
+  NexT.utils.getScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', () => {
+    new Valine(Object.assign({"enable":true,"appId":"Bu6sP4depeiGP22PIFqz0SmJ-MdYXbMMI","appKey":"jYGDeeOBkTqvrUJDEmqj83q7","serverURLs":null,"placeholder":"Just go go","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"lang":null,"visitor":true,"comment_count":true,"recordIP":false,"enableQQ":false,"requiredFields":[]}, {
+      el: '#valine-comments',
+      path: "/162.html",
+      serverURLs: "https://bu6sp4de.api.lncldglobal.com"
+    }));
+  }, window.Valine);
+});
+</script>
 
 <script>
 NexT.utils.loadComments('#lv-container', () => {

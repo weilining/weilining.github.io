@@ -133,6 +133,7 @@
 <nav class="site-nav">
   <ul class="main-menu menu">
         <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-bell fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-top"><a href="/top/" rel="section"><i class="fa fa-signal fa-fw"></i>热榜</a></li>
         <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
         <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
         <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
@@ -298,6 +299,14 @@
     </span>
 
   
+    <span id="/128.html" class="post-meta-item leancloud_visitors" data-flag-title="换端口的解决git clone 失败问题" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+  
       </div>
       <div class="post-meta">
     <span class="post-meta-item" title="本文字数">
@@ -305,7 +314,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>229</span>
+      <span>230</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -329,7 +338,7 @@
 
 <p>为了系统安全，有时您或您的公司的防火墙会完全屏蔽掉这个端口。如果此时您不方便通过 HTTPS 方式进行 Git 操作，您可以指定端口信息，可以使用以下命令</p>
 <p>git clone ssh://git@127.0.0.1:xx/yy.git</p>
-<p><span class="exturl" data-url="bWFpbHRvOiYjeDY3OyYjeDY5OyYjMTE2OyYjNjQ7JiM0OTsmIzUwOyYjNTU7JiM0NjsmI3gzMDsmIzQ2OyYjNDg7JiN4MmU7JiN4MzE7">&#x67;&#x69;&#116;&#64;&#49;&#50;&#55;&#46;&#x30;&#46;&#48;&#x2e;&#x31;<i class="fa fa-external-link-alt"></i></span>:xx # 用户@ip:端口号</p>
+<p><span class="exturl" data-url="bWFpbHRvOiYjeDY3OyYjMTA1OyYjMTE2OyYjeDQwOyYjNDk7JiN4MzI7JiN4Mzc7JiM0NjsmIzQ4OyYjeDJlOyYjNDg7JiM0NjsmIzQ5Ow==">&#x67;&#105;&#116;&#x40;&#49;&#x32;&#x37;&#46;&#48;&#x2e;&#48;&#46;&#49;<i class="fa fa-external-link-alt"></i></span>:xx # 用户@ip:端口号</p>
 <p>yy.git 为仓库名字</p>
 
     </div>
@@ -388,7 +397,20 @@
 
 
 
-    <div class="comments" id="lv-container" data-id="city" data-uid="MTAyMC81MTYyOC8yODEwOQ=="></div>
+      <div class="tabs tabs-comment">
+        <ul class="nav-tabs">
+            <li class="tab"><a href="#comment-valine">valine</a></li>
+            <li class="tab"><a href="#comment-livere">livere</a></li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane valine" id="comment-valine">
+              <div class="comments" id="valine-comments"></div>
+            </div>
+            <div class="tab-pane livere" id="comment-livere">
+              <div class="comments" id="lv-container" data-id="city" data-uid="MTAyMC81MTYyOC8yODEwOQ=="></div>
+            </div>
+        </div>
+      </div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -479,6 +501,18 @@
       });
       });
   </script>
+
+<script>
+NexT.utils.loadComments('#valine-comments', () => {
+  NexT.utils.getScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', () => {
+    new Valine(Object.assign({"enable":true,"appId":"Bu6sP4depeiGP22PIFqz0SmJ-MdYXbMMI","appKey":"jYGDeeOBkTqvrUJDEmqj83q7","serverURLs":null,"placeholder":"Just go go","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"lang":null,"visitor":true,"comment_count":true,"recordIP":false,"enableQQ":false,"requiredFields":[]}, {
+      el: '#valine-comments',
+      path: "/128.html",
+      serverURLs: "https://bu6sp4de.api.lncldglobal.com"
+    }));
+  }, window.Valine);
+});
+</script>
 
 <script>
 NexT.utils.loadComments('#lv-container', () => {
