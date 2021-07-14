@@ -2,9 +2,9 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="viewport" content="width=device-width">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.3.0">
+<meta name="generator" content="Hexo 5.4.0">
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.jsdelivr.net/gh/weilining/img@main/img/apple-touch-icon-next.png">
@@ -20,13 +20,10 @@
 
 <link rel="stylesheet" href="https://fonts.dogedoge.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.2/css/all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css" integrity="sha256-2H3fkXt6FEmrReK448mDVGKb3WW2ZZw35gI7vqHOE4Y=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"weilining.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.2.1","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
-  </script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"weilining.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.6.1","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/config.min.js"></script>
 <meta name="description" content="默认">
 <meta property="og:type" content="article">
 <meta property="og:title" content="将Hexo部署到阿里云轻量服务器（保姆级教程）">
@@ -88,15 +85,10 @@
 <link rel="canonical" href="https://weilining.github.io/132.html">
 
 
-<script class="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : false,
-    isPost : true,
-    lang   : 'zh-CN'
-  };
-</script>
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://weilining.github.io/132.html","path":"132.html","title":"将Hexo部署到阿里云轻量服务器（保姆级教程）"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
 <title>将Hexo部署到阿里云轻量服务器（保姆级教程） | Ln's Blog</title>
   
 
@@ -104,40 +96,8 @@
 
 
   <noscript>
-  <style>
-  body { margin-top: 2rem; }
-
-  .use-motion .menu-item,
-  .use-motion .sidebar,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header {
-    visibility: visible;
-  }
-
-  .use-motion .header,
-  .use-motion .site-brand-container .toggle,
-  .use-motion .footer { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle,
-  .use-motion .custom-logo-image {
-    opacity: initial;
-    top: initial;
-  }
-
-  .use-motion .logo-line {
-    transform: scaleX(1);
-  }
-
-  .search-pop-overlay, .sidebar-nav { display: none; }
-  .sidebar-panel { display: block; }
-  </style>
-</noscript>
-
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
 <link rel="alternate" href="/atom.xml" title="Ln's Blog" type="application/atom+xml">
 </head>
 
@@ -244,7 +204,8 @@
         <!--/noindex-->
 
         <div class="site-overview-wrap sidebar-panel">
-          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <div class="site-overview">
+            <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image" alt="Lining Wei"
       src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/icon.gif">
   <p class="site-author-name" itemprop="name">Lining Wei</p>
@@ -274,11 +235,12 @@
   </nav>
 </div>
   <div class="cc-license site-overview-item animated" itemprop="license">
-    <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC96aC1DTg=="><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></span>
+    <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC96aC1DTg=="><img src="https://cdn.jsdelivr.net/npm/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></span>
   </div>
 
 
 
+          </div>
         </div>
       </div>
     </div>
@@ -289,7 +251,7 @@
     </header>
 
     
-  <div class="back-to-top" role="button">
+  <div class="back-to-top" role="button" aria-label="返回顶部">
     <i class="fa fa-arrow-up"></i>
     <span>0%</span>
   </div>
@@ -382,7 +344,7 @@
     
     <div class="post-body" itemprop="articleBody">
         <p><img data-src="/132/02020-1-3-17-53-57.png" alt="02020-1-3-17-53-57" loading="lazy"></p>
-<a id="more"></a>
+<span id="more"></span>
 
 <h2 id="1-前言"><a href="#1-前言" class="headerlink" title="1 前言"></a>1 前言</h2><p>作为有梦想的，有追求的程序员，有一个自己的个人博客简直就是必须品。你可以选择wordpress这种平台，直接使用，在任何地方只要有网络就能写博客。还可以选择hexo这种静态博客，但是发文章就没有那么随心所欲了，要在你部署的电脑上写才行。</p>
 <p>本人之前使用的是hexo+github pages这种方式搭建博客，简单方便，感兴趣的同学可以看我之前写的这篇文章：<span class="exturl" data-url="aHR0cDovL2hqeGxvZy5jb20vMTkwOTA4MTYuaHRtbA==">Hexo+github pages搭建个人独立网站，绑定域名全教程<i class="fa fa-external-link-alt"></i></span></p>
@@ -392,6 +354,7 @@
 <h2 id="2-环境介绍"><a href="#2-环境介绍" class="headerlink" title="2 环境介绍"></a>2 环境介绍</h2><p>我本地电脑安装的是win10(64)位。</p>
 <p>服务器使用的是阿里云轻量服务器，配置是：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1核、2GB内存，系统盘 40GB SSD云盘</span><br></pre></td></tr></table></figure>
+
 <p>操作系统是CentOS 7.3。</p>
 <h2 id="3-本地环境部署"><a href="#3-本地环境部署" class="headerlink" title="3 本地环境部署"></a>3 本地环境部署</h2><p>这部分在我之前写的<span class="exturl" data-url="aHR0cDovL2hqeGxvZy5jb20vMTkwOTA4MTYuaHRtbA==">Hexo+github pages搭建个人独立网站，绑定域名全教程<i class="fa fa-external-link-alt"></i></span>这里也有，为了方便我直接拿过来这边了。</p>
 <h3 id="3-1-安装nodejs"><a href="#3-1-安装nodejs" class="headerlink" title="3.1 安装nodejs"></a>3.1 安装nodejs</h3><p>因为Hexo需要nodejs环境，因此需要先下载安装Nodejs。点击<span class="exturl" data-url="aHR0cHM6Ly9ub2RlanMub3JnL2VuLw==">NodeJs官网<i class="fa fa-external-link-alt"></i></span>，下载最新版本。</p>
@@ -401,11 +364,13 @@
 <p>点击next，选择文件夹位置，然后一直next到底就行了，选择默认配置就好，默认配置会将环境变量配置好的，不需要搞得花里胡哨的。安装好后鼠标右击应该有下图这两个选项了，出现就代表安装成功了。<br><img data-src="/132/4-2019-11-26-21-37-10.png" alt="4-2019-11-26-21-37-10.png" loading="lazy"></p>
 <h2 id="4-使用Hexo"><a href="#4-使用Hexo" class="headerlink" title="4 使用Hexo"></a>4 使用Hexo</h2><h3 id="4-1-安装Hexo"><a href="#4-1-安装Hexo" class="headerlink" title="4.1 安装Hexo"></a>4.1 安装Hexo</h3><p>上面环境搭建好之后，在桌面点击鼠标右键，点击 “Git Bash Here” ，输入以下两条命令。</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+
 <p>提示：输入的时候不要输入 $ 了，因为命令行本来就已经有了。下载需要几分钟，请耐心等待一下。</p>
 <p>可以在复制之后在git窗选择 Shift+Insert 粘贴。有一些警告WARN是不影响使用的，放心。</p>
 <p><img data-src="/132/5-2019-11-26-21-37-18.png" alt="5-2019-11-26-21-37-18.png" loading="lazy"></p>
 <h3 id="4-2-初始化Hexo"><a href="#4-2-初始化Hexo" class="headerlink" title="4.2 初始化Hexo"></a>4.2 初始化Hexo</h3><p>安装好Hexo之后，新建一个文件夹，如 E:\HEXO ，然后在该文件夹内鼠标右击，选择 “Git Bash Here” ，输入以下命令。</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ hexo init</span><br></pre></td></tr></table></figure>
+
 <p>稍等片刻即可完成，如图：</p>
 <p><img data-src="/132/6-2019-11-26-21-37-25.png" alt="6-2019-11-26-21-37-25.png" loading="lazy"></p>
 <p>文件结构如图所示：</p>
@@ -415,27 +380,34 @@
 <p>themes是主题文件夹，Hexo 会根据主题来生成静态页面，待会我们会更换成比较流行的nexT主题。</p>
 <p>然后再输入命令行进行本地调试，即可看到初始效果啦~</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ hexo s --debug</span><br></pre></td></tr></table></figure>
+
 <p>访问<span class="exturl" data-url="aHR0cDovL2xvY2FsaG9zdDo0MDAwLyVFNSU4RCVCMyVFNSU4RiVBRiVFNyU5QyU4QiVFNSU4OCVCMCVFNiU5NSU4OCVFNiU5RSU5QyVFRiVCQyU5QQ==">http://localhost:4000/即可看到效果：<i class="fa fa-external-link-alt"></i></span></p>
 <p><img data-src="/132/8-2019-11-26-21-37-43.png" alt="8-2019-11-26-21-37-43.png" loading="lazy"></p>
 <h3 id="4-3-更换主题为NexT"><a href="#4-3-更换主题为NexT" class="headerlink" title="4.3 更换主题为NexT"></a>4.3 更换主题为NexT</h3><p>上面虽然本地可以调试成功了，但是默认的主题实在不是特别好看。你可以选择去官网选择自己喜欢的主题，<span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL3RoZW1lcy8=">官网主题链接https://hexo.io/themes/<i class="fa fa-external-link-alt"></i></span></p>
 <p>本篇教程选择的是当前流行的NexT主题，这个主题是我感觉用过的最好的一个了。</p>
 <h3 id="4-4-下载NexT主题"><a href="#4-4-下载NexT主题" class="headerlink" title="4.4 下载NexT主题"></a>4.4 下载NexT主题</h3><p>进入刚刚你创建的文件夹的themes里，比如我的 E:\HEXO\themes ，鼠标右击选择“Git Bash Here”输入以下两条命令中的一个：（这两个是一样的，只是有同学反应第一条命令不行，第二条就可以。）</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git clone git@github.com:iissnan&#x2F;hexo-theme-next.git</span><br><span class="line"></span><br><span class="line">$ git clone https:&#x2F;&#x2F;github.com&#x2F;iissnan&#x2F;hexo-theme-next</span><br></pre></td></tr></table></figure>
+
 <p><img data-src="/132/9-2019-11-26-21-37-56.png" alt="9-2019-11-26-21-37-56.png" loading="lazy"></p>
 <p>此时 themes 文件夹便多了一个next主题的文件夹。</p>
 <p><img data-src="/132/10-2019-11-26-21-38-7.png" alt="10-2019-11-26-21-38-7.png" loading="lazy"></p>
 <h3 id="4-5-修改配置"><a href="#4-5-修改配置" class="headerlink" title="4.5 修改配置"></a>4.5 修改配置</h3><p>打开 E:\HEXO （你的hexo根目录）下的 _config.yml 配置文件<br><img data-src="/132/11-2019-11-26-21-38-13.png" alt="11-2019-11-26-21-38-13.png" loading="lazy"></p>
 <p>找到下面这段代码</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Extensions</span><br><span class="line">## Plugins: https:&#x2F;&#x2F;hexo.io&#x2F;plugins&#x2F;</span><br><span class="line">## Themes: https:&#x2F;&#x2F;hexo.io&#x2F;themes&#x2F;</span><br><span class="line">theme: landscape</span><br></pre></td></tr></table></figure>
+
 <p>将langscape替换成hexo-theme-next</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">theme: hexo-theme-next</span><br></pre></td></tr></table></figure>
+
 <p>重新在项目根目录下进行本地部署调试</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ hexo s --debug</span><br></pre></td></tr></table></figure>
+
 <p>即可看到效果<br><img data-src="/132/12-2019-11-26-21-38-23.png" alt="12-2019-11-26-21-38-23.png" loading="lazy"></p>
 <h2 id="5-配置SSH密钥"><a href="#5-配置SSH密钥" class="headerlink" title="5 配置SSH密钥"></a>5 配置SSH密钥</h2><p>为了使本地可以跟远程的github建立联系，需要在本地配置SSH密钥，这样我们就可以在本地直接提交代码到GitHub上或者远端git仓库。<br>如果你是第一次配置SSH，则配置一下git的username 和 email</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git config --global user.name &quot;你要设置的名字&quot;</span><br><span class="line">$ git config --global user.email &quot;你要设置的邮箱&quot;</span><br></pre></td></tr></table></figure>
+
 <p>之后生成SSH密钥：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C &quot;你刚刚设置的邮箱&quot;</span><br></pre></td></tr></table></figure>
+
 <p>如果不需要设置密码的话，连续三个回车就好了。在这之后会得到两个文件： id_rsa 和 id_rsa.pub</p>
 <p>找到id_rsa.pub文件，用记事本打开，复制其内容。路径： C:\Users\J（你的用户名）.ssh</p>
 <p><img data-src="/132/17-2019-11-26-21-39-3.png" alt="17-2019-11-26-21-39-3.png" loading="lazy"></p>
@@ -446,12 +418,15 @@
 <p><img data-src="/132/2-2019-11-30-16-26-8.png" alt="2-2019-11-30-16-26-8.png" loading="lazy"></p>
 <p>输入以下命令，切换到root账号</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo su root</span><br></pre></td></tr></table></figure>
+
 <p><img data-src="/132/3-2019-11-30-16-26-31.png" alt="3-2019-11-30-16-26-31.png" loading="lazy"></p>
 <h3 id="6-1-git配置"><a href="#6-1-git配置" class="headerlink" title="6.1 git配置"></a>6.1 git配置</h3><p>1、安装git</p>
 <p>在刚刚的黑框里输入，然后回车：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">yum install git</span><br></pre></td></tr></table></figure>
+
 <p>等待一下就安装好了。中途会出现</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">Is this ok [y&#x2F;d&#x2F;N]:</span><br></pre></td></tr></table></figure>
+
 
 <p>输入 ： y 回车即可</p>
 <p><img data-src="/132/4-2019-11-30-16-27-42.png" alt="4-2019-11-30-16-27-42.png" loading="lazy"></p>
@@ -459,16 +434,20 @@
 <p>2、创建git账户</p>
 <p>在命令框输入（下面不做重复提示了）</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">adduser git</span><br></pre></td></tr></table></figure>
+
 <p>3、添加git账户权限</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">chmod 740 &#x2F;etc&#x2F;sudoers</span><br><span class="line">vim &#x2F;etc&#x2F;sudoers</span><br></pre></td></tr></table></figure>
+
 <p><img data-src="/132/5-2019-11-30-16-28-12.png" alt="5-2019-11-30-16-28-12.png" loading="lazy"></p>
 <p>输入上面的命令，回车之后，进入编辑界面。</p>
 <p><img data-src="/132/6-2019-11-30-16-28-30.png" alt="6-2019-11-30-16-28-30.png" loading="lazy"></p>
 <p>这里要先点击 “i” 键，进入编辑模式，然后找到一下内容的地方：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">## Allow root to run any commands anywhere</span><br><span class="line">root    ALL&#x3D;(ALL)     ALL</span><br></pre></td></tr></table></figure>
+
 <p><img data-src="/132/7-2019-11-30-16-28-45.png" alt="7-2019-11-30-16-28-45.png" loading="lazy"></p>
 <p>添加以下内容：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git     ALL&#x3D;(ALL)     ALL</span><br></pre></td></tr></table></figure>
+
 
 
 <p>然后按 “Esc” 键，此时最底下的—INSERT—消失，再输入 “:wq”，即保存退出。</p>
@@ -476,49 +455,64 @@
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">chmod 400 &#x2F;etc&#x2F;sudoers</span><br></pre></td></tr></table></figure>
 
 
+
 <p>5、设置git账户密码</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo passwd git</span><br></pre></td></tr></table></figure>
+
 <p>输入两次密码就设置成功了。注意，linux下输入密码是不显示****的，你直接输入，输完回车就行了。</p>
 <p><img data-src="/132/8-2019-11-30-16-29-3.png" alt="8-2019-11-30-16-29-3.png" loading="lazy"></p>
 <p>6、切换至git用户，创建 ~/.ssh 文件夹和 ~/.ssh/authorized_keys 文件，并赋予相应的权限</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">su git</span><br><span class="line">mkdir ~&#x2F;.ssh</span><br><span class="line">vim ~&#x2F;.ssh&#x2F;authorized_keys</span><br></pre></td></tr></table></figure>
+
 <p>按”i”进入编辑模式，将我们在win10中生成的id_rsa.pub文件中的公钥复制到authorized_keys中，按”esc”，然后按”:wq”，保存退出。</p>
 <p><img data-src="/132/9-2019-11-30-16-29-28.png" alt="9-2019-11-30-16-29-28.png" loading="lazy"></p>
 <p>接着，输入一下命令，赋予权限</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">chmod 600 &#x2F;home&#x2F;git&#x2F;.ssh&#x2F;authorized_keys</span><br><span class="line">chmod 700 &#x2F;home&#x2F;git&#x2F;.ssh</span><br></pre></td></tr></table></figure>
+
 <p>在本地Git终端中测试是否能免密登录git，其中SERVER为填写自己的云主机IP，执行输入yes后输入你之前配置的git密码，无报错就说明好了。</p>
 <p>在电脑本地桌面，右键”Git Bash Here”，输入一下命令，其中SERVER填写自己的云主机ip，执行输入yes后不用密码说明配置成功了。</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ssh -v git@SERVER</span><br></pre></td></tr></table></figure>
+
 <p>如果你之前配置过git，可能你会出现以下这种错误。</p>
 <p><img data-src="/132/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20191203082833-2019-12-3-8-28-59.png" alt="微信图片_20191203082833-2019-12-3-8-28-59.png" loading="lazy"></p>
 <p>可以看到</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Offending ECDSA key in &#x2F;c&#x2F;Users&#x2F;jonty&#x2F;.ssh&#x2F;known_hosts:2</span><br></pre></td></tr></table></figure>
+
 <p>是.ssh/known_hosts 这个文件第二行出现冲突了。只要用笔记本打开，将这个文件的第二行删掉即可。</p>
 <p><img data-src="/132/11-2019-11-30-16-29-57.png" alt="11-2019-11-30-16-29-57.png" loading="lazy"></p>
 <p>重新执行刚刚的命令</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ssh -v git@你的服务器ip</span><br></pre></td></tr></table></figure>
+
 <p><img data-src="/132/12-2019-11-30-16-30-12.png" alt="12-2019-11-30-16-30-12.png" loading="lazy"></p>
 <p>这说明已经连接成功了。</p>
 <h3 id="6-2-创建仓库目录及相关配置"><a href="#6-2-创建仓库目录及相关配置" class="headerlink" title="6.2 创建仓库目录及相关配置"></a>6.2 创建仓库目录及相关配置</h3><p>1、创建目录<br>在var目录下创建repo作为Git仓库目录，返回服务端命令行切换到root账户，然后输入：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mkdir &#x2F;var&#x2F;repo</span><br></pre></td></tr></table></figure>
+
 <p><img data-src="/132/13-2019-11-30-16-30-43.png" alt="13-2019-11-30-16-30-43.png" loading="lazy"></p>
 <p>赋予权限：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">chown -R git:git &#x2F;var&#x2F;repo</span><br><span class="line">chmod -R 755 &#x2F;var&#x2F;repo</span><br></pre></td></tr></table></figure>
+
 <p>接下来创建hexo目录作为网站根目录，并赋予权限：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mkdir &#x2F;var&#x2F;hexo</span><br><span class="line">chown -R git:git &#x2F;var&#x2F;hexo</span><br><span class="line">chmod -R 755 &#x2F;var&#x2F;hexo</span><br></pre></td></tr></table></figure>
+
 <p>接下来创建一个空白的git仓库</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd &#x2F;var&#x2F;repo</span><br><span class="line">git init --bare hexo.git</span><br></pre></td></tr></table></figure>
+
 <p><img data-src="/132/14-2019-11-30-16-31-7.png" alt="14-2019-11-30-16-31-7.png" loading="lazy"></p>
 <p>创建一个新的 Git 钩子，用于自动部署.</p>
 <p>在 /var/repo/hexo.git 下，有一个自动生成的 hooks 文件夹。我们需要在里边新建一个新的钩子文件 post-receive。</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">vim &#x2F;var&#x2F;repo&#x2F;hexo.git&#x2F;hooks&#x2F;post-receive</span><br></pre></td></tr></table></figure>
+
 <p>进入编辑模式，然后将下面那两行代码粘贴进去，保存退出。</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#!&#x2F;bin&#x2F;bash</span><br><span class="line">git --work-tree&#x3D;&#x2F;var&#x2F;hexo --git-dir&#x3D;&#x2F;var&#x2F;repo&#x2F;hexo.git checkout -f</span><br></pre></td></tr></table></figure>
+
 <p>修改权限：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">chown -R git:git &#x2F;var&#x2F;repo&#x2F;hexo.git&#x2F;hooks&#x2F;post-receive</span><br><span class="line">chmod +x &#x2F;var&#x2F;repo&#x2F;hexo.git&#x2F;hooks&#x2F;post-receive</span><br></pre></td></tr></table></figure>
+
 <p>到这里Git仓库已经搭建完毕了。</p>
 <h2 id="7-配置Nginx"><a href="#7-配置Nginx" class="headerlink" title="7 配置Nginx"></a>7 配置Nginx</h2><p>为了部署和维护，我们使用宝塔面板来一键部署Nginx</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">yum install -y wget &amp;&amp; wget -O install.sh http:&#x2F;&#x2F;download.bt.cn&#x2F;install&#x2F;install_6.0.sh &amp;&amp; bash install.sh</span><br></pre></td></tr></table></figure>
+
 <p>中途输入”y”回车等待一会就好了。在执行结果最后会出现地址，用户名，密码等。</p>
 <p><img data-src="/132/15-2019-11-30-16-31-40.png" alt="15-2019-11-30-16-31-40.png" loading="lazy"></p>
 <p>复制这个地址打开，输入账号密码即可进入宝塔面板。</p>
@@ -528,6 +522,7 @@
 <p><img data-src="/132/18-2019-11-30-16-32-7.png" alt="18-2019-11-30-16-32-7.png" loading="lazy"></p>
 <p>另外如果忘记了宝塔用户名密码，可以去你服务器终端输入：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd &#x2F;www&#x2F;server&#x2F;panel &amp;&amp; python tools.py panel testpasswd</span><br></pre></td></tr></table></figure>
+
 <p>下图为宝塔解决方案，链接<span class="exturl" data-url="aHR0cHM6Ly93d3cuYnQuY24vYmJzL3RocmVhZC0xMTcyLTEtMS5odG1s">忘记Linux 3.X/4.x/5.x/6.x 宝塔面板密码的解决方案<i class="fa fa-external-link-alt"></i></span></p>
 <p><img data-src="/132/19-2019-11-30-16-32-26.png" alt="19-2019-11-30-16-32-26.png" loading="lazy"></p>
 <p>进入面板之后，会提示叫你修改端口，点击”立即修改”,可以看到”面板端口”这时候是8888，自己选一个值，然后先去服务器防火墙上开放这个端口，跟刚刚的”添加规则”操作一样。</p>
@@ -543,22 +538,28 @@
 <p><img data-src="/132/23-2019-11-30-16-33-9.png" alt="23-2019-11-30-16-33-9.png" loading="lazy"></p>
 <p>点击”配置文件”</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">server</span><br><span class="line">&#123;</span><br><span class="line">    listen 80;</span><br><span class="line">    # server_name填写你自己的域名，没有的话填ip</span><br><span class="line">    server_name hjxlog.com;</span><br><span class="line">    index index.php index.html index.htm default.php default.htm default.html;</span><br><span class="line">    # 这里root填写自己的网站根目录，修改为&#x2F;var&#x2F;hexo</span><br><span class="line">    root &#x2F;var&#x2F;hexo;</span><br></pre></td></tr></table></figure>
+
 <p>保存，然后选择“设置”-“网站目录”，将网站目录修改成以下，保存。</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;var&#x2F;hexo</span><br></pre></td></tr></table></figure>
+
 
 <p><img data-src="/132/24-2019-11-30-16-33-18.png" alt="24-2019-11-30-16-33-18.png" loading="lazy"></p>
 <p>回到服务器终端，重启宝塔服务，使之生效。</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">service bt restart</span><br></pre></td></tr></table></figure>
 
 
+
 <h2 id="8-修改hexo配置"><a href="#8-修改hexo配置" class="headerlink" title="8 修改hexo配置"></a>8 修改hexo配置</h2><p>进入本地电脑hexo博客的根目录，编辑<strong>站点配置文件 _config.yml</strong>，找到deploy，修改成以下</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  #repo改为repo: git@你的域名:&#x2F;var&#x2F;repo&#x2F;hexo.git</span><br><span class="line">  repo: git@hjxlog.com:&#x2F;var&#x2F;repo&#x2F;hexo.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+
 <p>最后在本地电脑hexo博客的根目录右击，Git Bash Here，输入以下命令部署</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo d -g</span><br></pre></td></tr></table></figure>
+
 <p>这时候可能出现权限问题，导致部署到git失败。</p>
 <p><img data-src="/132/25-2019-11-30-16-33-43.png" alt="25-2019-11-30-16-33-43.png" loading="lazy"></p>
 <p>在服务器终端输入以下命令即可：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">chown -R git:git &#x2F;var&#x2F;repo&#x2F;</span><br><span class="line">chown -R git:git &#x2F;var&#x2F;hexo&#x2F;</span><br></pre></td></tr></table></figure>
+
 <p>最后再hexo d -g部署，应该就可以看到部署成功了。</p>
 <p><img data-src="/132/26-2019-11-30-16-34-0.png" alt="26-2019-11-30-16-34-0.png" loading="lazy"></p>
 <p>自此，已经将博客从GitHub pages搬到阿里云服务器了。</p>
@@ -574,6 +575,7 @@
 <p><img data-src="/132/12020-3-15-11-17-2.png" alt="12020-3-15-11-17-2" loading="lazy"></p>
 <p>根据有同学遇到上图这种情况，如果提示</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Could not resolve hostname ***.com: Name or service not known</span><br><span class="line">Please make sure you have the correct access rights</span><br></pre></td></tr></table></figure>
+
 <p>那么看一下自己的域名是否实名验证成功了，如果已验证。可以ping一下域名看能不能ping得通，有可能是你没有把域名解析到服务器ip地址上了。</p>
 <p>另外，Mac OS可能在配置方面和Windows不太一样。具体问题要具体分析，具体解决了。</p>
 <h2 id="11-总结"><a href="#11-总结" class="headerlink" title="11 总结"></a>11 总结</h2><p>在部署网站的时候，由于之前对Linux没有经验，网络上看到几篇博客，还是没能部署成功，有些博客比如命令中的单词拼写错误，或者前后不衔接，导致部署一直有问题。</p>
@@ -590,7 +592,7 @@
     <footer class="post-footer">
           <div class="reward-container">
   <div>Buy me a coffee</div>
-  <button onclick="document.querySelector('.post-reward').classList.toggle('active');">
+  <button>
     赞赏
   </button>
   <div class="post-reward">
@@ -668,28 +670,6 @@
             </div>
         </div>
       </div>
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      const commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
 </div>
   </main>
 
@@ -710,13 +690,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">352k</span>
+    <span title="站点总字数">353k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">5:20</span>
+    <span title="站点阅读时长">5:21</span>
   </span>
 </div>
 
@@ -729,16 +709,14 @@
   </footer>
 
   
-  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.2.1/source/js/utils.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.2.1/source/js/motion.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.2.1/source/js/next-boot.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js" integrity="sha256-EdPgYcPk/IIrw7FYeuJQexva49pVRZNmt3LculEr7zM=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/comments.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/utils.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/motion.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/next-boot.min.js"></script>
 
   
-<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.2.1/source/js/local-search.js"></script>
-
-
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/third-party/search/local-search.min.js"></script>
 
 
 
@@ -748,44 +726,25 @@
 
 
 
-  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.0.0/dist/quicklink.umd.js"></script>
-  <script>
-      window.addEventListener('load', () => {
-      quicklink.listen({
-        timeout : 3000,
-        priority: true,
-        ignores : [uri => uri.includes('#'),uri => uri === 'https://weilining.github.io/132.html',]
-      });
-      });
-  </script>
+  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.2.0/dist/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"ignores":null,"url":"https://weilining.github.io/132.html"}</script>
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/third-party/quicklink.min.js"></script>
 
+
+<script class="next-config" data-name="valine" type="application/json">{"enable":true,"appId":"Bu6sP4depeiGP22PIFqz0SmJ-MdYXbMMI","appKey":"jYGDeeOBkTqvrUJDEmqj83q7","serverURLs":"https://bu6sp4de.api.lncldglobal.com","placeholder":"Just go go","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"lang":null,"visitor":true,"comment_count":true,"recordIP":false,"enableQQ":false,"requiredFields":[],"el":"#valine-comments","path":"/132.html"}</script>
 <script>
-NexT.utils.loadComments('#valine-comments', () => {
-  NexT.utils.getScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', () => {
-    new Valine(Object.assign({"enable":true,"appId":"Bu6sP4depeiGP22PIFqz0SmJ-MdYXbMMI","appKey":"jYGDeeOBkTqvrUJDEmqj83q7","serverURLs":null,"placeholder":"Just go go","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"lang":null,"visitor":true,"comment_count":true,"recordIP":false,"enableQQ":false,"requiredFields":[]}, {
-      el: '#valine-comments',
-      path: "/132.html",
-      serverURLs: "https://bu6sp4de.api.lncldglobal.com"
-    }));
-  }, window.Valine);
+document.addEventListener('page:loaded', () => {
+  NexT.utils.loadComments(CONFIG.valine.el)
+    .then(() => NexT.utils.getScript(
+      'https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js',
+      { condition: window.Valine }
+    ))
+    .then(() => {
+      new Valine(CONFIG.valine);
+    });
 });
 </script>
-
-<script>
-NexT.utils.loadComments('#lv-container', () => {
-  window.livereOptions = {
-    refer: "132.html"
-  };
-  (function(d, s) {
-    var j, e = d.getElementsByTagName(s)[0];
-    if (typeof LivereTower === 'function') { return; }
-    j = d.createElement(s);
-    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-    j.async = true;
-    e.parentNode.insertBefore(j, e);
-  })(document, 'script');
-});
-</script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/third-party/comments/livere.min.js"></script>
 
 
 

@@ -2,9 +2,9 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="viewport" content="width=device-width">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.3.0">
+<meta name="generator" content="Hexo 5.4.0">
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.jsdelivr.net/gh/weilining/img@main/img/apple-touch-icon-next.png">
@@ -20,13 +20,10 @@
 
 <link rel="stylesheet" href="https://fonts.dogedoge.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.2/css/all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css" integrity="sha256-2H3fkXt6FEmrReK448mDVGKb3WW2ZZw35gI7vqHOE4Y=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"weilining.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.2.1","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
-  </script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"weilining.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.6.1","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/config.min.js"></script>
 <meta name="description" content="默认">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Gitlab基本管理">
@@ -57,15 +54,10 @@
 <link rel="canonical" href="https://weilining.github.io/162.html">
 
 
-<script class="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : false,
-    isPost : true,
-    lang   : 'zh-CN'
-  };
-</script>
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://weilining.github.io/162.html","path":"162.html","title":"Gitlab基本管理"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
 <title>Gitlab基本管理 | Ln's Blog</title>
   
 
@@ -73,40 +65,8 @@
 
 
   <noscript>
-  <style>
-  body { margin-top: 2rem; }
-
-  .use-motion .menu-item,
-  .use-motion .sidebar,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header {
-    visibility: visible;
-  }
-
-  .use-motion .header,
-  .use-motion .site-brand-container .toggle,
-  .use-motion .footer { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle,
-  .use-motion .custom-logo-image {
-    opacity: initial;
-    top: initial;
-  }
-
-  .use-motion .logo-line {
-    transform: scaleX(1);
-  }
-
-  .search-pop-overlay, .sidebar-nav { display: none; }
-  .sidebar-panel { display: block; }
-  </style>
-</noscript>
-
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
 <link rel="alternate" href="/atom.xml" title="Ln's Blog" type="application/atom+xml">
 </head>
 
@@ -213,7 +173,8 @@
         <!--/noindex-->
 
         <div class="site-overview-wrap sidebar-panel">
-          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <div class="site-overview">
+            <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image" alt="Lining Wei"
       src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/icon.gif">
   <p class="site-author-name" itemprop="name">Lining Wei</p>
@@ -243,11 +204,12 @@
   </nav>
 </div>
   <div class="cc-license site-overview-item animated" itemprop="license">
-    <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC96aC1DTg=="><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></span>
+    <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC96aC1DTg=="><img src="https://cdn.jsdelivr.net/npm/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></span>
   </div>
 
 
 
+          </div>
         </div>
       </div>
     </div>
@@ -258,7 +220,7 @@
     </header>
 
     
-  <div class="back-to-top" role="button">
+  <div class="back-to-top" role="button" aria-label="返回顶部">
     <i class="fa fa-arrow-up"></i>
     <span>0%</span>
   </div>
@@ -355,7 +317,7 @@
 <li>Internal project: 只要有用户名和密码，可以登陆该项目所在的Gitlab服务器的，均可访问该项目。</li>
 <li>public projects: 只要知道该项目的具体位置，就是路径，都可以访问该项目。它们默认的使用的是guest权限。</li>
 </ul>
-<a id="more"></a>
+<span id="more"></span>
 
 <p> 注意：可见的级别并不是和该项目的权限一一对应的。比如，可以访问Intelnal project，但并不意味着可以在该项目上进行删除、添加文件等操作。仅代表你可以刻隆该项目，查看问题等。</p>
 <h4 id="2-改变可见级别步骤："><a href="#2-改变可见级别步骤：" class="headerlink" title="2. 改变可见级别步骤："></a>2. 改变可见级别步骤：</h4><h5 id="（1）进入项目视图"><a href="#（1）进入项目视图" class="headerlink" title="（1）进入项目视图"></a>（1）进入项目视图</h5><h5 id="（2）点击编辑按钮"><a href="#（2）点击编辑按钮" class="headerlink" title="（2）点击编辑按钮"></a>（2）点击编辑按钮</h5><h5 id="（3）改变可见级别选项。"><a href="#（3）改变可见级别选项。" class="headerlink" title="（3）改变可见级别选项。"></a>（3）改变可见级别选项。</h5><h4 id="3-创建项目步骤"><a href="#3-创建项目步骤" class="headerlink" title="3. 创建项目步骤"></a>3. 创建项目步骤</h4><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://images2018.cnblogs.com/blog/1416119/201806/1416119-20180624155527202-28329273.png"><img data-src="/162/1416119-20180624155527552-355965628.png" alt="image" loading="lazy"></a></p>
@@ -395,7 +357,7 @@
 </blockquote>
 <h3 id="六-刻隆仓库和推送代码到仓库"><a href="#六-刻隆仓库和推送代码到仓库" class="headerlink" title="六. 刻隆仓库和推送代码到仓库"></a>六. 刻隆仓库和推送代码到仓库</h3><h4 id="（1）找到想要刻隆仓库的地址，样式如下："><a href="#（1）找到想要刻隆仓库的地址，样式如下：" class="headerlink" title="（1）找到想要刻隆仓库的地址，样式如下："></a>（1）找到想要刻隆仓库的地址，样式如下：</h4><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://images2018.cnblogs.com/blog/1416119/201806/1416119-20180624155529359-2097663760.png"><img data-src="/162/1416119-20180624155529626-1633480197.png" alt="image" loading="lazy"></a></p>
 <h4 id="（2）使用以下命令进行刻隆。"><a href="#（2）使用以下命令进行刻隆。" class="headerlink" title="（2）使用以下命令进行刻隆。"></a>（2）使用以下命令进行刻隆。</h4><blockquote>
-<p>mike@win10-001 MINGW64 ~/cookbook<br>$ git clone <span class="exturl" data-url="bWFpbHRvOiYjeDY3OyYjeDY5OyYjMTE2OyYjNjQ7JiN4Njc7JiN4Njk7JiMxMTY7JiMxMDg7JiN4NjE7JiN4NjI7JiN4MmU7JiN4NjE7JiMxMDU7JiMxMTU7JiMxMDQ7JiN4NjE7JiN4NmU7JiN4Njc7JiN4Nzc7JiN4NjU7JiMxMDU7JiN4MmU7JiN4NmU7JiMxMDE7JiN4NzQ7">&#x67;&#x69;&#116;&#64;&#x67;&#x69;&#116;&#108;&#x61;&#x62;&#x2e;&#x61;&#105;&#115;&#104;&#x61;&#x6e;&#x67;&#x77;&#x65;&#105;&#x2e;&#x6e;&#101;&#x74;<i class="fa fa-external-link-alt"></i></span>:root/cookbook.git<br>Cloning into &#39;cookbook&#39;...<br>The authenticity of host &#39;gitlab.aishangwei.net (192.168.2.201)&#39; can&#39;t be established.<br>ECDSA key fingerprint is SHA256:HvXTteW8UQ0MtxDAlMhL9XNOElAVV69d8nDsWjixrXI.<br>Are you sure you want to continue connecting (yes/no)? yes<br>Warning: Permanently added &#39;gitlab.aishangwei.net,192.168.2.201&#39; (ECDSA) to the list of known hosts.<br>warning: You appear to have cloned an empty repository.</p>
+<p>mike@win10-001 MINGW64 ~/cookbook<br>$ git clone <span class="exturl" data-url="bWFpbHRvOiYjMTAzOyYjeDY5OyYjMTE2OyYjeDQwOyYjeDY3OyYjMTA1OyYjMTE2OyYjeDZjOyYjOTc7JiN4NjI7JiM0NjsmIzk3OyYjeDY5OyYjeDczOyYjeDY4OyYjOTc7JiMxMTA7JiN4Njc7JiN4Nzc7JiN4NjU7JiMxMDU7JiM0NjsmI3g2ZTsmIzEwMTsmIzExNjs=">&#103;&#x69;&#116;&#x40;&#x67;&#105;&#116;&#x6c;&#97;&#x62;&#46;&#97;&#x69;&#x73;&#x68;&#97;&#110;&#x67;&#x77;&#x65;&#105;&#46;&#x6e;&#101;&#116;<i class="fa fa-external-link-alt"></i></span>:root/cookbook.git<br>Cloning into &#39;cookbook&#39;...<br>The authenticity of host &#39;gitlab.aishangwei.net (192.168.2.201)&#39; can&#39;t be established.<br>ECDSA key fingerprint is SHA256:HvXTteW8UQ0MtxDAlMhL9XNOElAVV69d8nDsWjixrXI.<br>Are you sure you want to continue connecting (yes/no)? yes<br>Warning: Permanently added &#39;gitlab.aishangwei.net,192.168.2.201&#39; (ECDSA) to the list of known hosts.<br>warning: You appear to have cloned an empty repository.</p>
 </blockquote>
 <h4 id="（3）进入我们刻隆的文件夹，可以通过以下命令查看是否是GIT文件夹。"><a href="#（3）进入我们刻隆的文件夹，可以通过以下命令查看是否是GIT文件夹。" class="headerlink" title="（3）进入我们刻隆的文件夹，可以通过以下命令查看是否是GIT文件夹。"></a>（3）进入我们刻隆的文件夹，可以通过以下命令查看是否是GIT文件夹。</h4><blockquote>
 <p>$ git status<br>On branch master</p>
@@ -470,6 +432,7 @@
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git push origin rebase-branch –f</span><br></pre></td></tr></table></figure>
 </blockquote>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
 <h4 id="5-在master分支上创建提交。"><a href="#5-在master分支上创建提交。" class="headerlink" title="5. 在master分支上创建提交。"></a>5. 在master分支上创建提交。</h4><blockquote>
 <p>mike@win10-001 MINGW64 ~/cookbook/cookbook (master)<br>$ echo &quot;1&quot; &gt;&gt; README.md</p>
 <p>mike@win10-001 MINGW64 ~/cookbook/cookbook (master)<br>$ git add .<br>warning: LF will be replaced by CRLF in README.md.<br>The file will have its original line endings in your working directory.</p>
@@ -519,7 +482,7 @@
     <footer class="post-footer">
           <div class="reward-container">
   <div>Buy me a coffee</div>
-  <button onclick="document.querySelector('.post-reward').classList.toggle('active');">
+  <button>
     赞赏
   </button>
   <div class="post-reward">
@@ -597,28 +560,6 @@
             </div>
         </div>
       </div>
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      const commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
 </div>
   </main>
 
@@ -639,13 +580,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">352k</span>
+    <span title="站点总字数">353k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">5:20</span>
+    <span title="站点阅读时长">5:21</span>
   </span>
 </div>
 
@@ -658,16 +599,14 @@
   </footer>
 
   
-  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.2.1/source/js/utils.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.2.1/source/js/motion.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.2.1/source/js/next-boot.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js" integrity="sha256-EdPgYcPk/IIrw7FYeuJQexva49pVRZNmt3LculEr7zM=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/comments.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/utils.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/motion.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/next-boot.min.js"></script>
 
   
-<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.2.1/source/js/local-search.js"></script>
-
-
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/third-party/search/local-search.min.js"></script>
 
 
 
@@ -677,44 +616,25 @@
 
 
 
-  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.0.0/dist/quicklink.umd.js"></script>
-  <script>
-      window.addEventListener('load', () => {
-      quicklink.listen({
-        timeout : 3000,
-        priority: true,
-        ignores : [uri => uri.includes('#'),uri => uri === 'https://weilining.github.io/162.html',]
-      });
-      });
-  </script>
+  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.2.0/dist/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"ignores":null,"url":"https://weilining.github.io/162.html"}</script>
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/third-party/quicklink.min.js"></script>
 
+
+<script class="next-config" data-name="valine" type="application/json">{"enable":true,"appId":"Bu6sP4depeiGP22PIFqz0SmJ-MdYXbMMI","appKey":"jYGDeeOBkTqvrUJDEmqj83q7","serverURLs":"https://bu6sp4de.api.lncldglobal.com","placeholder":"Just go go","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"lang":null,"visitor":true,"comment_count":true,"recordIP":false,"enableQQ":false,"requiredFields":[],"el":"#valine-comments","path":"/162.html"}</script>
 <script>
-NexT.utils.loadComments('#valine-comments', () => {
-  NexT.utils.getScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', () => {
-    new Valine(Object.assign({"enable":true,"appId":"Bu6sP4depeiGP22PIFqz0SmJ-MdYXbMMI","appKey":"jYGDeeOBkTqvrUJDEmqj83q7","serverURLs":null,"placeholder":"Just go go","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"lang":null,"visitor":true,"comment_count":true,"recordIP":false,"enableQQ":false,"requiredFields":[]}, {
-      el: '#valine-comments',
-      path: "/162.html",
-      serverURLs: "https://bu6sp4de.api.lncldglobal.com"
-    }));
-  }, window.Valine);
+document.addEventListener('page:loaded', () => {
+  NexT.utils.loadComments(CONFIG.valine.el)
+    .then(() => NexT.utils.getScript(
+      'https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js',
+      { condition: window.Valine }
+    ))
+    .then(() => {
+      new Valine(CONFIG.valine);
+    });
 });
 </script>
-
-<script>
-NexT.utils.loadComments('#lv-container', () => {
-  window.livereOptions = {
-    refer: "162.html"
-  };
-  (function(d, s) {
-    var j, e = d.getElementsByTagName(s)[0];
-    if (typeof LivereTower === 'function') { return; }
-    j = d.createElement(s);
-    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-    j.async = true;
-    e.parentNode.insertBefore(j, e);
-  })(document, 'script');
-});
-</script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/third-party/comments/livere.min.js"></script>
 
 
 

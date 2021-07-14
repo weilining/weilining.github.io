@@ -2,9 +2,9 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="viewport" content="width=device-width">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.3.0">
+<meta name="generator" content="Hexo 5.4.0">
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.jsdelivr.net/gh/weilining/img@main/img/apple-touch-icon-next.png">
@@ -20,13 +20,10 @@
 
 <link rel="stylesheet" href="https://fonts.dogedoge.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.2/css/all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css" integrity="sha256-2H3fkXt6FEmrReK448mDVGKb3WW2ZZw35gI7vqHOE4Y=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"weilining.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.2.1","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
-  </script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"weilining.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.6.1","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/config.min.js"></script>
 <meta name="description" content="默认">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Centos8 安装软件慢的解决方法">
@@ -46,15 +43,10 @@
 <link rel="canonical" href="https://weilining.github.io/144.html">
 
 
-<script class="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : false,
-    isPost : true,
-    lang   : 'zh-CN'
-  };
-</script>
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://weilining.github.io/144.html","path":"144.html","title":"Centos8 安装软件慢的解决方法"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
 <title>Centos8 安装软件慢的解决方法 | Ln's Blog</title>
   
 
@@ -62,40 +54,8 @@
 
 
   <noscript>
-  <style>
-  body { margin-top: 2rem; }
-
-  .use-motion .menu-item,
-  .use-motion .sidebar,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header {
-    visibility: visible;
-  }
-
-  .use-motion .header,
-  .use-motion .site-brand-container .toggle,
-  .use-motion .footer { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle,
-  .use-motion .custom-logo-image {
-    opacity: initial;
-    top: initial;
-  }
-
-  .use-motion .logo-line {
-    transform: scaleX(1);
-  }
-
-  .search-pop-overlay, .sidebar-nav { display: none; }
-  .sidebar-panel { display: block; }
-  </style>
-</noscript>
-
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
 <link rel="alternate" href="/atom.xml" title="Ln's Blog" type="application/atom+xml">
 </head>
 
@@ -202,7 +162,8 @@
         <!--/noindex-->
 
         <div class="site-overview-wrap sidebar-panel">
-          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <div class="site-overview">
+            <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image" alt="Lining Wei"
       src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/icon.gif">
   <p class="site-author-name" itemprop="name">Lining Wei</p>
@@ -232,11 +193,12 @@
   </nav>
 </div>
   <div class="cc-license site-overview-item animated" itemprop="license">
-    <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC96aC1DTg=="><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></span>
+    <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC96aC1DTg=="><img src="https://cdn.jsdelivr.net/npm/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></span>
   </div>
 
 
 
+          </div>
         </div>
       </div>
     </div>
@@ -247,7 +209,7 @@
     </header>
 
     
-  <div class="back-to-top" role="button">
+  <div class="back-to-top" role="button" aria-label="返回顶部">
     <i class="fa fa-arrow-up"></i>
     <span>0%</span>
   </div>
@@ -341,18 +303,25 @@
     <div class="post-body" itemprop="articleBody">
         <h2 id="假方法-修改DNS"><a href="#假方法-修改DNS" class="headerlink" title="假方法-修改DNS"></a>假方法-修改DNS</h2><p>谷歌第一位是这个修改DNS的方法，修改DNS只是让你能下得动，并不加速，想要加速，只能是换源解决，换成阿里源。</p>
 <p><img data-src="/144/image-20201122000742472.png" alt="image-20201122000742472" loading="lazy"></p>
-<a id="more"></a>
+<span id="more"></span>
 
 <h2 id="换阿里源"><a href="#换阿里源" class="headerlink" title="换阿里源"></a>换阿里源</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">curl -o &#x2F;etc&#x2F;yum.repos.d&#x2F;CentOS-Base.repo http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;repo&#x2F;Centos-8.repo</span><br></pre></td></tr></table></figure>
+
 <p>后面的不用看了，上面设置好效果爆棚。</p>
 <h2 id="验证"><a href="#验证" class="headerlink" title="验证"></a>验证</h2><h3 id="查看一下是否安装完成，执行命令"><a href="#查看一下是否安装完成，执行命令" class="headerlink" title="查看一下是否安装完成，执行命令"></a>查看一下是否安装完成，执行命令</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ls -l /etc/yum.repos.d/</span><br></pre></td></tr></table></figure>
+
 <h3 id="将会看到如下内容"><a href="#将会看到如下内容" class="headerlink" title="将会看到如下内容"></a>将会看到如下内容</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">-rw-r--r--. 1 root root  731 8月  14 14:42 CentOS-AppStream.repo.bak</span><br><span class="line">-rw-r--r--. 1 root root 2595 12月 25 19:44 CentOS-Base.repo</span><br><span class="line">-rw-r--r--. 1 root root  712 8月  14 14:42 CentOS-Base.repo.bak</span><br><span class="line">-rw-r--r--. 1 root root  798 8月  14 14:42 CentOS-centosplus.repo.bak</span><br><span class="line">-rw-r--r--. 1 root root 1320 8月  14 14:42 CentOS-CR.repo</span><br><span class="line">-rw-r--r--. 1 root root  668 8月  14 14:42 CentOS-Debuginfo.repo</span><br><span class="line">-rw-r--r--. 1 root root  756 8月  14 14:42 CentOS-Extras.repo.bak</span><br><span class="line">-rw-r--r--. 1 root root  338 8月  14 14:42 CentOS-fasttrack.repo</span><br><span class="line">-rw-r--r--. 1 root root  928 8月  14 14:42 CentOS-Media.repo</span><br><span class="line">-rw-r--r--. 1 root root  736 8月  14 14:42 CentOS-PowerTools.repo.bak</span><br><span class="line">-rw-r--r--. 1 root root 1382 8月  14 14:42 CentOS-Sources.repo</span><br><span class="line">-rw-r--r--. 1 root root   74 8月  14 14:42 CentOS-Vault.repo</span><br><span class="line">123456789101112</span><br></pre></td></tr></table></figure>
+
 <h3 id="再执行以下命令查看一下内容，确认是否更改成功"><a href="#再执行以下命令查看一下内容，确认是否更改成功" class="headerlink" title="再执行以下命令查看一下内容，确认是否更改成功"></a>再执行以下命令查看一下内容，确认是否更改成功</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">cat /etc/yum.repos.d/CentOS-Base.repo</span><br></pre></td></tr></table></figure>
+
 <h3 id="如果看到如下内容，则代表升级成功了。"><a href="#如果看到如下内容，则代表升级成功了。" class="headerlink" title="如果看到如下内容，则代表升级成功了。"></a>如果看到如下内容，则代表升级成功了。</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># CentOS-Base.repo</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># The mirror system uses the connecting IP address of the client and the</span></span><br><span class="line"><span class="comment"># update status of each mirror to pick mirrors that are updated to and</span></span><br><span class="line"><span class="comment"># geographically close to the client.  You should use this for CentOS updates</span></span><br><span class="line"><span class="comment"># unless you are manually picking other mirrors.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># If the mirrorlist= does not work for you, as a fall back you can try the </span></span><br><span class="line"><span class="comment"># remarked out baseurl= line instead.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"> </span><br><span class="line">[base]</span><br><span class="line">name=CentOS-<span class="variable">$releasever</span> - Base - mirrors.aliyun.com</span><br><span class="line">failovermethod=priority</span><br><span class="line">baseurl=https://mirrors.aliyun.com/centos/<span class="variable">$releasever</span>/BaseOS/<span class="variable">$basearch</span>/os/</span><br><span class="line">        http://mirrors.aliyuncs.com/centos/<span class="variable">$releasever</span>/BaseOS/<span class="variable">$basearch</span>/os/</span><br><span class="line">        http://mirrors.cloud.aliyuncs.com/centos/<span class="variable">$releasever</span>/BaseOS/<span class="variable">$basearch</span>/os/</span><br><span class="line">gpgcheck=1</span><br><span class="line">gpgkey=https://mirrors.aliyun.com/centos/RPM-GPG-KEY-CentOS-Official</span><br><span class="line"> </span><br><span class="line"><span class="comment">#additional packages that may be useful</span></span><br><span class="line">[extras]</span><br><span class="line">name=CentOS-<span class="variable">$releasever</span> - Extras - mirrors.aliyun.com</span><br><span class="line">failovermethod=priority</span><br><span class="line">baseurl=https://mirrors.aliyun.com/centos/<span class="variable">$releasever</span>/extras/<span class="variable">$basearch</span>/os/</span><br><span class="line">        http://mirrors.aliyuncs.com/centos/<span class="variable">$releasever</span>/extras/<span class="variable">$basearch</span>/os/</span><br><span class="line">        http://mirrors.cloud.aliyuncs.com/centos/<span class="variable">$releasever</span>/extras/<span class="variable">$basearch</span>/os/</span><br><span class="line">gpgcheck=1</span><br><span class="line">gpgkey=https://mirrors.aliyun.com/centos/RPM-GPG-KEY-CentOS-Official</span><br><span class="line"> </span><br><span class="line"><span class="comment">#additional packages that extend functionality of existing packages</span></span><br><span class="line">[centosplus]</span><br><span class="line">name=CentOS-<span class="variable">$releasever</span> - Plus - mirrors.aliyun.com</span><br><span class="line">failovermethod=priority</span><br><span class="line">baseurl=https://mirrors.aliyun.com/centos/<span class="variable">$releasever</span>/centosplus/<span class="variable">$basearch</span>/os/</span><br><span class="line">        http://mirrors.aliyuncs.com/centos/<span class="variable">$releasever</span>/centosplus/<span class="variable">$basearch</span>/os/</span><br><span class="line">        http://mirrors.cloud.aliyuncs.com/centos/<span class="variable">$releasever</span>/centosplus/<span class="variable">$basearch</span>/os/</span><br><span class="line">gpgcheck=1</span><br><span class="line">enabled=0</span><br><span class="line">gpgkey=https://mirrors.aliyun.com/centos/RPM-GPG-KEY-CentOS-Official</span><br><span class="line"> </span><br><span class="line">[PowerTools]</span><br><span class="line">name=CentOS-<span class="variable">$releasever</span> - PowerTools - mirrors.aliyun.com</span><br><span class="line">failovermethod=priority</span><br><span class="line">baseurl=https://mirrors.aliyun.com/centos/<span class="variable">$releasever</span>/PowerTools/<span class="variable">$basearch</span>/os/</span><br><span class="line">        http://mirrors.aliyuncs.com/centos/<span class="variable">$releasever</span>/PowerTools/<span class="variable">$basearch</span>/os/</span><br><span class="line">        http://mirrors.cloud.aliyuncs.com/centos/<span class="variable">$releasever</span>/PowerTools/<span class="variable">$basearch</span>/os/</span><br><span class="line">gpgcheck=1</span><br><span class="line">enabled=0</span><br><span class="line">gpgkey=https://mirrors.aliyun.com/centos/RPM-GPG-KEY-CentOS-Official</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">[AppStream]</span><br><span class="line">name=CentOS-<span class="variable">$releasever</span> - AppStream - mirrors.aliyun.com</span><br><span class="line">failovermethod=priority</span><br><span class="line">baseurl=https://mirrors.aliyun.com/centos/<span class="variable">$releasever</span>/AppStream/<span class="variable">$basearch</span>/os/</span><br><span class="line">        http://mirrors.aliyuncs.com/centos/<span class="variable">$releasever</span>/AppStream/<span class="variable">$basearch</span>/os/</span><br><span class="line">        http://mirrors.cloud.aliyuncs.com/centos/<span class="variable">$releasever</span>/AppStream/<span class="variable">$basearch</span>/os/</span><br><span class="line">gpgcheck=1</span><br><span class="line">gpgkey=https://mirrors.aliyun.com/centos/RPM-GPG-KEY-CentOS-Official</span><br><span class="line">12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061</span><br></pre></td></tr></table></figure>
+
 <h2 id="后续"><a href="#后续" class="headerlink" title="后续"></a>后续</h2><p>这样就完成了将本地CentOS Linux 8的yum安装源更换为国内源（阿里源）。<br>运行以下命令生成以下缓存</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum makecache</span><br></pre></td></tr></table></figure>
+
 <p>执行以下命令升级所有的软件包试试看速度如何：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum -y update</span><br></pre></td></tr></table></figure>
+
 <p>主要是习惯了YUM，你也可以用这个命令“dnf -y update”。如果你是网络安装的CentOS Linux 8，系统应该不会有什么软件包需要升级，提示内容如下：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">上次元数据过期检查：0:06:18 前，执行于 2019年12月25日 星期三 23时34分12秒。</span><br><span class="line">依赖关系解决。</span><br><span class="line">无需任何处理。</span><br><span class="line">完毕！</span><br></pre></td></tr></table></figure>
     </div>
@@ -364,7 +333,7 @@
     <footer class="post-footer">
           <div class="reward-container">
   <div>Buy me a coffee</div>
-  <button onclick="document.querySelector('.post-reward').classList.toggle('active');">
+  <button>
     赞赏
   </button>
   <div class="post-reward">
@@ -442,28 +411,6 @@
             </div>
         </div>
       </div>
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      const commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
 </div>
   </main>
 
@@ -484,13 +431,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">352k</span>
+    <span title="站点总字数">353k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">5:20</span>
+    <span title="站点阅读时长">5:21</span>
   </span>
 </div>
 
@@ -503,16 +450,14 @@
   </footer>
 
   
-  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.2.1/source/js/utils.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.2.1/source/js/motion.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.2.1/source/js/next-boot.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js" integrity="sha256-EdPgYcPk/IIrw7FYeuJQexva49pVRZNmt3LculEr7zM=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/comments.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/utils.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/motion.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/next-boot.min.js"></script>
 
   
-<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.2.1/source/js/local-search.js"></script>
-
-
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/third-party/search/local-search.min.js"></script>
 
 
 
@@ -522,44 +467,25 @@
 
 
 
-  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.0.0/dist/quicklink.umd.js"></script>
-  <script>
-      window.addEventListener('load', () => {
-      quicklink.listen({
-        timeout : 3000,
-        priority: true,
-        ignores : [uri => uri.includes('#'),uri => uri === 'https://weilining.github.io/144.html',]
-      });
-      });
-  </script>
+  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.2.0/dist/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"ignores":null,"url":"https://weilining.github.io/144.html"}</script>
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/third-party/quicklink.min.js"></script>
 
+
+<script class="next-config" data-name="valine" type="application/json">{"enable":true,"appId":"Bu6sP4depeiGP22PIFqz0SmJ-MdYXbMMI","appKey":"jYGDeeOBkTqvrUJDEmqj83q7","serverURLs":"https://bu6sp4de.api.lncldglobal.com","placeholder":"Just go go","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"lang":null,"visitor":true,"comment_count":true,"recordIP":false,"enableQQ":false,"requiredFields":[],"el":"#valine-comments","path":"/144.html"}</script>
 <script>
-NexT.utils.loadComments('#valine-comments', () => {
-  NexT.utils.getScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', () => {
-    new Valine(Object.assign({"enable":true,"appId":"Bu6sP4depeiGP22PIFqz0SmJ-MdYXbMMI","appKey":"jYGDeeOBkTqvrUJDEmqj83q7","serverURLs":null,"placeholder":"Just go go","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"lang":null,"visitor":true,"comment_count":true,"recordIP":false,"enableQQ":false,"requiredFields":[]}, {
-      el: '#valine-comments',
-      path: "/144.html",
-      serverURLs: "https://bu6sp4de.api.lncldglobal.com"
-    }));
-  }, window.Valine);
+document.addEventListener('page:loaded', () => {
+  NexT.utils.loadComments(CONFIG.valine.el)
+    .then(() => NexT.utils.getScript(
+      'https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js',
+      { condition: window.Valine }
+    ))
+    .then(() => {
+      new Valine(CONFIG.valine);
+    });
 });
 </script>
-
-<script>
-NexT.utils.loadComments('#lv-container', () => {
-  window.livereOptions = {
-    refer: "144.html"
-  };
-  (function(d, s) {
-    var j, e = d.getElementsByTagName(s)[0];
-    if (typeof LivereTower === 'function') { return; }
-    j = d.createElement(s);
-    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-    j.async = true;
-    e.parentNode.insertBefore(j, e);
-  })(document, 'script');
-});
-</script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/third-party/comments/livere.min.js"></script>
 
 
 

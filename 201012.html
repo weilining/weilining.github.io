@@ -2,9 +2,9 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="viewport" content="width=device-width">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.3.0">
+<meta name="generator" content="Hexo 5.4.0">
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.jsdelivr.net/gh/weilining/img@main/img/apple-touch-icon-next.png">
@@ -20,13 +20,10 @@
 
 <link rel="stylesheet" href="https://fonts.dogedoge.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.2/css/all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css" integrity="sha256-2H3fkXt6FEmrReK448mDVGKb3WW2ZZw35gI7vqHOE4Y=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"weilining.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.2.1","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
-  </script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"weilining.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.6.1","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/config.min.js"></script>
 <meta name="description" content="默认">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo NexT 增加 canvas 粒子时钟">
@@ -44,15 +41,10 @@
 <link rel="canonical" href="https://weilining.github.io/201012.html">
 
 
-<script class="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : false,
-    isPost : true,
-    lang   : 'zh-CN'
-  };
-</script>
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://weilining.github.io/201012.html","path":"201012.html","title":"Hexo NexT 增加 canvas 粒子时钟"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
 <title>Hexo NexT 增加 canvas 粒子时钟 | Ln's Blog</title>
   
 
@@ -60,40 +52,8 @@
 
 
   <noscript>
-  <style>
-  body { margin-top: 2rem; }
-
-  .use-motion .menu-item,
-  .use-motion .sidebar,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header {
-    visibility: visible;
-  }
-
-  .use-motion .header,
-  .use-motion .site-brand-container .toggle,
-  .use-motion .footer { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle,
-  .use-motion .custom-logo-image {
-    opacity: initial;
-    top: initial;
-  }
-
-  .use-motion .logo-line {
-    transform: scaleX(1);
-  }
-
-  .search-pop-overlay, .sidebar-nav { display: none; }
-  .sidebar-panel { display: block; }
-  </style>
-</noscript>
-
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
 <link rel="alternate" href="/atom.xml" title="Ln's Blog" type="application/atom+xml">
 </head>
 
@@ -200,7 +160,8 @@
         <!--/noindex-->
 
         <div class="site-overview-wrap sidebar-panel">
-          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <div class="site-overview">
+            <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image" alt="Lining Wei"
       src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/icon.gif">
   <p class="site-author-name" itemprop="name">Lining Wei</p>
@@ -230,11 +191,12 @@
   </nav>
 </div>
   <div class="cc-license site-overview-item animated" itemprop="license">
-    <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC96aC1DTg=="><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></span>
+    <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC96aC1DTg=="><img src="https://cdn.jsdelivr.net/npm/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></span>
   </div>
 
 
 
+          </div>
         </div>
       </div>
     </div>
@@ -245,7 +207,7 @@
     </header>
 
     
-  <div class="back-to-top" role="button">
+  <div class="back-to-top" role="button" aria-label="返回顶部">
     <i class="fa fa-arrow-up"></i>
     <span>0%</span>
   </div>
@@ -345,13 +307,16 @@
     
     <div class="post-body" itemprop="articleBody">
         <p>[TOC]</p>
-<a id="more"></a>
+<span id="more"></span>
 
 <h1 id="添加代码"><a href="#添加代码" class="headerlink" title="添加代码"></a>添加代码</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd blog</span><br><span class="line">vi source&#x2F;_data&#x2F;sidebar.njk</span><br></pre></td></tr></table></figure>
+
 <p>添加以下代码</p>
  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;div style&#x3D;&quot;&quot;&gt;</span><br><span class="line">  &lt;canvas id&#x3D;&quot;canvas&quot; style&#x3D;&quot;width:60%;&quot;&gt;当前浏览器不支持canvas，请更换浏览器后再试&lt;&#x2F;canvas&gt;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">(function()&#123;</span><br><span class="line"></span><br><span class="line">   var digit&#x3D;</span><br><span class="line">    [</span><br><span class="line">        [</span><br><span class="line">            [0,0,1,1,1,0,0],</span><br><span class="line">            [0,1,1,0,1,1,0],</span><br><span class="line">            [1,1,0,0,0,1,1],</span><br><span class="line">            [1,1,0,0,0,1,1],</span><br><span class="line">            [1,1,0,0,0,1,1],</span><br><span class="line">            [1,1,0,0,0,1,1],</span><br><span class="line">            [1,1,0,0,0,1,1],</span><br><span class="line">            [1,1,0,0,0,1,1],</span><br><span class="line">            [0,1,1,0,1,1,0],</span><br><span class="line">            [0,0,1,1,1,0,0]</span><br><span class="line">        ],&#x2F;&#x2F;0</span><br><span class="line">        [</span><br><span class="line">            [0,0,0,1,1,0,0],</span><br><span class="line">            [0,1,1,1,1,0,0],</span><br><span class="line">            [0,0,0,1,1,0,0],</span><br><span class="line">            [0,0,0,1,1,0,0],</span><br><span class="line">            [0,0,0,1,1,0,0],</span><br><span class="line">            [0,0,0,1,1,0,0],</span><br><span class="line">            [0,0,0,1,1,0,0],</span><br><span class="line">            [0,0,0,1,1,0,0],</span><br><span class="line">            [0,0,0,1,1,0,0],</span><br><span class="line">            [1,1,1,1,1,1,1]</span><br><span class="line">        ],&#x2F;&#x2F;1</span><br><span class="line">        [</span><br><span class="line">            [0,1,1,1,1,1,0],</span><br><span class="line">            [1,1,0,0,0,1,1],</span><br><span class="line">            [0,0,0,0,0,1,1],</span><br><span class="line">            [0,0,0,0,1,1,0],</span><br><span class="line">            [0,0,0,1,1,0,0],</span><br><span class="line">            [0,0,1,1,0,0,0],</span><br><span class="line">            [0,1,1,0,0,0,0],</span><br><span class="line">            [1,1,0,0,0,0,0],</span><br><span class="line">            [1,1,0,0,0,1,1],</span><br><span class="line">            [1,1,1,1,1,1,1]</span><br><span class="line">        ],&#x2F;&#x2F;2</span><br><span class="line">        [</span><br><span class="line">            [1,1,1,1,1,1,1],</span><br><span class="line">            [0,0,0,0,0,1,1],</span><br><span class="line">            [0,0,0,0,1,1,0],</span><br><span class="line">            [0,0,0,1,1,0,0],</span><br><span class="line">            [0,0,1,1,1,0,0],</span><br><span class="line">            [0,0,0,0,1,1,0],</span><br><span class="line">            [0,0,0,0,0,1,1],</span><br><span class="line">            [0,0,0,0,0,1,1],</span><br><span class="line">            [1,1,0,0,0,1,1],</span><br><span class="line">            [0,1,1,1,1,1,0]</span><br><span class="line">        ],&#x2F;&#x2F;3</span><br><span class="line">        [</span><br><span class="line">            [0,0,0,0,1,1,0],</span><br><span class="line">            [0,0,0,1,1,1,0],</span><br><span class="line">            [0,0,1,1,1,1,0],</span><br><span class="line">            [0,1,1,0,1,1,0],</span><br><span class="line">            [1,1,0,0,1,1,0],</span><br><span class="line">            [1,1,1,1,1,1,1],</span><br><span class="line">            [0,0,0,0,1,1,0],</span><br><span class="line">            [0,0,0,0,1,1,0],</span><br><span class="line">            [0,0,0,0,1,1,0],</span><br><span class="line">            [0,0,0,1,1,1,1]</span><br><span class="line">        ],&#x2F;&#x2F;4</span><br><span class="line">        [</span><br><span class="line">            [1,1,1,1,1,1,1],</span><br><span class="line">            [1,1,0,0,0,0,0],</span><br><span class="line">            [1,1,0,0,0,0,0],</span><br><span class="line">            [1,1,1,1,1,1,0],</span><br><span class="line">            [0,0,0,0,0,1,1],</span><br><span class="line">            [0,0,0,0,0,1,1],</span><br><span class="line">            [0,0,0,0,0,1,1],</span><br><span class="line">            [0,0,0,0,0,1,1],</span><br><span class="line">            [1,1,0,0,0,1,1],</span><br><span class="line">            [0,1,1,1,1,1,0]</span><br><span class="line">        ],&#x2F;&#x2F;5</span><br><span class="line">        [</span><br><span class="line">            [0,0,0,0,1,1,0],</span><br><span class="line">            [0,0,1,1,0,0,0],</span><br><span class="line">            [0,1,1,0,0,0,0],</span><br><span class="line">            [1,1,0,0,0,0,0],</span><br><span class="line">            [1,1,0,1,1,1,0],</span><br><span class="line">            [1,1,0,0,0,1,1],</span><br><span class="line">            [1,1,0,0,0,1,1],</span><br><span class="line">            [1,1,0,0,0,1,1],</span><br><span class="line">            [1,1,0,0,0,1,1],</span><br><span class="line">            [0,1,1,1,1,1,0]</span><br><span class="line">        ],&#x2F;&#x2F;6</span><br><span class="line">        [</span><br><span class="line">            [1,1,1,1,1,1,1],</span><br><span class="line">            [1,1,0,0,0,1,1],</span><br><span class="line">            [0,0,0,0,1,1,0],</span><br><span class="line">            [0,0,0,0,1,1,0],</span><br><span class="line">            [0,0,0,1,1,0,0],</span><br><span class="line">            [0,0,0,1,1,0,0],</span><br><span class="line">            [0,0,1,1,0,0,0],</span><br><span class="line">            [0,0,1,1,0,0,0],</span><br><span class="line">            [0,0,1,1,0,0,0],</span><br><span class="line">            [0,0,1,1,0,0,0]</span><br><span class="line">        ],&#x2F;&#x2F;7</span><br><span class="line">        [</span><br><span class="line">            [0,1,1,1,1,1,0],</span><br><span class="line">            [1,1,0,0,0,1,1],</span><br><span class="line">            [1,1,0,0,0,1,1],</span><br><span class="line">            [1,1,0,0,0,1,1],</span><br><span class="line">            [0,1,1,1,1,1,0],</span><br><span class="line">            [1,1,0,0,0,1,1],</span><br><span class="line">            [1,1,0,0,0,1,1],</span><br><span class="line">            [1,1,0,0,0,1,1],</span><br><span class="line">            [1,1,0,0,0,1,1],</span><br><span class="line">            [0,1,1,1,1,1,0]</span><br><span class="line">        ],&#x2F;&#x2F;8</span><br><span class="line">        [</span><br><span class="line">            [0,1,1,1,1,1,0],</span><br><span class="line">            [1,1,0,0,0,1,1],</span><br><span class="line">            [1,1,0,0,0,1,1],</span><br><span class="line">            [1,1,0,0,0,1,1],</span><br><span class="line">            [0,1,1,1,0,1,1],</span><br><span class="line">            [0,0,0,0,0,1,1],</span><br><span class="line">            [0,0,0,0,0,1,1],</span><br><span class="line">            [0,0,0,0,1,1,0],</span><br><span class="line">            [0,0,0,1,1,0,0],</span><br><span class="line">            [0,1,1,0,0,0,0]</span><br><span class="line">        ],&#x2F;&#x2F;9</span><br><span class="line">        [</span><br><span class="line">            [0,0,0,0,0,0,0],</span><br><span class="line">            [0,0,1,1,1,0,0],</span><br><span class="line">            [0,0,1,1,1,0,0],</span><br><span class="line">            [0,0,1,1,1,0,0],</span><br><span class="line">            [0,0,0,0,0,0,0],</span><br><span class="line">            [0,0,0,0,0,0,0],</span><br><span class="line">            [0,0,1,1,1,0,0],</span><br><span class="line">            [0,0,1,1,1,0,0],</span><br><span class="line">            [0,0,1,1,1,0,0],</span><br><span class="line">            [0,0,0,0,0,0,0]</span><br><span class="line">        ]&#x2F;&#x2F;:</span><br><span class="line">    ];</span><br><span class="line"></span><br><span class="line">var canvas &#x3D; document.getElementById(&#39;canvas&#39;);</span><br><span class="line"></span><br><span class="line">if(canvas.getContext)&#123;</span><br><span class="line">    var cxt &#x3D; canvas.getContext(&#39;2d&#39;);</span><br><span class="line">    &#x2F;&#x2F;声明canvas的宽高</span><br><span class="line">    var H &#x3D; 100,W &#x3D; 700;</span><br><span class="line">    canvas.height &#x3D; H;</span><br><span class="line">    canvas.width &#x3D; W;</span><br><span class="line">    cxt.fillStyle &#x3D; &#39;#f00&#39;;</span><br><span class="line">    cxt.fillRect(10,10,50,50);</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F;存储时间数据</span><br><span class="line">    var data &#x3D; [];</span><br><span class="line">    &#x2F;&#x2F;存储运动的小球</span><br><span class="line">    var balls &#x3D; [];</span><br><span class="line">    &#x2F;&#x2F;设置粒子半径</span><br><span class="line">    var R &#x3D; canvas.height&#x2F;20-1;</span><br><span class="line">    (function()&#123;</span><br><span class="line">        var temp &#x3D; &#x2F;(\d)(\d):(\d)(\d):(\d)(\d)&#x2F;.exec(new Date());</span><br><span class="line">        &#x2F;&#x2F;存储时间数字，由十位小时、个位小时、冒号、十位分钟、个位分钟、冒号、十位秒钟、个位秒钟这7个数字组成</span><br><span class="line">        data.push(temp[1],temp[2],10,temp[3],temp[4],10,temp[5],temp[6]);</span><br><span class="line">    &#125;)();</span><br><span class="line"></span><br><span class="line">    &#x2F;*生成点阵数字*&#x2F;</span><br><span class="line">    function renderDigit(index,num)&#123;</span><br><span class="line">        for(var i &#x3D; 0; i &lt; digit[num].length; i++)&#123;</span><br><span class="line">            for(var j &#x3D; 0; j &lt; digit[num][i].length; j++)&#123;</span><br><span class="line">                if(digit[num][i][j] &#x3D;&#x3D; 1)&#123;</span><br><span class="line">                    cxt.beginPath();</span><br><span class="line">                    &#x2F;&#x2F;cxt.fillStyle &#x3D; &#39;#f00&#39;;&#x2F;*红色数字*&#x2F;</span><br><span class="line">                    &#x2F;&#x2F;cxt.fillStyle &#x3D; &#39;#fff&#39;;&#x2F;*白色数字*&#x2F;</span><br><span class="line">                    cxt.fillStyle &#x3D; &#39;#FAF0BB&#39;;&#x2F;*代码黄数字*&#x2F;</span><br><span class="line">                    cxt.arc(14*(R+2)*index + j*2*(R+1)+(R+1),i*2*(R+1)+(R+1),R,0,2*Math.PI);</span><br><span class="line">                    cxt.closePath();</span><br><span class="line">                    cxt.fill();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;*更新时钟*&#x2F;</span><br><span class="line">    function updateDigitTime()&#123;</span><br><span class="line">        var changeNumArray &#x3D; [];</span><br><span class="line">        var temp &#x3D; &#x2F;(\d)(\d):(\d)(\d):(\d)(\d)&#x2F;.exec(new Date());</span><br><span class="line">        var NewData &#x3D; [];</span><br><span class="line">        NewData.push(temp[1],temp[2],10,temp[3],temp[4],10,temp[5],temp[6]);</span><br><span class="line">        for(var i &#x3D; data.length-1; i &gt;&#x3D;0 ; i--)&#123;</span><br><span class="line">            &#x2F;&#x2F;时间发生变化</span><br><span class="line">            if(NewData[i] !&#x3D;&#x3D; data[i])&#123;</span><br><span class="line">                &#x2F;&#x2F;将变化的数字值和在data数组中的索引存储在changeNumArray数组中</span><br><span class="line">                changeNumArray.push(i+&#39;_&#39;+(Number(data[i])+1)%10);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        &#x2F;&#x2F;增加小球</span><br><span class="line">        for(var i &#x3D; 0; i&lt; changeNumArray.length; i++)&#123;</span><br><span class="line">            addBalls.apply(this,changeNumArray[i].split(&#39;_&#39;));</span><br><span class="line">        &#125;</span><br><span class="line">        data &#x3D; NewData.concat();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;*更新小球状态*&#x2F;</span><br><span class="line">    function updateBalls()&#123;</span><br><span class="line">        for(var i &#x3D; 0; i &lt; balls.length; i++)&#123;</span><br><span class="line">            balls[i].stepY +&#x3D; balls[i].disY;</span><br><span class="line">            balls[i].x +&#x3D; balls[i].stepX;</span><br><span class="line">            balls[i].y +&#x3D; balls[i].stepY;</span><br><span class="line">            if(balls[i].x &gt; W + R || balls[i].y &gt; H + R)&#123;</span><br><span class="line">                balls.splice(i,1);</span><br><span class="line">                i--;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;*增加要运动的小球*&#x2F;</span><br><span class="line">    function addBalls(index,num)&#123;</span><br><span class="line">        var numArray &#x3D; [1,2,3];</span><br><span class="line">        var colorArray &#x3D;  [&quot;#3BE&quot;,&quot;#09C&quot;,&quot;#A6C&quot;,&quot;#93C&quot;,&quot;#9C0&quot;,&quot;#690&quot;,&quot;#FB3&quot;,&quot;#F80&quot;,&quot;#F44&quot;,&quot;#C00&quot;];</span><br><span class="line">        for(var i &#x3D; 0; i &lt; digit[num].length; i++)&#123;</span><br><span class="line">            for(var j &#x3D; 0; j &lt; digit[num][i].length; j++)&#123;</span><br><span class="line">                if(digit[num][i][j] &#x3D;&#x3D; 1)&#123;</span><br><span class="line">                    var ball &#x3D; &#123;</span><br><span class="line">                        x:14*(R+2)*index + j*2*(R+1)+(R+1),</span><br><span class="line">                        y:i*2*(R+1)+(R+1),</span><br><span class="line">                        stepX:Math.floor(Math.random() * 4 -2),</span><br><span class="line">                        stepY:-2*numArray[Math.floor(Math.random()*numArray.length)],</span><br><span class="line">                        color:colorArray[Math.floor(Math.random()*colorArray.length)],</span><br><span class="line">                        disY:1</span><br><span class="line">                    &#125;;</span><br><span class="line">                    balls.push(ball);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;*渲染*&#x2F;</span><br><span class="line">    function render()&#123;</span><br><span class="line">        &#x2F;&#x2F;重置画布宽度，达到清空画布的效果</span><br><span class="line">        canvas.height &#x3D; 100;</span><br><span class="line">        &#x2F;&#x2F;渲染时钟</span><br><span class="line">        for(var i &#x3D; 0; i &lt; data.length; i++)&#123;</span><br><span class="line">            renderDigit(i,data[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        &#x2F;&#x2F;渲染小球</span><br><span class="line">        for(var i &#x3D; 0; i &lt; balls.length; i++)&#123;</span><br><span class="line">            cxt.beginPath();</span><br><span class="line">            cxt.arc(balls[i].x,balls[i].y,R,0,2*Math.PI);</span><br><span class="line">            cxt.fillStyle &#x3D; balls[i].color;</span><br><span class="line">            cxt.closePath();</span><br><span class="line">            cxt.fill();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    clearInterval(oTimer);</span><br><span class="line">    var oTimer &#x3D; setInterval(function()&#123;</span><br><span class="line">        &#x2F;&#x2F;更新时钟</span><br><span class="line">        updateDigitTime();</span><br><span class="line">        &#x2F;&#x2F;更新小球状态</span><br><span class="line">        updateBalls();</span><br><span class="line">        &#x2F;&#x2F;渲染</span><br><span class="line">        render();</span><br><span class="line">    &#125;,50);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#125;)();</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+
 <h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><p><code>_config.next.yml</code></p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">custom_file_path:</span><br><span class="line">  sidebar: source&#x2F;_data&#x2F;sidebar.njk</span><br></pre></td></tr></table></figure>
+
 
     </div>
 
@@ -362,7 +327,7 @@
     <footer class="post-footer">
           <div class="reward-container">
   <div>Buy me a coffee</div>
-  <button onclick="document.querySelector('.post-reward').classList.toggle('active');">
+  <button>
     赞赏
   </button>
   <div class="post-reward">
@@ -440,28 +405,6 @@
             </div>
         </div>
       </div>
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      const commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
 </div>
   </main>
 
@@ -482,13 +425,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">352k</span>
+    <span title="站点总字数">353k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">5:20</span>
+    <span title="站点阅读时长">5:21</span>
   </span>
 </div>
 
@@ -501,16 +444,14 @@
   </footer>
 
   
-  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.2.1/source/js/utils.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.2.1/source/js/motion.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.2.1/source/js/next-boot.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js" integrity="sha256-EdPgYcPk/IIrw7FYeuJQexva49pVRZNmt3LculEr7zM=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/comments.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/utils.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/motion.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/next-boot.min.js"></script>
 
   
-<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.2.1/source/js/local-search.js"></script>
-
-
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/third-party/search/local-search.min.js"></script>
 
 
 
@@ -520,44 +461,25 @@
 
 
 
-  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.0.0/dist/quicklink.umd.js"></script>
-  <script>
-      window.addEventListener('load', () => {
-      quicklink.listen({
-        timeout : 3000,
-        priority: true,
-        ignores : [uri => uri.includes('#'),uri => uri === 'https://weilining.github.io/201012.html',]
-      });
-      });
-  </script>
+  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.2.0/dist/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"ignores":null,"url":"https://weilining.github.io/201012.html"}</script>
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/third-party/quicklink.min.js"></script>
 
+
+<script class="next-config" data-name="valine" type="application/json">{"enable":true,"appId":"Bu6sP4depeiGP22PIFqz0SmJ-MdYXbMMI","appKey":"jYGDeeOBkTqvrUJDEmqj83q7","serverURLs":"https://bu6sp4de.api.lncldglobal.com","placeholder":"Just go go","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"lang":null,"visitor":true,"comment_count":true,"recordIP":false,"enableQQ":false,"requiredFields":[],"el":"#valine-comments","path":"/201012.html"}</script>
 <script>
-NexT.utils.loadComments('#valine-comments', () => {
-  NexT.utils.getScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', () => {
-    new Valine(Object.assign({"enable":true,"appId":"Bu6sP4depeiGP22PIFqz0SmJ-MdYXbMMI","appKey":"jYGDeeOBkTqvrUJDEmqj83q7","serverURLs":null,"placeholder":"Just go go","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"lang":null,"visitor":true,"comment_count":true,"recordIP":false,"enableQQ":false,"requiredFields":[]}, {
-      el: '#valine-comments',
-      path: "/201012.html",
-      serverURLs: "https://bu6sp4de.api.lncldglobal.com"
-    }));
-  }, window.Valine);
+document.addEventListener('page:loaded', () => {
+  NexT.utils.loadComments(CONFIG.valine.el)
+    .then(() => NexT.utils.getScript(
+      'https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js',
+      { condition: window.Valine }
+    ))
+    .then(() => {
+      new Valine(CONFIG.valine);
+    });
 });
 </script>
-
-<script>
-NexT.utils.loadComments('#lv-container', () => {
-  window.livereOptions = {
-    refer: "201012.html"
-  };
-  (function(d, s) {
-    var j, e = d.getElementsByTagName(s)[0];
-    if (typeof LivereTower === 'function') { return; }
-    j = d.createElement(s);
-    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-    j.async = true;
-    e.parentNode.insertBefore(j, e);
-  })(document, 'script');
-});
-</script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/third-party/comments/livere.min.js"></script>
 
 
 

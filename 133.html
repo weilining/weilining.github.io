@@ -2,9 +2,9 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="viewport" content="width=device-width">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.3.0">
+<meta name="generator" content="Hexo 5.4.0">
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.jsdelivr.net/gh/weilining/img@main/img/apple-touch-icon-next.png">
@@ -20,13 +20,10 @@
 
 <link rel="stylesheet" href="https://fonts.dogedoge.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.2/css/all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css" integrity="sha256-2H3fkXt6FEmrReK448mDVGKb3WW2ZZw35gI7vqHOE4Y=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"weilining.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.2.1","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
-  </script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"weilining.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.6.1","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/config.min.js"></script>
 <meta name="description" content="默认">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo 个人博客部署到 CentOS 个人服务器">
@@ -44,15 +41,10 @@
 <link rel="canonical" href="https://weilining.github.io/133.html">
 
 
-<script class="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : false,
-    isPost : true,
-    lang   : 'zh-CN'
-  };
-</script>
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://weilining.github.io/133.html","path":"133.html","title":"Hexo 个人博客部署到 CentOS 个人服务器"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
 <title>Hexo 个人博客部署到 CentOS 个人服务器 | Ln's Blog</title>
   
 
@@ -60,40 +52,8 @@
 
 
   <noscript>
-  <style>
-  body { margin-top: 2rem; }
-
-  .use-motion .menu-item,
-  .use-motion .sidebar,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header {
-    visibility: visible;
-  }
-
-  .use-motion .header,
-  .use-motion .site-brand-container .toggle,
-  .use-motion .footer { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle,
-  .use-motion .custom-logo-image {
-    opacity: initial;
-    top: initial;
-  }
-
-  .use-motion .logo-line {
-    transform: scaleX(1);
-  }
-
-  .search-pop-overlay, .sidebar-nav { display: none; }
-  .sidebar-panel { display: block; }
-  </style>
-</noscript>
-
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
 <link rel="alternate" href="/atom.xml" title="Ln's Blog" type="application/atom+xml">
 </head>
 
@@ -200,7 +160,8 @@
         <!--/noindex-->
 
         <div class="site-overview-wrap sidebar-panel">
-          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <div class="site-overview">
+            <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image" alt="Lining Wei"
       src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/icon.gif">
   <p class="site-author-name" itemprop="name">Lining Wei</p>
@@ -230,11 +191,12 @@
   </nav>
 </div>
   <div class="cc-license site-overview-item animated" itemprop="license">
-    <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC96aC1DTg=="><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></span>
+    <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC96aC1DTg=="><img src="https://cdn.jsdelivr.net/npm/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></span>
   </div>
 
 
 
+          </div>
         </div>
       </div>
     </div>
@@ -245,7 +207,7 @@
     </header>
 
     
-  <div class="back-to-top" role="button">
+  <div class="back-to-top" role="button" aria-label="返回顶部">
     <i class="fa fa-arrow-up"></i>
     <span>0%</span>
   </div>
@@ -338,7 +300,7 @@
     
     <div class="post-body" itemprop="articleBody">
         <p><span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL3poLWNuLw==">Hexo<i class="fa fa-external-link-alt"></i></span> 一个快速，简单和强大的博客框架，基于 Node.js。</p>
-<a id="more"></a>
+<span id="more"></span>
 
 <h3 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h3><ul>
 <li>在一台 CentOS 7.2 的 ECS 云服务器上快速部署基于 Hexo 的博客站点</li>
@@ -364,12 +326,16 @@
 </ol>
 <p>添加 index.html 用于检测配置 Nginx 是否成功</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">vim &#x2F;data&#x2F;www&#x2F;hexo&#x2F;index.html</span><br></pre></td></tr></table></figure>
+
 <p>添加如下代码:</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">  &lt;head&gt;</span><br><span class="line">    &lt;title&gt;&lt;&#x2F;title&gt;</span><br><span class="line">    &lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;</span><br><span class="line">  &lt;&#x2F;head&gt;</span><br><span class="line">  &lt;body&gt;</span><br><span class="line">    &lt;p&gt;Nginx running&lt;&#x2F;p&gt;</span><br><span class="line">  &lt;&#x2F;body&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
+
 <p>配置 Nginx 服务器</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">vim &#x2F;etc&#x2F;nginx&#x2F;nginx.conf</span><br><span class="line"></span><br><span class="line"># vim 查找: &#x2F;listen 80</span><br></pre></td></tr></table></figure>
+
 <p>通过 vim 查找功能找到如下代码, 并修改</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">......</span><br><span class="line">server &#123;</span><br><span class="line">      listen       80 default_server;</span><br><span class="line">      listen       [::]:80 default_server;</span><br><span class="line">      server_name  www.xxx.com; # 填写个人域名</span><br><span class="line">      root         &#x2F;data&#x2F;www&#x2F;hexo;</span><br><span class="line">  &#125;</span><br><span class="line">......</span><br></pre></td></tr></table></figure>
+
 <p>访问服务器 IP 或者域名显示</p>
 <blockquote>
 <p>Nginx running</p>
@@ -385,12 +351,16 @@
 </ol>
 <p>Git 初始化裸库</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd &#x2F;data&#x2F;GitLibrary</span><br><span class="line">git init --bare hexo.git</span><br></pre></td></tr></table></figure>
+
 <p>创建 Git 钩子(hook)</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">vim &#x2F;data&#x2F;GitLibrary&#x2F;hexo.git&#x2F;hooks&#x2F;post-receive</span><br></pre></td></tr></table></figure>
+
 <p>用于指定 Git 的源代码 和 Git 配置文件</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#!&#x2F;bin&#x2F;bash</span><br><span class="line">git --work-tree&#x3D;&#x2F;data&#x2F;www&#x2F;hexo --git-dir&#x3D;&#x2F;data&#x2F;GitLibrary&#x2F;hexo.git checkout -f</span><br></pre></td></tr></table></figure>
+
 <p>保存并退出后, 给该文件添加可执行权限</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">chmod +x &#x2F;data&#x2F;GitLibrary&#x2F;hexo.git&#x2F;hooks&#x2F;post-receive</span><br></pre></td></tr></table></figure>
+
 <h3 id="本地配置"><a href="#本地配置" class="headerlink" title="本地配置"></a>本地配置</h3><p>这篇文章在 MacOS 上安装 node.js Git Hexo等</p>
 <blockquote>
 <p>Windows &amp; Linux 可搜索对应平台软件安装</p>
@@ -398,8 +368,10 @@
 <ul>
 <li><p><strong>安装 Git</strong><br>在 Terminal.app(终端) 中输入:</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">xcode-select --install</span><br></pre></td></tr></table></figure>
+
 <p>按照提示完成安装, 最后在 Terminal 中输入</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git -v</span><br></pre></td></tr></table></figure>
+
 <p>如下显示, 表示 Git 安装成功</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git version 2.11.0 (Apple Git-81)</span><br></pre></td></tr></table></figure></li>
 <li><p><strong>安装 Node.js 和 Npm</strong><br>Node.js 安装在 MacOS 中需要用到 Homebrew 进行安装管理</p>
@@ -408,21 +380,24 @@
 </blockquote>
 <p>在 Terminal 输入:</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;usr&#x2F;bin&#x2F;ruby -e &quot;$(curl -fsSL https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Homebrew&#x2F;install&#x2F;master&#x2F;install)&quot;</span><br></pre></td></tr></table></figure>
+
 <p>使用 Homebrew 安装 Node.js</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">brew install node</span><br></pre></td></tr></table></figure>
+
 <p>在 Terminal 中键入类似的命令, 如下显示, 表示 Node 和 Npm 安装成功</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">node -v</span><br><span class="line">v7.10.0</span><br><span class="line">npm -v</span><br><span class="line">4.2.0</span><br></pre></td></tr></table></figure></li>
 <li><p><strong>安装 Hexo 及相关插件</strong><br>全局安装 hexo-cli 和 hexo-server</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-cli hexo-server hexo-deployer-git -g</span><br></pre></td></tr></table></figure>
+
 <p>安装完成后, 在本地初始化博客站点搭建</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo init ~&#x2F;myBlog</span><br><span class="line"></span><br><span class="line"># ~&#x2F;myBlog 即本地存放路径</span><br></pre></td></tr></table></figure>
+
 <p>完成安装, 便可以在本地路径查看项目</p>
 </li>
 <li><p><strong>本地 Hexo 配置</strong><br>进人~/myBlog 目录, 修改 Hexo 博客站点配置文件 <em>_config.yml</em>, 如下修改:</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">title: 页面标题     &#x2F;&#x2F;页面标题</span><br><span class="line">subtitle: 小标题     &#x2F;&#x2F;小标题</span><br><span class="line">description: 描述     &#x2F;&#x2F;描述</span><br><span class="line">author: 作者       &#x2F;&#x2F;作者</span><br><span class="line">language: zh-Hans     &#x2F;&#x2F;语言</span><br><span class="line">timezone:       &#x2F;&#x2F;时区</span><br><span class="line"></span><br><span class="line"># URL</span><br><span class="line">### If your site is put in a subdirectory, set url as &#39;http:&#x2F;&#x2F;yoursite.com&#x2F;child&#39; and root as &#39;&#x2F;child&#x2F;&#39;</span><br><span class="line">url: http:&#x2F;&#x2F;leyliu.com      &#x2F;&#x2F;个人域名</span><br><span class="line"></span><br><span class="line">......</span><br><span class="line"></span><br><span class="line"># Deployment</span><br><span class="line">### Docs: https:&#x2F;&#x2F;hexo.io&#x2F;docs&#x2F;deployment.html</span><br><span class="line">deploy:     &#x2F;&#x2F;发布对应的github账号</span><br><span class="line">type: git</span><br><span class="line">repo: root@leyliu.com:&#x2F;data&#x2F;GitLibrary&#x2F;hexo  &#x2F;&#x2F;用户名@域名或 IP 地址:&#x2F;data&#x2F;GitLibrary&#x2F;hexo</span><br><span class="line">branch: master</span><br></pre></td></tr></table></figure>
-<h3 id="部署步骤"><a href="#部署步骤" class="headerlink" title="部署步骤"></a>部署步骤</h3></li>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">title: 页面标题     &#x2F;&#x2F;页面标题</span><br><span class="line">subtitle: 小标题     &#x2F;&#x2F;小标题</span><br><span class="line">description: 描述     &#x2F;&#x2F;描述</span><br><span class="line">author: 作者       &#x2F;&#x2F;作者</span><br><span class="line">language: zh-Hans     &#x2F;&#x2F;语言</span><br><span class="line">timezone:       &#x2F;&#x2F;时区</span><br><span class="line"></span><br><span class="line"># URL</span><br><span class="line">### If your site is put in a subdirectory, set url as &#39;http:&#x2F;&#x2F;yoursite.com&#x2F;child&#39; and root as &#39;&#x2F;child&#x2F;&#39;</span><br><span class="line">url: http:&#x2F;&#x2F;leyliu.com      &#x2F;&#x2F;个人域名</span><br><span class="line"></span><br><span class="line">......</span><br><span class="line"></span><br><span class="line"># Deployment</span><br><span class="line">### Docs: https:&#x2F;&#x2F;hexo.io&#x2F;docs&#x2F;deployment.html</span><br><span class="line">deploy:     &#x2F;&#x2F;发布对应的github账号</span><br><span class="line">type: git</span><br><span class="line">repo: root@leyliu.com:&#x2F;data&#x2F;GitLibrary&#x2F;hexo  &#x2F;&#x2F;用户名@域名或 IP 地址:&#x2F;data&#x2F;GitLibrary&#x2F;hexo</span><br><span class="line">branch: master</span><br></pre></td></tr></table></figure></li>
 </ul>
-<p>将本地部署到服务器</p>
+<h3 id="部署步骤"><a href="#部署步骤" class="headerlink" title="部署步骤"></a>部署步骤</h3><p>将本地部署到服务器</p>
 <ul>
 <li><p>清除缓存</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure></li>
@@ -430,6 +405,7 @@
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure></li>
 <li><p>将本地静态页面目录部署到云服务器</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+
 <p>完成 Hexo 个人博客网站搭建, 通过服务器 IP 或者域名即可访问</p>
 </li>
 </ul>
@@ -445,7 +421,7 @@
     <footer class="post-footer">
           <div class="reward-container">
   <div>Buy me a coffee</div>
-  <button onclick="document.querySelector('.post-reward').classList.toggle('active');">
+  <button>
     赞赏
   </button>
   <div class="post-reward">
@@ -523,28 +499,6 @@
             </div>
         </div>
       </div>
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      const commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
 </div>
   </main>
 
@@ -565,13 +519,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">352k</span>
+    <span title="站点总字数">353k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">5:20</span>
+    <span title="站点阅读时长">5:21</span>
   </span>
 </div>
 
@@ -584,16 +538,14 @@
   </footer>
 
   
-  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.2.1/source/js/utils.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.2.1/source/js/motion.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.2.1/source/js/next-boot.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js" integrity="sha256-EdPgYcPk/IIrw7FYeuJQexva49pVRZNmt3LculEr7zM=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/comments.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/utils.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/motion.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/next-boot.min.js"></script>
 
   
-<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.2.1/source/js/local-search.js"></script>
-
-
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/third-party/search/local-search.min.js"></script>
 
 
 
@@ -603,44 +555,25 @@
 
 
 
-  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.0.0/dist/quicklink.umd.js"></script>
-  <script>
-      window.addEventListener('load', () => {
-      quicklink.listen({
-        timeout : 3000,
-        priority: true,
-        ignores : [uri => uri.includes('#'),uri => uri === 'https://weilining.github.io/133.html',]
-      });
-      });
-  </script>
+  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.2.0/dist/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"ignores":null,"url":"https://weilining.github.io/133.html"}</script>
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/third-party/quicklink.min.js"></script>
 
+
+<script class="next-config" data-name="valine" type="application/json">{"enable":true,"appId":"Bu6sP4depeiGP22PIFqz0SmJ-MdYXbMMI","appKey":"jYGDeeOBkTqvrUJDEmqj83q7","serverURLs":"https://bu6sp4de.api.lncldglobal.com","placeholder":"Just go go","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"lang":null,"visitor":true,"comment_count":true,"recordIP":false,"enableQQ":false,"requiredFields":[],"el":"#valine-comments","path":"/133.html"}</script>
 <script>
-NexT.utils.loadComments('#valine-comments', () => {
-  NexT.utils.getScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', () => {
-    new Valine(Object.assign({"enable":true,"appId":"Bu6sP4depeiGP22PIFqz0SmJ-MdYXbMMI","appKey":"jYGDeeOBkTqvrUJDEmqj83q7","serverURLs":null,"placeholder":"Just go go","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"lang":null,"visitor":true,"comment_count":true,"recordIP":false,"enableQQ":false,"requiredFields":[]}, {
-      el: '#valine-comments',
-      path: "/133.html",
-      serverURLs: "https://bu6sp4de.api.lncldglobal.com"
-    }));
-  }, window.Valine);
+document.addEventListener('page:loaded', () => {
+  NexT.utils.loadComments(CONFIG.valine.el)
+    .then(() => NexT.utils.getScript(
+      'https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js',
+      { condition: window.Valine }
+    ))
+    .then(() => {
+      new Valine(CONFIG.valine);
+    });
 });
 </script>
-
-<script>
-NexT.utils.loadComments('#lv-container', () => {
-  window.livereOptions = {
-    refer: "133.html"
-  };
-  (function(d, s) {
-    var j, e = d.getElementsByTagName(s)[0];
-    if (typeof LivereTower === 'function') { return; }
-    j = d.createElement(s);
-    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-    j.async = true;
-    e.parentNode.insertBefore(j, e);
-  })(document, 'script');
-});
-</script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/third-party/comments/livere.min.js"></script>
 
 
 

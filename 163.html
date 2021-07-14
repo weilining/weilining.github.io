@@ -2,9 +2,9 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="viewport" content="width=device-width">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.3.0">
+<meta name="generator" content="Hexo 5.4.0">
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.jsdelivr.net/gh/weilining/img@main/img/apple-touch-icon-next.png">
@@ -20,13 +20,10 @@
 
 <link rel="stylesheet" href="https://fonts.dogedoge.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.2/css/all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css" integrity="sha256-2H3fkXt6FEmrReK448mDVGKb3WW2ZZw35gI7vqHOE4Y=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"weilining.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.2.1","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
-  </script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"weilining.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.6.1","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/config.min.js"></script>
 <meta name="description" content="默认">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux添加&#x2F;删除用户和用户组">
@@ -44,15 +41,10 @@
 <link rel="canonical" href="https://weilining.github.io/163.html">
 
 
-<script class="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : false,
-    isPost : true,
-    lang   : 'zh-CN'
-  };
-</script>
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://weilining.github.io/163.html","path":"163.html","title":"Linux添加/删除用户和用户组"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
 <title>Linux添加/删除用户和用户组 | Ln's Blog</title>
   
 
@@ -60,40 +52,8 @@
 
 
   <noscript>
-  <style>
-  body { margin-top: 2rem; }
-
-  .use-motion .menu-item,
-  .use-motion .sidebar,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header {
-    visibility: visible;
-  }
-
-  .use-motion .header,
-  .use-motion .site-brand-container .toggle,
-  .use-motion .footer { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle,
-  .use-motion .custom-logo-image {
-    opacity: initial;
-    top: initial;
-  }
-
-  .use-motion .logo-line {
-    transform: scaleX(1);
-  }
-
-  .search-pop-overlay, .sidebar-nav { display: none; }
-  .sidebar-panel { display: block; }
-  </style>
-</noscript>
-
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
 <link rel="alternate" href="/atom.xml" title="Ln's Blog" type="application/atom+xml">
 </head>
 
@@ -199,7 +159,8 @@
         <!--/noindex-->
 
         <div class="site-overview-wrap sidebar-panel">
-          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <div class="site-overview">
+            <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image" alt="Lining Wei"
       src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/icon.gif">
   <p class="site-author-name" itemprop="name">Lining Wei</p>
@@ -229,11 +190,12 @@
   </nav>
 </div>
   <div class="cc-license site-overview-item animated" itemprop="license">
-    <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC96aC1DTg=="><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></span>
+    <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC96aC1DTg=="><img src="https://cdn.jsdelivr.net/npm/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></span>
   </div>
 
 
 
+          </div>
         </div>
       </div>
     </div>
@@ -244,7 +206,7 @@
     </header>
 
     
-  <div class="back-to-top" role="button">
+  <div class="back-to-top" role="button" aria-label="返回顶部">
     <i class="fa fa-arrow-up"></i>
     <span>0%</span>
   </div>
@@ -336,9 +298,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <a id="more"></a>
-
-
+        <span id="more"></span>
 
 <p>本文总结了Linux添加或者删除用户和用户组时常用的一些命令和参数。<br>1、建用户：<br>adduser phpq               //新建phpq用户<br>passwd phpq                //给phpq用户设置密码</p>
 <p>2、建工作组<br>groupadd test             //新建test工作组</p>
@@ -386,23 +346,20 @@
 <p>**<br>2、管理用户（user）和用户组（group）的相关工具或命令；<br>**<br>**<br>1）管理用户（user）的工具或命令；<br>**</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">useradd  注：添加用户adduser  注：添加用户passwd   注：为用户设置密码usermod 注：修改用户命令，可以通过usermod 来修改登录名、用户的家目录等等；pwcov    注：同步用户从&#x2F;etc&#x2F;passwd 到&#x2F;etc&#x2F;shadowpwck     注：pwck是校验用户配置文件&#x2F;etc&#x2F;passwd 和&#x2F;etc&#x2F;shadow 文件内容是否合法或完整；pwunconv 注：是pwcov 的立逆向操作，是从&#x2F;etc&#x2F;shadow和 &#x2F;etc&#x2F;passwd 创建&#x2F;etc&#x2F;passwd ，然后会删除 &#x2F;etc&#x2F;shadow 文件；finger    注：查看用户信息工具id       注：查看用户的UID、GID及所归属的用户组chfn     注：更改用户信息工具su       注：用户切换工具sudo     注：sudo 是通过另一个用户来执行命令（execute a command as another user），su 是用来切换用户，然后通过切换到的用户来完成相应的任务，但sudo 能后面直接执行命令，比如sudo 不需要root 密码就可以执行root 赋与的执行只有root才能执行相应的命令；但得通过visudo 来编辑&#x2F;etc&#x2F;sudoers来实现；visudo   注：visodo 是编辑 &#x2F;etc&#x2F;sudoers 的命令；也可以不用这个命令，直接用vi 来编辑 &#x2F;etc&#x2F;sudoers 的效果是一样的；sudoedit 注：和sudo 功能差不多；</span><br></pre></td></tr></table></figure>
 
+
 <p>**<br>2）管理用户组（group）的工具或命令；<br>**</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">groupadd 注：添加用户组；groupdel     注：删除用户组；groupmod    注：修改用户组信息groups   注：显示用户所属的用户组grpckgrpconv  注：通过&#x2F;etc&#x2F;group和&#x2F;etc&#x2F;gshadow 的文件内容来同步或创建&#x2F;etc&#x2F;gshadow ，如果&#x2F;etc&#x2F;gshadow 不存在则创建；grpunconv  注：通过&#x2F;etc&#x2F;group 和&#x2F;etc&#x2F;gshadow 文件内容来同步或创建&#x2F;etc&#x2F;group ，然后删除gshadow文件；</span><br></pre></td></tr></table></figure>
 
-
 <p>**<br>3、/etc/skel 目录；<br>**<br>/etc/skel目录一般是存放用户启动文件的目录，这个目录是由root权限控制，当我们添加用户时，这个目录下的文件自动复制到新添加的用户的家目录下；/etc/skel 目录下的文件都是隐藏文件，也就是类似.file格式的；我们可通过修改、添加、删除/etc/skel目录下的文件，来为用户提供一个统一、标准的、默认的用户环境；</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[root@localhost beinan]# ls -la &#x2F;etc&#x2F;skel&#x2F;总用量 92drwxr-xr-x  3 root root 4096 8月 11 23:32 .drwxr-xr-x 115 root root 12288 10月 14 13:44 ..-rw-r--r--  1 root root  24 5月 11 00:15 .bash_logout-rw-r--r--  1 root root  191 5月 11 00:15 .bash_profile-rw-r--r--  1 root root  124 5月 11 00:15 .bashrc-rw-r--r--  1 root root 5619 2005-03-08 .canna-rw-r--r--  1 root root  438 5月 18 15:23 .emacs-rw-r--r--  1 root root  120 5月 23 05:18 .gtkrcdrwxr-xr-x  3 root root 4096 8月 11 23:16 .kde-rw-r--r--  1 root root  658 2005-01-17 .zshrc</span><br></pre></td></tr></table></figure>
-
 
 <p>/etc/skel 目录下的文件，一般是我们用useradd 和adduser 命令添加用户（user）时，系统自动复制到新添加用户（user）的家目录下；如果我们通过修改 /etc/passwd 来添加用户时，我们可以自己创建用户的家目录，然后把/etc/skel 下的文件复制到用户的家目录下，然后要用chown 来改变新用户家目录的属主；<br>**<br>4、/etc/login.defs 配置文件；<br>**<br>/etc/login.defs 文件是当创建用户时的一些规划，比如创建用户时，是否需要家目录，UID和GID的范围；用户的期限等等，这个文件是可以通过root来定义的；</p>
 <p>比如Fedora 的 /etc/logins.defs 文件内容；</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># *REQUIRED*#  Directory where mailboxes reside, _or_ name of file, relative to the#  home directory. If you _do_ define both, MAIL_DIR takes precedence.#  QMAIL_DIR is for Qmail##QMAIL_DIR   MaildirMAIL_DIR    &#x2F;var&#x2F;spool&#x2F;mail 注：创建用户时，要在目录&#x2F;var&#x2F;spool&#x2F;mail中创建一个用户mail文件；#MAIL_FILE   .mail# Password aging controls:##    PASS_MAX_DAYS  Maximum number of days a password may be used.#    PASS_MIN_DAYS  Minimum number of days allowed between password changes.#    PASS_MIN_LEN  Minimum acceptable password length.#    PASS_WARN_AGE  Number of days warning given before a password expires.#PASS_MAX_DAYS  99999  注：用户的密码不过期最多的天数；PASS_MIN_DAYS  0    注：密码修改之间最小的天数；PASS_MIN_LEN  5    注：密码最小长度；PASS_WARN_AGE  7    注：## Min&#x2F;max values for automatic uid selection in useradd#UID_MIN          500 注：最小UID为500 ，也就是说添加用户时，UID 是从500开始的；UID_MAX         60000  注：最大UID为60000；## Min&#x2F;max values for automatic gid selection in groupadd#GID_MIN          500  注：GID 是从500开始；GID_MAX         60000## If defined, this command is run when removing a user.# It should remove any at&#x2F;cron&#x2F;print jobs etc. owned by# the user to be removed (passed as the first argument).##USERDEL_CMD  &#x2F;usr&#x2F;sbin&#x2F;userdel_local## If useradd should create home directories for users by default# On RH systems, we do. This option is ORed with the -m flag on# useradd command line.#CREATE_HOME   yes  注：是否创用户家目录，要求创建；</span><br></pre></td></tr></table></figure>
 
-
 <p>**<br>5、/etc/default/useradd 文件；<br>**</p>
 <p>通过useradd 添加用户时的规则文件；</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># useradd defaults fileGROUP&#x3D;100HOME&#x3D;&#x2F;home 注：把用户的家目录建在&#x2F;home中；INACTIVE&#x3D;-1 注：是否启用帐号过期停权，-1表示不启用；EXPIRE&#x3D;  注：帐号终止日期，不设置表示不启用；SHELL&#x3D;&#x2F;bin&#x2F;bash 注：所用SHELL的类型；SKEL&#x3D;&#x2F;etc&#x2F;skel  注： 默认添加用户的目录默认文件存放位置；也就是说，当我们用adduser添加用户时，用户家目录下的文件，都是从这个目录中复制过去的；</span><br></pre></td></tr></table></figure>
-
 
 <p>**<br>后记：<br>**</p>
 <p>关于用户（user）和用户组（group）管理内容大约就是这么多；只要把上面所说的内容了解和掌握，用户（user）和用户组（group）管理就差不多了；由于用户（user）和用户组（group）是和文件及目录权限联系在一起的，所以文件及目录权限的操作也会独立成文来给大家介绍；</p>
@@ -416,7 +373,7 @@
     <footer class="post-footer">
           <div class="reward-container">
   <div>Buy me a coffee</div>
-  <button onclick="document.querySelector('.post-reward').classList.toggle('active');">
+  <button>
     赞赏
   </button>
   <div class="post-reward">
@@ -494,28 +451,6 @@
             </div>
         </div>
       </div>
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      const commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
 </div>
   </main>
 
@@ -536,13 +471,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">352k</span>
+    <span title="站点总字数">353k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">5:20</span>
+    <span title="站点阅读时长">5:21</span>
   </span>
 </div>
 
@@ -555,16 +490,14 @@
   </footer>
 
   
-  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.2.1/source/js/utils.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.2.1/source/js/motion.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.2.1/source/js/next-boot.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js" integrity="sha256-EdPgYcPk/IIrw7FYeuJQexva49pVRZNmt3LculEr7zM=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/comments.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/utils.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/motion.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/next-boot.min.js"></script>
 
   
-<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.2.1/source/js/local-search.js"></script>
-
-
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/third-party/search/local-search.min.js"></script>
 
 
 
@@ -574,44 +507,25 @@
 
 
 
-  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.0.0/dist/quicklink.umd.js"></script>
-  <script>
-      window.addEventListener('load', () => {
-      quicklink.listen({
-        timeout : 3000,
-        priority: true,
-        ignores : [uri => uri.includes('#'),uri => uri === 'https://weilining.github.io/163.html',]
-      });
-      });
-  </script>
+  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.2.0/dist/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"ignores":null,"url":"https://weilining.github.io/163.html"}</script>
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/third-party/quicklink.min.js"></script>
 
+
+<script class="next-config" data-name="valine" type="application/json">{"enable":true,"appId":"Bu6sP4depeiGP22PIFqz0SmJ-MdYXbMMI","appKey":"jYGDeeOBkTqvrUJDEmqj83q7","serverURLs":"https://bu6sp4de.api.lncldglobal.com","placeholder":"Just go go","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"lang":null,"visitor":true,"comment_count":true,"recordIP":false,"enableQQ":false,"requiredFields":[],"el":"#valine-comments","path":"/163.html"}</script>
 <script>
-NexT.utils.loadComments('#valine-comments', () => {
-  NexT.utils.getScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', () => {
-    new Valine(Object.assign({"enable":true,"appId":"Bu6sP4depeiGP22PIFqz0SmJ-MdYXbMMI","appKey":"jYGDeeOBkTqvrUJDEmqj83q7","serverURLs":null,"placeholder":"Just go go","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"lang":null,"visitor":true,"comment_count":true,"recordIP":false,"enableQQ":false,"requiredFields":[]}, {
-      el: '#valine-comments',
-      path: "/163.html",
-      serverURLs: "https://bu6sp4de.api.lncldglobal.com"
-    }));
-  }, window.Valine);
+document.addEventListener('page:loaded', () => {
+  NexT.utils.loadComments(CONFIG.valine.el)
+    .then(() => NexT.utils.getScript(
+      'https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js',
+      { condition: window.Valine }
+    ))
+    .then(() => {
+      new Valine(CONFIG.valine);
+    });
 });
 </script>
-
-<script>
-NexT.utils.loadComments('#lv-container', () => {
-  window.livereOptions = {
-    refer: "163.html"
-  };
-  (function(d, s) {
-    var j, e = d.getElementsByTagName(s)[0];
-    if (typeof LivereTower === 'function') { return; }
-    j = d.createElement(s);
-    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-    j.async = true;
-    e.parentNode.insertBefore(j, e);
-  })(document, 'script');
-});
-</script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/third-party/comments/livere.min.js"></script>
 
 
 

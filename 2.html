@@ -2,9 +2,9 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="viewport" content="width=device-width">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.3.0">
+<meta name="generator" content="Hexo 5.4.0">
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.jsdelivr.net/gh/weilining/img@main/img/apple-touch-icon-next.png">
@@ -20,13 +20,10 @@
 
 <link rel="stylesheet" href="https://fonts.dogedoge.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.2/css/all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css" integrity="sha256-2H3fkXt6FEmrReK448mDVGKb3WW2ZZw35gI7vqHOE4Y=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"weilining.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.2.1","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
-  </script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"weilining.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.6.1","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/config.min.js"></script>
 <meta name="description" content="看到csdn上连个目录都没有，基本上全是广告，怎么让人学习使用Git？">
 <meta property="og:type" content="article">
 <meta property="og:title" content="史上最详细Git使用教程">
@@ -45,15 +42,10 @@
 <link rel="canonical" href="https://weilining.github.io/2.html">
 
 
-<script class="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : false,
-    isPost : true,
-    lang   : 'zh-CN'
-  };
-</script>
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://weilining.github.io/2.html","path":"2.html","title":"史上最详细Git使用教程"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
 <title>史上最详细Git使用教程 | Ln's Blog</title>
   
 
@@ -61,40 +53,8 @@
 
 
   <noscript>
-  <style>
-  body { margin-top: 2rem; }
-
-  .use-motion .menu-item,
-  .use-motion .sidebar,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header {
-    visibility: visible;
-  }
-
-  .use-motion .header,
-  .use-motion .site-brand-container .toggle,
-  .use-motion .footer { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle,
-  .use-motion .custom-logo-image {
-    opacity: initial;
-    top: initial;
-  }
-
-  .use-motion .logo-line {
-    transform: scaleX(1);
-  }
-
-  .search-pop-overlay, .sidebar-nav { display: none; }
-  .sidebar-panel { display: block; }
-  </style>
-</noscript>
-
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
 <link rel="alternate" href="/atom.xml" title="Ln's Blog" type="application/atom+xml">
 </head>
 
@@ -201,7 +161,8 @@
         <!--/noindex-->
 
         <div class="site-overview-wrap sidebar-panel">
-          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <div class="site-overview">
+            <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image" alt="Lining Wei"
       src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/icon.gif">
   <p class="site-author-name" itemprop="name">Lining Wei</p>
@@ -231,11 +192,12 @@
   </nav>
 </div>
   <div class="cc-license site-overview-item animated" itemprop="license">
-    <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC96aC1DTg=="><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></span>
+    <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC96aC1DTg=="><img src="https://cdn.jsdelivr.net/npm/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></span>
   </div>
 
 
 
+          </div>
         </div>
       </div>
     </div>
@@ -246,7 +208,7 @@
     </header>
 
     
-  <div class="back-to-top" role="button">
+  <div class="back-to-top" role="button" aria-label="返回顶部">
     <i class="fa fa-arrow-up"></i>
     <span>0%</span>
   </div>
@@ -342,32 +304,44 @@
 <p>听起来您可能有一个忽略模式，该模式<code>add</code>什么都不做。您可以使用来查看被忽略的文件；然后可以使用<code>git add --force protected/ext/SpecificFolder</code></p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git status --ignored</span><br><span class="line">git add -f &lt;file&gt;...</span><br></pre></td></tr></table></figure>
 
-<a id="more"></a>
+
+<span id="more"></span>
 
 <h3 id="…or-create-a-new-repository-on-the-command-line"><a href="#…or-create-a-new-repository-on-the-command-line" class="headerlink" title="…or create a new repository on the command line"></a>…or create a new repository on the command line</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">echo &quot;# images&quot; &gt;&gt; README.md</span><br><span class="line">git init</span><br><span class="line">git add README.md</span><br><span class="line">git commit -m &quot;first commit&quot;</span><br><span class="line">git branch -M main</span><br><span class="line">git remote add origin git@github.com:weilining&#x2F;images.git</span><br><span class="line">git push -u origin main</span><br></pre></td></tr></table></figure>
+
 <h3 id="…or-push-an-existing-repository-from-the-command-line"><a href="#…or-push-an-existing-repository-from-the-command-line" class="headerlink" title="…or push an existing repository from the command line"></a>…or push an existing repository from the command line</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git remote add origin git@github.com:weilining&#x2F;images.git</span><br><span class="line">git branch -M main</span><br><span class="line">git push -u origin main</span><br></pre></td></tr></table></figure>
+
 <h4 id="快速设置—-如果你知道该怎么操作，直接使用下面的地址"><a href="#快速设置—-如果你知道该怎么操作，直接使用下面的地址" class="headerlink" title="快速设置— 如果你知道该怎么操作，直接使用下面的地址"></a>快速设置— 如果你知道该怎么操作，直接使用下面的地址</h4><p>HTTPS:<span class="exturl" data-url="aHR0cHM6Ly9naXRlZS5jb20vd2VpbGluaW5nL3Rlc3QuZ2l0">https://gitee.com/weilining/test.git<i class="fa fa-external-link-alt"></i></span></p>
-<p>SSH:<span class="exturl" data-url="bWFpbHRvOiYjMTAzOyYjeDY5OyYjeDc0OyYjeDQwOyYjeDY3OyYjMTA1OyYjMTE2OyYjMTAxOyYjeDY1OyYjNDY7JiM5OTsmIzExMTsmI3g2ZDs=">&#103;&#x69;&#x74;&#x40;&#x67;&#105;&#116;&#101;&#x65;&#46;&#99;&#111;&#x6d;<i class="fa fa-external-link-alt"></i></span>:weilining/test.git</p>
+<p>SSH:<span class="exturl" data-url="bWFpbHRvOiYjeDY3OyYjeDY5OyYjeDc0OyYjeDQwOyYjeDY3OyYjeDY5OyYjeDc0OyYjMTAxOyYjeDY1OyYjeDJlOyYjOTk7JiMxMTE7JiMxMDk7">&#x67;&#x69;&#x74;&#x40;&#x67;&#x69;&#x74;&#101;&#x65;&#x2e;&#99;&#111;&#109;<i class="fa fa-external-link-alt"></i></span>:weilining/test.git</p>
 <p>我们强烈建议所有的git仓库都有一个<code>README</code>, <code>LICENSE</code>, <code>.gitignore</code>文件</p>
 <p>Git入门？查看 <span class="exturl" data-url="aHR0cHM6Ly9naXRlZS5jb20vb3NjaGluYS9naXQtb3NjL3dpa2lzLyVFNSVCOCVBRSVFNSU4QSVBOQ==">帮助<i class="fa fa-external-link-alt"></i></span> , <span class="exturl" data-url="aHR0cHM6Ly9naXRlZS5jb20vaGVscC9hcnRpY2xlcy80MTE4">Visual Studio<i class="fa fa-external-link-alt"></i></span> / <span class="exturl" data-url="aHR0cDovL215Lm9zY2hpbmEubmV0L2xvbmd4dXUvYmxvZy8xNDE2OTk=">TortoiseGit<i class="fa fa-external-link-alt"></i></span> / <span class="exturl" data-url="aHR0cHM6Ly9naXRlZS5jb20vaGVscC9hcnRpY2xlcy80MTE5">Eclipse<i class="fa fa-external-link-alt"></i></span> / <span class="exturl" data-url="aHR0cDovL215Lm9zY2hpbmEubmV0L3p4cy9ibG9nLzE0MjU0NA==">Xcode<i class="fa fa-external-link-alt"></i></span> 下如何连接本站, <span class="exturl" data-url="aHR0cDovL3d3dy5vc2NoaW5hLm5ldC9xdWVzdGlvbi84Mjk5M18xMzM1MjA=">如何导入仓库<i class="fa fa-external-link-alt"></i></span></p>
 <h4 id="简易的命令行入门教程"><a href="#简易的命令行入门教程" class="headerlink" title="简易的命令行入门教程:"></a>简易的命令行入门教程:</h4><p>Git 全局设置:</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git config --global user.name &quot;name&quot;</span><br><span class="line">git config --global user.email &quot;email@163.com&quot;</span><br></pre></td></tr></table></figure>
+
 <p>创建 git 仓库:</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mkdir test</span><br><span class="line">cd test</span><br><span class="line">git init</span><br><span class="line">touch README.md</span><br><span class="line">git add README.md</span><br><span class="line">git commit -m &quot;first commit&quot;</span><br><span class="line">git remote add origin git@gitee.com:weilining&#x2F;test.git</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
+
 <p>已有仓库?</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd existing_git_repo</span><br><span class="line">git remote add origin git@gitee.com:weilining&#x2F;test.git</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
 
 
+
 <p>快速下载</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git clone -b master --depth&#x3D;1 git@github.com:weilining&#x2F;images.git</span><br></pre></td></tr></table></figure>
+
 <p>查看分支</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git branch</span><br></pre></td></tr></table></figure>
+
 <p>清空GitHub历史</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">find . -name &quot;.git&quot; | xargs rm -Rf</span><br><span class="line">git init</span><br><span class="line">git add .</span><br><span class="line">git commit -m &quot;first commit&quot;</span><br><span class="line">git branch -M master</span><br><span class="line">git remote add origin git@github.com:weilining&#x2F;images.git</span><br><span class="line">git push -f origin master</span><br></pre></td></tr></table></figure>
+
 <h2 id="git-clone-depth-1切换分支"><a href="#git-clone-depth-1切换分支" class="headerlink" title="git clone --depth=1切换分支"></a>git clone --depth=1切换分支</h2><p>以GitHub为例，假设默认分支main，切换到master分支。</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git clone --depth&#x3D;1 git@github.com:weilining&#x2F;images.git # 快速下载默认分支最后一次提交</span><br><span class="line">cd images # 进入git仓库</span><br><span class="line">git branch # 查看默认分支main</span><br><span class="line">git remote set-branches origin &#39;master&#39; # 远程分支名master</span><br><span class="line">git fetch --depth 1 origin master</span><br><span class="line">git checkout master #切换到master分支</span><br></pre></td></tr></table></figure>
+
 <h2 id="git删除远程分支和本地分支"><a href="#git删除远程分支和本地分支" class="headerlink" title="git删除远程分支和本地分支"></a>git删除远程分支和本地分支</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd git # 进入git项目</span><br><span class="line">git branch -a # 查看所有的分支。</span><br><span class="line">git checkout main #假设要删除master的远程分支，我们需要先把分支切换到main，才能删除master。</span><br><span class="line">git push origin --delete master # 删除远程分支</span><br><span class="line">git branch -d master # 删除本地分支</span><br><span class="line">git branch -D master # 强制删除</span><br></pre></td></tr></table></figure>
+
 <h2 id="只输出错误信息"><a href="#只输出错误信息" class="headerlink" title="只输出错误信息"></a>只输出错误信息</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">--quiet</span><br></pre></td></tr></table></figure>
+
 <h2 id="git-回档操作"><a href="#git-回档操作" class="headerlink" title="git 回档操作"></a>git 回档操作</h2><p>查看 github 上需要回档的版本号，三种方式</p>
 <ol>
 <li>直接记录下版本号，然后执行 <code>git reset --hard &lt;版本号&gt;</code></li>
@@ -380,12 +354,15 @@
 <p>设置 master branch，Custom domain（可选），Enforce HTTPS</p>
 <p>git 命令行进入 blog 目录，执行下面操作：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Python</span><br><span class="line">ssh-keygen -t rsa -C yourmail@example.com #建议不设置密码，按回车</span><br><span class="line">clip &lt; ~&#x2F;.ssh&#x2F;id_rsa.pub # 复制公钥到系统粘贴板</span><br></pre></td></tr></table></figure>
+
 <p>去 github 账号的 setting 中添加 ssh key（复制到 key 就可以了）</p>
 <p>检测是否成功： <code>ssh -T git@github.com</code></p>
 <p>设置全局用户信息：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Python</span><br><span class="line">git config --global user.name yourname</span><br><span class="line">git config --global user.email  yourmail@example.com</span><br></pre></td></tr></table></figure>
+
 <p>在 <code>_config.yml</code> （最后一行）设置：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Python</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: git@github.com:yourname&#x2F;yourname.github.io.git</span><br></pre></td></tr></table></figure>
+
 <p>执行：<code>npm install hexo-deployer-git --save</code></p>
 <p>然后执行： <code>hexo g -d</code> 就可以去 <code>http(s)://yourname.github.io</code> 看到自己的博客了。</p>
 
@@ -398,7 +375,7 @@
     <footer class="post-footer">
           <div class="reward-container">
   <div>Buy me a coffee</div>
-  <button onclick="document.querySelector('.post-reward').classList.toggle('active');">
+  <button>
     赞赏
   </button>
   <div class="post-reward">
@@ -477,28 +454,6 @@
             </div>
         </div>
       </div>
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      const commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
 </div>
   </main>
 
@@ -519,13 +474,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">352k</span>
+    <span title="站点总字数">353k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">5:20</span>
+    <span title="站点阅读时长">5:21</span>
   </span>
 </div>
 
@@ -538,16 +493,14 @@
   </footer>
 
   
-  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.2.1/source/js/utils.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.2.1/source/js/motion.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.2.1/source/js/next-boot.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js" integrity="sha256-EdPgYcPk/IIrw7FYeuJQexva49pVRZNmt3LculEr7zM=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/comments.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/utils.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/motion.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/next-boot.min.js"></script>
 
   
-<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.2.1/source/js/local-search.js"></script>
-
-
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/third-party/search/local-search.min.js"></script>
 
 
 
@@ -557,44 +510,25 @@
 
 
 
-  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.0.0/dist/quicklink.umd.js"></script>
-  <script>
-      window.addEventListener('load', () => {
-      quicklink.listen({
-        timeout : 3000,
-        priority: true,
-        ignores : [uri => uri.includes('#'),uri => uri === 'https://weilining.github.io/2.html',]
-      });
-      });
-  </script>
+  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.2.0/dist/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"ignores":null,"url":"https://weilining.github.io/2.html"}</script>
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/third-party/quicklink.min.js"></script>
 
+
+<script class="next-config" data-name="valine" type="application/json">{"enable":true,"appId":"Bu6sP4depeiGP22PIFqz0SmJ-MdYXbMMI","appKey":"jYGDeeOBkTqvrUJDEmqj83q7","serverURLs":"https://bu6sp4de.api.lncldglobal.com","placeholder":"Just go go","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"lang":null,"visitor":true,"comment_count":true,"recordIP":false,"enableQQ":false,"requiredFields":[],"el":"#valine-comments","path":"/2.html"}</script>
 <script>
-NexT.utils.loadComments('#valine-comments', () => {
-  NexT.utils.getScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', () => {
-    new Valine(Object.assign({"enable":true,"appId":"Bu6sP4depeiGP22PIFqz0SmJ-MdYXbMMI","appKey":"jYGDeeOBkTqvrUJDEmqj83q7","serverURLs":null,"placeholder":"Just go go","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"lang":null,"visitor":true,"comment_count":true,"recordIP":false,"enableQQ":false,"requiredFields":[]}, {
-      el: '#valine-comments',
-      path: "/2.html",
-      serverURLs: "https://bu6sp4de.api.lncldglobal.com"
-    }));
-  }, window.Valine);
+document.addEventListener('page:loaded', () => {
+  NexT.utils.loadComments(CONFIG.valine.el)
+    .then(() => NexT.utils.getScript(
+      'https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js',
+      { condition: window.Valine }
+    ))
+    .then(() => {
+      new Valine(CONFIG.valine);
+    });
 });
 </script>
-
-<script>
-NexT.utils.loadComments('#lv-container', () => {
-  window.livereOptions = {
-    refer: "2.html"
-  };
-  (function(d, s) {
-    var j, e = d.getElementsByTagName(s)[0];
-    if (typeof LivereTower === 'function') { return; }
-    j = d.createElement(s);
-    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-    j.async = true;
-    e.parentNode.insertBefore(j, e);
-  })(document, 'script');
-});
-</script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/third-party/comments/livere.min.js"></script>
 
 
 

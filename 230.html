@@ -2,9 +2,9 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="viewport" content="width=device-width">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.3.0">
+<meta name="generator" content="Hexo 5.4.0">
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.jsdelivr.net/gh/weilining/img@main/img/apple-touch-icon-next.png">
@@ -20,13 +20,10 @@
 
 <link rel="stylesheet" href="https://fonts.dogedoge.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.2/css/all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css" integrity="sha256-2H3fkXt6FEmrReK448mDVGKb3WW2ZZw35gI7vqHOE4Y=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"weilining.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.2.1","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
-  </script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"weilining.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.6.1","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/config.min.js"></script>
 <meta name="description" content="默认">
 <meta property="og:type" content="article">
 <meta property="og:title" content="使用 ECharts3.0 在 Hexo 搭建的博客中建一个足迹👣页面">
@@ -47,15 +44,10 @@
 <link rel="canonical" href="https://weilining.github.io/230.html">
 
 
-<script class="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : false,
-    isPost : true,
-    lang   : 'zh-CN'
-  };
-</script>
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://weilining.github.io/230.html","path":"230.html","title":"使用 ECharts3.0 在 Hexo 搭建的博客中建一个足迹👣页面"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
 <title>使用 ECharts3.0 在 Hexo 搭建的博客中建一个足迹👣页面 | Ln's Blog</title>
   
 
@@ -63,40 +55,8 @@
 
 
   <noscript>
-  <style>
-  body { margin-top: 2rem; }
-
-  .use-motion .menu-item,
-  .use-motion .sidebar,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header {
-    visibility: visible;
-  }
-
-  .use-motion .header,
-  .use-motion .site-brand-container .toggle,
-  .use-motion .footer { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle,
-  .use-motion .custom-logo-image {
-    opacity: initial;
-    top: initial;
-  }
-
-  .use-motion .logo-line {
-    transform: scaleX(1);
-  }
-
-  .search-pop-overlay, .sidebar-nav { display: none; }
-  .sidebar-panel { display: block; }
-  </style>
-</noscript>
-
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
 <link rel="alternate" href="/atom.xml" title="Ln's Blog" type="application/atom+xml">
 </head>
 
@@ -203,7 +163,8 @@
         <!--/noindex-->
 
         <div class="site-overview-wrap sidebar-panel">
-          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <div class="site-overview">
+            <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image" alt="Lining Wei"
       src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/icon.gif">
   <p class="site-author-name" itemprop="name">Lining Wei</p>
@@ -233,11 +194,12 @@
   </nav>
 </div>
   <div class="cc-license site-overview-item animated" itemprop="license">
-    <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC96aC1DTg=="><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></span>
+    <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC96aC1DTg=="><img src="https://cdn.jsdelivr.net/npm/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></span>
   </div>
 
 
 
+          </div>
         </div>
       </div>
     </div>
@@ -248,7 +210,7 @@
     </header>
 
     
-  <div class="back-to-top" role="button">
+  <div class="back-to-top" role="button" aria-label="返回顶部">
     <i class="fa fa-arrow-up"></i>
     <span>0%</span>
   </div>
@@ -340,7 +302,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <a id="more"></a>
+        <span id="more"></span>
 
 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>最近在一个项目中负责数据展示模块的开发，ECharts 作为百度的一个良心项目可以说在大数据展示方面做的很不错了。这段时间在 ECharts 上也花了不少时间。</p>
 <p>恰逢清明假期，作为一个出省求学的学生，回家是不可能回家的。但是写作业也是不可能写作业的，这辈子的假期都不可能写作业的。于是“突发奇想”，何不用 ECharts 做一个记录自己足迹的页面呢？</p>
@@ -348,6 +310,7 @@
 <p><img data-src="/230/img1.png" alt="img" loading="lazy"></p>
 <p>在线编辑修改后的基础足迹图的代码如下：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var data &#x3D; [</span><br><span class="line">     &#123;name: &#39;海门&#39;, value: [&#39;time&#39;,&#39;describe&#39;]&#125;,</span><br><span class="line">     &#123;name: &#39;鄂尔多斯&#39;, value: [&#39;time&#39;,&#39;describe&#39;]&#125;,</span><br><span class="line">     &#123;name: &#39;招远&#39;, value: [&#39;time&#39;,&#39;describe&#39;]&#125;,</span><br><span class="line">     &#123;name: &#39;舟山&#39;, value: [&#39;time&#39;,&#39;describe&#39;]&#125;,</span><br><span class="line">     &#123;name: &#39;齐齐哈尔&#39;, value: [&#39;time&#39;,&#39;describe&#39;]&#125;,</span><br><span class="line">     &#123;name: &#39;盐城&#39;, value: [&#39;time&#39;,&#39;describe&#39;]&#125;,</span><br><span class="line">     &#123;name: &#39;赤峰&#39;, value: [&#39;time&#39;,&#39;describe&#39;]&#125;,</span><br><span class="line">     &#123;name: &#39;青岛&#39;, value: [&#39;time&#39;,&#39;describe&#39;]&#125;</span><br><span class="line">];</span><br><span class="line">var geoCoordMap &#x3D; &#123;</span><br><span class="line">    &#39;海门&#39;:[121.15,31.89],</span><br><span class="line">    &#39;鄂尔多斯&#39;:[109.781327,39.608266],</span><br><span class="line">    &#39;招远&#39;:[120.38,37.35],</span><br><span class="line">    &#39;舟山&#39;:[122.207216,29.985295],</span><br><span class="line">    &#39;齐齐哈尔&#39;:[123.97,47.33],</span><br><span class="line">    &#39;盐城&#39;:[120.13,33.38],</span><br><span class="line">    &#39;赤峰&#39;:[118.87,42.28],</span><br><span class="line">    &#39;青岛&#39;:[120.33,36.07]</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">var convertData &#x3D; function (data) &#123;</span><br><span class="line">    var res &#x3D; [];</span><br><span class="line">    for (var i &#x3D; 0; i &lt; data.length; i++) &#123;</span><br><span class="line">        var geoCoord &#x3D; geoCoordMap[data[i].name];</span><br><span class="line">        if (geoCoord) &#123;</span><br><span class="line">            res.push(&#123;</span><br><span class="line">                name: data[i].name,</span><br><span class="line">                value: geoCoord.concat(data[i].value)</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return res;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">option &#x3D; &#123;</span><br><span class="line">    backgroundColor: &#39;#404a59&#39;,</span><br><span class="line">    title: &#123;</span><br><span class="line">    &#125;,</span><br><span class="line">    tooltip: &#123;</span><br><span class="line">        trigger: &#39;item&#39;,</span><br><span class="line">        padding: 10,</span><br><span class="line">        backgroundColor: &#39;#222&#39;,</span><br><span class="line">        borderColor: &#39;#777&#39;,</span><br><span class="line">        borderWidth: 1,</span><br><span class="line">        formatter: function (params) &#123;</span><br><span class="line">            name &#x3D; params.name</span><br><span class="line">            time &#x3D; params.value[2]</span><br><span class="line">            describe &#x3D; params.value[3]</span><br><span class="line">            return &#39;&lt;div style&#x3D;&quot;border-bottom: 1px solid rgba(255,255,255,.3); font-size: 18px;padding-bottom: 7px;margin-bottom: 7px&quot;&gt;&#39;</span><br><span class="line">                + name</span><br><span class="line">                + &#39;&lt;&#x2F;div&gt;&#39;</span><br><span class="line">                + time</span><br><span class="line">                + &#39;&lt;br&gt;&#39;</span><br><span class="line">                + describe;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    geo: &#123;</span><br><span class="line">        map: &#39;china&#39;,</span><br><span class="line">        label: &#123;</span><br><span class="line">            emphasis: &#123;</span><br><span class="line">                show: false</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        roam: false,</span><br><span class="line">        itemStyle: &#123;</span><br><span class="line">            normal: &#123;</span><br><span class="line">                areaColor: &#39;#323c48&#39;,</span><br><span class="line">                borderColor: &#39;#111&#39;</span><br><span class="line">            &#125;,</span><br><span class="line">            emphasis: &#123;</span><br><span class="line">                areaColor: &#39;#2a333d&#39;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    series : [</span><br><span class="line">        &#123;</span><br><span class="line">            name: &#39;足迹&#39;,</span><br><span class="line">            type: &#39;effectScatter&#39;,</span><br><span class="line">            coordinateSystem: &#39;geo&#39;,</span><br><span class="line">            data: convertData(data),</span><br><span class="line">            showEffectOn: &#39;render&#39;,</span><br><span class="line">            rippleEffect: &#123;</span><br><span class="line">                brushType: &#39;stroke&#39;</span><br><span class="line">            &#125;,</span><br><span class="line">            hoverAnimation: true,</span><br><span class="line">            label: &#123;</span><br><span class="line">                normal: &#123;</span><br><span class="line">                    formatter: &#39;&#123;b&#125;&#39;,</span><br><span class="line">                    position: &#39;right&#39;,</span><br><span class="line">                    show: true</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;,</span><br><span class="line">            itemStyle: &#123;</span><br><span class="line">                normal: &#123;</span><br><span class="line">                    color: &#39;#f4e925&#39;,</span><br><span class="line">                    shadowBlur: 10,</span><br><span class="line">                    shadowColor: &#39;#333&#39;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;,</span><br><span class="line">            zlevel: 1</span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">myChart.setOption(option);</span><br></pre></td></tr></table></figure>
+
 <p>演示图如下：</p>
 <p><img data-src="/230/img2.png" alt="img" loading="lazy"></p>
 <h2 id="在-Hexo-博客上创建-足迹-页面"><a href="#在-Hexo-博客上创建-足迹-页面" class="headerlink" title="在 Hexo 博客上创建[足迹]页面"></a>在 Hexo 博客上创建[足迹]页面</h2><p>不同的主题添加新页面的方法也许不尽相同，但大同小异，建议自己查阅相关文档正确添加好新页面。</p>
@@ -356,10 +319,13 @@
 <p>要想在 MarkDown 中引入 JavaScript 首先要把相应的文件添加进主题的 js 资源文件夹中。例如我使用的是 next 主题，那么我就把刚刚的两个文件添加进 <code>themes/next/source/js/src/</code> 文件夹中。</p>
 <h3 id="引入-JavaScript-代码"><a href="#引入-JavaScript-代码" class="headerlink" title="引入 JavaScript 代码"></a>引入 JavaScript 代码</h3><p>MarkDown 引入 JavaScript 代码的方式和 HTML 一样，如下：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;script type&#x3D;&quot;text&#x2F;javascript&quot; src&#x3D;&quot;&#x2F;js&#x2F;src&#x2F;echarts.min.js&quot;&gt;&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+
 <p>引入所需的 JS 文件后可以在 MarkDown 文件中使用 <code>&lt;script&gt;</code> 标签添加前面已经写好的足迹图的代码。但是这种方法往往需要压缩 JS 代码而不方便以后的修改。因此建议在 <code>themes/next/source/js/src/</code> 文件夹中新建 JS 文件写好代码再一起引入。写入文件中的完整足迹图代码如下：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var myChart &#x3D; echarts.init(document.getElementById(&#39;myMap&#39;));</span><br><span class="line"></span><br><span class="line">var data &#x3D; [</span><br><span class="line">    &#123;name: &#39;吴川&#39;, value: [&#39;1995.11 ～ forever&#39;, &#39;出生成长的地方，永远的家&#39;]&#125;,</span><br><span class="line">    &#123;name: &#39;苏州&#39;, value: [&#39;2015.9 ～ now&#39;, &#39;15年就读苏州大学，有幸在这个江南水乡生活&#39;]&#125;,</span><br><span class="line">    &#123;name: &#39;北京&#39;, value: [&#39;2016.07&#39;, &#39;暑期游&#39;]&#125;,</span><br><span class="line">    &#123;name: &#39;无锡&#39;, value: [&#39;2017.03&#39;, &#39;太湖鼋头渚国际樱花动漫节&#39;]&#125;</span><br><span class="line">];</span><br><span class="line">var geoCoordMap &#x3D; &#123;</span><br><span class="line">    &#39;吴川&#39;:[110.364977,21.274898],</span><br><span class="line">    &#39;苏州&#39;:[120.619585,31.299379],</span><br><span class="line">    &#39;北京&#39;:[116.405285,39.904989],</span><br><span class="line">    &#39;无锡&#39;:[120.301663,32.5]</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">var convertData &#x3D; function (data) &#123;</span><br><span class="line">    var res &#x3D; [];</span><br><span class="line">    for (var i &#x3D; 0; i &lt; data.length; i++) &#123;</span><br><span class="line">        var geoCoord &#x3D; geoCoordMap[data[i].name];</span><br><span class="line">        if (geoCoord) &#123;</span><br><span class="line">            res.push(&#123;</span><br><span class="line">                name: data[i].name,</span><br><span class="line">                value: geoCoord.concat(data[i].value)</span><br><span class="line">            &#125;);</span><br><span class="line">            &#x2F;&#x2F;console.log(res)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return res;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">option &#x3D; &#123;</span><br><span class="line">    &#x2F;&#x2F; backgroundColor: &#39;#404a59&#39;,</span><br><span class="line">    title: &#123;</span><br><span class="line">    &#125;,</span><br><span class="line">    tooltip: &#123;</span><br><span class="line">        trigger: &#39;item&#39;,</span><br><span class="line">        padding: 10,</span><br><span class="line">        backgroundColor: &#39;#222&#39;,</span><br><span class="line">        borderColor: &#39;#777&#39;,</span><br><span class="line">        borderWidth: 1,</span><br><span class="line">        formatter: function (params) &#123;</span><br><span class="line">            name &#x3D; params.name</span><br><span class="line">            time &#x3D; params.value[2]</span><br><span class="line">            describe &#x3D; params.value[3]</span><br><span class="line">            return &#39;&lt;div style&#x3D;&quot;border-bottom: 1px solid rgba(255,255,255,.3); font-size: 18px;padding-bottom: 7px;margin-bottom: 7px&quot;&gt;&#39;</span><br><span class="line">                + name</span><br><span class="line">                + &#39;&lt;&#x2F;div&gt;&#39;</span><br><span class="line">                + time</span><br><span class="line">                + &#39;&lt;br&gt;&#39;</span><br><span class="line">                + describe;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    geo: &#123;</span><br><span class="line">        map: &#39;china&#39;,</span><br><span class="line">        label: &#123;</span><br><span class="line">            emphasis: &#123;</span><br><span class="line">                show: false</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        roam: false,</span><br><span class="line">        itemStyle: &#123;</span><br><span class="line">            normal: &#123;</span><br><span class="line">                areaColor: &#39;#e6e6e6&#39;,</span><br><span class="line">                borderColor: &#39;#111&#39;</span><br><span class="line">            &#125;,</span><br><span class="line">            emphasis: &#123;</span><br><span class="line">                areaColor: &#39;#cccccc&#39;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    series : [</span><br><span class="line">        &#123;</span><br><span class="line">            name: &#39;足迹&#39;,</span><br><span class="line">            type: &#39;effectScatter&#39;,</span><br><span class="line">            coordinateSystem: &#39;geo&#39;,</span><br><span class="line">            data: convertData(data),</span><br><span class="line">            showEffectOn: &#39;render&#39;,</span><br><span class="line">            rippleEffect: &#123;</span><br><span class="line">                brushType: &#39;stroke&#39;</span><br><span class="line">            &#125;,</span><br><span class="line">            hoverAnimation: true,</span><br><span class="line">            label: &#123;</span><br><span class="line">                normal: &#123;</span><br><span class="line">                    formatter: &#39;&#123;b&#125;&#39;,</span><br><span class="line">                    position: &#39;right&#39;,</span><br><span class="line">                    show: true</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;,</span><br><span class="line">            itemStyle: &#123;</span><br><span class="line">                normal: &#123;</span><br><span class="line">                    color: &#39;#4d4d4d&#39;,</span><br><span class="line">                    shadowBlur: 10,</span><br><span class="line">                    shadowColor: &#39;#333&#39;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;,</span><br><span class="line">            zlevel: 1</span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">myChart.setOption(option);</span><br></pre></td></tr></table></figure>
+
 <p>MarkDown 文件如下：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;div id&#x3D;&quot;myMap&quot; style&#x3D;&quot;width: 100%;height:600px;&quot;&gt;&lt;&#x2F;div&gt;</span><br><span class="line">&lt;script type&#x3D;&quot;text&#x2F;javascript&quot; src&#x3D;&quot;&#x2F;js&#x2F;src&#x2F;echarts.min.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&lt;script type&#x3D;&quot;text&#x2F;javascript&quot; src&#x3D;&quot;&#x2F;js&#x2F;src&#x2F;china.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&lt;script type&#x3D;&quot;text&#x2F;javascript&quot; src&#x3D;&quot;&#x2F;js&#x2F;src&#x2F;footprint.js&quot;&gt;&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+
 <p><strong>值得注意的是 div 的 id 不要取 main，因为 mian 是一个网站的主 div 经常使用的 id ，很有可能会导致页面无法正常显示而且无任何报错信息。</strong></p>
 <p>到这里足迹页面就写好了，欢迎访问<span class="exturl" data-url="aHR0cHM6Ly9kb2NsZS5naXRodWIuaW8vZm9vdHByaW50Lw==">我的足迹<i class="fa fa-external-link-alt"></i></span>页面查看效果。</p>
 
@@ -372,7 +338,7 @@
     <footer class="post-footer">
           <div class="reward-container">
   <div>Buy me a coffee</div>
-  <button onclick="document.querySelector('.post-reward').classList.toggle('active');">
+  <button>
     赞赏
   </button>
   <div class="post-reward">
@@ -450,28 +416,6 @@
             </div>
         </div>
       </div>
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      const commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
 </div>
   </main>
 
@@ -492,13 +436,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">352k</span>
+    <span title="站点总字数">353k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">5:20</span>
+    <span title="站点阅读时长">5:21</span>
   </span>
 </div>
 
@@ -511,16 +455,14 @@
   </footer>
 
   
-  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.2.1/source/js/utils.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.2.1/source/js/motion.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.2.1/source/js/next-boot.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js" integrity="sha256-EdPgYcPk/IIrw7FYeuJQexva49pVRZNmt3LculEr7zM=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/comments.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/utils.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/motion.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/next-boot.min.js"></script>
 
   
-<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.2.1/source/js/local-search.js"></script>
-
-
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/third-party/search/local-search.min.js"></script>
 
 
 
@@ -530,44 +472,25 @@
 
 
 
-  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.0.0/dist/quicklink.umd.js"></script>
-  <script>
-      window.addEventListener('load', () => {
-      quicklink.listen({
-        timeout : 3000,
-        priority: true,
-        ignores : [uri => uri.includes('#'),uri => uri === 'https://weilining.github.io/230.html',]
-      });
-      });
-  </script>
+  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.2.0/dist/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"ignores":null,"url":"https://weilining.github.io/230.html"}</script>
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/third-party/quicklink.min.js"></script>
 
+
+<script class="next-config" data-name="valine" type="application/json">{"enable":true,"appId":"Bu6sP4depeiGP22PIFqz0SmJ-MdYXbMMI","appKey":"jYGDeeOBkTqvrUJDEmqj83q7","serverURLs":"https://bu6sp4de.api.lncldglobal.com","placeholder":"Just go go","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"lang":null,"visitor":true,"comment_count":true,"recordIP":false,"enableQQ":false,"requiredFields":[],"el":"#valine-comments","path":"/230.html"}</script>
 <script>
-NexT.utils.loadComments('#valine-comments', () => {
-  NexT.utils.getScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', () => {
-    new Valine(Object.assign({"enable":true,"appId":"Bu6sP4depeiGP22PIFqz0SmJ-MdYXbMMI","appKey":"jYGDeeOBkTqvrUJDEmqj83q7","serverURLs":null,"placeholder":"Just go go","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"lang":null,"visitor":true,"comment_count":true,"recordIP":false,"enableQQ":false,"requiredFields":[]}, {
-      el: '#valine-comments',
-      path: "/230.html",
-      serverURLs: "https://bu6sp4de.api.lncldglobal.com"
-    }));
-  }, window.Valine);
+document.addEventListener('page:loaded', () => {
+  NexT.utils.loadComments(CONFIG.valine.el)
+    .then(() => NexT.utils.getScript(
+      'https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js',
+      { condition: window.Valine }
+    ))
+    .then(() => {
+      new Valine(CONFIG.valine);
+    });
 });
 </script>
-
-<script>
-NexT.utils.loadComments('#lv-container', () => {
-  window.livereOptions = {
-    refer: "230.html"
-  };
-  (function(d, s) {
-    var j, e = d.getElementsByTagName(s)[0];
-    if (typeof LivereTower === 'function') { return; }
-    j = d.createElement(s);
-    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-    j.async = true;
-    e.parentNode.insertBefore(j, e);
-  })(document, 'script');
-});
-</script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/third-party/comments/livere.min.js"></script>
 
 
 

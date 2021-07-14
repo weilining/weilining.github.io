@@ -2,9 +2,9 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="viewport" content="width=device-width">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.3.0">
+<meta name="generator" content="Hexo 5.4.0">
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.jsdelivr.net/gh/weilining/img@main/img/apple-touch-icon-next.png">
@@ -20,13 +20,10 @@
 
 <link rel="stylesheet" href="https://fonts.dogedoge.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.2/css/all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css" integrity="sha256-2H3fkXt6FEmrReK448mDVGKb3WW2ZZw35gI7vqHOE4Y=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"weilining.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.2.1","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
-  </script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"weilining.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.6.1","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/config.min.js"></script>
 <meta name="description" content="默认">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Gitlab管理用户、组、权限">
@@ -62,15 +59,10 @@
 <link rel="canonical" href="https://weilining.github.io/161.html">
 
 
-<script class="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : false,
-    isPost : true,
-    lang   : 'zh-CN'
-  };
-</script>
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://weilining.github.io/161.html","path":"161.html","title":"Gitlab管理用户、组、权限"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
 <title>Gitlab管理用户、组、权限 | Ln's Blog</title>
   
 
@@ -78,40 +70,8 @@
 
 
   <noscript>
-  <style>
-  body { margin-top: 2rem; }
-
-  .use-motion .menu-item,
-  .use-motion .sidebar,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header {
-    visibility: visible;
-  }
-
-  .use-motion .header,
-  .use-motion .site-brand-container .toggle,
-  .use-motion .footer { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle,
-  .use-motion .custom-logo-image {
-    opacity: initial;
-    top: initial;
-  }
-
-  .use-motion .logo-line {
-    transform: scaleX(1);
-  }
-
-  .search-pop-overlay, .sidebar-nav { display: none; }
-  .sidebar-panel { display: block; }
-  </style>
-</noscript>
-
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
 <link rel="alternate" href="/atom.xml" title="Ln's Blog" type="application/atom+xml">
 </head>
 
@@ -218,7 +178,8 @@
         <!--/noindex-->
 
         <div class="site-overview-wrap sidebar-panel">
-          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <div class="site-overview">
+            <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image" alt="Lining Wei"
       src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/icon.gif">
   <p class="site-author-name" itemprop="name">Lining Wei</p>
@@ -248,11 +209,12 @@
   </nav>
 </div>
   <div class="cc-license site-overview-item animated" itemprop="license">
-    <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC96aC1DTg=="><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></span>
+    <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC96aC1DTg=="><img src="https://cdn.jsdelivr.net/npm/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></span>
   </div>
 
 
 
+          </div>
         </div>
       </div>
     </div>
@@ -263,7 +225,7 @@
     </header>
 
     
-  <div class="back-to-top" role="button">
+  <div class="back-to-top" role="button" aria-label="返回顶部">
     <i class="fa fa-arrow-up"></i>
     <span>0%</span>
   </div>
@@ -336,7 +298,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>2k</span>
+      <span>2.3k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -364,7 +326,7 @@
 <li>配置项目的可见性</li>
 <li>移除用户</li>
 </ul>
-<a id="more"></a>
+<span id="more"></span>
 
 
 
@@ -374,12 +336,12 @@
 <h4 id="5-用户会收到邮件如下画面，点击设置密码即可。"><a href="#5-用户会收到邮件如下画面，点击设置密码即可。" class="headerlink" title="5. 用户会收到邮件如下画面，点击设置密码即可。"></a>5. 用户会收到邮件如下画面，点击设置密码即可。</h4><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://images2018.cnblogs.com/blog/1416119/201806/1416119-20180624221206488-932889468.png"><img data-src="/161/1416119-20180624221206729-1171562142.png" alt="image" loading="lazy"></a></p>
 <p>排错小技巧：在设置邮件服务器比如设置如下：</p>
 <blockquote>
-<p>gitlab_rails[&#39;gitlab_email_from&#39;] = &#39;gitlab@aishangwei.net&#39;<br>gitlab_rails[&#39;gitlab_email_reply_to&#39;] = &#39;gitlab@aishangwei.net&#39;<br>gitlab_rails[&#39;smtp_enable&#39;] = true<br>gitlab_rails[&#39;smtp_address&#39;] = &quot;smtp.mxhichina.com&quot;<br>gitlab_rails[&#39;smtp_port&#39;] = 25<br>gitlab_rails[&#39;smtp_user_name&#39;] = &quot;<span class="exturl" data-url="bWFpbHRvOiYjeDY3OyYjeDY5OyYjeDc0OyYjeDZjOyYjOTc7JiM5ODsmI3g0MDsmI3g2MTsmI3g2OTsmI3g3MzsmIzEwNDsmIzk3OyYjMTEwOyYjeDY3OyYjMTE5OyYjeDY1OyYjMTA1OyYjeDJlOyYjeDZlOyYjMTAxOyYjMTE2Ow==">&#x67;&#x69;&#x74;&#x6c;&#97;&#98;&#x40;&#x61;&#x69;&#x73;&#104;&#97;&#110;&#x67;&#119;&#x65;&#105;&#x2e;&#x6e;&#101;&#116;<i class="fa fa-external-link-alt"></i></span>&quot;<br>gitlab_rails[&#39;smtp_password&#39;] = &quot;W-123456&quot;<br>gitlab_rails[&#39;smtp_domain&#39;] = &quot;mxhichina.com&quot;<br>gitlab_rails[&#39;smtp_authentication&#39;] = &quot;login&quot;</p>
+<p>gitlab_rails[&#39;gitlab_email_from&#39;] = &#39;<span class="exturl" data-url="bWFpbHRvOiYjeDY3OyYjeDY5OyYjeDc0OyYjeDZjOyYjeDYxOyYjeDYyOyYjeDQwOyYjOTc7JiMxMDU7JiN4NzM7JiN4Njg7JiN4NjE7JiMxMTA7JiN4Njc7JiN4Nzc7JiN4NjU7JiMxMDU7JiN4MmU7JiMxMTA7JiN4NjU7JiMxMTY7">&#x67;&#x69;&#x74;&#x6c;&#x61;&#x62;&#x40;&#97;&#105;&#x73;&#x68;&#x61;&#110;&#x67;&#x77;&#x65;&#105;&#x2e;&#110;&#x65;&#116;<i class="fa fa-external-link-alt"></i></span>&#39;<br>gitlab_rails[&#39;gitlab_email_reply_to&#39;] = &#39;<span class="exturl" data-url="bWFpbHRvOiYjeDY3OyYjeDY5OyYjeDc0OyYjMTA4OyYjOTc7JiN4NjI7JiM2NDsmI3g2MTsmIzEwNTsmI3g3MzsmI3g2ODsmIzk3OyYjeDZlOyYjeDY3OyYjeDc3OyYjMTAxOyYjMTA1OyYjeDJlOyYjeDZlOyYjeDY1OyYjeDc0Ow==">&#x67;&#x69;&#x74;&#108;&#97;&#x62;&#64;&#x61;&#105;&#x73;&#x68;&#97;&#x6e;&#x67;&#x77;&#101;&#105;&#x2e;&#x6e;&#x65;&#x74;<i class="fa fa-external-link-alt"></i></span>&#39;<br>gitlab_rails[&#39;smtp_enable&#39;] = true<br>gitlab_rails[&#39;smtp_address&#39;] = &quot;smtp.mxhichina.com&quot;<br>gitlab_rails[&#39;smtp_port&#39;] = 25<br>gitlab_rails[&#39;smtp_user_name&#39;] = &quot;<span class="exturl" data-url="bWFpbHRvOiYjeDY3OyYjMTA1OyYjMTE2OyYjeDZjOyYjOTc7JiN4NjI7JiM2NDsmI3g2MTsmI3g2OTsmI3g3MzsmI3g2ODsmI3g2MTsmI3g2ZTsmIzEwMzsmIzExOTsmI3g2NTsmIzEwNTsmI3gyZTsmIzExMDsmIzEwMTsmIzExNjs=">&#x67;&#105;&#116;&#x6c;&#97;&#x62;&#64;&#x61;&#x69;&#x73;&#x68;&#x61;&#x6e;&#103;&#119;&#x65;&#105;&#x2e;&#110;&#101;&#116;<i class="fa fa-external-link-alt"></i></span>&quot;<br>gitlab_rails[&#39;smtp_password&#39;] = &quot;W-123456&quot;<br>gitlab_rails[&#39;smtp_domain&#39;] = &quot;mxhichina.com&quot;<br>gitlab_rails[&#39;smtp_authentication&#39;] = &quot;login&quot;</p>
 </blockquote>
 <p>设置 完成后运行以下命令测试:</p>
 <blockquote>
 <p>gitlab-rails console</p>
-<p>Notify.test_email(&#39;destination_email@address.com&#39;, &#39;Message Subject&#39;, &#39;Message Body&#39;).deliver_now</p>
+<p>Notify.test_email(&#39;<span class="exturl" data-url="bWFpbHRvOiYjMTAwOyYjeDY1OyYjMTE1OyYjMTE2OyYjMTA1OyYjeDZlOyYjOTc7JiMxMTY7JiN4Njk7JiN4NmY7JiMxMTA7JiN4NWY7JiN4NjU7JiN4NmQ7JiN4NjE7JiN4Njk7JiN4NmM7JiM2NDsmIzk3OyYjMTAwOyYjMTAwOyYjeDcyOyYjMTAxOyYjeDczOyYjeDczOyYjeDJlOyYjOTk7JiMxMTE7JiMxMDk7">&#100;&#x65;&#115;&#116;&#105;&#x6e;&#97;&#116;&#x69;&#x6f;&#110;&#x5f;&#x65;&#x6d;&#x61;&#x69;&#x6c;&#64;&#97;&#100;&#100;&#x72;&#101;&#x73;&#x73;&#x2e;&#99;&#111;&#109;<i class="fa fa-external-link-alt"></i></span>&#39;, &#39;Message Subject&#39;, &#39;Message Body&#39;).deliver_now</p>
 </blockquote>
 <h3 id="二-创建组"><a href="#二-创建组" class="headerlink" title="二. 创建组"></a>二. 创建组</h3><h4 id="1-使用管理员登陆gitlab服务器。"><a href="#1-使用管理员登陆gitlab服务器。" class="headerlink" title="1. 使用管理员登陆gitlab服务器。"></a>1. 使用管理员登陆gitlab服务器。</h4><h4 id="2-点击管理区域—Group-Add-group"><a href="#2-点击管理区域—Group-Add-group" class="headerlink" title="2. 点击管理区域—Group-Add group "></a>2. 点击管理区域—Group-Add group <a target="_blank" rel="noopener external nofollow noreferrer" href="https://images2018.cnblogs.com/blog/1416119/201806/1416119-20180624221206999-955167397.png"><img data-src="/161/1416119-20180624221207294-1813426702.png" alt="image" loading="lazy"></a></h4><h4 id="3-依次填入组路径，名称和描述等信息"><a href="#3-依次填入组路径，名称和描述等信息" class="headerlink" title="3. 依次填入组路径，名称和描述等信息"></a>3. 依次填入组路径，名称和描述等信息</h4><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://images2018.cnblogs.com/blog/1416119/201806/1416119-20180624221207584-617947847.png"><img data-src="/161/1416119-20180624221211190-2068774251.png" alt="image" loading="lazy"></a></p>
 <h4 id="4-在如下画面选择用户加入到刚创建的组、权限等-。"><a href="#4-在如下画面选择用户加入到刚创建的组、权限等-。" class="headerlink" title="4. 在如下画面选择用户加入到刚创建的组、权限等 。"></a>4. 在如下画面选择用户加入到刚创建的组、权限等 。</h4><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://images2018.cnblogs.com/blog/1416119/201806/1416119-20180624221211458-1802014428.png"><img data-src="/161/1416119-20180624221211734-719735163.png" alt="image" loading="lazy"></a></p>
@@ -564,7 +526,7 @@
     <footer class="post-footer">
           <div class="reward-container">
   <div>Buy me a coffee</div>
-  <button onclick="document.querySelector('.post-reward').classList.toggle('active');">
+  <button>
     赞赏
   </button>
   <div class="post-reward">
@@ -642,28 +604,6 @@
             </div>
         </div>
       </div>
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      const commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
 </div>
   </main>
 
@@ -684,13 +624,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">352k</span>
+    <span title="站点总字数">353k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">5:20</span>
+    <span title="站点阅读时长">5:21</span>
   </span>
 </div>
 
@@ -703,16 +643,14 @@
   </footer>
 
   
-  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.2.1/source/js/utils.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.2.1/source/js/motion.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.2.1/source/js/next-boot.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js" integrity="sha256-EdPgYcPk/IIrw7FYeuJQexva49pVRZNmt3LculEr7zM=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/comments.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/utils.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/motion.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/next-boot.min.js"></script>
 
   
-<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.2.1/source/js/local-search.js"></script>
-
-
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/third-party/search/local-search.min.js"></script>
 
 
 
@@ -722,44 +660,25 @@
 
 
 
-  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.0.0/dist/quicklink.umd.js"></script>
-  <script>
-      window.addEventListener('load', () => {
-      quicklink.listen({
-        timeout : 3000,
-        priority: true,
-        ignores : [uri => uri.includes('#'),uri => uri === 'https://weilining.github.io/161.html',]
-      });
-      });
-  </script>
+  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.2.0/dist/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"ignores":null,"url":"https://weilining.github.io/161.html"}</script>
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/third-party/quicklink.min.js"></script>
 
+
+<script class="next-config" data-name="valine" type="application/json">{"enable":true,"appId":"Bu6sP4depeiGP22PIFqz0SmJ-MdYXbMMI","appKey":"jYGDeeOBkTqvrUJDEmqj83q7","serverURLs":"https://bu6sp4de.api.lncldglobal.com","placeholder":"Just go go","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"lang":null,"visitor":true,"comment_count":true,"recordIP":false,"enableQQ":false,"requiredFields":[],"el":"#valine-comments","path":"/161.html"}</script>
 <script>
-NexT.utils.loadComments('#valine-comments', () => {
-  NexT.utils.getScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', () => {
-    new Valine(Object.assign({"enable":true,"appId":"Bu6sP4depeiGP22PIFqz0SmJ-MdYXbMMI","appKey":"jYGDeeOBkTqvrUJDEmqj83q7","serverURLs":null,"placeholder":"Just go go","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"lang":null,"visitor":true,"comment_count":true,"recordIP":false,"enableQQ":false,"requiredFields":[]}, {
-      el: '#valine-comments',
-      path: "/161.html",
-      serverURLs: "https://bu6sp4de.api.lncldglobal.com"
-    }));
-  }, window.Valine);
+document.addEventListener('page:loaded', () => {
+  NexT.utils.loadComments(CONFIG.valine.el)
+    .then(() => NexT.utils.getScript(
+      'https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js',
+      { condition: window.Valine }
+    ))
+    .then(() => {
+      new Valine(CONFIG.valine);
+    });
 });
 </script>
-
-<script>
-NexT.utils.loadComments('#lv-container', () => {
-  window.livereOptions = {
-    refer: "161.html"
-  };
-  (function(d, s) {
-    var j, e = d.getElementsByTagName(s)[0];
-    if (typeof LivereTower === 'function') { return; }
-    j = d.createElement(s);
-    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-    j.async = true;
-    e.parentNode.insertBefore(j, e);
-  })(document, 'script');
-});
-</script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/third-party/comments/livere.min.js"></script>
 
 
 

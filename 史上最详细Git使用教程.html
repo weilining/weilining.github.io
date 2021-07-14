@@ -2,9 +2,9 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="viewport" content="width=device-width">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.3.0">
+<meta name="generator" content="Hexo 5.4.0">
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.jsdelivr.net/gh/weilining/img@main/img/apple-touch-icon-next.png">
@@ -20,13 +20,10 @@
 
 <link rel="stylesheet" href="https://fonts.dogedoge.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.2/css/all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css" integrity="sha256-2H3fkXt6FEmrReK448mDVGKb3WW2ZZw35gI7vqHOE4Y=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"weilining.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.2.1","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
-  </script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"weilining.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.6.1","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/config.min.js"></script>
 <meta name="description" content="默认">
 <meta property="og:type" content="article">
 <meta property="og:title" content="史上最详细Git使用教程">
@@ -125,15 +122,10 @@
 <link rel="canonical" href="https://weilining.github.io/%E5%8F%B2%E4%B8%8A%E6%9C%80%E8%AF%A6%E7%BB%86Git%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B.html">
 
 
-<script class="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : false,
-    isPost : true,
-    lang   : 'zh-CN'
-  };
-</script>
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://weilining.github.io/%E5%8F%B2%E4%B8%8A%E6%9C%80%E8%AF%A6%E7%BB%86Git%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B.html","path":"史上最详细Git使用教程.html","title":"史上最详细Git使用教程"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
 <title>史上最详细Git使用教程 | Ln's Blog</title>
   
 
@@ -141,40 +133,8 @@
 
 
   <noscript>
-  <style>
-  body { margin-top: 2rem; }
-
-  .use-motion .menu-item,
-  .use-motion .sidebar,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header {
-    visibility: visible;
-  }
-
-  .use-motion .header,
-  .use-motion .site-brand-container .toggle,
-  .use-motion .footer { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle,
-  .use-motion .custom-logo-image {
-    opacity: initial;
-    top: initial;
-  }
-
-  .use-motion .logo-line {
-    transform: scaleX(1);
-  }
-
-  .search-pop-overlay, .sidebar-nav { display: none; }
-  .sidebar-panel { display: block; }
-  </style>
-</noscript>
-
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
 <link rel="alternate" href="/atom.xml" title="Ln's Blog" type="application/atom+xml">
 </head>
 
@@ -276,12 +236,13 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Git%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-number">1.</span> <span class="nav-text">Git是什么</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#SVN%E4%B8%8EGit%E7%9A%84%E6%9C%80%E4%B8%BB%E8%A6%81%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">2.</span> <span class="nav-text">SVN与Git的最主要的区别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9C%A8windows%E4%B8%8A%E5%A6%82%E4%BD%95%E5%AE%89%E8%A3%85Git"><span class="nav-number">3.</span> <span class="nav-text">在windows上如何安装Git</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E6%93%8D%E4%BD%9C"><span class="nav-number">4.</span> <span class="nav-text">如何操作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E7%89%88%E6%9C%AC%E5%BA%93"><span class="nav-number">5.</span> <span class="nav-text">创建版本库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8A%8A%E6%96%87%E4%BB%B6%E6%B7%BB%E5%8A%A0%E5%88%B0%E7%89%88%E6%9C%AC%E5%BA%93%E4%B8%AD"><span class="nav-number">6.</span> <span class="nav-text">把文件添加到版本库中</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%89%88%E6%9C%AC%E5%9B%9E%E9%80%80"><span class="nav-number">7.</span> <span class="nav-text">版本回退</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%90%86%E8%A7%A3%E5%B7%A5%E4%BD%9C%E5%8C%BA%E4%B8%8E%E6%9A%82%E5%AD%98%E5%8C%BA%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">8.</span> <span class="nav-text">理解工作区与暂存区的区别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Git%E6%92%A4%E9%94%80%E4%BF%AE%E6%94%B9%E5%92%8C%E5%88%A0%E9%99%A4%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C"><span class="nav-number">9.</span> <span class="nav-text">Git撤销修改和删除文件操作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%92%A4%E9%94%80%E4%BF%AE%E6%94%B9"><span class="nav-number">10.</span> <span class="nav-text">撤销修改</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%A0%E9%99%A4%E6%96%87%E4%BB%B6"><span class="nav-number">11.</span> <span class="nav-text">删除文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93"><span class="nav-number">12.</span> <span class="nav-text">远程仓库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E8%A7%A3%E5%86%B3%E5%86%B2%E7%AA%81"><span class="nav-number">13.</span> <span class="nav-text">如何解决冲突</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%86%E6%94%AF%E7%AE%A1%E7%90%86%E7%AD%96%E7%95%A5"><span class="nav-number">14.</span> <span class="nav-text">分支管理策略</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A4%9A%E4%BA%BA%E5%8D%8F%E4%BD%9C"><span class="nav-number">15.</span> <span class="nav-text">多人协作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8A%93%E5%8F%96%E5%88%86%E6%94%AF"><span class="nav-number">16.</span> <span class="nav-text">抓取分支</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Git-%E5%9F%BA%E6%9C%AC%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%A6%82%E4%B8%8B"><span class="nav-number">17.</span> <span class="nav-text">Git**基本常用命令如下**</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Git%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-number">1.</span> <span class="nav-text">Git是什么</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#SVN%E4%B8%8EGit%E7%9A%84%E6%9C%80%E4%B8%BB%E8%A6%81%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">2.</span> <span class="nav-text">SVN与Git的最主要的区别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9C%A8windows%E4%B8%8A%E5%A6%82%E4%BD%95%E5%AE%89%E8%A3%85Git"><span class="nav-number">3.</span> <span class="nav-text">在windows上如何安装Git</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E6%93%8D%E4%BD%9C"><span class="nav-number">4.</span> <span class="nav-text">如何操作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E7%89%88%E6%9C%AC%E5%BA%93"><span class="nav-number">5.</span> <span class="nav-text">创建版本库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8A%8A%E6%96%87%E4%BB%B6%E6%B7%BB%E5%8A%A0%E5%88%B0%E7%89%88%E6%9C%AC%E5%BA%93%E4%B8%AD"><span class="nav-number">6.</span> <span class="nav-text">把文件添加到版本库中</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%89%88%E6%9C%AC%E5%9B%9E%E9%80%80"><span class="nav-number">7.</span> <span class="nav-text">版本回退</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%90%86%E8%A7%A3%E5%B7%A5%E4%BD%9C%E5%8C%BA%E4%B8%8E%E6%9A%82%E5%AD%98%E5%8C%BA%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">8.</span> <span class="nav-text">理解工作区与暂存区的区别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Git%E6%92%A4%E9%94%80%E4%BF%AE%E6%94%B9%E5%92%8C%E5%88%A0%E9%99%A4%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C"><span class="nav-number">9.</span> <span class="nav-text">Git撤销修改和删除文件操作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%92%A4%E9%94%80%E4%BF%AE%E6%94%B9"><span class="nav-number">10.</span> <span class="nav-text">撤销修改</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%A0%E9%99%A4%E6%96%87%E4%BB%B6"><span class="nav-number">11.</span> <span class="nav-text">删除文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93"><span class="nav-number">12.</span> <span class="nav-text">远程仓库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E8%A7%A3%E5%86%B3%E5%86%B2%E7%AA%81"><span class="nav-number">13.</span> <span class="nav-text">如何解决冲突</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%86%E6%94%AF%E7%AE%A1%E7%90%86%E7%AD%96%E7%95%A5"><span class="nav-number">14.</span> <span class="nav-text">分支管理策略</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A4%9A%E4%BA%BA%E5%8D%8F%E4%BD%9C"><span class="nav-number">15.</span> <span class="nav-text">多人协作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8A%93%E5%8F%96%E5%88%86%E6%94%AF"><span class="nav-number">16.</span> <span class="nav-text">抓取分支</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Git-%E5%9F%BA%E6%9C%AC%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%A6%82%E4%B8%8B"><span class="nav-number">17.</span> <span class="nav-text">Git****基本常用命令如下</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
         <div class="site-overview-wrap sidebar-panel">
-          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <div class="site-overview">
+            <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image" alt="Lining Wei"
       src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/icon.gif">
   <p class="site-author-name" itemprop="name">Lining Wei</p>
@@ -311,11 +272,12 @@
   </nav>
 </div>
   <div class="cc-license site-overview-item animated" itemprop="license">
-    <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC96aC1DTg=="><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></span>
+    <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC96aC1DTg=="><img src="https://cdn.jsdelivr.net/npm/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></span>
   </div>
 
 
 
+          </div>
         </div>
       </div>
     </div>
@@ -326,7 +288,7 @@
     </header>
 
     
-  <div class="back-to-top" role="button">
+  <div class="back-to-top" role="button" aria-label="返回顶部">
     <i class="fa fa-arrow-up"></i>
     <span>0%</span>
   </div>
@@ -418,7 +380,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <a id="more"></a>
+        <span id="more"></span>
 
 <p><strong>题外话</strong></p>
 <p>虽然这个标题很惊悚，不过还是把你骗进来了，哈哈～各位看官不要着急，耐心往下看</p>
@@ -456,7 +418,7 @@
 <p>   这时候你当前testgit目录下会多了一个.git的目录，这个目录是Git来跟踪管理版本的，没事千万不要手动乱改这个目录里面的文件，否则，会把git仓库给破坏了。如下：</p>
 <p>  <a target="_blank" rel="noopener external nofollow noreferrer" href="http://ww4.sinaimg.cn/mw690/6941baebgw1eloyr1x3lzj20h004tgm1.jpg"><img data-src="/%E5%8F%B2%E4%B8%8A%E6%9C%80%E8%AF%A6%E7%BB%86Git%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/6941baebgw1eloyr1x3lzj20h004tgm1.jpg" alt="img" loading="lazy"></a></p>
 <h4 id="把文件添加到版本库中"><a href="#把文件添加到版本库中" class="headerlink" title="把文件添加到版本库中"></a>把文件添加到版本库中</h4><p>​     首先要明确下，所有的版本控制系统，只能跟踪文本文件的改动，比如txt文件，网页，所有程序的代码等，Git也不列外，版本控制系统可以告诉你每次的改动，但是图片，视频这些二进制文件，虽能也能由版本控制系统管理，但没法跟踪文件的变化，只能把二进制文件每次改动串起来，也就是知道图片从1kb变成2kb，但是到底改了啥，版本控制也不知道。</p>
-<p>  <strong>下面先看下**</strong>demo**<strong>如下演示：</strong></p>
+<p>  <strong>下面先看下<strong><strong>demo</strong></strong>如下演示：</strong></p>
 <p>   我在版本库testgit目录下新建一个记事本文件 readme.txt 内容如下：11111111</p>
 <p>   第一步：使用命令 git add readme.txt添加到暂存区里面去。如下：</p>
 <p>  <a target="_blank" rel="noopener external nofollow noreferrer" href="http://ww3.sinaimg.cn/mw690/6941baebgw1eloyr0wkxbj20ch028dfu.jpg"><img data-src="/%E5%8F%B2%E4%B8%8A%E6%9C%80%E8%AF%A6%E7%BB%86Git%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/6941baebgw1eloyr0wkxbj20ch028dfu.jpg" alt="img" loading="lazy"></a></p>
@@ -498,7 +460,7 @@
 <p><a target="_blank" rel="noopener external nofollow noreferrer" href="http://ww3.sinaimg.cn/mw690/6941baebgw1eloyq4m3oqj20e104974t.jpg"><img data-src="/%E5%8F%B2%E4%B8%8A%E6%9C%80%E8%AF%A6%E7%BB%86Git%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/6941baebgw1eloyq4m3oqj20e104974t.jpg" alt="img" loading="lazy"></a></p>
 <p>可以看到 目前已经是最新的版本了。</p>
 <h4 id="理解工作区与暂存区的区别"><a href="#理解工作区与暂存区的区别" class="headerlink" title="理解工作区与暂存区的区别"></a>理解工作区与暂存区的区别</h4><p><strong>工作区：</strong>就是你在电脑上看到的目录，比如目录下testgit里的文件(.git隐藏目录版本库除外)。或者以后需要再新建的目录文件等等都属于工作区范畴。</p>
-<p>   <strong>版本库**</strong>(Repository)<strong>**：</strong>工作区有一个隐藏目录.git,这个不属于工作区，这是版本库。其中版本库里面存了很多东西，其中最重要的就是stage(暂存区)，还有Git为我们自动创建了第一个分支master,以及指向master的一个指针HEAD。</p>
+<p>   <strong>版本库</strong>**(Repository)**<strong>：</strong>工作区有一个隐藏目录.git,这个不属于工作区，这是版本库。其中版本库里面存了很多东西，其中最重要的就是stage(暂存区)，还有Git为我们自动创建了第一个分支master,以及指向master的一个指针HEAD。</p>
 <p>我们前面说过使用Git提交文件到版本库有两步：</p>
 <p> 第一步：是使用 git add 把文件添加进去，实际上就是把文件添加到暂存区。</p>
 <p> 第二步：使用git commit提交更改，实际上就是把暂存区的所有内容提交到当前分支上。</p>
@@ -537,7 +499,7 @@
 <p>再来看看我们testgit目录，添加了3个文件了。如下所示：</p>
 <h4 id="远程仓库"><a href="#远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h4><p> 在了解之前，先注册github账号，由于你的本地Git仓库和github仓库之间的传输是通过SSH加密的，所以需要一点设置：</p>
 <p>   第一步：创建SSH Key。在用户主目录下，看看有没有.ssh目录，如果有，再看看这个目录下有没有id_rsa和id_rsa.pub这两个文件，如果有的话，直接跳过此如下命令，如果没有的话，打开命令行，输入如下命令：</p>
-<p>ssh-keygen -t rsa –C “<span class="exturl" data-url="bWFpbHRvOiYjMTIxOyYjMTExOyYjMTE3OyYjeDcyOyYjMTAxOyYjMTA5OyYjeDYxOyYjMTA1OyYjMTA4OyYjNjQ7JiN4NjU7JiN4Nzg7JiM5NzsmI3g2ZDsmI3g3MDsmI3g2YzsmIzEwMTsmI3gyZTsmIzk5OyYjMTExOyYjeDZkOw==">&#121;&#111;&#117;&#x72;&#101;&#109;&#x61;&#105;&#108;&#64;&#x65;&#x78;&#97;&#x6d;&#x70;&#x6c;&#101;&#x2e;&#99;&#111;&#x6d;<i class="fa fa-external-link-alt"></i></span>”, 由于我本地此前运行过一次，所以本地有，如下所示：</p>
+<p>ssh-keygen -t rsa –C “<span class="exturl" data-url="bWFpbHRvOiYjMTIxOyYjeDZmOyYjeDc1OyYjMTE0OyYjeDY1OyYjMTA5OyYjeDYxOyYjMTA1OyYjMTA4OyYjNjQ7JiMxMDE7JiN4Nzg7JiM5NzsmIzEwOTsmI3g3MDsmIzEwODsmI3g2NTsmIzQ2OyYjOTk7JiN4NmY7JiN4NmQ7">&#121;&#x6f;&#x75;&#114;&#x65;&#109;&#x61;&#105;&#108;&#64;&#101;&#x78;&#97;&#109;&#x70;&#108;&#x65;&#46;&#99;&#x6f;&#x6d;<i class="fa fa-external-link-alt"></i></span>”, 由于我本地此前运行过一次，所以本地有，如下所示：</p>
 <p> <a target="_blank" rel="noopener external nofollow noreferrer" href="http://ww2.sinaimg.cn/mw690/6941baebgw1eloypq7esij20kx04pt9c.jpg"><img data-src="/%E5%8F%B2%E4%B8%8A%E6%9C%80%E8%AF%A6%E7%BB%86Git%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/6941baebgw1eloypq7esij20kx04pt9c.jpg" alt="img" loading="lazy"></a></p>
 <p>id_rsa是私钥，不能泄露出去，id_rsa.pub是公钥，可以放心地告诉任何人。</p>
 <p>第二步：登录github,打开” settings”中的SSH Keys页面，然后点击“Add SSH Key”,填上任意title，在Key文本框里黏贴id_rsa.pub文件的内容。</p>
@@ -696,7 +658,7 @@
 </li>
 <li><p>如果合并有冲突，则需要解决冲突，并在本地提交。再用git push origin branch-name推送。</p>
 </li>
-<li><h4 id="Git-基本常用命令如下"><a href="#Git-基本常用命令如下" class="headerlink" title="Git**基本常用命令如下**"></a><strong>Git**</strong>基本常用命令如下**</h4></li>
+<li><h4 id="Git-基本常用命令如下"><a href="#Git-基本常用命令如下" class="headerlink" title="Git****基本常用命令如下"></a><strong>Git****基本常用命令如下</strong></h4></li>
 <li><p>mkdir：     XX (创建一个空目录 XX指目录名)</p>
 <p>  pwd：     显示当前目录的路径。</p>
 <p>  git init     把当前的目录变成可以管理的git仓库，生成隐藏.git文件。</p>
@@ -706,30 +668,51 @@
 <p>  git diff XX   查看XX文件修改了那些内容</p>
 <p>  git log     查看历史记录</p>
 <p>  git reset –hard HEAD^ 或者 git reset –hard HEAD~ 回退到上一个版本</p>
-<p>​            (如果想回退到100个版本，使用git reset –hard HEAD~100 )</p>
-<p>  cat XX     查看XX文件内容</p>
-<p>  git reflog    查看历史记录的版本号id</p>
-<p>  git checkout — XX 把XX文件在工作区的修改全部撤销。</p>
-<p>  git rm XX     删除XX文件</p>
-<p>  git remote add origin <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2V2LXBvd2VyL1hpYW9Zb25n">https://github.com/ev-power/XiaoYong<i class="fa fa-external-link-alt"></i></span> 关联一个远程库</p>
-<p>  git push –u(第一次要用-u 以后不需要) origin master 把当前master分支推送到远程库</p>
-<p>  git clone <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2V2LXBvd2VyL1hpYW9Zb25n">https://github.com/ev-power/XiaoYong<i class="fa fa-external-link-alt"></i></span> 从远程库中克隆</p>
-<p>  git checkout –b dev 创建dev分支 并切换到dev分支上</p>
-<p>  git branch 查看当前所有的分支</p>
-<p>  git checkout master 切换回master分支</p>
-<p>  git merge dev  在当前的分支上合并dev分支</p>
-<p>  git branch –d dev 删除dev分支</p>
-<p>  git branch name 创建分支</p>
-<p>  git stash 把当前的工作隐藏起来 等以后恢复现场后继续工作</p>
-<p>  git stash list 查看所有被隐藏的文件列表</p>
-<p>  git stash apply 恢复被隐藏的文件，但是内容不删除</p>
-<p>  git stash drop 删除文件</p>
-<p>  git stash pop 恢复文件的同时 也删除文件</p>
-<p>  git remote 查看远程库的信息</p>
-<p>  git remote –v 查看远程库的详细信息</p>
-<p>  git push origin master Git会把master分支推送到远程库对应的远程分支上   </p>
 </li>
 </ol>
+<p>   ​            (如果想回退到100个版本，使用git reset –hard HEAD~100 )</p>
+<pre><code> cat XX     查看XX文件内容
+
+ git reflog    查看历史记录的版本号id
+
+ git checkout — XX 把XX文件在工作区的修改全部撤销。
+
+ git rm XX     删除XX文件
+
+ git remote add origin https://github.com/ev-power/XiaoYong 关联一个远程库
+
+ git push –u(第一次要用-u 以后不需要) origin master 把当前master分支推送到远程库
+
+ git clone https://github.com/ev-power/XiaoYong 从远程库中克隆
+
+ git checkout –b dev 创建dev分支 并切换到dev分支上
+
+ git branch 查看当前所有的分支
+
+ git checkout master 切换回master分支
+
+ git merge dev  在当前的分支上合并dev分支
+
+ git branch –d dev 删除dev分支
+
+ git branch name 创建分支
+
+ git stash 把当前的工作隐藏起来 等以后恢复现场后继续工作
+
+ git stash list 查看所有被隐藏的文件列表
+
+ git stash apply 恢复被隐藏的文件，但是内容不删除
+
+ git stash drop 删除文件
+
+ git stash pop 恢复文件的同时 也删除文件
+
+ git remote 查看远程库的信息
+
+ git remote –v 查看远程库的详细信息
+
+ git push origin master Git会把master分支推送到远程库对应的远程分支上   
+</code></pre>
 </li>
 </ol>
 
@@ -742,7 +725,7 @@
     <footer class="post-footer">
           <div class="reward-container">
   <div>Buy me a coffee</div>
-  <button onclick="document.querySelector('.post-reward').classList.toggle('active');">
+  <button>
     赞赏
   </button>
   <div class="post-reward">
@@ -820,28 +803,6 @@
             </div>
         </div>
       </div>
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      const commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
 </div>
   </main>
 
@@ -862,13 +823,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">352k</span>
+    <span title="站点总字数">353k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">5:20</span>
+    <span title="站点阅读时长">5:21</span>
   </span>
 </div>
 
@@ -881,16 +842,14 @@
   </footer>
 
   
-  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.2.1/source/js/utils.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.2.1/source/js/motion.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.2.1/source/js/next-boot.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js" integrity="sha256-EdPgYcPk/IIrw7FYeuJQexva49pVRZNmt3LculEr7zM=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/comments.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/utils.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/motion.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/next-boot.min.js"></script>
 
   
-<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.2.1/source/js/local-search.js"></script>
-
-
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/third-party/search/local-search.min.js"></script>
 
 
 
@@ -900,44 +859,25 @@
 
 
 
-  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.0.0/dist/quicklink.umd.js"></script>
-  <script>
-      window.addEventListener('load', () => {
-      quicklink.listen({
-        timeout : 3000,
-        priority: true,
-        ignores : [uri => uri.includes('#'),uri => uri === 'https://weilining.github.io/%E5%8F%B2%E4%B8%8A%E6%9C%80%E8%AF%A6%E7%BB%86Git%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B.html',]
-      });
-      });
-  </script>
+  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.2.0/dist/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"ignores":null,"url":"https://weilining.github.io/%E5%8F%B2%E4%B8%8A%E6%9C%80%E8%AF%A6%E7%BB%86Git%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B.html"}</script>
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/third-party/quicklink.min.js"></script>
 
+
+<script class="next-config" data-name="valine" type="application/json">{"enable":true,"appId":"Bu6sP4depeiGP22PIFqz0SmJ-MdYXbMMI","appKey":"jYGDeeOBkTqvrUJDEmqj83q7","serverURLs":"https://bu6sp4de.api.lncldglobal.com","placeholder":"Just go go","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"lang":null,"visitor":true,"comment_count":true,"recordIP":false,"enableQQ":false,"requiredFields":[],"el":"#valine-comments","path":"/%E5%8F%B2%E4%B8%8A%E6%9C%80%E8%AF%A6%E7%BB%86Git%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B.html"}</script>
 <script>
-NexT.utils.loadComments('#valine-comments', () => {
-  NexT.utils.getScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', () => {
-    new Valine(Object.assign({"enable":true,"appId":"Bu6sP4depeiGP22PIFqz0SmJ-MdYXbMMI","appKey":"jYGDeeOBkTqvrUJDEmqj83q7","serverURLs":null,"placeholder":"Just go go","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"lang":null,"visitor":true,"comment_count":true,"recordIP":false,"enableQQ":false,"requiredFields":[]}, {
-      el: '#valine-comments',
-      path: "/%E5%8F%B2%E4%B8%8A%E6%9C%80%E8%AF%A6%E7%BB%86Git%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B.html",
-      serverURLs: "https://bu6sp4de.api.lncldglobal.com"
-    }));
-  }, window.Valine);
+document.addEventListener('page:loaded', () => {
+  NexT.utils.loadComments(CONFIG.valine.el)
+    .then(() => NexT.utils.getScript(
+      'https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js',
+      { condition: window.Valine }
+    ))
+    .then(() => {
+      new Valine(CONFIG.valine);
+    });
 });
 </script>
-
-<script>
-NexT.utils.loadComments('#lv-container', () => {
-  window.livereOptions = {
-    refer: "史上最详细Git使用教程.html"
-  };
-  (function(d, s) {
-    var j, e = d.getElementsByTagName(s)[0];
-    if (typeof LivereTower === 'function') { return; }
-    j = d.createElement(s);
-    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-    j.async = true;
-    e.parentNode.insertBefore(j, e);
-  })(document, 'script');
-});
-</script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/third-party/comments/livere.min.js"></script>
 
 
 
