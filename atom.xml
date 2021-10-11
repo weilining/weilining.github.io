@@ -6,7 +6,7 @@
   <link href="https://weilining.github.io/atom.xml" rel="self"/>
   
   <link href="https://weilining.github.io/"/>
-  <updated>2021-01-15T13:07:22.000Z</updated>
+  <updated>2021-10-11T17:04:34.000Z</updated>
   <id>https://weilining.github.io/</id>
   
   <author>
@@ -15,6 +15,23 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>最有效关闭Windows Defender</title>
+    <link href="https://weilining.github.io/244.html"/>
+    <id>https://weilining.github.io/244.html</id>
+    <published>2021-10-11T17:04:34.000Z</published>
+    <updated>2021-10-11T17:04:34.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="win10ltsb测试有效"><a href="#win10ltsb测试有效" class="headerlink" title="win10ltsb测试有效"></a>win10ltsb测试有效</h1><h2 id="蓝奏云"><a href="#蓝奏云" class="headerlink" title="蓝奏云"></a>蓝奏云</h2><p><span class="exturl" data-url="aHR0cHM6Ly9qYXZhcHl0aG9uLmxhbnpvdWkuY29tL2lmTTQ3djhoOWZh">https://javapython.lanzoui.com/ifM47v8h9fa<i class="fa fa-external-link-alt"></i></span></p><h2 id="官方"><a href="#官方" class="headerlink" title="官方"></a>官方</h2><p>Password : sordum</p><p><a href="https://www.sordum.org/eula/"><img data-src="/244/eula.png" alt="Eula license for our freware" loading="lazy"></a><a href="https://www.virustotal.com/gui/file/20c730c7033b5bdc0a6510825e90449ba8f87942d2d7f61fa1ba5f100e98c141/detection"><img data-src="/244/virus_total_clean.png" alt="Virus total clean report " loading="lazy"></a></p><p>File: dfControl.exe<br>MD5 : 10d8e4ca3fa2902859c77f41baee4dda<br>SHA1: 2421ff6f2cfc1aa807eb5781b2980a6e493b31d0<br>SHA256: 20c730c7033b5bdc0a6510825e90449ba8f87942d2d7f61fa1ba5f100e98c141</p><p><a href="https://www.sordum.org/downloads/?st-defender-control"><img data-src="/244/download.png" alt="Download" loading="lazy"></a></p><h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p><span class="exturl" data-url="aHR0cHM6Ly93d3cuc29yZHVtLm9yZy85NDgwL2RlZmVuZGVyLWNvbnRyb2wtdjItMC8=">Defender Control v2.0 (sordum.org)<i class="fa fa-external-link-alt"></i></span></p>]]></content>
+    
+    
+    <summary type="html">默认</summary>
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>hexo next 随机友情链接</title>
@@ -382,27 +399,6 @@
     <updated>2020-12-21T05:02:20.000Z</updated>
     
     <content type="html"><![CDATA[<span id="more"></span><p>一、亲测 /和/*区别</p><p>在springboot中建了一个过滤器，测试</p><p><img data-src="/225/1001313-20190212212942450-433613516.png" alt="img" loading="lazy"></p><p>当请求为/user/login的时候可以被拦截，当为/page/login.html页面的时候不拦截</p><p><img data-src="/225/1001313-20190212213608480-1119617961.png" alt="img" loading="lazy"></p><p> 当请求为/user/login的时候可以被拦截，当为/page/login.html页面的时候也会被拦截</p><p>所以综上，/不会拦截页面，只会拦截路径。</p><p>/* 会路径和页面</p><p>二、/* 和 /**</p><p>/* 是拦截所有的文件夹，不包含子文件夹<br>/** 是拦截所有的文件夹及里面的子文件夹</p><p>相当于/*只有后面一级</p><p>/** 可以包含多级 </p>]]></content>
-    
-    
-    <summary type="html">默认</summary>
-    
-    
-    
-    <category term="默认" scheme="https://weilining.github.io/categories/%E9%BB%98%E8%AE%A4/"/>
-    
-    
-    <category term="默认" scheme="https://weilining.github.io/tags/%E9%BB%98%E8%AE%A4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>图标库使用</title>
-    <link href="https://weilining.github.io/224.html"/>
-    <id>https://weilining.github.io/224.html</id>
-    <published>2020-12-21T03:29:55.000Z</published>
-    <updated>2020-12-21T03:29:55.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="官网"><a href="#官网" class="headerlink" title="官网"></a>官网</h2><p><span class="exturl" data-url="aHR0cHM6Ly9mb250YXdlc29tZS5jb20vaWNvbnM/ZD1nYWxsZXJ5">https://fontawesome.com/icons?d=gallery<i class="fa fa-external-link-alt"></i></span></p><p>镜像<span class="exturl" data-url="aHR0cHM6Ly9mb250YXdlc29tZS5kYXNoZ2FtZS5jb20v">https://fontawesome.dashgame.com/<i class="fa fa-external-link-alt"></i></span></p><span id="more"></span><h2 id="引入库"><a href="#引入库" class="headerlink" title="引入库"></a>引入库</h2><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css&quot;</span> <span class="attr">media</span>=<span class="string">&quot;print&quot;</span> <span class="attr">onload</span>=<span class="string">&quot;this.media=&#x27;all&#x27;&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;fab fa-qq&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br></pre></td></tr></table></figure>]]></content>
     
     
     <summary type="html">默认</summary>
