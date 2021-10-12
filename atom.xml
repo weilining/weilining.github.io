@@ -6,7 +6,7 @@
   <link href="https://weilining.github.io/atom.xml" rel="self"/>
   
   <link href="https://weilining.github.io/"/>
-  <updated>2021-10-12T03:01:00.000Z</updated>
+  <updated>2021-10-12T06:04:08.000Z</updated>
   <id>https://weilining.github.io/</id>
   
   <author>
@@ -15,6 +15,23 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>玩转黑群晖</title>
+    <link href="https://weilining.github.io/252.html"/>
+    <id>https://weilining.github.io/252.html</id>
+    <published>2021-10-12T06:04:08.000Z</published>
+    <updated>2021-10-12T06:04:08.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="黑群晖"><a href="#黑群晖" class="headerlink" title="黑群晖"></a>黑群晖</h2><p> 引导下载<span class="exturl" data-url="aHR0cHM6Ly94cGVub2xvZ3kuY2x1Yi9kb3dubG9hZHMv">Downloads – XPEnology Club<i class="fa fa-external-link-alt"></i></span></p><p>系统下载:ds918+为例</p><p><span class="exturl" data-url="aHR0cHM6Ly93d3cuc3lub2xvZ3kuY24vemgtY24vc3VwcG9ydC9kb3dubG9hZC9EUzkxOCsjc3lzdGVt">下载中心 - DS918+ | Synology 群晖科技<i class="fa fa-external-link-alt"></i></span></p>]]></content>
+    
+    
+    <summary type="html">默认</summary>
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>DiskGenius破解专业版合辑(更新至5.4.2)</title>
@@ -74,7 +91,7 @@
     <published>2021-10-12T02:00:33.000Z</published>
     <updated>2021-10-12T02:00:33.000Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="蓝奏云"><a href="#蓝奏云" class="headerlink" title="蓝奏云"></a>蓝奏云</h2><p><span class="exturl" data-url="aHR0cHM6Ly9qYXZhcHl0aG9uLmxhbnpvdWkuY29tL2lzNUNCdjhvcHdm">https://javapython.lanzoui.com/is5CBv8opwf<i class="fa fa-external-link-alt"></i></span></p><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p> <span class="exturl" data-url="aHR0cHM6Ly93d3cucml6b25lc29mdC5jb20vZG93bmxvYWRzL2NvbXBsZXRlLWludGVybmV0LXJlcGFpci8=">https://www.rizonesoft.com/downloads/complete-internet-repair/<i class="fa fa-external-link-alt"></i></span></p>]]></content>
+    <content type="html"><![CDATA[<h2 id="一键解决所有网络问题"><a href="#一键解决所有网络问题" class="headerlink" title="一键解决所有网络问题"></a>一键解决所有网络问题</h2><p>蓝奏云：<span class="exturl" data-url="aHR0cHM6Ly9qYXZhcHl0aG9uLmxhbnpvdWkuY29tL2lzNUNCdjhvcHdm">https://javapython.lanzoui.com/is5CBv8opwf<i class="fa fa-external-link-alt"></i></span></p><h2 id="其他网络问题"><a href="#其他网络问题" class="headerlink" title="其他网络问题"></a>其他网络问题</h2><p>最近Windows更新后修改了原网络反馈服务器，导致正常网络连接状态下仍可能显示网络小地球Internet未连接，也就是电脑上网完全正常，但网络图标显示异常，如何处理？</p><p><img data-src="/248/ABUIABAEGAAgyvOOiwYotLSJITCbBDjNBg.png" alt="222.png" loading="lazy"></p><p>针对此问题总结四种解决方案以供参考讨论</p><p>方法一：关闭ipv4校验</p><p>打开网络共享中心，依次点击以太网--属性--配置--高级--IPV4硬件校验和--关闭--等待30s恢复正常。</p><p>方法二：修改注册表使win10网络反馈指向旧服务器</p><p>Windows Registry Editor Version 5.00<br>[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NlaSvc\Parameters\Internet]<br>&quot;ActiveDnsProbeContent&quot;=&quot;131.107.255.255&quot;<br>&quot;ActiveDnsProbeContentV6&quot;=&quot;fd3e:4f5a:5b81::1&quot;<br>&quot;ActiveDnsProbeHost&quot;=&quot;dns.msftncsi.com&quot;<br>&quot;ActiveDnsProbeHostV6&quot;=&quot;dns.msftncsi.com&quot;<br>&quot;ActiveWebProbeContent&quot;=&quot;Microsoft NCSI&quot;<br>&quot;ActiveWebProbeContentV6&quot;=&quot;Microsoft NCSI&quot;<br>&quot;ActiveWebProbeHost&quot;=&quot;<span class="exturl" data-url="aHR0cDovL3d3dy5tc2Z0bmNzaS5jb20iLw==">www.msftncsi.com&quot;<i class="fa fa-external-link-alt"></i></span><br>&quot;ActiveWebProbeHostV6&quot;=&quot;ipv6.msftncsi.com&quot;<br>&quot;ActiveWebProbePath&quot;=&quot;ncsi.txt&quot;<br>&quot;ActiveWebProbePathV6&quot;=&quot;ncsi.txt&quot;<br>&quot;EnableActiveProbing&quot;=dword:00000001<br>&quot;PassivePollPeriod&quot;=dword:0000000f<br>&quot;StaleThreshold&quot;=dword:0000001e<br>&quot;WebTimeout&quot;=dword:00000023<br>[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NlaSvc\Parameters\Internet\ManualPro</p><p>将上面内容保存为reg注册表文件，导入注册表即可。</p><p>方法三：重置网络</p><p>WIN+R→cmd→netsh winsock reset【如果是固定IP，务必提前记下IP地址】</p><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p> <span class="exturl" data-url="aHR0cHM6Ly93d3cucml6b25lc29mdC5jb20vZG93bmxvYWRzL2NvbXBsZXRlLWludGVybmV0LXJlcGFpci8=">https://www.rizonesoft.com/downloads/complete-internet-repair/<i class="fa fa-external-link-alt"></i></span></p>]]></content>
     
     
     <summary type="html">默认</summary>
@@ -350,27 +367,6 @@
     <updated>2020-12-27T03:34:10.000Z</updated>
     
     <content type="html"><![CDATA[<p><span class="exturl" data-url="aHR0cHM6Ly93d3cuZW1vamlkYXF1YW4uY29tLw==">https://www.emojidaquan.com/<i class="fa fa-external-link-alt"></i></span></p><span id="more"></span>]]></content>
-    
-    
-    <summary type="html">默认</summary>
-    
-    
-    
-    <category term="默认" scheme="https://weilining.github.io/categories/%E9%BB%98%E8%AE%A4/"/>
-    
-    
-    <category term="默认" scheme="https://weilining.github.io/tags/%E9%BB%98%E8%AE%A4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CSS禁止复制页面</title>
-    <link href="https://weilining.github.io/232.html"/>
-    <id>https://weilining.github.io/232.html</id>
-    <published>2020-12-25T16:58:58.000Z</published>
-    <updated>2020-12-25T16:58:58.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>亲测有效</p><span id="more"></span> <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">*&#123;</span><br><span class="line"></span><br><span class="line">-webkit-touch-callout:none;&#x2F;*系统默认菜单被禁用*&#x2F;</span><br><span class="line"></span><br><span class="line">    -webkit-user-select:none;&#x2F;*webkit浏览器*&#x2F;</span><br><span class="line"></span><br><span class="line">    -khtml-user-select:none;&#x2F;*早期浏览器*&#x2F;</span><br><span class="line"></span><br><span class="line">    -moz-user-select:none;&#x2F;*火狐*&#x2F;</span><br><span class="line"></span><br><span class="line">    -ms-user-select:none;&#x2F;*IE10*&#x2F;</span><br><span class="line"></span><br><span class="line">    user-select:none;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
     
     
     <summary type="html">默认</summary>
