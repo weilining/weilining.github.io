@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.jsdelivr.net/gh/weilining/img@main/img/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.jsdelivr.net/gh/weilining/img@main/img/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://cdn.jsdelivr.net/gh/weilining/img@main/img/favicon-16x16-next.png">
+  <link rel="mask-icon" href="https://cdn.jsdelivr.net/gh/weilining/img@main/img/logo.svg" color="#222">
+  <meta name="google-site-verification" content="OjGymv9uAqWYDsr-E-j6DG2k1_mPXsDQF77kgEK0nz8">
+  <meta name="msvalidate.01" content="5C84BC77E02800759CE29C4ACCE487BD">
+  <meta name="yandex-verification" content="06c62a93328de5da">
+  <meta name="baidu-site-verification" content="code-wFDrn4lvkD">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.dogedoge.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"weilining.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.8.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/config.min.js"></script>
+<meta name="description" content="默认">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Windows&#x2F;Linux&#x2F;macOS十分钟搭建 Hexo 教程">
+<meta property="og:url" content="https://weilining.github.io/255.html">
+<meta property="og:site_name" content="Ln&#39;s Blog">
+<meta property="og:description" content="默认">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://weilining.github.io/255/win-nodejs.webp">
+<meta property="og:image" content="https://weilining.github.io/255/check-envi.webp">
+<meta property="og:image" content="https://weilining.github.io/255/github-ssh-key.webp">
+<meta property="og:image" content="https://weilining.github.io/255/ssh-github.webp">
+<meta property="og:image" content="https://weilining.github.io/255/github-pages.webp">
+<meta property="og:image" content="https://weilining.github.io/255/customize-domain.webp">
+<meta property="article:published_time" content="2021-10-12T17:38:26.000Z">
+<meta property="article:modified_time" content="2021-10-12T17:38:26.000Z">
+<meta property="article:author" content="Lining Wei">
+<meta property="article:tag" content="ACM,开发者,程序猿,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,互联网一切折腾">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://weilining.github.io/255/win-nodejs.webp">
+
+
+<link rel="canonical" href="https://weilining.github.io/255.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://weilining.github.io/255.html","path":"255.html","title":"Windows/Linux/macOS十分钟搭建 Hexo 教程"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Windows/Linux/macOS十分钟搭建 Hexo 教程 | Ln's Blog</title>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="Ln's Blog" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Ln's Blog</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">有朋自远方来，不亦乐乎</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-bell fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-top"><a href="/top/" rel="section"><i class="fa fa-signal fa-fw"></i>热榜</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-friends"><a href="/friends/" rel="section"><i class="fa fa-globe-asia fa-fw"></i>朋友们</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo-%E7%AE%80%E4%BB%8B"><span class="nav-number">1.</span> <span class="nav-text">Hexo 简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C"><span class="nav-number">2.</span> <span class="nav-text">准备工作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Windows"><span class="nav-number">2.1.</span> <span class="nav-text">Windows</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Scoop-%E5%AE%89%E8%A3%85"><span class="nav-number">2.1.1.</span> <span class="nav-text">Scoop 安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%89%8B%E5%8A%A8%E5%AE%89%E8%A3%85"><span class="nav-number">2.1.2.</span> <span class="nav-text">手动安装</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Linux"><span class="nav-number">2.2.</span> <span class="nav-text">Linux</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Debian-Ubuntu"><span class="nav-number">2.2.1.</span> <span class="nav-text">Debian&#x2F;Ubuntu</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ArchLinux-Manjaro"><span class="nav-number">2.2.2.</span> <span class="nav-text">ArchLinux&#x2F;Manjaro</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#openSUSE"><span class="nav-number">2.2.3.</span> <span class="nav-text">openSUSE</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#macOS"><span class="nav-number">2.3.</span> <span class="nav-text">macOS</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-Hexo"><span class="nav-number">3.</span> <span class="nav-text">安装 Hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%A8%E5%B1%80%E5%AE%89%E8%A3%85-Hexo"><span class="nav-number">3.1.</span> <span class="nav-text">全局安装 Hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Windows-1"><span class="nav-number">3.1.1.</span> <span class="nav-text">Windows</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Linux-macOS"><span class="nav-number">3.1.2.</span> <span class="nav-text">Linux&#x2F;macOS</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96%E5%8D%9A%E5%AE%A2"><span class="nav-number">3.2.</span> <span class="nav-text">初始化博客</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%AC%E5%9C%B0%E9%A2%84%E8%A7%88"><span class="nav-number">3.3.</span> <span class="nav-text">本地预览</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GitHub-%E6%89%98%E7%AE%A1%E7%BD%91%E7%AB%99"><span class="nav-number">4.</span> <span class="nav-text">GitHub 托管网站</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%87%E7%BA%A7-Hexo"><span class="nav-number">5.</span> <span class="nav-text">升级 Hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%B9%E4%BA%8E-npm-%E5%AE%89%E8%A3%85%E7%9A%84-Hexo"><span class="nav-number">5.1.</span> <span class="nav-text">对于 npm 安装的 Hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%B9%E4%BA%8E-yarn-%E5%AE%89%E8%A3%85%E7%9A%84-Hexo"><span class="nav-number">5.2.</span> <span class="nav-text">对于 yarn 安装的 Hexo</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo-%E4%B9%8B%E7%A6%85"><span class="nav-number">6.</span> <span class="nav-text">Hexo 之禅</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%95%E4%BC%B8%E9%98%85%E8%AF%BB"><span class="nav-number">7.</span> <span class="nav-text">引伸阅读</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Lining Wei"
+      src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/icon.gif">
+  <p class="site-author-name" itemprop="name">Lining Wei</p>
+  <div class="site-description" itemprop="description">算法、技术</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">255</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">35</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="cc-license site-overview-item animated" itemprop="license">
+    <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC96aC1DTg=="><img src="https://cdn.jsdelivr.net/npm/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></span>
+  </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://weilining.github.io/255.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/weilining/img@main/img/icon.gif">
+      <meta itemprop="name" content="Lining Wei">
+      <meta itemprop="description" content="算法、技术">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ln's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Windows/Linux/macOS十分钟搭建 Hexo 教程<span class="exturl post-edit-link" data-url="aHR0cHM6Ly9naXRodWIuY29tL3dlaWxpbmluZy9ibG9nL2VkaXQvbWFpbi9zb3VyY2UvX3Bvc3RzLzI1NS5tZA==" title="编辑"><i class="fa fa-pen-nib"></i></span>
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-10-13 01:38:26" itemprop="dateCreated datePublished" datetime="2021-10-13T01:38:26+08:00">2021-10-13</time>
+    </span>
+
+  
+    <span id="/255.html" class="post-meta-item leancloud_visitors" data-flag-title="Windows/Linux/macOS十分钟搭建 Hexo 教程" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>5.1k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>5 分钟</span>
+    </span>
+</div>
+
+            <div class="post-description">默认</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p> 前言</p>
+<p>在开始前，请思考下：现在已经是 2021 年了，我真的需要搭建并花费大量时间去维护自己的个人博客吗？</p>
+<p>在十多年前，互联网刚开始发展的时候，『博客』是很流行的东西，近些年伴随着移动互联网的高速发展，个人博客逐渐式微已经是不争的事实。按照『马太效应』，这样的现状只会愈加严重。十年前的互联网环境和现在互联网环境有着天壤之别，微博、微信、Twitter、Instagram、Tikotok、Facebook……正好满足了现代人对『快餐文化』、『碎片化』信息的需求，相比这些「微平台」的发言成本和门槛，个人博客门槛要相对高得多。</p>
+<p>在中国大陆地区，如果你要使用中国大陆内的网络服务，你需要进行中国工业化信息部的 ICP 备案，在部分地区公安备案也是必须的（如：上海市），你的个人网站的内容和言论会收到网络审查和监督（在「微平台」亦然如此），浪费了很多时间和精力，还不能『好好说话』，为什么不继续用这些「微平台」呢？</p>
+<p>种种因素，造就个人博客逐渐没落和灭亡，但如果在考虑了以上因素你仍然希望拥有一个自己的博客，那是时候开始了！</p>
+<p>作为基础教程，本文以本地搭建 Hexo 环境生成静态文件推送到 GitHub 仓库并使用 GitHub Pages 托管为例，做一个引子，了解了基本功能，后续可以更换自己喜欢的主题，使用其他平台托管网站等等~</p>
+<h2 id="Hexo-简介"><a href="#Hexo-简介" class="headerlink" title="Hexo 简介"></a>Hexo 简介</h2><p>Hexo 是一款基于 Node.js 快速、简洁且高效的博客框架，通过 Node.js 将本地的每一篇 Markdown 文章渲染成 html 网页文件，这样我们的博客就是纯静态的网页，如果我们需要修改文章直接修改对应的 Markdown 文件再重新生成静态网页就好了。Node.js 默认的包管理器是 npm ，<span class="exturl" data-url="aHR0cHM6Ly93d3cuZGVqYXZ1Lm1vZS8=">博主<i class="fa fa-external-link-alt"></i></span> 建议使用 yarn 做为 Hexo 的包管理器，当然根据自己喜好即可。如果使用 Git 管理文章的话，就不用担心文章丢失了，也可以随意回滚版本，这属于 Git 的范畴，本文不做深入讨论</p>
+<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><p>假设你现在有一台计算机，Windows、Linux 或者 macOS 都可以，首先我们需要安装 Node.js、Git、npm、yarn 这些 Hexo 需要的工具</p>
+<h3 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h3><h4 id="Scoop-安装"><a href="#Scoop-安装" class="headerlink" title="Scoop 安装"></a>Scoop 安装</h4><p>在 Windows 下建议使用 Scoop 来安装环境，可以大幅度降低配置成本，👉 详见 <span class="exturl" data-url="aHR0cHM6Ly93d3cuZGVqYXZ1Lm1vZS9wb3N0cy93aW5kb3dzLXNjb29wLw==">在 Windows 下使用 Scoop 管理软件<i class="fa fa-external-link-alt"></i></span></p>
+<p>按照上面安装好 scoop 后，准备 Hexo 所需环境很简单</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 安装 nodejs yarn git </span><br><span class="line">$ scoop install nodejs-lts git yarn</span><br></pre></td></tr></table></figure>
+
+<p>否则，请按照 👇 下面「手动安装环境」步骤安装</p>
+<h4 id="手动安装"><a href="#手动安装" class="headerlink" title="手动安装"></a>手动安装</h4><p>对于 Windows，安装 Node.js 会一起安装 npm，yarn 可以通过 npm 安装也可以直接下载 yarn 的安装程序，安装过程如下：</p>
+<blockquote>
+<p>安装 Node.js，建议 LTS 版，🔗 <span class="exturl" data-url="aHR0cHM6Ly9ub2RlanMub3JnL2VuL2Rvd25sb2FkLw==">官方下载<i class="fa fa-external-link-alt"></i></span></p>
+</blockquote>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://cdn.jsdelivr.net/npm/dejavumoe@0.1.2/win-nodejs.webp"><img data-src="/255/win-nodejs.webp" alt="Windows Nodejs" loading="lazy"></a></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L25wbS9kZWphdnVtb2VAMC4xLjIvd2luLW5vZGVqcy53ZWJw">Windows Nodejs<i class="fa fa-external-link-alt"></i></span></p>
+<blockquote>
+<p>安装 Git，🔗 <span class="exturl" data-url="aHR0cHM6Ly9naXQtc2NtLmNvbS8=">官方下载<i class="fa fa-external-link-alt"></i></span></p>
+</blockquote>
+<p>下载后直接一路 <code>Next</code> 安装即可</p>
+<blockquote>
+<p>安装 yarn，🔗 <span class="exturl" data-url="aHR0cHM6Ly9jbGFzc2ljLnlhcm5wa2cuY29tL2xhdGVzdC5tc2k=">官方下载<i class="fa fa-external-link-alt"></i></span></p>
+</blockquote>
+<h3 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h3><p>以常见的 Linux 发行版为例</p>
+<h4 id="Debian-Ubuntu"><a href="#Debian-Ubuntu" class="headerlink" title="Debian/Ubuntu"></a>Debian/Ubuntu</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo apt update</span><br><span class="line">$ sudo apt install nodejs npm git yarn</span><br></pre></td></tr></table></figure>
+
+<h4 id="ArchLinux-Manjaro"><a href="#ArchLinux-Manjaro" class="headerlink" title="ArchLinux/Manjaro"></a>ArchLinux/Manjaro</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo pacman -Syy</span><br><span class="line">$ sudo pacman -S nodejs npm git yarn</span><br></pre></td></tr></table></figure>
+
+<h4 id="openSUSE"><a href="#openSUSE" class="headerlink" title="openSUSE"></a>openSUSE</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo zypper refresh</span><br><span class="line">$ sudo zypper install nodejs npm git yarn</span><br></pre></td></tr></table></figure>
+
+<h3 id="macOS"><a href="#macOS" class="headerlink" title="macOS"></a>macOS</h3><p>确保你的 macOS 已经安装了 homebrew，如果没有的话，使用以下命令安装 homebrew：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ &#x2F;bin&#x2F;bash -c &quot;$(curl -fsSL https:&#x2F;&#x2F;raw.GitHubusercontent.com&#x2F;Homebrew&#x2F;install&#x2F;HEAD&#x2F;install.sh)&quot;</span><br></pre></td></tr></table></figure>
+
+<p>然后使用 homebrew 安装所需工具：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ brew install git node yarn npm</span><br></pre></td></tr></table></figure>
+
+<p>在你的系统安装好后，在你的 Terminl/Bash 中检查安装是否正确</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ node -v</span><br><span class="line">$ git --version</span><br><span class="line">$ npm -v</span><br><span class="line">$ yarn -v</span><br></pre></td></tr></table></figure>
+
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://cdn.jsdelivr.net/npm/dejavumoe@0.1.2/check-envi.webp"><img data-src="/255/check-envi.webp" alt="检查安装" loading="lazy"></a></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L25wbS9kZWphdnVtb2VAMC4xLjIvY2hlY2stZW52aS53ZWJw">检查安装<i class="fa fa-external-link-alt"></i></span></p>
+<p>类似输出正确的版本号，应该安装没有问题了，现在我们本地搭建 Hexo 的环境就好了</p>
+<h2 id="安装-Hexo"><a href="#安装-Hexo" class="headerlink" title="安装 Hexo"></a>安装 Hexo</h2><h3 id="全局安装-Hexo"><a href="#全局安装-Hexo" class="headerlink" title="全局安装 Hexo"></a>全局安装 Hexo</h3><p>打开系统的 Terminal/Bash，全局安装 Hexo</p>
+<h4 id="Windows-1"><a href="#Windows-1" class="headerlink" title="Windows"></a>Windows</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 如果使用 yarn</span><br><span class="line">$ yarn global add hexo-cli</span><br><span class="line"># 或者使用 npm</span><br><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+
+<h4 id="Linux-macOS"><a href="#Linux-macOS" class="headerlink" title="Linux/macOS"></a>Linux/macOS</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># npm 安装和 yarn 安装二选一即可</span><br><span class="line">$ sudo npm install -g hexo-cli </span><br><span class="line"># 或者</span><br><span class="line">$ sudo yarn global add hexo-cli</span><br></pre></td></tr></table></figure>
+
+<p>现在我们的 Hexo 已经在本地计算机安装好了，下面我们从自己的第一个 Blog 开始</p>
+<h3 id="初始化博客"><a href="#初始化博客" class="headerlink" title="初始化博客"></a>初始化博客</h3><p>此步骤对于上面的系统应该都是一样的步骤，在你想要存放本地 Blog 源文件的目录打开 Terminal/Bash</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 初始化一个 Hexo 目录</span><br><span class="line">$ hexo init Blog</span><br><span class="line"># 进入 Blog 目录</span><br><span class="line">$ cd Blog</span><br><span class="line"># 安装依赖，依然是 npm 和 yarn 二选一</span><br><span class="line">$ npm install</span><br><span class="line"># 或者</span><br><span class="line">$ yarn install</span><br></pre></td></tr></table></figure>
+
+<p>此时 Blog 目录下有类似下面的目录结构</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.</span><br><span class="line">├── .GitHub </span><br><span class="line">├── node_modules   # Hexo 所需依赖</span><br><span class="line">├── _config.yml    # Hexo 全局配置文件</span><br><span class="line">├── package.json   # npm软件包及版本信息</span><br><span class="line">├── scaffolds      # 模版文件夹</span><br><span class="line">|   ├── draft.md   # 草稿模板</span><br><span class="line">|   ├── page.md    # 页面模板</span><br><span class="line">|   └── post.md    # 文章模板</span><br><span class="line">├── source         # 资源文件夹</span><br><span class="line">|   ├── _drafts    # 草稿文件夹</span><br><span class="line">|   └── _posts     # 文章文件夹</span><br><span class="line">├── .gitignore     # Git 忽略文件信息</span><br><span class="line">├── _config.[主题名].yml # 主题的配置文件</span><br><span class="line">└── themes         # 主题文件夹</span><br></pre></td></tr></table></figure>
+
+<h3 id="本地预览"><a href="#本地预览" class="headerlink" title="本地预览"></a>本地预览</h3><p>在 Blog 目录打开 Terminal/Bash 使用命令 <code>hexo s -p [端口号]</code> 启动本地预览，默认端口为 <code>4000</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 以默认端口启动本地预览</span><br><span class="line">$ hexo s</span><br><span class="line"># 此时本地预览的网址为 http:&#x2F;&#x2F;localhost:4000</span><br><span class="line"></span><br><span class="line"># 以自定义端口启动本地预览，比如 250</span><br><span class="line">$ hexo s -p 250</span><br><span class="line"># 此时本地预览的网址为 http:&#x2F;&#x2F;localhost:250</span><br></pre></td></tr></table></figure>
+
+<p>现在本地的 Hexo 已经搭建完成了，接下来聊聊将本地生成的 Hexo 静态网页推送到 GitHub 仓库并使用 GitHub Pages 服务托管我们的网站</p>
+<h2 id="GitHub-托管网站"><a href="#GitHub-托管网站" class="headerlink" title="GitHub 托管网站"></a>GitHub 托管网站</h2><p>首先肯定得有一个 GitHub 账号，没有的话就注册一个，记得别用国内的 QQ 邮箱之流，以后有的坑（这是后话了）</p>
+<p><strong>连接本地 Git 和 GitHub</strong></p>
+<p>打开本地 Terminal/Bash</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git config --global user.name &quot;username&quot;   # username是你的GitHub用户名，注意大小写</span><br><span class="line">$ git config --global user.email &quot;email&quot;     # email是注册 GitHub的邮箱</span><br><span class="line">$ ssh-keygen -t ed25519 -C &quot;email&quot;           # 生成ed25519密钥对，email同上</span><br></pre></td></tr></table></figure>
+
+<p>默认密钥对在用户目录的 <code>.ssh</code> 目录下，在该目录你可以看到 <code>id_rsa</code> 和 <code>id_rsa.pub</code> ，使用文本编辑器打开 <code>id_rsa.pub</code> 文件并复制</p>
+<p>打开 GitHub，点击头像的 <code>settings</code> 选项进入设置，在 SSH and GPG keys 中粘贴 <code>id_rsa.pub</code> 内容，并点击 <code>Add SSH key</code></p>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://cdn.jsdelivr.net/npm/dejavumoe@0.1.2/github-ssh-key.webp"><img data-src="/255/github-ssh-key.webp" alt="添加GitHub SSH Key" loading="lazy"></a></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L25wbS9kZWphdnVtb2VAMC4xLjIvZ2l0aHViLXNzaC1rZXkud2VicA==">添加GitHub SSH Key<i class="fa fa-external-link-alt"></i></span></p>
+<p>回到本地的 Terminal/Bash，输入命令连接 GitHub</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+
+<p>出现一个 hostname 提示输入 <code>yes</code> 回车，类似下面的提示就代表没问题了</p>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://cdn.jsdelivr.net/npm/dejavumoe@0.1.2/ssh-github.webp"><img data-src="/255/ssh-github.webp" alt="本地连接GitHub完成" loading="lazy"></a></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L25wbS9kZWphdnVtb2VAMC4xLjIvc3NoLWdpdGh1Yi53ZWJw">本地连接GitHub完成<i class="fa fa-external-link-alt"></i></span></p>
+<p>回到 GitHub，新建一个名为 <code>username.github.io</code> 的仓库，<code>username</code> 是你的 GitHub 用户名如果你不是 GitHub Pro 用户，这个仓库应该要设置为 Public 可见？我忘记了，那就设置为 Public 吧</p>
+<p>修改 Blog 目录下的 Hexo 全局配置文件 <code>_config.yml</code> 的 <code>deploy</code> 字段</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo:</span><br><span class="line">    github: https:&#x2F;&#x2F;github.com&#x2F;username&#x2F;username.github.io.git  # username是Github用户名</span><br><span class="line">  branch: master                                                # 部署到仓库的分支名</span><br></pre></td></tr></table></figure>
+
+<p><strong>安装 Hexo 推送 Git 插件</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># npm 安装和 yarn 安装二选一即可</span><br><span class="line">$ npm install hexo-deployer-git --save</span><br><span class="line"># 或者</span><br><span class="line">$ yarn add hexo-deployer-git</span><br></pre></td></tr></table></figure>
+
+<p><strong>测试推送网站静态文件到 GitHub 仓库</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ hexo clean  # 清除生成的静态文件和缓存</span><br><span class="line">$ hexo g      # 生成新的博客静态文件</span><br><span class="line">$ hexo s      # 启动本地预览</span><br><span class="line">$ hexo d      # 推送博客静态文件到远程仓库</span><br></pre></td></tr></table></figure>
+
+<p><strong>如果每次推送都需要输入 GitHub 用户名密码</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git config --global credential.helper store</span><br></pre></td></tr></table></figure>
+
+<p>前面都没问题的话，现在你的博客应该推送到 GitHub 仓库了，如下图所示打开 GitHub 仓库的 Pages 服务，注意对应仓库的分支和路径</p>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://cdn.jsdelivr.net/npm/dejavumoe@0.1.2/github-pages.webp"><img data-src="/255/github-pages.webp" alt="打开Pages服务" loading="lazy"></a></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L25wbS9kZWphdnVtb2VAMC4xLjIvZ2l0aHViLXBhZ2VzLndlYnA=">打开Pages服务<i class="fa fa-external-link-alt"></i></span></p>
+<p><strong>GitHub Pages 绑定自定义域名</strong></p>
+<p>GitHub Pages 默认提供的是它免费提供的 github.io 的二级域名，如果你有一个自己的域名，绑定自己的域名当然更好了</p>
+<p>在 <code>Blog</code> 目录的 <code>source</code> 下新建一个名为 <code>CNAME</code> 的文件（无文件后缀，注意大小写），里面写上想要绑定的域名</p>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://cdn.jsdelivr.net/npm/dejavumoe@0.1.2/customize-domain.webp"><img data-src="/255/customize-domain.webp" alt="绑定自定义域名" loading="lazy"></a></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L25wbS9kZWphdnVtb2VAMC4xLjIvY3VzdG9taXplLWRvbWFpbi53ZWJw">绑定自定义域名<i class="fa fa-external-link-alt"></i></span></p>
+<p><code>hexo cl &amp;&amp; hexo g &amp;&amp; hexo d</code> 推送更新到 GitHub 仓库，在域名的 DNS 解析记录增加一条 CNAME 解析到 <code>username.github.io.</code> 的记录，稍等片刻 DNS 解析记录生效后，去 GitHub 仓库的 <code>Settings</code> 的 <code>Pages</code> 字段设置你的自定义域名并强制启用 HTTPS，现在你的博客应该可以通过 <code>https://your.domain</code> 访问了</p>
+<h2 id="升级-Hexo"><a href="#升级-Hexo" class="headerlink" title="升级 Hexo"></a>升级 Hexo</h2><p>Hexo 由热爱开源的开发者们更新维护，如果 Hexo 发布了新版本，升级也很简单</p>
+<h3 id="对于-npm-安装的-Hexo"><a href="#对于-npm-安装的-Hexo" class="headerlink" title="对于 npm 安装的 Hexo"></a>对于 npm 安装的 Hexo</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 查看hexo版本信息</span><br><span class="line">$ hexo -v</span><br><span class="line"># 全局升级 hexo-cli</span><br><span class="line">$ npm install hexo-cli -g</span><br><span class="line"># 检查升级</span><br><span class="line">$ npm install -g npm-check</span><br><span class="line">$ npm-check</span><br><span class="line"># 开始升级</span><br><span class="line">$ npm install -g npm-check-updates</span><br><span class="line">$ npm-upgrade</span><br><span class="line"># 更新全局依赖</span><br><span class="line">$ npm update -g</span><br><span class="line">$ npm update --save</span><br></pre></td></tr></table></figure>
+
+<h3 id="对于-yarn-安装的-Hexo"><a href="#对于-yarn-安装的-Hexo" class="headerlink" title="对于 yarn 安装的 Hexo"></a>对于 yarn 安装的 Hexo</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 查看hexo版本</span><br><span class="line">$ hexo -v</span><br><span class="line"># 全局升级hexo-cli</span><br><span class="line">$ yarn global add hexo-cli</span><br><span class="line"># yarn添加 npm-check-updates</span><br><span class="line">$ yarn global add npm-check-updates</span><br><span class="line"># 升级全部依赖，yarn.lock和package.json也会被更新</span><br><span class="line">$ ncu --upgrade --upgrade All</span><br><span class="line"># 全局更新</span><br><span class="line">$ yarn upgrade --latest</span><br><span class="line"># 安装依赖</span><br><span class="line">$ yarn install</span><br><span class="line"># 或者只需要一步代替上面yarn更新hexo步骤（忽略package.json指定的版本范围所有的都将被升级到最新版）</span><br><span class="line">$ yarn upgrade-interactive --latest</span><br></pre></td></tr></table></figure>
+
+<h2 id="Hexo-之禅"><a href="#Hexo-之禅" class="headerlink" title="Hexo 之禅"></a>Hexo 之禅</h2><p>在上面的步骤完成后，你可能对默认的主题不满意，Hexo 目前有上百个主题，其中绝大部分都是免费开源并且长期有作者维护的，你可以在 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL3RoZW1lcy8=">Hexo-Theme<i class="fa fa-external-link-alt"></i></span> 和 <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3NlYXJjaD9xPWhleG8tdGhlbWU=">Github 搜索<i class="fa fa-external-link-alt"></i></span> 查看、挑选你喜欢的主题（当然大佬也可以自己写 😄 ）</p>
+<p><strong>👿 <span class="exturl" data-url="aHR0cHM6Ly93d3cuZGVqYXZ1Lm1vZS8=">博主<i class="fa fa-external-link-alt"></i></span> 忠告：</strong>Hexo 主题的挑选和域名的挑选一样重要，请一定要慎重考虑！</p>
+<p>请看 《 Hexo 之禅 》：</p>
+<ul>
+<li>折腾主题是Hexo的最大原罪。专注于创作，而不是令人眼花缭乱的效果。名家之博，不假于主题之花哨，而得知于内容；</li>
+<li>样式千万种，花哨莫去求。主题若彩虹，遇上方知有；</li>
+<li>有问题记得首先去查看 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL3poLWNuLw==">官方文档<i class="fa fa-external-link-alt"></i></span>，善用搜索引擎。没有人有义务的无条件帮你；</li>
+<li>善于分享，赠人玫瑰手有余香。写作是检索你对知识理解程度的手段，而分享是你继续创作的动力；</li>
+<li>不忘初心，方得始终。</li>
+</ul>
+<h2 id="引伸阅读"><a href="#引伸阅读" class="headerlink" title="引伸阅读"></a>引伸阅读</h2><ul>
+<li>在搭建过程中由于网络原因出错？🔖 <span class="exturl" data-url="aHR0cHM6Ly93d3cuZGVqYXZ1Lm1vZS9wb3N0cy9naXQtbnBtLXlhcm4tcHJveHkv">使用本地代理给 Git 和 NPM 加速<i class="fa fa-external-link-alt"></i></span></li>
+<li>Hexo 的文章链接很乱？看这 👉 <span class="exturl" data-url="aHR0cHM6Ly93d3cuZGVqYXZ1Lm1vZS9wb3N0cy9oZXhvLXBlcm1hbGlua3Mv">优化 Hexo 的永久链接<i class="fa fa-external-link-alt"></i></span></li>
+<li>Hexo 怎么做 SEO？🔎 <span class="exturl" data-url="aHR0cHM6Ly93d3cuZGVqYXZ1Lm1vZS9wb3N0cy9oZXhvLXNlby8=">Hexo SEO 优化的基本套路<i class="fa fa-external-link-alt"></i></span></li>
+<li>寻找 <span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZy8=">Hexo-NexT 主题<i class="fa fa-external-link-alt"></i></span> 的美化教程？🎨 <span class="exturl" data-url="aHR0cHM6Ly93d3cuZGVqYXZ1Lm1vZS9wb3N0cy9oZXhvLW5leHQtYmVhdXRpZnkv">Hexo NexT 主题 v8.2.0 美化教程<i class="fa fa-external-link-alt"></i></span></li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>Buy me a coffee</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/20201122213021.png" alt="Lining Wei 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/434235F3-7A93-4EA4-A7B6-4F6D977F1A89.png" alt="Lining Wei 支付宝">
+        <span>支付宝</span>
+      </div>
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/bitcoin.png" alt="Lining Wei 比特币">
+        <span>比特币</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文博主： </strong>Lining Wei
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://weilining.github.io/255.html" title="Windows&#x2F;Linux&#x2F;macOS十分钟搭建 Hexo 教程">https://weilining.github.io/255.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC96aC1DTg=="><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/254.html" rel="prev" title="在 Windows 下使用 Scoop 管理软件">
+                  <i class="fa fa-chevron-left"></i> 在 Windows 下使用 Scoop 管理软件
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+      <div class="tabs tabs-comment">
+        <ul class="nav-tabs">
+            <li class="tab"><a href="#comment-valine">valine</a></li>
+            <li class="tab"><a href="#comment-livere">livere</a></li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane valine" id="comment-valine">
+              <div class="comments" id="valine-comments"></div>
+            </div>
+            <div class="tab-pane livere" id="comment-livere">
+              <div class="comments" id="lv-container" data-id="city" data-uid="MTAyMC81MTYyOC8yODEwOQ=="></div>
+            </div>
+        </div>
+      </div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 2015 – 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Ln</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">375k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">5:41</span>
+  </span>
+</div>
+
+<div><canvas id="snow" style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:99999;pointer-events:none"></canvas></div>
+
+
+<script id="click-show-text" src="/js/click-show-text.js" data-mobile="false" data-text="富强,民主,文明,和谐,自由,平等,公正,法治,爱国,敬业,诚信,友善" data-fontsize="20px" data-random="false" async></script>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js" integrity="sha256-EdPgYcPk/IIrw7FYeuJQexva49pVRZNmt3LculEr7zM=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/comments.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/utils.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/motion.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/next-boot.min.js"></script>
+
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/third-party/search/local-search.min.js"></script>
+
+
+
+
+
+  
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.2.0/dist/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"ignores":null,"url":"https://weilining.github.io/255.html"}</script>
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/third-party/quicklink.min.js"></script>
+
+
+<script class="next-config" data-name="valine" type="application/json">{"enable":true,"appId":"Bu6sP4depeiGP22PIFqz0SmJ-MdYXbMMI","appKey":"jYGDeeOBkTqvrUJDEmqj83q7","serverURLs":"https://bu6sp4de.api.lncldglobal.com","placeholder":"Just go go","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"lang":null,"visitor":true,"comment_count":true,"recordIP":false,"enableQQ":false,"requiredFields":[],"el":"#valine-comments","path":"/255.html"}</script>
+<script>
+document.addEventListener('page:loaded', () => {
+  NexT.utils.loadComments(CONFIG.valine.el)
+    .then(() => NexT.utils.getScript(
+      'https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js',
+      { condition: window.Valine }
+    ))
+    .then(() => {
+      new Valine(CONFIG.valine);
+    });
+});
+</script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/third-party/comments/livere.min.js"></script>
+
+
+
+
+</body>
+</html>
