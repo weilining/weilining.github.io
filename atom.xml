@@ -6,7 +6,7 @@
   <link href="https://weilining.github.io/atom.xml" rel="self"/>
   
   <link href="https://weilining.github.io/"/>
-  <updated>2021-10-12T02:18:59.000Z</updated>
+  <updated>2021-10-12T03:01:00.000Z</updated>
   <id>https://weilining.github.io/</id>
   
   <author>
@@ -15,6 +15,23 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>DiskGenius破解专业版合辑(更新至5.4.2)</title>
+    <link href="https://weilining.github.io/251.html"/>
+    <id>https://weilining.github.io/251.html</id>
+    <published>2021-10-12T03:01:00.000Z</published>
+    <updated>2021-10-12T03:01:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>DiskGenius，集数据恢复、分区管理、备份还原等多功能于一身的超级工具软件。DiskGenius是专业级的数据恢复软件 ，算法精湛、功能强大！使用它可迅速恢复丢失的文件或分区。它还是一款功能全面，安全可靠的硬盘分区工具 ，除提供基本的分区管理功能外，还提供了分区备份还原、更多实用、便利的特色功能。</p><h1 id="软件截图"><a href="#软件截图" class="headerlink" title="软件截图"></a>软件截图</h1><p><img data-src="/251/3db47a0ecf3e2.png" alt="img" loading="lazy"></p><h2 id="软件相关"><a href="#软件相关" class="headerlink" title="软件相关"></a>软件相关</h2><p>官方下载页面及更新历史 <span class="exturl" data-url="aHR0cDovL2Rpc2tnZW5pdXMuY24vZG93bmxvYWQucGhw">http://diskgenius.cn/download.php<i class="fa fa-external-link-alt"></i></span><br>DG注册前后功能对比区别 <span class="exturl" data-url="aHR0cDovL2Rpc2tnZW5pdXMuY24vcHJvL2RldGFpbHMucGhw">http://diskgenius.cn/pro/details.php<i class="fa fa-external-link-alt"></i></span></p><p>海外版原名称叫PartitionGuru，4.9.6.564版本后改名回DiskGenius。<br>版本从 PartitionGuru v4.9.5.508 后作者采用了新技术防止修改汉化。</p><h1 id="此版特点"><a href="#此版特点" class="headerlink" title="此版特点"></a>此版特点</h1><p>by 破解作者：keaver2k/RBC (俄罗斯)，汉化作者：adef,幸运的草<br># 因官方主程序有强壳，不改原始文件，采用Dll劫持补丁破解专业版！<br>├—实测可以恢复 4G 以上文件、可以虚拟磁盘格式转换、可以修改VHD文件;<br>├—无需屏蔽联网验证，联网状态使用软件恢复文件操作过程5分钟无闪退问题；<br># 特殊汉化并解决非Unicode编码中文显示问题，采用NTLEA区码仿真软件实现；<br># 集成WinPE编码NLS文件，解决某些WinPE系统下使用软件菜单界面乱码问题。</p><h1 id="下载说明"><a href="#下载说明" class="headerlink" title="下载说明"></a>下载说明</h1><p>网盘中文件名带Eng的为英文破解版，不带Eng的为中文破解版或汉化版</p><p>注意：此处下载的diskgenius不保证长久可用性，如果真的有需要请购买正版</p><h1 id="下载地址"><a href="#下载地址" class="headerlink" title="下载地址"></a>下载地址</h1><p><span class="exturl" data-url="aHR0cHM6Ly9jbGFtb3dvLmxhbnpvdWkuY29tL2IwNWFnbnMzZw==">蓝奏云<i class="fa fa-external-link-alt"></i></span>    <span class="exturl" data-url="aHR0cDovL3NoYW5kaWFucGFuLmNvbS9mLzVyaGs=">闪电盘<i class="fa fa-external-link-alt"></i></span></p><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><span class="exturl" data-url="aHR0cHM6Ly93d3cucHVyZXN5cy5uZXQvMzc4Lmh0bWw=">DiskGenius破解专业版合辑(更新至5.4.2) (puresys.net)<i class="fa fa-external-link-alt"></i></span></p>]]></content>
+    
+    
+    <summary type="html">默认</summary>
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>win去掉快捷方式小箭头</title>
@@ -354,27 +371,6 @@
     <updated>2020-12-25T16:58:58.000Z</updated>
     
     <content type="html"><![CDATA[<p>亲测有效</p><span id="more"></span> <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">*&#123;</span><br><span class="line"></span><br><span class="line">-webkit-touch-callout:none;&#x2F;*系统默认菜单被禁用*&#x2F;</span><br><span class="line"></span><br><span class="line">    -webkit-user-select:none;&#x2F;*webkit浏览器*&#x2F;</span><br><span class="line"></span><br><span class="line">    -khtml-user-select:none;&#x2F;*早期浏览器*&#x2F;</span><br><span class="line"></span><br><span class="line">    -moz-user-select:none;&#x2F;*火狐*&#x2F;</span><br><span class="line"></span><br><span class="line">    -ms-user-select:none;&#x2F;*IE10*&#x2F;</span><br><span class="line"></span><br><span class="line">    user-select:none;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-    <summary type="html">默认</summary>
-    
-    
-    
-    <category term="默认" scheme="https://weilining.github.io/categories/%E9%BB%98%E8%AE%A4/"/>
-    
-    
-    <category term="默认" scheme="https://weilining.github.io/tags/%E9%BB%98%E8%AE%A4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>网页上如何实现禁止复制粘贴以及如何破解</title>
-    <link href="https://weilining.github.io/231.html"/>
-    <id>https://weilining.github.io/231.html</id>
-    <published>2020-12-25T16:37:10.000Z</published>
-    <updated>2020-12-25T16:37:10.000Z</updated>
-    
-    <content type="html"><![CDATA[<span id="more"></span><p> 我们首先来介绍如何实现禁止复制，知道了禁止的方式，再破解就容易了。</p><h1 id="实现禁止复制粘贴"><a href="#实现禁止复制粘贴" class="headerlink" title="实现禁止复制粘贴"></a>实现禁止复制粘贴</h1><p>比较简单，直接上代码：</p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;style type&#x3D;&quot;text&#x2F;css&quot;&gt;</span><br><span class="line">&#x2F;* 最简单的实现禁止复制的方法，采用css方式禁止文字选择，当然这只兼容webkit内核浏览器 *&#x2F;</span><br><span class="line">* &#123; -webkit-user-select: none; &#125;</span><br><span class="line">p &#123;font-family: &#39;Microsoft Yahei&#39;;font-size: 28px;&#125;</span><br><span class="line">input &#123;width: 80%; padding: 10px 20px;&#125;</span><br><span class="line">&lt;&#x2F;style&gt;</span><br><span class="line">&lt;h1&gt;本代码在UC手机浏览器上不生效，其它手机浏览器暂未发现问题、PC全部没问题。&lt;&#x2F;h1&gt;</span><br><span class="line">&lt;p&gt;这是一段示例文字，我无法被选中，也无法按下鼠标右键，即使被选中你也无法复制！&lt;&#x2F;p&gt;</span><br><span class="line">&lt;input type&#x3D;&quot;text&quot; value&#x3D;&quot;文本框中的文字可以选中，但是无法复制粘贴&quot;&#x2F;&gt;</span><br><span class="line">&lt;script type&#x3D;&quot;text&#x2F;javascript&quot;&gt;</span><br><span class="line">&#x2F;&#x2F; 禁止右键菜单</span><br><span class="line">document.oncontextmenu &#x3D; function()&#123; return false; &#125;;</span><br><span class="line">&#x2F;&#x2F; 禁止文字选择</span><br><span class="line">document.onselectstart &#x3D; function()&#123; return false; &#125;;</span><br><span class="line">&#x2F;&#x2F; 禁止复制</span><br><span class="line">document.oncopy &#x3D; function()&#123; return false; &#125;;</span><br><span class="line">&#x2F;&#x2F; 禁止剪切</span><br><span class="line">document.oncut &#x3D; function()&#123; return false; &#125;;</span><br><span class="line">&#x2F;&#x2F; 禁止粘贴</span><br><span class="line">document.onpaste &#x3D; function()&#123; return false; &#125;;</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure><h1 id="破解禁止复制粘贴"><a href="#破解禁止复制粘贴" class="headerlink" title="破解禁止复制粘贴"></a>破解禁止复制粘贴</h1><p>知道如何禁止了，那破解这个限制就容易多了。</p><p>首先，绝大部分限制都是采用js实现的，那我直接禁用js不就OK了么？哈哈，突然发现我太聪明了！假如你使用的是<code>Chrome</code>或者其它国产webkit内核浏览器，按下<code>F12</code>弹出开发者工具，再按下<code>F1</code>弹出设置，勾选<code>Disable JavaScript</code>，再按下<code>ESC</code>键关闭设置（其它浏览器如何禁止JavaScript请自行研究），然后试试是不是可以复制了？</p><p><img data-src="/231/20160817_085956_673_5222.png" alt="img" loading="lazy"></p><p>如果此时仍无法选择文字，找到你要复制文字的地方，看看是不是添加了<code>-webkit-user-select: none</code>的样式，如果有，将其去掉即可：</p><p><img data-src="/231/20160817_090202_264_2841.png" alt="img" loading="lazy"></p><p>到了这里应该就可以自由复制粘贴了，复制完了记得把禁用JavaScript的地方还原回来哦。</p>]]></content>
     
     
     <summary type="html">默认</summary>
