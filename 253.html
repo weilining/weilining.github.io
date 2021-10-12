@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.jsdelivr.net/gh/weilining/img@main/img/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.jsdelivr.net/gh/weilining/img@main/img/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://cdn.jsdelivr.net/gh/weilining/img@main/img/favicon-16x16-next.png">
+  <link rel="mask-icon" href="https://cdn.jsdelivr.net/gh/weilining/img@main/img/logo.svg" color="#222">
+  <meta name="google-site-verification" content="OjGymv9uAqWYDsr-E-j6DG2k1_mPXsDQF77kgEK0nz8">
+  <meta name="msvalidate.01" content="5C84BC77E02800759CE29C4ACCE487BD">
+  <meta name="yandex-verification" content="06c62a93328de5da">
+  <meta name="baidu-site-verification" content="code-wFDrn4lvkD">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.dogedoge.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"weilining.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.8.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/config.min.js"></script>
+<meta name="description" content="默认">
+<meta property="og:type" content="article">
+<meta property="og:title" content="最有效的重装Windows">
+<meta property="og:url" content="https://weilining.github.io/253.html">
+<meta property="og:site_name" content="Ln&#39;s Blog">
+<meta property="og:description" content="默认">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://weilining.github.io/253/bootlist.02daed2a.jpg">
+<meta property="og:image" content="https://weilining.github.io/253/uefi_legacy_1.6aef8ddb.png">
+<meta property="og:image" content="https://weilining.github.io/253/uefi_legacy_2.fb91e35d.png">
+<meta property="og:image" content="https://weilining.github.io/253/legacy_1.cb047919.png">
+<meta property="og:image" content="https://weilining.github.io/253/legacy_2.c963adcb.png">
+<meta property="og:image" content="https://weilining.github.io/253/legacy_3.5b0d64e8.png">
+<meta property="og:image" content="https://weilining.github.io/253/legacype.df172ec1.png">
+<meta property="og:image" content="https://weilining.github.io/253/uefipe.0a6116b6.png">
+<meta property="og:image" content="data:image/png;base64,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">
+<meta property="og:image" content="https://weilining.github.io/253/PEDESK.c81dfecc.png">
+<meta property="og:image" content="https://weilining.github.io/253/7.b123116f.png">
+<meta property="og:image" content="https://weilining.github.io/253/1.41e5b9ff.png">
+<meta property="og:image" content="https://weilining.github.io/253/1.5.49d02474.png">
+<meta property="og:image" content="https://weilining.github.io/253/2.f7879fc5.png">
+<meta property="og:image" content="https://weilining.github.io/253/3.73b6c08d.png">
+<meta property="og:image" content="https://weilining.github.io/253/4.30a2e1df.png">
+<meta property="og:image" content="https://weilining.github.io/253/5.1e02a8b0.png">
+<meta property="og:image" content="https://weilining.github.io/253/6.41eab0c8.png">
+<meta property="og:image" content="https://weilining.github.io/253/7.bb60c4e0.png">
+<meta property="og:image" content="https://weilining.github.io/253/8.ef5e210d.png">
+<meta property="og:image" content="https://weilining.github.io/253/9.d217ba7b.png">
+<meta property="og:image" content="https://weilining.github.io/253/10.c206de32.png">
+<meta property="og:image" content="https://weilining.github.io/253/11.a9fc357c.png">
+<meta property="og:image" content="data:image/png;base64,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">
+<meta property="og:image" content="https://weilining.github.io/253/2.f1ed1675.png">
+<meta property="og:image" content="https://weilining.github.io/253/3.1966fa41.png">
+<meta property="og:image" content="https://weilining.github.io/253/4.144c200e.png">
+<meta property="og:image" content="https://weilining.github.io/253/5.4625bc7d.png">
+<meta property="og:image" content="https://weilining.github.io/253/6.875739fb.png">
+<meta property="og:image" content="https://weilining.github.io/253/7.b123116f.png">
+<meta property="article:published_time" content="2021-10-12T07:06:37.000Z">
+<meta property="article:modified_time" content="2021-10-12T07:06:37.000Z">
+<meta property="article:author" content="Lining Wei">
+<meta property="article:tag" content="ACM,开发者,程序猿,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,互联网一切折腾">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://weilining.github.io/253/bootlist.02daed2a.jpg">
+
+
+<link rel="canonical" href="https://weilining.github.io/253.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://weilining.github.io/253.html","path":"253.html","title":"最有效的重装Windows"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>最有效的重装Windows | Ln's Blog</title>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="Ln's Blog" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Ln's Blog</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">有朋自远方来，不亦乐乎</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-bell fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-top"><a href="/top/" rel="section"><i class="fa fa-signal fa-fw"></i>热榜</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-friends"><a href="/friends/" rel="section"><i class="fa fa-globe-asia fa-fw"></i>朋友们</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85"><span class="nav-number">1.</span> <span class="nav-text">一键安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PE%E5%AE%89%E8%A3%85"><span class="nav-number">2.</span> <span class="nav-text">PE安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E8%BF%9B%E5%85%A5PE%E7%B3%BB%E7%BB%9F"><span class="nav-number">2.1.</span> <span class="nav-text">如何进入PE系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E6%AD%A5%EF%BC%9A%E5%9C%A8%E5%BC%80%E6%9C%BA%E6%97%B6%E8%BF%9B%E5%85%A5%E4%B8%BB%E6%9D%BF%E7%9A%84%E5%90%AF%E5%8A%A8%E9%A1%B9%E5%88%97%E8%A1%A8"><span class="nav-number">2.2.</span> <span class="nav-text">#第一步：在开机时进入主板的启动项列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E6%AD%A5%EF%BC%9A%E6%89%BE%E5%88%B0%E8%A6%81%E5%90%AF%E5%8A%A8%E7%9A%84U%E7%9B%98%EF%BC%8C%E5%B9%B6%E8%BE%A8%E5%88%ABUEFI%E5%92%8CLegeacy%E6%96%B9%E5%BC%8F"><span class="nav-number">2.3.</span> <span class="nav-text">#第二步：找到要启动的U盘，并辨别UEFI和Legeacy方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E6%AD%A5%EF%BC%9A%E9%80%89%E6%8B%A9%E4%B8%80%E4%B8%AA%E5%90%88%E9%80%82%E7%9A%84WinPE%E7%B3%BB%E7%BB%9F%E7%89%88%E6%9C%AC%E8%BF%9B%E5%85%A5"><span class="nav-number">2.4.</span> <span class="nav-text">#第三步：选择一个合适的WinPE系统版本进入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Windows-%E9%95%9C%E5%83%8F%E4%B8%8B%E8%BD%BD%E5%9C%B0%E5%9D%80"><span class="nav-number">2.5.</span> <span class="nav-text">Windows 镜像下载地址</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD%E5%99%A8"><span class="nav-number">2.5.1.</span> <span class="nav-text">下载器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8E%9F%E7%89%88%E9%95%9C%E5%83%8F"><span class="nav-number">2.5.2.</span> <span class="nav-text">原版镜像</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#GHO%E9%95%9C%E5%83%8F"><span class="nav-number">2.5.3.</span> <span class="nav-text">GHO镜像</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8E%9F%E7%94%9F%E5%AE%89%E8%A3%85Windows8-1-amp-10"><span class="nav-number">2.6.</span> <span class="nav-text">原生安装Windows8.1&amp;10</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E7%B3%BB%E7%BB%9F%E5%89%8D%E7%9A%84%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C"><span class="nav-number">2.7.</span> <span class="nav-text">安装系统前的准备工作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AD%A3%E5%BC%8F%E5%BC%80%E5%A7%8B%E5%AE%89%E8%A3%85%E7%B3%BB%E7%BB%9F"><span class="nav-number">2.8.</span> <span class="nav-text">正式开始安装系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E6%AD%A5%EF%BC%9A%E5%B0%86%E8%A6%81%E5%AE%89%E8%A3%85%E7%9A%84%E7%B3%BB%E7%BB%9FISO%E9%95%9C%E5%83%8F%E6%8C%82%E8%BD%BD%E4%B8%BA%E8%99%9A%E6%8B%9F%E5%85%89%E9%A9%B1"><span class="nav-number">2.9.</span> <span class="nav-text">#第一步：将要安装的系统ISO镜像挂载为虚拟光驱</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E6%AD%A5%EF%BC%9A%E8%BF%90%E8%A1%8CWindows%E5%AE%89%E8%A3%85%E7%A8%8B%E5%BA%8FSetup-exe%E4%B8%80%E6%AD%A5%E4%B8%80%E6%AD%A5%E5%BC%80%E5%A7%8B%E5%AE%89%E8%A3%85"><span class="nav-number">2.10.</span> <span class="nav-text">#第二步：运行Windows安装程序Setup.exe一步一步开始安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E6%AD%A5%EF%BC%9A%E7%AD%89%E5%BE%85%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E5%AE%8C%E6%88%90%EF%BC%8C%E5%81%9A%E6%9C%80%E5%90%8E%E7%9A%84%E7%B3%BB%E7%BB%9F%E9%85%8D%E7%BD%AE"><span class="nav-number">2.11.</span> <span class="nav-text">#第三步：等待系统安装完成，做最后的系统配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E5%9B%9B%E6%AD%A5%EF%BC%9A%E8%BF%9B%E5%85%A5%E6%A1%8C%E9%9D%A2%EF%BC%8C%E8%A3%85%E9%A9%B1%E5%8A%A8%E8%A3%85%E8%BD%AF%E4%BB%B6"><span class="nav-number">2.12.</span> <span class="nav-text">#第四步：进入桌面，装驱动装软件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E5%BC%82%E5%B8%B8%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3"><span class="nav-number">3.</span> <span class="nav-text">常见异常问题解决</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83"><span class="nav-number">4.</span> <span class="nav-text">参考</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Lining Wei"
+      src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/icon.gif">
+  <p class="site-author-name" itemprop="name">Lining Wei</p>
+  <div class="site-description" itemprop="description">算法、技术</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">253</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">35</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="cc-license site-overview-item animated" itemprop="license">
+    <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC96aC1DTg=="><img src="https://cdn.jsdelivr.net/npm/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></span>
+  </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://weilining.github.io/253.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/weilining/img@main/img/icon.gif">
+      <meta itemprop="name" content="Lining Wei">
+      <meta itemprop="description" content="算法、技术">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ln's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          最有效的重装Windows<span class="exturl post-edit-link" data-url="aHR0cHM6Ly9naXRodWIuY29tL3dlaWxpbmluZy9ibG9nL2VkaXQvbWFpbi9zb3VyY2UvX3Bvc3RzLzI1My5tZA==" title="编辑"><i class="fa fa-pen-nib"></i></span>
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-10-12 15:06:37" itemprop="dateCreated datePublished" datetime="2021-10-12T15:06:37+08:00">2021-10-12</time>
+    </span>
+
+  
+    <span id="/253.html" class="post-meta-item leancloud_visitors" data-flag-title="最有效的重装Windows" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>4.2k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>4 分钟</span>
+    </span>
+</div>
+
+            <div class="post-description">默认</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h2 id="一键安装"><a href="#一键安装" class="headerlink" title="一键安装"></a>一键安装</h2><p>必须有网络</p>
+<p><span class="exturl" data-url="aHR0cDovL3d3dy5iZnhpdG9uZy5jb20v">冰封一键重装系统官网_最简单的一键重装系统软件 (bfxitong.com)<i class="fa fa-external-link-alt"></i></span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly93d3cueXJ4aXRvbmcuY29tLw==">小鱼儿yr系统→封装系统→重装系统→系统下载→资源分享 (yrxitong.com)<i class="fa fa-external-link-alt"></i></span></p>
+<h2 id="PE安装"><a href="#PE安装" class="headerlink" title="PE安装"></a>PE安装</h2><h3 id="如何进入PE系统"><a href="#如何进入PE系统" class="headerlink" title="如何进入PE系统"></a>如何进入PE系统</h3><p>无论您是想装系统、拯救文件还是破解密码等，您要做的第一步就是从U盘启动进入PE系统。</p>
+<p>启动PE系统的关键操作顺序：</p>
+<ul>
+<li>第一步：在开机时进入主板的启动项列表；</li>
+<li>第二步：找到要启动的U盘，并辨别UEFI和Legeacy方式；</li>
+<li>第三步：选择一个合适的WinPE系统版本进入。</li>
+</ul>
+<p><img data-src="/253/bootlist.02daed2a.jpg" alt="img" loading="lazy"></p>
+<h3 id="第一步：在开机时进入主板的启动项列表"><a href="#第一步：在开机时进入主板的启动项列表" class="headerlink" title="#第一步：在开机时进入主板的启动项列表"></a><span class="exturl" data-url="aHR0cHM6Ly93d3cud2VwZS5jb20uY24vdWJvb2svYm9vdHBlLmh0bWwjJUU3JUFDJUFDJUU0JUI4JTgwJUU2JUFEJUE1JUVGJUJDJTlBJUU1JTlDJUE4JUU1JUJDJTgwJUU2JTlDJUJBJUU2JTk3JUI2JUU4JUJGJTlCJUU1JTg1JUE1JUU0JUI4JUJCJUU2JTlEJUJGJUU3JTlBJTg0JUU1JTkwJUFGJUU1JThBJUE4JUU5JUExJUI5JUU1JTg4JTk3JUU4JUExJUE4">#<i class="fa fa-external-link-alt"></i></span>第一步：在开机时进入主板的启动项列表</h3><p>请将电脑关机，将微PE优盘插入到电脑后开机。然后在开机后的几秒内，当出现开机画面，按下快捷启动热键<code>F12</code>（不同机型请查看下面快捷键列表）进入启动项列表，然后在列表中通过方向键选择U盘所在选项，一般会带USB字样或者是U盘的品牌名（Sandisk、Toshiba之类），然后敲击回车可以进入U盘的PE菜单选择界面。</p>
+<p>以下为各种品牌的主板和笔记本的快捷启动按键：</p>
+<table>
+<thead>
+<tr>
+<th>组装机主板</th>
+<th>品牌电脑</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>主板品牌</td>
+<td>启动按键</td>
+<td>电脑品牌</td>
+<td>启动按键</td>
+</tr>
+<tr>
+<td>华硕主板</td>
+<td>F8</td>
+<td>联想电脑</td>
+<td>F12</td>
+</tr>
+<tr>
+<td>技嘉主板</td>
+<td>F12</td>
+<td>宏基电脑</td>
+<td>F12</td>
+</tr>
+<tr>
+<td>微星主板</td>
+<td>F11</td>
+<td>华硕电脑</td>
+<td>ESC或F8</td>
+</tr>
+<tr>
+<td>映泰主板</td>
+<td>F9</td>
+<td>惠普电脑</td>
+<td>F9或F12</td>
+</tr>
+<tr>
+<td>梅捷主板</td>
+<td>ESC或F12</td>
+<td>联想Thinkpad</td>
+<td>F12</td>
+</tr>
+<tr>
+<td>七彩虹主板</td>
+<td>ESC或F11</td>
+<td>戴尔电脑</td>
+<td>F12或ESC</td>
+</tr>
+<tr>
+<td>华擎主板</td>
+<td>F11</td>
+<td>神舟电脑</td>
+<td>F12</td>
+</tr>
+<tr>
+<td>斯巴达克主板</td>
+<td>ESC</td>
+<td>东芝电脑</td>
+<td>F12</td>
+</tr>
+<tr>
+<td>昂达主板</td>
+<td>F11</td>
+<td>三星电脑</td>
+<td>F12或F2</td>
+</tr>
+<tr>
+<td>双敏主板</td>
+<td>ESC</td>
+<td>IBM电脑</td>
+<td>F12</td>
+</tr>
+<tr>
+<td>翔升主板</td>
+<td>F10</td>
+<td>富士通电脑</td>
+<td>F12</td>
+</tr>
+<tr>
+<td>精英主板</td>
+<td>ESC或F11</td>
+<td>海尔电脑</td>
+<td>F12</td>
+</tr>
+<tr>
+<td>冠盟主板</td>
+<td>F11或F12</td>
+<td>方正电脑</td>
+<td>F12</td>
+</tr>
+<tr>
+<td>富士康主板</td>
+<td>ESC或F12</td>
+<td>清华同方电脑</td>
+<td>F12</td>
+</tr>
+<tr>
+<td>顶星主板</td>
+<td>F11或F12</td>
+<td>微星电脑</td>
+<td>F11</td>
+</tr>
+<tr>
+<td>铭瑄主板</td>
+<td>ESC或F11</td>
+<td>明基电脑</td>
+<td>F9或F8</td>
+</tr>
+<tr>
+<td>盈通主板</td>
+<td>F8</td>
+<td>技嘉电脑</td>
+<td>F12</td>
+</tr>
+<tr>
+<td>捷波主板</td>
+<td>ESC</td>
+<td>Gateway电脑</td>
+<td>F12</td>
+</tr>
+<tr>
+<td>Intel主板</td>
+<td>F12</td>
+<td>eMachines电脑</td>
+<td>F12</td>
+</tr>
+<tr>
+<td>杰微主板</td>
+<td>ESC或F8</td>
+<td>索尼电脑</td>
+<td>ESC</td>
+</tr>
+<tr>
+<td>致铭主板</td>
+<td>F12</td>
+<td>苹果电脑</td>
+<td>长按“option”键</td>
+</tr>
+<tr>
+<td>磐英主板</td>
+<td>ESC</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>磐正主板</td>
+<td>ESC</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>冠铭主板</td>
+<td>F9</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>注意：其它机型请尝试或参考以上品牌常用启动热键</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p><em>另外您还可以在BIOS设置中，将U盘设置为第一启动项启动U盘，具体方法可以百度。</em></p>
+<h3 id="第二步：找到要启动的U盘，并辨别UEFI和Legeacy方式"><a href="#第二步：找到要启动的U盘，并辨别UEFI和Legeacy方式" class="headerlink" title="#第二步：找到要启动的U盘，并辨别UEFI和Legeacy方式"></a><span class="exturl" data-url="aHR0cHM6Ly93d3cud2VwZS5jb20uY24vdWJvb2svYm9vdHBlLmh0bWwjJUU3JUFDJUFDJUU0JUJBJThDJUU2JUFEJUE1JUVGJUJDJTlBJUU2JTg5JUJFJUU1JTg4JUIwJUU4JUE2JTgxJUU1JTkwJUFGJUU1JThBJUE4JUU3JTlBJTg0dSVFNyU5QiU5OCVFRiVCQyU4QyVFNSVCOSVCNiVFOCVCRSVBOCVFNSU4OCVBQnVlZmklRTUlOTIlOENsZWdlYWN5JUU2JTk2JUI5JUU1JUJDJThG">#<i class="fa fa-external-link-alt"></i></span>第二步：找到要启动的U盘，并辨别UEFI和Legeacy方式</h3><p>微PE优盘支持两种启动方式：</p>
+<ul>
+<li><strong>UEFI</strong></li>
+<li><strong>Legacy</strong></li>
+</ul>
+<p><strong>当您的机器支持UEFI的话（新机器一般同时支持Legacy和UEFI），在这个启动项中一般会出现两个U盘的选项，一个是UEFI开头的，另一个是不带UEFI开头的或叫Legacy的：</strong></p>
+<p><img data-src="/253/uefi_legacy_1.6aef8ddb.png" alt="img" loading="lazy"></p>
+<p><img data-src="/253/uefi_legacy_2.fb91e35d.png" alt="img" loading="lazy"></p>
+<p><strong>当您的机器（老机器）只支持Legacy时，在这个主板的启动项中就只会出现一个U盘的选项：</strong></p>
+<p><img data-src="/253/legacy_1.cb047919.png" alt="img" loading="lazy"></p>
+<p><img data-src="/253/legacy_2.c963adcb.png" alt="img" loading="lazy"></p>
+<p><img data-src="/253/legacy_3.5b0d64e8.png" alt="img" loading="lazy"></p>
+<p>UEFI/Legacy启动方式的选择，对后续安装系统的时候影响比较大，一般情况下，如果需要用EFI方法安装系统（硬盘分区表为GPT），就启动UEFI的PE。如果用传统方式安装系统（硬盘分区表为MBR），就Legacy启动方式启动PE，这个按照您自己的需求选择。如果不清楚的话可随意先进一个，如果后面遇到问题再回来重选即可。如果是只支持Legacy启动的老机器，那就没得选，只能以Legacy方式启动PE。</p>
+<p>注意：一些新机器默认了只开通了UEFI启动，如果需要打开Legacy启动，需要进BIOS设置中关闭SecureBoot（必须禁用 <em>UEFI安全启动</em> ，不然无法安装任何系统）。</p>
+<p>选中需要启动的U盘选项，继续敲回车之后，均会先进入PE版本选择界面。但以不同的方式进入，显示的PE选择界面是不同的。<strong>Legacy启动时，PE选择菜单为蓝色天空背景。UEFI启动时，PE选择菜单为黑色纯色背景。</strong></p>
+<p><img data-src="/253/legacype.df172ec1.png" alt="img" loading="lazy"></p>
+<p><img data-src="/253/uefipe.0a6116b6.png" alt="img" loading="lazy"></p>
+<h3 id="第三步：选择一个合适的WinPE系统版本进入"><a href="#第三步：选择一个合适的WinPE系统版本进入" class="headerlink" title="#第三步：选择一个合适的WinPE系统版本进入"></a><span class="exturl" data-url="aHR0cHM6Ly93d3cud2VwZS5jb20uY24vdWJvb2svYm9vdHBlLmh0bWwjJUU3JUFDJUFDJUU0JUI4JTg5JUU2JUFEJUE1JUVGJUJDJTlBJUU5JTgwJTg5JUU2JThCJUE5JUU0JUI4JTgwJUU0JUI4JUFBJUU1JTkwJTg4JUU5JTgwJTgyJUU3JTlBJTg0d2lucGUlRTclQjMlQkIlRTclQkIlOUYlRTclODklODglRTYlOUMlQUMlRTglQkYlOUIlRTUlODUlQTU=">#<i class="fa fa-external-link-alt"></i></span>第三步：选择一个合适的WinPE系统版本进入</h3><p>微PE优盘支持多个PE系统，在黑色或蓝色PE选择界面可以按需选择，legacy启动的蓝色菜单可以让您自由决定PE系统版本和位数32位或64位，而UEFI启动的黑色菜单，已经按照机器的情况自动确定了位数，您只能选择系统版本。10PE和8PE是目前最常用的两种PE，10PE用于比较新的机器，8PE用于比较老的机器。如果不太清楚，选默认第一个Win10PEx64就好。关于10PE、8PE、32位和64位的具体功能区别会在后续的教程中单独列出。选中后，敲击回车正式进入PE系统。</p>
+<p><img data-src="data:image/png;base64,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" alt="img" loading="lazy"></p>
+<p><img data-src="/253/PEDESK.c81dfecc.png" alt="img" loading="lazy"></p>
+<p>如果您能成功进入到这个PE桌面，并且知道自己进入的是legacy方式的PE，还是UEFI方式的PE（通过在PE版本选择菜单页中背景是蓝色/黑色确定），就完成第一步。虽然现在看起来只完成了一小步，但这是迈向成功的一大步。</p>
+<h3 id="Windows-镜像下载地址"><a href="#Windows-镜像下载地址" class="headerlink" title="Windows 镜像下载地址"></a>Windows 镜像下载地址</h3><h4 id="下载器"><a href="#下载器" class="headerlink" title="下载器"></a>下载器</h4><p><span class="exturl" data-url="aHR0cHM6Ly93d3cueHVubGVpLmNvbS8=">迅雷-全球共享计算与区块链创领者 (xunlei.com)<i class="fa fa-external-link-alt"></i></span></p>
+<h4 id="原版镜像"><a href="#原版镜像" class="headerlink" title="原版镜像"></a>原版镜像</h4><p><span class="exturl" data-url="aHR0cHM6Ly9tc2RuLml0ZWxseW91LmNuLw==">MSDN, 我告诉你 - 做一个安静的工具站 (itellyou.cn)<i class="fa fa-external-link-alt"></i></span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9uZXh0Lml0ZWxseW91LmNuLw==">NEXT, ITELLYOU<i class="fa fa-external-link-alt"></i></span></p>
+<h4 id="GHO镜像"><a href="#GHO镜像" class="headerlink" title="GHO镜像"></a>GHO镜像</h4><p><span class="exturl" data-url="aHR0cHM6Ly93d3cueXJ4aXRvbmcuY29tLw==">小鱼儿yr系统→封装系统→重装系统→系统下载→资源分享 (yrxitong.com)<i class="fa fa-external-link-alt"></i></span></p>
+<p><span class="exturl" data-url="aHR0cDovL3d3dy5zb25neW9uZ3poaS5jb20v">宋永志博客 - 系统爱好者 (songyongzhi.com)<i class="fa fa-external-link-alt"></i></span></p>
+<p><span class="exturl" data-url="aHR0cDovL3d3dy5mYXIxMjMuY29tLw==">远航技术 » 系统定制 (far123.com)<i class="fa fa-external-link-alt"></i></span></p>
+<h3 id="原生安装Windows8-1-amp-10"><a href="#原生安装Windows8-1-amp-10" class="headerlink" title="原生安装Windows8.1&amp;10"></a>原生安装Windows8.1&amp;10</h3><p><em>本篇教程将详细介绍使用微PE安装微软原版系统的具体方法流程、注意事项、异常问题解决等。</em></p>
+<p><em>Windows PE系统的全称叫做Windows Preinstallation Environment，即Windows预安装环境。顾名思义，这是安装系统前需要进入的环境，为安装系统而生。在PE内，通过挂载微软原版的系统ISO镜像，执行原生的安装程序SETUP.EXE，进入安装界面，这种方法安装系统，是最原生的安装方式。本方法同时支持UEFI和Legacy启动的系统安装，并且不管是UEFI方式还是Legacy方式，具体安装系统操作步骤都一样。</em></p>
+<p><em>本方法支持的系统：Windows 7，Windows 8.1，Windows 10等NT6系列的全部系统。本方法不支持安装XP。</em></p>
+<p><img data-src="/253/7.b123116f.png" alt="img" loading="lazy"></p>
+<h3 id="安装系统前的准备工作"><a href="#安装系统前的准备工作" class="headerlink" title="安装系统前的准备工作"></a>安装系统前的准备工作</h3><p>使用微PE优盘安装系统的具体操作步骤并不多，如果能按照下面的要求做足充分的判断，可极大提高成功率。</p>
+<ul>
+<li><p><strong>确认自己要安装的系统位数是64位还是32位？</strong></p>
+<p>如果是安装64位系统，则必须进入64位PE，如果是安装32位系统，请首选进入32位PE。</p>
+</li>
+<li><p><strong>原生安装方式对UEFI还是Legacy启动PE有严格要求</strong></p>
+<p>UEFI启动的系统，系统盘所在硬盘的分区表为GPT，PE应为UEFI启动。</p>
+<p>Legacy启动的系统，系统盘所在硬盘的分区表为MBR，PE应为Legacy启动。</p>
+<p>请牢记UEFI&lt;-&gt;GPT和Legacy&lt;-&gt;MBR的这种对应关系。并通过当前硬盘的分区表类型判断机器之前是哪种方式启动。</p>
+<p>若PE启动方式选择错误可以重新选择。</p>
+</li>
+<li><p><strong>判断系统盘所在硬盘的位置？</strong></p>
+<p>如果您的机器上装了多块硬盘，请做好区分，别装错了。如果需要提前分区，就先分好再装。</p>
+</li>
+<li><p><strong>请务必提前做好数据备份</strong></p>
+<p>安装的时候要格式化C盘，请务必将C盘文件备份至其他。必要时，将文档照片类的不可再生数据存储至外部存储器一份。</p>
+</li>
+</ul>
+<p><em>关于如何启动PE和查看分区表类型的方法在「<span class="exturl" data-url="aHR0cHM6Ly93d3cud2VwZS5jb20uY24vdWJvb2svYm9vdHBlLmh0bWw=">如何进入PE系统<i class="fa fa-external-link-alt"></i></span>」和「<span class="exturl" data-url="aHR0cHM6Ly93d3cud2VwZS5jb20uY24vdWJvb2svY2hlY2t0YWJsZS5odG1s">判断分区表类型<i class="fa fa-external-link-alt"></i></span>」这两文章中有详细的讲解。</em></p>
+<h3 id="正式开始安装系统"><a href="#正式开始安装系统" class="headerlink" title="正式开始安装系统"></a>正式开始安装系统</h3><p>安装原版系统的操作步骤为：</p>
+<ul>
+<li>第一步：PE内将要安装的系统ISO镜像挂载为虚拟光驱；</li>
+<li>第二步：运行Windows安装程序Setup.exe一步一步开始安装；</li>
+<li>第三步：等待系统安装完成，做最后的系统配置；</li>
+<li>第四步：进入桌面，装驱动装软件。</li>
+</ul>
+<h3 id="第一步：将要安装的系统ISO镜像挂载为虚拟光驱"><a href="#第一步：将要安装的系统ISO镜像挂载为虚拟光驱" class="headerlink" title="#第一步：将要安装的系统ISO镜像挂载为虚拟光驱"></a><span class="exturl" data-url="aHR0cHM6Ly93d3cud2VwZS5jb20uY24vdWJvb2svaW5zdGFsbHdpbjgxMC5odG1sIyVFNyVBQyVBQyVFNCVCOCU4MCVFNiVBRCVBNSVFRiVCQyU5QSVFNSVCMCU4NiVFOCVBNiU4MSVFNSVBRSU4OSVFOCVBMyU4NSVFNyU5QSU4NCVFNyVCMyVCQiVFNyVCQiU5RmlzbyVFOSU5NSU5QyVFNSU4MyU4RiVFNiU4QyU4MiVFOCVCRCVCRCVFNCVCOCVCQSVFOCU5OSU5QSVFNiU4QiU5RiVFNSU4NSU4OSVFOSVBOSVCMQ==">#<i class="fa fa-external-link-alt"></i></span>第一步：将要安装的系统ISO镜像挂载为虚拟光驱</h3><p>从U盘启动进入PE内，打开U盘内的存放系统镜像的“ISO”目录，找到要安装的镜像。</p>
+<p><img data-src="/253/1.41e5b9ff.png" alt="img" loading="lazy"></p>
+<p>对着ISO镜像点右键，选择挂载，或者直接双击，该ISO就会被挂载为一个新的虚拟的光盘驱动器，和插入安装光盘效果类似。它会显示在“我的电脑”里，并且有一个盘符。</p>
+<p><img data-src="/253/1.5.49d02474.png" alt="img" loading="lazy"></p>
+<h3 id="第二步：运行Windows安装程序Setup-exe一步一步开始安装"><a href="#第二步：运行Windows安装程序Setup-exe一步一步开始安装" class="headerlink" title="#第二步：运行Windows安装程序Setup.exe一步一步开始安装"></a><span class="exturl" data-url="aHR0cHM6Ly93d3cud2VwZS5jb20uY24vdWJvb2svaW5zdGFsbHdpbjgxMC5odG1sIyVFNyVBQyVBQyVFNCVCQSU4QyVFNiVBRCVBNSVFRiVCQyU5QSVFOCVCRiU5MCVFOCVBMSU4Q3dpbmRvd3MlRTUlQUUlODklRTglQTMlODUlRTclQTglOEIlRTUlQkElOEZzZXR1cC1leGUlRTQlQjglODAlRTYlQUQlQTUlRTQlQjglODAlRTYlQUQlQTUlRTUlQkMlODAlRTUlQTclOEIlRTUlQUUlODklRTglQTMlODU=">#<i class="fa fa-external-link-alt"></i></span>第二步：运行Windows安装程序Setup.exe一步一步开始安装</h3><p>运行这个虚拟盘符内的windows安装程序Setup.exe，就进入了windows的原版安装界面。</p>
+<p><img data-src="/253/2.f7879fc5.png" alt="img" loading="lazy"></p>
+<p>在Windows安装程序中点击“现在安装”开始，一步步往里点。</p>
+<p><img data-src="/253/3.73b6c08d.png" alt="img" loading="lazy"></p>
+<p>有对应产品密钥就输入，没有产品密钥就跳过输入密钥，待安装完系统再想办法激活。</p>
+<p><img data-src="/253/4.30a2e1df.png" alt="img" loading="lazy"></p>
+<p><img data-src="/253/5.1e02a8b0.png" alt="img" loading="lazy"></p>
+<p><img data-src="/253/6.41eab0c8.png" alt="img" loading="lazy"></p>
+<p>系统版本那里自行选择，安装类型那里选择 “自定义”，直到进入到待安装磁盘位置的页面。</p>
+<p><img data-src="/253/7.bb60c4e0.png" alt="img" loading="lazy"></p>
+<p>在这个界面中，需要做一个操作，来提升提升安装成功率。请先定位到您系统盘的位置，观察前面有几个小分区，百十来兆的样子，有时候一个，有时候两个，直接把小分区连同系统大分区一起删除。是的您没听错，选中后直接点红××删除它们，留下一个完整的“未分配空间”。</p>
+<p><img data-src="/253/8.ef5e210d.png" alt="img" loading="lazy"></p>
+<p>然后在这个未分配空间上点下一步，这个时候系统就开始安装了。</p>
+<p><img data-src="/253/9.d217ba7b.png" alt="img" loading="lazy"></p>
+<p>如果不出意外，等进度走完，重启后，就进入了安装配置阶段。</p>
+<p><img data-src="/253/10.c206de32.png" alt="img" loading="lazy"></p>
+<p><img data-src="/253/11.a9fc357c.png" alt="img" loading="lazy"></p>
+<h3 id="第三步：等待系统安装完成，做最后的系统配置"><a href="#第三步：等待系统安装完成，做最后的系统配置" class="headerlink" title="#第三步：等待系统安装完成，做最后的系统配置"></a><span class="exturl" data-url="aHR0cHM6Ly93d3cud2VwZS5jb20uY24vdWJvb2svaW5zdGFsbHdpbjgxMC5odG1sIyVFNyVBQyVBQyVFNCVCOCU4OSVFNiVBRCVBNSVFRiVCQyU5QSVFNyVBRCU4OSVFNSVCRSU4NSVFNyVCMyVCQiVFNyVCQiU5RiVFNSVBRSU4OSVFOCVBMyU4NSVFNSVBRSU4QyVFNiU4OCU5MCVFRiVCQyU4QyVFNSU4MSU5QSVFNiU5QyU4MCVFNSU5MCU4RSVFNyU5QSU4NCVFNyVCMyVCQiVFNyVCQiU5RiVFOSU4NSU4RCVFNyVCRCVBRQ==">#<i class="fa fa-external-link-alt"></i></span>第三步：等待系统安装完成，做最后的系统配置</h3><p>重启后，进入系统最后配置页，这里会要求您做一些简单的设置，创建登录账户，按照提示操作即可。怎么选都可以。</p>
+<p><img data-src="data:image/png;base64,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" alt="img" loading="lazy"></p>
+<p><img data-src="/253/2.f1ed1675.png" alt="img" loading="lazy"></p>
+<p><img data-src="/253/3.1966fa41.png" alt="img" loading="lazy"></p>
+<p><img data-src="/253/4.144c200e.png" alt="img" loading="lazy"></p>
+<p><img data-src="/253/5.4625bc7d.png" alt="img" loading="lazy"></p>
+<p><img data-src="/253/6.875739fb.png" alt="img" loading="lazy"></p>
+<p><img data-src="/253/7.b123116f.png" alt="img" loading="lazy"></p>
+<p>至此，系统就算安装完毕了。</p>
+<h3 id="第四步：进入桌面，装驱动装软件"><a href="#第四步：进入桌面，装驱动装软件" class="headerlink" title="#第四步：进入桌面，装驱动装软件"></a><span class="exturl" data-url="aHR0cHM6Ly93d3cud2VwZS5jb20uY24vdWJvb2svaW5zdGFsbHdpbjgxMC5odG1sIyVFNyVBQyVBQyVFNSU5QiU5QiVFNiVBRCVBNSVFRiVCQyU5QSVFOCVCRiU5QiVFNSU4NSVBNSVFNiVBMSU4QyVFOSU5RCVBMiVFRiVCQyU4QyVFOCVBMyU4NSVFOSVBOSVCMSVFNSU4QSVBOCVFOCVBMyU4NSVFOCVCRCVBRiVFNCVCQiVCNg==">#<i class="fa fa-external-link-alt"></i></span>第四步：进入桌面，装驱动装软件</h3><p>进入到桌面后，请尽快安装驱动，您可以自己提前备好需要安装的驱动，也可以用驱动精灵联网装驱动。U盘内自带了一个带网卡驱动的驱动精灵安装包，可以用这个先把网卡驱动装了，再联网装驱动。</p>
+<p>U盘内我们还提供了一些常用的装机软件，都是纯净的，可以安装，也可以自行下载。</p>
+<p>至此，全部工作结束，尽情享用吧。</p>
+<h2 id="常见异常问题解决"><a href="#常见异常问题解决" class="headerlink" title="常见异常问题解决"></a>常见异常问题解决</h2><ul>
+<li><p><strong>1.提示“Windows 无法安装到这个磁盘。选中的磁盘具有MBR分区表。在 EFI 系统上，Windows 只能安装到 GPT 磁盘”</strong></p>
+<p>遇到这种报错，是因为要安装系统的那块硬盘是MBR分区表，需要legacy启动的PE才能安装，而PE却是UEFI启动的，因此报错。解决方法是：重启电脑,以legacy方式进入PE，再进行安装就好了。请牢记UEFI&lt;-&gt;GPT和Legacy&lt;-&gt;MBR的这种对应关系。只要严格按照必读教程的要求来，这个提示是不会遇到的。</p>
+</li>
+<li><p><strong>2.提示“windows无法安装到这个磁盘 选中的磁盘采用GPT分区形式”</strong></p>
+<p>和第一种错误恰恰相反，是因为要安装系统的那块硬盘是GPT分区表，而PE却是Legacy启动的。解决方法是：重启电脑,以UEFI方式进入PE，再进行安装就好了。</p>
+</li>
+</ul>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><span class="exturl" data-url="aHR0cHM6Ly93d3cud2VwZS5jb20uY24vdWJvb2sv">快速指引 | 微PE优盘使用说明书 (wepe.com.cn)<i class="fa fa-external-link-alt"></i></span></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>Buy me a coffee</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/20201122213021.png" alt="Lining Wei 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/434235F3-7A93-4EA4-A7B6-4F6D977F1A89.png" alt="Lining Wei 支付宝">
+        <span>支付宝</span>
+      </div>
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/bitcoin.png" alt="Lining Wei 比特币">
+        <span>比特币</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文博主： </strong>Lining Wei
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://weilining.github.io/253.html" title="最有效的重装Windows">https://weilining.github.io/253.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC96aC1DTg=="><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/252.html" rel="prev" title="玩转黑群晖">
+                  <i class="fa fa-chevron-left"></i> 玩转黑群晖
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+      <div class="tabs tabs-comment">
+        <ul class="nav-tabs">
+            <li class="tab"><a href="#comment-valine">valine</a></li>
+            <li class="tab"><a href="#comment-livere">livere</a></li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane valine" id="comment-valine">
+              <div class="comments" id="valine-comments"></div>
+            </div>
+            <div class="tab-pane livere" id="comment-livere">
+              <div class="comments" id="lv-container" data-id="city" data-uid="MTAyMC81MTYyOC8yODEwOQ=="></div>
+            </div>
+        </div>
+      </div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 2015 – 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Ln</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">360k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">5:27</span>
+  </span>
+</div>
+
+<div><canvas id="snow" style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:99999;pointer-events:none"></canvas></div>
+
+
+<script id="click-show-text" src="/js/click-show-text.js" data-mobile="false" data-text="富强,民主,文明,和谐,自由,平等,公正,法治,爱国,敬业,诚信,友善" data-fontsize="20px" data-random="false" async></script>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js" integrity="sha256-EdPgYcPk/IIrw7FYeuJQexva49pVRZNmt3LculEr7zM=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/comments.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/utils.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/motion.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/next-boot.min.js"></script>
+
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/third-party/search/local-search.min.js"></script>
+
+
+
+
+
+  
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.2.0/dist/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"ignores":null,"url":"https://weilining.github.io/253.html"}</script>
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/third-party/quicklink.min.js"></script>
+
+
+<script class="next-config" data-name="valine" type="application/json">{"enable":true,"appId":"Bu6sP4depeiGP22PIFqz0SmJ-MdYXbMMI","appKey":"jYGDeeOBkTqvrUJDEmqj83q7","serverURLs":"https://bu6sp4de.api.lncldglobal.com","placeholder":"Just go go","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"lang":null,"visitor":true,"comment_count":true,"recordIP":false,"enableQQ":false,"requiredFields":[],"el":"#valine-comments","path":"/253.html"}</script>
+<script>
+document.addEventListener('page:loaded', () => {
+  NexT.utils.loadComments(CONFIG.valine.el)
+    .then(() => NexT.utils.getScript(
+      'https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js',
+      { condition: window.Valine }
+    ))
+    .then(() => {
+      new Valine(CONFIG.valine);
+    });
+});
+</script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/third-party/comments/livere.min.js"></script>
+
+
+
+
+</body>
+</html>
