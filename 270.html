@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.jsdelivr.net/gh/weilining/img@main/img/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.jsdelivr.net/gh/weilining/img@main/img/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://cdn.jsdelivr.net/gh/weilining/img@main/img/favicon-16x16-next.png">
+  <link rel="mask-icon" href="https://cdn.jsdelivr.net/gh/weilining/img@main/img/logo.svg" color="#222">
+  <meta name="google-site-verification" content="OjGymv9uAqWYDsr-E-j6DG2k1_mPXsDQF77kgEK0nz8">
+  <meta name="msvalidate.01" content="5C84BC77E02800759CE29C4ACCE487BD">
+  <meta name="yandex-verification" content="06c62a93328de5da">
+  <meta name="baidu-site-verification" content="code-wFDrn4lvkD">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.dogedoge.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"weilining.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.8.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/config.min.js"></script>
+<meta name="description" content="默认">
+<meta property="og:type" content="article">
+<meta property="og:title" content="本博客当前使用的插件总结">
+<meta property="og:url" content="https://weilining.github.io/270.html">
+<meta property="og:site_name" content="Ln&#39;s Blog">
+<meta property="og:description" content="默认">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://img.shields.io/npm/v/hexo?color=red&logo=npm&style=flat-square">
+<meta property="og:image" content="https://img.shields.io/npm/v/hexo-submit-urls-to-search-engine?color=red&logo=npm&style=flat-square">
+<meta property="og:image" content="https://img.shields.io/npm/v/hexo-deployer-git?color=red&logo=npm&style=flat-square">
+<meta property="og:image" content="https://img.shields.io/npm/v/hexo-generator-baidu-sitemap?color=red&logo=npm&style=flat-square">
+<meta property="og:image" content="https://img.shields.io/npm/v/hexo-generator-searchdb?color=red&logo=npm&style=flat-square">
+<meta property="og:image" content="https://img.shields.io/npm/v/hexo-generator-sitemap?color=red&logo=npm&style=flat-square">
+<meta property="og:image" content="https://img.shields.io/npm/v/hexo-related-popular-posts?color=red&logo=npm&style=flat-square">
+<meta property="og:image" content="https://img.shields.io/npm/v/hexo-theme-next?color=red&logo=npm&style=flat-square">
+<meta property="og:image" content="https://img.shields.io/npm/v/hexo-word-counter?color=red&logo=npm&style=flat-square">
+<meta property="og:image" content="https://camo.githubusercontent.com/822b0c6a26f076ed746fb764c439150b6c42bb8e/68747470733a2f2f62616467652e667572792e696f2f6a732f6865786f2e737667">
+<meta property="og:image" content="https://camo.githubusercontent.com/23a9ccb58e87b2479aeddbb147c5bf60dc0b05e6/68747470733a2f2f696d672e736869656c64732e696f2f6e6f64652f762f6865786f">
+<meta property="og:image" content="https://github.com/hexojs/hexo/workflows/Tester/badge.svg">
+<meta property="og:image" content="https://camo.githubusercontent.com/7ab3d956fdc79881094d80f567cbc56afa0ce9ae/68747470733a2f2f696d672e736869656c64732e696f2f6c6962726172696573696f2f72656c656173652f6e706d2f6865786f">
+<meta property="og:image" content="https://camo.githubusercontent.com/ff7619e0d026e9cd86e0a228318bf348d49bed28/68747470733a2f2f636f766572616c6c732e696f2f7265706f732f6865786f6a732f6865786f2f62616467652e7376673f6272616e63683d6d6173746572">
+<meta property="og:image" content="https://camo.githubusercontent.com/fdcb940634445ec6bfb1d65d209437226bc261a7/68747470733a2f2f6261646765732e6769747465722e696d2f6865786f6a732f6865786f2e737667">
+<meta property="og:image" content="https://camo.githubusercontent.com/b12a95e20b7ca35f918c0ab5103fe56b6f44c067/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f636861742d6f6e253230646973636f72642d3732383964612e737667">
+<meta property="og:image" content="https://camo.githubusercontent.com/cd82e56a1f908d81e0e952dac098e353c25e6743/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f636861742d6f6e25323074656c656772616d2d3332616665642e737667">
+<meta property="og:image" content="https://camo.githubusercontent.com/bd08ed52723e1284964114daf03158a47717619b/68747470733a2f2f6170702e666f7373612e636f6d2f6170692f70726f6a656374732f6769742532426769746875622e636f6d2532466865786f6a732532466865786f2e7376673f747970653d736869656c64">
+<meta property="og:image" content="https://camo.githubusercontent.com/3638db9de1cb61eaa3347f594c83bed7f9dfbcf8/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f436f6e7472696275746f72253230436f76656e616e742d76322e3025323061646f707465642d6666363962342e737667">
+<meta property="og:image" content="https://img.shields.io/npm/v/hexo-theme-next?color=red&logo=npm&style=flat-square">
+<meta property="og:image" content="https://img.shields.io/badge/hexo-%3E=4.0.0-blue?style=flat-square&logo=hexo">
+<meta property="og:image" content="https://img.shields.io/badge/license-%20AGPL-orange?style=flat-square&logo=gnu">
+<meta property="og:image" content="https://img.shields.io/lgtm/grade/javascript/github/next-theme/hexo-theme-next?label=code%20quality&logo=lgtm&style=flat-square">
+<meta property="og:image" content="https://img.shields.io/github/workflow/status/next-theme/hexo-theme-next/Linter?label=test&logo=github&style=flat-square">
+<meta property="og:image" content="https://img.shields.io/github/workflow/status/next-theme/hexo-theme-next/Tester?logo=github&style=flat-square">
+<meta property="article:published_time" content="2020-10-01T10:09:25.000Z">
+<meta property="article:modified_time" content="2020-10-20T14:27:47.000Z">
+<meta property="article:author" content="Lining Wei">
+<meta property="article:tag" content="默认">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img.shields.io/npm/v/hexo?color=red&logo=npm&style=flat-square">
+
+
+<link rel="canonical" href="https://weilining.github.io/270.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://weilining.github.io/270.html","path":"270.html","title":"本博客当前使用的插件总结"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>本博客当前使用的插件总结 | Ln's Blog</title>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="Ln's Blog" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Ln's Blog</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">有朋自远方来，不亦乐乎</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-bell fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-top"><a href="/top/" rel="section"><i class="fa fa-signal fa-fw"></i>热榜</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-friends"><a href="/friends/" rel="section"><i class="fa fa-globe-asia fa-fw"></i>朋友们</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Hexo"><span class="nav-number">1.</span> <span class="nav-text">Hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B"><span class="nav-number">1.1.</span> <span class="nav-text">快速开始</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE"><span class="nav-number">1.2.</span> <span class="nav-text">配置</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#hexo-theme-next"><span class="nav-number">2.</span> <span class="nav-text">hexo-theme-next</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85"><span class="nav-number">2.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE-1"><span class="nav-number">2.2.</span> <span class="nav-text">配置</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Hexo-%E4%B8%80%E9%94%AE%E9%83%A8%E7%BD%B2%E6%8F%92%E4%BB%B6"><span class="nav-number">3.</span> <span class="nav-text">Hexo 一键部署插件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%B0%E5%9D%80"><span class="nav-number">3.0.1.</span> <span class="nav-text">地址</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE"><span class="nav-number">3.0.2.</span> <span class="nav-text">安装配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo-%E6%96%87%E7%AB%A0%E6%B0%B8%E4%B9%85%E9%93%BE%E6%8E%A5%E6%8F%92%E4%BB%B6"><span class="nav-number">3.1.</span> <span class="nav-text">Hexo 文章永久链接插件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%B0%E5%9D%80-1"><span class="nav-number">3.1.1.</span> <span class="nav-text">地址</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE-1"><span class="nav-number">3.1.2.</span> <span class="nav-text">安装配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo-%E6%8E%A8%E8%8D%90%E6%96%87%E7%AB%A0%E6%8F%92%E4%BB%B6"><span class="nav-number">3.2.</span> <span class="nav-text">Hexo 推荐文章插件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%B0%E5%9D%80-2"><span class="nav-number">3.2.1.</span> <span class="nav-text">地址</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE-2"><span class="nav-number">3.2.2.</span> <span class="nav-text">安装配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo-%E8%B1%86%E7%93%A3%E8%AF%BB%E4%B9%A6%E3%80%81%E8%B1%86%E7%93%A3%E7%94%B5%E5%BD%B1%E6%8F%92%E4%BB%B6"><span class="nav-number">3.3.</span> <span class="nav-text">Hexo 豆瓣读书、豆瓣电影插件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE-3"><span class="nav-number">3.3.1.</span> <span class="nav-text">安装配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo-%E7%AB%99%E7%82%B9%E5%9C%B0%E5%9B%BE-sitemap-%E7%94%9F%E6%88%90"><span class="nav-number">3.4.</span> <span class="nav-text">Hexo 站点地图 sitemap 生成</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%9A%E7%94%A8%E7%AB%99%E7%82%B9%E5%9C%B0%E5%9B%BE"><span class="nav-number">3.4.1.</span> <span class="nav-text">通用站点地图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%99%BE%E5%BA%A6%E7%AB%99%E7%82%B9%E5%9C%B0%E5%9B%BE"><span class="nav-number">3.4.2.</span> <span class="nav-text">百度站点地图</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo-%E7%99%BE%E5%BA%A6%E4%B8%BB%E5%8A%A8%E6%8E%A8%E9%80%81"><span class="nav-number">3.5.</span> <span class="nav-text">Hexo 百度主动推送</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%B0%E5%9D%80-3"><span class="nav-number">3.5.1.</span> <span class="nav-text">地址</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE-4"><span class="nav-number">3.5.2.</span> <span class="nav-text">安装配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo-%E5%AD%97%E6%95%B0%E5%92%8C%E9%98%85%E8%AF%BB%E6%97%B6%E9%97%B4%E7%BB%9F%E8%AE%A1%E6%8F%92%E4%BB%B6"><span class="nav-number">3.6.</span> <span class="nav-text">Hexo 字数和阅读时间统计插件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%B0%E5%9D%80-4"><span class="nav-number">3.6.1.</span> <span class="nav-text">地址</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE-5"><span class="nav-number">3.6.2.</span> <span class="nav-text">安装配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo-RSS-%E7%94%9F%E6%88%90%E6%8F%92%E4%BB%B6"><span class="nav-number">3.7.</span> <span class="nav-text">Hexo RSS 生成插件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%B0%E5%9D%80-5"><span class="nav-number">3.7.1.</span> <span class="nav-text">地址</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE-6"><span class="nav-number">3.7.2.</span> <span class="nav-text">安装配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo-%E6%9C%AC%E5%9C%B0%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD"><span class="nav-number">3.8.</span> <span class="nav-text">Hexo 本地搜索功能</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%AC%E5%9C%B0%E6%90%9C%E7%B4%A2%E7%9A%84%E5%8E%9F%E7%90%86"><span class="nav-number">3.8.1.</span> <span class="nav-text">本地搜索的原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8F%92%E4%BB%B6%E5%9C%B0%E5%9D%80"><span class="nav-number">3.8.2.</span> <span class="nav-text">插件地址</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE-7"><span class="nav-number">3.8.3.</span> <span class="nav-text">安装配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo-%E6%96%87%E7%AB%A0%E7%BD%AE%E9%A1%B6%E6%8F%92%E4%BB%B6"><span class="nav-number">3.9.</span> <span class="nav-text">Hexo 文章置顶插件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%B0%E5%9D%80-6"><span class="nav-number">3.9.1.</span> <span class="nav-text">地址</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE-8"><span class="nav-number">3.9.2.</span> <span class="nav-text">安装配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AE%E7%BD%AE%E9%A1%B6%E5%9B%BE%E6%A0%87"><span class="nav-number">3.9.3.</span> <span class="nav-text">设置置顶图标</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo-%E6%96%87%E7%AB%A0%E5%8A%A0%E5%AF%86%E6%8F%92%E4%BB%B6"><span class="nav-number">3.10.</span> <span class="nav-text">Hexo 文章加密插件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%B0%E5%9D%80-7"><span class="nav-number">3.10.1.</span> <span class="nav-text">地址</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE-9"><span class="nav-number">3.10.2.</span> <span class="nav-text">安装配置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BF%AB%E9%80%9F%E4%BD%BF%E7%94%A8%EF%BC%9A"><span class="nav-number">3.10.2.1.</span> <span class="nav-text">快速使用：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%AB%98%E7%BA%A7%E9%85%8D%E7%BD%AE"><span class="nav-number">3.10.2.2.</span> <span class="nav-text">高级配置</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo-%E5%87%8F%E5%B0%91%E5%87%BA%E7%AB%99%E9%93%BE%E6%8E%A5"><span class="nav-number">3.11.</span> <span class="nav-text">Hexo 减少出站链接</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%B0%E5%9D%80-8"><span class="nav-number">3.11.1.</span> <span class="nav-text">地址</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE-10"><span class="nav-number">3.11.2.</span> <span class="nav-text">安装配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo-%E9%A1%B5%E9%9D%A2%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E5%8E%8B%E7%BC%A9%E6%8F%92%E4%BB%B6"><span class="nav-number">3.12.</span> <span class="nav-text">Hexo 页面静态资源压缩插件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%B0%E5%9D%80-9"><span class="nav-number">3.12.1.</span> <span class="nav-text">地址</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE-11"><span class="nav-number">3.12.2.</span> <span class="nav-text">安装配置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-hexo-neat-%E6%8F%92%E4%BB%B6"><span class="nav-number">3.12.2.1.</span> <span class="nav-text">安装 hexo-neat 插件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AB%99%E7%82%B9%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E6%B7%BB%E5%8A%A0%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE"><span class="nav-number">3.12.2.2.</span> <span class="nav-text">站点配置文件添加相关配置</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo-LeanCloud-%E5%AE%89%E5%85%A8%E8%AE%BE%E7%BD%AE%E6%8F%92%E4%BB%B6"><span class="nav-number">3.13.</span> <span class="nav-text">Hexo LeanCloud 安全设置插件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%B0%E5%9D%80-10"><span class="nav-number">3.13.1.</span> <span class="nav-text">地址</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE-12"><span class="nav-number">3.13.2.</span> <span class="nav-text">安装配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93"><span class="nav-number">3.13.3.</span> <span class="nav-text">问题总结</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo-%E6%94%AF%E6%8C%81-Echarts"><span class="nav-number">3.14.</span> <span class="nav-text">Hexo 支持 Echarts</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%B0%E5%9D%80-11"><span class="nav-number">3.14.1.</span> <span class="nav-text">地址</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE-13"><span class="nav-number">3.14.2.</span> <span class="nav-text">安装配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo-%E4%BF%AE%E6%94%B9-back2top-%E6%A0%87%E7%AD%BE"><span class="nav-number">3.15.</span> <span class="nav-text">Hexo 修改 back2top 标签</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%B0%E5%9D%80-12"><span class="nav-number">3.15.1.</span> <span class="nav-text">地址</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE-14"><span class="nav-number">3.15.2.</span> <span class="nav-text">安装配置</span></a></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Lining Wei"
+      src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/icon.gif">
+  <p class="site-author-name" itemprop="name">Lining Wei</p>
+  <div class="site-description" itemprop="description">算法、技术</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">268</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">35</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="cc-license site-overview-item animated" itemprop="license">
+    <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC96aC1DTg=="><img src="https://cdn.jsdelivr.net/npm/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></span>
+  </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://weilining.github.io/270.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/weilining/img@main/img/icon.gif">
+      <meta itemprop="name" content="Lining Wei">
+      <meta itemprop="description" content="算法、技术">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ln's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          本博客当前使用的插件总结<span class="exturl post-edit-link" data-url="aHR0cHM6Ly9naXRodWIuY29tL3dlaWxpbmluZy9ibG9nL2VkaXQvbWFpbi9zb3VyY2UvX3Bvc3RzLzI3MC5tZA==" title="编辑"><i class="fa fa-pen-nib"></i></span>
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-10-01 18:09:25" itemprop="dateCreated datePublished" datetime="2020-10-01T18:09:25+08:00">2020-10-01</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2020-10-20 22:27:47" itemprop="dateModified" datetime="2020-10-20T22:27:47+08:00">2020-10-20</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Hexo/" itemprop="url" rel="index"><span itemprop="name">Hexo</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/270.html" class="post-meta-item leancloud_visitors" data-flag-title="本博客当前使用的插件总结" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>13k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>12 分钟</span>
+    </span>
+</div>
+
+            <div class="post-description">默认</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p> 本博客当前使用的插件，便于后人参考修改：</p>
+<span id="more"></span>
+
+
+
+<table>
+<thead>
+<tr>
+<th align="left">插件</th>
+<th align="left">版本</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>babel-runtime</code></td>
+<td align="left">6.26.0</td>
+</tr>
+<tr>
+<td align="left"><code>hexo</code></td>
+<td align="left"><img data-src="https://img.shields.io/npm/v/hexo?color=red&logo=npm&style=flat-square" alt="npm" loading="lazy"></td>
+</tr>
+<tr>
+<td align="left"><code>hexo-abbrlink</code></td>
+<td align="left">2.0.5</td>
+</tr>
+<tr>
+<td align="left"><code>hexo-submit-urls-to-search-engine</code></td>
+<td align="left"><img data-src="https://img.shields.io/npm/v/hexo-submit-urls-to-search-engine?color=red&logo=npm&style=flat-square" alt="npm" loading="lazy"></td>
+</tr>
+<tr>
+<td align="left"><code>hexo-blog-encrypt</code></td>
+<td align="left">3.0.9</td>
+</tr>
+<tr>
+<td align="left"><code>hexo-cake-moon-menu</code></td>
+<td align="left">1.1.3</td>
+</tr>
+<tr>
+<td align="left"><code>hexo-deployer-git</code></td>
+<td align="left"><img data-src="https://img.shields.io/npm/v/hexo-deployer-git?color=red&logo=npm&style=flat-square" alt="npm" loading="lazy"></td>
+</tr>
+<tr>
+<td align="left"><code>hexo-douban</code></td>
+<td align="left">1.1.3</td>
+</tr>
+<tr>
+<td align="left"><code>hexo-filter-nofollow</code></td>
+<td align="left">2.0.2</td>
+</tr>
+<tr>
+<td align="left"><code>hexo-generator-archive</code></td>
+<td align="left">1.0.0</td>
+</tr>
+<tr>
+<td align="left"><code>hexo-generator-baidu-sitemap</code></td>
+<td align="left"><img data-src="https://img.shields.io/npm/v/hexo-generator-baidu-sitemap?color=red&logo=npm&style=flat-square" alt="npm" loading="lazy"></td>
+</tr>
+<tr>
+<td align="left"><code>hexo-generator-category</code></td>
+<td align="left">1.0.0</td>
+</tr>
+<tr>
+<td align="left"><code>hexo-generator-feed</code></td>
+<td align="left">2.2.0</td>
+</tr>
+<tr>
+<td align="left"><code>hexo-generator-index-pin-top</code></td>
+<td align="left">0.2.2</td>
+</tr>
+<tr>
+<td align="left"><code>hexo-generator-searchdb</code></td>
+<td align="left"><img data-src="https://img.shields.io/npm/v/hexo-generator-searchdb?color=red&logo=npm&style=flat-square" alt="npm" loading="lazy"></td>
+</tr>
+<tr>
+<td align="left"><code>hexo-generator-sitemap</code></td>
+<td align="left"><img data-src="https://img.shields.io/npm/v/hexo-generator-sitemap?color=red&logo=npm&style=flat-square" alt="npm" loading="lazy"></td>
+</tr>
+<tr>
+<td align="left"><code>hexo-generator-tag</code></td>
+<td align="left">1.0.0</td>
+</tr>
+<tr>
+<td align="left"><code>hexo-leancloud-counter-security</code></td>
+<td align="left">1.4.1</td>
+</tr>
+<tr>
+<td align="left"><code>hexo-neat</code></td>
+<td align="left">1.0.4</td>
+</tr>
+<tr>
+<td align="left"><code>hexo-related-popular-posts</code></td>
+<td align="left"><img data-src="https://img.shields.io/npm/v/hexo-related-popular-posts?color=red&logo=npm&style=flat-square" alt="npm" loading="lazy"></td>
+</tr>
+<tr>
+<td align="left"><code>hexo-renderer-ejs</code></td>
+<td align="left">1.0.0</td>
+</tr>
+<tr>
+<td align="left"><code>hexo-renderer-marked</code></td>
+<td align="left">2.0.0</td>
+</tr>
+<tr>
+<td align="left"><code>hexo-renderer-stylus</code></td>
+<td align="left">1.1.0</td>
+</tr>
+<tr>
+<td align="left"><code>hexo-server</code></td>
+<td align="left">1.0.0</td>
+</tr>
+<tr>
+<td align="left"><code>hexo-symbols-count-time</code></td>
+<td align="left">0.7.0</td>
+</tr>
+<tr>
+<td align="left"><code>hexo-tag-echarts4</code></td>
+<td align="left">1.0.1</td>
+</tr>
+<tr>
+<td align="left"><code>hexo-theme-next</code></td>
+<td align="left"><img data-src="https://img.shields.io/npm/v/hexo-theme-next?color=red&logo=npm&style=flat-square" alt="npm" loading="lazy"></td>
+</tr>
+<tr>
+<td align="left"><code>hexo-word-counter</code></td>
+<td align="left"><img data-src="https://img.shields.io/npm/v/hexo-word-counter?color=red&logo=npm&style=flat-square" alt="npm" loading="lazy"></td>
+</tr>
+</tbody></table>
+<p>[TOC]</p>
+<h1 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h1><p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2hleG9qcy9oZXhv">GitHub<i class="fa fa-external-link-alt"></i></span></p>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.npmjs.com/package/hexo"><img data-src="https://camo.githubusercontent.com/822b0c6a26f076ed746fb764c439150b6c42bb8e/68747470733a2f2f62616467652e667572792e696f2f6a732f6865786f2e737667" alt="NPM version" loading="lazy"></a> <a target="_blank" rel="noopener external nofollow noreferrer" href="https://camo.githubusercontent.com/23a9ccb58e87b2479aeddbb147c5bf60dc0b05e6/68747470733a2f2f696d672e736869656c64732e696f2f6e6f64652f762f6865786f"><img data-src="https://camo.githubusercontent.com/23a9ccb58e87b2479aeddbb147c5bf60dc0b05e6/68747470733a2f2f696d672e736869656c64732e696f2f6e6f64652f762f6865786f" alt="Required Node version" loading="lazy"></a> <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/hexojs/hexo/actions?query=workflow:Tester"><img data-src="https://github.com/hexojs/hexo/workflows/Tester/badge.svg" alt="Build Status" loading="lazy"></a> <a target="_blank" rel="noopener external nofollow noreferrer" href="https://libraries.io/npm/hexo"><img data-src="https://camo.githubusercontent.com/7ab3d956fdc79881094d80f567cbc56afa0ce9ae/68747470733a2f2f696d672e736869656c64732e696f2f6c6962726172696573696f2f72656c656173652f6e706d2f6865786f" alt="dependencies Status" loading="lazy"></a> <a target="_blank" rel="noopener external nofollow noreferrer" href="https://coveralls.io/r/hexojs/hexo?branch=master"><img data-src="https://camo.githubusercontent.com/ff7619e0d026e9cd86e0a228318bf348d49bed28/68747470733a2f2f636f766572616c6c732e696f2f7265706f732f6865786f6a732f6865786f2f62616467652e7376673f6272616e63683d6d6173746572" alt="Coverage Status" loading="lazy"></a> <a target="_blank" rel="noopener external nofollow noreferrer" href="https://gitter.im/hexojs/hexo"><img data-src="https://camo.githubusercontent.com/fdcb940634445ec6bfb1d65d209437226bc261a7/68747470733a2f2f6261646765732e6769747465722e696d2f6865786f6a732f6865786f2e737667" alt="Gitter" loading="lazy"></a> <a target="_blank" rel="noopener external nofollow noreferrer" href="https://discord.gg/teM2Anj"><img data-src="https://camo.githubusercontent.com/b12a95e20b7ca35f918c0ab5103fe56b6f44c067/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f636861742d6f6e253230646973636f72642d3732383964612e737667" alt="Discord Chat" loading="lazy"></a> <a target="_blank" rel="noopener external nofollow noreferrer" href="https://t.me/hexojs"><img data-src="https://camo.githubusercontent.com/cd82e56a1f908d81e0e952dac098e353c25e6743/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f636861742d6f6e25323074656c656772616d2d3332616665642e737667" alt="Telegram Chat" loading="lazy"></a> <a target="_blank" rel="noopener external nofollow noreferrer" href="https://app.fossa.com/projects/git%2Bgithub.com%2Fhexojs%2Fhexo?ref=badge_shield"><img data-src="https://camo.githubusercontent.com/bd08ed52723e1284964114daf03158a47717619b/68747470733a2f2f6170702e666f7373612e636f6d2f6170692f70726f6a656374732f6769742532426769746875622e636f6d2532466865786f6a732532466865786f2e7376673f747970653d736869656c64" alt="FOSSA Status" loading="lazy"></a> <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/hexojs/hexo/blob/master/CODE_OF_CONDUCT.md"><img data-src="https://camo.githubusercontent.com/3638db9de1cb61eaa3347f594c83bed7f9dfbcf8/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f436f6e7472696275746f72253230436f76656e616e742d76322e3025323061646f707465642d6666363962342e737667" alt="Contributor Covenant" loading="lazy"></a></p>
+<h2 id="快速开始"><a href="#快速开始" class="headerlink" title="快速开始"></a>快速开始</h2><p><strong>Install Hexo</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
+
+<p><strong>Setup your blog</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo init blog</span><br><span class="line">cd blog</span><br></pre></td></tr></table></figure>
+
+<p><strong>Start the server</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+
+<p><strong>Create a new post</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo new &quot;Hello Hexo&quot;</span><br></pre></td></tr></table></figure>
+
+<p><strong>Generate static files</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure>
+
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p><code>_config.yml</code>里修改以下属性</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Site</span><br><span class="line">title: Ln&#39;s Blog #网站标题</span><br><span class="line">subtitle: &#39;有朋自远方来，不亦乐乎&#39; #网站副标题</span><br><span class="line">description: &#39;算法、技术&#39; #网站描述</span><br><span class="line">author: Lining Wei #作者</span><br><span class="line">language:</span><br><span class="line">  - zh-CN</span><br><span class="line">timezone: &#39;Asia&#x2F;ShangHai&#39;</span><br><span class="line"></span><br><span class="line">url: https:&#x2F;&#x2F;weilining.github.io&#x2F;</span><br><span class="line"></span><br><span class="line"># hexo默认文章路径为年&#x2F;月&#x2F;日&#x2F;文件名，目录层次过长不利于收录，所以在根目录的config.yml文件中，修改默认路径</span><br><span class="line">permalink: :title.html</span><br><span class="line"></span><br><span class="line">post_asset_folder: true</span><br><span class="line">marked:</span><br><span class="line">  prependRoot: true</span><br><span class="line">  postAsset: true</span><br><span class="line"></span><br><span class="line">deploy:</span><br><span class="line">  - type: git</span><br><span class="line">    repo: git@github.com:weilining&#x2F;weilining.github.io.git # 使用仓库的ssh地址</span><br><span class="line">    branch: master</span><br><span class="line">    token: &#39;f7e4ee8c4b57d3fab8c0680e192xxxx&#39;</span><br><span class="line">    message: message # git commit -m &quot;message&quot;</span><br><span class="line">    name: weilining</span><br><span class="line">    email: abc@abc.com</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="hexo-theme-next"><a href="#hexo-theme-next" class="headerlink" title="hexo-theme-next"></a>hexo-theme-next</h1><p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3RoZW1lLW5leHQvaGV4by10aGVtZS1uZXh0">GitHub<i class="fa fa-external-link-alt"></i></span><br><a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.npmjs.com/package/hexo-theme-next"><img data-src="https://img.shields.io/npm/v/hexo-theme-next?color=red&logo=npm&style=flat-square" alt="NPM version" loading="lazy"></a> <a target="_blank" rel="noopener external nofollow noreferrer" href="https://hexo.io/"><img data-src="https://img.shields.io/badge/hexo-%3E=4.0.0-blue?style=flat-square&logo=hexo" alt="Required Hexo version" loading="lazy"></a> <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/next-theme/hexo-theme-next/blob/master/LICENSE.md"><img data-src="https://img.shields.io/badge/license-%20AGPL-orange?style=flat-square&logo=gnu" alt="License" loading="lazy"></a> <a target="_blank" rel="noopener external nofollow noreferrer" href="https://lgtm.com/projects/g/next-theme/hexo-theme-next/"><img data-src="https://img.shields.io/lgtm/grade/javascript/github/next-theme/hexo-theme-next?label=code%20quality&logo=lgtm&style=flat-square" alt="Code Quality" loading="lazy"></a> <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/next-theme/hexo-theme-next/actions?query=workflow:Linter"><img data-src="https://img.shields.io/github/workflow/status/next-theme/hexo-theme-next/Linter?label=test&logo=github&style=flat-square" alt="Build Status" loading="lazy"></a> [<img data-src="https://img.shields.io/github/workflow/status/next-theme/hexo-theme-next/Tester?logo=github&style=flat-square" alt="Build Status" loading="lazy">](</p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>如果您使用的是Hexo 5.0或更高版本，则最简单的安装方法是通过npm：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cd hexo-site</span><br><span class="line">$ npm install hexo-theme-next</span><br></pre></td></tr></table></figure>
+
+<p>安装后，打开Hexo配置文件<code>_config.yml</code>并将主题变量设置为next。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">theme: next</span><br></pre></td></tr></table></figure>
+
+<h2 id="配置-1"><a href="#配置-1" class="headerlink" title="配置"></a>配置</h2><p>根目录下创建<code>_config.next.yml</code>文件，填入以下代码</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 主题选择</span><br><span class="line">scheme: Gemini</span><br><span class="line"></span><br><span class="line"># 暗模式</span><br><span class="line">darkmode: true</span><br><span class="line"></span><br><span class="line"># 增加版权信息</span><br><span class="line">creative_commons:</span><br><span class="line">  license: by-nc-sa</span><br><span class="line">  sidebar: false #首页边栏是否显示</span><br><span class="line">  post: true #文章底部是否显示</span><br><span class="line">  language:</span><br><span class="line">  </span><br><span class="line"># 菜单设置</span><br><span class="line">menu_settings:</span><br><span class="line">  icons: true</span><br><span class="line">  badges: true # 菜单文章总数显示</span><br><span class="line"></span><br><span class="line"># 自动摘录首页中的描述作为前导文字。</span><br><span class="line">excerpt_description: true</span><br><span class="line"></span><br><span class="line"># 使用图标代替符号＃在帖子底部指示标签</span><br><span class="line">tag_icon: true</span><br><span class="line"></span><br><span class="line"># 右边百分比显示</span><br><span class="line">back2top:</span><br><span class="line">  enable: true</span><br><span class="line">  # 在边栏中返回顶部。</span><br><span class="line">  sidebar: false</span><br><span class="line">  # 滚动b2t按钮中的百分比标签。</span><br><span class="line">  scrollpercent: true</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="Hexo-一键部署插件"><a href="#Hexo-一键部署插件" class="headerlink" title="Hexo 一键部署插件"></a>Hexo 一键部署插件</h1><h3 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h3><ul>
+<li><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2hleG9qcy9oZXhvLWRlcGxveWVyLWdpdA==">hexo-deployer-git<i class="fa fa-external-link-alt"></i></span></li>
+</ul>
+<h3 id="安装配置"><a href="#安装配置" class="headerlink" title="安装配置"></a>安装配置</h3><p>安装插件：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+
+<p>然后修改站点配置文件<code>_config.yml</code> 中的配置：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">- type: git</span><br><span class="line">  repository: git@github.com:dta0502&#x2F;dta0502.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+
+<h2 id="Hexo-文章永久链接插件"><a href="#Hexo-文章永久链接插件" class="headerlink" title="Hexo 文章永久链接插件"></a>Hexo 文章永久链接插件</h2><h3 id="地址-1"><a href="#地址-1" class="headerlink" title="地址"></a>地址</h3><ul>
+<li><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3JvemJvL2hleG8tYWJicmxpbms=">hexo-abbrlink<i class="fa fa-external-link-alt"></i></span></li>
+</ul>
+<h3 id="安装配置-1"><a href="#安装配置-1" class="headerlink" title="安装配置"></a>安装配置</h3><p>安装插件：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-abbrlink --save</span><br></pre></td></tr></table></figure>
+
+<p>然后我们可以在站点配置文件<code>_config.yml</code> 中修改为：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">url: https:&#x2F;&#x2F;tding.top&#x2F;</span><br><span class="line">root: &#x2F;</span><br><span class="line">permalink: archives&#x2F;:abbrlink.html</span><br><span class="line">abbrlink:</span><br><span class="line">  alg: crc32  # 算法：crc16(default) and crc32</span><br><span class="line">  rep: hex    # 进制：dec(default) and hex</span><br><span class="line">permalink_defaults:</span><br></pre></td></tr></table></figure>
+
+<h2 id="Hexo-推荐文章插件"><a href="#Hexo-推荐文章插件" class="headerlink" title="Hexo 推荐文章插件"></a>Hexo 推荐文章插件</h2><p>这个可以帮助我们根据标签推荐相关文章，原版插件的使用要求编辑主题文件的，但是 NexT 主题集成了这个插件的配置，因此配置起来非常方便。</p>
+<h3 id="地址-2"><a href="#地址-2" class="headerlink" title="地址"></a>地址</h3><ul>
+<li><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3RlYTMvaGV4by1yZWxhdGVkLXBvcHVsYXItcG9zdHM=">hexo-related-popular-posts<i class="fa fa-external-link-alt"></i></span></li>
+</ul>
+<h3 id="安装配置-2"><a href="#安装配置-2" class="headerlink" title="安装配置"></a>安装配置</h3><p>安装插件：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-related-popular-posts --save</span><br></pre></td></tr></table></figure>
+
+<p>我们只需要在主题配置文件<code>_config.yml</code> 中修改：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">related_posts:</span><br><span class="line">  enable: true</span><br><span class="line">  title: 推荐文章 # Custom header, leave empty to use the default one</span><br><span class="line">  display_in_home: false</span><br><span class="line">  params:</span><br><span class="line">    maxCount: 5</span><br><span class="line">    PPMixingRate: 0.25</span><br><span class="line">    isDate: false</span><br><span class="line">    isImage: false</span><br><span class="line">    isExcerpt: false</span><br></pre></td></tr></table></figure>
+
+<h2 id="Hexo-豆瓣读书、豆瓣电影插件"><a href="#Hexo-豆瓣读书、豆瓣电影插件" class="headerlink" title="Hexo 豆瓣读书、豆瓣电影插件"></a>Hexo 豆瓣读书、豆瓣电影插件</h2><h3 id="安装配置-3"><a href="#安装配置-3" class="headerlink" title="安装配置"></a>安装配置</h3><p>安装插件：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-douban --save</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>具体配置教程见：<span class="exturl" data-url="aHR0cHM6Ly90ZGluZy50b3AvYXJjaGl2ZXMvYzdiYTNhNDEuaHRtbA==">Hexo 加入豆瓣读书页面<i class="fa fa-external-link-alt"></i></span></li>
+</ul>
+<h2 id="Hexo-站点地图-sitemap-生成"><a href="#Hexo-站点地图-sitemap-生成" class="headerlink" title="Hexo 站点地图 sitemap 生成"></a>Hexo 站点地图 sitemap 生成</h2><h3 id="通用站点地图"><a href="#通用站点地图" class="headerlink" title="通用站点地图"></a>通用站点地图</h3><ul>
+<li>地址：<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2hleG9qcy9oZXhvLWdlbmVyYXRvci1zaXRlbWFw">hexo-generator-sitemap<i class="fa fa-external-link-alt"></i></span></li>
+</ul>
+<p>安装配置：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-sitemap --save</span><br></pre></td></tr></table></figure>
+
+<p>然后我们需要在 Hexo 站点配置文件<code>_config.yml</code> 中加入 sitemap 插件：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 通用站点地图</span><br><span class="line">sitemap:</span><br><span class="line">  path: sitemap.xml</span><br></pre></td></tr></table></figure>
+
+<h3 id="百度站点地图"><a href="#百度站点地图" class="headerlink" title="百度站点地图"></a>百度站点地图</h3><ul>
+<li>地址：<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2NvbmV5Y29kZS9oZXhvLWdlbmVyYXRvci1iYWlkdS1zaXRlbWFw">Sitemap generator<i class="fa fa-external-link-alt"></i></span></li>
+</ul>
+<p>安装配置：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-baidu-sitemap --save</span><br></pre></td></tr></table></figure>
+
+<p>具体配置类似通用站点地图，当然也可以看官方提供的教程，下面是一个简单的配置，我们在 Hexo 站点配置文件<code>_config.yml</code> 中添加：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 百度站点地图</span><br><span class="line">baidusitemap:</span><br><span class="line">  path: baidusitemap.xml</span><br></pre></td></tr></table></figure>
+
+<h2 id="Hexo-百度主动推送"><a href="#Hexo-百度主动推送" class="headerlink" title="Hexo 百度主动推送"></a>Hexo 百度主动推送</h2><h3 id="地址-3"><a href="#地址-3" class="headerlink" title="地址"></a>地址</h3><ul>
+<li><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2h1aXdhbmcvaGV4by1iYWlkdS11cmwtc3VibWl0">Hexo Baidu URL Submit<i class="fa fa-external-link-alt"></i></span>停止</li>
+<li><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2NqaDA2MTMvaGV4by1zdWJtaXQtdXJscy10by1zZWFyY2gtZW5naW5l">GitHub<i class="fa fa-external-link-alt"></i></span></li>
+</ul>
+<h3 id="安装配置-4"><a href="#安装配置-4" class="headerlink" title="安装配置"></a>安装配置</h3><p>安装插件：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-submit-urls-to-search-engin --save</span><br></pre></td></tr></table></figure>
+
+<p>在站点配置文件<code>_config.yml</code> 中添加以下代码：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo_submit_urls_to_search_engine:</span><br><span class="line">  submit_condition: count #链接被提交的条件，可选值：count | period 现仅支持count</span><br><span class="line">  count: 10 # 提交最新的10个链接</span><br><span class="line">  period: 900 # 提交修改时间在 900 秒内的链接</span><br><span class="line">  google: 0 # 是否向Google提交，可选值：1 | 0（0：否；1：是）</span><br><span class="line">  bing: 1 # 是否向bing提交，可选值：1 | 0（0：否；1：是）</span><br><span class="line">  baidu: 1 # 是否向baidu提交，可选值：1 | 0（0：否；1：是）</span><br><span class="line">  txt_path: submit_urls.txt ## 文本文档名， 需要推送的链接会保存在此文本文档里</span><br><span class="line">  baidu_host: https:&#x2F;&#x2F;cjh0613.github.io ## 在百度站长平台中注册的域名</span><br><span class="line">  baidu_token: 请按照文档说明获取 ## 请注意这是您的秘钥， 所以请不要把它直接发布在公众仓库里!</span><br><span class="line">  bing_host: https:&#x2F;&#x2F;cjh0613.github.io ## 在bing站长平台中注册的域名</span><br><span class="line">  bing_token: 请按照文档说明获取 ## 请注意这是您的秘钥， 所以请不要把它直接发布在公众仓库里!</span><br><span class="line">  google_host: https:&#x2F;&#x2F;cjh0613.github.io ## 在google站长平台中注册的域名</span><br><span class="line">  google_key_file: Project.json #存放google key的json文件，放于网站根目录（与hexo _config.yml文件位置相同），请不要把json文件内容直接发布在公众仓库里!</span><br><span class="line">  replace: 0  # 是否替换链接中的部分字符串，可选值：1 | 0（0：否；1：是）</span><br><span class="line">  find_what: http:&#x2F;&#x2F;cjh0613.github.io&#x2F;blog</span><br><span class="line">  replace_with: https:&#x2F;&#x2F;cjh0613.com</span><br></pre></td></tr></table></figure>
+
+<h2 id="Hexo-字数和阅读时间统计插件"><a href="#Hexo-字数和阅读时间统计插件" class="headerlink" title="Hexo 字数和阅读时间统计插件"></a>Hexo 字数和阅读时间统计插件</h2><h3 id="地址-4"><a href="#地址-4" class="headerlink" title="地址"></a>地址</h3><ul>
+<li><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3RoZW1lLW5leHQvaGV4by1zeW1ib2xzLWNvdW50LXRpbWU=">hexo-symbols-count-time<i class="fa fa-external-link-alt"></i></span></li>
+</ul>
+<h3 id="安装配置-5"><a href="#安装配置-5" class="headerlink" title="安装配置"></a>安装配置</h3><p>安装插件：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-symbols-count-time --save</span><br></pre></td></tr></table></figure>
+
+<p>在站点配置文件<code>_config.yml</code> 中添加以下代码：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">symbols_count_time:</span><br><span class="line">  symbols: true</span><br><span class="line">  time: true</span><br><span class="line">  total_symbols: true</span><br><span class="line">  total_time: true</span><br></pre></td></tr></table></figure>
+
+<p>然后由于此插件集成在 NexT 中，然后修改主题配置文件<code>_config.yml</code>：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">symbols_count_time:</span><br><span class="line">  separated_meta: true</span><br><span class="line">  item_text_post: true</span><br><span class="line">  item_text_total: false</span><br><span class="line">  awl: 4</span><br><span class="line">  wpm: 275</span><br></pre></td></tr></table></figure>
+
+<h2 id="Hexo-RSS-生成插件"><a href="#Hexo-RSS-生成插件" class="headerlink" title="Hexo RSS 生成插件"></a>Hexo RSS 生成插件</h2><h3 id="地址-5"><a href="#地址-5" class="headerlink" title="地址"></a>地址</h3><ul>
+<li><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2hleG9qcy9oZXhvLWdlbmVyYXRvci1mZWVk">hexo-generator-feed<i class="fa fa-external-link-alt"></i></span></li>
+</ul>
+<h3 id="安装配置-6"><a href="#安装配置-6" class="headerlink" title="安装配置"></a>安装配置</h3><p>安装插件：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-feed --save</span><br></pre></td></tr></table></figure>
+
+<p>在站点配置文件<code>_config.yml</code> 中添加以下代码：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">feed:</span><br><span class="line">  type: atom</span><br><span class="line">  path: atom.xml</span><br><span class="line">  limit: 20</span><br><span class="line">  hub:</span><br><span class="line">  content:</span><br><span class="line">  content_limit: 140</span><br><span class="line">  content_limit_delim: &#39; &#39;</span><br><span class="line">  order_by: -date</span><br><span class="line">  icon: icon.png</span><br><span class="line">  autodiscovery: true</span><br><span class="line">  template:</span><br></pre></td></tr></table></figure>
+
+<h2 id="Hexo-本地搜索功能"><a href="#Hexo-本地搜索功能" class="headerlink" title="Hexo 本地搜索功能"></a>Hexo 本地搜索功能</h2><h3 id="本地搜索的原理"><a href="#本地搜索的原理" class="headerlink" title="本地搜索的原理"></a>本地搜索的原理</h3><p>对于动态网站来说，可以通过 php 实现。但是，Hexo 博客是静态网站，用不了 php。</p>
+<p>NexT 主题已经实现这个功能，它用了 Hexo 的拓展包 <code>hexo-generator-searchdb</code>，预先生成了一个文本库 <code>search.xml</code>，然后传到了网站里面。在本地搜索的时候，NexT 直接用 javascript 调用了这个文件，从而实现了静态网站的本地搜索。</p>
+<h3 id="插件地址"><a href="#插件地址" class="headerlink" title="插件地址"></a>插件地址</h3><ul>
+<li><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3RoZW1lLW5leHQvaGV4by1nZW5lcmF0b3Itc2VhcmNoZGI=">hexo-generator-searchdb<i class="fa fa-external-link-alt"></i></span></li>
+</ul>
+<h3 id="安装配置-7"><a href="#安装配置-7" class="headerlink" title="安装配置"></a>安装配置</h3><p>安装插件：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure>
+
+<p>然后我们修改站点配置<code>_config.yml</code> 文件，添加如下内容：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 本地搜索</span><br><span class="line">search:</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br><span class="line">  format: html</span><br><span class="line">  limit: 100</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>path：索引文件的路径，相对于站点根目录</li>
+<li>field：搜索范围，默认是 post，还可以选择 page、all，设置成 all 表示搜索所有页面</li>
+<li>limit：限制搜索的条目数</li>
+</ul>
+<p>然后修改主题配置文件<code>_config.yml</code>：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Local Search</span><br><span class="line"># Dependencies: https:&#x2F;&#x2F;github.com&#x2F;theme-next&#x2F;hexo-generator-searchdb</span><br><span class="line">local_search:</span><br><span class="line">  enable: true</span><br><span class="line">  # If auto, trigger search by changing input.</span><br><span class="line">  # If manual, trigger search by pressing enter key or search button.</span><br><span class="line">  trigger: auto</span><br><span class="line">  # Show top n results per article, show all results by setting to -1</span><br><span class="line">  top_n_per_article: 1</span><br><span class="line">  # Unescape html strings to the readable one.</span><br><span class="line">  unescape: false</span><br><span class="line">  # Preload the search data when the page loads.</span><br><span class="line">  preload: false</span><br></pre></td></tr></table></figure>
+
+<h2 id="Hexo-文章置顶插件"><a href="#Hexo-文章置顶插件" class="headerlink" title="Hexo 文章置顶插件"></a>Hexo 文章置顶插件</h2><h3 id="地址-6"><a href="#地址-6" class="headerlink" title="地址"></a>地址</h3><ul>
+<li><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL25ldGNhbi9oZXhvLWdlbmVyYXRvci1pbmRleC1waW4tdG9w">hexo-generator-index-pin-top<i class="fa fa-external-link-alt"></i></span></li>
+</ul>
+<h3 id="安装配置-8"><a href="#安装配置-8" class="headerlink" title="安装配置"></a>安装配置</h3><p>安装插件：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm uninstall hexo-generator-index --save</span><br><span class="line">npm install hexo-generator-index-pin-top --save</span><br></pre></td></tr></table></figure>
+
+<p>在需要置顶的文章的 <code>Front-matter</code> 中加上 <code>top: true</code> 或者 <code>top: 任意数字</code>，比如：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: TMDb电影数据分析</span><br><span class="line">declare: true</span><br><span class="line">toc: true</span><br><span class="line">tags:</span><br><span class="line">  - Python</span><br><span class="line">  - 数据分析</span><br><span class="line">categories:</span><br><span class="line">  - 数据分析</span><br><span class="line">  - 实战</span><br><span class="line">abbrlink: 7e380af2</span><br><span class="line">date: 2018-11-23 13:20:03</span><br><span class="line">top: 100</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<p><strong>注意：top 中数字越大，文章越靠前</strong>。</p>
+<h3 id="设置置顶图标"><a href="#设置置顶图标" class="headerlink" title="设置置顶图标"></a>设置置顶图标</h3><p>打开 <code>/themes/next/layout/_macro/</code> 目录下的 <code>post.swig</code> 文件，在 <code>&lt;div class=&quot;post-meta&quot;&gt;</code> 的第一个 <code>&lt;span&gt;</code> 标签下，插入如下代码：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% if post.top %&#125;</span><br><span class="line">    &lt;i class&#x3D;&quot;fa fa-thumb-tack&quot;&gt;&lt;&#x2F;i&gt;</span><br><span class="line">    &lt;font color&#x3D;7D26CD&gt;置顶&lt;&#x2F;font&gt;</span><br><span class="line">    &lt;span class&#x3D;&quot;post-meta-divider&quot;&gt;|&lt;&#x2F;span&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Hexo-文章加密插件"><a href="#Hexo-文章加密插件" class="headerlink" title="Hexo 文章加密插件"></a>Hexo 文章加密插件</h2><h3 id="地址-7"><a href="#地址-7" class="headerlink" title="地址"></a>地址</h3><ul>
+<li><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL01pa2VDb2Rlci9oZXhvLWJsb2ctZW5jcnlwdA==">hexo-blog-encrypt<i class="fa fa-external-link-alt"></i></span></li>
+</ul>
+<h3 id="安装配置-9"><a href="#安装配置-9" class="headerlink" title="安装配置"></a>安装配置</h3><p>安装插件：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-blog-encrypt --save</span><br></pre></td></tr></table></figure>
+
+<h4 id="快速使用："><a href="#快速使用：" class="headerlink" title="快速使用："></a>快速使用：</h4><p>我们需要在文章开头添加：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 射频微波基础知识（二）</span><br><span class="line">declare: true</span><br><span class="line">toc: true</span><br><span class="line">tags:</span><br><span class="line">  - 射频电路</span><br><span class="line">categories:</span><br><span class="line">  - RF</span><br><span class="line">  - 射频电路</span><br><span class="line">mathjax: true</span><br><span class="line">+password: </span><br><span class="line">+abstract: 有东西被加密了，请输入密码查看</span><br><span class="line">+message: 请输入密码</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<h4 id="高级配置"><a href="#高级配置" class="headerlink" title="高级配置"></a>高级配置</h4><p>详见 GitHub 说明文档。</p>
+<h2 id="Hexo-减少出站链接"><a href="#Hexo-减少出站链接" class="headerlink" title="Hexo 减少出站链接"></a>Hexo 减少出站链接</h2><p>减少出站链接能够有效防止权重分散，Hexo 有很方便的自动为出站链接添加 <code>nofollow</code> 的插件。</p>
+<h3 id="地址-8"><a href="#地址-8" class="headerlink" title="地址"></a>地址</h3><ul>
+<li><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLnNray5tb2UvcG9zdC9oZXhvLWZpbHRlci1ub2ZvbGxvdy1qb2luZWQtaGV4by1vZmZpY2lhbC1wbHVnaW4v">hexo-filter-nofollow<i class="fa fa-external-link-alt"></i></span></li>
+</ul>
+<h3 id="安装配置-10"><a href="#安装配置-10" class="headerlink" title="安装配置"></a>安装配置</h3><p>安装插件：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-filter-nofollow --save</span><br></pre></td></tr></table></figure>
+
+<p>再在站点的<code>_config.yml</code> 中添加配置，将 <code>nofollow</code> 设置为 <code>true</code>：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">nofollow:</span><br><span class="line">  enable: true</span><br><span class="line">  field: site</span><br><span class="line">  exclude:</span><br><span class="line">    - &#39;exclude1.com&#39;</span><br><span class="line">    - &#39;exclude2.com&#39;</span><br></pre></td></tr></table></figure>
+
+<p>这样，例外的链接将不会被加上 <code>nofollow</code> 属性。</p>
+<h2 id="Hexo-页面静态资源压缩插件"><a href="#Hexo-页面静态资源压缩插件" class="headerlink" title="Hexo 页面静态资源压缩插件"></a>Hexo 页面静态资源压缩插件</h2><p>我们自己添加的 css 和 js 文件为了可读性，往往会有很多换行和空格，这些对于浏览器来说是没有用的，甚至还会降低渲染页面的速度。同时，由于 Markdown 转成 html 的 bug，会导致页面存在大量的空白，我们可以通过查看页面源代码发现这些大量的空白符，这也会造成页面渲染的性能问题。</p>
+<p>因此，我们需要对页面的静态资源进行压缩，包括 css、js 和 html 等文件。</p>
+<p>我们可以使用 <code>hexo-neat</code> 插件进行压缩。<code>hexo-neat</code> 配置简单，无需额外命令，我们只需使用原本的调试、部署命令就可以自动完成静态资源的压缩。</p>
+<h3 id="地址-9"><a href="#地址-9" class="headerlink" title="地址"></a>地址</h3><ul>
+<li><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3JvemJvL2hleG8tbmVhdA==">hexo-neat<i class="fa fa-external-link-alt"></i></span></li>
+</ul>
+<h3 id="安装配置-11"><a href="#安装配置-11" class="headerlink" title="安装配置"></a>安装配置</h3><h4 id="安装-hexo-neat-插件"><a href="#安装-hexo-neat-插件" class="headerlink" title="安装 hexo-neat 插件"></a>安装 hexo-neat 插件</h4><p>安装插件：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-neat --save</span><br></pre></td></tr></table></figure>
+
+<h4 id="站点配置文件添加相关配置"><a href="#站点配置文件添加相关配置" class="headerlink" title="站点配置文件添加相关配置"></a>站点配置文件添加相关配置</h4><p>然后我们需要在<strong>站点</strong>配置文件<code>_config.yml</code> 中添加以下代码：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 博文压缩</span><br><span class="line">neat_enable: true</span><br><span class="line"># 压缩html</span><br><span class="line">neat_html:</span><br><span class="line">  enable: true</span><br><span class="line">  exclude:</span><br><span class="line"># 压缩css  </span><br><span class="line">neat_css:</span><br><span class="line">  enable: true</span><br><span class="line">  exclude:</span><br><span class="line">    - &#39;**&#x2F;*.min.css&#39;</span><br><span class="line"># 压缩js</span><br><span class="line">neat_js:</span><br><span class="line">  enable: true</span><br><span class="line">  mangle: true</span><br><span class="line">  output:</span><br><span class="line">  compress:</span><br><span class="line">  exclude:</span><br><span class="line">    - &#39;**&#x2F;*.min.js&#39;</span><br><span class="line">    - &#39;**&#x2F;jquery.fancybox.pack.js&#39;</span><br><span class="line">    - &#39;**&#x2F;index.js&#39;</span><br><span class="line">    - &#39;**&#x2F;fireworks.js&#39;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Hexo-LeanCloud-安全设置插件"><a href="#Hexo-LeanCloud-安全设置插件" class="headerlink" title="Hexo LeanCloud 安全设置插件"></a>Hexo LeanCloud 安全设置插件</h2><h3 id="地址-10"><a href="#地址-10" class="headerlink" title="地址"></a>地址</h3><ul>
+<li><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3RoZW1lLW5leHQvaGV4by1sZWFuY2xvdWQtY291bnRlci1zZWN1cml0eQ==">hexo-leancloud-counter-security<i class="fa fa-external-link-alt"></i></span></li>
+</ul>
+<h3 id="安装配置-12"><a href="#安装配置-12" class="headerlink" title="安装配置"></a>安装配置</h3><p>安装插件：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-leancloud-counter-security --save</span><br></pre></td></tr></table></figure>
+
+<p>打开 NexT 主题配置文件<code>_config.yml</code>，将 <code>leancloud_visitors</code> 下的 security 设置为 true（如没有则新增）：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">leancloud_visitors:</span><br><span class="line">  enable: true</span><br><span class="line">  app_id: &lt;&lt;your app id&gt;&gt;</span><br><span class="line">  app_key: &lt;&lt;your app key&gt;&gt;</span><br><span class="line">  # Dependencies: https:&#x2F;&#x2F;github.com&#x2F;theme-next&#x2F;hexo-leancloud-counter-security</span><br><span class="line">  security: true</span><br><span class="line">  betterPerformance: false</span><br></pre></td></tr></table></figure>
+
+<p><strong>对 betterPerformance 选项的说明：由于 Leancloud 免费版的云引擎存在请求线程数和运行时间限制以及休眠机制，很多时候访客数量加载会很慢。如果设置 betterPerformance 为 true，则网页则会在提交请求之前直接显示访客人数为查询到的人数 + 1，以增加用户体验</strong>。</p>
+<p>打开博客配置文件<code>_config.yml</code>，新增以下配置：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">leancloud_counter_security:</span><br><span class="line">  enable_sync: true</span><br><span class="line">  app_id: &lt;&lt;your app id&gt;&gt;</span><br><span class="line">  app_key: &lt;&lt;your app key&gt;</span><br><span class="line">  username: </span><br><span class="line">  password:</span><br></pre></td></tr></table></figure>
+
+<p>然后输入以下命令：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo lc-counter register &lt;&lt;username&gt;&gt; &lt;&lt;password&gt;&gt;</span><br></pre></td></tr></table></figure>
+
+<p>或</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo lc-counter r &lt;&lt;username&gt;&gt; &lt;&lt;password&gt;&gt;</span><br></pre></td></tr></table></figure>
+
+<p>将 <code>&lt;&lt;username&gt;&gt;</code> 和 <code>&lt;&lt;password&gt;&gt;</code> 替换为你自己的用户名和密码（不必与 leancloud 的账号）相同。此用户名和密码将在 hexo 部署时使用。</p>
+<p>打开博客配置文件<code>_config.yml</code>，将 <code>&lt;&lt;username&gt;&gt;</code> 和 <code>&lt;&lt;password&gt;&gt;</code> 替换为你刚刚设置的用户名和密码：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">leancloud_counter_security:</span><br><span class="line">  enable_sync: true</span><br><span class="line">  app_id: &lt;&lt;your app id&gt;&gt;</span><br><span class="line">  app_key: &lt;&lt;your app key&gt;</span><br><span class="line">  username: &lt;&lt;your username&gt;&gt; #如留空则将在部署时询问</span><br><span class="line">  password: &lt;&lt;your password&gt;&gt; #建议留空以保证安全性，如留空则将在部署时询问</span><br></pre></td></tr></table></figure>
+
+<p>在博客配置文件<code>_config.yml</code> 的 deploy 下添加项：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  # other deployer</span><br><span class="line">- type: leancloud_counter_security_sync</span><br></pre></td></tr></table></figure>
+
+<p>最后为：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">- type: git</span><br><span class="line">  repository: git@github.com:dta0502&#x2F;dta0502.github.io.git</span><br><span class="line">  branch: master</span><br><span class="line">  # other deployer</span><br><span class="line">- type: leancloud_counter_security_sync</span><br></pre></td></tr></table></figure>
+
+<h3 id="问题总结"><a href="#问题总结" class="headerlink" title="问题总结"></a>问题总结</h3><p>安装完这个插件后，我生成博客的时候出现以下错误：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ERROR Plugin load failed: hexo-leancloud-counter-security</span><br><span class="line">Error: Cannot find module &#39;babel-runtime&#x2F;regenerator&#39;</span><br><span class="line">    at Function.Module._resolveFilename (internal&#x2F;modules&#x2F;cjs&#x2F;loader.js:636:15)</span><br><span class="line">    at Function.Module._load (internal&#x2F;modules&#x2F;cjs&#x2F;loader.js:562:25)</span><br><span class="line">    at Module.require (internal&#x2F;modules&#x2F;cjs&#x2F;loader.js:690:17)</span><br><span class="line">    at require (&#x2F;Users&#x2F;anran&#x2F;Desktop&#x2F;MyProject&#x2F;blog&#x2F;node_modules&#x2F;hexo&#x2F;lib&#x2F;hexo&#x2F;index.js:219:21)</span><br><span class="line">    at &#x2F;Users&#x2F;anran&#x2F;Desktop&#x2F;MyProject&#x2F;blog&#x2F;node_modules&#x2F;hexo-leancloud-counter-security&#x2F;index.js:3:20</span><br><span class="line">    at fs.readFile.then.script (&#x2F;Users&#x2F;anran&#x2F;Desktop&#x2F;MyProject&#x2F;blog&#x2F;node_modules&#x2F;hexo&#x2F;lib&#x2F;hexo&#x2F;index.js:232:12)</span><br><span class="line">    at tryCatcher (&#x2F;Users&#x2F;anran&#x2F;Desktop&#x2F;MyProject&#x2F;blog&#x2F;node_modules&#x2F;bluebird&#x2F;js&#x2F;release&#x2F;util.js:16:23)</span><br><span class="line">    at Promise._settlePromiseFromHandler (&#x2F;Users&#x2F;anran&#x2F;Desktop&#x2F;MyProject&#x2F;blog&#x2F;node_modules&#x2F;bluebird&#x2F;js&#x2F;release&#x2F;promise.js:517:31)</span><br><span class="line">    at Promise._settlePromise (&#x2F;Users&#x2F;anran&#x2F;Desktop&#x2F;MyProject&#x2F;blog&#x2F;node_modules&#x2F;bluebird&#x2F;js&#x2F;release&#x2F;promise.js:574:18)</span><br><span class="line">    at Promise._settlePromise0 (&#x2F;Users&#x2F;anran&#x2F;Desktop&#x2F;MyProject&#x2F;blog&#x2F;node_modules&#x2F;bluebird&#x2F;js&#x2F;release&#x2F;promise.js:619:10)</span><br><span class="line">    at Promise._settlePromises (&#x2F;Users&#x2F;anran&#x2F;Desktop&#x2F;MyProject&#x2F;blog&#x2F;node_modules&#x2F;bluebird&#x2F;js&#x2F;release&#x2F;promise.js:699:18)</span><br><span class="line">    at Promise._fulfill (&#x2F;Users&#x2F;anran&#x2F;Desktop&#x2F;MyProject&#x2F;blog&#x2F;node_modules&#x2F;bluebird&#x2F;js&#x2F;release&#x2F;promise.js:643:18)</span><br><span class="line">    at Promise._resolveCallback (&#x2F;Users&#x2F;anran&#x2F;Desktop&#x2F;MyProject&#x2F;blog&#x2F;node_modules&#x2F;bluebird&#x2F;js&#x2F;release&#x2F;promise.js:437:57)</span><br><span class="line">    at Promise._settlePromiseFromHandler (&#x2F;Users&#x2F;anran&#x2F;Desktop&#x2F;MyProject&#x2F;blog&#x2F;node_modules&#x2F;bluebird&#x2F;js&#x2F;release&#x2F;promise.js:529:17)</span><br><span class="line">    at Promise._settlePromise (&#x2F;Users&#x2F;anran&#x2F;Desktop&#x2F;MyProject&#x2F;blog&#x2F;node_modules&#x2F;bluebird&#x2F;js&#x2F;release&#x2F;promise.js:574:18)</span><br><span class="line">    at Promise._settlePromise0 (&#x2F;Users&#x2F;anran&#x2F;Desktop&#x2F;MyProject&#x2F;blog&#x2F;node_modules&#x2F;bluebird&#x2F;js&#x2F;release&#x2F;promise.js:619:10)</span><br><span class="line">    at Promise._settlePromises (&#x2F;Users&#x2F;anran&#x2F;Desktop&#x2F;MyProject&#x2F;blog&#x2F;node_modules&#x2F;bluebird&#x2F;js&#x2F;release&#x2F;promise.js:699:18)</span><br><span class="line">    at Promise._fulfill (&#x2F;Users&#x2F;anran&#x2F;Desktop&#x2F;MyProject&#x2F;blog&#x2F;node_modules&#x2F;bluebird&#x2F;js&#x2F;release&#x2F;promise.js:643:18)</span><br><span class="line">    at &#x2F;Users&#x2F;anran&#x2F;Desktop&#x2F;MyProject&#x2F;blog&#x2F;node_modules&#x2F;bluebird&#x2F;js&#x2F;release&#x2F;nodeback.js:42:21</span><br><span class="line">    at &#x2F;Users&#x2F;anran&#x2F;Desktop&#x2F;MyProject&#x2F;blog&#x2F;node_modules&#x2F;graceful-fs&#x2F;graceful-fs.js:115:16</span><br><span class="line">    at FSReqWrap.readFileAfterClose [as oncomplete] (internal&#x2F;fs&#x2F;read_file_context.js:53:3)</span><br><span class="line">Usage: hexo &lt;command&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>hexo-leancloud-counter-security 版本：1.4.0</li>
+</ul>
+<p>解决办法：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install babel-runtime</span><br></pre></td></tr></table></figure>
+
+<h2 id="Hexo-支持-Echarts"><a href="#Hexo-支持-Echarts" class="headerlink" title="Hexo 支持 Echarts"></a>Hexo 支持 Echarts</h2><h3 id="地址-11"><a href="#地址-11" class="headerlink" title="地址"></a>地址</h3><ul>
+<li><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2tjaGVuMHgvaGV4by10YWctZWNoYXJ0czM=">hexo-tag-echarts3<i class="fa fa-external-link-alt"></i></span></li>
+</ul>
+<h3 id="安装配置-13"><a href="#安装配置-13" class="headerlink" title="安装配置"></a>安装配置</h3><p>安装插件：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-tag-echarts --save</span><br></pre></td></tr></table></figure>
+
+<p>该插件依赖的 ECharts 版本为 <code>https://cdn.bootcss.com/echarts/3.8.0/echarts.common.min.js</code>, 比较老了，有些新的特性不支持，需要手动修改 ECharts 版本，修改博客目录下的 <code>node_modules/hexo-tag-echarts3/template.html</code> 文件，将其中的 ECharts 引用 url 改为 <code>https://cdn.bootcss.com/echarts/4.1.0-release/echarts.min.js</code>。</p>
+<p>已经有人在上面的基础上更新了一下插件：</p>
+<ul>
+<li><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2d5eDEzOC9oZXhvLXRhZy1lY2hhcnRzNA==">hexo-tag-echarts4<i class="fa fa-external-link-alt"></i></span></li>
+</ul>
+<p>我们可以使用这个插件：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-tag-echarts4 --save</span><br></pre></td></tr></table></figure>
+
+<p>这样就无需手动修改文件了。</p>
+<h2 id="Hexo-修改-back2top-标签"><a href="#Hexo-修改-back2top-标签" class="headerlink" title="Hexo 修改 back2top 标签"></a>Hexo 修改 back2top 标签</h2><h3 id="地址-12"><a href="#地址-12" class="headerlink" title="地址"></a>地址</h3><ul>
+<li><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2ppYW5ndGotbGFiL2hleG8tY2FrZS1tb29uLW1lbnU=">hexo-cake-moon-menu<i class="fa fa-external-link-alt"></i></span></li>
+</ul>
+<h3 id="安装配置-14"><a href="#安装配置-14" class="headerlink" title="安装配置"></a>安装配置</h3><p>安装插件：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-cake-moon-menu --save</span><br></pre></td></tr></table></figure>
+
+<p>然后在站点配置文件<code>_config.yml</code> 中添加以下代码：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">moon_menu:</span><br><span class="line">  back2top:</span><br><span class="line">    enable: true</span><br><span class="line">    icon: fa fa-chevron-up</span><br><span class="line">    func: back2top</span><br><span class="line">    order: -1</span><br><span class="line">  back2bottom:</span><br><span class="line">    enable: true</span><br><span class="line">    icon: fa fa-chevron-down</span><br><span class="line">    func: back2bottom</span><br><span class="line">    order: -2</span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>Buy me a coffee</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/20201122213021.png" alt="Lining Wei 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/434235F3-7A93-4EA4-A7B6-4F6D977F1A89.png" alt="Lining Wei 支付宝">
+        <span>支付宝</span>
+      </div>
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/bitcoin.png" alt="Lining Wei 比特币">
+        <span>比特币</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文博主： </strong>Lining Wei
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://weilining.github.io/270.html" title="本博客当前使用的插件总结">https://weilining.github.io/270.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC96aC1DTg=="><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E9%BB%98%E8%AE%A4/" rel="tag"><i class="fa fa-tag"></i> 默认</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/272.html" rel="prev" title="本博客当前使用的插件总结">
+                  <i class="fa fa-chevron-left"></i> 本博客当前使用的插件总结
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/273.html" rel="next" title="获取版本动态变化图片的方法">
+                  获取版本动态变化图片的方法 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+      <div class="tabs tabs-comment">
+        <ul class="nav-tabs">
+            <li class="tab"><a href="#comment-valine">valine</a></li>
+            <li class="tab"><a href="#comment-livere">livere</a></li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane valine" id="comment-valine">
+              <div class="comments" id="valine-comments"></div>
+            </div>
+            <div class="tab-pane livere" id="comment-livere">
+              <div class="comments" id="lv-container" data-id="city" data-uid="MTAyMC81MTYyOC8yODEwOQ=="></div>
+            </div>
+        </div>
+      </div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 2015 – 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Ln</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">410k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">6:13</span>
+  </span>
+</div>
+
+<div><canvas id="snow" style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:99999;pointer-events:none"></canvas></div>
+
+
+<script id="click-show-text" src="/js/click-show-text.js" data-mobile="false" data-text="富强,民主,文明,和谐,自由,平等,公正,法治,爱国,敬业,诚信,友善" data-fontsize="20px" data-random="false" async></script>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js" integrity="sha256-EdPgYcPk/IIrw7FYeuJQexva49pVRZNmt3LculEr7zM=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/comments.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/utils.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/motion.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/next-boot.min.js"></script>
+
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/third-party/search/local-search.min.js"></script>
+
+
+
+
+
+  
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.2.0/dist/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"ignores":null,"url":"https://weilining.github.io/270.html"}</script>
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/third-party/quicklink.min.js"></script>
+
+
+<script class="next-config" data-name="valine" type="application/json">{"enable":true,"appId":"Bu6sP4depeiGP22PIFqz0SmJ-MdYXbMMI","appKey":"jYGDeeOBkTqvrUJDEmqj83q7","serverURLs":"https://bu6sp4de.api.lncldglobal.com","placeholder":"Just go go","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"lang":null,"visitor":true,"comment_count":true,"recordIP":false,"enableQQ":false,"requiredFields":[],"el":"#valine-comments","path":"/270.html"}</script>
+<script>
+document.addEventListener('page:loaded', () => {
+  NexT.utils.loadComments(CONFIG.valine.el)
+    .then(() => NexT.utils.getScript(
+      'https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js',
+      { condition: window.Valine }
+    ))
+    .then(() => {
+      new Valine(CONFIG.valine);
+    });
+});
+</script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/third-party/comments/livere.min.js"></script>
+
+
+
+
+</body>
+</html>
