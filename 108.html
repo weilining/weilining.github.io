@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.jsdelivr.net/gh/weilining/img@main/img/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.jsdelivr.net/gh/weilining/img@main/img/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://cdn.jsdelivr.net/gh/weilining/img@main/img/favicon-16x16-next.png">
+  <link rel="mask-icon" href="https://cdn.jsdelivr.net/gh/weilining/img@main/img/logo.svg" color="#222">
+  <meta name="google-site-verification" content="OjGymv9uAqWYDsr-E-j6DG2k1_mPXsDQF77kgEK0nz8">
+  <meta name="msvalidate.01" content="5C84BC77E02800759CE29C4ACCE487BD">
+  <meta name="yandex-verification" content="06c62a93328de5da">
+  <meta name="baidu-site-verification" content="code-wFDrn4lvkD">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.dogedoge.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"weilining.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.8.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/config.min.js"></script>
+<meta name="description" content="默认">
+<meta property="og:type" content="article">
+<meta property="og:title" content="从零开始的电脑重装系统教程">
+<meta property="og:url" content="https://weilining.github.io/108.html">
+<meta property="og:site_name" content="Ln&#39;s Blog">
+<meta property="og:description" content="默认">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://weilining.github.io/108/1627054686735-e6cfd78c-0952-4ddf-9163-37291fe8b40c.png">
+<meta property="og:image" content="https://weilining.github.io/108/1634016133174-ec04e5e4-cca3-4d3e-8f8f-e83b4fd5ff41.png">
+<meta property="og:image" content="https://weilining.github.io/108/1625107828716-51696b9e-c2a3-4408-a542-069807a3bf84.png">
+<meta property="og:image" content="https://weilining.github.io/108/1634103550061-e0f5ed37-8c00-43c5-81e7-b03591b662f7.png">
+<meta property="og:image" content="https://weilining.github.io/108/1625107829528-395395cd-399f-463a-b281-126c7cbe5546.png">
+<meta property="og:image" content="https://weilining.github.io/108/1634011597495-1eb0f5ff-c41a-4e8a-ab6a-dffd6efb4328.png">
+<meta property="og:image" content="https://weilining.github.io/108/1634011504100-82c92207-8032-4152-8f79-78309b70a641.png">
+<meta property="og:image" content="https://weilining.github.io/108/1634011871389-d55b4124-e14a-4fcb-afe5-b55a895202e5.png">
+<meta property="og:image" content="https://weilining.github.io/108/1634014750729-251bc1e9-a5fa-415d-83f9-2ac9b50262d0.png">
+<meta property="og:image" content="https://weilining.github.io/108/1625107831616-8a4b9b4a-c26b-418b-b516-cbbf20c8f04a.png">
+<meta property="og:image" content="https://weilining.github.io/108/1625107831788-299120aa-d91e-4d5a-9ce1-d2e135779eb3.png">
+<meta property="og:image" content="https://weilining.github.io/108/1625107832072-1cc2a389-da0e-4a0b-9296-a4a87c77e9e7.png">
+<meta property="og:image" content="https://weilining.github.io/108/1625107833098-03a81638-6f21-4f26-b454-49ea4d843e67.png">
+<meta property="og:image" content="https://weilining.github.io/108/1634015273922-9b31f266-b699-4b15-b7e4-026d1c5dae9c.png">
+<meta property="og:image" content="https://weilining.github.io/108/1628691342249-08964bd6-1807-46af-a8f3-42fc0339a820.png">
+<meta property="og:image" content="https://weilining.github.io/108/1634015438733-0e4c3bca-1cdc-4dbd-9cdb-bf2e22b53981.png">
+<meta property="og:image" content="https://weilining.github.io/108/1634015446125-7566de5b-341b-47f2-93d2-7d8cfffde8e2.png">
+<meta property="og:image" content="https://weilining.github.io/108/1634015467977-98a2ce04-3b89-4bf3-b4da-8553ff905ecc.png">
+<meta property="og:image" content="https://weilining.github.io/108/1625107833763-cf3bde91-8253-49cb-8158-6b192e0ba7bf.png">
+<meta property="og:image" content="https://weilining.github.io/108/1634015515668-627a86b6-0f55-4d98-a0a6-bc2ec9448ce3.png">
+<meta property="og:image" content="https://weilining.github.io/108/1634015602884-7e3e7489-8a15-4a81-8c15-c42582acbbb2.png">
+<meta property="og:image" content="https://weilining.github.io/108/1634015960712-4ccf2687-643f-477d-916c-8e077800dffd.png">
+<meta property="og:image" content="https://weilining.github.io/108/1625107835391-e4ec1b59-160c-4995-a1ec-3b67af39faca.png">
+<meta property="og:image" content="https://weilining.github.io/108/1625107835966-d6e42ad9-5b43-410e-84d9-e03076130caf.png">
+<meta property="article:published_time" content="2021-10-15T17:55:03.000Z">
+<meta property="article:modified_time" content="2021-10-15T17:55:03.000Z">
+<meta property="article:author" content="Lining Wei">
+<meta property="article:tag" content="ACM,开发者,程序猿,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,互联网一切折腾">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://weilining.github.io/108/1627054686735-e6cfd78c-0952-4ddf-9163-37291fe8b40c.png">
+
+
+<link rel="canonical" href="https://weilining.github.io/108.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://weilining.github.io/108.html","path":"108.html","title":"从零开始的电脑重装系统教程"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>从零开始的电脑重装系统教程 | Ln's Blog</title>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="Ln's Blog" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Ln's Blog</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">有朋自远方来，不亦乐乎</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-bell fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-top"><a href="/top/" rel="section"><i class="fa fa-signal fa-fw"></i>热榜</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-friends"><a href="/friends/" rel="section"><i class="fa fa-globe-asia fa-fw"></i>朋友们</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#4%E3%80%95%E7%A1%AC%E7%9B%98%E5%88%86%E5%8C%BA%E6%95%99%E7%A8%8B"><span class="nav-number">1.</span> <span class="nav-text">4〕硬盘分区教程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98"><span class="nav-number">2.</span> <span class="nav-text">常见问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#End"><span class="nav-number">2.1.</span> <span class="nav-text">End</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83"><span class="nav-number">2.2.</span> <span class="nav-text">参考</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Lining Wei"
+      src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/icon.gif">
+  <p class="site-author-name" itemprop="name">Lining Wei</p>
+  <div class="site-description" itemprop="description">算法、技术</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">277</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">35</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="cc-license site-overview-item animated" itemprop="license">
+    <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC96aC1DTg=="><img src="https://cdn.jsdelivr.net/npm/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></span>
+  </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://weilining.github.io/108.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/weilining/img@main/img/icon.gif">
+      <meta itemprop="name" content="Lining Wei">
+      <meta itemprop="description" content="算法、技术">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ln's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          从零开始的电脑重装系统教程<span class="exturl post-edit-link" data-url="aHR0cHM6Ly9naXRodWIuY29tL3dlaWxpbmluZy9ibG9nL2VkaXQvbWFpbi9zb3VyY2UvX3Bvc3RzLzEwOC5tZA==" title="编辑"><i class="fa fa-pen-nib"></i></span>
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-10-16 01:55:03" itemprop="dateCreated datePublished" datetime="2021-10-16T01:55:03+08:00">2021-10-16</time>
+    </span>
+
+  
+    <span id="/108.html" class="post-meta-item leancloud_visitors" data-flag-title="从零开始的电脑重装系统教程" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>3.6k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>3 分钟</span>
+    </span>
+</div>
+
+            <div class="post-description">默认</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p><strong>前言</strong></p>
+<p>查看本篇文章前，请保证你有一定的电脑基础知识，会使用百度，否则我还是建议你拿去电脑店叫人帮忙重装吧…..</p>
+<p>一般重装系统有三种方法：</p>
+<ul>
+<li><p>U盘重装（推荐，操作错误还能重新尝试）</p>
+</li>
+<li><p>在当前系统下进行本地安装（简称本地安装）（不推荐，一旦有一步操作错误，只能使用U盘重装）</p>
+</li>
+<li><p>在当前系统下进行在线重装（简称在线安装）（同上，不推荐，一旦有一步操作错误，只能使用U盘重装）</p>
+</li>
+</ul>
+<p><strong>重装前的准备</strong></p>
+<p>1〕准备道具</p>
+<p>①一台可以正常联网使用的电脑【推荐Win7系统的电脑】</p>
+<p>②一个容量<strong>最低为8G</strong>的U盘/移动硬盘！【推荐品控较好的U盘】</p>
+<p><strong>PS：制作PE会完全格式化U盘！请提前备份U盘内资料！</strong></p>
+<p>2〕准备工作</p>
+<p>一、关闭杀毒软件！最好卸载掉！</p>
+<p>​       尤其是360、电脑管家、Windows Defender！  </p>
+<p>二、下载并制作PE：</p>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.yuque.com/angeldaidai/kceipw/sqorg4"><strong>《【PE工具】Angel系统维护PE_六合一网络版2021》</strong></a></p>
+<p>制作PE启动U盘： </p>
+<p><img data-src="/108/1627054686735-e6cfd78c-0952-4ddf-9163-37291fe8b40c.png" alt="img" loading="lazy"></p>
+<p>(建议F2还原空间，再全新开始制作!)   （F5模拟启动）</p>
+<p>三、下载系统镜像</p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9tc2RuLml0ZWxseW91LmNuLw==">1：MSDN原版【旧站】<i class="fa fa-external-link-alt"></i></span>            </p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9uZXh0Lml0ZWxseW91LmNuLw==">2：MSDN原版【新站】<i class="fa fa-external-link-alt"></i></span></p>
+<ul>
+<li><p>校验系统镜像MD5是否和官网的匹配</p>
+</li>
+<li><p>下载<span class="exturl" data-url="aHR0cHM6Ly93d3cueXVxdWUuY29tL2FuZ2VsZGFpZGFpL3hubWdhNi93aWQ0a3o=">驱动工具万能网卡版<i class="fa fa-external-link-alt"></i></span>（可选）</p>
+</li>
+<li><p><strong>个人意见：新手/小白，不推荐原版！</strong></p>
+</li>
+<li><p><strong>请尽量不要下载Ghost系统镜像</strong>（如雨林木风、番茄花园、系统之家、装机员系统等）</p>
+</li>
+<li><p>我们强烈建议下载到桌面等其他方便你找到并使用的地方，千万不要放到U盘里，否则下载速度会不可控的减慢甚至无速度</p>
+</li>
+</ul>
+<p><strong>3：本网站推荐的系统：（大部分来自无忧）</strong></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly93d3cueXVxdWUuY29tL2FuZ2VsZGFpZGFpL2drdWl3dw==">       Windows7系统合集<i class="fa fa-external-link-alt"></i></span><br>      <span class="exturl" data-url="aHR0cHM6Ly93d3cueXVxdWUuY29tL2FuZ2VsZGFpZGFpL2Jya2V6aA=="> Window10系统合集<i class="fa fa-external-link-alt"></i></span></p>
+<p><strong>4：****注意事项</strong></p>
+<ul>
+<li>重装前请记得备份C盘里的重要资料！！！</li>
+</ul>
+<p><strong>3〕开始装机</strong>：</p>
+<p>按照下图找出自己电脑主板品牌的boot快捷键！  </p>
+<p>PS：这是boot快捷键，不是进主板bios的快捷键！区别就是：一个临时的，一个永久的！    </p>
+<p><img data-src="/108/1634016133174-ec04e5e4-cca3-4d3e-8f8f-e83b4fd5ff41.png" alt="img" loading="lazy"></p>
+<p>部分机型需要：FN+快捷键一起按！ </p>
+<p>操作步骤：</p>
+<p>1〕插上U盘！重启电脑！ 重启电脑的同时<strong>连续快速的按</strong>boot快捷键！ 直到出现类似的下图：          </p>
+<p><img data-src="/108/1625107828716-51696b9e-c2a3-4408-a542-069807a3bf84.png" alt="img" loading="lazy"><br><strong>部分主板是这样的：</strong><br><img data-src="/108/1634103550061-e0f5ed37-8c00-43c5-81e7-b03591b662f7.png" alt="img" loading="lazy"></p>
+<p>------------------------------------------------------------------------------</p>
+<p>根据自己要装的系统，↑↓选择模式，回车确认！ </p>
+<p>---------------------------------------------------------------</p>
+<p><strong>boot菜单说明：</strong></p>
+<p><img data-src="/108/1625107829528-395395cd-399f-463a-b281-126c7cbe5546.png" alt="img" loading="lazy"></p>
+<p>-----------------------------------------------<br>Gener ic STORAGE DEVICE 0220 是我的移动硬盘！<br>UEFI：Gener ic STORAGE DEVICE 0220 也是我的移动硬盘！ </p>
+<p>---------------------------------------</p>
+<p>区别：</p>
+<p>​            Gener ic STORAGE DEVICE 0220 <strong>回车确认</strong>即为：传统模式启动【win7及winxp选择项】</p>
+<p><strong>UEFI：</strong>Gener ic STORAGE DEVICE 0220 <strong>回车确认</strong>即为：UEFI模式启动【win7及win11选择项】</p>
+<p>-------------------------------------------</p>
+<p>以前的旧电脑是没有UEFI选项的！那只能建议装win7及xp了！</p>
+<hr>
+<p>2〕<br>选择传统模式！则会进入到 ：bios启动菜单！     </p>
+<p><img data-src="/108/1634011597495-1eb0f5ff-c41a-4e8a-ab6a-dffd6efb4328.png" alt="img" loading="lazy"></p>
+<p>--------------------------------------------------------------------</p>
+<p> 选择UEIF模式！ 则会进入到：UEFI启动菜单</p>
+<p><img data-src="/108/1634011504100-82c92207-8032-4152-8f79-78309b70a641.png" alt="img" loading="lazy"></p>
+<hr>
+<p>3〕选择一项PE并进入（请根据自己机型选择）<br>       <strong>教程以10PE×64为例：</strong></p>
+<p><img data-src="/108/1634011871389-d55b4124-e14a-4fcb-afe5-b55a895202e5.png" alt="img" loading="lazy"></p>
+<p>---------------------------------------------------</p>
+<h1 id="4〕硬盘分区教程"><a href="#4〕硬盘分区教程" class="headerlink" title="4〕硬盘分区教程"></a>4〕硬盘分区教程</h1><p>【其它盘有重要资料的/只想格C盘的，可以不用省略分区这一步，直接看第5步】</p>
+<p>  硬盘分区工具：PartitionGenus/DiskGenius/IQI_系列--IQI一键分区/ Angel一键分区（任选其一）</p>
+<p>然后按照图文操作！</p>
+<p>----------------------------------------</p>
+<p><strong>IQI_X一键分区工具：</strong> </p>
+<p><img data-src="/108/1634014750729-251bc1e9-a5fa-415d-83f9-2ac9b50262d0.png" alt="img" loading="lazy"> ----------------------------------------------------------------</p>
+<p>================================================</p>
+<p><strong>DiskGenius分区工具：</strong>**<br>** -------------------------------------</p>
+<p>如下图：</p>
+<p>注意：两个及以上的硬盘注意不要分错了！</p>
+<p>不会区分就暂时拆掉其它的硬盘！待系统装好后再安装上！ </p>
+<p><img data-src="/108/1625107831616-8a4b9b4a-c26b-418b-b516-cbbf20c8f04a.png" alt="img" loading="lazy"> </p>
+<hr>
+<hr>
+<p>①<strong>★Windows7----- 分区：</strong> （传统启动<strong>Bios</strong>+分区类型<strong>MBR</strong>）（SATA协议的硬盘）</p>
+<p><img data-src="/108/1625107831788-299120aa-d91e-4d5a-9ce1-d2e135779eb3.png" alt="img" loading="lazy"> </p>
+<p>②<strong>★Windows7----- 分区</strong>，（快速启动<strong>UEFI</strong>+分区类型<strong>GUID</strong>）【 M.2/NVEM硬盘】 </p>
+<p><img data-src="/108/1625107832072-1cc2a389-da0e-4a0b-9296-a4a87c77e9e7.png" alt="img" loading="lazy"> </p>
+<p>③<strong>★Windows10/11----- 分区</strong></p>
+<p><img data-src="/108/1625107833098-03a81638-6f21-4f26-b454-49ea4d843e67.png" alt="img" loading="lazy"> </p>
+<hr>
+<p><strong>5〕开始装系统</strong></p>
+<p>   安装工具：Dism++/ IQI一键安装 / CGI备份还原 / EIX系统安装 /Angel一键安装 (任选其一)<br><img data-src="/108/1634015273922-9b31f266-b699-4b15-b7e4-026d1c5dae9c.png" alt="img" loading="lazy"></p>
+<p>---------------------------------------------------</p>
+<p> Angel一键安装 （简单易操作）</p>
+<p><img data-src="/108/1628691342249-08964bd6-1807-46af-a8f3-42fc0339a820.png" alt="img" loading="lazy"></p>
+<p>===================================</p>
+<p>IQI_X一键安装：</p>
+<p>教程以（Win7专业+旗舰版_32&amp;64位_NVME_USB3.0_9合1优化版）为例</p>
+<p><img data-src="/108/1634015438733-0e4c3bca-1cdc-4dbd-9cdb-bf2e22b53981.png" alt="img" loading="lazy"> </p>
+<p>-----------------------</p>
+<p>运行后，会自动寻找镜像： </p>
+<p><img data-src="/108/1634015446125-7566de5b-341b-47f2-93d2-7d8cfffde8e2.png" alt="img" loading="lazy"></p>
+<p>然后嘛，选择U盘里你的系统 </p>
+<p><img data-src="/108/1634015467977-98a2ce04-3b89-4bf3-b4da-8553ff905ecc.png" alt="img" loading="lazy"></p>
+<p>再继续点击~~~ </p>
+<p><img data-src="/108/1625107833763-cf3bde91-8253-49cb-8158-6b192e0ba7bf.png" alt="img" loading="lazy"> </p>
+<p>然后选择你要安装的系统版本：（仅推荐纯净版）</p>
+<p><img data-src="/108/1634015515668-627a86b6-0f55-4d98-a0a6-bc2ec9448ce3.png" alt="img" loading="lazy"></p>
+<p>============================================================</p>
+<p>纯净版：针对有洁癖的用户而作，只保留纯净的WinRAR解压软件 选择图片</p>
+<hr>
+<p>选择系统版本后：<br><img data-src="/108/1634015602884-7e3e7489-8a15-4a81-8c15-c42582acbbb2.png" alt="img" loading="lazy"></p>
+<p> 一般默认即可（若有两个及以上，又想安装两个系统的，请取消 ：自动重启计算机 选项）</p>
+<p>------------------------------------------------------</p>
+<p>——开始安装！ </p>
+<p><img data-src="/108/1634015960712-4ccf2687-643f-477d-916c-8e077800dffd.png" alt="img" loading="lazy"></p>
+<p>-------------------------------------------------------------------</p>
+<p>开始安装后，等待镜像加载完毕：</p>
+<p>-----------------------------------------------------------</p>
+<p><strong>最后：</strong></p>
+<p><strong>---------------------------------------------</strong></p>
+<p><strong>单系统：</strong></p>
+<p>安装完毕后，会提示你5秒后会自动重启！</p>
+<p>这时，拔掉U盘！等它自动重启安装系统！</p>
+<p>===========================================</p>
+<p>双系统：<br>先给另外的一块硬盘分区，然后再打开 安装工具 安装系统至相应的 硬盘即可！</p>
+<p>========================================================================== </p>
+<p><strong>教程完毕！</strong></p>
+<p>=======================================================================</p>
+<h1 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h1><p>问：<strong>重装系统后开机提示“错误代码0xc0000225”怎么办？</strong></p>
+<p>​       <strong>开机提示BOOTMGR is missing / NTLTR is missing，怎么办？</strong></p>
+<p>答：运行PE里的的修复引导！按提示操作即可（Dism++引导修复教程）</p>
+<p>如图： </p>
+<p><img data-src="/108/1625107835391-e4ec1b59-160c-4995-a1ec-3b67af39faca.png" alt="img" loading="lazy"> </p>
+<p>=========================================</p>
+<p><img data-src="/108/1625107835966-d6e42ad9-5b43-410e-84d9-e03076130caf.png" alt="img" loading="lazy"> </p>
+<p>问： <strong>C盘格式化了，但是镜像无法安装，出现错误，本地已经没有其他系统镜像了，也没有第二台电脑，怎么办？</strong></p>
+<p>答： PE支持网络！可以用浏览器下载镜像！ 或者可以去网吧下载镜像。</p>
+<p>问： <strong>我电脑是联想/华硕/戴尔/惠普（或其他品牌），也是一样操作的吗？</strong></p>
+<p>答： 是的，此教程适用于所有品牌电脑（包括台式机）。</p>
+<p>问： <strong>没有U盘怎么办？</strong></p>
+<p>答： 如果电脑还可以使用，可以尝试本地安装系统，但如果不小心漏了一个步骤，都要使用U盘重新安装。</p>
+<p>​       如果电脑无法使用，那您可以使用 内存卡+读卡器 来代替U盘，<br>​      但是如果内存卡和读卡器也没有的话，您可以自行去电脑店维修。</p>
+<p>问：<strong>为什么不提倡用Ghost（.gho)？</strong></p>
+<p>答：Ghost现在已经淘汰（压缩率低、还原速度慢等），目前所流行的系统镜像格式为 WIM、ESD、SNA。</p>
+<p>问：<strong>为什么下载的系统镜像是ISO格式？</strong></p>
+<p>答：正常现象，ISO格式为系统镜像打包格式（ISO内含有WIM或ESD或GHO系统镜像）。</p>
+<p>问: <strong>这个方法装的系统是正版的吗？</strong></p>
+<p>答: 正版盗版体验一致，取决于您有没有花钱去<span class="exturl" data-url="aHR0cHM6Ly93d3cubWljcm9zb2Z0c3RvcmUuY29tLmNuL2Mvd2luZG93cw==">购买Windows<i class="fa fa-external-link-alt"></i></span>。打击盗版，支持正版。</p>
+<h2 id="End"><a href="#End" class="headerlink" title="End"></a>End</h2><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><span class="exturl" data-url="aHR0cHM6Ly93d3cueXVxdWUuY29tL2FuZ2VsZGFpZGFpL2tjZWlwdy9na2VpdGM=">【Angel_PE】从零开始的电脑重装系统教程 · 语雀 (yuque.com)<i class="fa fa-external-link-alt"></i></span></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>Buy me a coffee</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/20201122213021.png" alt="Lining Wei 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/434235F3-7A93-4EA4-A7B6-4F6D977F1A89.png" alt="Lining Wei 支付宝">
+        <span>支付宝</span>
+      </div>
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/bitcoin.png" alt="Lining Wei 比特币">
+        <span>比特币</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文博主： </strong>Lining Wei
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://weilining.github.io/108.html" title="从零开始的电脑重装系统教程">https://weilining.github.io/108.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC96aC1DTg=="><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/104.html" rel="prev" title="win磁盘和卷的区别">
+                  <i class="fa fa-chevron-left"></i> win磁盘和卷的区别
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/110.html" rel="next" title="Dism++安装系统教学">
+                  Dism++安装系统教学 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+      <div class="tabs tabs-comment">
+        <ul class="nav-tabs">
+            <li class="tab"><a href="#comment-valine">valine</a></li>
+            <li class="tab"><a href="#comment-livere">livere</a></li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane valine" id="comment-valine">
+              <div class="comments" id="valine-comments"></div>
+            </div>
+            <div class="tab-pane livere" id="comment-livere">
+              <div class="comments" id="lv-container" data-id="city" data-uid="MTAyMC81MTYyOC8yODEwOQ=="></div>
+            </div>
+        </div>
+      </div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 2015 – 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Ln</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">417k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">6:19</span>
+  </span>
+</div>
+
+<div><canvas id="snow" style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:99999;pointer-events:none"></canvas></div>
+
+
+<script id="click-show-text" src="/js/click-show-text.js" data-mobile="false" data-text="富强,民主,文明,和谐,自由,平等,公正,法治,爱国,敬业,诚信,友善" data-fontsize="20px" data-random="false" async></script>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js" integrity="sha256-EdPgYcPk/IIrw7FYeuJQexva49pVRZNmt3LculEr7zM=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/comments.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/utils.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/motion.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/next-boot.min.js"></script>
+
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/third-party/search/local-search.min.js"></script>
+
+
+
+
+
+  
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.2.0/dist/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"ignores":null,"url":"https://weilining.github.io/108.html"}</script>
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/third-party/quicklink.min.js"></script>
+
+
+<script class="next-config" data-name="valine" type="application/json">{"enable":true,"appId":"Bu6sP4depeiGP22PIFqz0SmJ-MdYXbMMI","appKey":"jYGDeeOBkTqvrUJDEmqj83q7","serverURLs":"https://bu6sp4de.api.lncldglobal.com","placeholder":"Just go go","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"lang":null,"visitor":true,"comment_count":true,"recordIP":false,"enableQQ":false,"requiredFields":[],"el":"#valine-comments","path":"/108.html"}</script>
+<script>
+document.addEventListener('page:loaded', () => {
+  NexT.utils.loadComments(CONFIG.valine.el)
+    .then(() => NexT.utils.getScript(
+      'https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js',
+      { condition: window.Valine }
+    ))
+    .then(() => {
+      new Valine(CONFIG.valine);
+    });
+});
+</script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/third-party/comments/livere.min.js"></script>
+
+
+
+
+</body>
+</html>
