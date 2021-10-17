@@ -6,7 +6,7 @@
   <link href="https://weilining.github.io/atom.xml" rel="self"/>
   
   <link href="https://weilining.github.io/"/>
-  <updated>2021-10-16T04:33:35.000Z</updated>
+  <updated>2021-10-17T19:48:21.000Z</updated>
   <id>https://weilining.github.io/</id>
   
   <author>
@@ -15,6 +15,157 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>本地测试 Cloudflare CDN 延迟和速度，获取最快 IP (IPv4+IPv6)！</title>
+    <link href="https://weilining.github.io/287.html"/>
+    <id>https://weilining.github.io/287.html</id>
+    <published>2021-10-17T19:48:21.000Z</published>
+    <updated>2021-10-17T19:48:21.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="macOS"><a href="#macOS" class="headerlink" title="macOS"></a>macOS</h2><p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1hJVTIvQ2xvdWRmbGFyZVNwZWVkVGVzdC9yZWxlYXNlcy9kb3dubG9hZC92MS41LjEvQ2xvdWRmbGFyZVNUX2Rhcndpbl9hbWQ2NC56aXA=">https://github.com/XIU2/CloudflareSpeedTest/releases/download/v1.5.1/CloudflareST_darwin_amd64.zip<i class="fa fa-external-link-alt"></i></span></p><p>下载解压后，进入文件根目录输入</p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.&#x2F;CloudflareST</span><br></pre></td></tr></table></figure><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1hJVTIvQ2xvdWRmbGFyZVNwZWVkVGVzdA==">XIU2/CloudflareSpeedTest: 🌩「优选 IP」测试 Cloudflare CDN 延迟和速度，获取最快 IP (IPv4+IPv6)！ (github.com)<i class="fa fa-external-link-alt"></i></span></p>]]></content>
+    
+    
+    <summary type="html">默认</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>286</title>
+    <link href="https://weilining.github.io/286-1.html"/>
+    <id>https://weilining.github.io/286-1.html</id>
+    <published>2021-10-17T19:48:14.000Z</published>
+    <updated>2021-10-17T19:48:14.000Z</updated>
+    
+    
+    <summary type="html">默认</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Internet Download Manager 6.39.3 IDM破解版下载器</title>
+    <link href="https://weilining.github.io/286.html"/>
+    <id>https://weilining.github.io/286.html</id>
+    <published>2021-10-17T19:36:09.000Z</published>
+    <updated>2021-10-17T19:36:09.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="蓝奏云"><a href="#蓝奏云" class="headerlink" title="蓝奏云"></a>蓝奏云</h2><p><span class="exturl" data-url="aHR0cHM6Ly9qYXZhcHl0aG9uLmxhbnpvdWkuY29tL2l0YmdWdmd6YjNn">https://javapython.lanzoui.com/itbgVvgzb3g<i class="fa fa-external-link-alt"></i></span></p><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><span class="exturl" data-url="aHR0cHM6Ly9scmVwYWNrcy5uZXQvcmVwYWtpLXByb2dyYW1tLWRseWEtaW50ZXJuZXRhLzU2LWludGVybmV0LWRvd25sb2FkLW1hbmFnZXItcmVwYWNrLmh0bWw=">Internet Download Manager 6.39.3 (Repack) » Авторские репаки от ELCHUPACABRA - REPACK скачать (lrepacks.net)<i class="fa fa-external-link-alt"></i></span></p><p><span class="exturl" data-url="aHR0cHM6Ly93d3cuaW50ZXJuZXRkb3dubG9hZG1hbmFnZXIuY29tLw==">Internet Download Manager: The fastest download accelerator<i class="fa fa-external-link-alt"></i></span></p>]]></content>
+    
+    
+    <summary type="html">默认</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>DD 安装系统</title>
+    <link href="https://weilining.github.io/285.html"/>
+    <id>https://weilining.github.io/285.html</id>
+    <published>2021-10-17T16:12:23.000Z</published>
+    <updated>2021-10-17T16:12:23.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="ubuntu-dd-debian"><a href="#ubuntu-dd-debian" class="headerlink" title="ubuntu dd debian"></a>ubuntu dd debian</h2><p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2JvaGFueWFuZy9kZWJp">bohanyang/debi: Reinstall your VPS to minimal Debian (github.com)<i class="fa fa-external-link-alt"></i></span></p><p>这个脚本就是直接ubuntu dd debian用的</p><h2 id="安装win"><a href="#安装win" class="headerlink" title="安装win"></a>安装win</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">wget --no-check-certificate -qO ~&#x2F;Network-Reinstall-System-Modify.sh &#39;https:&#x2F;&#x2F;www.cxthhhhh.com&#x2F;CXT-Library&#x2F;Network-Reinstall-System-Modify&#x2F;Network-Reinstall-System-Modify.sh&#39; &amp;&amp; chmod a+x ~&#x2F;Network-Reinstall-System-Modify.sh &amp;&amp; bash ~&#x2F;Network-Reinstall-System-Modify.sh -UI_Options</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+    <summary type="html">默认</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>DOMAIN-SUFFIX域名后缀</title>
+    <link href="https://weilining.github.io/284.html"/>
+    <id>https://weilining.github.io/284.html</id>
+    <published>2021-10-17T15:25:27.000Z</published>
+    <updated>2021-10-17T15:25:27.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>根据 Recent Requests 记录添加基于域名的规则是最准确的，但是很多时候软件公司有多个二级域名，例如：m.360buy.com、api.360buy.com、log.360buy.com，如果用域名匹配的规则要写 3 条，但是换成域名后缀的方式 1 条 360buy.com 就能涵盖。</p><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><span class="exturl" data-url="aHR0cHM6Ly9tZWRpdW0uY29tL0BzY29tcGVyL3N1cmdlLSVFNSVBRSU5QSVFNSU4OCVCNiVFOCU4NyVBQSVFNSVCNyVCMSVFNyU5QSU4NCVFOCVBNyU4NCVFNSU4OCU5OSVFOSU4NSU4RCVFNyVCRCVBRS0zNGE2ZDc0YjA0MzQ=">Surge -定制自己的规则配置. 在定制自己的规则之前，首先我们快速学习一下 Surge… | by Cheng | Medium<i class="fa fa-external-link-alt"></i></span></p>]]></content>
+    
+    
+    <summary type="html">默认</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>VMware Workstation Pro 最优雅的安装</title>
+    <link href="https://weilining.github.io/283.html"/>
+    <id>https://weilining.github.io/283.html</id>
+    <published>2021-10-17T15:06:06.000Z</published>
+    <updated>2021-10-17T15:06:06.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="官方下载"><a href="#官方下载" class="headerlink" title="官方下载"></a>官方下载</h2><p><span class="exturl" data-url="aHR0cHM6Ly93d3cudm13YXJlLmNvbS9wcm9kdWN0cy93b3Jrc3RhdGlvbi1wcm8vd29ya3N0YXRpb24tcHJvLWV2YWx1YXRpb24uaHRtbA==">Download VMware Workstation Pro<i class="fa fa-external-link-alt"></i></span></p><h3 id="Workstation-16-Pro-for-Windows"><a href="#Workstation-16-Pro-for-Windows" class="headerlink" title="Workstation 16 Pro for Windows"></a>Workstation 16 Pro for Windows</h3><p><span class="exturl" data-url="aHR0cHM6Ly93d3cudm13YXJlLmNvbS9nby9nZXR3b3Jrc3RhdGlvbi13aW4=">DOWNLOAD NOW<i class="fa fa-external-link-alt"></i></span></p><h3 id="Workstation-16-Pro-for-Linux"><a href="#Workstation-16-Pro-for-Linux" class="headerlink" title="Workstation 16 Pro for Linux"></a>Workstation 16 Pro for Linux</h3><p><span class="exturl" data-url="aHR0cHM6Ly93d3cudm13YXJlLmNvbS9nby9nZXR3b3Jrc3RhdGlvbi1saW51eA==">DOWNLOAD NOW<i class="fa fa-external-link-alt"></i></span></p><h2 id="Vmware-WorkStartion-16-Pro-激活码"><a href="#Vmware-WorkStartion-16-Pro-激活码" class="headerlink" title="Vmware WorkStartion 16 Pro 激活码"></a>Vmware WorkStartion 16 Pro 激活码</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ZF3R0-FHED2-M80TY-8QYGC-NPKYF</span><br></pre></td></tr></table></figure><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><span class="exturl" data-url="aHR0cHM6Ly93d3cuNDIzZG93bi5jb20vNzkzMS5odG1s">VMware Workstation PRO v16.2.0_精简版 - 423Down<i class="fa fa-external-link-alt"></i></span></p>]]></content>
+    
+    
+    <summary type="html">默认</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>WINDOWS BOOT MANAGER HAS BEEN BLOCKED BY CURRENT SECURITY POLICY.解决办法</title>
+    <link href="https://weilining.github.io/282.html"/>
+    <id>https://weilining.github.io/282.html</id>
+    <published>2021-10-17T14:30:26.000Z</published>
+    <updated>2021-10-17T14:30:26.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img data-src="/282/image-20211017223432693.png" alt="image-20211017223432693" loading="lazy"> </p><h4 id="如何禁用-LENOVO-笔记本电脑中的安全启动："><a href="#如何禁用-LENOVO-笔记本电脑中的安全启动：" class="headerlink" title="如何禁用 LENOVO 笔记本电脑中的安全启动："></a>如何禁用 LENOVO 笔记本电脑中的安全启动：</h4><ol><li>完全关闭计算机。</li><li>系统上的电源。</li><li>出现第一个徽标屏幕，立即按 F2 进入 BIOS。</li><li>去安全，并找到安全启动。</li><li>禁用安全启动，按 F10 保存和重新启动。</li></ol><h4 id="如何禁用-ACER-笔记本电脑中的安全启动："><a href="#如何禁用-ACER-笔记本电脑中的安全启动：" class="headerlink" title="如何禁用 ACER 笔记本电脑中的安全启动："></a>如何禁用 ACER 笔记本电脑中的安全启动：</h4><ol><li>完全关闭计算机。</li><li>系统上的电源。一旦出现第一个徽标屏幕，请立即按 F2 进入 BIOS。</li><li>使用右箭头键选择安全。</li><li>使用向下箭头键突出显示设置主管密码并按&quot;输入&quot;。</li><li>创建密码并按&quot;输入&quot;。重新输入密码以确认并再次按&quot;输入&quot;。</li><li>使用右箭头键选择引导。</li><li>按下箭头键以选择安全引导并按&quot;输入&quot;。</li><li>使用箭头键，突出显示&quot;禁用&quot;并按&quot;输入&quot;。</li><li>按 F10 键并选择&quot;是&quot;以保存更改并退出 BIOS</li></ol><p>我们建议在启用&quot;安全引导&quot;后立即删除主管密码。如果您选择不删除主管密码，请确保将其写下来供将来使用。</p><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><span class="exturl" data-url="aHR0cHM6Ly93d3cubGVhcm5hYmhpLmNvbS93aW5kb3dzLWJvb3QtbWFuYWdlci1ibG9ja2VkLw==">https://www.learnabhi.com/windows-boot-manager-blocked/<i class="fa fa-external-link-alt"></i></span></p>]]></content>
+    
+    
+    <summary type="html">默认</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>win 卸载工具 UninstallTool</title>
+    <link href="https://weilining.github.io/281.html"/>
+    <id>https://weilining.github.io/281.html</id>
+    <published>2021-10-17T14:27:50.000Z</published>
+    <updated>2021-10-17T14:27:50.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="个人备用"><a href="#个人备用" class="headerlink" title="个人备用"></a>个人备用</h2><p><span class="exturl" data-url="aHR0cHM6Ly9qYXZhcHl0aG9uLmxhbnpvdWkuY29tL2k2TVBKdmdxbHRp">https://javapython.lanzoui.com/i6MPJvgqlti<i class="fa fa-external-link-alt"></i></span></p><h2 id="官方蓝奏云"><a href="#官方蓝奏云" class="headerlink" title="官方蓝奏云"></a>官方蓝奏云</h2><p><span class="exturl" data-url="aHR0cHM6Ly9wYW4ubGFuem91aS5jb20vYjBmMTl2MDNh">软件卸载工具 (lanzoui.com)<i class="fa fa-external-link-alt"></i></span></p><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><span class="exturl" data-url="aHR0cHM6Ly93d3cuNDIzZG93bi5jb20vODY4Lmh0bWw=">Uninstall Tool v3.5.10.5670 免激活绿色版 - 423Down<i class="fa fa-external-link-alt"></i></span></p>]]></content>
+    
+    
+    <summary type="html">默认</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>操作无法完成因为其中的文件夹或文件已在另一个程序中打开的解决办法</title>
+    <link href="https://weilining.github.io/280.html"/>
+    <id>https://weilining.github.io/280.html</id>
+    <published>2021-10-17T14:24:43.000Z</published>
+    <updated>2021-10-17T14:24:43.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>在windows系统中，我们经常会遇到这样一个问题：删除某一个文件或者文件夹，被提醒：操作无法完成，因为其中的文件夹或文件已在另一个程序中打开。</p><p><img data-src="/280/70.png" alt="在这里插入图片描述" loading="lazy"></p><p>这个时候我们一般会先检查是否真的有程序或者文件打开了没有关闭，但是我们在桌面或者任务管理器中找不到该程序。这个问题困扰了我很久，认为下次重启，再删除，应该就可以了，也没有深入研究这个问题。<br>但是这个问题，确实有解决办法，不用等到下次重启电脑再来删除。<br>解决办法如下：<br>1、打开任务管理器，切换到性能tab，然后点击下方的资源监视器，如下图所示：</p><p><img data-src="/280/70-20211017222636827.png" alt="在这里插入图片描述" loading="lazy"></p><p>2、在打开的界面中间搜索位置，输入无法删除的文件（夹）名关键字：</p><p><img data-src="/280/70-20211017222653351.png" alt="在这里插入图片描述" loading="lazy"></p><p>3、将搜索出一些相关的进程，找到我们需要删除的文件所在的文件夹对应的进程，然后右键结束任务，结束之后，会产生一个新的问题，桌面图标和菜单栏图标全消失，鼠标无法右键。</p><p><img data-src="/280/70-20211017222712171.png" alt="在这里插入图片描述" loading="lazy"></p><p>解决办法就是回到任务管理器，选择文件-&gt;新建任务：输入explorer，然后回车，问题解决。</p><p>接下来，再次删除我们需要删除的文件或者文件夹，就可以成功的删除了。</p><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p>原文链接：<span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2ZlaW5pZmkvYXJ0aWNsZS9kZXRhaWxzLzgzMjE2MDMw">https://blog.csdn.net/feinifi/article/details/83216030<i class="fa fa-external-link-alt"></i></span></p>]]></content>
+    
+    
+    <summary type="html">默认</summary>
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>本地PE安装系统教程</title>
@@ -194,159 +345,6 @@
     <updated>2021-10-13T19:33:41.000Z</updated>
     
     <content type="html"><![CDATA[<h4 id="GHO镜像"><a href="#GHO镜像" class="headerlink" title="GHO镜像"></a>GHO镜像</h4><p><span class="exturl" data-url="aHR0cHM6Ly93d3cueXJ4aXRvbmcuY29tLw==">小鱼儿yr系统→封装系统→重装系统→系统下载→资源分享 (yrxitong.com)<i class="fa fa-external-link-alt"></i></span></p><p><span class="exturl" data-url="aHR0cDovL3d3dy5zb25neW9uZ3poaS5jb20v">宋永志博客 - 系统爱好者 (songyongzhi.com)<i class="fa fa-external-link-alt"></i></span></p><p><span class="exturl" data-url="aHR0cDovL3d3dy5mYXIxMjMuY29tLw==">远航技术 » 系统定制 (far123.com)<i class="fa fa-external-link-alt"></i></span></p><p><span class="exturl" data-url="aHR0cHM6Ly90aGlyZC53aW4v">ThirdWIN<i class="fa fa-external-link-alt"></i></span></p>]]></content>
-    
-    
-    <summary type="html">默认</summary>
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>原版window镜像下载</title>
-    <link href="https://weilining.github.io/100.html"/>
-    <id>https://weilining.github.io/100.html</id>
-    <published>2021-10-13T19:30:10.000Z</published>
-    <updated>2021-10-13T19:30:10.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="win原版镜像官网"><a href="#win原版镜像官网" class="headerlink" title="win原版镜像官网"></a>win原版镜像官网</h2><p><span class="exturl" data-url="aHR0cHM6Ly9zb2Z0d2FyZS1kb3dubG9hZC5taWNyb3NvZnQuY29tL3NnL1dpbjExX0NoaW5lc2UoU2ltcGxpZmllZClfeDY0Lmlzbz90PTk0ZGJhNDZjLTA0MTgtNDQ3Yy05NjQ4LTJjNDc1Mjg3ZmY2MSZlPTE2MzQyMzM2MTEmaD1hMzEzYWRiZWIzNzdlODI1ODQ4NjBiNTEyMTYyOGFjZQ==">下载 Windows 11 磁盘映像 (ISO) 64-bit Download<i class="fa fa-external-link-alt"></i></span></p><p>ps:ISO链接24小时过期，在<span class="exturl" data-url="aHR0cHM6Ly93d3cubWljcm9zb2Z0LmNvbS96aC1jbi9zb2Z0d2FyZS1kb3dubG9hZC93aW5kb3dzMTE=">win11官方页面<i class="fa fa-external-link-alt"></i></span>选择版本和语言即可获取有效连接。</p><p>Windows 10 简体中文</p><p><span class="exturl" data-url="aHR0cHM6Ly9zb2Z0d2FyZS1kb3dubG9hZC5taWNyb3NvZnQuY29tL3NnL1dpbjEwXzIxSDFfQ2hpbmVzZShTaW1wbGlmaWVkKV94MzIuaXNvP3Q9YTc4NTIzNTAtNGIzMy00YzU5LWJkNjUtZmEzNTJiYTEwNmU4JmU9MTYzNDIzNTA2MSZoPWUwZDM2OWFjMGVjN2Y1OTVkMGE1MmFiODQ1NjQ0YzNm">32-bit 下载<i class="fa fa-external-link-alt"></i></span></p><p><span class="exturl" data-url="aHR0cHM6Ly9zb2Z0d2FyZS1kb3dubG9hZC5taWNyb3NvZnQuY29tL3NnL1dpbjEwXzIxSDFfQ2hpbmVzZShTaW1wbGlmaWVkKV94NjQuaXNvP3Q9YTc4NTIzNTAtNGIzMy00YzU5LWJkNjUtZmEzNTJiYTEwNmU4JmU9MTYzNDIzNTA2MSZoPWI4YmI2NDEyMjUyNDJmY2U0YTg0NzcwOTM4ZmE1Yzcy">64-bit 下载<i class="fa fa-external-link-alt"></i></span></p><p>ps:ISO链接24小时过期，在<span class="exturl" data-url="aHR0cHM6Ly93d3cubWljcm9zb2Z0LmNvbS96aC1jbi9zb2Z0d2FyZS1kb3dubG9hZC93aW5kb3dzMTBJU08=">win10官方页面<i class="fa fa-external-link-alt"></i></span>选择版本和语言即可获取有效连接。</p><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><span class="exturl" data-url="aHR0cHM6Ly93d3cubWljcm9zb2Z0LmNvbS96aC1jbi9zb2Z0d2FyZS1kb3dubG9hZC93aW5kb3dzMTE=">Download Windows 11 (microsoft.com)<i class="fa fa-external-link-alt"></i></span></p><p><span class="exturl" data-url="aHR0cHM6Ly93d3cubWljcm9zb2Z0LmNvbS96aC1jbi9zb2Z0d2FyZS1kb3dubG9hZC93aW5kb3dzMTBJU08=">下载 Windows 10 光盘映像（ISO 文件） (microsoft.com)<i class="fa fa-external-link-alt"></i></span></p><p><span class="exturl" data-url="aHR0cHM6Ly93d3cubWljcm9zb2Z0LmNvbS96aC1jbi9zb2Z0d2FyZS1kb3dubG9hZC93aW5kb3dzOElTTw==">下载 Windows 8.1 光盘映像（ISO 文件） (microsoft.com)<i class="fa fa-external-link-alt"></i></span> </p>]]></content>
-    
-    
-    <summary type="html">默认</summary>
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Windows 媒体创建工具</title>
-    <link href="https://weilining.github.io/99.html"/>
-    <id>https://weilining.github.io/99.html</id>
-    <published>2021-10-13T19:25:30.000Z</published>
-    <updated>2021-10-13T19:25:30.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><span class="exturl" data-url="aHR0cHM6Ly9zb2Z0d2FyZS1kb3dubG9hZC5taWNyb3NvZnQuY29tL2Rvd25sb2FkL3ByLzg4ODk2OWQ1LWYzNGctNGUwMy1hYzlkLTFmOTc4NmM2OTE2MS9NZWRpYUNyZWF0aW9uVG9vbFcxMS5leGU=">创建 Windows 11 安装媒体MediaCreationToolW11.exe<i class="fa fa-external-link-alt"></i></span></p><p><span class="exturl" data-url="aHR0cHM6Ly9qYXZhcHl0aG9uLmxhbnpvdWkuY29tL2k2WWlZdmJlcGNk">https://javapython.lanzoui.com/i6YiYvbepcd<i class="fa fa-external-link-alt"></i></span></p><p><span class="exturl" data-url="aHR0cHM6Ly9kb3dubG9hZC5taWNyb3NvZnQuY29tL2Rvd25sb2FkL2QvNS8yL2Q1MjhhNGUwLTAzZjMtNDUyZC1hOThlLTNlNDc5MjI2ZDE2Ni9NZWRpYUNyZWF0aW9uVG9vbDIxSDEuZXhl">创建 Windows 10 安装媒体MediaCreationTool21H1.exe<i class="fa fa-external-link-alt"></i></span></p><p><span class="exturl" data-url="aHR0cHM6Ly9qYXZhcHl0aG9uLmxhbnpvdWkuY29tL2lyMDNWdmJlcDlh">https://javapython.lanzoui.com/ir03Vvbep9a<i class="fa fa-external-link-alt"></i></span></p><p>Win8.1已经没有媒体创建工具</p>]]></content>
-    
-    
-    <summary type="html">默认</summary>
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Windows 更新助手</title>
-    <link href="https://weilining.github.io/98.html"/>
-    <id>https://weilining.github.io/98.html</id>
-    <published>2021-10-13T19:24:11.000Z</published>
-    <updated>2021-10-13T19:24:11.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><span class="exturl" data-url="aHR0cHM6Ly9kb3dubG9hZC5taWNyb3NvZnQuY29tL2Rvd25sb2FkLzMvYS85LzNhOWUyZmUxLTk2ZTctNDUxNC04NzQ0LWYzYTk3MzFmOTFjNy9XaW5kb3dzMTFJbnN0YWxsYXRpb25Bc3Npc3RhbnQuZXhl">Windows 11 安装助手Windows11InstallationAssistant.exe<i class="fa fa-external-link-alt"></i></span></p><p><span class="exturl" data-url="aHR0cHM6Ly9qYXZhcHl0aG9uLmxhbnpvdWkuY29tL2lRVWJHdmJlcGFi">https://javapython.lanzoui.com/iQUbGvbepab<i class="fa fa-external-link-alt"></i></span></p><p><span class="exturl" data-url="aHR0cHM6Ly9kb3dubG9hZC5taWNyb3NvZnQuY29tL2Rvd25sb2FkLzMvMC8xLzMwMTE0N2U3LWUzZDMtNDY3ZS1hOWViLTAwM2E3Mjg0MDg4Ny9XaW5kb3dzMTBVcGdyYWRlOTI1Mi5leGU=">Windows 10 更新助手Windows10Upgrade9252.exe<i class="fa fa-external-link-alt"></i></span></p><p>更新助手可以帮助你更新到 Windows 10 的最新版本。若要开始更新，请单击“立即更新”。</p><p><span class="exturl" data-url="aHR0cHM6Ly9qYXZhcHl0aG9uLmxhbnpvdWkuY29tL2k4Q0NodmJlcDhq">https://javapython.lanzoui.com/i8CChvbep8j<i class="fa fa-external-link-alt"></i></span></p><p>Win8.1已经没有更新助手</p>]]></content>
-    
-    
-    <summary type="html">默认</summary>
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>MSDN</title>
-    <link href="https://weilining.github.io/97.html"/>
-    <id>https://weilining.github.io/97.html</id>
-    <published>2021-10-13T16:24:10.000Z</published>
-    <updated>2021-10-13T16:24:10.000Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Windows-11-business-editions-x64-DVD-Chinese-Simplified"><a href="#Windows-11-business-editions-x64-DVD-Chinese-Simplified" class="headerlink" title="Windows 11 (business editions) (x64) - DVD (Chinese-Simplified)"></a>Windows 11 (business editions) (x64) - DVD (Chinese-Simplified)</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">文件：zh-cn_windows_11_business_editions_x64_dvd_f5f6bcbd.iso</span><br><span class="line">大小：5.04GB</span><br><span class="line">MD5：EA6553AD6D9CFC542A4D9E9B92842C1D</span><br><span class="line">SHA1：64769CCDC7B319F90811E039FA49E785569FD87B</span><br><span class="line">SHA256：81C007E119BB0CF0C58ABEA9D9578B4C09935F929E609FB3954AAB43BCB83269</span><br><span class="line">发布时间：2021-10-04</span><br><span class="line">ED2K：ed2k:&#x2F;&#x2F;|file|zh-cn_windows_11_business_editions_x64_dvd_f5f6bcbd.iso|5413181440|88CA1AE28F5F8A238647561B5C00E511|&#x2F;</span><br><span class="line">BT：magnet:?xt&#x3D;urn:btih:7D77AF4A99A4C5AEAB1D401755E473BA7EBD7B1C&amp;dn&#x3D;zh-cn_windows_11_business_editions_x64_dvd_f5f6bcbd.iso&amp;xl&#x3D;5413181440</span><br></pre></td></tr></table></figure><h3 id="Windows-11-consumer-editions-x64-DVD-Chinese-Simplified"><a href="#Windows-11-consumer-editions-x64-DVD-Chinese-Simplified" class="headerlink" title="Windows 11 (consumer editions) (x64) - DVD (Chinese-Simplified)"></a>Windows 11 (consumer editions) (x64) - DVD (Chinese-Simplified)</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">文件：zh-cn_windows_11_consumer_editions_x64_dvd_904f13e4.iso</span><br><span class="line">大小：5.14GB</span><br><span class="line">MD5：68FB0CAD069CF82A9BA0996A6D3D112B</span><br><span class="line">SHA1：9F602662FFAB0DF3B3A66FC6A42849BFFD3315A7</span><br><span class="line">SHA256：47B8D4105BF48BA7A2827D037CCF1635035AFEFA48E168045F7B9D76F54DBE8F</span><br><span class="line">发布时间：2021-10-04</span><br><span class="line">ED2K：ed2k:&#x2F;&#x2F;|file|zh-cn_windows_11_consumer_editions_x64_dvd_904f13e4.iso|5517273088|DFD1AE88E36516B87382FC3D3D3F46AD|&#x2F;</span><br><span class="line">BT：magnet:?xt&#x3D;urn:btih:CF0A537944C001AD86B1CA058E8D877F5F022FC6&amp;dn&#x3D;zh-cn_windows_11_consumer_editions_x64_dvd_904f13e4.iso&amp;xl&#x3D;5517273088</span><br></pre></td></tr></table></figure><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><span class="exturl" data-url="aHR0cHM6Ly9tc2RuLml0ZWxseW91LmNuLw==">MSDN, 我告诉你 - 做一个安静的工具站 (itellyou.cn)<i class="fa fa-external-link-alt"></i></span></p><p><span class="exturl" data-url="aHR0cHM6Ly9uZXh0Lml0ZWxseW91LmNuLw==">NEXT, ITELLYOU<i class="fa fa-external-link-alt"></i></span></p>]]></content>
-    
-    
-    <summary type="html">默认</summary>
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>通过ventoy启动安装win</title>
-    <link href="https://weilining.github.io/96.html"/>
-    <id>https://weilining.github.io/96.html</id>
-    <published>2021-10-13T16:13:30.000Z</published>
-    <updated>2021-10-13T16:13:30.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="U盘制作启动盘"><a href="#U盘制作启动盘" class="headerlink" title="U盘制作启动盘"></a>U盘制作启动盘</h2><h3 id="ventoy写入u盘"><a href="#ventoy写入u盘" class="headerlink" title="ventoy写入u盘"></a>ventoy写入u盘</h3><p>电脑下载安装ventoy，选择GPT+UEFI，写好了把装的系统放到u盘里。</p><p>Ventoy 1.0.54 所有平台版 (2021/10/12)<br><span class="exturl" data-url="aHR0cHM6Ly93d3cuNDIzZG93bi5jb20vZ28ucGhwP3VybD1hSFIwY0hNNkx5OXdZVzR1YkdGdWVtOTFhUzVqYjIwdllqQXhZbVExTkdkaQ==">https://pan.lanzoui.com/b01bd54gb<i class="fa fa-external-link-alt"></i></span></p><p>最新Ventoy单文件版及常用U盘启动工具<br><span class="exturl" data-url="aHR0cHM6Ly93d3cuNDIzZG93bi5jb20vZ28ucGhwP3VybD1hSFIwY0hNNkx5OXdZVzR1YkdGdWVtOTFhUzVqYjIwdllqQm1NV0p5YzNOaQ==">https://pan.lanzoui.com/b0f1brssb<i class="fa fa-external-link-alt"></i></span></p><p>准备至少8G以及上格式化的U盘，准备一个pe，推荐微pe，生成iso，</p><h2 id="防毒"><a href="#防毒" class="headerlink" title="防毒"></a>防毒</h2><p>怕被病毒删了，你将这个iso文件隐藏和只读就行了。</p><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><span class="exturl" data-url="aHR0cHM6Ly93d3cudmVudG95Lm5ldC9jbi9pbmRleC5odG1s">Ventoy<i class="fa fa-external-link-alt"></i></span></p><p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3ZlbnRveS9WZW50b3k=">ventoy/Ventoy: A new bootable USB solution. (github.com)<i class="fa fa-external-link-alt"></i></span></p><p><span class="exturl" data-url="aHR0cHM6Ly9tc2RuLml0ZWxseW91LmNuLw==">MSDN, 我告诉你 - 做一个安静的工具站 (itellyou.cn)<i class="fa fa-external-link-alt"></i></span></p><p><span class="exturl" data-url="aHR0cHM6Ly9uZXh0Lml0ZWxseW91LmNuLw==">NEXT, ITELLYOU<i class="fa fa-external-link-alt"></i></span></p>]]></content>
-    
-    
-    <summary type="html">默认</summary>
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>超净安装win8.1&amp;10&amp;11</title>
-    <link href="https://weilining.github.io/95.html"/>
-    <id>https://weilining.github.io/95.html</id>
-    <published>2021-10-13T16:10:47.000Z</published>
-    <updated>2021-10-13T16:10:47.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>你的win系统、网不能坏，win8.1至少4G、win10\11至少有8G空白格式化的U盘，因为没win系统没法通过官方的工具刻录u盘作为启动盘，网坏了没法下载官方工具。由于win7停止支持，不讨论win7。win11只提供64位，而win8.1\10有32位和64位，官方提供三种办法，下面以win10为例通过创建 Windows 10 安装媒体来全新安装。装win8.1\10内存 1 GB（32 位）或 2 GB 以及上（64 位），而win11要求<strong>处理器</strong>至少8代、内存4GB、系统固件支持 UEFI 安全启动、TPM<span class="exturl" data-url="aHR0cHM6Ly9kb2NzLm1pY3Jvc29mdC5jb20vemgtY24vd2luZG93cy9zZWN1cml0eS9pbmZvcm1hdGlvbi1wcm90ZWN0aW9uL3RwbS90cnVzdGVkLXBsYXRmb3JtLW1vZHVsZS1vdmVydmlldw==">受信任的平台模块 (TPM)<i class="fa fa-external-link-alt"></i></span> 2.0 版本、。</p><h2 id="iso刻录U盘安装"><a href="#iso刻录U盘安装" class="headerlink" title="iso刻录U盘安装"></a>iso刻录U盘安装</h2><p>Hi，大家好。</p><p>对于小白用户，装系统是比较头疼的事，所以今天写一个简单易懂的装系统教程。</p><p>使用微软官方提供的工具制作U盘启动盘，操作简单，系统纯净，强烈建议小白用户使用。缺点是该工具功能单一，并且官方只为win8.1\10\11提供了该工具。</p><blockquote><p><strong>U盘启动盘的制作</strong></p></blockquote><p><strong>①</strong>找一台可以正常上网的电脑打开官网“<span class="exturl" data-url="aHR0cHM6Ly9saW5rLnpoaWh1LmNvbS8/dGFyZ2V0PWh0dHBzOi8vd3d3Lm1pY3Jvc29mdC5jb20vemgtY24vc29mdHdhcmUtZG93bmxvYWQvd2luZG93czEw">https://www.microsoft.com/zh-cn/software-download/windows10<i class="fa fa-external-link-alt"></i></span>”下载该工具，然后准备一个8G以上的空白U盘。(注意:该工具会格式化U盘，所以准备一个空白U盘)</p><p><img data-src="/95/v2-43f24e5f1491e3392d03a6be765be433_1440w.jpg" alt="img" loading="lazy"></p><p><strong>②</strong>下载完成后打开该工具，点击接受。</p><p><img data-src="/95/v2-a2f625b2d29b4e10e879069dd02c85cd_1440w.jpg" alt="img" loading="lazy"></p><p><strong>③</strong>选择“为另一台电脑创建安装介质”。</p><p><img data-src="/95/v2-f0c4420ecad6437e7a86ae6af8827285_1440w.jpg" alt="img" loading="lazy"></p><p><strong>④</strong>一般选择「Windows10 64位」。如果你制作启动盘和装机的是同一台电脑，直接勾选“对这台电脑使用推荐的选项”就行。</p><p><img data-src="/95/v2-18aaf52279fa29d465d72bc73d3478dc_1440w.jpg" alt="img" loading="lazy"></p><p>⑤选择“U盘”。</p><p><img data-src="/95/v2-af76e85fd4ad1784ba6352a2acb305e3_1440w.jpg" alt="img" loading="lazy"></p><p>⑥选择你插入的U盘，一般会自动识别的。</p><p><img data-src="/95/v2-7828c5ba5a3bedbd403c0fe49d38aa36_1440w.jpg" alt="img" loading="lazy"></p><p><strong>⑦</strong>接下来你只需要静静的等待，系统下载完成后会自动创建介质，当提示“你的U盘已准备就绪”后，点击完成即可。</p><p><img data-src="/95/v2-3205f2a3a8b6b5d1d36ee0a0562b6437_1440w.jpg" alt="img" loading="lazy"></p><p><img data-src="/95/v2-222ae207df5f6fda06cf569b302bb4a5_1440w.jpg" alt="img" loading="lazy"></p><p><img data-src="/95/v2-ca229ac429ed9d5c3ec1ffada2d8d3b8_1440w.jpg" alt="img" loading="lazy"></p><p><strong>⑧</strong>打开U盘你就可以看到U盘启动盘已经制作完成，接下来就是重装系统了。</p><p><img data-src="/95/v2-f93b0397324c23d6f06746f7f479bfa6_1440w.jpg" alt="img" loading="lazy"></p><blockquote><p><strong>系统安装教程</strong></p></blockquote><p><strong>①</strong>关闭电脑，插上U盘启动盘，开机时按快捷启动键，下图为常见品牌电脑快捷键大全。</p><p><img data-src="/95/v2-824170fb33c34c52b2f716ae3cc9bf2e_1440w.jpg" alt="img" loading="lazy"></p><p><strong>②</strong>我的电脑为戴尔笔记本，开机时按F12，出现下图所示时，按上下键选择U盘后回车，我的U盘品牌为闪迪，很明显就能看到下面红框标记里有「SanDisk」字样。（各品牌电脑出现的界面略有不同，但大同小异。）</p><p><img data-src="/95/v2-1ee2f00d6b41959d4d060ae9c676a73c_1440w.jpg" alt="img" loading="lazy"></p><p><strong>③</strong>选择中文简体，点击下一步。</p><p><img data-src="/95/v2-6112aedcac11fa9f39a456e0fa0fb3b6_1440w.jpg" alt="img" loading="lazy"></p><p><strong>④</strong>点击现在安装。</p><p><img data-src="/95/v2-d59c5deb44fbcf7546656197fbbd7fcd_1440w.jpg" alt="img" loading="lazy"></p><p><strong>⑤</strong>出现下图所示时，你如果你有秘钥，输入后点击下一步。没有就点击“我没有产品秘钥”。</p><p><img data-src="/95/v2-16e3d00cf0e1e4ea61b760c367721f51_1440w.jpg" alt="img" loading="lazy"></p><p><strong>⑥</strong>选择“自定义”</p><p><img data-src="/95/v2-d8756da99aabd6ef568cb2bc66dc8ca2_1440w.jpg" alt="img" loading="lazy"></p><p><strong>⑦</strong>在这里要特别注意一下，选择自己的C盘，安装前最好格式化一下C盘。有固态硬盘的话一定要选择固态硬盘。</p><p><img data-src="/95/v2-6d423fb029a1b1df45d3303f9373337d_1440w.jpg" alt="img" loading="lazy"></p><p><strong>⑧</strong>接下来只需要等待安装完成即可，直到出现设置界面，设置完成后即可进入系统。（这里所需时间略长，电脑还会重启，请耐心等待。）</p><p><img data-src="/95/v2-500de0d68e476c60d237f445ce80cc68_1440w.jpg" alt="img" loading="lazy"></p><p><img data-src="/95/v2-784d89bf1cebcff368780a577f6d4a27_1440w.jpg" alt="img" loading="lazy"></p><p><strong>⑨</strong>进入系统后联网会自动安装驱动。如果有些驱动没能安装成功，可以借助第三方驱动安装软件进行安装，例如360驱动大师、驱动精灵等。</p><p><img data-src="/95/v2-a3d186244c0c7308ebb30216ebdd893d_1440w.jpg" alt="img" loading="lazy"></p><p><strong>⑩</strong>打开设置查看系统是否激活，如果你原来是正版win10，联网会自动激活的。</p><p><img data-src="/95/v2-881cef8f8e99a62a8c86d40225fb7606_1440w.jpg" alt="img" loading="lazy"></p><p>温馨提示：由于每个人的电脑硬件和系统环境都有差异，重装系统时难免会有各种问题，如有问题先自行百度，也可以下方留言，我看到后会及时回复。</p><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><span class="exturl" data-url="aHR0cHM6Ly96aHVhbmxhbi56aGlodS5jb20vcC80OTE4MTc4Ng==">win10系统安装教程（官方工具） - 知乎 (zhihu.com)<i class="fa fa-external-link-alt"></i></span></p><p><span class="exturl" data-url="aHR0cHM6Ly93d3cubWljcm9zb2Z0LmNvbS96aC1jbi9zb2Z0d2FyZS1kb3dubG9hZA==">软件下载 (microsoft.com)<i class="fa fa-external-link-alt"></i></span></p><p><span class="exturl" data-url="aHR0cHM6Ly93d3cubWljcm9zb2Z0LmNvbS96aC1jbi93aW5kb3dzL3dpbmRvd3MtMTAtc3BlY2lmaWNhdGlvbnMjcHJpbWFyeVIy">怎样查看 Windows 10 计算机系统的规格和需求 - Microsoft<i class="fa fa-external-link-alt"></i></span></p><p><span class="exturl" data-url="aHR0cHM6Ly93d3cubWljcm9zb2Z0LmNvbS96aC1jbi93aW5kb3dzL3dpbmRvd3MtNy1lbmQtb2YtbGlmZS1zdXBwb3J0LWluZm9ybWF0aW9u">Windows 7 停止支持信息 — Microsoft<i class="fa fa-external-link-alt"></i></span></p><p><span class="exturl" data-url="aHR0cHM6Ly93d3cuZGVsbC5jb20vc3VwcG9ydC9rYmRvYy8wMDAxOTAxMTYvSG93LXRvLUVuYWJsZS1TZWN1cmUtQm9vdC1vbi1Zb3VyLURlbGwtRGV2aWNl">Dell<i class="fa fa-external-link-alt"></i></span></p><p><span class="exturl" data-url="aHR0cHM6Ly9zdXBwb3J0Lmxlbm92by5jb20vc29sdXRpb25zL2h0NTA5MDQ0">Lenovo<i class="fa fa-external-link-alt"></i></span></p><p><span class="exturl" data-url="aHR0cHM6Ly9zdXBwb3J0LmhwLmNvbS9kb2N1bWVudC9pc2hfNDMwMDkzNy00Mjk1NzQ2LTE2P29wZW5DTEM9dHJ1ZQ==">HP<i class="fa fa-external-link-alt"></i></span></p>]]></content>
-    
-    
-    <summary type="html">默认</summary>
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>一键重装win</title>
-    <link href="https://weilining.github.io/94.html"/>
-    <id>https://weilining.github.io/94.html</id>
-    <published>2021-10-13T15:36:34.000Z</published>
-    <updated>2021-10-13T15:36:34.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>必须网络好且能进入系统 ，因为要在线下载系统全自动安装，系统有10G，第二分区至少分15G。</p><h2 id="一键安装系统"><a href="#一键安装系统" class="headerlink" title="一键安装系统"></a>一键安装系统</h2><p>必须有网络</p><p>下载地址↓</p><p>解压密码yrxitong.com</p><p><span class="exturl" data-url="aHR0cHM6Ly9wYW4uYmFpZHUuY29tL3MvMU5KWVRUS3Axam5HeW5yNGQ0NlpaMnc=">百度网盘‍<i class="fa fa-external-link-alt"></i></span>　提取码1234</p><p><span class="exturl" data-url="aHR0cHM6Ly9wYW4ueXJ4aXRvbmcuY29tL3MvbjJhamg0">YR云盘<i class="fa fa-external-link-alt"></i></span></p><p><span class="exturl" data-url="aHR0cHM6Ly9jbG91ZC4xODkuY24vdC9xcUVybWVqWW5JWm4=">天翼云盘<i class="fa fa-external-link-alt"></i></span></p><p><span class="exturl" data-url="aHR0cHM6Ly95cnhpdG9uZzYtbXkuc2hhcmVwb2ludC5jbi86ZjovZy9wZXJzb25hbC95cnhpdG9uZ19jb21feXJ4aXRvbmdfY29tL0VySWsxUDAwV3YxQW1SLTUzenBISFVjQkVEU0ZSNzlaNU54WWozYnNkR3N2bEE/ZT1nNVk4Skc=">OneDrive‍<i class="fa fa-external-link-alt"></i></span></p><h3 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h3><p>关闭360等杀毒软件，win自带的windows defender<a href="https://weilining.github.io/244.html?highlight=windows+defender">最有效关闭 Windows Defender | Ln&#39;s Blog (weilining.github.io)</a>，然后按照提示一步步安装系统即可。</p><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://www.yrxitong.com/"><span class="exturl" data-url="aHR0cHM6Ly93d3cueXJ4aXRvbmcuY29tL2gtbmQtMTAyMi5odG1sI19qY3A9MQ==">小鱼儿yr系统重装助手V1.5→小鱼儿yr系统 (yrxitong.com)<i class="fa fa-external-link-alt"></i></span></a></p><p><span class="exturl" data-url="aHR0cDovL3d3dy5iZnhpdG9uZy5jb20v">冰封一键重装系统官网_最简单的一键重装系统软件 (bfxitong.com)<i class="fa fa-external-link-alt"></i></span></p>]]></content>
-    
-    
-    <summary type="html">默认</summary>
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>U盘引导盘制作工具+手工两步制作</title>
-    <link href="https://weilining.github.io/93.html"/>
-    <id>https://weilining.github.io/93.html</id>
-    <published>2021-10-13T13:13:06.000Z</published>
-    <updated>2021-10-13T13:13:06.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="ventoy"><a href="#ventoy" class="headerlink" title="ventoy"></a>ventoy</h2><p>Ventoy 1.0.54 所有平台版 (2021/10/12)<br><span class="exturl" data-url="aHR0cHM6Ly93d3cuNDIzZG93bi5jb20vZ28ucGhwP3VybD1hSFIwY0hNNkx5OXdZVzR1YkdGdWVtOTFhUzVqYjIwdllqQXhZbVExTkdkaQ==">https://pan.lanzoui.com/b01bd54gb<i class="fa fa-external-link-alt"></i></span></p><p>最新Ventoy单文件版及常用U盘启动工具<br><span class="exturl" data-url="aHR0cHM6Ly93d3cuNDIzZG93bi5jb20vZ28ucGhwP3VybD1hSFIwY0hNNkx5OXdZVzR1YkdGdWVtOTFhUzVqYjIwdllqQm1NV0p5YzNOaQ==">https://pan.lanzoui.com/b0f1brssb<i class="fa fa-external-link-alt"></i></span><br><span class="exturl" data-url="aHR0cHM6Ly93d3cuNDIzZG93bi5jb20vZ28ucGhwP3VybD1hSFIwY0hNNkx5OXdZVzR1WW1GcFpIVXVZMjl0TDNNdk1YTnVSRFJ6YzNFek4xcEpXbmxxUTBoTVRVcGtZbEU9">https://pan.baidu.com/s/1snD4ssq37ZIZyjCHLMJdbQ<i class="fa fa-external-link-alt"></i></span></p><p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3ZlbnRveS9WZW50b3k=">ventoy/Ventoy: A new bootable USB solution. (github.com)<i class="fa fa-external-link-alt"></i></span></p><h2 id="rufus"><a href="#rufus" class="headerlink" title="rufus"></a>rufus</h2><p>Rufus 3.15.1812 正式版 [2021/08/03]</p><p><span class="exturl" data-url="aHR0cHM6Ly93d3cuNDIzZG93bi5jb20vZ28ucGhwP3VybD1hSFIwY0hNNkx5OXdZVzR1YkdGdWVtOTFhUzVqYjIwdllqQm1NV0p5YzNOaQ==">https://pan.lanzoui.com/b0f1brssb<i class="fa fa-external-link-alt"></i></span></p><p><span class="exturl" data-url="aHR0cHM6Ly93d3cuNDIzZG93bi5jb20vZ28ucGhwP3VybD1hSFIwY0hNNkx5OW5hWFJvZFdJdVkyOXRMM0JpWVhSaGNtUXZjblZtZFhNdmNtVnNaV0Z6WlhNPQ==">https://github.com/pbatard/rufus/releases<i class="fa fa-external-link-alt"></i></span></p><h2 id="UltraISO-软碟通"><a href="#UltraISO-软碟通" class="headerlink" title="UltraISO 软碟通"></a>UltraISO 软碟通</h2><p>选择USB-ZIP+</p><p>UltraISO Premium v9.7.6.3829(2021.08.11) 中文注册便携版单文件<br><span class="exturl" data-url="aHR0cHM6Ly93d3cuNDIzZG93bi5jb20vZ28ucGhwP3VybD1hSFIwY0hNNkx5OXdZVzR1YkdGdWVtOTFhUzVqYjIwdllqQm1NV0p5YzNOaQ==">https://pan.lanzoui.com/b0f1brssb<i class="fa fa-external-link-alt"></i></span><br><span class="exturl" data-url="aHR0cHM6Ly93d3cuNDIzZG93bi5jb20vZ28ucGhwP3VybD1hSFIwY0hNNkx5OXdZVzR1WW1GcFpIVXVZMjl0TDNNdk1YTnVSRFJ6YzNFek4xcEpXbmxxUTBoTVRVcGtZbEU9">https://pan.baidu.com/s/1snD4ssq37ZIZyjCHLMJdbQ<i class="fa fa-external-link-alt"></i></span></p><h2 id="手工制作，两步搞定"><a href="#手工制作，两步搞定" class="headerlink" title="手工制作，两步搞定"></a>手工制作，两步搞定</h2><p>UEFI 启动的话，U 盘格式化为 FAT32 格式，直接把 ISO 内的文件拷进 U 盘。不过 Windows 最近版本的镜像中 install.wim 的大小已经超过 4GB，FAT32 放不下，可以格式化成 NTFS，但是又有另一个问题，UEFI 标准不要求支持 NTFS 文件系统，所以在许多电脑上是不能直接启动的，解决方法是带一个 UEFI 的 NTFS 驱动。所以如果要在U盘里装win11系统的话，推荐使用ultralSO高级隐藏，把U盘格式化为NTFS就可以放超过4G的单文件了。</p><h3 id="格式U盘为FAT32"><a href="#格式U盘为FAT32" class="headerlink" title="格式U盘为FAT32"></a>格式U盘为FAT32</h3><p>直接U盘格式Fat32</p><h3 id="放置引导文件"><a href="#放置引导文件" class="headerlink" title="放置引导文件"></a>放置引导文件</h3><p>复制引导文件粘贴到U盘FAT32分区，7z右键解压，没7z就加载iso，然后把iso的文件解压放入U盘</p><h2 id="防毒和双启"><a href="#防毒和双启" class="headerlink" title="防毒和双启"></a>防毒和双启</h2><p>防病毒（只读）和双启动（bios+efi）</p><p>隐藏分区需要GPT分区</p>]]></content>
-    
-    
-    <summary type="html">默认</summary>
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>最优雅的关闭windows防火墙</title>
-    <link href="https://weilining.github.io/257.html"/>
-    <id>https://weilining.github.io/257.html</id>
-    <published>2021-10-13T08:32:53.000Z</published>
-    <updated>2021-10-13T08:32:53.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="蓝奏云"><a href="#蓝奏云" class="headerlink" title="蓝奏云"></a>蓝奏云</h2><p><span class="exturl" data-url="aHR0cHM6Ly9qYXZhcHl0aG9uLmxhbnpvdWkuY29tL2l3enNIdmFua2lo">https://javapython.lanzoui.com/iwzsHvankih<i class="fa fa-external-link-alt"></i></span></p><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><span class="exturl" data-url="aHR0cHM6Ly93d3cuc29yZHVtLm9yZy84MTI1L2ZpcmV3YWxsLWFwcC1ibG9ja2VyLWZhYi12MS03Lw==">防火墙应用程序拦截器 v1.7 (sordum.org)<i class="fa fa-external-link-alt"></i></span></p>]]></content>
     
     
     <summary type="html">默认</summary>
