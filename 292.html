@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.jsdelivr.net/gh/weilining/img@main/img/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.jsdelivr.net/gh/weilining/img@main/img/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://cdn.jsdelivr.net/gh/weilining/img@main/img/favicon-16x16-next.png">
+  <link rel="mask-icon" href="https://cdn.jsdelivr.net/gh/weilining/img@main/img/logo.svg" color="#222">
+  <meta name="google-site-verification" content="OjGymv9uAqWYDsr-E-j6DG2k1_mPXsDQF77kgEK0nz8">
+  <meta name="msvalidate.01" content="5C84BC77E02800759CE29C4ACCE487BD">
+  <meta name="yandex-verification" content="06c62a93328de5da">
+  <meta name="baidu-site-verification" content="code-wFDrn4lvkD">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/blue/pace-theme-bounce.css">
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"weilining.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.8.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/config.min.js"></script>
+<meta name="description" content="默认">
+<meta property="og:type" content="article">
+<meta property="og:title" content="WinPE">
+<meta property="og:url" content="https://weilining.github.io/292.html">
+<meta property="og:site_name" content="Ln&#39;s Blog">
+<meta property="og:description" content="默认">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.coolexe.com/IMG/2/Edgeless-05.png">
+<meta property="og:image" content="https://cdn.coolexe.com/IMG/2/Edgeless-06.png">
+<meta property="og:image" content="https://cdn.coolexe.com/IMG/2/Edgeless-01.png">
+<meta property="og:image" content="https://cdn.coolexe.com/IMG/2/Edgeless-02.png">
+<meta property="og:image" content="https://cdn.coolexe.com/IMG/2/Edgeless-03.png">
+<meta property="og:image" content="https://cdn.coolexe.com/IMG/2/Edgeless-04.png">
+<meta property="og:image" content="https://cdn.coolexe.com/IMG/2/FirPE-01.png">
+<meta property="og:image" content="https://cdn.coolexe.com/IMG/2/FirPE-02.png">
+<meta property="og:image" content="https://cdn.coolexe.com/IMG/2/FirPE-03.png">
+<meta property="og:image" content="https://cdn.coolexe.com/IMG/2/WPE-01.png">
+<meta property="og:image" content="https://cdn.coolexe.com/IMG/2/WPE-02.png">
+<meta property="og:image" content="https://cdn.coolexe.com/IMG/2/WPE-03.png">
+<meta property="og:image" content="https://cdn.coolexe.com/IMG/2/UQi-USBsys-01.jpg">
+<meta property="og:image" content="https://cdn.coolexe.com/IMG/2/UQi-USBsys-02.jpg">
+<meta property="og:image" content="https://cdn.coolexe.com/IMG/2/UQi-USBsys-03.jpg">
+<meta property="og:image" content="https://cdn.coolexe.com/IMG/2/EasyU-01.png">
+<meta property="og:image" content="https://cdn.coolexe.com/IMG/2/EasyU-02.png">
+<meta property="og:image" content="https://cdn.coolexe.com/IMG/2/EasyU-03.png">
+<meta property="og:image" content="https://cdn.coolexe.com/IMG/2/EasyU-04.png">
+<meta property="og:image" content="https://cdn.coolexe.com/IMG/2/EasyU-05.png">
+<meta property="og:image" content="https://cdn.coolexe.com/IMG/2/USBOS-01.png">
+<meta property="og:image" content="https://cdn.coolexe.com/IMG/2/USBOS-02.png">
+<meta property="og:image" content="https://cdn.coolexe.com/IMG/2/USM-01.png">
+<meta property="og:image" content="https://cdn.coolexe.com/IMG/2/USM-02.png">
+<meta property="og:image" content="https://cdn.coolexe.com/IMG/2/USM-03.png">
+<meta property="og:image" content="https://cdn.coolexe.com/IMG/2/USM-04.png">
+<meta property="article:published_time" content="2021-10-19T16:07:39.000Z">
+<meta property="article:modified_time" content="2021-10-19T16:07:39.000Z">
+<meta property="article:author" content="Lining Wei">
+<meta property="article:tag" content="ACM,开发者,程序猿,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,互联网一切折腾">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.coolexe.com/IMG/2/Edgeless-05.png">
+
+
+<link rel="canonical" href="https://weilining.github.io/292.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://weilining.github.io/292.html","path":"292.html","title":"WinPE"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>WinPE | Ln's Blog</title>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="Ln's Blog" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Ln's Blog</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">有朋自远方来，不亦乐乎</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-bell fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-top"><a href="/top/" rel="section"><i class="fa fa-signal fa-fw"></i>热榜</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-friends"><a href="/friends/" rel="section"><i class="fa fa-globe-asia fa-fw"></i>朋友们</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Edgeless-v3-2-0-Beta-%E5%BC%BA%E5%A4%A7%E8%80%8C%E4%BC%98%E9%9B%85%E7%9A%84PE%E5%B7%A5%E5%85%B7"><span class="nav-number">1.</span> <span class="nav-text">Edgeless v3.2.0 Beta 强大而优雅的PE工具</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E4%BA%8E-Win10-%E7%9A%84PE%E6%A0%B8%E5%BF%83"><span class="nav-number">2.</span> <span class="nav-text">基于 Win10 的PE核心</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%BA%E5%A4%A7%E7%9A%84%E6%8F%92%E4%BB%B6%E5%8C%85"><span class="nav-number">3.</span> <span class="nav-text">强大的插件包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%A3%E7%95%85%E6%B7%8B%E6%BC%93-%E5%88%86%E7%A7%92%E5%BF%85%E4%BA%89"><span class="nav-number">4.</span> <span class="nav-text">酣畅淋漓 分秒必争</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%81%AA%E5%AE%88%E2%80%9C%E4%B8%89%E6%97%A0%E2%80%9D%E5%8E%9F%E5%88%99"><span class="nav-number">5.</span> <span class="nav-text">恪守“三无”原则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%89%E8%83%86%E9%87%8F%E5%B0%B1%E5%BC%80%E6%BA%90"><span class="nav-number">6.</span> <span class="nav-text">有胆量就开源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#FirPE-v1-7-0-%E7%BB%B4%E6%8A%A4%E7%B3%BB%E7%BB%9F"><span class="nav-number">7.</span> <span class="nav-text">FirPE v1.7.0 维护系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A1%AC%E4%BB%B6%E6%94%AF%E6%8C%81"><span class="nav-number">8.</span> <span class="nav-text">硬件支持</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F%E6%AF%8D%E7%9B%98"><span class="nav-number">9.</span> <span class="nav-text">系统母盘</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%89%B9%E5%88%AB%E6%8F%90%E9%86%92"><span class="nav-number">10.</span> <span class="nav-text">特别提醒</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E8%AF%B4%E6%98%8E"><span class="nav-number">11.</span> <span class="nav-text">其他说明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A3%9F%E7%94%A8%E6%96%B9%E6%B3%95"><span class="nav-number">12.</span> <span class="nav-text">食用方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98"><span class="nav-number">13.</span> <span class="nav-text">常见问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97"><span class="nav-number">14.</span> <span class="nav-text">更新日志</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BE%AEPE%E5%B7%A5%E5%85%B7%E7%AE%B1-v2-2-%E5%AE%98%E6%96%B9%E6%AD%A3%E5%BC%8F%E7%89%88"><span class="nav-number">15.</span> <span class="nav-text">微PE工具箱 v2.2 官方正式版</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%9F%E8%83%BD%E7%89%B9%E7%82%B9"><span class="nav-number">16.</span> <span class="nav-text">功能特点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BE%AEPE%E5%B7%A5%E5%85%B7%E7%AE%B1-v2-1-%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97-%EF%BC%882021-10-08%EF%BC%89"><span class="nav-number">17.</span> <span class="nav-text">微PE工具箱 v2.1 更新日志 （2021-10-08）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BC%98%E5%90%AF%E6%97%B6%E4%BB%A3%E7%B3%BB%E7%BB%9F%E7%BB%B4%E6%8A%A4%E7%9B%98-2021-07-22"><span class="nav-number">18.</span> <span class="nav-text">优启时代系统维护盘 2021.07.22</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%AC%E7%BB%B4%E6%8A%A4%E7%9B%98%E4%B8%BB%E8%A6%81%E5%8C%85%E5%90%AB%E4%BB%A5%E4%B8%8B%E7%BB%84%E4%BB%B6"><span class="nav-number">19.</span> <span class="nav-text">本维护盘主要包含以下组件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BC%98%E5%90%AF%E9%80%9A-EasyU-v3-7-2021-0915-VIP%E7%89%88"><span class="nav-number">20.</span> <span class="nav-text">优启通 EasyU v3.7.2021.0915 VIP版</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%9F%E8%83%BD%E7%89%B9%E7%82%B9-1"><span class="nav-number">21.</span> <span class="nav-text">功能特点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%89%88%E6%9C%AC%E5%8C%BA%E5%88%AB"><span class="nav-number">22.</span> <span class="nav-text">版本区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95"><span class="nav-number">23.</span> <span class="nav-text">使用方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#USBOS-V3-0-2021-07-10-%E8%B6%85%E7%BA%A7PE%E5%90%AF%E5%8A%A8%E7%BB%B4%E6%8A%A4%E5%B7%A5%E5%85%B7-%E6%A0%87%E5%87%86%E7%89%88-amp-%E5%A2%9E%E5%BC%BA%E7%89%88"><span class="nav-number">24.</span> <span class="nav-text">USBOS V3.0.2021.07.10 超级PE启动维护工具 标准版&amp;增强版</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%9F%E8%83%BD%E7%89%B9%E7%82%B9-2"><span class="nav-number">25.</span> <span class="nav-text">功能特点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#U%E7%9B%98%E9%AD%94%E6%9C%AF%E5%B8%88USM-v6%E7%89%B9%E5%88%AB%E7%89%88-2021-03-16"><span class="nav-number">26.</span> <span class="nav-text">U盘魔术师USM v6特别版 2021.03.16</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%9F%E8%83%BD%E7%89%B9%E7%82%B9-3"><span class="nav-number">27.</span> <span class="nav-text">功能特点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%89%88%E6%9C%AC%E4%BB%8B%E7%BB%8D"><span class="nav-number">28.</span> <span class="nav-text">版本介绍</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Lining Wei"
+      src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/icon.gif">
+  <p class="site-author-name" itemprop="name">Lining Wei</p>
+  <div class="site-description" itemprop="description">算法、技术</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">297</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">35</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="cc-license site-overview-item animated" itemprop="license">
+    <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC96aC1DTg=="><img src="https://cdn.jsdelivr.net/npm/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></span>
+  </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://weilining.github.io/292.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/weilining/img@main/img/icon.gif">
+      <meta itemprop="name" content="Lining Wei">
+      <meta itemprop="description" content="算法、技术">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ln's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          WinPE<span class="exturl post-edit-link" data-url="aHR0cHM6Ly9naXRodWIuY29tL3dlaWxpbmluZy9ibG9nL2VkaXQvbWFpbi9zb3VyY2UvX3Bvc3RzLzI5Mi5tZA==" title="编辑"><i class="fa fa-pen-nib"></i></span>
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-10-20 00:07:39" itemprop="dateCreated datePublished" datetime="2021-10-20T00:07:39+08:00">2021-10-20</time>
+    </span>
+
+  
+    <span id="/292.html" class="post-meta-item leancloud_visitors" data-flag-title="WinPE" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>5.9k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>5 分钟</span>
+    </span>
+</div>
+
+            <div class="post-description">默认</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h2 id="Edgeless-v3-2-0-Beta-强大而优雅的PE工具"><a href="#Edgeless-v3-2-0-Beta-强大而优雅的PE工具" class="headerlink" title="Edgeless v3.2.0 Beta 强大而优雅的PE工具"></a>Edgeless v3.2.0 Beta 强大而优雅的PE工具</h2><p>Edgeless的创立旨在试图替代WTG的部分应用场景，在保留原生Win10系统体验的同时提供强大、便捷、易用的自定义能力，我们不断探索PE的极限，力图打造可玩性最佳的PE工具，为您呈现一份最适合您的PE。</p>
+<p><img data-src="https://cdn.coolexe.com/IMG/2/Edgeless-05.png" alt="img" loading="lazy"></p>
+<p><img data-src="https://cdn.coolexe.com/IMG/2/Edgeless-06.png" alt="img" loading="lazy"></p>
+<p><img data-src="https://cdn.coolexe.com/IMG/2/Edgeless-01.png" alt="img" loading="lazy"></p>
+<p><img data-src="https://cdn.coolexe.com/IMG/2/Edgeless-02.png" alt="img" loading="lazy"></p>
+<p><img data-src="https://cdn.coolexe.com/IMG/2/Edgeless-03.png" alt="img" loading="lazy"></p>
+<p>以上是我个人DIY后的样子，主要替换了软件和壁纸</p>
+<p><img data-src="https://cdn.coolexe.com/IMG/2/Edgeless-04.png" alt="img" loading="lazy"></p>
+<h2 id="基于-Win10-的PE核心"><a href="#基于-Win10-的PE核心" class="headerlink" title="基于 Win10 的PE核心"></a>基于 Win10 的PE核心</h2><ul>
+<li>使用18362作为母盘，强力驱动主流配置机型。</li>
+<li>支持Legacy+UEFI双引导，支持识别主流NVME协议SSD；提供有线+无线网络连接能力，同时具备较为完整的库文件支持。</li>
+</ul>
+<h2 id="强大的插件包"><a href="#强大的插件包" class="headerlink" title="强大的插件包"></a>强大的插件包</h2><ul>
+<li><strong>功能强劲</strong>：软件、壁纸、图标、主题、脚本、驱动、库文件... 简单的操作，让您无需具备相应专业知识即可全面定制属于您的启动盘</li>
+<li><strong>易于管理：</strong>在启动盘指定目录放置.7z插件包即可应用插件，无需专用软件，支持全平台管理插件包</li>
+<li><strong>提供开发者文档：</strong>插件包原理简单易懂，快速完成开发；使用专为调试插件包设计的开发工具并在交流群寻求帮助</li>
+</ul>
+<h2 id="酣畅淋漓-分秒必争"><a href="#酣畅淋漓-分秒必争" class="headerlink" title="酣畅淋漓 分秒必争"></a>酣畅淋漓 分秒必争</h2><ul>
+<li><strong>删去不常用的多余组件：</strong>Edgeless的定位并非维护PE，因此我们大胆地删除了启动菜单及其他启动内核用不到的组件</li>
+<li><strong>寄生启动：</strong>业界首次提出“寄生启动”概念，依托于现有启动盘启动Edgeless而无需重新制作启动盘，同时享有更优秀的启动菜单和旧版内核</li>
+<li><strong>轻量级架构：</strong>镜像启动逻辑与微软官方镜像类似，便于实现更多自定义玩法</li>
+</ul>
+<h2 id="恪守“三无”原则"><a href="#恪守“三无”原则" class="headerlink" title="恪守“三无”原则"></a>恪守“三无”原则</h2><ul>
+<li><strong>无广告：</strong>官方PE内核、官方插件、官方网站均无广告</li>
+<li><strong>无收费：</strong>官方PE内核、官方插件均为永久免费使用，内测交流群永久免费进群，拒绝变相收费</li>
+<li><strong>无劫持：</strong>官方PE核心、官方插件不会对本地硬盘的系统进行任何恶意修改</li>
+</ul>
+<h2 id="有胆量就开源"><a href="#有胆量就开源" class="headerlink" title="有胆量就开源"></a>有胆量就开源</h2><ul>
+<li><strong>多数原创代码均遵循MPL2.0协议开源：</strong>欢迎各位同行在遵循MPL2.0协议的前提下使用我们的原创代码</li>
+<li><strong>大量使用解释型代码：</strong>使用批处理和PECMD脚本实现功能，无需复杂的逆向操作，Edgeless的运行过程清晰可见</li>
+<li><strong>欢迎修改打包形成自己的作品：</strong>我们开放了Edgeless内核的修改授权，请前往文档的“合作洽谈”章节查看要求</li>
+</ul>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ob21lLmVkZ2VsZXNzLnRvcC8=">Edgeless 官网<i class="fa fa-external-link-alt"></i></span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9kb3duLmVkZ2VsZXNzLnRvcC8=">Edgeless 下载<i class="fa fa-external-link-alt"></i></span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly93aWtpLmVkZ2VsZXNzLnRvcC92Mi8=">Edgeless 用户手册<i class="fa fa-external-link-alt"></i></span>（使用Edgeless之前强烈建议详细阅读）</p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0Nub3RlY2gvRWRnZWxlc3MtUHJvamVjdA==">Github 开源项目<i class="fa fa-external-link-alt"></i></span></p>
+<h2 id="FirPE-v1-7-0-维护系统"><a href="#FirPE-v1-7-0-维护系统" class="headerlink" title="FirPE v1.7.0 维护系统"></a>FirPE v1.7.0 维护系统</h2><p>FirPE 是一款系统预安装环境（Windows PE），它具有简约、易操作等特点，使用起来十分人性化。以U盘作为使用载体，空间更为充分，携带更为方便。同时整合各种装机必备工具，有效提高系统安装效率。FirPE 将为大家带来全新的用户体验！  <img data-src="https://cdn.coolexe.com/IMG/2/FirPE-01.png" alt="img" loading="lazy"></p>
+<p><img data-src="https://cdn.coolexe.com/IMG/2/FirPE-02.png" alt="img" loading="lazy"></p>
+<p><img data-src="https://cdn.coolexe.com/IMG/2/FirPE-03.png" alt="img" loading="lazy"></p>
+<h2 id="硬件支持"><a href="#硬件支持" class="headerlink" title="硬件支持"></a>硬件支持</h2><p>采用经过优化的U盘三分区方案，同时支持BIOS（Legacy）与UEFI两种启动模式。结合一贯的“双PE分治”理念，两个PE分别接管不同的硬件范围，可在支持主流硬件的基础上，同时兼容以往多数旧硬件。U盘PE所在分区于系统下自动隐藏，PE区与数据区分别独立，便于使用者对数据的各项操作。</p>
+<h2 id="系统母盘"><a href="#系统母盘" class="headerlink" title="系统母盘"></a>系统母盘</h2><p>19041.331.200614-1242.VB_RELEASE_SVC_IM_CLIENTMULTI_X64FRE_ZH-CN.iso</p>
+<h2 id="特别提醒"><a href="#特别提醒" class="headerlink" title="特别提醒"></a>特别提醒</h2><ul>
+<li>请以管理员身份运行FirPE写入器</li>
+<li>请预先准备好U盘，推荐16G或以上</li>
+<li>请尽可能选择速度和体制好的U盘，某些较差的控制芯片或盘体将可能导致制作失败</li>
+<li>请在制作前备份U盘内重要数据，避免出现不必要的问题</li>
+<li>个别杀软会将主程序或PE内工具软件报毒，还请理性判断</li>
+<li>移动硬盘USB转接芯片的优劣，将导致制作成功与否或可否正常启动</li>
+<li>FirPE 工具为外置转内置，移除U盘不影响 FirPE 的正常使用</li>
+</ul>
+<h2 id="其他说明"><a href="#其他说明" class="headerlink" title="其他说明"></a>其他说明</h2><ul>
+<li>系统保证无病毒无推广无流氓，如下载后发现有任何病毒推广流氓行为，请留言，我们将为您排查问题~</li>
+<li>如被国内杀软提示有病毒，那大概都是误报，同时建议使用国外优质杀软或者国内良心的火绒~（这是不是有一种钦定的感觉？）</li>
+<li>FirPE内的源代码遵循MPL 2.0开源协议，请勿用作商业用途</li>
+<li>如需对FirPE进行修改并发布，在发布/宣传页面（包括官方网站）均必须出现显眼的”此作品修改自FirPE“字样并存在FirPE官网的超链接（不得将其故意缩小、添加删除线或放置在二级及以上级菜单/页面内）</li>
+</ul>
+<h2 id="食用方法"><a href="#食用方法" class="headerlink" title="食用方法"></a>食用方法</h2><ul>
+<li><span class="exturl" data-url="aHR0cHM6Ly9maXJwZS5jbi9wYWdlLTM5Nw==">如何制作启动盘并进入PE？<i class="fa fa-external-link-alt"></i></span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly9maXJwZS5jbi9wYWdlLTYyNw==">如何在手机上制作启动盘并进入PE？<i class="fa fa-external-link-alt"></i></span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly9maXJwZS5jbi9wYWdlLTMzNQ==">从零开始的电脑系统重装<i class="fa fa-external-link-alt"></i></span></li>
+</ul>
+<h2 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h2><p>问: <strong>FirPE写入器选项要设置吗？怎么设置？</strong></p>
+<p>答: 一般默认设置即可，无需手动再设置。</p>
+<p>问: <strong>WinPE是否带有一健还原或类似于一健还原的功能？都支持什么格式？纯净吗？</strong></p>
+<p>答: 有的，EasyRC支持 GHO WIM SWM ESD ISO，DISM++支持 WIM SWM ESD。工具保证无病毒无推广无流氓。</p>
+<p>问: <strong>怎么判断我的电脑是新机型还是旧机型？</strong></p>
+<p>答: 一般直接进入Win10PE，Win10PE无法进入时则考虑Win03PE。</p>
+<p>问: <strong>为什么启动U盘没有显示引导菜单，直接进入PE了？</strong></p>
+<p>答: 正常现象，BIOS启动模式才会显示引导菜单，UEFI启动模式只能引导Win10PE，故不显示引导菜单，直接进入Win10PE。</p>
+<p>问: <strong>Win10PE可以连接WIFI吗？</strong></p>
+<p>答: 一般是支持的。Win10PE默认自带了大部分网卡驱动，但还无法支持所有的网卡设备，您可自行下载“<span class="exturl" data-url="aHR0cHM6Ly9pdHNpbmdodWEtbXkuc2hhcmVwb2ludC5jb20vcGVyc29uYWwvYTE0X241OHVfY29tL19sYXlvdXRzLzE1L2Rvd25sb2FkLmFzcHg/c2hhcmU9RVFRRE9janFpeUJJdjhERkI3LVE0NEVCTS1xVUVod0dMTEtseUQtS3o4OHU1QSZleHQ9Ljd6">万能网卡插件<i class="fa fa-external-link-alt"></i></span>”使用。</p>
+<p>问 : <strong>为什么启动盘制作完成后只能看见EFI分区？</strong></p>
+<p>答: 启动盘制作失败，请重新制作。</p>
+<p>问: <strong>为什么制作U盘启动盘后显示两个盘？</strong></p>
+<p>答: 正常现象，Win10原生支持U盘分区，目前还没有办法完全隐藏U盘启动分区[EFI分区]。 问: <strong>为什么Win03PE蓝屏？</strong> 答: 多半是新机型，新机型直接进入Win10PE就可以了。</p>
+<p>问: <strong>为什么进不了PE(卡LOGO)？</strong></p>
+<p>答: 可能是硬盘的问题，可以用DOS版DiskGenius修复硬盘试试。</p>
+<p>问: <strong>为什么进入Win10PE提示缺少必要组件包？</strong></p>
+<p>答: iso文件不完整或U盘为扩容盘，请尝试重新下载iso文件并重新制作启动盘。</p>
+<p>问: <strong>FirPE内核是哪里来的？是修改别人的吗？</strong></p>
+<p>答: Win10PE采用<span class="exturl" data-url="aHR0cDovL3dpbjEwc2UuY3djb2Rlcy5uZXQvQ29tcHJlc3NlZC9pbmRleC5waHA=">Win10XPE<i class="fa fa-external-link-alt"></i></span>生成，Win03修改自<span class="exturl" data-url="aHR0cDovL2Jicy53dXlvdS5uZXQvZm9ydW0ucGhwP21vZD12aWV3dGhyZWFkJnRpZD0zNDk5NjU=">USBOS<i class="fa fa-external-link-alt"></i></span>内核。</p>
+<p>问: <strong>FirPE有没有后门/暗柱之类的？初始化配置有没有加密？</strong></p>
+<p>答: 系统保证无病毒无推广无流氓。如还不放心，可查看PECMD.ini配置文件（未加密）</p>
+<p>问: <strong>这款PE系统能不能直接安装在电脑上当主系统用？</strong></p>
+<p>答: 可以，不过不建议。FirPE只是一个预安装环境，永远无法替代20G左右的桌面系统。</p>
+<h2 id="更新日志"><a href="#更新日志" class="headerlink" title="更新日志"></a>更新日志</h2><p><span class="exturl" data-url="aHR0cHM6Ly9maXJwZS5jbi9wYWdlLTUyMQ==">FirPE 维护系统 更新日记<i class="fa fa-external-link-alt"></i></span></p>
+<h2 id="微PE工具箱-v2-2-官方正式版"><a href="#微PE工具箱-v2-2-官方正式版" class="headerlink" title="微PE工具箱 v2.2 官方正式版"></a>微PE工具箱 v2.2 官方正式版</h2><p>微PE工具箱，装机维护最得力的助手，最后救命稻草。化繁为简，小材大用，一键安装，极速启动。微PE工具箱，最好用的PE工具箱，没有之一。无任何广告推广，内核完整精简，性价比超高的第三方工具合集。</p>
+<p><img data-src="https://cdn.coolexe.com/IMG/2/WPE-01.png" alt="img" loading="lazy"></p>
+<p><img data-src="https://cdn.coolexe.com/IMG/2/WPE-02.png" alt="img" loading="lazy"></p>
+<p><img data-src="https://cdn.coolexe.com/IMG/2/WPE-03.png" alt="img" loading="lazy"></p>
+<h2 id="功能特点"><a href="#功能特点" class="headerlink" title="功能特点"></a>功能特点</h2><ul>
+<li><strong>全能的安装程序：</strong>微PE的智能EXE安装包使得WinPE能够灵活地安装到系统开机启动项、制作可启动U盘、移动硬盘、生成ISO镜像；全面并完美地支持各个操作系统，甚至是在最新的UEFI启动的系统；我们致力于让复杂的技术操作简单化，让维护效率迅速提升。安装PE从此变得特别简单。</li>
+<li><strong>完整并精简的内核：</strong>为了创造一个功能完整、体积更小的Windows子系统，微PE做出了推进行业发展的努力；我们花了巨大的精力研究Win系统内核，精简掉了很多在WinPE维护操作中不必要的文件，并保证了功能完整不缺失，每一个MB都不浪费；我们的极致追求让一个采用Win8系统内核的WinPE在保证稳定性的前提下做到了业界最小。</li>
+<li><strong>性价比超高的第三方工具合集：</strong>为了让我们在PE中能够完成更多的维护操作，我们甄选了一大批备受好评的维护型工具软件，这些软件均来自经验丰富的开发者，每个都很好用；同时我们对全部软件都进行了精简和压缩适配，在保证功能完整的情况下，减小了存储和传输的成本；我们的这些努力使微PE成为唯一一个不但内核小，而且工具全的PE工具箱，堪称精华中的精华。</li>
+</ul>
+<h2 id="微PE工具箱-v2-1-更新日志-（2021-10-08）"><a href="#微PE工具箱-v2-1-更新日志-（2021-10-08）" class="headerlink" title="微PE工具箱 v2.1 更新日志 （2021-10-08）"></a>微PE工具箱 v2.1 更新日志 （2021-10-08）</h2><p>新版本更换全新内核：</p>
+<ol>
+<li>该内核版本为10.19043.1165 ，来自8月更新的21H1。</li>
+<li>该内核支持更多新机型的启动。</li>
+<li>该内核已打VMD支持11代机器认硬盘。</li>
+<li>该内核已打大量笔记本触控板所需驱动。</li>
+<li>该内核已直接支持绕过TPM2.0安装原版windows11镜像。</li>
+<li>同时提供64和32位PE内核，64位内核带工具218MB，32位带工具177MB，这应该是最后一次的32内核PE。</li>
+</ol>
+<p>软件部分更新：</p>
+<ol>
+<li>更新分区助手到9.1版本。</li>
+<li>更新Diskgenius到5.4.2.1239版本。</li>
+<li>更新Dism++到10.1.1002.10版本。</li>
+<li>更新WinNTSetup到64位5.0版本，32位为4.2.5。</li>
+<li>更新CGI工具的Wimlib版本 到1.13.4版本。</li>
+<li>更新CPUZ到1.97版本。</li>
+<li>更新7ZIP到21.03 Beta版本。</li>
+<li>全新制作Ghost备份还原小工具，支持GPT分区表。</li>
+</ol>
+<p>安装包部分更新：</p>
+<ol>
+<li>放开被识别为移动硬盘的U盘，以“U盘”安装方式格式化安装。</li>
+<li>提升在WIN10、WIN11下制作U盘启动的成功率。</li>
+</ol>
+<p>感谢您对微PE工具箱的支持！</p>
+<p>全新内核，可多多尝试，意见和建议可反馈至官方邮箱：<span class="exturl" data-url="bWFpbHRvOiYjMTA5OyYjeDYxOyYjMTA1OyYjeDZjOyYjNjQ7JiMxMTk7JiN4NjU7JiN4NzA7JiMxMDE7JiM0NjsmIzk5OyYjeDZmOyYjMTA5OyYjeDJlOyYjeDYzOyYjMTEwOw==">&#109;&#x61;&#105;&#x6c;&#64;&#119;&#x65;&#x70;&#101;&#46;&#99;&#x6f;&#109;&#x2e;&#x63;&#110;<i class="fa fa-external-link-alt"></i></span></p>
+<p><span class="exturl" data-url="aHR0cDovL3d3dy53ZXBlLmNvbS5jbi91Ym9vay8=">微PE使用说明书<i class="fa fa-external-link-alt"></i></span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly93d3cud2VwZS5jb20uY24v">微PE工具箱官网<i class="fa fa-external-link-alt"></i></span></p>
+<h2 id="优启时代系统维护盘-2021-07-22"><a href="#优启时代系统维护盘-2021-07-22" class="headerlink" title="优启时代系统维护盘 2021.07.22"></a>优启时代系统维护盘 2021.07.22</h2><p>本版在十二周年纪念版的基础上衍伸，可视为十二周年纪念版的增强版。主要增加一个独特别致的Windows 2003 PE特供版，体积很小但含丰富磁盘驱动，实测能适应很多机型。本版只提供UD三分区一键安装版，安装时建议选择“全新制作”模式。如果有空闲，本版可能会进行阶段性拓展，欢迎关注。</p>
+<p><img data-src="https://cdn.coolexe.com/IMG/2/UQi-USBsys-01.jpg" alt="img" loading="lazy"></p>
+<p><img data-src="https://cdn.coolexe.com/IMG/2/UQi-USBsys-02.jpg" alt="img" loading="lazy"></p>
+<p><img data-src="https://cdn.coolexe.com/IMG/2/UQi-USBsys-03.jpg" alt="img" loading="lazy"></p>
+<h2 id="本维护盘主要包含以下组件"><a href="#本维护盘主要包含以下组件" class="headerlink" title="本维护盘主要包含以下组件"></a>本维护盘主要包含以下组件</h2><ul>
+<li>精心制作的Windows 10 PE x64 至臻版，含声网</li>
+<li>小巧简约的Windows 8 PE x86 迷你版，快速高效</li>
+<li>独特别致的Windows 2003 PE x86 特供版，小而精</li>
+<li>经典DOS类维护工具集和GRUB2管理器，强大实用</li>
+</ul>
+<p>三分区模式（UEFI启动无引导界面直接进入Win10PEx64）</p>
+<p>所有维护工具均内置，款款精挑细选，启动WinPE后可拔优盘</p>
+<p>使用前请校验文件信息是否正确，以防他人恶意放毒</p>
+<p>安装前请务必备份优盘数据，以免丢失数据造成损失</p>
+<p><span class="exturl" data-url="aHR0cDovL3d3dy51cWkubWUv">优启时代官网<i class="fa fa-external-link-alt"></i></span></p>
+<h2 id="优启通-EasyU-v3-7-2021-0915-VIP版"><a href="#优启通-EasyU-v3-7-2021-0915-VIP版" class="headerlink" title="优启通 EasyU v3.7.2021.0915 VIP版"></a>优启通 EasyU v3.7.2021.0915 VIP版</h2><p>优启通是IT天空出品的一款U盘启动制作工具，提供的PE系统方便好用，是唯一一个官方纯净并且还维护的系统。软件不仅附带Win10 PE,还附带Win2003 PE系统，兼容性高。</p>
+<p><strong>概述：</strong>优启通（EasyU，简称EU）是IT天空精心打造的一款系统预安装环境（PE），它具有简约、易操作等特点，使用起来十分人性化。以U盘作为使用载体，空间更为充分，携带更为方便。同时整合各种装机必备工具，并结合IT天空数款自研软件，有效提高系统安装效率。新优启通将为大家带来全新的用户体验！</p>
+<p><strong>定位：</strong>优启通定位于一线装机技术员、系统工程师和系统维护人员，在广泛兼容、稳定耐用、快速启动、体积小巧等多方面找到一位最为合适的平衡点。优启通的打造过程结合了大量一线工作者的经验与需求，并经过了严格的测试，尽一切可能贴近使用者的实际需求，倾力将优启通打造为一线装机工程师们的利刃。</p>
+<p><strong>硬件支持：</strong>采用经过优化的U盘三分区方案，同时支持BIOS（Legacy）与UEFI两种启动模式。结合IT天空PE方面一贯的“双PE分治”理念，两个PE分别接管不同的硬件范围，可在支持主流硬件的基础上，同时兼容以往多数旧硬件。U盘PE所在分区于系统下自动隐藏，PE区与数据区分别独立，便于使用者对数据的各项操作。</p>
+<p><img data-src="https://cdn.coolexe.com/IMG/2/EasyU-01.png" alt="img" loading="lazy"></p>
+<p><img data-src="https://cdn.coolexe.com/IMG/2/EasyU-02.png" alt="img" loading="lazy"></p>
+<p><img data-src="https://cdn.coolexe.com/IMG/2/EasyU-03.png" alt="img" loading="lazy"></p>
+<p><img data-src="https://cdn.coolexe.com/IMG/2/EasyU-04.png" alt="img" loading="lazy"></p>
+<h2 id="功能特点-1"><a href="#功能特点-1" class="headerlink" title="功能特点"></a>功能特点</h2><ul>
+<li><strong>强大的硬件支持：</strong>UEFI与BIOS两种启动模式完美结合，用不同的PE，支持不同的硬件范围，兼容性更全面。</li>
+<li><strong>易操作的UI界面：</strong>告别繁琐，一键式制作方式，功能强大，满足使用者多种实际需求，快速装机。</li>
+<li><strong>结合多款自研软件：</strong>结合多款自研软件，提高装机效率，智能识别相应的系统，添加自定义软件方便快捷。</li>
+<li><strong>双区分别管理：</strong>PE区与数据区分别独立，数据操作更方便快捷，U盘PE分区于系统下自动隐藏，严防病毒入侵。</li>
+<li><strong>美观简洁的PE界面：</strong>为简化桌面只放置常用软件，避免过于凌乱，美化桌面背景图标，更加漂亮简洁。</li>
+</ul>
+<h2 id="版本区别"><a href="#版本区别" class="headerlink" title="版本区别"></a>版本区别</h2><ul>
+<li><strong>VIP版：</strong> 界面带(VIP)标识，优启通VIP版仅可使用EXLOAD(扩展管理器)功能，其它跟纯净版一样。</li>
+<li><strong>普通版：</strong>早期在PE映像里捆绑装机联盟推广软件及改主页网站导航，无网络组件不支持音视频播放。</li>
+</ul>
+<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><p><img data-src="https://cdn.coolexe.com/IMG/2/EasyU-05.png" alt="img" loading="lazy"></p>
+<h2 id="USBOS-V3-0-2021-07-10-超级PE启动维护工具-标准版-amp-增强版"><a href="#USBOS-V3-0-2021-07-10-超级PE启动维护工具-标准版-amp-增强版" class="headerlink" title="USBOS V3.0.2021.07.10 超级PE启动维护工具 标准版&amp;增强版"></a>USBOS V3.0.2021.07.10 超级PE启动维护工具 标准版&amp;增强版</h2><p>超级PE维护工具箱 USBOS V3.0 功能超级强大，兼容性可以达到99%以上，留1% 谦虚一点说明还有进步的空间，USBOS PE 维护工具箱是 By chiannet 所制作的一款专业解决计算机问题的PE工具，USBOS 的作者基本每天都在更新修复一些BUG，良心的是没有把这款PE用作任何的商业用途，也就是没有任何的广告。</p>
+<p><img data-src="https://cdn.coolexe.com/IMG/2/USBOS-01.png" alt="img" loading="lazy"></p>
+<p><img data-src="https://cdn.coolexe.com/IMG/2/USBOS-02.png" alt="img" loading="lazy"></p>
+<h2 id="功能特点-2"><a href="#功能特点-2" class="headerlink" title="功能特点"></a>功能特点</h2><ul>
+<li><p>支持各式部署：纯UD、udm、UD二分区、UD三分区、U+高隐、U+深隐、U+不隐、B+、直接安装到本地硬盘、量产、刻盘等等</p>
+</li>
+<li><p>内置软件总是最新、最潮、最强、也覆盖广泛</p>
+</li>
+<li><p>利用自带安装工具安装USBOS到移动设备时，因采用独家编制的G4D菜单，在发生UD MBR损毁事故后，具备一定的自我修复能力</p>
+</li>
+<li><p>支持安装到Legacy（Win2K-Win10）或UEFI（Win7-Win10）启动本地硬盘，若本地Windows 是Legacy模式启动，USBOS可选带密码保护功能</p>
+</li>
+<li><p>原则上建议使用WinntSetup来安装原版各Windows，可不区分PE版本，不区分Windows版本，实现无差别对待</p>
+<h2 id="U盘魔术师USM-v6特别版-2021-03-16"><a href="#U盘魔术师USM-v6特别版-2021-03-16" class="headerlink" title="U盘魔术师USM v6特别版 2021.03.16"></a>U盘魔术师USM v6特别版 2021.03.16</h2><p>U盘魔术师，简称USM，由系统总裁网站开发研制，是一款面对移动设备，光盘设备，本机系统的PE系统的制作工具，界面友好、简单易用、功能全面、自定义强，是装机人员必备工具。</p>
+<p><img data-src="https://cdn.coolexe.com/IMG/2/USM-01.png" alt="img" loading="lazy"></p>
+<p><img data-src="https://cdn.coolexe.com/IMG/2/USM-02.png" alt="img" loading="lazy"></p>
+<p><img data-src="https://cdn.coolexe.com/IMG/2/USM-03.png" alt="img" loading="lazy"></p>
+<p><img data-src="https://cdn.coolexe.com/IMG/2/USM-04.png" alt="img" loading="lazy"></p>
+<h2 id="功能特点-3"><a href="#功能特点-3" class="headerlink" title="功能特点"></a>功能特点</h2><ul>
+<li>支持多元化安装模式。</li>
+<li>含有两套稳定而全面的SRS驱动，让你兼容更多机器的运行。</li>
+<li>支持UEFI环境的安装。</li>
+<li>无绑定任何推广插件及主页，没有任何“流氓”行为 。</li>
+<li>接受定制版本，为您量身打造属于你自己的PE。</li>
+<li>任何PE随意DIY，预留的有DIY接口。</li>
+</ul>
+<h2 id="版本介绍"><a href="#版本介绍" class="headerlink" title="版本介绍"></a>版本介绍</h2><p>U盘魔术师PE为满足广大装机人员的需求特推出 V3全能版 V3维护版 V5全能版 V5维护版 以及 V6特别版</p>
+<p>v6系列是v3和v5全系列的组合，并添加了Win7pex86和Win7pex64维护版 这个版本功能比较齐全可以在PE里面看电视上网等</p>
+</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>Buy me a coffee</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/20201122213021.png" alt="Lining Wei 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/434235F3-7A93-4EA4-A7B6-4F6D977F1A89.png" alt="Lining Wei 支付宝">
+        <span>支付宝</span>
+      </div>
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/bitcoin.png" alt="Lining Wei 比特币">
+        <span>比特币</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文博主： </strong>Lining Wei
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://weilining.github.io/292.html" title="WinPE">https://weilining.github.io/292.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC96aC1DTg=="><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/291.html" rel="prev" title="从零开始教你利用U盘重装系统">
+                  <i class="fa fa-chevron-left"></i> 从零开始教你利用U盘重装系统
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/293.html" rel="next" title="mac 安装 pip SyntaxError: invalid syntax">
+                  mac 安装 pip SyntaxError: invalid syntax <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments" id="valine-comments"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 2015 – 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Ln</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">439k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">6:39</span>
+  </span>
+</div>
+
+<div><canvas id="snow" style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:99999;pointer-events:none"></canvas></div>
+
+
+<script id="click-show-text" src="/js/click-show-text.js" data-mobile="false" data-text="富强,民主,文明,和谐,自由,平等,公正,法治,爱国,敬业,诚信,友善" data-fontsize="20px" data-random="false" async></script>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js" integrity="sha256-EdPgYcPk/IIrw7FYeuJQexva49pVRZNmt3LculEr7zM=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/comments.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/utils.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/motion.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/next-boot.min.js"></script>
+
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/third-party/search/local-search.min.js"></script>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/third-party/pace.min.js"></script>
+
+  
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.2.0/dist/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"ignores":null,"url":"https://weilining.github.io/292.html"}</script>
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/third-party/quicklink.min.js"></script>
+
+
+<script class="next-config" data-name="valine" type="application/json">{"enable":true,"appId":"Bu6sP4depeiGP22PIFqz0SmJ-MdYXbMMI","appKey":"jYGDeeOBkTqvrUJDEmqj83q7","serverURLs":"https://bu6sp4de.api.lncldglobal.com","placeholder":"Just go go","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"lang":null,"visitor":true,"comment_count":true,"recordIP":false,"enableQQ":false,"requiredFields":[],"el":"#valine-comments","path":"/292.html"}</script>
+<script>
+document.addEventListener('page:loaded', () => {
+  NexT.utils.loadComments(CONFIG.valine.el)
+    .then(() => NexT.utils.getScript(
+      'https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js',
+      { condition: window.Valine }
+    ))
+    .then(() => {
+      new Valine(CONFIG.valine);
+    });
+});
+</script>
+
+
+
+
+</body>
+</html>
