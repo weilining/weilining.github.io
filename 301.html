@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.jsdelivr.net/gh/weilining/img@main/img/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.jsdelivr.net/gh/weilining/img@main/img/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://cdn.jsdelivr.net/gh/weilining/img@main/img/favicon-16x16-next.png">
+  <link rel="mask-icon" href="https://cdn.jsdelivr.net/gh/weilining/img@main/img/logo.svg" color="#222">
+  <meta name="google-site-verification" content="OjGymv9uAqWYDsr-E-j6DG2k1_mPXsDQF77kgEK0nz8">
+  <meta name="msvalidate.01" content="5C84BC77E02800759CE29C4ACCE487BD">
+  <meta name="yandex-verification" content="06c62a93328de5da">
+  <meta name="baidu-site-verification" content="code-wFDrn4lvkD">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/blue/pace-theme-bounce.css">
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"weilining.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.8.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/config.min.js"></script>
+<meta name="description" content="默认">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Windows系统安装原理那点事">
+<meta property="og:url" content="https://weilining.github.io/301.html">
+<meta property="og:site_name" content="Ln&#39;s Blog">
+<meta property="og:description" content="默认">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/3711387-58b0cb7c2cd7bb31.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/728/format/webp">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/3711387-10e3c2462045ad71.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/728/format/webp">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/3711387-6937d5e8a85424b0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1066/format/webp">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/3711387-eb11fbe32ec268c4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/728/format/webp">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/3711387-5eb3ead338af5e83.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/713/format/webp">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/3711387-33f800e9151948d3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/570/format/webp">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/3711387-8eafbc566c074f85.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/728/format/webp">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/3711387-9b1d79330239d828.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/556/format/webp">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/3711387-cb171b68c76df1f0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1167/format/webp">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/3711387-689ff75380eb6dac.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1200/format/webp">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/3711387-97d5412b1fd73aea.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/875/format/webp">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/3711387-b7577f40798323d0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/875/format/webp">
+<meta property="article:published_time" content="2021-10-22T18:52:21.000Z">
+<meta property="article:modified_time" content="2021-10-22T18:52:21.000Z">
+<meta property="article:author" content="Lining Wei">
+<meta property="article:tag" content="ACM,开发者,程序猿,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,互联网一切折腾">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/3711387-58b0cb7c2cd7bb31.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/728/format/webp">
+
+
+<link rel="canonical" href="https://weilining.github.io/301.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://weilining.github.io/301.html","path":"301.html","title":"Windows系统安装原理那点事"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Windows系统安装原理那点事 | Ln's Blog</title>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="Ln's Blog" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Ln's Blog</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">有朋自远方来，不亦乐乎</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-bell fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-top"><a href="/top/" rel="section"><i class="fa fa-signal fa-fw"></i>热榜</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-friends"><a href="/friends/" rel="section"><i class="fa fa-globe-asia fa-fw"></i>朋友们</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E5%AE%89%E8%A3%85%E9%95%9C%E5%83%8F%EF%BC%9AISO%EF%BC%8CWIM%E4%B8%8EESD"><span class="nav-number">1.</span> <span class="nav-text">一、安装镜像：ISO，WIM与ESD</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%EF%BC%88%E4%B8%80%EF%BC%89%E3%80%81ISO%E9%95%9C%E5%83%8F"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">（一）、ISO镜像</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%EF%BC%88%E4%BA%8C%EF%BC%89%E3%80%81WIM%E9%95%9C%E5%83%8F"><span class="nav-number">1.0.0.2.</span> <span class="nav-text">（二）、WIM镜像</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%EF%BC%88%E4%B8%89%EF%BC%89%E3%80%81ESD%E9%95%9C%E5%83%8F"><span class="nav-number">1.0.0.3.</span> <span class="nav-text">（三）、ESD镜像</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C%E3%80%81WindowsRE%EF%BC%8CWindowsPE%E4%B8%8EPE%E5%B7%A5%E5%85%B7%E7%AE%B1"><span class="nav-number">2.</span> <span class="nav-text">二、WindowsRE，WindowsPE与PE工具箱</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85"><span class="nav-number">3.</span> <span class="nav-text">三、系统安装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E7%B3%BB%E7%BB%9F%E5%BC%95%E5%AF%BC%E4%B8%8E%E5%90%AF%E5%8A%A8%E5%88%86%E5%8C%BA%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%86%E5%8C%BA"><span class="nav-number">4.</span> <span class="nav-text">四、系统引导与启动分区、系统分区</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Lining Wei"
+      src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/icon.gif">
+  <p class="site-author-name" itemprop="name">Lining Wei</p>
+  <div class="site-description" itemprop="description">算法、技术</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">304</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">35</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="cc-license site-overview-item animated" itemprop="license">
+    <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC96aC1DTg=="><img src="https://cdn.jsdelivr.net/npm/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></span>
+  </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://weilining.github.io/301.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/weilining/img@main/img/icon.gif">
+      <meta itemprop="name" content="Lining Wei">
+      <meta itemprop="description" content="算法、技术">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ln's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Windows系统安装原理那点事<span class="exturl post-edit-link" data-url="aHR0cHM6Ly9naXRodWIuY29tL3dlaWxpbmluZy9ibG9nL2VkaXQvbWFpbi9zb3VyY2UvX3Bvc3RzLzMwMS5tZA==" title="编辑"><i class="fa fa-pen-nib"></i></span>
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-10-23 02:52:21" itemprop="dateCreated datePublished" datetime="2021-10-23T02:52:21+08:00">2021-10-23</time>
+    </span>
+
+  
+    <span id="/301.html" class="post-meta-item leancloud_visitors" data-flag-title="Windows系统安装原理那点事" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>3.2k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>3 分钟</span>
+    </span>
+</div>
+
+            <div class="post-description">默认</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>开头先放上我的两盘现成的菜：</p>
+<blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly93d3cuamlhbnNodS5jb20vcC84YTNkOWRmOGVkODQ=">链接，点击访问：安装纯净Windows系统（一）：U盘安装<i class="fa fa-external-link-alt"></i></span><br><span class="exturl" data-url="aHR0cHM6Ly93d3cuamlhbnNodS5jb20vcC8xZjNmOGIyN2NkZDA=">链接，点击访问：安装纯净Windows系统（二）：硬盘安装<i class="fa fa-external-link-alt"></i></span></p>
+</blockquote>
+<p>这两篇文章讲了安装系统的一些操作，所以这篇文章我打算详解安装操作系统的一些东西。</p>
+<h1 id="一、安装镜像：ISO，WIM与ESD"><a href="#一、安装镜像：ISO，WIM与ESD" class="headerlink" title="一、安装镜像：ISO，WIM与ESD"></a>一、安装镜像：ISO，WIM与ESD</h1><blockquote>
+<p><strong>.iso</strong>是电脑上<span class="exturl" data-url="aHR0cHM6Ly9saW5rLmppYW5zaHUuY29tLz90PWh0dHBzOi8vYmFpa2UuYmFpZHUuY29tL2l0ZW0vJUU1JTg1JTg5JUU3JTlCJTk4JUU5JTk1JTlDJUU1JTgzJThG">光盘镜像<i class="fa fa-external-link-alt"></i></span>（CD Mirror）的存储格式之一，因为其是根据ISO-9660有关<span class="exturl" data-url="aHR0cHM6Ly9saW5rLmppYW5zaHUuY29tLz90PWh0dHBzOi8vYmFpa2UuYmFpZHUuY29tL2l0ZW0vQ0QtUk9N">CD-ROM<i class="fa fa-external-link-alt"></i></span>文件系统标准存储的文件，所以通常在电脑中以后缀.iso命名，俗称iso镜像文件。它形式上只有一个文件，可以真实反映光盘的内容，可由刻录软件或者<span class="exturl" data-url="aHR0cHM6Ly9saW5rLmppYW5zaHUuY29tLz90PWh0dHBzOi8vYmFpa2UuYmFpZHUuY29tL2l0ZW0vJUU5JTk1JTlDJUU1JTgzJThG">镜像<i class="fa fa-external-link-alt"></i></span>文件制作工具创建。<br>——<span class="exturl" data-url="aHR0cHM6Ly9saW5rLmppYW5zaHUuY29tLz90PWh0dHBzOi8vYmFpa2UuYmFpZHUuY29tL2l0ZW0vSVNPJUU5JTk1JTlDJUU1JTgzJThGJUU2JTk2JTg3JUU0JUJCJUI2">百度百科<i class="fa fa-external-link-alt"></i></span></p>
+<p><strong>Windows 映像文件格式（WIM）</strong>是一个基于<span class="exturl" data-url="aHR0cHM6Ly9saW5rLmppYW5zaHUuY29tLz90PWh0dHBzOi8vemgud2lraXBlZGlhLm9yZy93aWtpLyVFNiU5NiU4NyVFNCVCQiVCNg==">文件<i class="fa fa-external-link-alt"></i></span>的<span class="exturl" data-url="aHR0cHM6Ly9saW5rLmppYW5zaHUuY29tLz90PWh0dHBzOi8vemgud2lraXBlZGlhLm9yZy93aWtpLyVFNyVBMyU4MSVFNyU5QiU5OCVFNiU5OCVBMCVFNSU4MyU4Rg==">磁盘映像<i class="fa fa-external-link-alt"></i></span><span class="exturl" data-url="aHR0cHM6Ly9saW5rLmppYW5zaHUuY29tLz90PWh0dHBzOi8vemgud2lraXBlZGlhLm9yZy93aWtpLyVFNiVBMCVCQyVFNSVCQyU4Rg==">格式<i class="fa fa-external-link-alt"></i></span>。它由<span class="exturl" data-url="aHR0cHM6Ly9saW5rLmppYW5zaHUuY29tLz90PWh0dHBzOi8vemgud2lraXBlZGlhLm9yZy93aWtpLyVFNSVCRSVBRSVFOCVCRCVBRiVFNSU4NSVBQyVFNSU4RiVCOA==">微软公司<i class="fa fa-external-link-alt"></i></span>设计且发布于<span class="exturl" data-url="aHR0cHM6Ly9saW5rLmppYW5zaHUuY29tLz90PWh0dHBzOi8vemgud2lraXBlZGlhLm9yZy93aWtpL1dpbmRvd3NfVmlzdGE=">Windows Vista<i class="fa fa-external-link-alt"></i></span>及其之后的Windows<span class="exturl" data-url="aHR0cHM6Ly9saW5rLmppYW5zaHUuY29tLz90PWh0dHBzOi8vemgud2lraXBlZGlhLm9yZy93aWtpLyVFNiU5MyU4RCVFNCVCRCU5QyVFNyVCMyVCQiVFNyVCQiU5Rg==">操作系统<i class="fa fa-external-link-alt"></i></span>中，用来支持他们的一部分标准安装过程。<br>——<span class="exturl" data-url="aHR0cHM6Ly9saW5rLmppYW5zaHUuY29tLz90PWh0dHBzOi8vemgud2lraXBlZGlhLm9yZy93aWtpL1dpbmRvd3MlRTklOTUlOUMlRTUlODMlOEYlRTYlOTYlODclRTQlQkIlQjYlRTYlQTAlQkMlRTUlQkMlOEY=">维基百科<i class="fa fa-external-link-alt"></i></span></p>
+<p><strong>ESD，极限压缩镜像</strong>的缩写，是目前微软推出的压缩率最高的一种文件，一般用于系统大版本更新的推送。<br>——本人总结</p>
+</blockquote>
+<h4 id="（一）、ISO镜像"><a href="#（一）、ISO镜像" class="headerlink" title="（一）、ISO镜像"></a>（一）、ISO镜像</h4><p>ISO镜像是通用的打包镜像，通过它我们可以制作启动U盘或者刻录启动光盘。除了Windows系统以外，诸如<span class="exturl" data-url="aHR0cHM6Ly9saW5rLmppYW5zaHUuY29tLz90PWh0dHA6Ly93d3cudWJ1bnR1LmNvbQ==">Ubuntu<i class="fa fa-external-link-alt"></i></span>等<span class="exturl" data-url="aHR0cHM6Ly9saW5rLmppYW5zaHUuY29tLz90PWh0dHA6Ly93d3cubGludXguY29t">Linux<i class="fa fa-external-link-alt"></i></span>发行版也是用这种格式来进行打包的。这里主要讲解Windows系统安装镜像的目录结构。</p>
+<blockquote>
+<p>如何挂载一个ISO镜像：<span class="exturl" data-url="aHR0cHM6Ly9saW5rLmppYW5zaHUuY29tLz90PWh0dHBzOi8vemgud2lraWhvdy5jb20vJUU2JThDJTgyJUU4JUJEJUJESVNPJUU1JTg1JTg5JUU3JTlCJTk4JUU2JTk4JUEwJUU1JTgzJThGJUU2JTk2JTg3JUU0JUJCJUI2">点击访问（外链）<i class="fa fa-external-link-alt"></i></span></p>
+</blockquote>
+<p>挂载ISO镜像，或者使用如<span class="exturl" data-url="aHR0cHM6Ly9saW5rLmppYW5zaHUuY29tLz90PWh0dHA6Ly93d3cuNy16aXAub3JnLw==">7zip<i class="fa fa-external-link-alt"></i></span>那样的压缩软件打开ISO镜像就可以查看ISO的目录。这里以一个Windows 10 1709的镜像为例：</p>
+<p><img data-src="https://upload-images.jianshu.io/upload_images/3711387-58b0cb7c2cd7bb31.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/728/format/webp" alt="img" loading="lazy"></p>
+<p>ISO目录</p>
+<blockquote>
+<p><strong>boot：</strong>BIOS启动需要的文件<br><strong>EFI：</strong>UEFI启动所需文件<br><strong>sources：</strong>Windows安装ESD镜像或者WIM镜像所在文件夹，同时包含了Windows预安装环境（WinRE）以及从一个Windows系统启动安装所需的文件<br><strong>support：</strong>一些帮助信息，部分镜像含有文件转移工具<br><strong>autorun.inf：</strong>自动播放文件，用于挂载镜像后自动启动安装与个性化盘符图标<br><strong>bootmgr：</strong>BIOS启动的引导文件<br><strong>bootmgr.efi：</strong>UEFI启动的引导文<br><strong>setup.exe：</strong>用于启动安装程序的程序文件</p>
+</blockquote>
+<p>sources下面有两个很重要的文件，一个是<strong>boot.wim</strong>，这个文件是官方镜像从U盘或者光盘启动安装的关键；还有一个是<strong>install.esd或者install.wim</strong>，这个文件包含了Windows系统的完整内容。</p>
+<p><img data-src="https://upload-images.jianshu.io/upload_images/3711387-10e3c2462045ad71.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/728/format/webp" alt="img" loading="lazy"></p>
+<p>文件</p>
+<p>在PE工具箱下手动安装系统就需要使用<strong>install.wim / install.esd</strong>这个文件。</p>
+<h4 id="（二）、WIM镜像"><a href="#（二）、WIM镜像" class="headerlink" title="（二）、WIM镜像"></a>（二）、WIM镜像</h4><p><img data-src="https://upload-images.jianshu.io/upload_images/3711387-6937d5e8a85424b0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1066/format/webp" alt="img" loading="lazy"></p>
+<p>WIM镜像</p>
+<p>使用7zip打开该镜像，如图：</p>
+<p><img data-src="https://upload-images.jianshu.io/upload_images/3711387-eb11fbe32ec268c4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/728/format/webp" alt="img" loading="lazy"></p>
+<p>WIM目录</p>
+<p>INSTALL.WIM里面包含了多个目录与一个XML文件，每一个目录即使一个操作系统，不同的目录代表着不同版本的系统（家庭版、专业版等）。通过压缩软件，我们看不到系统的版本，所以，我们要使用<span class="exturl" data-url="aHR0cHM6Ly9saW5rLmppYW5zaHUuY29tLz90PWh0dHA6Ly93d3cuY2h1eXUubWU=">DISM++<i class="fa fa-external-link-alt"></i></span>来解决问题。</p>
+<p><img data-src="https://upload-images.jianshu.io/upload_images/3711387-5eb3ead338af5e83.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/713/format/webp" alt="img" loading="lazy"></p>
+<p>打开</p>
+<p>按照提示，打开install.wim或者install.esd文件，</p>
+<p><img data-src="https://upload-images.jianshu.io/upload_images/3711387-33f800e9151948d3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/570/format/webp" alt="img" loading="lazy"></p>
+<p>文件</p>
+<p>这样就可以看到详细信息了。使用这些镜像安装系统请参考：<span class="exturl" data-url="aHR0cHM6Ly9saW5rLmppYW5zaHUuY29tLz90PWh0dHBzOi8vd3d3LmNodXl1Lm1lL3poLUhhbnMvRG9jdW1lbnQuaHRtbD9maWxlPUJlc3QvJUU0JUJEJUJGJUU3JTk0JUE4RGlzbSsrJUU1JUFFJTg5JUU4JUEzJTg1JUU3JUIzJUJCJUU3JUJCJTlGLm1k">DISM++官方文档<i class="fa fa-external-link-alt"></i></span></p>
+<h4 id="（三）、ESD镜像"><a href="#（三）、ESD镜像" class="headerlink" title="（三）、ESD镜像"></a>（三）、ESD镜像</h4><p>一般情况下，由<span class="exturl" data-url="aHR0cHM6Ly9saW5rLmppYW5zaHUuY29tLz90PWh0dHBzOi8vd3d3Lm1pY3Jvc29mdC5jb20vemgtY24vc29mdHdhcmUtZG93bmxvYWQvd2luZG93czEw">媒体创建工具<i class="fa fa-external-link-alt"></i></span>获取的初始镜像其实是一个完整的ESD镜像，然后通过解压与转换把ESD镜像写入U盘或者生成ISO镜像。通过媒体创建工具生成的ISO镜像的sources目录下会存在一个<strong>install.esd</strong>而不是install.wim，而由于esd格式压缩率最高，因此同样的内容下ESD镜像使用的空间也最少。使用DISM++可以把ESD镜像转换成ISO镜像，但是，DISM++会把install.esd转换成<strong>install.wim</strong>文件。</p>
+<p><img data-src="https://upload-images.jianshu.io/upload_images/3711387-8eafbc566c074f85.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/728/format/webp" alt="img" loading="lazy"></p>
+<p>ESD目录</p>
+<p>ESD目录接近于WIM，但是完整版ESD包含了一个ISO所有的信息，所以部分目录下（一般是1,2,3）包含的其实不是Windows系统，而是其它系统文件。install.esd包含的内容与install.wim是一样的。</p>
+<h1 id="二、WindowsRE，WindowsPE与PE工具箱"><a href="#二、WindowsRE，WindowsPE与PE工具箱" class="headerlink" title="二、WindowsRE，WindowsPE与PE工具箱"></a>二、WindowsRE，WindowsPE与PE工具箱</h1><blockquote>
+<p>WindowsRE：Windows RE的全称为Windows Recovery Environment[1]，即Windows 恢复环境。Windows RE实质上是提供了一些恢复工具的<span class="exturl" data-url="aHR0cHM6Ly9saW5rLmppYW5zaHUuY29tLz90PWh0dHBzOi8vYmFpa2UuYmFpZHUuY29tL2l0ZW0vV2luZG93cyUyMFBF">Windows PE<i class="fa fa-external-link-alt"></i></span>。Windows RE是<span class="exturl" data-url="aHR0cHM6Ly9saW5rLmppYW5zaHUuY29tLz90PWh0dHBzOi8vYmFpa2UuYmFpZHUuY29tL2l0ZW0vV2luZG93cyUyMFZpc3Rh">Windows Vista<i class="fa fa-external-link-alt"></i></span>增加的新特性。此外，用<span class="exturl" data-url="aHR0cHM6Ly9saW5rLmppYW5zaHUuY29tLz90PWh0dHBzOi8vYmFpa2UuYmFpZHUuY29tL2l0ZW0vJUU1JUJFJUFFJUU4JUJEJUFG">微软<i class="fa fa-external-link-alt"></i></span>提供的DaRT和Windows中的“创建系统修复光盘”也可以创建Windows RE可引导恢复光盘。<br>——<span class="exturl" data-url="aHR0cHM6Ly9saW5rLmppYW5zaHUuY29tLz90PWh0dHBzOi8vYmFpa2UuYmFpZHUuY29tL2l0ZW0vV2luZG93cyUyMFJFLzYyMzE3MzE/ZnI9YWxhZGRpbg==">百度百科<i class="fa fa-external-link-alt"></i></span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9saW5rLmppYW5zaHUuY29tLz90PWh0dHBzOi8vYmFpa2UuYmFpZHUuY29tL2l0ZW0vV2luZG93cw==">Windows<i class="fa fa-external-link-alt"></i></span>Preinstallation Environment（Windows PE），Windows预安装环境，是带有有限服务的最小<span class="exturl" data-url="aHR0cHM6Ly9saW5rLmppYW5zaHUuY29tLz90PWh0dHBzOi8vYmFpa2UuYmFpZHUuY29tL2l0ZW0vV2luMzI=">Win32<i class="fa fa-external-link-alt"></i></span>子系统，基于以保护模式运行的<span class="exturl" data-url="aHR0cHM6Ly9saW5rLmppYW5zaHUuY29tLz90PWh0dHBzOi8vYmFpa2UuYmFpZHUuY29tL2l0ZW0vV2luZG93cyUyMFhQJTIwUHJvZmVzc2lvbmFs">Windows XP Professional<i class="fa fa-external-link-alt"></i></span>及以上内核。它包括运行Windows安装程序及脚本、连接网络共享、自动化基本过程以及执行硬件验证所需的最小功能。<br>——<span class="exturl" data-url="aHR0cHM6Ly9saW5rLmppYW5zaHUuY29tLz90PWh0dHBzOi8vYmFpa2UuYmFpZHUuY29tL2l0ZW0vV2luZG93cyUyMFBFLzE0MDUzMD9mcj1hbGFkZGluJmZyb21pZD01NDY2MDkwJmZyb210aXRsZT13aW5kb3dzUEU=">百度百科<i class="fa fa-external-link-alt"></i></span></p>
+<p>PE工具箱是基于<span class="exturl" data-url="aHR0cHM6Ly9saW5rLmppYW5zaHUuY29tLz90PWh0dHBzOi8vbXNkbi5taWNyb3NvZnQuY29tL3poLWNuL2xpYnJhcnkvZG42MTM4NjAuYXNweA==">微软官方提供的WindowsPE镜像<i class="fa fa-external-link-alt"></i></span>由各路第三方开发者定制而成的，主要的有<span class="exturl" data-url="aHR0cHM6Ly9saW5rLmppYW5zaHUuY29tLz90PWh0dHA6Ly93d3cud2VwZS5jb20uY24vZG93bmxvYWQuaHRtbA==">微PE工具箱<i class="fa fa-external-link-alt"></i></span>、优启通等作品。</p>
+</blockquote>
+<p>大多数时候一个PE工具箱更加适合普通用户，如图（以微PE工具箱为例子）：</p>
+<p><img data-src="https://upload-images.jianshu.io/upload_images/3711387-9b1d79330239d828.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/556/format/webp" alt="img" loading="lazy"></p>
+<p>安装</p>
+<p>该PE工具箱可以安装到本机硬盘、移动硬盘与U盘，也可以生成ISO镜像。使用方法参见：</p>
+<blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly93d3cuamlhbnNodS5jb20vcC8xZjNmOGIyN2NkZDA=">https://www.jianshu.com/p/1f3f8b27cdd0<i class="fa fa-external-link-alt"></i></span></p>
+</blockquote>
+<h1 id="三、系统安装"><a href="#三、系统安装" class="headerlink" title="三、系统安装"></a>三、系统安装</h1><p><strong>WindowsRE、WindowsPE与PE工具箱</strong>（以下统称<strong>PE环境</strong>）在启动之后其实都完全运行在内存里面，因此你可以对硬盘做出任何改动，包括删除全部分区与全盘格式化这些个操作。不过，在删除全部分区或者全盘格式化之后PE环境的启动文件会丢失，如果不安装新的操作系统，重启后的电脑将无法启动，此时你只能插入安装U盘、光盘或者PE工具箱的U盘、移动硬盘来重新安装系统。</p>
+<blockquote>
+<p>请查看本文开头的链接以了解如何安装操作系统</p>
+</blockquote>
+<p><strong>Windows系统的安装的主要过程：</strong></p>
+<p>1、在一个PE环境下完成对本机硬盘的访问与调整，然后向目标分区写入完整的Windows系统的文件；<br>2、Windows系统文件写入硬盘的过程完成之后重新启动电脑，同时移除所有的PE环境相关设备（U盘等），电脑开始启动新的Windows系统，Windows系统会自动开始初始化并安装基础的驱动程序；<br>3、Windows系统再次重启，进入用户初始化设置界面，设置完成之后就可以进入系统。用户需要在进入系统之后激活系统，同时安装格外的驱动程序。Windows 8.1以上系统可以自动从Windows Update安装驱动，Windows 7则需要提前下载好包含了网卡驱动驱动包。</p>
+<blockquote>
+<p>驱动总裁：<span class="exturl" data-url="aHR0cHM6Ly9saW5rLmppYW5zaHUuY29tLz90PWh0dHA6Ly93d3cuZHJ2Y2VvLmNvbS8=">http://www.drvceo.com/<i class="fa fa-external-link-alt"></i></span></p>
+</blockquote>
+<p><img data-src="https://upload-images.jianshu.io/upload_images/3711387-cb171b68c76df1f0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1167/format/webp" alt="img" loading="lazy"></p>
+<p>下载驱动</p>
+<p><img data-src="https://upload-images.jianshu.io/upload_images/3711387-689ff75380eb6dac.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1200/format/webp" alt="img" loading="lazy"></p>
+<p>下载网卡版</p>
+<h1 id="四、系统引导与启动分区、系统分区"><a href="#四、系统引导与启动分区、系统分区" class="headerlink" title="四、系统引导与启动分区、系统分区"></a>四、系统引导与启动分区、系统分区</h1><p>系统引导就是一个把系统内核载入内存，然后让系统内核启动整个操作系统的过程。Windows系统的启动过程如下：</p>
+<p>BIOS模式：</p>
+<p><img data-src="https://upload-images.jianshu.io/upload_images/3711387-97d5412b1fd73aea.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/875/format/webp" alt="img" loading="lazy"></p>
+<p>BIOS模式启动系统</p>
+<p>UEFI模式：</p>
+<p><img data-src="https://upload-images.jianshu.io/upload_images/3711387-b7577f40798323d0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/875/format/webp" alt="img" loading="lazy"></p>
+<p>UEFI模式启动系统</p>
+<p>UEFI启动需要GPT模式的分区，并向下兼容U盘等可移动存储的MBR分区；BIOS启动需要MBR模式的分区，否则系统可能无法启动。</p>
+<blockquote>
+<p>知乎的讨论：<span class="exturl" data-url="aHR0cHM6Ly9saW5rLmppYW5zaHUuY29tLz90PWh0dHBzOi8vd3d3LnpoaWh1LmNvbS9xdWVzdGlvbi8yODQ3MTkxMw==">https://www.zhihu.com/question/28471913<i class="fa fa-external-link-alt"></i></span></p>
+</blockquote>
+<p>启动分区在MBR分区上与GPT分区上都存在。GPT分区一般是一个单独的ESP分区作为启动分区；MBR模式下使用微软官方安装程序安装的系统会有一个500M的启动分区，手动安装的则一般是启动分区与系统分区在一个分区。</p>
+<p>最后说一句，U盘启动安装与硬盘启动安装的原理是一样的，只是方式不一样。</p>
+<p>参考资料：</p>
+<blockquote>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://link.jianshu.com/?t=https://en.wikipedia.org/wiki/Unified_Extensible_Firmware_Interface">http://blog.csdn.net/mao0514/article/details/51162915<br>https://en.wikipedia.org/wiki/BIOS<br>https://en.wikipedia.org/wiki/Unified_Extensible_Firmware_Interface</a></p>
+</blockquote>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>Buy me a coffee</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/20201122213021.png" alt="Lining Wei 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/434235F3-7A93-4EA4-A7B6-4F6D977F1A89.png" alt="Lining Wei 支付宝">
+        <span>支付宝</span>
+      </div>
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/bitcoin.png" alt="Lining Wei 比特币">
+        <span>比特币</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文博主： </strong>Lining Wei
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://weilining.github.io/301.html" title="Windows系统安装原理那点事">https://weilining.github.io/301.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC96aC1DTg=="><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/300.html" rel="prev" title="win10有无LTSD">
+                  <i class="fa fa-chevron-left"></i> win10有无LTSD
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/302.html" rel="next" title="Windows10与ubuntu18.04双系统安装原理与教程">
+                  Windows10与ubuntu18.04双系统安装原理与教程 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments" id="valine-comments"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 2015 – 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Ln</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">450k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">6:49</span>
+  </span>
+</div>
+
+<div><canvas id="snow" style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:99999;pointer-events:none"></canvas></div>
+
+
+<script id="click-show-text" src="/js/click-show-text.js" data-mobile="false" data-text="富强,民主,文明,和谐,自由,平等,公正,法治,爱国,敬业,诚信,友善" data-fontsize="20px" data-random="false" async></script>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js" integrity="sha256-EdPgYcPk/IIrw7FYeuJQexva49pVRZNmt3LculEr7zM=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/comments.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/utils.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/motion.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/next-boot.min.js"></script>
+
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/third-party/search/local-search.min.js"></script>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/third-party/pace.min.js"></script>
+
+  
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.2.0/dist/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"ignores":null,"url":"https://weilining.github.io/301.html"}</script>
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/third-party/quicklink.min.js"></script>
+
+
+<script class="next-config" data-name="valine" type="application/json">{"enable":true,"appId":"Bu6sP4depeiGP22PIFqz0SmJ-MdYXbMMI","appKey":"jYGDeeOBkTqvrUJDEmqj83q7","serverURLs":"https://bu6sp4de.api.lncldglobal.com","placeholder":"Just go go","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"lang":null,"visitor":true,"comment_count":true,"recordIP":false,"enableQQ":false,"requiredFields":[],"el":"#valine-comments","path":"/301.html"}</script>
+<script>
+document.addEventListener('page:loaded', () => {
+  NexT.utils.loadComments(CONFIG.valine.el)
+    .then(() => NexT.utils.getScript(
+      'https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js',
+      { condition: window.Valine }
+    ))
+    .then(() => {
+      new Valine(CONFIG.valine);
+    });
+});
+</script>
+
+
+
+
+</body>
+</html>

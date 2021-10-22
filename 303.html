@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.jsdelivr.net/gh/weilining/img@main/img/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.jsdelivr.net/gh/weilining/img@main/img/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://cdn.jsdelivr.net/gh/weilining/img@main/img/favicon-16x16-next.png">
+  <link rel="mask-icon" href="https://cdn.jsdelivr.net/gh/weilining/img@main/img/logo.svg" color="#222">
+  <meta name="google-site-verification" content="OjGymv9uAqWYDsr-E-j6DG2k1_mPXsDQF77kgEK0nz8">
+  <meta name="msvalidate.01" content="5C84BC77E02800759CE29C4ACCE487BD">
+  <meta name="yandex-verification" content="06c62a93328de5da">
+  <meta name="baidu-site-verification" content="code-wFDrn4lvkD">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/blue/pace-theme-bounce.css">
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"weilining.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.8.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/config.min.js"></script>
+<meta name="description" content="默认">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何下载到纯净的Google Chrome或者Chromium浏览器">
+<meta property="og:url" content="https://weilining.github.io/303.html">
+<meta property="og:site_name" content="Ln&#39;s Blog">
+<meta property="og:description" content="默认">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/3711387-11c772c6284bd22d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1042/format/webp">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/3711387-abadf46f2de4b917.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1200/format/webp">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/3711387-d8afec1a27988946.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1200/format/webp">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/3711387-b054f6aae25784be.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1118/format/webp">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/3711387-cc4d1ac20a27bc29.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1200/format/webp">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/3711387-3b17a658c9f8b505.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1143/format/webp">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/3711387-98fdbf060b619090.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1018/format/webp">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/3711387-d7dddffdae03a05a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/973/format/webp">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/3711387-e6b4fa5fa7c311bf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1200/format/webp">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/3711387-78efe49b94ba2217.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/636/format/webp">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/3711387-d9077211f0528fe1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1200/format/webp">
+<meta property="article:published_time" content="2021-10-22T19:18:16.000Z">
+<meta property="article:modified_time" content="2021-10-22T19:18:16.000Z">
+<meta property="article:author" content="Lining Wei">
+<meta property="article:tag" content="ACM,开发者,程序猿,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,互联网一切折腾">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/3711387-11c772c6284bd22d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1042/format/webp">
+
+
+<link rel="canonical" href="https://weilining.github.io/303.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://weilining.github.io/303.html","path":"303.html","title":"如何下载到纯净的Google Chrome或者Chromium浏览器"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>如何下载到纯净的Google Chrome或者Chromium浏览器 | Ln's Blog</title>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="Ln's Blog" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Ln's Blog</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">有朋自远方来，不亦乐乎</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-bell fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-top"><a href="/top/" rel="section"><i class="fa fa-signal fa-fw"></i>热榜</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-friends"><a href="/friends/" rel="section"><i class="fa fa-globe-asia fa-fw"></i>朋友们</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-%E4%B8%8B%E8%BD%BDGoogle-Chrome%E6%B5%8F%E8%A7%88%E5%99%A8"><span class="nav-number">1.</span> <span class="nav-text">1 下载Google Chrome浏览器</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1-%E7%99%BE%E5%BA%A6%E6%88%96%E8%80%85360%E4%B8%8B%E8%BD%BD"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">1.1 百度或者360下载</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-Fedora%E4%B8%AD%E6%96%87%E7%94%A8%E6%88%B7%E8%BD%AF%E4%BB%B6%E6%BA%90%E4%B8%8B%E8%BD%BD"><span class="nav-number">1.0.0.2.</span> <span class="nav-text">1.2 Fedora中文用户软件源下载</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-Chromium%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%8B%E8%BD%BD"><span class="nav-number">2.</span> <span class="nav-text">2 Chromium浏览器下载</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-Google-Chrome-%E4%BC%81%E4%B8%9A%E7%89%88%E6%9C%AC%EF%BC%88MSI%E5%AE%89%E8%A3%85%E5%8C%85%EF%BC%89"><span class="nav-number">3.</span> <span class="nav-text">3 Google Chrome 企业版本（MSI安装包）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%99%84%EF%BC%9A%E5%AE%89%E8%A3%85%E9%80%82%E7%94%A8%E4%BA%8EChromium%E6%A0%B8%E5%BF%83%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84Flash%E6%8F%92%E4%BB%B6"><span class="nav-number">3.0.1.</span> <span class="nav-text">附：安装适用于Chromium核心浏览器的Flash插件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%86%99%E5%9C%A8%E6%9C%80%E5%90%8E%EF%BC%9A%E4%BD%BF%E7%94%A8Choco%E8%87%AA%E5%8A%A8%E5%AE%89%E8%A3%85Chromium%E3%80%81Google-Chrome%EF%BC%9A"><span class="nav-number">3.0.1.1.</span> <span class="nav-text">写在最后：使用Choco自动安装Chromium、Google Chrome：</span></a></li></ol></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Lining Wei"
+      src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/icon.gif">
+  <p class="site-author-name" itemprop="name">Lining Wei</p>
+  <div class="site-description" itemprop="description">算法、技术</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">304</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">35</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="cc-license site-overview-item animated" itemprop="license">
+    <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC96aC1DTg=="><img src="https://cdn.jsdelivr.net/npm/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></span>
+  </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://weilining.github.io/303.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/weilining/img@main/img/icon.gif">
+      <meta itemprop="name" content="Lining Wei">
+      <meta itemprop="description" content="算法、技术">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ln's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          如何下载到纯净的Google Chrome或者Chromium浏览器<span class="exturl post-edit-link" data-url="aHR0cHM6Ly9naXRodWIuY29tL3dlaWxpbmluZy9ibG9nL2VkaXQvbWFpbi9zb3VyY2UvX3Bvc3RzLzMwMy5tZA==" title="编辑"><i class="fa fa-pen-nib"></i></span>
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-10-23 03:18:16" itemprop="dateCreated datePublished" datetime="2021-10-23T03:18:16+08:00">2021-10-23</time>
+    </span>
+
+  
+    <span id="/303.html" class="post-meta-item leancloud_visitors" data-flag-title="如何下载到纯净的Google Chrome或者Chromium浏览器" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>2.5k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>2 分钟</span>
+    </span>
+</div>
+
+            <div class="post-description">默认</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>windows全版本下载：<br><span class="exturl" data-url="aHR0cHM6Ly9jb21tb25kYXRhc3RvcmFnZS5nb29nbGVhcGlzLmNvbS9jaHJvbWl1bS1icm93c2VyLXNuYXBzaG90cy9pbmRleC5odG1sP3ByZWZpeD1XaW5feDY0Lw==">https://commondatastorage.googleapis.com/chromium-browser-snapshots/index.html?prefix=Win_x64/<i class="fa fa-external-link-alt"></i></span></p>
+<p>更新：谷歌在其中国网站上上架了 Google Chrome 的下载，如无特殊需求直接去谷歌中国下载即可。</p>
+<blockquote>
+<p>下载地址：<span class="exturl" data-url="aHR0cHM6Ly9saW5rcy5qaWFuc2h1LmNvbS9nbz90bz1odHRwczovL3d3dy5nb29nbGUuY24vY2hyb21l">https://www.google.cn/chrome<i class="fa fa-external-link-alt"></i></span></p>
+</blockquote>
+<p>因我国“特殊”的网络环境，很多谷粉都没办法从谷歌直接下载安装Google Chrome，去百度、360下载又有可能因为误点而安装到一些我们不需要的软件，因此笔者在这里分享一下下载Google Chrome浏览器或者Chromium浏览器（Google Chrome浏览器的开源社区版本）的一些个人经验。</p>
+<p><img data-src="https://upload-images.jianshu.io/upload_images/3711387-11c772c6284bd22d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1042/format/webp" alt="img" loading="lazy"></p>
+<p>Google Chrome与Chromium</p>
+<h1 id="1-下载Google-Chrome浏览器"><a href="#1-下载Google-Chrome浏览器" class="headerlink" title="1 下载Google Chrome浏览器"></a><strong>1 下载Google Chrome浏览器</strong></h1><p><strong>Google 中国下载（不一定能成功）：</strong></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9saW5rcy5qaWFuc2h1LmNvbS9nbz90bz1odHRwczovL3d3dy5nb29nbGUuY24vY2hyb21lLw==">https://www.google.cn/chrome/<i class="fa fa-external-link-alt"></i></span></p>
+<h4 id="1-1-百度或者360下载"><a href="#1-1-百度或者360下载" class="headerlink" title="1.1 百度或者360下载"></a>1.1 百度或者360下载</h4><p><img data-src="https://upload-images.jianshu.io/upload_images/3711387-abadf46f2de4b917.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1200/format/webp" alt="img" loading="lazy"></p>
+<p>360搜索下载</p>
+<p><img data-src="https://upload-images.jianshu.io/upload_images/3711387-d8afec1a27988946.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1200/format/webp" alt="img" loading="lazy"></p>
+<p>百度下载</p>
+<p>在这两个网站下载的时候需要注意点击“普通下载”或者“普通安装”，否则就会被安装上其他不需要的软件。同时，在这里下载是没法区分32位与64位浏览器的，喜欢在64位系统上运行64位程序的朋友们可能会失望。</p>
+<h4 id="1-2-Fedora中文用户软件源下载"><a href="#1-2-Fedora中文用户软件源下载" class="headerlink" title="1.2 Fedora中文用户软件源下载"></a>1.2 Fedora中文用户软件源下载</h4><p>Fedora中文用户软件源其实是给Linux发行版Fedora的软件补充，不过该软件源工作者同步了Google Chrome浏览器所有平台版本的安装包。得益于他们的工作成果，我们可以在他们的软件源里面下载适合于Windows系统或者macOS系统的Google Chrome浏览器。</p>
+<blockquote>
+<p>下载地址：<span class="exturl" data-url="aHR0cHM6Ly9saW5rcy5qaWFuc2h1LmNvbS9nbz90bz1odHRwczovL3JlcG8uZmR6aC5vcmcvY2hyb21lLw==">https://repo.fdzh.org/chrome<i class="fa fa-external-link-alt"></i></span></p>
+</blockquote>
+<p>其中exe文件夹里面包含的是Windows系统版本的安装包，rpm是红帽子系Linux系统的安装包，deb是Debian系Linux系统的安装包，dmg是macOS系统的安装包。</p>
+<p><img data-src="https://upload-images.jianshu.io/upload_images/3711387-b054f6aae25784be.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1118/format/webp" alt="img" loading="lazy"></p>
+<p>下载页面</p>
+<h1 id="2-Chromium浏览器下载"><a href="#2-Chromium浏览器下载" class="headerlink" title="2 Chromium浏览器下载"></a>2 Chromium浏览器下载</h1><p>Chromium是谷歌主导的开源社区项目，致力于开发一个开源、高效与快速的浏览器。谷歌自家的Google Chrome浏览器，360的极速浏览器、腾讯的QQ浏览器等都是基于这个开源项目而诞生的。因为是谷歌主导的项目，所以Google Chrome与Chromium浏览器的界面几近一致。只是，Google Chrome浏览器由谷歌打包发布，并且添加了自动更新的功能，同时集成了Flash插件；Chromium浏览器则是由Chromium社区开发成员打包发布的，除了不能自动更新（Windows平台）与没有内置Flash插件，其它的内容与Google Chrome几近一致。</p>
+<p><img data-src="https://upload-images.jianshu.io/upload_images/3711387-cc4d1ac20a27bc29.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1200/format/webp" alt="img" loading="lazy"></p>
+<p>Chromium浏览器</p>
+<p>感谢Chromium开发者之一的Jerry P. P. 和他的小伙伴们，他们坚持在Github上发布适用于Windows系统的Chromium浏览器，我们可以从他们的Github发布列表里面下载Chromium浏览器。</p>
+<blockquote>
+<p>下载地址：<span class="exturl" data-url="aHR0cHM6Ly9saW5rcy5qaWFuc2h1LmNvbS9nbz90bz1odHRwczovL2dpdGh1Yi5jb20vaGVucnlwcC9jaHJvbWl1bS9yZWxlYXNlcy8=">https://github.com/henrypp/chromium/releases/<i class="fa fa-external-link-alt"></i></span></p>
+</blockquote>
+<p><strong>注意：建议使用比特彗星、Free Download Manager、迅雷或者IDM来下载。</strong></p>
+<p><img data-src="https://upload-images.jianshu.io/upload_images/3711387-3b17a658c9f8b505.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1143/format/webp" alt="img" loading="lazy"></p>
+<p>下载页</p>
+<blockquote>
+<p><strong>蓝色标题：</strong>写明了版本号、编译号与系统适用版本。Win64的意思是64位Windows系统，该版本不能在32位系统上安装。不过，32位版本（Win32）也可以安装到64位的地图上，不过不建议同时安装32位版本与64位版本。32位系统只能使用Win32版本。</p>
+<p><strong>Assets：</strong>这里的意思可以理解为文件，Chromium-nosync.exe是没有同步功能与WebRTC功能的版本，zip结尾的则是对应的绿色版压缩包；Chromium-sync.exe则是有同步功能与WebRTC功能的版本，其同名zip包则是其对应的绿色版本。最下面的两个则是适用于程序员的源代码压缩包。个人建议使用<strong>Chromium-sync.exe</strong>这个具有同步功能的版本。</p>
+<p><strong>dev与stable：</strong>dev指代开发版本，其稳定性一般，但是功能最新；stable是正式版本，版本号与Google Chrome一样，软件整体更加稳定。</p>
+</blockquote>
+<p><img data-src="https://upload-images.jianshu.io/upload_images/3711387-98fdbf060b619090.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1018/format/webp" alt="img" loading="lazy"></p>
+<p>配图</p>
+<p><strong>注：</strong>由于Chromium浏览器开发进度很快，因此如果要下载正式版本请一直往下翻，直到找到标注为stable的版本。下载的时候注意版本号与上传日期，以免下载到旧版本。</p>
+<p><img data-src="https://upload-images.jianshu.io/upload_images/3711387-d7dddffdae03a05a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/973/format/webp" alt="img" loading="lazy"></p>
+<p>当前正式版（2018年元月20日）</p>
+<h1 id="3-Google-Chrome-企业版本（MSI安装包）"><a href="#3-Google-Chrome-企业版本（MSI安装包）" class="headerlink" title="3 Google Chrome 企业版本（MSI安装包）"></a>3 Google Chrome 企业版本（MSI安装包）</h1><p>MSI安装包目前还可以直连下载，也是为数不多的可用Google资源之一，其它的Google资源还有翻译、地图与Android开发工具包。</p>
+<p>下载链接：</p>
+<blockquote>
+<p>32位：<span class="exturl" data-url="aHR0cHM6Ly9saW5rcy5qaWFuc2h1LmNvbS9nbz90bz1odHRwczovL2RsLmdvb2dsZS5jb20vdGFnL3MvZGwvY2hyb21lL2luc3RhbGwvZ29vZ2xlY2hyb21lc3RhbmRhbG9uZWVudGVycHJpc2UubXNp">点击进入<i class="fa fa-external-link-alt"></i></span><br>64位：<span class="exturl" data-url="aHR0cHM6Ly9saW5rcy5qaWFuc2h1LmNvbS9nbz90bz1odHRwczovL2RsLmdvb2dsZS5jb20vdGFnL3MvZGwvY2hyb21lL2luc3RhbGwvZ29vZ2xlY2hyb21lc3RhbmRhbG9uZWVudGVycHJpc2U2NC5tc2k=">点击进入<i class="fa fa-external-link-alt"></i></span></p>
+</blockquote>
+<p>注意：这个版本的Chrome没有集成Flash插件。</p>
+<h3 id="附：安装适用于Chromium核心浏览器的Flash插件"><a href="#附：安装适用于Chromium核心浏览器的Flash插件" class="headerlink" title="附：安装适用于Chromium核心浏览器的Flash插件"></a>附：安装适用于Chromium核心浏览器的Flash插件</h3><p>适用于Google Chrome企业版、Chromium浏览器与Opera浏览器以及基于Chromium核心的浏览器的Flash插件的安装方法：</p>
+<p>Flash虽然会在2020年寿终正寝，但是现在偶尔还是用的到的，这里介绍如何安装适用于Chromium浏览器的Flash插件。</p>
+<blockquote>
+<p>下载地址：<span class="exturl" data-url="aHR0cHM6Ly9saW5rcy5qaWFuc2h1LmNvbS9nbz90bz1odHRwczovL2dldDIuYWRvYmUuY29tL2NuL2ZsYXNocGxheWVyL290aGVydmVyc2lvbnMv">https://get2.adobe.com/cn/flashplayer/otherversions/<i class="fa fa-external-link-alt"></i></span></p>
+</blockquote>
+<p>下载的时候记得取消勾选“可选程序”的推广软件项目，Adobe默认会给我们一个在线安装工具然后在线安装。</p>
+<p><img data-src="https://upload-images.jianshu.io/upload_images/3711387-e6b4fa5fa7c311bf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1200/format/webp" alt="img" loading="lazy"></p>
+<p>下载</p>
+<p><img data-src="https://upload-images.jianshu.io/upload_images/3711387-78efe49b94ba2217.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/636/format/webp" alt="img" loading="lazy"></p>
+<p>安装</p>
+<p>安装完成之后在浏览器地址栏输入chrome://flash以确认Flash插件已经完成安装。</p>
+<p><img data-src="https://upload-images.jianshu.io/upload_images/3711387-d9077211f0528fe1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1200/format/webp" alt="img" loading="lazy"></p>
+<p>最后的截图</p>
+<p><em>截图截取：本人</em></p>
+<p><em>注：如果遇到下载不了Chromium浏览器的请更换可靠的DNS服务器，具体操作可以查看我的<span class="exturl" data-url="aHR0cHM6Ly93d3cuamlhbnNodS5jb20vcC9iYjA5ZmQ2OTdlYTQ=">另一篇文章<i class="fa fa-external-link-alt"></i></span>。如果更换了DNS服务器还是不行，那么请理解，毕竟Github的下载服务器不在中国大陆。</em></p>
+<h4 id="写在最后：使用Choco自动安装Chromium、Google-Chrome："><a href="#写在最后：使用Choco自动安装Chromium、Google-Chrome：" class="headerlink" title="写在最后：使用Choco自动安装Chromium、Google Chrome："></a><strong>写在最后：使用Choco自动安装Chromium、Google Chrome：</strong></h4><blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly93d3cuamlhbnNodS5jb20vcC9mNmNhYzhjZjMwMjg=">https://www.jianshu.com/p/f6cac8cf3028<i class="fa fa-external-link-alt"></i></span></p>
+</blockquote>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>Buy me a coffee</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/20201122213021.png" alt="Lining Wei 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/434235F3-7A93-4EA4-A7B6-4F6D977F1A89.png" alt="Lining Wei 支付宝">
+        <span>支付宝</span>
+      </div>
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/bitcoin.png" alt="Lining Wei 比特币">
+        <span>比特币</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文博主： </strong>Lining Wei
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://weilining.github.io/303.html" title="如何下载到纯净的Google Chrome或者Chromium浏览器">https://weilining.github.io/303.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC96aC1DTg=="><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/302.html" rel="prev" title="Windows10与ubuntu18.04双系统安装原理与教程">
+                  <i class="fa fa-chevron-left"></i> Windows10与ubuntu18.04双系统安装原理与教程
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/304.html" rel="next" title="WDS+MDT全自动部署系统、自动加域、自动计算机取名（SN序列号或MAC地址）">
+                  WDS+MDT全自动部署系统、自动加域、自动计算机取名（SN序列号或MAC地址） <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments" id="valine-comments"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 2015 – 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Ln</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">450k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">6:49</span>
+  </span>
+</div>
+
+<div><canvas id="snow" style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:99999;pointer-events:none"></canvas></div>
+
+
+<script id="click-show-text" src="/js/click-show-text.js" data-mobile="false" data-text="富强,民主,文明,和谐,自由,平等,公正,法治,爱国,敬业,诚信,友善" data-fontsize="20px" data-random="false" async></script>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js" integrity="sha256-EdPgYcPk/IIrw7FYeuJQexva49pVRZNmt3LculEr7zM=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/comments.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/utils.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/motion.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/next-boot.min.js"></script>
+
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/third-party/search/local-search.min.js"></script>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/third-party/pace.min.js"></script>
+
+  
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.2.0/dist/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"ignores":null,"url":"https://weilining.github.io/303.html"}</script>
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/third-party/quicklink.min.js"></script>
+
+
+<script class="next-config" data-name="valine" type="application/json">{"enable":true,"appId":"Bu6sP4depeiGP22PIFqz0SmJ-MdYXbMMI","appKey":"jYGDeeOBkTqvrUJDEmqj83q7","serverURLs":"https://bu6sp4de.api.lncldglobal.com","placeholder":"Just go go","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"lang":null,"visitor":true,"comment_count":true,"recordIP":false,"enableQQ":false,"requiredFields":[],"el":"#valine-comments","path":"/303.html"}</script>
+<script>
+document.addEventListener('page:loaded', () => {
+  NexT.utils.loadComments(CONFIG.valine.el)
+    .then(() => NexT.utils.getScript(
+      'https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js',
+      { condition: window.Valine }
+    ))
+    .then(() => {
+      new Valine(CONFIG.valine);
+    });
+});
+</script>
+
+
+
+
+</body>
+</html>
