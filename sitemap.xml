@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://weilining.github.io/307.html</loc>
+    
+    <lastmod>2021-10-23</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://weilining.github.io/306.html</loc>
     
     <lastmod>2021-10-23</lastmod>
@@ -2237,13 +2244,6 @@
   </url>
   
   <url>
-    <loc>https://weilining.github.io/tags/%E7%99%BE%E5%BA%A6%E6%94%B6%E5%BD%95/</loc>
-    <lastmod>2021-10-23</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://weilining.github.io/tags/Win%E6%90%AD%E5%BB%BAHexo/</loc>
     <lastmod>2021-10-23</lastmod>
     <changefreq>daily</changefreq>
@@ -2252,6 +2252,13 @@
   
   <url>
     <loc>https://weilining.github.io/tags/%E8%B6%85%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2021-10-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://weilining.github.io/tags/%E7%99%BE%E5%BA%A6%E6%94%B6%E5%BD%95/</loc>
     <lastmod>2021-10-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
