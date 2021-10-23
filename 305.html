@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.jsdelivr.net/gh/weilining/img@main/img/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.jsdelivr.net/gh/weilining/img@main/img/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://cdn.jsdelivr.net/gh/weilining/img@main/img/favicon-16x16-next.png">
+  <link rel="mask-icon" href="https://cdn.jsdelivr.net/gh/weilining/img@main/img/logo.svg" color="#222">
+  <meta name="google-site-verification" content="OjGymv9uAqWYDsr-E-j6DG2k1_mPXsDQF77kgEK0nz8">
+  <meta name="msvalidate.01" content="5C84BC77E02800759CE29C4ACCE487BD">
+  <meta name="yandex-verification" content="06c62a93328de5da">
+  <meta name="baidu-site-verification" content="code-wFDrn4lvkD">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/blue/pace-theme-bounce.css">
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"weilining.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.8.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/config.min.js"></script>
+<meta name="description" content="默认">
+<meta property="og:type" content="article">
+<meta property="og:title" content="pcie3.0*4可以使用pcie4.0*4">
+<meta property="og:url" content="https://weilining.github.io/305.html">
+<meta property="og:site_name" content="Ln&#39;s Blog">
+<meta property="og:description" content="默认">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://weilining.github.io/305/S580c6ea1-4c03-492c-8a3f-3c82dd0d6657.jpg">
+<meta property="og:image" content="https://weilining.github.io/305/S5d628198-e289-4815-aadd-3ac65f32841c.jpg">
+<meta property="og:image" content="https://weilining.github.io/305/Sf4cdd0b0-594d-4fab-b453-b3d19bfcb9e4.png">
+<meta property="og:image" content="https://weilining.github.io/305/546d61bb-14da-4223-b0ff-babc8e22f9ee.png">
+<meta property="og:image" content="https://weilining.github.io/305/Samsung-860-EVO.jpg">
+<meta property="og:image" content="https://weilining.github.io/305/Samsung-970-EVO.jpg">
+<meta property="og:image" content="https://weilining.github.io/305/S13ac671b-d6cc-40bc-b66f-c4c03de08903.jpg">
+<meta property="og:image" content="https://weilining.github.io/305/Sa17c7e72-12f3-45bf-800e-e33434e12b45.jpg">
+<meta property="og:image" content="https://weilining.github.io/305/S34ed61f2-57f0-4172-b2eb-6953b525fabf.jpg">
+<meta property="og:image" content="https://weilining.github.io/305/S4a69bb3c-0e5a-4ced-9b28-23253b7b3f6f.png">
+<meta property="og:image" content="https://weilining.github.io/305/S72a36fc6-5941-4c68-870e-b264035e6a57.png">
+<meta property="article:published_time" content="2021-10-23T08:58:03.000Z">
+<meta property="article:modified_time" content="2021-10-23T08:58:03.000Z">
+<meta property="article:author" content="Lining Wei">
+<meta property="article:tag" content="ACM,开发者,程序猿,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,互联网一切折腾">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://weilining.github.io/305/S580c6ea1-4c03-492c-8a3f-3c82dd0d6657.jpg">
+
+
+<link rel="canonical" href="https://weilining.github.io/305.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://weilining.github.io/305.html","path":"305.html","title":"pcie3.0*4可以使用pcie4.0*4"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>pcie3.0*4可以使用pcie4.0*4 | Ln's Blog</title>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="Ln's Blog" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Ln's Blog</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">有朋自远方来，不亦乐乎</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-bell fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-top"><a href="/top/" rel="section"><i class="fa fa-signal fa-fw"></i>热榜</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-friends"><a href="/friends/" rel="section"><i class="fa fa-globe-asia fa-fw"></i>朋友们</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE"><span class="nav-number">1.</span> <span class="nav-text">参考文献</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Lining Wei"
+      src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/icon.gif">
+  <p class="site-author-name" itemprop="name">Lining Wei</p>
+  <div class="site-description" itemprop="description">算法、技术</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">305</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">35</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="cc-license site-overview-item animated" itemprop="license">
+    <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC96aC1DTg=="><img src="https://cdn.jsdelivr.net/npm/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></span>
+  </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://weilining.github.io/305.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/weilining/img@main/img/icon.gif">
+      <meta itemprop="name" content="Lining Wei">
+      <meta itemprop="description" content="算法、技术">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ln's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          pcie3.0*4可以使用pcie4.0*4<span class="exturl post-edit-link" data-url="aHR0cHM6Ly9naXRodWIuY29tL3dlaWxpbmluZy9ibG9nL2VkaXQvbWFpbi9zb3VyY2UvX3Bvc3RzLzMwNS5tZA==" title="编辑"><i class="fa fa-pen-nib"></i></span>
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-10-23 16:58:03" itemprop="dateCreated datePublished" datetime="2021-10-23T16:58:03+08:00">2021-10-23</time>
+    </span>
+
+  
+    <span id="/305.html" class="post-meta-item leancloud_visitors" data-flag-title="pcie3.0*4可以使用pcie4.0*4" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.1k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+            <div class="post-description">默认</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>笔记本推荐：F6  Code10 GE76 GE66 GS66 GS76</p>
+<p>PCIE NVME 4.0*4，在3.0X4也能用，但是跑不满 ，只是顺序读写跑不满，而不是4K随机跑不满，这种本子谁没事搞来当存储用，所以可以用。</p>
+<p>结论：主板支持M.2接口，且不差钱者，选M.2（NVMe）的固态硬盘！买它买它买它！</p>
+<ul>
+<li><strong>M.2：</strong>主要是指尺寸，一种体积更小的固态硬盘</li>
+<li><strong>NVMe：</strong>一种协议，可以通过<span class="exturl" data-url="aHR0cHM6Ly96aC53aWtpcGVkaWEub3JnL3poLWhhbnMvUENJX0V4cHJlc3M=">PCIe<i class="fa fa-external-link-alt"></i></span>读写数据</li>
+<li><strong>SATA：</strong>一种较旧的协议，通常没有NVMe快</li>
+</ul>
+<p>硬盘的读写速度决定了每天用电脑的心情，这也是许多朋友装机、升级电脑时会优先采用固态硬盘（简称“SSD”）的原因。而硬盘作为电脑中存储数据的一大硬件，目前主流的接口有两种：M.2接口和SATA接口。下面介绍下这两种接口之间的区别。 SATA接口： 外形尺寸：市面上2.5英寸固态硬盘、3.5英寸机械硬盘均使用SATA接口。 </p>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://img1.mydrivers.com/img/20200523/580c6ea1-4c03-492c-8a3f-3c82dd0d6657.jpg"><img data-src="/305/S580c6ea1-4c03-492c-8a3f-3c82dd0d6657.jpg" alt="M.2接口、SATA接口的固态硬盘 究竟选哪个好？    " loading="lazy"></a><br>连接方式：电源供电线+主板数据传输线。 </p>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://img1.mydrivers.com/img/20200523/5d628198-e289-4815-aadd-3ac65f32841c.jpg"><img data-src="/305/S5d628198-e289-4815-aadd-3ac65f32841c.jpg" alt="M.2接口、SATA接口的固态硬盘 究竟选哪个好？    " loading="lazy"></a><br>数据传输方式：硬盘→内存→CPU→内存→硬盘。 </p>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://img1.mydrivers.com/img/20200523/f4cdd0b0-594d-4fab-b453-b3d19bfcb9e4.png"><img data-src="/305/Sf4cdd0b0-594d-4fab-b453-b3d19bfcb9e4.png" alt="M.2接口、SATA接口的固态硬盘 究竟选哪个好？    " loading="lazy"></a></p>
+<p>传输速度：目前主流SATA 3.0通道的最大传输速度为6Gbps，由于理论带宽的限制，实际读写速度500MB/s多。 </p>
+<p><img data-src="/305/546d61bb-14da-4223-b0ff-babc8e22f9ee.png" alt="M.2接口、SATA接口的固态硬盘 究竟选哪个好？    " loading="lazy"></p>
+<p>M.2接口：</p>
+<p>外形尺寸：42<em>22mm、60</em>22mm、80*22mm；所谓的“2280”即SSD的尺寸。 </p>
+<p>到目前为止，我们已经解释了SATA和NVMe，这是用于读取和写入数据的两种协议。至于M.2，它只是描述硬盘物理外形（细长）的一个术语，而不是另一种协议。事实上，你可以购买一块使用SATA或NVMe协议的M.2驱动器。</p>
+<p><img data-src="/305/Samsung-860-EVO.jpg" alt="Samsung 860 EVO" loading="lazy"></p>
+<p>带有SATA连接的M.2驱动器</p>
+<p><img data-src="/305/Samsung-970-EVO.jpg" alt="Samsung 970 EVO" loading="lazy"></p>
+<p>带有NVMe连接的M.2驱动器</p>
+<p>如果你在市场上购买<span class="exturl" data-url="aHR0cHM6Ly91bmlvbi1jbGljay5qZC5jb20vamRjP2U9JnA9QXlJR1pScHJGREpXV0ExRkJDVmJWMElVV1ZBTEhGQlRCVmdKVEIxSlVrcEpCVWtjVUZNRldBbE1ERWhUSFYwRlZsY2VlREpuRHdUV3VJeUNxdXZEa28vUi83Sk1RVjFBQ3hGZURBa0xCVWNXV1I0WkFnVkVFQmRiQWtCWFdSUVhXd0pGVnd0V0RCcFhYRkZDV1JsclZWNTdYeXNmSDJCbmFYMFhjQUVYVmtoYUFXNHJkUTRlTjFBYldoUUJHd0ZjRzFNbEFoTUdWeE5iRkFNVUQyVXJXeFF5V1dsVUsxa1VBeEFGVnhOWUZBb2lCMUliV2hJQ0ZnUlJHbG9XQmlJSFhSOXJGUU5CVXhkZUV5VXlJZ1JsSzJzVU1oRTNDM1ZhUmdKQlZGeElDSHRZU1VFSld3MVBYWHdGVkJOU0V3Y2JCbVVaV2hRQUVBPT0=">NVMe驱动器<i class="fa fa-external-link-alt"></i></span>，只需确保所查看的<span class="exturl" data-url="aHR0cHM6Ly91bmlvbi1jbGljay5qZC5jb20vamRjP2U9JnA9QXlJR1pScHJGREpXV0ExRkJDVmJWMElVV1ZBTEhGQlRCVmdKVEIxSlVrcEpCVWtjVUZNRldBbE1ERWhUSFYwRlZsY2VlMG9ZU3NHb21kRGtxNDJGbjhTdC9Bd1BTbEFlUXhCTVJ4d1ZVa1FYWGxjVkZWRkNXUnRNVjBkTVJsa2JURkpISGdSQ1dobExRVmNMVnlzU2JnWjZjQ0ZkSEhWRFVuMEFaaGx4VVVWdUYxd2RHUTRpQWxVYVdoWUxGQTVWRTJzVkF4TUZYUnRhRkFRYU4yVWJXaVZKZkFabEdWb1VBQkFGWFJoYUhUSVNBRlVhWEJVR0VRTlVHMThUTWhJUFVTdGJGRkZHUlJCVGF5VXlFVGRsSzFvbEFTSlpPeG9JRlZFVURsVWROVTlaVkZzVlRRVkdiQkFHWFJKZkZRQVNOMWNhV2hjQQ==">M.2驱动器<i class="fa fa-external-link-alt"></i></span>的描述或标题中清楚地包含NVMe，而不是SATA。</p>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://img1.mydrivers.com/img/20200523/13ac671b-d6cc-40bc-b66f-c4c03de08903.jpg"><img data-src="/305/S13ac671b-d6cc-40bc-b66f-c4c03de08903.jpg" alt="M.2接口、SATA接口的固态硬盘 究竟选哪个好？    " loading="lazy"></a><br>连接方式：主板M.2接口。 </p>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://img1.mydrivers.com/img/20200523/a17c7e72-12f3-45bf-800e-e33434e12b45.jpg"><img data-src="/305/Sa17c7e72-12f3-45bf-800e-e33434e12b45.jpg" alt="M.2接口、SATA接口的固态硬盘 究竟选哪个好？    " loading="lazy"></a></p>
+<p>传输速度：（注意M.2接口有两种类型）</p>
+<p>*M.2 SATA：读写速度与2.5英寸SSD相差不大，只有接口的区别。</p>
+<p>*M.2 NVMe：读写速度超1GB/s，甚至达到5GB/s。 </p>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://img1.mydrivers.com/img/20200523/34ed61f2-57f0-4172-b2eb-6953b525fabf.jpg"><img data-src="/305/S34ed61f2-57f0-4172-b2eb-6953b525fabf.jpg" alt="M.2接口、SATA接口的固态硬盘 究竟选哪个好？    " loading="lazy"></a></p>
+<p>数据传输方式：</p>
+<p>*M.2 SATA：硬盘→内存→CPU→内存→硬盘</p>
+<p>*M.2 NVMe：硬盘→CPU→硬盘 </p>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://img1.mydrivers.com/img/20200523/4a69bb3c-0e5a-4ced-9b28-23253b7b3f6f.png"><img data-src="/305/S4a69bb3c-0e5a-4ced-9b28-23253b7b3f6f.png" alt="M.2接口、SATA接口的固态硬盘 究竟选哪个好？    " loading="lazy"></a></p>
+<p>由于M.2 NVMe固态硬盘的数据传输是走PCI-e通道，通过总线与CPU直连，省去内存调用硬盘的步骤，因而能够达到最大的传输速度和数据量。这就好比两辆车在驶向同一目的地时，一辆走高速路，一辆走崎岖的城乡路，车速和所花费的时间也就有了差别。 </p>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://img1.mydrivers.com/img/20200523/72a36fc6-5941-4c68-870e-b264035e6a57.png"><img data-src="/305/S72a36fc6-5941-4c68-870e-b264035e6a57.png" alt="M.2接口、SATA接口的固态硬盘 究竟选哪个好？    " loading="lazy"></a></p>
+<p>综上所述，无论是接口的便携度，还是读写速度的大幅提升，毫无疑问M.2接口的固态硬盘会更好。如果预算有限，且对读写速度无过多要求，SATA和M.2 SATA接口足以满足日常所需。当然荷包充足者，建议主板M.2接口插满M.2 NVMe的固态硬盘。 </p>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p><span class="exturl" data-url="aHR0cHM6Ly96aC53aWtpcGVkaWEub3JnL3dpa2kvTS4y">M.2 - 维基百科，自由的百科全书 (wikipedia.org)<i class="fa fa-external-link-alt"></i></span></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>Buy me a coffee</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/20201122213021.png" alt="Lining Wei 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/434235F3-7A93-4EA4-A7B6-4F6D977F1A89.png" alt="Lining Wei 支付宝">
+        <span>支付宝</span>
+      </div>
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/bitcoin.png" alt="Lining Wei 比特币">
+        <span>比特币</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文博主： </strong>Lining Wei
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://weilining.github.io/305.html" title="pcie3.0*4可以使用pcie4.0*4">https://weilining.github.io/305.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC96aC1DTg=="><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/304.html" rel="prev" title="WDS+MDT全自动部署系统、自动加域、自动计算机取名（SN序列号或MAC地址）">
+                  <i class="fa fa-chevron-left"></i> WDS+MDT全自动部署系统、自动加域、自动计算机取名（SN序列号或MAC地址）
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments" id="valine-comments"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 2015 – 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Ln</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">451k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">6:50</span>
+  </span>
+</div>
+
+<div><canvas id="snow" style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:99999;pointer-events:none"></canvas></div>
+
+
+<script id="click-show-text" src="/js/click-show-text.js" data-mobile="false" data-text="富强,民主,文明,和谐,自由,平等,公正,法治,爱国,敬业,诚信,友善" data-fontsize="20px" data-random="false" async></script>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js" integrity="sha256-EdPgYcPk/IIrw7FYeuJQexva49pVRZNmt3LculEr7zM=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/comments.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/utils.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/motion.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/next-boot.min.js"></script>
+
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/third-party/search/local-search.min.js"></script>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/third-party/pace.min.js"></script>
+
+  
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.2.0/dist/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"ignores":null,"url":"https://weilining.github.io/305.html"}</script>
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/third-party/quicklink.min.js"></script>
+
+
+<script class="next-config" data-name="valine" type="application/json">{"enable":true,"appId":"Bu6sP4depeiGP22PIFqz0SmJ-MdYXbMMI","appKey":"jYGDeeOBkTqvrUJDEmqj83q7","serverURLs":"https://bu6sp4de.api.lncldglobal.com","placeholder":"Just go go","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"lang":null,"visitor":true,"comment_count":true,"recordIP":false,"enableQQ":false,"requiredFields":[],"el":"#valine-comments","path":"/305.html"}</script>
+<script>
+document.addEventListener('page:loaded', () => {
+  NexT.utils.loadComments(CONFIG.valine.el)
+    .then(() => NexT.utils.getScript(
+      'https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js',
+      { condition: window.Valine }
+    ))
+    .then(() => {
+      new Valine(CONFIG.valine);
+    });
+});
+</script>
+
+
+
+
+</body>
+</html>
