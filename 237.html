@@ -26,7 +26,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/blue/pace-theme-bounce.css">
   <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"weilining.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.8.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/config.min.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"weilining.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.8.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/config.min.js"></script>
 <meta name="description" content="默认">
 <meta property="og:type" content="article">
 <meta property="og:title" content="解决GitHub网页githubusercontent地址无法访问问题">
@@ -307,7 +307,7 @@
 <p><span class="exturl" data-url="aHR0cDovL2lkYXllci5jb20vZ2l0LW1hc3Rlci1jb2RlLXRyZWUtZm9yLWdpdGh1Yi1naXRsYWItZ2l0ZWUvI2NvbW1lbnRz">评论 0<i class="fa fa-external-link-alt"></i></span></p>
 <p><code>GitHub</code>里面图片都在<code>githubusercontent.com</code>域名上，我们只需要在<code>hosts</code>里面加上相关地址即可。如果你有代理，把域名加入到许可名单也可以的。</p>
 <p>这里我们介绍<code>hosts</code>方式是如何使用的，把以下内容添加到<code>hosts</code>文件中。</p>
-<h2 id="1-hosts内容"><a href="#1-hosts内容" class="headerlink" title="1. hosts内容"></a>1. hosts内容</h2><figure class="highlight text"><table><tr><td class="code"><pre><span class="line"># 2020年12月30日更新</span><br><span class="line"> </span><br><span class="line"># GitHub Start</span><br><span class="line">52.74.223.119 github.com</span><br><span class="line">52.74.223.119 gist.github.com</span><br><span class="line">54.169.195.247 api.github.com</span><br><span class="line">185.199.111.153 assets-cdn.github.com</span><br><span class="line">199.232.96.133 raw.githubusercontent.com</span><br><span class="line">199.232.96.133 gist.githubusercontent.com</span><br><span class="line">199.232.96.133 cloud.githubusercontent.com</span><br><span class="line">199.232.96.133 camo.githubusercontent.com</span><br><span class="line">199.232.96.133 avatars0.githubusercontent.com</span><br><span class="line">199.232.96.133 avatars1.githubusercontent.com</span><br><span class="line">199.232.96.133 avatars2.githubusercontent.com</span><br><span class="line">199.232.96.133 avatars3.githubusercontent.com</span><br><span class="line">199.232.96.133 avatars4.githubusercontent.com</span><br><span class="line">199.232.96.133 avatars5.githubusercontent.com</span><br><span class="line">199.232.96.133 avatars6.githubusercontent.com</span><br><span class="line">199.232.96.133 avatars7.githubusercontent.com</span><br><span class="line">199.232.96.133 avatars8.githubusercontent.com</span><br><span class="line">199.232.96.133 user-images.githubusercontent.com</span><br><span class="line">185.199.109.154 github.githubassets.com</span><br><span class="line"># GitHub End</span><br></pre></td></tr></table></figure>
+<h2 id="1-hosts内容"><a href="#1-hosts内容" class="headerlink" title="1. hosts内容"></a>1. hosts内容</h2><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"># 2020年12月30日更新</span><br><span class="line"> </span><br><span class="line"># GitHub Start</span><br><span class="line">52.74.223.119 github.com</span><br><span class="line">52.74.223.119 gist.github.com</span><br><span class="line">54.169.195.247 api.github.com</span><br><span class="line">185.199.111.153 assets-cdn.github.com</span><br><span class="line">199.232.96.133 raw.githubusercontent.com</span><br><span class="line">199.232.96.133 gist.githubusercontent.com</span><br><span class="line">199.232.96.133 cloud.githubusercontent.com</span><br><span class="line">199.232.96.133 camo.githubusercontent.com</span><br><span class="line">199.232.96.133 avatars0.githubusercontent.com</span><br><span class="line">199.232.96.133 avatars1.githubusercontent.com</span><br><span class="line">199.232.96.133 avatars2.githubusercontent.com</span><br><span class="line">199.232.96.133 avatars3.githubusercontent.com</span><br><span class="line">199.232.96.133 avatars4.githubusercontent.com</span><br><span class="line">199.232.96.133 avatars5.githubusercontent.com</span><br><span class="line">199.232.96.133 avatars6.githubusercontent.com</span><br><span class="line">199.232.96.133 avatars7.githubusercontent.com</span><br><span class="line">199.232.96.133 avatars8.githubusercontent.com</span><br><span class="line">199.232.96.133 user-images.githubusercontent.com</span><br><span class="line">185.199.109.154 github.githubassets.com</span><br><span class="line"># GitHub End</span><br></pre></td></tr></table></figure>
 
 <blockquote>
 <p>注意 : 这里域名对应的ip是通过dns查询工具查询得到的，你应当选择的是延时相对较小且比较稳定的ip。</p>
@@ -315,7 +315,7 @@
 <p>如果发现不起作用，或者速度不理想，参考<span class="exturl" data-url="aHR0cDovL2lkYXllci5jb20vc3BlZWQtZ2l0aHViLWdpdGh1YnVzZXJjb250ZW50LXBhZ2Utd2l0aC1ob3N0cy8jZmV0Y2gtZG5z">查找域名IP<i class="fa fa-external-link-alt"></i></span>。</p>
 <h2 id="2-如何修改"><a href="#2-如何修改" class="headerlink" title="2. 如何修改"></a>2. 如何修改</h2><h3 id="2-1-Windows"><a href="#2-1-Windows" class="headerlink" title="2.1 Windows"></a>2.1 Windows</h3><p>hosts文件位置：<code>C:/windows/system32/drivers/etc/hosts</code>。</p>
 <p>将前文内容追加到<code>hosts</code>，然后刷新<code>DNS</code>缓存：</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ipconfig /flushdns复制</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ipconfig /flushdns复制</span><br></pre></td></tr></table></figure>
 
 <h3 id="2-2-Mac"><a href="#2-2-Mac" class="headerlink" title="2.2 Mac"></a>2.2 Mac</h3><p>hosts文件位置：<code>/etc/hosts</code>。</p>
 <p><code>Mac</code>系统下修改需要按照如下方式：</p>
@@ -323,7 +323,7 @@
 <p>然后把你修改好的<code>hosts</code>文件在复制回<code>hosts</code>文件的所在（文件夹下）路径：<code>/etc/hosts</code> 之下替换原始的<code>hosts</code>文件就好了。</p>
 <p>注意：如果弹出密码输入框，你需要输入你当前电脑登录账号的密码。</p>
 <p>最后刷新下缓存：</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo killall -HUP mDNSResponder复制</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo killall -HUP mDNSResponder复制</span><br></pre></td></tr></table></figure>
 
 <h2 id="3-查找域名IP"><a href="#3-查找域名IP" class="headerlink" title="3. 查找域名IP"></a>3. 查找域名IP</h2><ul>
 <li><span class="exturl" data-url="aHR0cDovL3Rvb2wuY2hpbmF6LmNvbS9kbnMv">DNS查询-站长工具<i class="fa fa-external-link-alt"></i></span></li>
@@ -434,13 +434,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">452k</span>
+    <span title="站点总字数">466k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">6:51</span>
+    <span title="站点阅读时长">7:04</span>
   </span>
 </div>
 

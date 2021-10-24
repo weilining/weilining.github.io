@@ -26,7 +26,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/blue/pace-theme-bounce.css">
   <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"weilining.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.8.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/config.min.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"weilining.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.8.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/config.min.js"></script>
 <meta name="description" content="默认">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Docker里安装centos8镜像">
@@ -287,7 +287,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>595</span>
+      <span>610</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -307,34 +307,34 @@
     
     <div class="post-body" itemprop="articleBody">
         <h2 id="拉取centos8镜像"><a href="#拉取centos8镜像" class="headerlink" title="拉取centos8镜像"></a>拉取centos8镜像</h2><p>如果觉得慢记得换源</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;debug&quot;: true,</span><br><span class="line">  &quot;experimental&quot;: false,</span><br><span class="line">  &quot;registry-mirrors&quot;: [</span><br><span class="line">    &quot;https:&#x2F;&#x2F;9cpn8tt6.mirror.aliyuncs.com&quot;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;debug&quot;: true,</span><br><span class="line">  &quot;experimental&quot;: false,</span><br><span class="line">  &quot;registry-mirrors&quot;: [</span><br><span class="line">    &quot;https:&#x2F;&#x2F;9cpn8tt6.mirror.aliyuncs.com&quot;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>拉取<code>Centos8.2.2</code></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker pull centos:8.2.2004</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull centos:8.2.2004</span><br></pre></td></tr></table></figure>
 
 <p><img data-src="/145/image-20201122002702333.png" alt="image-20201122002702333" loading="lazy"></p>
 <span id="more"></span>
 
-<h2 id="Centos版本"><a href="#Centos版本" class="headerlink" title="Centos版本"></a>Centos版本</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cat &#x2F;etc&#x2F;redhat-release</span><br></pre></td></tr></table></figure>
+<h2 id="Centos版本"><a href="#Centos版本" class="headerlink" title="Centos版本"></a>Centos版本</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat &#x2F;etc&#x2F;redhat-release</span><br></pre></td></tr></table></figure>
 
 <p><img data-src="/145/image-20201122002131126.png" alt="image-20201122002131126" loading="lazy"></p>
-<h2 id="获取IMAGE-ID"><a href="#获取IMAGE-ID" class="headerlink" title="获取IMAGE ID"></a>获取<code>IMAGE ID</code></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker images</span><br></pre></td></tr></table></figure>
+<h2 id="获取IMAGE-ID"><a href="#获取IMAGE-ID" class="headerlink" title="获取IMAGE ID"></a>获取<code>IMAGE ID</code></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker images</span><br></pre></td></tr></table></figure>
 
 <p><img data-src="/145/image-20201122002742593.png" alt="image-20201122002742593" loading="lazy"></p>
 <h2 id="启动镜像centos8"><a href="#启动镜像centos8" class="headerlink" title="启动镜像centos8"></a>启动镜像centos8</h2><p>如果不指定 /bin/bash，容器运行后会自动停止</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker run -d -i -t &lt;IMAGE ID&gt; &#x2F;bin&#x2F;bash</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d -i -t &lt;IMAGE ID&gt; &#x2F;bin&#x2F;bash</span><br></pre></td></tr></table></figure>
 
 <p><img data-src="/145/image-20201122002907469.png" alt="image-20201122002907469" loading="lazy"></p>
-<h2 id="获取CONTAINER-ID"><a href="#获取CONTAINER-ID" class="headerlink" title="获取CONTAINER ID"></a>获取<code>CONTAINER ID</code></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker ps</span><br></pre></td></tr></table></figure>
+<h2 id="获取CONTAINER-ID"><a href="#获取CONTAINER-ID" class="headerlink" title="获取CONTAINER ID"></a>获取<code>CONTAINER ID</code></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker ps</span><br></pre></td></tr></table></figure>
 
 <p><img data-src="/145/image-20201122002955999.png" alt="image-20201122002955999" loading="lazy"></p>
-<h2 id="进入容器"><a href="#进入容器" class="headerlink" title="进入容器"></a>进入容器</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker exec -it &lt;CONTAINER ID&gt; bash</span><br></pre></td></tr></table></figure>
+<h2 id="进入容器"><a href="#进入容器" class="headerlink" title="进入容器"></a>进入容器</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker exec -it &lt;CONTAINER ID&gt; bash</span><br></pre></td></tr></table></figure>
 
 <p><img data-src="/145/image-20201122003029517.png" alt="image-20201122003029517" loading="lazy"></p>
 <h2 id="进入后发现没有ifconfig"><a href="#进入后发现没有ifconfig" class="headerlink" title="进入后发现没有ifconfig"></a>进入后发现没有ifconfig</h2><p><img data-src="/145/image-20201122003044455.png" alt="image-20201122003044455" loading="lazy"></p>
-<h3 id="yum安装"><a href="#yum安装" class="headerlink" title="yum安装"></a>yum安装</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">yum install -y net-tools</span><br></pre></td></tr></table></figure>
+<h3 id="yum安装"><a href="#yum安装" class="headerlink" title="yum安装"></a>yum安装</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y net-tools</span><br></pre></td></tr></table></figure>
 
-<h3 id="如果觉得慢，可以换阿里源"><a href="#如果觉得慢，可以换阿里源" class="headerlink" title="如果觉得慢，可以换阿里源"></a>如果觉得慢，可以换阿里源</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">curl -o &#x2F;etc&#x2F;yum.repos.d&#x2F;CentOS-Base.repo http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;repo&#x2F;Centos-8.repo</span><br></pre></td></tr></table></figure>
+<h3 id="如果觉得慢，可以换阿里源"><a href="#如果觉得慢，可以换阿里源" class="headerlink" title="如果觉得慢，可以换阿里源"></a>如果觉得慢，可以换阿里源</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -o &#x2F;etc&#x2F;yum.repos.d&#x2F;CentOS-Base.repo http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;repo&#x2F;Centos-8.repo</span><br></pre></td></tr></table></figure>
 
 <p><img data-src="/145/image-20201122003220008.png" alt="image-20201122003220008" loading="lazy"></p>
 <h3 id="效果爆棚"><a href="#效果爆棚" class="headerlink" title="效果爆棚"></a>效果爆棚</h3><p><img data-src="/145/image-20201122003425530.png" alt="image-20201122003425530" loading="lazy"></p>
@@ -433,13 +433,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">452k</span>
+    <span title="站点总字数">466k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">6:51</span>
+    <span title="站点阅读时长">7:04</span>
   </span>
 </div>
 
