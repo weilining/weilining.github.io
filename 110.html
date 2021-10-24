@@ -34,23 +34,17 @@
 <meta property="og:site_name" content="Ln&#39;s Blog">
 <meta property="og:description" content="默认">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://weilining.github.io/110/1634018692119-e8a6b35d-a37f-4b83-be1b-776c47fc8659.png">
-<meta property="og:image" content="https://weilining.github.io/110/1634018733688-36188c8d-1adf-4ae1-8ae6-f777307d58cd.png">
-<meta property="og:image" content="https://weilining.github.io/110/1634018783620-c929d4d9-2729-4c3c-b892-6dfacbd2ad1f.webp">
-<meta property="og:image" content="https://weilining.github.io/110/1634018824333-1521fbb3-db4f-49a9-b6fb-8cb38290991e.png">
-<meta property="og:image" content="https://weilining.github.io/110/1634018840253-8366f1f7-ad42-48b4-8259-7a26e51925a4.png">
-<meta property="og:image" content="https://weilining.github.io/110/1634018852351-c70ddd47-cfe7-49a4-b528-426ef0455fb4.png">
-<meta property="og:image" content="https://weilining.github.io/110/1634018864162-22e97098-408e-42ff-91d1-8161afd53530.png">
-<meta property="og:image" content="https://weilining.github.io/110/1634018880050-77b021b4-73f3-47a8-9807-24fa6890c8b7.png">
-<meta property="og:image" content="https://weilining.github.io/110/1634018890673-e988e102-906a-476d-b3e1-fe6e3f5aee03.png">
-<meta property="og:image" content="https://weilining.github.io/110/1634018904298-c8c1f78d-41d1-4672-9371-871b51dd3b5f.png">
-<meta property="og:image" content="https://weilining.github.io/110/1634018920517-6d87bafd-3751-4fe0-9493-83f5d9258e35.png">
+<meta property="og:image" content="https://weilining.github.io/110/ISOInstallOS.png">
+<meta property="og:image" content="https://weilining.github.io/110/ApplyUUPESD.png">
+<meta property="og:image" content="https://weilining.github.io/110/CompactOS.png">
+<meta property="og:image" content="https://weilining.github.io/110/ExportWIMBoot.png">
+<meta property="og:image" content="https://weilining.github.io/110/ApplyWIMBoot.png">
 <meta property="article:published_time" content="2021-10-15T18:04:20.000Z">
 <meta property="article:modified_time" content="2021-10-15T18:04:20.000Z">
 <meta property="article:author" content="Lining Wei">
 <meta property="article:tag" content="ACM,开发者,程序猿,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,互联网一切折腾">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://weilining.github.io/110/1634018692119-e8a6b35d-a37f-4b83-be1b-776c47fc8659.png">
+<meta name="twitter:image" content="https://weilining.github.io/110/ISOInstallOS.png">
 
 
 <link rel="canonical" href="https://weilining.github.io/110.html">
@@ -170,7 +164,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%98%E7%BD%91www-chuyu-me"><span class="nav-number">1.</span> <span class="nav-text">**官网www.chuyu.me **  </span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83"><span class="nav-number"></span> <span class="nav-text">参考</span></a></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8Dism-%E5%AE%89%E8%A3%85%E7%B3%BB%E7%BB%9F"><span class="nav-number">1.</span> <span class="nav-text">使用Dism++安装系统</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.1.</span> <span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%AF%E5%8A%A8Dism-RE%E6%A8%A1%E5%BC%8F"><span class="nav-number">1.1.1.</span> <span class="nav-text">启动Dism++ RE模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Dism-%E6%B7%BB%E5%8A%A0%E5%BC%95%E5%AF%BC%E6%94%AF%E6%8C%81%E6%83%85%E5%86%B5"><span class="nav-number">1.1.2.</span> <span class="nav-text">Dism++添加引导支持情况</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BC%A0%E7%BB%9FBIOS%E4%BB%A5%E5%8F%8AUEFI%E6%94%AF%E6%8C%81%E6%83%85%E5%86%B5"><span class="nav-number">1.1.2.1.</span> <span class="nav-text">传统BIOS以及UEFI支持情况</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A4%9A%E7%A1%AC%E7%9B%98%E5%BC%95%E5%AF%BC%E6%94%AF%E6%8C%81%E6%83%85%E5%86%B5"><span class="nav-number">1.1.2.2.</span> <span class="nav-text">多硬盘引导支持情况</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%9A%90%E8%97%8F%E5%90%AF%E5%8A%A8%E5%88%86%E5%8C%BA%E6%94%AF%E6%8C%81%E6%83%85%E5%86%B5"><span class="nav-number">1.1.2.3.</span> <span class="nav-text">隐藏启动分区支持情况</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#VHD-VHDX%E5%90%AF%E5%8A%A8%E6%94%AF%E6%8C%81%E6%83%85%E5%86%B5"><span class="nav-number">1.1.2.4.</span> <span class="nav-text">VHD&#x2F;VHDX启动支持情况</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%8EISO%E5%AE%89%E8%A3%85%E7%B3%BB%E7%BB%9F"><span class="nav-number">1.2.</span> <span class="nav-text">从ISO安装系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%8EESD%EF%BC%88%E5%8C%85%E6%8B%AC%E5%8A%A0%E5%AF%86ESD%E4%BB%A5%E5%8F%8AUUP-ESD%EF%BC%89%E5%AE%89%E8%A3%85%E7%B3%BB%E7%BB%9F"><span class="nav-number">1.3.</span> <span class="nav-text">从ESD（包括加密ESD以及UUP ESD）安装系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8Compact%E6%8A%80%E6%9C%AF%E5%AE%89%E8%A3%85%E7%B3%BB%E7%BB%9F"><span class="nav-number">1.4.</span> <span class="nav-text">使用Compact技术安装系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8WIMBoot%E6%8A%80%E6%9C%AF%E5%AE%89%E8%A3%85%E7%B3%BB%E7%BB%9F"><span class="nav-number">1.5.</span> <span class="nav-text">使用WIMBoot技术安装系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83"><span class="nav-number">1.6.</span> <span class="nav-text">参考</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -280,14 +274,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>52</span>
+      <span>2.9k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
+      <span>3 分钟</span>
     </span>
 </div>
 
@@ -299,15 +293,73 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h3 id="官网www-chuyu-me"><a href="#官网www-chuyu-me" class="headerlink" title="**官网www.chuyu.me **  "></a>**官网<span class="exturl" data-url="aHR0cDovL3d3dy5jaHV5dS5tZS8=">www.chuyu.me<i class="fa fa-external-link-alt"></i></span> **<img data-src="/110/1634018692119-e8a6b35d-a37f-4b83-be1b-776c47fc8659.png" alt="img" loading="lazy"> <img data-src="/110/1634018733688-36188c8d-1adf-4ae1-8ae6-f777307d58cd.png" alt="img" loading="lazy"> <img data-src="/110/1634018783620-c929d4d9-2729-4c3c-b892-6dfacbd2ad1f.webp" alt="img" loading="lazy"></h3><p><img data-src="/110/1634018824333-1521fbb3-db4f-49a9-b6fb-8cb38290991e.png" alt="img" loading="lazy"></p>
-<p><img data-src="/110/1634018840253-8366f1f7-ad42-48b4-8259-7a26e51925a4.png" alt="img" loading="lazy"></p>
-<p><img data-src="/110/1634018852351-c70ddd47-cfe7-49a4-b528-426ef0455fb4.png" alt="img" loading="lazy"></p>
-<p><img data-src="/110/1634018864162-22e97098-408e-42ff-91d1-8161afd53530.png" alt="img" loading="lazy"></p>
-<p><img data-src="/110/1634018880050-77b021b4-73f3-47a8-9807-24fa6890c8b7.png" alt="img" loading="lazy"></p>
-<p><img data-src="/110/1634018890673-e988e102-906a-476d-b3e1-fe6e3f5aee03.png" alt="img" loading="lazy"></p>
-<p><img data-src="/110/1634018904298-c8c1f78d-41d1-4672-9371-871b51dd3b5f.png" alt="img" loading="lazy"></p>
-<p><img data-src="/110/1634018920517-6d87bafd-3751-4fe0-9493-83f5d9258e35.png" alt="img" loading="lazy"></p>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><span class="exturl" data-url="aHR0cHM6Ly93d3cueXVxdWUuY29tL2FuZ2VsZGFpZGFpL2tjZWlwdy9laWE3ZTA=">【使用教程】Dism++安装系统教学 · 语雀 (yuque.com)<i class="fa fa-external-link-alt"></i></span></p>
+        <h1 id="使用Dism-安装系统"><a href="#使用Dism-安装系统" class="headerlink" title="使用Dism++安装系统"></a>使用Dism++安装系统</h1><p>安装系统是一个简单而又复杂的活。有的仅仅为了安装系统，先把ESD转为ISO。有的因为安装器不支持ESD，而转换为WIM。还有的在解压ISO……这根本原因是人们很多时候难以灵活运用现有的工具。君子生非异也，善假于物也。本文将通过一些实例，帮助大家驾驭Dism++。</p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><h3 id="启动Dism-RE模式"><a href="#启动Dism-RE模式" class="headerlink" title="启动Dism++ RE模式"></a>启动Dism++ RE模式</h3><p>大家可能听说过PE，没见过RE。其实RE可以说跟PE是一样的，也就是说PE能做什么，RE也能做什么。另外Vista以后的系统都自带RE，所以我们平常的工作完全可以使用RE来解决，无需使用PE。</p>
+<p>是不是心动了？Dism++为了简化RE使用流程，特意引入了RE模式。其作用就是重启系统，然后启动RE，在启动Dism++。</p>
+<p>使用方法也很简单，在菜单点击 <code>恢复功能 - 在RE中运行</code>。首次启用需要配置一些设置，操作完成后重启电脑就可以了。</p>
+<blockquote>
+<p>在RE模式中，Dism++可以格式化系统盘。如果需要全新安装系统，又不想使用PE，可以使用此模式。</p>
+</blockquote>
+<h3 id="Dism-添加引导支持情况"><a href="#Dism-添加引导支持情况" class="headerlink" title="Dism++添加引导支持情况"></a>Dism++添加引导支持情况</h3><h4 id="传统BIOS以及UEFI支持情况"><a href="#传统BIOS以及UEFI支持情况" class="headerlink" title="传统BIOS以及UEFI支持情况"></a>传统BIOS以及UEFI支持情况</h4><p>Dism++完全支持标准的传统BIOS以及UEFI引导。但是要看清楚，是支持标准的引导，一些非标准的是不支持的。典型的UEFI启动的系统使用MBR磁盘是不支持的。</p>
+<p>这是因为Dism++有自动检测逻辑，发现系统盘是MBR格式，那么添加引导时自动按照传统BIOS启动方式进行处理。反之，发现GPT分区则安装UEFI方式处理。</p>
+<p>因此那些系统盘是MBR却要用UEFI启动，或者系统盘是GPT却要上传统BIOS启动。这些情况，Dism++的处理结果是不能让人满意的，这些用户建议手动配置引导。</p>
+<h4 id="多硬盘引导支持情况"><a href="#多硬盘引导支持情况" class="headerlink" title="多硬盘引导支持情况"></a>多硬盘引导支持情况</h4><p>Dism++完美支持多硬盘引导。可以为多个硬盘设置独立引导，也可以使用共享引导。但是多硬盘引导设置往往需要人工干预，因为程序并不知道你需要独立引导，还是共享引导。</p>
+<p>Dism++默认使用独立引导模式，需要调整为共享引导的用户，在添加引导时，请点击<code>更多</code>，然后手动调整。</p>
+<h4 id="隐藏启动分区支持情况"><a href="#隐藏启动分区支持情况" class="headerlink" title="隐藏启动分区支持情况"></a>隐藏启动分区支持情况</h4><p>Dism++完美支持隐藏启动分区，用户无需手动分配盘符。添加引导信息时，程序能直接操作隐藏的启动分区，无需分配盘符。特别是UEFI用户，放马过来吧。</p>
+<h4 id="VHD-VHDX启动支持情况"><a href="#VHD-VHDX启动支持情况" class="headerlink" title="VHD/VHDX启动支持情况"></a>VHD/VHDX启动支持情况</h4><p>Dism++完美支持配置VHD启动，程序检测到系统盘是VHD时，会自动转向到VHD模式，无需人工干预。不过，值得注意的是Windows 7旗舰版才支持VHD启动。另外只有Windows 8以上系统才能使用VHDX，到时搞了半天……</p>
+<p>最后有要扯到 传统BIOS以及UEFI支持情况。VHD的分区类型跟启动盘的分区类型必须一致，不然Dism++没法正常配置引导。比如VHD是GPT那么启动盘也需要是GPT，反之亦然。</p>
+<h2 id="从ISO安装系统"><a href="#从ISO安装系统" class="headerlink" title="从ISO安装系统"></a>从ISO安装系统</h2><p>ISO是最常见的系统载体，为此Dism++提供了直接的ISO支持。你可以直接使用ISO安装系统，无需挂载ISO或者解压ISO。</p>
+<blockquote>
+<p>Dism++内置了文件虚拟化技术，可以将文件流虚拟为一个文件。因此Dism++可以直接释放ISO里的install.wim。</p>
+</blockquote>
+<p>使用方法也很简单，在菜单中，点击文件 - 释放映像 即可。记得勾选 <code>添加引导</code>。<code>格式化</code>这个选项可以根据自己的需要使用，如果勾选此选项，会把的选择的系统盘进行清空。</p>
+<p><img data-src="/110/ISOInstallOS.png" alt="ISOInstallOS" loading="lazy"></p>
+<p>上图中，将ISO中的系统安装到 D盘，同时对D盘进行格式化。</p>
+<p>点击目标映像右侧的下拉框，可以切换系统，确认无误后点击确定即可。</p>
+<blockquote>
+<p>如果你需要格式化当前系统盘，则上述操作必须在RE或者PE等其他系统中进行。</p>
+</blockquote>
+<h2 id="从ESD（包括加密ESD以及UUP-ESD）安装系统"><a href="#从ESD（包括加密ESD以及UUP-ESD）安装系统" class="headerlink" title="从ESD（包括加密ESD以及UUP ESD）安装系统"></a>从ESD（包括加密ESD以及UUP ESD）安装系统</h2><p>从Windows 8以后，微软会定期从Windows Update推送ESD。而ESD中就包含了安装系统所必需的文件。我们可以直接使用ESD进行系统安装。哪怕这个ESD是加密的或者UUP分段ESD。</p>
+<blockquote>
+<p>Dism++内置了文件虚拟化技术，加密ESD会在内存中解密，然后再释放系统，此过程并不会修改原始ESD文件。</p>
+</blockquote>
+<p>使用方法也很简单，在菜单中，点击文件 - 释放映像 即可。记得勾选 <code>添加引导</code>。<code>格式化</code>这个选项可以根据自己的需要使用，如果勾选此选项，会把的选择的系统盘进行清空。</p>
+<blockquote>
+<p>释放UUP ESD时，可以选择UUP文件夹中的ActionList.xml（推荐），也可以直接选择顶级ESD（比如Professional_zh-cn.esd）。</p>
+</blockquote>
+<p><img data-src="/110/ApplyUUPESD.png" alt="ApplyUUPESD" loading="lazy"></p>
+<p>如上图，跟ISO释放稍微不同的是，目标映像需要选择操作系统，如上图所示目标映像，千万别傻傻的选择Windows Setup。</p>
+<p>点击目标映像右侧的下拉框，可以切换系统，确认无误后点击确定即可。</p>
+<blockquote>
+<p>如果你需要格式化当前系统盘，则上述操作必须在RE或者PE等其他系统中进行。</p>
+</blockquote>
+<h2 id="使用Compact技术安装系统"><a href="#使用Compact技术安装系统" class="headerlink" title="使用Compact技术安装系统"></a>使用Compact技术安装系统</h2><p>Compact是Windows 10新引入的压缩启动技术。一般减少1/3的空间占用，同时几乎不影响到IO性能。</p>
+<p>在Dism++中，你可以使用Compact技术安装Windows 7以上所有系统。程序将自动配置驱动并解压核心启动文件。</p>
+<blockquote>
+<p>需要注意的是，要使用Compact技术，Host系统必须是Windows 7或者更高。另外在Windows 7中默认不会加载WofAdk驱动。Win7用户使用前，请先在 选项 - 详细设置。勾选加载WofADK驱动，然后点击确定。</p>
+</blockquote>
+<p>Comacpt技术使用也非常简单，在释放映像时（支持WIM、SWM、ESD、UUP ESD以及ISO），勾选Compact，添加引导即可。如下图所示：</p>
+<p><img data-src="/110/CompactOS.png" alt="CompactOS" loading="lazy"></p>
+<p>操作完成后，重启系统即可启动Compact技术安装的系统了。</p>
+<h2 id="使用WIMBoot技术安装系统"><a href="#使用WIMBoot技术安装系统" class="headerlink" title="使用WIMBoot技术安装系统"></a>使用WIMBoot技术安装系统</h2><p>WIMBoot技术可以减少更多的空间占用，同时充分的利用了备份区，而且由于文件集中存放，往往可以提供更佳的IO性能。看似一切很美好，但是有个致命问题，长期使用WIMBoot会导致系统盘体积越来越大。最后表现比Compact还渣……</p>
+<blockquote>
+<p>WIMBoot技术是Compact的前身，由于有个体积越来越大问题，所以被抛弃使用。Dism++建议优先考虑使用Compact。</p>
+</blockquote>
+<p>在Dism++中，你可以使用WIMBoot技术安装Windows 7以上所有系统。程序将自动配置驱动并解压核心启动文件。</p>
+<blockquote>
+<p>需要注意的是，要使用WIMBoot技术，Host系统必须是Windows 7或者更高。另外在Windows 7中默认不会加载WofAdk驱动。Win7用户使用前，请先在 选项 - 详细设置。勾选加载WofADK驱动，然后点击确定。</p>
+</blockquote>
+<p>WIMBoot技术使用略微比Compact麻烦一点，首先你需要准备一个WIMBoot压缩类型的wim文件。</p>
+<blockquote>
+<p>PS: 虽然Dism++也支持快速压缩以及最大压缩的wim文件以WIMBoot方式启动，但是Dism++建议还是转换到WIMBoot压缩然后继续，以获得更加性能。</p>
+</blockquote>
+<p><img data-src="/110/ExportWIMBoot.png" alt="ExportWIMBoot" loading="lazy"></p>
+<p>如上图所示，我们把ISO里面的Windows 7旗舰版，选择WIMBoot压缩，然后导出到<code>G:\Win7 WIMBoot.wim</code>。</p>
+<p>转换完成后，在使用<code>文件 - 释放映像</code>，并勾选WIMBoot即可，如下图所示：</p>
+<p><img data-src="/110/ApplyWIMBoot.png" alt="ApplyWIMBoot" loading="lazy"></p>
+<p>把刚才得到的<code>G:\Win7 WIMBoot.wim</code>，使用WIMBoot技术，释放到D盘，格式化并添加引导。</p>
+<p>OK，现在大功告成，操作完成后，重启就能看到WIMBoot启动的系统了。</p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><span class="exturl" data-url="aHR0cHM6Ly93d3cuY2h1eXUubWUvemgtSGFucy9Eb2N1bWVudC5odG1sP2ZpbGU9QmVzdC8lRTQlQkQlQkYlRTclOTQlQThEaXNtKyslRTUlQUUlODklRTglQTMlODUlRTclQjMlQkIlRTclQkIlOUYubWQ=">使用Dism++安装系统 (chuyu.me)<i class="fa fa-external-link-alt"></i></span></p>
 
     </div>
 
@@ -400,13 +452,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">470k</span>
+    <span title="站点总字数">473k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">7:07</span>
+    <span title="站点阅读时长">7:10</span>
   </span>
 </div>
 
