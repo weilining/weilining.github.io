@@ -6,7 +6,7 @@
   <link href="https://weilining.github.io/atom.xml" rel="self"/>
   
   <link href="https://weilining.github.io/"/>
-  <updated>2021-10-25T16:41:06.000Z</updated>
+  <updated>2021-10-26T17:46:20.000Z</updated>
   <id>https://weilining.github.io/</id>
   
   <author>
@@ -15,6 +15,57 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>最有效Freenom续费</title>
+    <link href="https://weilining.github.io/319.html"/>
+    <id>https://weilining.github.io/319.html</id>
+    <published>2021-10-26T17:46:20.000Z</published>
+    <updated>2021-10-26T17:46:20.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="实战"><a href="#实战" class="headerlink" title="实战"></a>实战</h2><p>使用腾讯云函数 </p><p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2x1b2xvbmdmZWkvZnJlZW5vbQ==">luolongfei/freenom: Freenom 域名自动续期。Freenom domain name renews automatically. (github.com)<i class="fa fa-external-link-alt"></i></span></p>]]></content>
+    
+    
+    <summary type="html">默认</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>最有效hostloc自动签到</title>
+    <link href="https://weilining.github.io/318.html"/>
+    <id>https://weilining.github.io/318.html</id>
+    <published>2021-10-26T07:31:38.000Z</published>
+    <updated>2021-10-26T07:31:38.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="实测"><a href="#实测" class="headerlink" title="实测"></a>实测</h2><h3 id="油猴脚本"><a href="#油猴脚本" class="headerlink" title="油猴脚本"></a>油猴脚本</h3><p><span class="exturl" data-url="aHR0cHM6Ly9ncmVhc3lmb3JrLm9yZy96aC1DTi9zY3JpcHRzLzQxNDAwNQ==">https://greasyfork.org/zh-CN/scripts/414005<i class="fa fa-external-link-alt"></i></span></p><h3 id="私有GitHub-Action"><a href="#私有GitHub-Action" class="headerlink" title="私有GitHub Action"></a>私有GitHub Action</h3><p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tLzYyMzUyNDcxOC9Ib3N0bG9jQXV0b0dldFBvaW50cw==">623524718/HostlocAutoGetPoints (github.com)<i class="fa fa-external-link-alt"></i></span></p><h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><p>看完这帖才知道原来 cronjob 也可以白女票<img data-src="/318/007.gif" alt="img" loading="lazy"></p><p>现已加入 hostloc 签到脚本豪华午餐：</p><ul><li><span class="exturl" data-url="aHR0cHM6Ly9ob3N0bG9jLmNvbS90aHJlYWQtODQ2NjkyLTEtMS5odG1s">hostloc签到Python脚本 之 小鸡部署篇<i class="fa fa-external-link-alt"></i></span></li><li><span class="exturl" data-url="aHR0cHM6Ly9ob3N0bG9jLmNvbS9mb3J1bS5waHA/bW9kPXJlZGlyZWN0JmdvdG89ZmluZHBvc3QmcHRpZD04NDY1MjAmcGlkPTEwMzk3MTAx">hostloc签到Python脚本 之 docker 篇<i class="fa fa-external-link-alt"></i></span><br><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2p6bDEvaG9zdGxvYy1hdXRvLWdldC1wb2ludHMtZG9ja2VyL2Jsb2IvbWFpbi9Eb2NrZXJmaWxl">https://github.com/jzl1/hostloc- ... lob/main/Dockerfile<i class="fa fa-external-link-alt"></i></span>[/url]</li><li><span class="exturl" data-url="aHR0cHM6Ly9ob3N0bG9jLmNvbS9mb3J1bS5waHA/bW9kPXJlZGlyZWN0JmdvdG89ZmluZHBvc3QmcHRpZD04NDY1MjAmcGlkPTEwMzk4NTEw">hostloc签到Python脚本 之 Heroku 篇<i class="fa fa-external-link-alt"></i></span><br><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2xhb2d1aTIwMDgvaGVyb2t1X2hvc3Rsb2NfZ2V0X3BvaW50czI=">https://github.com/laogui2008/heroku_hostloc_get_points2<i class="fa fa-external-link-alt"></i></span></li><li><span class="exturl" data-url="aHR0cHM6Ly9ob3N0bG9jLmNvbS90aHJlYWQtODQ3MDA1LTEtMS5odG1s">hostloc签到脚本 之 HTML+JS 及 PHP 篇<i class="fa fa-external-link-alt"></i></span><br><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2lkZGRkZy9ob3N0bG9j">https://github.com/iddddg/hostloc<i class="fa fa-external-link-alt"></i></span></li><li><span class="exturl" data-url="aHR0cHM6Ly9ob3N0bG9jLmNvbS90aHJlYWQtODQ3NTY3LTEtMS5odG1s">hostloc签到Python脚本 之 云函数 篇<i class="fa fa-external-link-alt"></i></span><br><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3VrdXEvaG9zdGxvYy1hdXRvLWdldC1wb2ludHMtc2Nm">https://github.com/ukuq/hostloc-auto-get-points-scf<i class="fa fa-external-link-alt"></i></span></li><li><span class="exturl" data-url="aHR0cHM6Ly9ob3N0bG9jLmNvbS90aHJlYWQtODQ4OTE2LTEtMS5odG1s">hostloc签到Go脚本 之 云函数 篇<i class="fa fa-external-link-alt"></i></span></li><li><span class="exturl" data-url="aHR0cHM6Ly9ob3N0bG9jLmNvbS90aHJlYWQtODQ3NjAxLTEtMS5odG1s">hostloc签到脚本 之 油猴脚本 篇<i class="fa fa-external-link-alt"></i></span><br><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1hJVTIvVXNlclNjcmlwdA==">https://github.com/XIU2/UserScript<i class="fa fa-external-link-alt"></i></span><br><span class="exturl" data-url="aHR0cHM6Ly9ncmVhc3lmb3JrLm9yZy96aC1DTi9zY3JpcHRzLzQxNDAwNQ==">https://greasyfork.org/zh-CN/scripts/414005<i class="fa fa-external-link-alt"></i></span></li><li><span class="exturl" data-url="aHR0cHM6Ly9ob3N0bG9jLmNvbS90aHJlYWQtODQ4Nzg5LTEtMS5odG1s">hostloc签到JS脚本 之 浏览器 篇<i class="fa fa-external-link-alt"></i></span></li><li><span class="exturl" data-url="aHR0cHM6Ly9ob3N0bG9jLmNvbS90aHJlYWQtODQ4ODIyLTEtMS5odG1s">hostloc签到脚本 之 phantomjscloud 篇<i class="fa fa-external-link-alt"></i></span></li></ul><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p><span class="exturl" data-url="aHR0cHM6Ly9ob3N0bG9jLmNvbS90aHJlYWQtODQ4ODIyLTEtMS5odG1s">【0527更新】不需要VPS、不需要开电脑，无感知自动定时签到~-美国VPS综合讨论-全球主机交流论坛 - Powered by Discuz! (hostloc.com)<i class="fa fa-external-link-alt"></i></span></p>]]></content>
+    
+    
+    <summary type="html">默认</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>最有效硬件信息查看</title>
+    <link href="https://weilining.github.io/317.html"/>
+    <id>https://weilining.github.io/317.html</id>
+    <published>2021-10-26T03:24:10.000Z</published>
+    <updated>2021-10-26T03:24:10.000Z</updated>
+    
+    <content type="html"><![CDATA[<p> <span class="exturl" data-url="aHR0cHM6Ly93d3cuaHdpbmZvLmNvbS8=">https://www.hwinfo.com/<i class="fa fa-external-link-alt"></i></span></p><p><span class="exturl" data-url="aHR0cHM6Ly9wZWNtZC5uZXQvdGhyZWFkLTE4MC5odG0=">https://pecmd.net/thread-180.htm<i class="fa fa-external-link-alt"></i></span></p>]]></content>
+    
+    
+    <summary type="html">默认</summary>
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>最有效PE局域网访问共享文件</title>
@@ -296,57 +347,6 @@
     <updated>2021-10-22T18:31:47.000Z</updated>
     
     <content type="html"><![CDATA[<p> LTSB = Long-Term Servicing Branch 长期服务分支</p><p> LTSC = Long-Term Servicing Channel长期服务频道</p><p>​    说不准下一个真的是 D开头的单词 哈哈 </p><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p><span class="exturl" data-url="aHR0cHM6Ly9iYnMucGNiZXRhLmNvbS92aWV3dGhyZWFkLTE5MDgyMzctMS0xLmh0bWw=">讨论一下 win10 企业还有没有LTSD？-远景论坛-微软极客社区 (pcbeta.com)<i class="fa fa-external-link-alt"></i></span></p>]]></content>
-    
-    
-    <summary type="html">默认</summary>
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>全国高考数学一轮复习方法</title>
-    <link href="https://weilining.github.io/299.html"/>
-    <id>https://weilining.github.io/299.html</id>
-    <published>2021-10-22T03:23:02.000Z</published>
-    <updated>2021-10-22T03:23:02.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>过去高中两年数学学习的180多个点，高考只考80多，一个题4个考点，21+1个选做题，也就88个考点，通常大部分题考不到4个知识点。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">一轮复习：课本第一章到第N章</span><br><span class="line">二轮复习：专题一到N</span><br><span class="line">三轮复习：试卷一到N</span><br></pre></td></tr></table></figure><h2 id="近年高考数学特点"><a href="#近年高考数学特点" class="headerlink" title="近年高考数学特点"></a>近年高考数学特点</h2><p>近年高考数学命题工作很好的把握正确的政治方向，增强看齐意识，树立以人为本的高考价值观， 从关注分数到关注人的发展上命题；为了人的全面发展而考试。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">看齐意识：教育公平，要求山区的孩子和大都市的孩子拿到这份高考试卷之后感觉到同样亲切、同等面对。</span><br></pre></td></tr></table></figure><p>（1）高考数学是一份“常规”试卷，而不是单纯智力的测量；高考重心继续下移，区分度下降，从针对精英教育走向关注大众教育的导向明显；</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">常规：跟期末试卷一样</span><br></pre></td></tr></table></figure><p>（2）能力内涵不断扩大，加入了文化因素，价值理念增强，削弱工具价值取向；</p><p> （3）高考制度的改革，坚持稳字当头稳中有新，高考试题悄然变化，以确保平稳过渡。首先试题注重了“常规朴素”，可谓“光明磊落”“干干静静”，同时试题“稳中有新”，凸显高考改革及新课程改革理念的精髓；</p><p>（4）考查数学本质，课堂最基础最常见的知识、方法、操作及能力是重点，是学生12年来所受到数学教育的展示舞台。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">12年：从小学一年级到高三。</span><br></pre></td></tr></table></figure><h2 id="科学的高考数学复习方法"><a href="#科学的高考数学复习方法" class="headerlink" title="科学的高考数学复习方法"></a>科学的高考数学复习方法</h2><p>高考数学一轮复习要以知识内容为切入点，让数学知识网络化，关键是增强对数学整体的把握，至少对“高考”数学“试题”整体的把握为一轮复习的指导思想。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">物理难懂，化学难记，数学有做不完的题。高考数学单纯靠做题来复习，事倍功半</span><br></pre></td></tr></table></figure><p>（1）以重点知识内容为主导，查缺补漏在高一与高二期间对部分知识的疏忽，将知识掌握熟练成网络化。</p><p>（2）强化用数学通性通法解决问题，要做一定数量（适量）的题，总结反思收获与教训，培养答卷的得分感觉，关注会的知识，争取对的应考意识。</p><p>（3）结合高考数学难度比重，从基础题目30%（难度0.7～1）入手颗粒归仓，中等题目50%（难度0.4～0.7）风险归零，综合题目20%（难度0.2～0.4）树立信心狠抓落实，圆满完成高三年级上学期（一轮复习时间）的任务。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">难度0.7指70%人做对，1指人人做对。</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-    <summary type="html">默认</summary>
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>0xc0000225 解决办法</title>
-    <link href="https://weilining.github.io/298.html"/>
-    <id>https://weilining.github.io/298.html</id>
-    <published>2021-10-20T13:46:15.000Z</published>
-    <updated>2021-10-20T13:46:15.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="现象"><a href="#现象" class="headerlink" title="现象"></a>现象</h2><p>Win10 gpt转化mbr</p><h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><p>分一个<code>efi system partition </code>格式化为FAT16，把之前esp分区的文件导入即可。具体方法参考<a href="https://weilining.github.io/296.html">实战uefi+mbr win10 | Ln&#39;s Blog (weilining.github.io)</a></p>]]></content>
-    
-    
-    <summary type="html">默认</summary>
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>引导uefi&amp;legacy分区表mbr&amp;gpt任意搭配安装</title>
-    <link href="https://weilining.github.io/297.html"/>
-    <id>https://weilining.github.io/297.html</id>
-    <published>2021-10-20T13:29:41.000Z</published>
-    <updated>2021-10-20T13:29:41.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><p>推荐：win7和xp进diskgenius快速分区选mbr且用legacy引导；win8/10/11进diskgenius快速分区选GUID且用uefi引导。</p><h2 id="uefi-mbr"><a href="#uefi-mbr" class="headerlink" title="uefi+mbr"></a>uefi+mbr</h2><p>MBR分区可以UEFI启动，需要的是一个fat(FAT16)主分区并使用diskgenius修改该分区的分区标识为EF.</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bcdboot d:\windows &#x2F;f UEFI &#x2F;s c: &#x2F;l zh-cn #d是win系统，c是</span><br></pre></td></tr></table></figure><p>使用diskgenius工具-&gt;设置UEFI BIOS 启动项-&gt;增加，路径是</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\EFI\Microsoft\Boot\bootmgfw.efi</span><br></pre></td></tr></table></figure><p>把生成的<code>Boot0000:New Boot Enty</code>放到第一项</p><p><img data-src="/297/image-20211021021920768.png" alt="image-20211021021920768" loading="lazy"></p><h2 id="legacy-gpt"><a href="#legacy-gpt" class="headerlink" title="legacy+gpt"></a>legacy+gpt</h2><p>删不删EFI文件对legacy启动没有影响。</p><p>要legacy启动windows，在cmd窗口输入</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bcdboot c:\windows &#x2F;s c: &#x2F;f bios</span><br></pre></td></tr></table></figure><p>前提是windows系统是在c盘。</p><p>然后在uefi启动序列中将硬盘bios boot上移到第一位。（以硬盘型号作为启动项名称的启动项，而不是Windows Boot Manager或者UEFI开头的启动项。）</p><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p><span class="exturl" data-url="aHR0cHM6Ly96aC53aWtpcGVkaWEub3JnL3dpa2kvJUU1JTg4JTg2JUU1JThDJUJBJUU4JUExJUE4">分区表 - 维基百科，自由的百科全书 (wikipedia.org)<i class="fa fa-external-link-alt"></i></span></p><p><span class="exturl" data-url="aHR0cHM6Ly9zdXBlcnVzZXIuY29tL3F1ZXN0aW9ucy82NjQ1MTAvdWVmaS11c2Itb25seS1ib290cy13aGVuLWZvcm1hdHRlZC1mYXQzMg==">windows 8 - UEFI USB only boots when formatted FAT32 - Super User<i class="fa fa-external-link-alt"></i></span></p><p><span class="exturl" data-url="aHR0cHM6Ly93d3cuemhpaHUuY29tL3F1ZXN0aW9uLzIxNjcyODk1">UEFI 引导与 BIOS 引导在原理上有什么区别？ - 知乎 (zhihu.com)<i class="fa fa-external-link-alt"></i></span></p><p><span class="exturl" data-url="aHR0cHM6Ly96aC53aWtpcGVkaWEub3JnL3dpa2kvRUZJJUU3JUIzJUJCJUU3JUJCJTlGJUU1JTg4JTg2JUU1JThDJUJB">EFI系统分区 - 维基百科，自由的百科全书 (wikipedia.org)<i class="fa fa-external-link-alt"></i></span></p><p><span class="exturl" data-url="aHR0cHM6Ly96aC53aWtpcGVkaWEub3JnL3dpa2kvQklPUw==">BIOS - 维基百科，自由的百科全书 (wikipedia.org)<i class="fa fa-external-link-alt"></i></span></p><p><span class="exturl" data-url="aHR0cHM6Ly93d3cuemhpaHUuY29tL3F1ZXN0aW9uLzI4NDcxOTEz">UEFI+GPT与BIOS+MBR各自有什么优缺点？ - 知乎 (zhihu.com)<i class="fa fa-external-link-alt"></i></span></p><p><span class="exturl" data-url="aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvVW5pZmllZF9FeHRlbnNpYmxlX0Zpcm13YXJlX0ludGVyZmFjZSNDU01fYm9vdGluZw==">Unified Extensible Firmware Interface - Wikipedia<i class="fa fa-external-link-alt"></i></span></p><p><span class="exturl" data-url="aHR0cHM6Ly96aHVhbmxhbi56aGlodS5jb20vcC8zNjk3NjY5OA==">BIOS, UEFI, MBR, Legacy, GPT等概念整理 - 知乎 (zhihu.com)<i class="fa fa-external-link-alt"></i></span></p><p><span class="exturl" data-url="aHR0cHM6Ly96aHVhbmxhbi56aGlodS5jb20vcC8yNjA5ODUwOQ==">MBR与GPT - 知乎 (zhihu.com)<i class="fa fa-external-link-alt"></i></span></p><p><span class="exturl" data-url="aHR0cHM6Ly96aC53aWtpcGVkaWEub3JnL3dpa2kvR1VJRCVFNyVBMyU4MSVFNyVBMiU5RiVFNSU4OCU4NiVFNSU4OSVCMiVFOCVBMSVBOA==">全局唯一标识分区表 - 维基百科，自由的百科全书 (wikipedia.org)<i class="fa fa-external-link-alt"></i></span></p><p><span class="exturl" data-url="aHR0cDovL3d1eW91Lm5ldC9mb3J1bS5waHA/bW9kPXZpZXd0aHJlYWQmdGlkPTQyMDM3OQ==">MBR分区能够用UEFI模式启动系统么？ - UEFI启动区 - 无忧启动论坛 - Powered by Discuz! (wuyou.net)<i class="fa fa-external-link-alt"></i></span></p>]]></content>
     
     
     <summary type="html">默认</summary>
