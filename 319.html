@@ -34,11 +34,14 @@
 <meta property="og:site_name" content="Ln&#39;s Blog">
 <meta property="og:description" content="默认">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://weilining.github.io/319/68747470733a2f2f7a332e617831782e636f6d2f323032312f31302f31342f356c4d7765552e706e67.png">
+<meta property="og:image" content="https://weilining.github.io/319/68747470733a2f2f7a332e617831782e636f6d2f323032312f31302f31342f356c336f48662e706e67.png">
 <meta property="article:published_time" content="2021-10-26T17:46:20.000Z">
 <meta property="article:modified_time" content="2021-10-26T17:46:20.000Z">
 <meta property="article:author" content="Lining Wei">
 <meta property="article:tag" content="ACM,开发者,程序猿,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,互联网一切折腾">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://weilining.github.io/319/68747470733a2f2f7a332e617831782e636f6d2f323032312f31302f31342f356c4d7765552e706e67.png">
 
 
 <link rel="canonical" href="https://weilining.github.io/319.html">
@@ -158,7 +161,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E6%88%98"><span class="nav-number">1.</span> <span class="nav-text">实战</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E6%88%98"><span class="nav-number">1.</span> <span class="nav-text">实战</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E5%BC%8F%E4%BA%8C%EF%BC%9A%E9%80%9A%E8%BF%87%E8%85%BE%E8%AE%AF%E4%BA%91%E5%87%BD%E6%95%B0%EF%BC%88SCF%EF%BC%89%E9%83%A8%E7%BD%B2"><span class="nav-number">1.1.</span> <span class="nav-text">方式二：通过腾讯云函数（SCF）部署</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1%E3%80%81%E4%B8%8B%E8%BD%BD-SCF-%E7%89%88%E6%9C%AC%E7%9A%84%E5%8E%8B%E7%BC%A9%E5%8C%85"><span class="nav-number">1.1.1.</span> <span class="nav-text">1、下载 SCF 版本的压缩包</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2%E3%80%81%E5%88%9B%E5%BB%BA%E8%85%BE%E8%AE%AF%E4%BA%91%E5%87%BD%E6%95%B0"><span class="nav-number">1.1.2.</span> <span class="nav-text">2、创建腾讯云函数</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">1.2.</span> <span class="nav-text"></span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -268,7 +271,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>91</span>
+      <span>681</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -289,7 +292,15 @@
     <div class="post-body" itemprop="articleBody">
         <h2 id="实战"><a href="#实战" class="headerlink" title="实战"></a>实战</h2><p>使用腾讯云函数 </p>
 <p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2x1b2xvbmdmZWkvZnJlZW5vbQ==">luolongfei/freenom: Freenom 域名自动续期。Freenom domain name renews automatically. (github.com)<i class="fa fa-external-link-alt"></i></span></p>
-
+<h3 id="方式二：通过腾讯云函数（SCF）部署"><a href="#方式二：通过腾讯云函数（SCF）部署" class="headerlink" title="方式二：通过腾讯云函数（SCF）部署"></a>方式二：通过腾讯云函数（SCF）部署</h3><hr>
+<h4 id="1、下载-SCF-版本的压缩包"><a href="#1、下载-SCF-版本的压缩包" class="headerlink" title="1、下载 SCF 版本的压缩包"></a>1、下载 SCF 版本的压缩包</h4><p>此版本为特别版，支持通过腾讯云函数部署，并且将与主分支同步维护更新，推荐没有自己 VPS 服务器的用户使用，最新版本号为<code>v0.3.1_scf</code>。下载地址： <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2x1b2xvbmdmZWkvZnJlZW5vbS9yZWxlYXNlcy9kb3dubG9hZC92MC4zLjFfc2NmL2ZyZWVub20tMC4zLjFfc2NmLnppcA==">https://github.com/luolongfei/freenom/releases/download/v0.3.1_scf/freenom-0.3.1_scf.zip<i class="fa fa-external-link-alt"></i></span></p>
+<p>下载后你将得到一个 zip 文件，将 zip 文件放到你能找到的任意目录，后面我们将以 zip 文件的形式上传到腾讯云函数。</p>
+<h4 id="2、创建腾讯云函数"><a href="#2、创建腾讯云函数" class="headerlink" title="2、创建腾讯云函数"></a>2、创建腾讯云函数</h4><p>直接访问腾讯云函数控制台创建云函数： <span class="exturl" data-url="aHR0cHM6Ly9jb25zb2xlLmNsb3VkLnRlbmNlbnQuY29tL3NjZi9saXN0LWNyZWF0ZQ==">https://console.cloud.tencent.com/scf/list-create<i class="fa fa-external-link-alt"></i></span> ， 按照下图所示的说明进行创建。如果无法看清图片，可访问： <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2x1b2xvbmdmZWkvZnJlZW5vbS9ibG9iL21haW4vcmVzb3VyY2VzL3NjcmVlbnNob3Qvc2NmLnBuZw==">https://github.com/luolongfei/freenom/blob/main/resources/screenshot/scf.png<i class="fa fa-external-link-alt"></i></span> 或者 <span class="exturl" data-url="aHR0cHM6Ly96My5heDF4LmNvbS8yMDIxLzEwLzE0LzVsTXdlVS5wbmc=">https://z3.ax1x.com/2021/10/14/5lMweU.png<i class="fa fa-external-link-alt"></i></span> 查看原图。</p>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://z3.ax1x.com/2021/10/14/5lMweU.png"><img data-src="/319/68747470733a2f2f7a332e617831782e636f6d2f323032312f31302f31342f356c4d7765552e706e67.png" alt="scf01" loading="lazy"></a></p>
+<p>按照上图所示部署完成后，可以点击云函数的名称进入云函数管理画面，管理画面点击函数代码，然后往下翻可看到<code>部署</code>与<code>测试</code>按钮，点击<code>测试</code>，稍等几秒钟，即可看到输出日志， 根据输出日志判断配置以及部署是否正确。</p>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://z3.ax1x.com/2021/10/14/5l3oHf.png"><img data-src="/319/68747470733a2f2f7a332e617831782e636f6d2f323032312f31302f31342f356c336f48662e706e67.png" alt="scf02" loading="lazy"></a></p>
+<p><em>有关腾讯云函数部署的内容结束。</em></p>
+<h3 id=""><a href="#" class="headerlink" title=""></a></h3>
     </div>
 
     
@@ -378,13 +389,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">481k</span>
+    <span title="站点总字数">482k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">7:17</span>
+    <span title="站点阅读时长">7:18</span>
   </span>
 </div>
 
