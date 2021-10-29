@@ -170,6 +170,23 @@
   </entry>
   
   <entry>
+    <title>最有效腾讯云函数python __main__ 运行</title>
+    <link href="https://weilining.github.io/321.html"/>
+    <id>https://weilining.github.io/321.html</id>
+    <published>2021-10-27T03:13:53.000Z</published>
+    <updated>2021-10-27T03:13:53.000Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">最有效腾讯云函数if __name__ &#x3D;&#x3D; &quot;__main__&quot;:运行</span><br></pre></td></tr></table></figure><p>代码</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding: utf8 -*-</span></span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main_handler</span>(<span class="params">event, context</span>):</span></span><br><span class="line">    print(<span class="string">&quot;Received event: &quot;</span> + json.dumps(event, indent = <span class="number">2</span>)) </span><br><span class="line">    print(<span class="string">&quot;Received context: &quot;</span> + <span class="built_in">str</span>(context))</span><br><span class="line">    print(<span class="string">&quot;Hello world&quot;</span>)</span><br><span class="line">    <span class="keyword">return</span>(<span class="string">&quot;Hello World&quot;</span>)</span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    main_handler(<span class="string">&quot;&quot;</span>,<span class="string">&quot;&quot;</span>)</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+    <summary type="html">默认</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>最有效腾讯云函数修改环境变量</title>
     <link href="https://weilining.github.io/320.html"/>
     <id>https://weilining.github.io/320.html</id>
@@ -330,23 +347,6 @@
     <updated>2021-10-24T09:55:02.000Z</updated>
     
     <content type="html"><![CDATA[<h5 id="Windows-10-家庭版电子下载版"><a href="#Windows-10-家庭版电子下载版" class="headerlink" title="Windows 10 家庭版电子下载版"></a>Windows 10 家庭版电子下载版</h5><p>¥ 1,088.00</p><h5 id="Windows-10-专业版（仅限企业购买）"><a href="#Windows-10-专业版（仅限企业购买）" class="headerlink" title="Windows 10 专业版（仅限企业购买）"></a>Windows 10 专业版（仅限企业购买）</h5><p>¥ 1,817.00</p><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p><span class="exturl" data-url="aHR0cHM6Ly93d3cubWljcm9zb2Z0c3RvcmUuY29tLmNuL3NvZnR3YXJlL3dpbmRvd3M=">微软Windows官网-微软Win10系统下载-windows 10正版下载-微软官方商城 (microsoftstore.com.cn)<i class="fa fa-external-link-alt"></i></span></p><p><span class="exturl" data-url="aHR0cHM6Ly93d3cubWljcm9zb2Z0LmNvbS96aC1jbi93aW5kb3dzL2dldC13aW5kb3dzLTEw">获取 Windows 10 | Microsoft<i class="fa fa-external-link-alt"></i></span></p><p> 参考资料来源：<span class="exturl" data-url="aHR0cHM6Ly93d3cubWljcm9zb2Z0c3RvcmUuY29tLmNuL3dpbmRvd3Mvd2luZG93czEwcHJvL3AvanMwMzM0LTAwMDAw">Microsoft官网-windows10专业版<i class="fa fa-external-link-alt"></i></span></p><p>参考资料来源：<span class="exturl" data-url="aHR0cHM6Ly93d3cubWljcm9zb2Z0LmNvbS96aC1jbi93aW5kb3dzL2dldC13aW5kb3dzLTEw">Microsoft官网-windows购买<i class="fa fa-external-link-alt"></i></span></p>]]></content>
-    
-    
-    <summary type="html">默认</summary>
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>最有效win打开事件查看器，解决休眠</title>
-    <link href="https://weilining.github.io/310.html"/>
-    <id>https://weilining.github.io/310.html</id>
-    <published>2021-10-24T02:55:22.000Z</published>
-    <updated>2021-10-24T02:55:22.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>win快捷键输入</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">eventvwr</span><br></pre></td></tr></table></figure><p> Windows 日志 -&gt; 系统</p><p>找<code>Kernel-Power</code></p><ul><li>再次查看自己的设置<br><img data-src="https://img-blog.csdnimg.cn/20190429153935722.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly93b3J0aHNlbi5ibG9nLmNzZG4ubmV0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" loading="lazy"></li><li>从平衡进入后，显示从1处进入设置的不休眠模式，没有同步到这边，然后这里也设置从不休眠模式，问题解决 <img data-src="/310/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly93b3J0aHNlbi5ibG9nLmNzZG4ubmV0,size_16,color_FFFFFF,t_70.png" alt="在这里插入图片描述" loading="lazy"></li></ul>]]></content>
     
     
     <summary type="html">默认</summary>
