@@ -6,7 +6,7 @@
   <link href="https://weilining.github.io/atom.xml" rel="self"/>
   
   <link href="https://weilining.github.io/"/>
-  <updated>2021-10-31T18:38:15.000Z</updated>
+  <updated>2021-11-02T10:26:14.000Z</updated>
   <id>https://weilining.github.io/</id>
   
   <author>
@@ -15,6 +15,108 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>最有效GitHub Action 创建Release</title>
+    <link href="https://weilining.github.io/348.html"/>
+    <id>https://weilining.github.io/348.html</id>
+    <published>2021-11-02T10:26:14.000Z</published>
+    <updated>2021-11-02T10:26:14.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="实战"><a href="#实战" class="headerlink" title="实战"></a>实战</h2><p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3dlaWxpbmluZy9Ib3N0bG9jQXV0b0dldFBvaW50cw==">weilining/HostlocAutoGetPoints: 腾讯云函数和GitHub Action测试通过<i class="fa fa-external-link-alt"></i></span></p><h3 id="GitHub-Action"><a href="#GitHub-Action" class="headerlink" title="GitHub Action"></a>GitHub Action</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">name: CI</span><br><span class="line"></span><br><span class="line">on:</span><br><span class="line">  push:</span><br><span class="line">    # Sequence of patterns matched against refs&#x2F;tags</span><br><span class="line">    tags:</span><br><span class="line">      - &quot;v*&quot; # Push events to matching v*, i.e. v1.0, v20.15.10</span><br><span class="line">jobs:</span><br><span class="line">  build:</span><br><span class="line">    runs-on: ubuntu-latest</span><br><span class="line"></span><br><span class="line">    steps:</span><br><span class="line">      - name: Checkout source</span><br><span class="line">        uses: actions&#x2F;checkout@v1</span><br><span class="line">      - name: Build normal</span><br><span class="line">        run: |</span><br><span class="line"></span><br><span class="line">          zip -r mjjscf.zip .&#x2F;*</span><br><span class="line">      - name: Create Release</span><br><span class="line">        id: create_release</span><br><span class="line">        uses: monkeyWie&#x2F;create-release@master</span><br><span class="line">        env:</span><br><span class="line">          GITHUB_TOKEN: $&#123;&#123; secrets.GITHUB_TOKEN &#125;&#125;</span><br><span class="line">        with:</span><br><span class="line">          tag_name: $&#123;&#123; github.ref &#125;&#125;</span><br><span class="line">          release_name: Release $&#123;&#123; github.ref &#125;&#125;</span><br><span class="line">          draft: false</span><br><span class="line">          prerelease: false</span><br><span class="line"></span><br><span class="line">      - name: Upload Release normal windows</span><br><span class="line">        uses: actions&#x2F;upload-release-asset@v1.0.1</span><br><span class="line">        env:</span><br><span class="line">          GITHUB_TOKEN: $&#123;&#123; secrets.GITHUB_TOKEN &#125;&#125;</span><br><span class="line">        with:</span><br><span class="line">          upload_url: $&#123;&#123; steps.create_release.outputs.upload_url &#125;&#125; # This pulls from the CREATE RELEASE step above, referencing it&#39;s ID to get its outputs object, which include a &#96;upload_url&#96;. See this blog post for more info: https:&#x2F;&#x2F;jasonet.co&#x2F;posts&#x2F;new-features-of-github-actions&#x2F;#passing-data-to-future-steps</span><br><span class="line">          asset_path: .&#x2F;mjjscf.zip</span><br><span class="line">          asset_name: normal-$&#123;&#123; steps.create_release.outputs.tag &#125;&#125;-mjjscf.zip</span><br><span class="line">          asset_content_type: application&#x2F;zip</span><br></pre></td></tr></table></figure><h3 id="脚本"><a href="#脚本" class="headerlink" title="脚本"></a>脚本</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">git rm -r --cached .</span><br><span class="line">git add .</span><br><span class="line">git commit -m &quot;main&quot;</span><br><span class="line">git pull origin main</span><br><span class="line">git push origin main</span><br><span class="line"># 创建tag名为v1.0.8，并添加描述</span><br><span class="line">git tag -a &quot;v1.0.8&quot; -m &#39;发布v1.0.8版本</span><br><span class="line">修复了以下bug:</span><br><span class="line">1. xxxxx</span><br><span class="line">2. xxxxx&#39;</span><br><span class="line"># 把tag推到github上</span><br><span class="line">git push --tags</span><br></pre></td></tr></table></figure><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p><span class="exturl" data-url="aHR0cHM6Ly9zZWdtZW50ZmF1bHQuY29tL2EvMTE5MDAwMDAyMDg3Mzg2MA==">Github Actions 尝鲜 - SegmentFault 思否<i class="fa fa-external-link-alt"></i></span></p>]]></content>
+    
+    
+    <summary type="html">默认</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>最有效Python3本地模拟GitHub Actions secrets</title>
+    <link href="https://weilining.github.io/347.html"/>
+    <id>https://weilining.github.io/347.html</id>
+    <published>2021-11-02T07:24:05.000Z</published>
+    <updated>2021-11-02T07:24:05.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="实测"><a href="#实测" class="headerlink" title="实测"></a>实测</h2><p>GitHub Action 本地测试模拟</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export HOSTLOC_USERNAME&#x3D;daydayup</span><br></pre></td></tr></table></figure><h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import os</span><br><span class="line">usernames &#x3D; os.environ[&#39;HOSTLOC_USERNAME&#39;]</span><br></pre></td></tr></table></figure><p>本地运行正常</p><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p><span class="exturl" data-url="aHR0cHM6Ly93d3cuY25ibG9ncy5jb20vbHVvY29kZXMvcC8xMDY5MDI0Ni5odG1s">python设置环境变量(临时和永久) - LuoSpider - 博客园 (cnblogs.com)<i class="fa fa-external-link-alt"></i></span></p><p><span class="exturl" data-url="aHR0cHM6Ly93d3cuamlhbnNodS5jb20vcC81ZTU5Zjk5MzkyMmM=">Linux 设置永久环境变量 - 简书 (jianshu.com)<i class="fa fa-external-link-alt"></i></span></p>]]></content>
+    
+    
+    <summary type="html">默认</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>最有效更新Python</title>
+    <link href="https://weilining.github.io/346.html"/>
+    <id>https://weilining.github.io/346.html</id>
+    <published>2021-11-02T00:01:46.000Z</published>
+    <updated>2021-11-02T00:01:46.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><span class="exturl" data-url="aHR0cHM6Ly93d3cucHl0aG9uLm9yZy9kb3dubG9hZHMv">Download Python | Python.org<i class="fa fa-external-link-alt"></i></span></p>]]></content>
+    
+    
+    <summary type="html">默认</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Defaulting to user installation because normal site-packages is not writeable</title>
+    <link href="https://weilining.github.io/345.html"/>
+    <id>https://weilining.github.io/345.html</id>
+    <published>2021-11-01T20:15:46.000Z</published>
+    <updated>2021-11-01T20:15:46.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Python 3:</p><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python3 -m pip install [package_name]</span><br></pre></td></tr></table></figure><p>Python 2:</p><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python -m pip install [package_name]</span><br></pre></td></tr></table></figure><h2 id="实战"><a href="#实战" class="headerlink" title="实战"></a>实战</h2><h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pip3 install -i https:&#x2F;&#x2F;pypi.python.org&#x2F;simple python-telegram-bot&#x3D;&#x3D;</span><br><span class="line">pip install -i https:&#x2F;&#x2F;pypi.python.org&#x2F;simple python-telegram-bot&#x3D;&#x3D;</span><br></pre></td></tr></table></figure><p><img data-src="/345/image-20211102041659816.png" alt="image-20211102041659816" loading="lazy"></p><h3 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h3> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">python3 -m pip install -i https:&#x2F;&#x2F;pypi.python.org&#x2F;simple python-telegram-bot&#x3D;&#x3D;</span><br><span class="line">python -m pip install -i https:&#x2F;&#x2F;pypi.python.org&#x2F;simple python-telegram-bot&#x3D;&#x3D;</span><br></pre></td></tr></table></figure><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p><span class="exturl" data-url="aHR0cHM6Ly9zdGFja292ZXJmbG93LmNvbS9xdWVzdGlvbnMvNTk5OTcwNjUvcGlwLXB5dGhvbi1ub3JtYWwtc2l0ZS1wYWNrYWdlcy1pcy1ub3Qtd3JpdGVhYmxlLzY1MjkwNjM4">pip/python: normal site-packages is not writeable - Stack Overflow<i class="fa fa-external-link-alt"></i></span></p>]]></content>
+    
+    
+    <summary type="html">默认</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>最有效Python模块安装在文件</title>
+    <link href="https://weilining.github.io/344.html"/>
+    <id>https://weilining.github.io/344.html</id>
+    <published>2021-11-01T19:29:01.000Z</published>
+    <updated>2021-11-01T19:29:01.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>本文以安装 <code>numpy</code> 库为例：</p><ol><li>在本地终端中执行 <code>mkdir test-package</code> 命令，创建一个目录用于存放函数代码和依赖库。</li><li>执行以下命令，在该目录下安装 <code>numpy</code> 依赖库。</li></ol><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd test-package</span><br><span class="line">pip install numpy -t .</span><br></pre></td></tr></table></figure><ul><li>您可以使用 <code>pip freeze &gt; requirements.txt</code> 生成本地环境下所有依赖的 <code>requirements.txt</code> 文件。</li><li>在 IDE 的终端中执行 <code>pip install -r requirements.txt -t .</code> 即可根据 <code>requirements.txt</code> 的配置安装依赖包。</li></ul>]]></content>
+    
+    
+    <summary type="html">默认</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>最有效python批量安装模块</title>
+    <link href="https://weilining.github.io/343.html"/>
+    <id>https://weilining.github.io/343.html</id>
+    <published>2021-11-01T17:22:22.000Z</published>
+    <updated>2021-11-01T17:22:22.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>我相信很多小伙伴带有一个困扰，换了电脑或者重新装了系统之后，自己之前搭建的python环境和模块等等，都需要重新部署，特别费劲。有没有什么简单的方法呢？答案显而易见，请看下面介绍!</p><h1 id="1-创建requirements-txt文件，把所需要安装的模块都写进去"><a href="#1-创建requirements-txt文件，把所需要安装的模块都写进去" class="headerlink" title="1.创建requirements.txt文件，把所需要安装的模块都写进去"></a>1.创建requirements.txt文件，把所需要安装的模块都写进去</h1><p><img data-src="https://upload-images.jianshu.io/upload_images/18158347-7713e17d91dc65d3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/719/format/webp" alt="img" loading="lazy"></p><p>当然，版本号可以为空，为空时自动最新版本</p><h1 id="2-执行命令安装requirements-txt中的模块"><a href="#2-执行命令安装requirements-txt中的模块" class="headerlink" title="2.执行命令安装requirements.txt中的模块"></a>2.执行命令安装requirements.txt中的模块</h1><blockquote><p>pip install -r requirements.txt </p></blockquote><p>等待系统自动下载安装，简单快速</p><h1 id="3-已安装模块的导出"><a href="#3-已安装模块的导出" class="headerlink" title="3.已安装模块的导出"></a>3.已安装模块的导出</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">您可以使用 pip freeze &gt; requirements.txt 生成本地环境下所有依赖的 requirements.txt 文件。</span><br><span class="line">在 IDE 的终端中执行 pip install -r requirements.txt -t . 即可根据 requirements.txt 的配置安装依赖包。</span><br></pre></td></tr></table></figure><p>当然，会有一些小伙伴说，我模块安装的太多，一个一个写出来也挺费劲呢，有没有简单的方法呢？请看下面：</p><p>在终端执行命令：</p><blockquote><p>pip3 freeze &gt;requirements.txt</p></blockquote><p><img data-src="/343/image-20211102012409686.png" alt="image-20211102012409686" loading="lazy"></p><p>生成已安装的模块requirements.txt</p>]]></content>
+    
+    
+    <summary type="html">默认</summary>
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>最有效Heroku Yes</title>
@@ -85,13 +187,13 @@
   </entry>
   
   <entry>
-    <title>CleanMyMac X 4.8.9 中文破解版 (Mac优化清理工具) (TNT + 免激活)</title>
+    <title>苹果产品适用人群</title>
     <link href="https://weilining.github.io/338.html"/>
     <id>https://weilining.github.io/338.html</id>
     <published>2021-10-31T06:59:01.000Z</published>
-    <updated>2021-10-31T06:59:01.000Z</updated>
+    <updated>2021-11-02T06:59:01.000Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="软件介绍-功能"><a href="#软件介绍-功能" class="headerlink" title="软件介绍/功能"></a>软件介绍/功能</h3><p>CleanMyMac X 中文破解版只需两个简单步骤就可以把系统里那些乱七八糟的无用文件统统清理掉，节省宝贵的磁盘空间。cleanmymac x个人认为X代表界面上的最大升级，功能方面有更多增加，与最新macOS系统更加兼容，流畅地与系统性能更加结合，静默清理、记录更新、清洁缓存、快速和安全删除、卸载应用程序和清空回收站等重要功能。</p><h4 id="直观的状态中心"><a href="#直观的状态中心" class="headerlink" title="直观的状态中心"></a>直观的状态中心</h4><p>监控 Dropbox 的空间使用状态，内存增加了内存释放功能，可以进行测速，可以列出消耗电量比较大的应用，而且可以直接在里面关闭应用，可以查看CPU的使用率等</p><p><img data-src="/338/cleanmymac-features-01.jpg" alt="img" loading="lazy"></p><h4 id="一键智能清理"><a href="#一键智能清理" class="headerlink" title="一键智能清理"></a>一键智能清理</h4><p>一键智能化清理是对您的Mac进行一站式清理，自动扫描Mac上的所有文件， 包括：Mac系统清理、邮件应用程序清理、大&amp;旧型文件清理、 itunes文件清理、废纸篓清理等，人们只需要操作三个步骤：打开CleanMyMac—扫描—清理，完成mac智能化清理！</p><p><img data-src="/338/cleanmymac-features-02-1.png" alt="img" loading="lazy"></p><h4 id="清洁您的系统垃圾"><a href="#清洁您的系统垃圾" class="headerlink" title="清洁您的系统垃圾"></a>清洁您的系统垃圾</h4><p>当大多数人清理iTunes垃圾都是通过应用程序和清理附件文件，但并不能真正清洁iTunes垃圾。iTunes不仅仅是音乐还有iso数据等很多，所以人们手动不能完全清理干净，那么cleanmymac4就能够帮助人们解决难题。</p><p><img data-src="/338/cleanmymac-features-03.png" alt="img" loading="lazy"></p><h4 id="快速卸载无用软件"><a href="#快速卸载无用软件" class="headerlink" title="快速卸载无用软件"></a>快速卸载无用软件</h4><p>很多使用mac的人卸载应用程序的方法都是直接将图标拖至废纸篓，其实这个是没有任何作用的，卸载器可以帮助您扫描所有的应用程序信息，彻底卸载软件，无后顾之忧！</p><p><img data-src="/338/cleanmymac-features-04.png" alt="img" loading="lazy"></p><h4 id="维护系统"><a href="#维护系统" class="headerlink" title="维护系统"></a>维护系统</h4><p>Clean My Mac4中的系统优化，他不仅仅只是帮助您进行系统垃圾的清理，同时还能随时监测系统状态，提高检索效率，确保Mac性能最优化。运行脚本维护、修复磁盘权限、邮件加速、重启数据库服务、重建索引焦点、刷新DNS缓存等</p><p><img data-src="/338/CleanMyMac4-demo-11.jpg" alt="img" loading="lazy"></p><h4 id="清理大型文件和旧文件"><a href="#清理大型文件和旧文件" class="headerlink" title="清理大型文件和旧文件"></a>清理大型文件和旧文件</h4><p>Mac使用时间长了，就会有大量不用的大型文件或是陈旧文件，Cleanmymac3可以帮助人们监测出这些文件，会显示出文件的日期、类型等信息，您可以随时选中彻底清除，释放空间</p><p><img data-src="/338/CleanMyMac4-demo-16.jpg" alt="img" loading="lazy"></p><p><span class="exturl" data-url="aHR0cHM6Ly9jbGVhbm15bWFjLmNvbS8=">进入官方网站了解更多<i class="fa fa-external-link-alt"></i></span></p>]]></content>
+    <content type="html"><![CDATA[<p>声乐，剪辑师，视频制作者，设计师，装13，写java的。声乐Windows适配一坨屎，反过来工业软件苹果基本0，传统工科非计算机买苹果属于折磨，安卓全家桶到是可以，cad苹果没法用，码农要什么视频剪辑，脑子坏了，公司配苹果是为了展示优越啊，我给每个人配苹果，代表我比其他人优越，因为他没有性价比，因为他昂贵，笔记本我更喜欢ThinkPad稳重键盘手感好、轻。一代人品，二代技术，三代艺术。学生时代更需要苹果了，这对于择偶权是很大的帮助，就像孔雀为了求偶，会开屏，这是展示自己的实力，我觉得很有刚需，学生最应该就是买苹果，对于普遍收入较低的我国而言，苹果这种动不动能用的就上万的东西，确实就跟孔雀开屏一般，我国人均差了三倍吧，人家眼里很正常，实际在我们眼里差距不小。</p>]]></content>
     
     
     <summary type="html">默认</summary>
@@ -245,108 +347,6 @@
     <updated>2021-10-29T03:33:50.000Z</updated>
     
     <content type="html"><![CDATA[<p> 对比</p><table><thead><tr><th>Edge</th><th>Chrome</th></tr></thead><tbody><tr><td>右键搜索可以在右侧边栏显示结果</td><td>只能在新标签显示</td></tr><tr><td>下载任务还是在左下角显示</td><td>只有瞬间消失的通知</td></tr><tr><td>网页自动隐藏书签栏</td><td>刚刚跟进</td></tr><tr><td>集锦网页保存</td><td>无</td></tr><tr><td>网页截图自带</td><td>无</td></tr></tbody></table>]]></content>
-    
-    
-    <summary type="html">默认</summary>
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>单反无反区别</title>
-    <link href="https://weilining.github.io/328.html"/>
-    <id>https://weilining.github.io/328.html</id>
-    <published>2021-10-28T08:58:24.000Z</published>
-    <updated>2021-10-28T08:58:24.000Z</updated>
-    
-    <content type="html"><![CDATA[<p> 单反相机：单镜头反光相机</p><p><img data-src="/328/30aff098f7114ff3b764b4712442f014.jpeg" alt="img" loading="lazy"></p><p>无反相机</p><p><img data-src="/328/1e06c000680fa6cdf89ad.jpeg" alt="img" loading="lazy"></p><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p><span class="exturl" data-url="aHR0cHM6Ly93dWtvbmcudG91dGlhby5jb20vcXVlc3Rpb24vNjcwMTE4ODczNzc2MzYzOTU2NS8=">你知道单反相机为什么叫单反吗？和无反相机有什么大的区别？-头条问答 (toutiao.com)<i class="fa fa-external-link-alt"></i></span></p><p><span class="exturl" data-url="aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMUs1NDExUDdkaC8=">2分钟了解单反、无反和手机相机之间的区别_哔哩哔哩_bilibili<i class="fa fa-external-link-alt"></i></span></p><p><span class="exturl" data-url="aHR0cHM6Ly96aC53aWtpcGVkaWEub3JnL3dpa2kvJUU1JThEJTk1JUU5JTk1JTlDJUU1JThGJThEJUU1JTg1JTg5JUU3JTlCJUI4JUU2JTlDJUJB">单镜头反光相机 - 维基百科，自由的百科全书 (wikipedia.org)<i class="fa fa-external-link-alt"></i></span></p>]]></content>
-    
-    
-    <summary type="html">默认</summary>
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>最有效贴代码网站</title>
-    <link href="https://weilining.github.io/327.html"/>
-    <id>https://weilining.github.io/327.html</id>
-    <published>2021-10-27T17:16:14.000Z</published>
-    <updated>2021-10-27T17:16:14.000Z</updated>
-    
-    <content type="html"><![CDATA[<p> <span class="exturl" data-url="aHR0cHM6Ly9wYXN0ZWJpbi5jb20v">https://pastebin.com<i class="fa fa-external-link-alt"></i></span></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hey. Please post code or tracebacks using a pastebin rather then as plain text or. https:&#x2F;&#x2F;pastebin.com&#x2F; is quite popular, but there are many alternatives out there. Of course, for very short snippets, text is fine. Please at least format it as monospace in that case.</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-    <summary type="html">默认</summary>
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>最有效python镜像源</title>
-    <link href="https://weilining.github.io/326.html"/>
-    <id>https://weilining.github.io/326.html</id>
-    <published>2021-10-27T16:20:33.000Z</published>
-    <updated>2021-10-27T16:20:33.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>以<code>python-telegram-bot</code></p> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">python3 -m pip install  -i https:&#x2F;&#x2F;pypi.python.org&#x2F;simple python-telegram-bot&#x3D;&#x3D;13.7 -t .</span><br><span class="line">#官方</span><br><span class="line">python3 -m pip install  -i https:&#x2F;&#x2F;pypi.python.org&#x2F;simple python-telegram-bot&#x3D;&#x3D;</span><br><span class="line">#清华大学</span><br><span class="line">python3 -m pip install -i https:&#x2F;&#x2F;pypi.tuna.tsinghua.edu.cn&#x2F;simple python-telegram-bot&#x3D;&#x3D;</span><br><span class="line">#腾讯</span><br><span class="line">python3 -m pip install -i http:&#x2F;&#x2F;mirrors.cloud.tencent.com&#x2F;pypi&#x2F;simple python-telegram-bot&#x3D;&#x3D;</span><br><span class="line">#豆瓣</span><br><span class="line">python3 -m pip install -i http:&#x2F;&#x2F;pypi.douban.com&#x2F;simple python-telegram-bot&#x3D;&#x3D;</span><br><span class="line">#阿里云</span><br><span class="line">python3 -m pip install  -i http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;pypi&#x2F;simple python-telegram-bot&#x3D;&#x3D;</span><br><span class="line">#华中理工大学</span><br><span class="line">python3 -m pip install  -i http:&#x2F;&#x2F;pypi.hustunique.com&#x2F;simple python-telegram-bot&#x3D;&#x3D;</span><br><span class="line">#山东理工大学</span><br><span class="line">python3 -m pip install  -i http:&#x2F;&#x2F;pypi.sdutlinux.org&#x2F;simple python-telegram-bot&#x3D;&#x3D;</span><br><span class="line">#中国科学技术大学</span><br><span class="line">python3 -m pip install  -i http:&#x2F;&#x2F;pypi.mirrors.ustc.edu.cn&#x2F;simple python-telegram-bot&#x3D;&#x3D;</span><br></pre></td></tr></table></figure><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p><span class="exturl" data-url="aHR0cHM6Ly9wYWNrYWdpbmcucHl0aG9uLm9yZy90dXRvcmlhbHMvaW5zdGFsbGluZy1wYWNrYWdlcy8jaW5zdGFsbGluZy1mcm9tLW90aGVyLXNvdXJjZXM=">Installing Packages — Python Packaging User Guide<i class="fa fa-external-link-alt"></i></span></p>]]></content>
-    
-    
-    <summary type="html">默认</summary>
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>最有效python包版本查看</title>
-    <link href="https://weilining.github.io/325.html"/>
-    <id>https://weilining.github.io/325.html</id>
-    <published>2021-10-27T13:54:54.000Z</published>
-    <updated>2021-10-27T13:54:54.000Z</updated>
-    
-    <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1. pip list</span><br><span class="line"></span><br><span class="line">2. pip freeze</span><br><span class="line"></span><br><span class="line">3. pip show [package-name]</span><br></pre></td></tr></table></figure><h2 id="源中包版本"><a href="#源中包版本" class="headerlink" title="源中包版本"></a>源中包版本</h2><h3 id="本机源"><a href="#本机源" class="headerlink" title="本机源"></a>本机源</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pip install python-telegram-bot&#x3D;&#x3D;</span><br><span class="line">python3 -m pip install python-telegram-bot</span><br></pre></td></tr></table></figure><h3 id="官方源"><a href="#官方源" class="headerlink" title="官方源"></a>官方源</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install -i https:&#x2F;&#x2F;pypi.python.org&#x2F;simple python-telegram-bot&#x3D;&#x3D;</span><br></pre></td></tr></table></figure><h2 id="参考文件"><a href="#参考文件" class="headerlink" title="参考文件"></a>参考文件</h2><p><span class="exturl" data-url="aHR0cHM6Ly93d3cucnVub29iLmNvbS93M2Nub3RlL3B5dGhvbi1waXAtaW5zdGFsbC11c2FnZS5odG1s">Python pip 安装与使用 | 菜鸟教程 (runoob.com)<i class="fa fa-external-link-alt"></i></span></p><p><span class="exturl" data-url="aHR0cHM6Ly9wYWNrYWdpbmcucHl0aG9uLm9yZy90dXRvcmlhbHMvaW5zdGFsbGluZy1wYWNrYWdlcy8=">Installing Packages — Python Packaging User Guide<i class="fa fa-external-link-alt"></i></span></p>]]></content>
-    
-    
-    <summary type="html">默认</summary>
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>已知的 Telegram 的限制</title>
-    <link href="https://weilining.github.io/324.html"/>
-    <id>https://weilining.github.io/324.html</id>
-    <published>2021-10-27T12:17:53.000Z</published>
-    <updated>2021-10-27T12:17:53.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><span class="exturl" data-url="aHR0cHM6Ly9weXRob24tdGVsZWdyYW0tYm90LnJlYWR0aGVkb2NzLmlvL2VuL3N0YWJsZS90ZWxlZ3JhbS5jb25zdGFudHMuaHRtbCN0ZWxlZ3JhbS5jb25zdGFudHMuTUFYX01FU1NBR0VfTEVOR1RI">telegram.constants.MAX_MESSAGE_LENGTH<i class="fa fa-external-link-alt"></i></span></p><p>Bot发送信息长度4096个字节</p><p>● 账户</p><blockquote><p>用户名：形如 @TGgeek，5~32字符。</p></blockquote><p>相关内容：</p><ul><li><p>用户名(username)有什么用？一定要设置吗？如何设置？</p></li><li><p>如果我想使用的用户名（username）已被占用怎么办？</p></li><li><p>Telegram 账号 id 介绍说明</p></li><li><p>Telegram &quot;user id link&quot; 介绍说明</p></li><li><p>修改用户名(username)或者群组ID有次数限制吗？</p></li></ul><blockquote><p>签名：最多70字符。</p></blockquote><blockquote><p>名字长度：1~64字符。</p></blockquote><blockquote><p>姓氏长度：0~64字符。</p></blockquote><blockquote><p>账号自毁时限：如果账号在一定时间内不上线，到时限后会自动删除账号和所有资料，删除后不可找回，只能重新注册。默认时限为6个月，可以选择1个月、3个月、6个月或12个月。</p></blockquote><blockquote><p>滥发垃圾消息封禁：3天或更久。</p></blockquote><p>注：封禁时间与封禁次数有关，次数越多时间越久，最终会导致永久禁止主动发起私聊和在公开群组发言。</p><p>相关内容：</p><ul><li><p>发骚扰信息会怎么样？</p></li><li><p>TG使用 +86 手机号注册，无法私聊其他人？</p></li><li><p>为什么我发消息不成功并且消息右下角有红色感叹号？</p></li></ul><blockquote><p>一个账号可以加入的频道和超级群组数量：包括您拥有的频道和群组在内，一共可以加入最多500个。</p></blockquote><blockquote><p>可保存的 GIF 数量：最多200个。</p></blockquote><blockquote><p>视频头像时长：最多10秒。</p></blockquote><blockquote><p>群组和频道创建数量：一天最多50个。</p></blockquote><p>注：一个账号所拥有的公开群组和公开频道的总数量最多10个。</p><blockquote><p>官方客户端可登录账户数：最多三个。</p></blockquote><p>相关内容：电脑版 Telegram 多开/登录多账号</p><p>● 对话和群组</p><blockquote><p>群组成员：最多20万人。</p></blockquote><blockquote><p>群组内管理员数量：最多50个。</p></blockquote><blockquote><p>群组内机器人数量：最多20个。</p></blockquote><blockquote><p>聊天主列表可置顶的对话数量：最多5个对话或频道+5个加密对话。</p></blockquote><blockquote><p>群组名称和简介：最多255字符。</p></blockquote><blockquote><p>照片和视频自毁时限：可设置1~60秒。</p></blockquote><blockquote><p>近期操作可查看的时间范围：近2日。</p></blockquote><blockquote><p>单条消息可at成员总数：最多50个，超过则不会发出通知。</p></blockquote><blockquote><p>群组内可见消息数量：最多100万。</p></blockquote><p>注：在群组搜索框输入 + 或 - 可以查看群组中现有消息数。</p><blockquote><p>置顶消息数量：无上限。</p></blockquote><blockquote><p>查看群组统计数据的最低人数：500人。</p></blockquote><blockquote><p>群组用户名更改保留时限：约15~30分钟。</p></blockquote><blockquote><p>设置群组贴纸的最低人数：100人以上。</p></blockquote><p>● 语音聊天</p><blockquote><p>参与人数：无上限。</p></blockquote><blockquote><p>视频功能（相机及屏幕共享）：只有前30个参与者可以开启相机及屏幕共享，之后的参与者只能进行语音聊天。</p></blockquote><p>注：Telegram 承诺此后更新会增加此数量。</p><blockquote><p>标题长度：最多64字符。</p></blockquote><blockquote><p>预定时间范围：最多7天。</p></blockquote><p>● 频道</p><blockquote><p>可拥有的公开群组和公开频道数量：最多10个。</p></blockquote><blockquote><p>用户名长度：5~32字符。</p></blockquote><blockquote><p>频道名称和简介：最多255字符。</p></blockquote><blockquote><p>频道管理员数量：包括机器人管理员在内，最多50个。</p></blockquote><blockquote><p>帖子编辑时限：无限制，但如果频道链接了讨论组，则不会在群组中更新超过2周的帖子。</p></blockquote><blockquote><p>频道订阅者数量：无限制。</p></blockquote><blockquote><p>频道管理员可见的订阅者：200个。</p></blockquote><blockquote><p>频道注销：超过1k订阅者的频道只能被 Telegram 官方删除。</p></blockquote><blockquote><p>不订阅的情况下对私密频道访问：一天最多5分钟。</p></blockquote><p>相关内容：在不加入私密频道时访问频道内容。</p><blockquote><p>可邀请用户：最多200个。</p></blockquote><blockquote><p>查看频道统计数据的最低人数：50人。</p></blockquote><blockquote><p>频道用户名更改保留时限：约15~30分钟。</p></blockquote><p>● 消息</p><blockquote><p>单条消息长度：最多4096字符。</p></blockquote><blockquote><p>媒体消息描述：最多1024字符。</p></blockquote><p>注：即发送照片或视频等媒体文件时，附加的文本描述内容。</p><blockquote><p>上传文件大小：最多2G。</p></blockquote><blockquote><p>视频消息时长：最多1分钟。</p></blockquote><blockquote><p>单条消息使用相册模式发布图片或视频数量：最多10个。</p></blockquote><blockquote><p>预定消息数量：最多100个。</p></blockquote><blockquote><p>预定时间范围：最多365天。</p></blockquote><p>● 文件夹</p><blockquote><p>文件夹数量：最多10个。</p></blockquote><blockquote><p>文件夹内置顶对话数量：最多100个。</p></blockquote><p>● 附近的人</p><blockquote><p>可见范围：约12km。</p></blockquote><blockquote><p>可见用户数量：最多100人。</p></blockquote><blockquote><p>可见基于地理位置的聊天：最多10个最近的聊天。</p></blockquote><p>● 机器人</p><blockquote><p>可由 @BotFather 生成的机器人数量：最多20个。</p></blockquote><p>相关内容：我能创建多少机器人？ </p><blockquote><p>机器人用户名长度：5~32字符。</p></blockquote><blockquote><p>机器人信息长度：最多120字符。</p></blockquote><p>注：机器人信息即初始和机器人对话时显示的提示框内容。</p><blockquote><p>机器人简介长度：最多512字符。</p></blockquote><p>注：简介和普通账号的签名类似。</p><blockquote><p>使用 BotAPI 的文件限制：上传最大50MB，下载最大20MB。</p></blockquote><blockquote><p>转发消息数量：最多每小时2000条。</p></blockquote><blockquote><p>键盘按钮数量：最多100个。</p></blockquote><blockquote><p>消息格式数据：最多10KB。</p></blockquote><blockquote><p>消息频率：每秒最多30条；对于公开群组和频道的机器人来说，每分钟最多20条。可由 @BotSupport 提升该数量。</p></blockquote><blockquote><p>API 请求频率：每秒最多30次请求，可由 @BotSupport 提升该数量。</p></blockquote><blockquote><p>机器人命令数量：最多100个。指在 @BotFather 中可设置在命令列表显示出的命令，而不是代码中的命令数量。</p></blockquote><blockquote><p>机器人命令长度：1~32字符。</p></blockquote><blockquote><p>机器人命令描述长度：2~256字符。</p></blockquote><blockquote><p>机器人 /start 命令 payload 长度：最多64字符。</p></blockquote><blockquote><p>机器人警告消息长度：最多200字符。</p></blockquote><blockquote><p>机器人用户名更改保留时限：最多每天200个，且同时包括账户用户名和机器人用户名在内。</p></blockquote><blockquote><p>inline 命令结果数量：最多50个。</p></blockquote><p>相关内容：机器人 inline 模式是什么？怎么使用？</p><p>● 搜索</p><blockquote><p>全局搜索结果：最多10个，在 Android 上是3个。</p></blockquote><blockquote><p>全局搜索最小搜索长度：至少4字符。</p></blockquote><p>● 贴纸</p><blockquote><p>添加的贴纸包数量：最多200个。</p></blockquote><blockquote><p>收藏的贴纸数量：最多5个。</p></blockquote><blockquote><p>贴纸包中的贴纸数量：静态最多120个，动态最多50个。</p></blockquote><blockquote><p>贴纸尺寸：对于静态来说，一边等于512像素，另一边等于或小于512像素；对于动态来说需严格为512*512像素。</p></blockquote><blockquote><p>动态贴纸时长：最多3秒。</p></blockquote><blockquote><p>贴纸大小：静态最大512KB，动态最大64KB。</p></blockquote><blockquote><p>FPS：30或60。</p></blockquote><blockquote><p>贴纸包名称长度：最大64字符。</p></blockquote><p>● Telegraph</p><blockquote><p>账号数量：最多5个。</p></blockquote><p>注：指使用 @telegraph 创建的账户。若直接使用 <span class="exturl" data-url="aHR0cHM6Ly90ZWxlZ3JhLnBoLw==">https://telegra.ph<i class="fa fa-external-link-alt"></i></span> 可以匿名发表文章，但是删除 cookie 后不可再编辑。</p><blockquote><p>文章大小：最多64KiB。</p></blockquote><p>● 其他</p><blockquote><p>视频头像属性：800*800像素，最大2MB。</p></blockquote><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p><span class="exturl" data-url="aHR0cHM6Ly9weXRob24tdGVsZWdyYW0tYm90LnJlYWR0aGVkb2NzLmlvL2VuL3N0YWJsZS90ZWxlZ3JhbS5jb25zdGFudHMuaHRtbCN0ZWxlZ3JhbS5jb25zdGFudHMuTUFYX01FU1NBR0VfTEVOR1RI">telegram.constants Module — python-telegram-bot 13.7 documentation<i class="fa fa-external-link-alt"></i></span></p>]]></content>
-    
-    
-    <summary type="html">默认</summary>
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>最有效TG推送不显示解决办法</title>
-    <link href="https://weilining.github.io/323.html"/>
-    <id>https://weilining.github.io/323.html</id>
-    <published>2021-10-27T05:12:06.000Z</published>
-    <updated>2021-10-27T05:12:06.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><p>TGBOT不显示<code>.</code>把点用逗号<code>,</code>代替即可</p><h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><p>python3</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">result=result.replace(<span class="string">&#x27;.&#x27;</span>, <span class="string">&#x27;,&#x27;</span>) + <span class="string">&#x27;\n&#x27;</span></span><br></pre></td></tr></table></figure><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tLzYyMzUyNDcxOC9Ib3N0bG9jQXV0b0dldFBvaW50cw==">623524718/HostlocAutoGetPoints (github.com)<i class="fa fa-external-link-alt"></i></span></p>]]></content>
     
     
     <summary type="html">默认</summary>
