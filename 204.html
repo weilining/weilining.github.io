@@ -26,7 +26,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/blue/pace-theme-bounce.css">
   <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"weilining.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.8.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/config.min.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"weilining.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.8.2","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.2/source/js/config.min.js"></script>
 <meta name="description" content="默认">
 <meta property="og:type" content="article">
 <meta property="og:title" content="如何在页脚养鱼">
@@ -82,7 +82,7 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <h1 class="site-title">Ln's Blog</h1>
+      <p class="site-title">Ln's Blog</p>
       <i class="logo-line"></i>
     </a>
       <p class="site-subtitle" itemprop="description">有朋自远方来，不亦乐乎</p>
@@ -177,7 +177,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">356</span>
+          <span class="site-state-item-count">358</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -281,7 +281,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>2k</span>
+      <span>1.9k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -302,13 +302,13 @@
     <div class="post-body" itemprop="articleBody">
         <h2 id="butterfly-主题的引入方法"><a href="#butterfly-主题的引入方法" class="headerlink" title="butterfly 主题的引入方法"></a>butterfly 主题的引入方法</h2><p>效果就在页脚，是不是很想要？这里简述 butterfly 主题的引入方法，其他主题类似，实在不行建议更换 butterfly 主题</p>
 <p>！！！不要修改源码，若已修改请恢复原样<br>在主题配置的 <code>inject</code> 引入 js: <span class="exturl" data-url="aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL3hpYWJvMi9DRE5AbGF0ZXN0L2Zpc2hlcy5qcw==">https://cdn.jsdelivr.net/gh/xiabo2/CDN@latest/fishes.js<i class="fa fa-external-link-alt"></i></span> <strong>即可</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">- &lt;script src&#x3D;&quot;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;gh&#x2F;xiabo2&#x2F;CDN@latest&#x2F;fishes.js&quot;&gt;&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">- &lt;script src=&quot;https://cdn.jsdelivr.net/gh/xiabo2/CDN@latest/fishes.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
 
 <p>调整页脚阴影透明度 <code>themes\butterfly\source\css\_layout\footer.styl</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">background-color: alpha($dark-black, .1)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">background-color: alpha($dark-black, .1)</span><br></pre></td></tr></table></figure>
 
 <p>文章页页脚宽度多余导致出现横向滚动条，新建 <code>xxx.css</code>，添加以下 css 引入 <code>inject</code> 即可（若设置了全局背景去掉固定高度 <code>height: 160px</code> 引入即可）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;* 鱼塘固定宽度 *&#x2F;</span><br><span class="line">canvas:not(#ribbon-canvas), #web_bg &#123;</span><br><span class="line">    margin-bottom: -0.5rem;</span><br><span class="line">    display: block;</span><br><span class="line">    width: 100%;</span><br><span class="line">    height: 160px</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">/* 鱼塘固定宽度 */</span><br><span class="line">canvas:not(#ribbon-canvas), #web_bg &#123;</span><br><span class="line">    margin-bottom: -0.5rem;</span><br><span class="line">    display: block;</span><br><span class="line">    width: 100%;</span><br><span class="line">    height: 160px</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <span id="more"></span>
 
@@ -316,12 +316,12 @@
 <li><p>先将扒来的 code 转为 pug</p>
 <p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://cdn.jsdelivr.net/gh/xiabor/img/i/Snipaste_2020-07-05_10-36-45.png"><img data-src="/204/Snipaste_2020-07-05_10-36-45.png" alt="htmltopug" loading="lazy"></a></p>
 <p>写进<code>\themes\butterfly\layout\includes\footer.pug</code>末尾</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">#jsi-flying-fish-container.container</span><br><span class="line">   script(src&#x3D;&#39;js&#x2F;fish.js&#39;)</span><br><span class="line">style.</span><br><span class="line"></span><br><span class="line">       @media only screen and (max-width: 767px)&#123;</span><br><span class="line">       #sidebar_search_box input[type&#x3D;text]&#123;width:calc(100% - 24px)&#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">#jsi-flying-fish-container.container</span><br><span class="line">   script(src=&#x27;js/fish.js&#x27;)</span><br><span class="line">style.</span><br><span class="line"></span><br><span class="line">       @media only screen and (max-width: 767px)&#123;</span><br><span class="line">       #sidebar_search_box input[type=text]&#123;width:calc(100% - 24px)&#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></li>
 <li><p>然后在 <code>inject</code> 引入 js: <span class="exturl" data-url="aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL3hpYWJvMi9DRE5AbGF0ZXN0L2Zpc2guanM=">https://cdn.jsdelivr.net/gh/xiabo2/CDN@latest/fish.js<i class="fa fa-external-link-alt"></i></span></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">- &lt;script src&#x3D;&quot;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;gh&#x2F;xiabo2&#x2F;CDN@latest&#x2F;fish.js&quot;&gt;&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">- &lt;script src=&quot;https://cdn.jsdelivr.net/gh/xiabo2/CDN@latest/fish.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure></li>
 <li><p>引入之后效果如下，页脚太高，<code>themes\butterfly\source\css\_layout\footer.styl</code> 调整下 css 即可 (补充：调整页脚阴影透明度为 0.1)<br><a target="_blank" rel="noopener external nofollow noreferrer" href="https://cdn.jsdelivr.net/gh/xiabor/img/i/fish.gif"><img data-src="/204/fish.gif" alt="页脚跳动的鱼" loading="lazy"></a></p>
 <p>页脚跳动的鱼</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">#footer-wrap</span><br><span class="line">   position: absolute</span><br><span class="line">   padding: 1.2rem 1rem 1.4rem</span><br><span class="line">   color: $light-grey</span><br><span class="line">   text-align: center</span><br><span class="line">   left: 0</span><br><span class="line">   right: 0</span><br><span class="line">   top:0</span><br><span class="line">   bottom: 0</span><br><span class="line"></span><br><span class="line">   #footer</span><br><span class="line">     if hexo-config(&#39;footer_bg&#39;) !&#x3D; false</span><br><span class="line">       &amp;:before</span><br><span class="line">       position: absolute</span><br><span class="line">       width: 100%</span><br><span class="line">       height: 100%</span><br><span class="line">       background-color: alpha($dark-black, .1)</span><br><span class="line">       content: &#39;&#39;</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">#footer-wrap</span><br><span class="line">   position: absolute</span><br><span class="line">   padding: 1.2rem 1rem 1.4rem</span><br><span class="line">   color: $light-grey</span><br><span class="line">   text-align: center</span><br><span class="line">   left: 0</span><br><span class="line">   right: 0</span><br><span class="line">   top:0</span><br><span class="line">   bottom: 0</span><br><span class="line"></span><br><span class="line">   #footer</span><br><span class="line">     if hexo-config(&#x27;footer_bg&#x27;) != false</span><br><span class="line">       &amp;:before</span><br><span class="line">       position: absolute</span><br><span class="line">       width: 100%</span><br><span class="line">       height: 100%</span><br><span class="line">       background-color: alpha($dark-black, .1)</span><br><span class="line">       content: &#x27;&#x27;</span><br></pre></td></tr></table></figure></li>
 <li><p>另外，还是会出现报错，<br><a target="_blank" rel="noopener external nofollow noreferrer" href="https://cdn.jsdelivr.net/gh/xiabor/img/i/fish20200702225229.png"><img data-src="/204/fish20200702225229.png" alt="报错" loading="lazy"></a></p>
 <p>报错</p>
 <p>引用 JS 报错 Uncaught ReferenceError: $ is not defined<br>原因一：未引用 jquery 库 jquery.min.js 文件，或者说路径错误；</p>
@@ -429,13 +429,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">561k</span>
+    <span title="站点总字数">544k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">8:30</span>
+    <span title="站点阅读时长">8:14</span>
   </span>
 </div>
 
@@ -452,16 +452,16 @@
   <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js" integrity="sha256-EdPgYcPk/IIrw7FYeuJQexva49pVRZNmt3LculEr7zM=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/comments.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/utils.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/motion.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/next-boot.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.2/source/js/comments.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.2/source/js/utils.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.2/source/js/motion.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.2/source/js/next-boot.min.js"></script>
 
   
 <script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/third-party/search/local-search.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.2/source/js/third-party/search/local-search.min.js"></script>
 
 
 
 
-  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/third-party/pace.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.2/source/js/third-party/pace.min.js"></script>
 
   
 
@@ -470,7 +470,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/quicklink@2.2.0/dist/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>
   <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"ignores":null,"url":"https://weilining.github.io/204.html"}</script>
-  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/third-party/quicklink.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.2/source/js/third-party/quicklink.min.js"></script>
 
 
 <script class="next-config" data-name="valine" type="application/json">{"enable":true,"appId":"Bu6sP4depeiGP22PIFqz0SmJ-MdYXbMMI","appKey":"jYGDeeOBkTqvrUJDEmqj83q7","serverURLs":"https://bu6sp4de.api.lncldglobal.com","placeholder":"Just go go","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"lang":null,"visitor":true,"comment_count":true,"recordIP":false,"enableQQ":false,"requiredFields":[],"el":"#valine-comments","path":"/204.html"}</script>

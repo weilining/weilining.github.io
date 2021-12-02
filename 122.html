@@ -26,7 +26,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/blue/pace-theme-bounce.css">
   <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"weilining.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.8.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/config.min.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"weilining.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.8.2","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.2/source/js/config.min.js"></script>
 <meta name="description" content="默认">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Github 通过 ImgBot 优化图片的方法">
@@ -87,7 +87,7 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <h1 class="site-title">Ln's Blog</h1>
+      <p class="site-title">Ln's Blog</p>
       <i class="logo-line"></i>
     </a>
       <p class="site-subtitle" itemprop="description">有朋自远方来，不亦乐乎</p>
@@ -182,7 +182,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">356</span>
+          <span class="site-state-item-count">358</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -286,7 +286,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>2.3k</span>
+      <span>2.2k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -329,7 +329,7 @@
 <p>目前有三个配置项：</p>
 <ul>
 <li><p>提交 PR 的频率：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;schedule&quot;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;schedule&quot;</span><br></pre></td></tr></table></figure>
 
 <ul>
 <li>选项：<code>daily</code> | <code>weekly</code> | <code>monthly</code></li>
@@ -348,14 +348,14 @@
 </ul>
 <p>以下是较为完整的例子：</p>
 <p><a href="javascript:void(0);" rel="external nofollow noreferrer"><img data-src="/122/copycode-20201120014050171.gif" alt="复制代码" loading="lazy"></a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;schedule&quot;: &quot;daily&quot;, &#x2F;&#x2F; daily|weekly|monthly</span><br><span class="line">    &quot;ignoredFiles&quot;: [</span><br><span class="line">        &quot;*.jpg&quot;,                   &#x2F;&#x2F; ignore by extension</span><br><span class="line">        &quot;image1.png&quot;,              &#x2F;&#x2F; ignore by filename</span><br><span class="line">        &quot;public&#x2F;special_images&#x2F;*&quot;, &#x2F;&#x2F; ignore by folderpath</span><br><span class="line">    ],</span><br><span class="line">    &quot;aggressiveCompression&quot;: &quot;true&quot; &#x2F;&#x2F; true|false</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;schedule&quot;: &quot;daily&quot;, // daily|weekly|monthly</span><br><span class="line">    &quot;ignoredFiles&quot;: [</span><br><span class="line">        &quot;*.jpg&quot;,                   // ignore by extension</span><br><span class="line">        &quot;image1.png&quot;,              // ignore by filename</span><br><span class="line">        &quot;public/special_images/*&quot;, // ignore by folderpath</span><br><span class="line">    ],</span><br><span class="line">    &quot;aggressiveCompression&quot;: &quot;true&quot; // true|false</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p><a href="javascript:void(0);" rel="external nofollow noreferrer"><img data-src="/122/copycode-20201120014050171.gif" alt="复制代码" loading="lazy"></a></p>
 <p>还有更多配置项，完整说明请见<span class="exturl" data-url="aHR0cHM6Ly9pbWdib3QubmV0L2RvY3MvI2NvbmZpZ3VyYXRpb24=">官方文档<i class="fa fa-external-link-alt"></i></span>。</p>
 <h2 id="Github-Actions自动合并ImgBot的pr"><a href="#Github-Actions自动合并ImgBot的pr" class="headerlink" title="Github Actions自动合并ImgBot的pr"></a>Github Actions自动合并ImgBot的pr</h2><p>上传图片后，很快 ImgBot 就会对图片进行压缩，并在 github 的仓库中发起一个 pull request。手动点击合并按钮对我来说实在是太麻烦了，能不能自动搞呢。有了 actions 没啥不能的，</p>
 <p>在 github actions 配置新增一个文件 .github/workflows/merge.yml。</p>
 <p><a href="javascript:void(0);" rel="external nofollow noreferrer"><img data-src="/122/copycode-20201120014050171.gif" alt="复制代码" loading="lazy"></a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">name: Merge Imgbot</span><br><span class="line"></span><br><span class="line">on:</span><br><span class="line">  pull_request:</span><br><span class="line">    types:</span><br><span class="line">      - opened</span><br><span class="line">      - ready_for_review</span><br><span class="line">  pull_request_review:</span><br><span class="line">    types:</span><br><span class="line">      - submitted</span><br><span class="line">  status: &#123;&#125;</span><br><span class="line"></span><br><span class="line">jobs:</span><br><span class="line">  automerge:</span><br><span class="line">    runs-on: ubuntu-latest</span><br><span class="line">    steps:</span><br><span class="line">      - name: automerge</span><br><span class="line">        uses: &quot;pascalgn&#x2F;automerge-action@v0.6.1&quot;</span><br><span class="line">        env:</span><br><span class="line">          GITHUB_TOKEN: &quot;$&#123;&#123; secrets.GIT_MERGE_TOKEN &#125;&#125;&quot;</span><br><span class="line">          MERGE_LABELS: &quot;&quot;</span><br><span class="line">          MERGE_METHOD: &quot;squash&quot;</span><br><span class="line">          MERGE_COMMIT_MESSAGE: &quot;pull-request-description&quot;</span><br><span class="line">          MERGE_FORKS: &quot;false&quot;</span><br><span class="line">          MERGE_RETRIES: &quot;2&quot;</span><br><span class="line">          MERGE_RETRY_SLEEP: &quot;10000&quot;</span><br><span class="line">          UPDATE_METHOD: &quot;rebase&quot;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">name: Merge Imgbot</span><br><span class="line"></span><br><span class="line">on:</span><br><span class="line">  pull_request:</span><br><span class="line">    types:</span><br><span class="line">      - opened</span><br><span class="line">      - ready_for_review</span><br><span class="line">  pull_request_review:</span><br><span class="line">    types:</span><br><span class="line">      - submitted</span><br><span class="line">  status: &#123;&#125;</span><br><span class="line"></span><br><span class="line">jobs:</span><br><span class="line">  automerge:</span><br><span class="line">    runs-on: ubuntu-latest</span><br><span class="line">    steps:</span><br><span class="line">      - name: automerge</span><br><span class="line">        uses: &quot;pascalgn/automerge-action@v0.6.1&quot;</span><br><span class="line">        env:</span><br><span class="line">          GITHUB_TOKEN: &quot;$&#123;&#123; secrets.GIT_MERGE_TOKEN &#125;&#125;&quot;</span><br><span class="line">          MERGE_LABELS: &quot;&quot;</span><br><span class="line">          MERGE_METHOD: &quot;squash&quot;</span><br><span class="line">          MERGE_COMMIT_MESSAGE: &quot;pull-request-description&quot;</span><br><span class="line">          MERGE_FORKS: &quot;false&quot;</span><br><span class="line">          MERGE_RETRIES: &quot;2&quot;</span><br><span class="line">          MERGE_RETRY_SLEEP: &quot;10000&quot;</span><br><span class="line">          UPDATE_METHOD: &quot;rebase&quot;</span><br></pre></td></tr></table></figure>
 
 <p><a href="javascript:void(0);" rel="external nofollow noreferrer"><img data-src="/122/copycode-20201120014050171.gif" alt="复制代码" loading="lazy"></a></p>
 <p>这个 actions 配置中用到了 pascalgn/automerge-action，简化了对于 pull request 的操作。 </p>
@@ -456,13 +456,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">561k</span>
+    <span title="站点总字数">544k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">8:30</span>
+    <span title="站点阅读时长">8:14</span>
   </span>
 </div>
 
@@ -479,16 +479,16 @@
   <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js" integrity="sha256-EdPgYcPk/IIrw7FYeuJQexva49pVRZNmt3LculEr7zM=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/comments.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/utils.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/motion.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/next-boot.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.2/source/js/comments.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.2/source/js/utils.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.2/source/js/motion.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.2/source/js/next-boot.min.js"></script>
 
   
 <script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/third-party/search/local-search.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.2/source/js/third-party/search/local-search.min.js"></script>
 
 
 
 
-  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/third-party/pace.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.2/source/js/third-party/pace.min.js"></script>
 
   
 
@@ -497,7 +497,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/quicklink@2.2.0/dist/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>
   <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"ignores":null,"url":"https://weilining.github.io/122.html"}</script>
-  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/third-party/quicklink.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.2/source/js/third-party/quicklink.min.js"></script>
 
 
 <script class="next-config" data-name="valine" type="application/json">{"enable":true,"appId":"Bu6sP4depeiGP22PIFqz0SmJ-MdYXbMMI","appKey":"jYGDeeOBkTqvrUJDEmqj83q7","serverURLs":"https://bu6sp4de.api.lncldglobal.com","placeholder":"Just go go","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"lang":null,"visitor":true,"comment_count":true,"recordIP":false,"enableQQ":false,"requiredFields":[],"el":"#valine-comments","path":"/122.html"}</script>

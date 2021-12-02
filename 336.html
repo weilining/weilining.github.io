@@ -26,7 +26,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/blue/pace-theme-bounce.css">
   <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"weilining.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.8.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/config.min.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"weilining.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.8.2","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.2/source/js/config.min.js"></script>
 <meta name="description" content="默认">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python3 UnicodeEncodeError: &#39;ascii&#39; codec can&#39;t encode characters in position 0-3: ordinal not in range(128)">
@@ -85,7 +85,7 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <h1 class="site-title">Ln's Blog</h1>
+      <p class="site-title">Ln's Blog</p>
       <i class="logo-line"></i>
     </a>
       <p class="site-subtitle" itemprop="description">有朋自远方来，不亦乐乎</p>
@@ -180,7 +180,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">356</span>
+          <span class="site-state-item-count">358</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -275,7 +275,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>2.6k</span>
+      <span>2.5k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -308,12 +308,12 @@
 <p>当前使用的编码可通过sys.getfilesystemencoding()获取。</p>
 <h2 id="三、场景复现"><a href="#三、场景复现" class="headerlink" title="三、场景复现"></a>三、场景复现</h2><p>为简单起见，我们这里直接以打印一个中文字符串作为演示，示例代码如下（我这里保存成test_encode.py）：</p>
 <p><a href="javascript:void(0);" rel="external nofollow noreferrer"><img data-src="/336/copycode.gif" alt="复制代码" loading="lazy"></a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">import sys</span><br><span class="line"></span><br><span class="line">class TestEncode():</span><br><span class="line">    def __int__(self):</span><br><span class="line">        pass</span><br><span class="line"></span><br><span class="line">    def main_logic(self):</span><br><span class="line">        # 打印语言默认编码</span><br><span class="line">        print(f&quot;defaultencoding--&#123;sys.getdefaultencoding()&#125;&quot;)</span><br><span class="line">        # 打印系统配置的编码</span><br><span class="line">        print(f&quot;filesystemencoding--&#123;sys.getfilesystemencoding()&#125;&quot;)</span><br><span class="line"></span><br><span class="line">        # 最后尝试打印中文</span><br><span class="line">        print(&quot;中文&quot;)</span><br><span class="line"></span><br><span class="line">if __name__ &#x3D;&#x3D; &quot;__main__&quot;:</span><br><span class="line">    obj &#x3D; TestEncode()</span><br><span class="line">    obj.main_logic()</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">import sys</span><br><span class="line"></span><br><span class="line">class TestEncode():</span><br><span class="line">    def __int__(self):</span><br><span class="line">        pass</span><br><span class="line"></span><br><span class="line">    def main_logic(self):</span><br><span class="line">        # 打印语言默认编码</span><br><span class="line">        print(f&quot;defaultencoding--&#123;sys.getdefaultencoding()&#125;&quot;)</span><br><span class="line">        # 打印系统配置的编码</span><br><span class="line">        print(f&quot;filesystemencoding--&#123;sys.getfilesystemencoding()&#125;&quot;)</span><br><span class="line"></span><br><span class="line">        # 最后尝试打印中文</span><br><span class="line">        print(&quot;中文&quot;)</span><br><span class="line"></span><br><span class="line">if __name__ == &quot;__main__&quot;:</span><br><span class="line">    obj = TestEncode()</span><br><span class="line">    obj.main_logic()</span><br></pre></td></tr></table></figure>
 
 <p><a href="javascript:void(0);" rel="external nofollow noreferrer"><img data-src="/336/copycode.gif" alt="复制代码" loading="lazy"></a></p>
 <p>shell依次执行如下命令：</p>
 <p><a href="javascript:void(0);" rel="external nofollow noreferrer"><img data-src="/336/copycode.gif" alt="复制代码" loading="lazy"></a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"># 查看当前编码情况</span><br><span class="line">locale</span><br><span class="line"># 确认在utf-8情况下打印中文无误</span><br><span class="line">python3 test_encode.py</span><br><span class="line"></span><br><span class="line"># 设置LC_TYPE，C代表ASCII</span><br><span class="line">export LC_CTYPE&#x3D;&quot;C&quot;</span><br><span class="line"># 查看当前编码情况</span><br><span class="line">locale</span><br><span class="line"># 再次运行，确认系统编码已改变，并出现编码错误</span><br><span class="line">python3 test_encode.py</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"># 查看当前编码情况</span><br><span class="line">locale</span><br><span class="line"># 确认在utf-8情况下打印中文无误</span><br><span class="line">python3 test_encode.py</span><br><span class="line"></span><br><span class="line"># 设置LC_TYPE，C代表ASCII</span><br><span class="line">export LC_CTYPE=&quot;C&quot;</span><br><span class="line"># 查看当前编码情况</span><br><span class="line">locale</span><br><span class="line"># 再次运行，确认系统编码已改变，并出现编码错误</span><br><span class="line">python3 test_encode.py</span><br></pre></td></tr></table></figure>
 
 <p><a href="javascript:void(0);" rel="external nofollow noreferrer"><img data-src="/336/copycode.gif" alt="复制代码" loading="lazy"></a></p>
 <p>最终结果如下，在系统编码配置为utf-8时打印正常，在系统编码改为C（即ASCII）后打印报编码异常（不过我在root用户环境修改编码一直不成功，不懂我电脑有点问题还是什么原因）：</p>
@@ -323,16 +323,16 @@
 <p>那基于这个事实，我们就有了以下三种解决办法。</p>
 <p>方法一：自己临时自行修改标准输出为utf-8</p>
 <p>这种方法最保险，能确认自己不被覆盖；但如果是一个项目那得确保在一开始设置，不然每次print前设置一次也很麻烦。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">import sys</span><br><span class="line">import codecs</span><br><span class="line"></span><br><span class="line">sys.stdout &#x3D; codecs.getwriter(&quot;utf-8&quot;)(sys.stdout.detach())</span><br><span class="line">print(&quot;中文&quot;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">import sys</span><br><span class="line">import codecs</span><br><span class="line"></span><br><span class="line">sys.stdout = codecs.getwriter(&quot;utf-8&quot;)(sys.stdout.detach())</span><br><span class="line">print(&quot;中文&quot;)</span><br></pre></td></tr></table></figure>
 
 <p>方法二：设置语言会采用的的环境变量<span class="exturl" data-url="aHR0cHM6Ly9kb2NzLnB5dGhvbi5vcmcvMy91c2luZy9jbWRsaW5lLmh0bWwjZW52dmFyLVBZVEhPTklPRU5DT0RJTkc=">PYTHONIOENCODING<i class="fa fa-external-link-alt"></i></span></p>
 <p>这种方法按理感觉有时有bug，该环境变量在一些解析器中没被采用。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">PYTHONIOENCODING&#x3D;utf-8 python test_encode.py</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">PYTHONIOENCODING=utf-8 python test_encode.py</span><br></pre></td></tr></table></figure>
 
 <p>方法三：设置语言会采用的系统环境变量值为utf-8</p>
 <p>这种方法各种语言应该都通用。</p>
 <p>如果配了变量仍有报错，那一般都是运行的代码没正确读取变量所致，可以在脚本中获取下这变量值确认，python是os.environ。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 优先级 LC_ALL &gt; LC_*（包括决定月分显示语言的LC_TIME等）&gt; LANG</span><br><span class="line">export LC_ALL&#x3D;&quot;en_US.utf8&quot;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 优先级 LC_ALL &gt; LC_*（包括决定月分显示语言的LC_TIME等）&gt; LANG</span><br><span class="line">export LC_ALL=&quot;en_US.utf8&quot;</span><br></pre></td></tr></table></figure>
 
 <p>参考：</p>
 <p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RoX251bS9hcnRpY2xlL2RldGFpbHMvODA2ODUzODk=">https://blog.csdn.net/th_num/article/details/80685389<i class="fa fa-external-link-alt"></i></span></p>
@@ -429,13 +429,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">561k</span>
+    <span title="站点总字数">544k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">8:30</span>
+    <span title="站点阅读时长">8:14</span>
   </span>
 </div>
 
@@ -452,16 +452,16 @@
   <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js" integrity="sha256-EdPgYcPk/IIrw7FYeuJQexva49pVRZNmt3LculEr7zM=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/comments.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/utils.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/motion.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/next-boot.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.2/source/js/comments.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.2/source/js/utils.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.2/source/js/motion.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.2/source/js/next-boot.min.js"></script>
 
   
 <script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/third-party/search/local-search.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.2/source/js/third-party/search/local-search.min.js"></script>
 
 
 
 
-  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/third-party/pace.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.2/source/js/third-party/pace.min.js"></script>
 
   
 
@@ -470,7 +470,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/quicklink@2.2.0/dist/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>
   <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"ignores":null,"url":"https://weilining.github.io/336.html"}</script>
-  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/third-party/quicklink.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.2/source/js/third-party/quicklink.min.js"></script>
 
 
 <script class="next-config" data-name="valine" type="application/json">{"enable":true,"appId":"Bu6sP4depeiGP22PIFqz0SmJ-MdYXbMMI","appKey":"jYGDeeOBkTqvrUJDEmqj83q7","serverURLs":"https://bu6sp4de.api.lncldglobal.com","placeholder":"Just go go","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"lang":null,"visitor":true,"comment_count":true,"recordIP":false,"enableQQ":false,"requiredFields":[],"el":"#valine-comments","path":"/336.html"}</script>

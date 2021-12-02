@@ -26,7 +26,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/blue/pace-theme-bounce.css">
   <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"weilining.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.8.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/config.min.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"weilining.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.8.2","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.2/source/js/config.min.js"></script>
 <meta name="description" content="默认">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux添加&#x2F;删除用户和用户组">
@@ -78,7 +78,7 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <h1 class="site-title">Ln's Blog</h1>
+      <p class="site-title">Ln's Blog</p>
       <i class="logo-line"></i>
     </a>
       <p class="site-subtitle" itemprop="description">有朋自远方来，不亦乐乎</p>
@@ -172,7 +172,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">356</span>
+          <span class="site-state-item-count">358</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -276,14 +276,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>7.3k</span>
+      <span>6.9k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>7 分钟</span>
+      <span>6 分钟</span>
     </span>
 </div>
 
@@ -341,22 +341,22 @@
 <p>/etc/passwd 注：用户（user）的配置文件；<br>/etc/shadow 注：用户（user）影子口令文件；</p>
 <p>**<br>2）与用户组（group）相关的配置文件；<br>**<br>/etc/group 注：用户组（group）配置文件；<br>/etc/gshadow 注：用户组（group）的影子文件；</p>
 <p>**<br>2、管理用户（user）和用户组（group）的相关工具或命令；<br>**<br>**<br>1）管理用户（user）的工具或命令；<br>**</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">useradd  注：添加用户adduser  注：添加用户passwd   注：为用户设置密码usermod 注：修改用户命令，可以通过usermod 来修改登录名、用户的家目录等等；pwcov    注：同步用户从&#x2F;etc&#x2F;passwd 到&#x2F;etc&#x2F;shadowpwck     注：pwck是校验用户配置文件&#x2F;etc&#x2F;passwd 和&#x2F;etc&#x2F;shadow 文件内容是否合法或完整；pwunconv 注：是pwcov 的立逆向操作，是从&#x2F;etc&#x2F;shadow和 &#x2F;etc&#x2F;passwd 创建&#x2F;etc&#x2F;passwd ，然后会删除 &#x2F;etc&#x2F;shadow 文件；finger    注：查看用户信息工具id       注：查看用户的UID、GID及所归属的用户组chfn     注：更改用户信息工具su       注：用户切换工具sudo     注：sudo 是通过另一个用户来执行命令（execute a command as another user），su 是用来切换用户，然后通过切换到的用户来完成相应的任务，但sudo 能后面直接执行命令，比如sudo 不需要root 密码就可以执行root 赋与的执行只有root才能执行相应的命令；但得通过visudo 来编辑&#x2F;etc&#x2F;sudoers来实现；visudo   注：visodo 是编辑 &#x2F;etc&#x2F;sudoers 的命令；也可以不用这个命令，直接用vi 来编辑 &#x2F;etc&#x2F;sudoers 的效果是一样的；sudoedit 注：和sudo 功能差不多；</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">useradd  注：添加用户adduser  注：添加用户passwd   注：为用户设置密码usermod 注：修改用户命令，可以通过usermod 来修改登录名、用户的家目录等等；pwcov    注：同步用户从/etc/passwd 到/etc/shadowpwck     注：pwck是校验用户配置文件/etc/passwd 和/etc/shadow 文件内容是否合法或完整；pwunconv 注：是pwcov 的立逆向操作，是从/etc/shadow和 /etc/passwd 创建/etc/passwd ，然后会删除 /etc/shadow 文件；finger    注：查看用户信息工具id       注：查看用户的UID、GID及所归属的用户组chfn     注：更改用户信息工具su       注：用户切换工具sudo     注：sudo 是通过另一个用户来执行命令（execute a command as another user），su 是用来切换用户，然后通过切换到的用户来完成相应的任务，但sudo 能后面直接执行命令，比如sudo 不需要root 密码就可以执行root 赋与的执行只有root才能执行相应的命令；但得通过visudo 来编辑/etc/sudoers来实现；visudo   注：visodo 是编辑 /etc/sudoers 的命令；也可以不用这个命令，直接用vi 来编辑 /etc/sudoers 的效果是一样的；sudoedit 注：和sudo 功能差不多；</span><br></pre></td></tr></table></figure>
 
 
 <p>**<br>2）管理用户组（group）的工具或命令；<br>**</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">groupadd 注：添加用户组；groupdel     注：删除用户组；groupmod    注：修改用户组信息groups   注：显示用户所属的用户组grpckgrpconv  注：通过&#x2F;etc&#x2F;group和&#x2F;etc&#x2F;gshadow 的文件内容来同步或创建&#x2F;etc&#x2F;gshadow ，如果&#x2F;etc&#x2F;gshadow 不存在则创建；grpunconv  注：通过&#x2F;etc&#x2F;group 和&#x2F;etc&#x2F;gshadow 文件内容来同步或创建&#x2F;etc&#x2F;group ，然后删除gshadow文件；</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">groupadd 注：添加用户组；groupdel     注：删除用户组；groupmod    注：修改用户组信息groups   注：显示用户所属的用户组grpckgrpconv  注：通过/etc/group和/etc/gshadow 的文件内容来同步或创建/etc/gshadow ，如果/etc/gshadow 不存在则创建；grpunconv  注：通过/etc/group 和/etc/gshadow 文件内容来同步或创建/etc/group ，然后删除gshadow文件；</span><br></pre></td></tr></table></figure>
 
 <p>**<br>3、/etc/skel 目录；<br>**<br>/etc/skel目录一般是存放用户启动文件的目录，这个目录是由root权限控制，当我们添加用户时，这个目录下的文件自动复制到新添加的用户的家目录下；/etc/skel 目录下的文件都是隐藏文件，也就是类似.file格式的；我们可通过修改、添加、删除/etc/skel目录下的文件，来为用户提供一个统一、标准的、默认的用户环境；</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost beinan]# ls -la &#x2F;etc&#x2F;skel&#x2F;总用量 92drwxr-xr-x  3 root root 4096 8月 11 23:32 .drwxr-xr-x 115 root root 12288 10月 14 13:44 ..-rw-r--r--  1 root root  24 5月 11 00:15 .bash_logout-rw-r--r--  1 root root  191 5月 11 00:15 .bash_profile-rw-r--r--  1 root root  124 5月 11 00:15 .bashrc-rw-r--r--  1 root root 5619 2005-03-08 .canna-rw-r--r--  1 root root  438 5月 18 15:23 .emacs-rw-r--r--  1 root root  120 5月 23 05:18 .gtkrcdrwxr-xr-x  3 root root 4096 8月 11 23:16 .kde-rw-r--r--  1 root root  658 2005-01-17 .zshrc</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost beinan]# ls -la /etc/skel/总用量 92drwxr-xr-x  3 root root 4096 8月 11 23:32 .drwxr-xr-x 115 root root 12288 10月 14 13:44 ..-rw-r--r--  1 root root  24 5月 11 00:15 .bash_logout-rw-r--r--  1 root root  191 5月 11 00:15 .bash_profile-rw-r--r--  1 root root  124 5月 11 00:15 .bashrc-rw-r--r--  1 root root 5619 2005-03-08 .canna-rw-r--r--  1 root root  438 5月 18 15:23 .emacs-rw-r--r--  1 root root  120 5月 23 05:18 .gtkrcdrwxr-xr-x  3 root root 4096 8月 11 23:16 .kde-rw-r--r--  1 root root  658 2005-01-17 .zshrc</span><br></pre></td></tr></table></figure>
 
 <p>/etc/skel 目录下的文件，一般是我们用useradd 和adduser 命令添加用户（user）时，系统自动复制到新添加用户（user）的家目录下；如果我们通过修改 /etc/passwd 来添加用户时，我们可以自己创建用户的家目录，然后把/etc/skel 下的文件复制到用户的家目录下，然后要用chown 来改变新用户家目录的属主；<br>**<br>4、/etc/login.defs 配置文件；<br>**<br>/etc/login.defs 文件是当创建用户时的一些规划，比如创建用户时，是否需要家目录，UID和GID的范围；用户的期限等等，这个文件是可以通过root来定义的；</p>
 <p>比如Fedora 的 /etc/logins.defs 文件内容；</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># *REQUIRED*#  Directory where mailboxes reside, _or_ name of file, relative to the#  home directory. If you _do_ define both, MAIL_DIR takes precedence.#  QMAIL_DIR is for Qmail##QMAIL_DIR   MaildirMAIL_DIR    &#x2F;var&#x2F;spool&#x2F;mail 注：创建用户时，要在目录&#x2F;var&#x2F;spool&#x2F;mail中创建一个用户mail文件；#MAIL_FILE   .mail# Password aging controls:##    PASS_MAX_DAYS  Maximum number of days a password may be used.#    PASS_MIN_DAYS  Minimum number of days allowed between password changes.#    PASS_MIN_LEN  Minimum acceptable password length.#    PASS_WARN_AGE  Number of days warning given before a password expires.#PASS_MAX_DAYS  99999  注：用户的密码不过期最多的天数；PASS_MIN_DAYS  0    注：密码修改之间最小的天数；PASS_MIN_LEN  5    注：密码最小长度；PASS_WARN_AGE  7    注：## Min&#x2F;max values for automatic uid selection in useradd#UID_MIN          500 注：最小UID为500 ，也就是说添加用户时，UID 是从500开始的；UID_MAX         60000  注：最大UID为60000；## Min&#x2F;max values for automatic gid selection in groupadd#GID_MIN          500  注：GID 是从500开始；GID_MAX         60000## If defined, this command is run when removing a user.# It should remove any at&#x2F;cron&#x2F;print jobs etc. owned by# the user to be removed (passed as the first argument).##USERDEL_CMD  &#x2F;usr&#x2F;sbin&#x2F;userdel_local## If useradd should create home directories for users by default# On RH systems, we do. This option is ORed with the -m flag on# useradd command line.#CREATE_HOME   yes  注：是否创用户家目录，要求创建；</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># *REQUIRED*#  Directory where mailboxes reside, _or_ name of file, relative to the#  home directory. If you _do_ define both, MAIL_DIR takes precedence.#  QMAIL_DIR is for Qmail##QMAIL_DIR   MaildirMAIL_DIR    /var/spool/mail 注：创建用户时，要在目录/var/spool/mail中创建一个用户mail文件；#MAIL_FILE   .mail# Password aging controls:##    PASS_MAX_DAYS  Maximum number of days a password may be used.#    PASS_MIN_DAYS  Minimum number of days allowed between password changes.#    PASS_MIN_LEN  Minimum acceptable password length.#    PASS_WARN_AGE  Number of days warning given before a password expires.#PASS_MAX_DAYS  99999  注：用户的密码不过期最多的天数；PASS_MIN_DAYS  0    注：密码修改之间最小的天数；PASS_MIN_LEN  5    注：密码最小长度；PASS_WARN_AGE  7    注：## Min/max values for automatic uid selection in useradd#UID_MIN          500 注：最小UID为500 ，也就是说添加用户时，UID 是从500开始的；UID_MAX         60000  注：最大UID为60000；## Min/max values for automatic gid selection in groupadd#GID_MIN          500  注：GID 是从500开始；GID_MAX         60000## If defined, this command is run when removing a user.# It should remove any at/cron/print jobs etc. owned by# the user to be removed (passed as the first argument).##USERDEL_CMD  /usr/sbin/userdel_local## If useradd should create home directories for users by default# On RH systems, we do. This option is ORed with the -m flag on# useradd command line.#CREATE_HOME   yes  注：是否创用户家目录，要求创建；</span><br></pre></td></tr></table></figure>
 
 <p>**<br>5、/etc/default/useradd 文件；<br>**</p>
 <p>通过useradd 添加用户时的规则文件；</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># useradd defaults fileGROUP&#x3D;100HOME&#x3D;&#x2F;home 注：把用户的家目录建在&#x2F;home中；INACTIVE&#x3D;-1 注：是否启用帐号过期停权，-1表示不启用；EXPIRE&#x3D;  注：帐号终止日期，不设置表示不启用；SHELL&#x3D;&#x2F;bin&#x2F;bash 注：所用SHELL的类型；SKEL&#x3D;&#x2F;etc&#x2F;skel  注： 默认添加用户的目录默认文件存放位置；也就是说，当我们用adduser添加用户时，用户家目录下的文件，都是从这个目录中复制过去的；</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># useradd defaults fileGROUP=100HOME=/home 注：把用户的家目录建在/home中；INACTIVE=-1 注：是否启用帐号过期停权，-1表示不启用；EXPIRE=  注：帐号终止日期，不设置表示不启用；SHELL=/bin/bash 注：所用SHELL的类型；SKEL=/etc/skel  注： 默认添加用户的目录默认文件存放位置；也就是说，当我们用adduser添加用户时，用户家目录下的文件，都是从这个目录中复制过去的；</span><br></pre></td></tr></table></figure>
 
 <p>**<br>后记：<br>**</p>
 <p>关于用户（user）和用户组（group）管理内容大约就是这么多；只要把上面所说的内容了解和掌握，用户（user）和用户组（group）管理就差不多了；由于用户（user）和用户组（group）是和文件及目录权限联系在一起的，所以文件及目录权限的操作也会独立成文来给大家介绍；</p>
@@ -455,13 +455,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">561k</span>
+    <span title="站点总字数">544k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">8:30</span>
+    <span title="站点阅读时长">8:14</span>
   </span>
 </div>
 
@@ -478,16 +478,16 @@
   <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js" integrity="sha256-EdPgYcPk/IIrw7FYeuJQexva49pVRZNmt3LculEr7zM=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/comments.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/utils.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/motion.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/next-boot.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.2/source/js/comments.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.2/source/js/utils.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.2/source/js/motion.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.2/source/js/next-boot.min.js"></script>
 
   
 <script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/third-party/search/local-search.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.2/source/js/third-party/search/local-search.min.js"></script>
 
 
 
 
-  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/third-party/pace.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.2/source/js/third-party/pace.min.js"></script>
 
   
 
@@ -496,7 +496,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/quicklink@2.2.0/dist/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>
   <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"ignores":null,"url":"https://weilining.github.io/163.html"}</script>
-  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/third-party/quicklink.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.2/source/js/third-party/quicklink.min.js"></script>
 
 
 <script class="next-config" data-name="valine" type="application/json">{"enable":true,"appId":"Bu6sP4depeiGP22PIFqz0SmJ-MdYXbMMI","appKey":"jYGDeeOBkTqvrUJDEmqj83q7","serverURLs":"https://bu6sp4de.api.lncldglobal.com","placeholder":"Just go go","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"lang":null,"visitor":true,"comment_count":true,"recordIP":false,"enableQQ":false,"requiredFields":[],"el":"#valine-comments","path":"/163.html"}</script>
