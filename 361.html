@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.1.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.jsdelivr.net/gh/weilining/img@main/img/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.jsdelivr.net/gh/weilining/img@main/img/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://cdn.jsdelivr.net/gh/weilining/img@main/img/favicon-16x16-next.png">
+  <link rel="mask-icon" href="https://cdn.jsdelivr.net/gh/weilining/img@main/img/logo.svg" color="#222">
+  <meta name="google-site-verification" content="OjGymv9uAqWYDsr-E-j6DG2k1_mPXsDQF77kgEK0nz8">
+  <meta name="msvalidate.01" content="5C84BC77E02800759CE29C4ACCE487BD">
+  <meta name="yandex-verification" content="06c62a93328de5da">
+  <meta name="baidu-site-verification" content="code-wFDrn4lvkD">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css" integrity="sha256-jTIdiMuX/e3DGJUGwl3pKSxuc6YOuqtJYkM0bGQESA4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/blue/pace-theme-bounce.css">
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"weilining.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.10.1","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.10.1/source/js/config.min.js"></script>
+
+    <meta property="og:type" content="article">
+<meta property="og:title" content="最有效 Charles 抓包">
+<meta property="og:url" content="https://weilining.github.io/361.html">
+<meta property="og:site_name" content="Ln&#39;s Blog">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://weilining.github.io/361/1712472424baf931~tplv-t2oaga2asx-zoom-in-crop-mark:1304:0:0:0.awebp">
+<meta property="og:image" content="https://weilining.github.io/361/1712472424d394bd~tplv-t2oaga2asx-zoom-in-crop-mark:1304:0:0:0.awebp">
+<meta property="og:image" content="https://weilining.github.io/361/1712472426463ab4~tplv-t2oaga2asx-zoom-in-crop-mark:1304:0:0:0.awebp">
+<meta property="og:image" content="https://weilining.github.io/361/1712472426578f52~tplv-t2oaga2asx-zoom-in-crop-mark:1304:0:0:0.awebp">
+<meta property="og:image" content="https://weilining.github.io/361/1712472426835e0b~tplv-t2oaga2asx-zoom-in-crop-mark:1304:0:0:0.awebp">
+<meta property="og:image" content="https://weilining.github.io/361/171247244f06ae6e~tplv-t2oaga2asx-zoom-in-crop-mark:1304:0:0:0.awebp">
+<meta property="og:image" content="https://weilining.github.io/361/1712472450114950~tplv-t2oaga2asx-zoom-in-crop-mark:1304:0:0:0.awebp">
+<meta property="og:image" content="https://weilining.github.io/361/17124724532410e5~tplv-t2oaga2asx-zoom-in-crop-mark:1304:0:0:0.awebp">
+<meta property="og:image" content="https://weilining.github.io/361/17124724595eecca~tplv-t2oaga2asx-zoom-in-crop-mark:1304:0:0:0.awebp">
+<meta property="og:image" content="https://weilining.github.io/361/171247245e3308b1~tplv-t2oaga2asx-zoom-in-crop-mark:1304:0:0:0.awebp">
+<meta property="og:image" content="https://weilining.github.io/361/1712472461d4ceaa~tplv-t2oaga2asx-zoom-in-crop-mark:1304:0:0:0.awebp">
+<meta property="og:image" content="https://weilining.github.io/361/1712472480500120~tplv-t2oaga2asx-zoom-in-crop-mark:1304:0:0:0.awebp">
+<meta property="og:image" content="https://weilining.github.io/361/171247248157238b~tplv-t2oaga2asx-zoom-in-crop-mark:1304:0:0:0.awebp">
+<meta property="og:image" content="https://weilining.github.io/361/1712472482ec7aa1~tplv-t2oaga2asx-zoom-in-crop-mark:1304:0:0:0.awebp">
+<meta property="og:image" content="https://weilining.github.io/361/171247248c87d349~tplv-t2oaga2asx-zoom-in-crop-mark:1304:0:0:0.awebp">
+<meta property="og:image" content="https://weilining.github.io/361/171247248d7d0ae9~tplv-t2oaga2asx-zoom-in-crop-mark:1304:0:0:0.awebp">
+<meta property="og:image" content="https://weilining.github.io/361/1712472491f7c801~tplv-t2oaga2asx-zoom-in-crop-mark:1304:0:0:0.awebp">
+<meta property="og:image" content="https://weilining.github.io/361/17124724ac3aa215~tplv-t2oaga2asx-zoom-in-crop-mark:1304:0:0:0.awebp">
+<meta property="article:published_time" content="2022-03-23T14:01:38.000Z">
+<meta property="article:modified_time" content="2022-03-23T14:01:38.000Z">
+<meta property="article:author" content="Lining Wei">
+<meta property="article:tag" content="ACM,开发者,程序猿,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,互联网一切折腾">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://weilining.github.io/361/1712472424baf931~tplv-t2oaga2asx-zoom-in-crop-mark:1304:0:0:0.awebp">
+
+
+<link rel="canonical" href="https://weilining.github.io/361.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://weilining.github.io/361.html","path":"361.html","title":"最有效 Charles 抓包"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>最有效 Charles 抓包 | Ln's Blog</title>
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="Ln's Blog" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Ln's Blog</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">有朋自远方来，不亦乐乎</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-bell fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-top"><a href="/top/" rel="section"><i class="fa fa-signal fa-fw"></i>热榜</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-friends"><a href="/friends/" rel="section"><i class="fa fa-globe-asia fa-fw"></i>朋友们</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%89%E8%A3%85"><span class="nav-number">1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AE%80%E4%BB%8B"><span class="nav-number">2.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Charles-%E7%95%8C%E9%9D%A2%E4%BB%8B%E7%BB%8D"><span class="nav-number">3.</span> <span class="nav-text">Charles 界面介绍</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BB%A3%E7%90%86%E8%AE%BE%E7%BD%AE"><span class="nav-number">4.</span> <span class="nav-text">代理设置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%89%8B%E6%9C%BA%E8%AE%BE%E7%BD%AE"><span class="nav-number">4.1.</span> <span class="nav-text">手机设置</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#SSL-%E9%85%8D%E7%BD%AE"><span class="nav-number">5.</span> <span class="nav-text">SSL 配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%B5%E8%84%91%E7%AB%AF-SSL"><span class="nav-number">5.1.</span> <span class="nav-text">电脑端 SSL</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%89%8B%E6%9C%BA%E7%AB%AF-SSL"><span class="nav-number">5.2.</span> <span class="nav-text">手机端 SSL</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PS"><span class="nav-number">5.3.</span> <span class="nav-text">PS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE"><span class="nav-number">5.4.</span> <span class="nav-text">参考文献</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Lining Wei"
+      src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/icon.gif">
+  <p class="site-author-name" itemprop="name">Lining Wei</p>
+  <div class="site-description" itemprop="description">算法、技术</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">361</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">35</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="cc-license site-overview-item animated" itemprop="license">
+    <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC96aC1DTg=="><img src="https://cdn.jsdelivr.net/npm/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></span>
+  </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://weilining.github.io/361.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/weilining/img@main/img/icon.gif">
+      <meta itemprop="name" content="Lining Wei">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ln's Blog">
+      <meta itemprop="description" content="算法、技术">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="最有效 Charles 抓包 | Ln's Blog">
+      <meta itemprop="description" content="默认">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          最有效 Charles 抓包<span class="exturl post-edit-link" data-url="aHR0cHM6Ly9naXRodWIuY29tL3dlaWxpbmluZy9ibG9nL2VkaXQvbWFpbi9zb3VyY2UvX3Bvc3RzLzM2MS5tZA==" title="编辑"><i class="fa fa-pen-nib"></i></span>
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-03-23 22:01:38" itemprop="dateCreated datePublished" datetime="2022-03-23T22:01:38+08:00">2022-03-23</time>
+    </span>
+
+  
+    <span id="/361.html" class="post-meta-item leancloud_visitors" data-flag-title="最有效 Charles 抓包" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.5k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+            <div class="post-description">默认</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>Charles 很早之前用过，后来一直不用都忘记怎么使用了。近期公司叫我去测试一个小程序的安全性，第一时间想到了用 Charles 抓包分析，这里记录一下过程方便后续查阅</p>
+<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>这里有一个 <span class="exturl" data-url="aHR0cHM6Ly9saW5rLmp1ZWppbi5jbi8/dGFyZ2V0PWh0dHBzOi8vcGFuLmJhaWR1LmNvbS9zLzFLY0wzVHFoemVGbGNWQ2k2blpSaDln">Charles 4.2 的版本<i class="fa fa-external-link-alt"></i></span> 下载后将 .jar 文件拷贝到 <code>Contents/Java</code> 里面。</p>
+<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>Charles 是在 Mac 下常用的网络封包截取工具，在做移动开发时，我们为了调试与服务器端的网络通讯协议，常常需要截取网络封包来分析。Charles 通过将自己设置成系统的网络访问代理服务器，使得所有的网络访问请求都通过它来完成，从而实现了网络封包的截取和分析。 除了在做移动开发中调试端口外，Charles 也可以用于分析第三方应用的通讯协议。配合 Charles 的 SSL 功能，Charles 还可以分析 Https 协议。</p>
+<h1 id="Charles-界面介绍"><a href="#Charles-界面介绍" class="headerlink" title="Charles 界面介绍"></a>Charles 界面介绍</h1><p><img data-src="/361/1712472424baf931~tplv-t2oaga2asx-zoom-in-crop-mark:1304:0:0:0.awebp" alt="file" loading="lazy"></p>
+<p>不过我个人更喜欢这种模式查看，这样会按照域名分类归档，更方便我看网络请求</p>
+<p><img data-src="/361/1712472424d394bd~tplv-t2oaga2asx-zoom-in-crop-mark:1304:0:0:0.awebp" alt="file" loading="lazy"></p>
+<h1 id="代理设置"><a href="#代理设置" class="headerlink" title="代理设置"></a>代理设置</h1><p>打开 Charles 后将它设置成代理服务器，这样手机上访问 app 的时候就可以监听网络请求。</p>
+<p><img data-src="/361/1712472426463ab4~tplv-t2oaga2asx-zoom-in-crop-mark:1304:0:0:0.awebp" alt="file" loading="lazy"></p>
+<p>想要解决手机上面的网络抓包还需要一些设置，在 Charles 菜单栏上选择 Proxy -&gt; Proxy Settings，填写代理端口 <code>8888</code>，并且勾选启动代理。</p>
+<p><img data-src="/361/1712472426578f52~tplv-t2oaga2asx-zoom-in-crop-mark:1304:0:0:0.awebp" alt="file" loading="lazy"></p>
+<h2 id="手机设置"><a href="#手机设置" class="headerlink" title="手机设置"></a>手机设置</h2><p>这里我以 iPhone 为例，首先我们需要获取电脑的 IP 地址，可以在 Charles 帮助栏找到</p>
+<p><img data-src="/361/1712472426835e0b~tplv-t2oaga2asx-zoom-in-crop-mark:1304:0:0:0.awebp" alt="file" loading="lazy"></p>
+<p><img data-src="/361/171247244f06ae6e~tplv-t2oaga2asx-zoom-in-crop-mark:1304:0:0:0.awebp" alt="file" loading="lazy"></p>
+<p>我们记住这个地址，然后打开手机找到链接的 WiFi 「注意这里电脑和手机必须链接同一个 WiFi」操作如下：</p>
+<p><img data-src="/361/1712472450114950~tplv-t2oaga2asx-zoom-in-crop-mark:1304:0:0:0.awebp" alt="file" loading="lazy"></p>
+<p><img data-src="/361/17124724532410e5~tplv-t2oaga2asx-zoom-in-crop-mark:1304:0:0:0.awebp" alt="file" loading="lazy"></p>
+<p>配置代理选择手动，然后下面输入 Charles 帮助栏显示的 IP，端口为 8888</p>
+<p><img data-src="/361/17124724595eecca~tplv-t2oaga2asx-zoom-in-crop-mark:1304:0:0:0.awebp" alt="file" loading="lazy"></p>
+<p>点击储存的时候，电脑上面会弹出一个 Charles 的消息框，点击 <code>Allow</code> 运行。</p>
+<h1 id="SSL-配置"><a href="#SSL-配置" class="headerlink" title="SSL 配置"></a>SSL 配置</h1><p>手机访问 HTTPS 网站的时候会显示 <code>unknown</code> ，这是因为 https 是加密的，我们的配置一下证书。</p>
+<p><img data-src="/361/171247245e3308b1~tplv-t2oaga2asx-zoom-in-crop-mark:1304:0:0:0.awebp" alt="file" loading="lazy"></p>
+<h2 id="电脑端-SSL"><a href="#电脑端-SSL" class="headerlink" title="电脑端 SSL"></a>电脑端 SSL</h2><p>先设置电脑上面的证书操作如下：</p>
+<p><img data-src="/361/1712472461d4ceaa~tplv-t2oaga2asx-zoom-in-crop-mark:1304:0:0:0.awebp" alt="file" loading="lazy"></p>
+<p>下面这一部如果证书是信任的可以忽略</p>
+<p><img data-src="/361/1712472480500120~tplv-t2oaga2asx-zoom-in-crop-mark:1304:0:0:0.awebp" alt="file" loading="lazy"></p>
+<p>Charles 需要设置要监控的网址，这里我们设置监控所有</p>
+<p><img data-src="/361/171247248157238b~tplv-t2oaga2asx-zoom-in-crop-mark:1304:0:0:0.awebp" alt="file" loading="lazy"></p>
+<p><img data-src="/361/1712472482ec7aa1~tplv-t2oaga2asx-zoom-in-crop-mark:1304:0:0:0.awebp" alt="file" loading="lazy"></p>
+<blockquote>
+<p>电脑设置完毕</p>
+</blockquote>
+<h2 id="手机端-SSL"><a href="#手机端-SSL" class="headerlink" title="手机端 SSL"></a>手机端 SSL</h2><p>手机证书设置如下：</p>
+<p><img data-src="/361/171247248c87d349~tplv-t2oaga2asx-zoom-in-crop-mark:1304:0:0:0.awebp" alt="file" loading="lazy"></p>
+<p>点击后如下图所示，用 iPhone Safari 访问这个地址「注意要用 Safari 浏览器」，然后安装证书</p>
+<p><img data-src="/361/171247248d7d0ae9~tplv-t2oaga2asx-zoom-in-crop-mark:1304:0:0:0.awebp" alt="file" loading="lazy"></p>
+<p>证书安装完后还需要信任这个证书，在手机「通用 -&gt; 关于本机-&gt;证书信任设置」中开启信任</p>
+<p><img data-src="/361/1712472491f7c801~tplv-t2oaga2asx-zoom-in-crop-mark:1304:0:0:0.awebp" alt="file" loading="lazy"></p>
+<blockquote>
+<p>Ok 到此为止所有设置完毕</p>
+</blockquote>
+<p>现在你可以打开手机 App，然后 Charles 会抓下所有请求的包，效果图：</p>
+<p><img data-src="/361/17124724ac3aa215~tplv-t2oaga2asx-zoom-in-crop-mark:1304:0:0:0.awebp" alt="file" loading="lazy"></p>
+<h2 id="PS"><a href="#PS" class="headerlink" title="PS"></a>PS</h2><p>仔细按照上面的操作进行哟，不然你可能会遇到抓到 https 的网址数据乱码，或者 unknown 的问题。</p>
+<p>哈哈。结果我去测试的那个小程序没有 Token 认证，意思是所有接口都对外暴露。。。。然后所有请求的参数都是 base64 编码的「浅加密」，我只要解码改几个参数，再编码请求就得到他们数据了。。。</p>
+<p>作者：iDestiny<br>链接：<span class="exturl" data-url="aHR0cHM6Ly9qdWVqaW4uY24vcG9zdC82ODQ0OTA0MTA2MjU1OTc0NDEz">https://juejin.cn/post/6844904106255974413<i class="fa fa-external-link-alt"></i></span><br>来源：稀土掘金<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p><span class="exturl" data-url="aHR0cHM6Ly93d3cuY3h5bW0ubmV0L2FydGljbGUvcXFfMzgyMjU1NTgvMTIwMzE4NjQx">Charles(2) iPhone手机https请求抓包_郑清-程序员秘密 - 程序员秘密 (cxymm.net)<i class="fa fa-external-link-alt"></i></span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly93d3cuamlhbnNodS5jb20vcC84ODU0MDdjN2U4OTM=">6.抓包工具--charles(青花瓷)及获取AppStore数据包 - 简书 (jianshu.com)<i class="fa fa-external-link-alt"></i></span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly93d3cuamlhbnNodS5jb20vcC8zMWZmYzI4MjI2OGU=">Charles 使用过程中遇到问题 - 简书 (jianshu.com)<i class="fa fa-external-link-alt"></i></span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Nvbmd6aHVvMTk5MS9hcnRpY2xlL2RldGFpbHMvNzAxNTc0MDc=">Mac下使用charles遇到的问题以及解决办法_玉树临风你卓哥的博客-CSDN博客_mac无法安装charles证书<i class="fa fa-external-link-alt"></i></span></p>
+<p><span class="exturl" data-url="aHR0cDovL3Rlc3RlcmhvbWUuY29tL3RvcGljcy8yNTUzNj9vcmRlcl9ieT1jcmVhdGVkX2F0Jg==">iPhone 在使用 Charles 抓包情况下无法打开 APPstore 解决方法 · TesterHome<i class="fa fa-external-link-alt"></i></span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly93d3cuamlhbnNodS5jb20vcC81NTE3MTFjMTIxZjA=">Charles手机抓包 - 简书 (jianshu.com)<i class="fa fa-external-link-alt"></i></span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9qdWVqaW4uY24vcG9zdC82ODQ0OTA0MTA2MjU1OTc0NDEz">Charles 手机抓包记录 - 掘金 (juejin.cn)<i class="fa fa-external-link-alt"></i></span></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>Buy me a coffee</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/20201122213021.png" alt="Lining Wei 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/434235F3-7A93-4EA4-A7B6-4F6D977F1A89.png" alt="Lining Wei 支付宝">
+        <span>支付宝</span>
+      </div>
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/bitcoin.png" alt="Lining Wei 比特币">
+        <span>比特币</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文博主： </strong>Lining Wei
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://weilining.github.io/361.html" title="最有效 Charles 抓包">https://weilining.github.io/361.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC96aC1DTg=="><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/360.html" rel="prev" title="最有效使用 Pycharm 第一次运行 Python">
+                  <i class="fa fa-chevron-left"></i> 最有效使用 Pycharm 第一次运行 Python
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments" id="valine-comments"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 2015 – 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Ln</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">551k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">8:21</span>
+  </span>
+</div>
+
+<div><canvas id="snow" style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:99999;pointer-events:none"></canvas></div>
+
+
+<script id="click-show-text" src="/js/click-show-text.js" data-mobile="false" data-text="富强,民主,文明,和谐,自由,平等,公正,法治,爱国,敬业,诚信,友善" data-fontsize="20px" data-random="false" async></script>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js" integrity="sha256-EdPgYcPk/IIrw7FYeuJQexva49pVRZNmt3LculEr7zM=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.10.1/source/js/comments.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.10.1/source/js/utils.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.10.1/source/js/motion.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.10.1/source/js/next-boot.min.js"></script>
+
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.10.1/source/js/third-party/search/local-search.min.js"></script>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.10.1/source/js/third-party/pace.min.js"></script>
+
+  
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.2.0/dist/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"ignores":null,"url":"https://weilining.github.io/361.html"}</script>
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.10.1/source/js/third-party/quicklink.min.js"></script>
+
+
+<script class="next-config" data-name="valine" type="application/json">{"enable":true,"appId":"Bu6sP4depeiGP22PIFqz0SmJ-MdYXbMMI","appKey":"jYGDeeOBkTqvrUJDEmqj83q7","serverURLs":"https://bu6sp4de.api.lncldglobal.com","placeholder":"Just go go","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"lang":null,"visitor":true,"comment_count":true,"recordIP":false,"enableQQ":false,"requiredFields":[],"el":"#valine-comments","path":"/361.html"}</script>
+<script>
+document.addEventListener('page:loaded', () => {
+  NexT.utils.loadComments(CONFIG.valine.el)
+    .then(() => NexT.utils.getScript(
+      'https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js',
+      { condition: window.Valine }
+    ))
+    .then(() => {
+      new Valine(CONFIG.valine);
+    });
+});
+</script>
+
+
+
+
+</body>
+</html>
