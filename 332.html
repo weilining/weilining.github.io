@@ -4,8 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
 <meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)">
-<meta name="generator" content="Hexo 5.4.0">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.1.0">
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.jsdelivr.net/gh/weilining/img@main/img/apple-touch-icon-next.png">
@@ -21,18 +20,17 @@
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css" integrity="sha256-jTIdiMuX/e3DGJUGwl3pKSxuc6YOuqtJYkM0bGQESA4=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/blue/pace-theme-bounce.css">
   <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"weilining.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.8.2","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.2/source/js/config.min.js"></script>
-<meta name="description" content="默认">
-<meta property="og:type" content="article">
+<script class="next-config" data-name="main" type="application/json">{"hostname":"weilining.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.10.1","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.10.1/source/js/config.min.js"></script>
+
+    <meta property="og:type" content="article">
 <meta property="og:title" content="Github Action 的简单使用">
 <meta property="og:url" content="https://weilining.github.io/332.html">
 <meta property="og:site_name" content="Ln&#39;s Blog">
-<meta property="og:description" content="默认">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://weilining.github.io/332/90cb8c091e1d457ca5c93f791109378f~tplv-k3u1fbpfcp-watermark.awebp">
 <meta property="og:image" content="https://weilining.github.io/332/e2b2a29d7f3e47bc8c7ad761a257e5f4~tplv-k3u1fbpfcp-watermark.awebp">
@@ -56,6 +54,7 @@
 <script class="next-config" data-name="calendar" type="application/json">""</script>
 <title>Github Action 的简单使用 | Ln's Blog</title>
   
+
 
 
 
@@ -164,7 +163,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#CI-CD-%E7%9A%84%E4%B8%80%E4%BA%9B%E8%A7%A3%E9%87%8A"><span class="nav-number">1.</span> <span class="nav-text">CI&#x2F;CD 的一些解释</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%86%99%E5%9C%A8%E5%89%8D%E9%9D%A2"><span class="nav-number">2.</span> <span class="nav-text">写在前面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%83%A8%E7%BD%B2python%E7%9A%84%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1"><span class="nav-number">3.</span> <span class="nav-text">部署python的定时任务</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-GitHub%E4%B8%AD%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE"><span class="nav-number">3.1.</span> <span class="nav-text">1. GitHub中创建项目</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%A1%B9%E7%9B%AE%E7%9B%AE%E5%BD%95"><span class="nav-number">3.1.1.</span> <span class="nav-text">项目目录</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%B8%BB%E8%A6%81%E6%96%87%E4%BB%B6%E5%86%85%E5%AE%B9"><span class="nav-number">3.1.2.</span> <span class="nav-text">主要文件内容</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="nav-number">3.2.</span> <span class="nav-text">2. 配置环境变量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%E4%B8%8A%E4%BC%A0%E4%BB%A3%E7%A0%81-%E6%9F%A5%E7%9C%8B-actions"><span class="nav-number">3.3.</span> <span class="nav-text">3. 上传代码 查看 actions</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-%E6%9F%A5%E7%9C%8B%E6%89%A7%E8%A1%8C%E7%BB%93%E6%9E%9C"><span class="nav-number">3.4.</span> <span class="nav-text">4. 查看执行结果</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-%E6%88%91%E7%9A%84%E6%89%A7%E8%A1%8C%E7%BB%93%E6%9E%9C"><span class="nav-number">3.5.</span> <span class="nav-text">5. 我的执行结果</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-%E4%B8%80%E4%BA%9B%E8%A7%A3%E9%87%8A"><span class="nav-number">3.6.</span> <span class="nav-text">6. 一些解释</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-%E9%97%AE%E9%A2%98%E6%80%9D%E8%80%83"><span class="nav-number">3.7.</span> <span class="nav-text">7. 问题思考</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E5%8F%AF%E8%83%BD%E7%9A%84%E7%94%A8%E5%A4%84"><span class="nav-number">4.</span> <span class="nav-text">其他可能的用处</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"><span class="nav-number">5.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#CI-x2F-CD-%E7%9A%84%E4%B8%80%E4%BA%9B%E8%A7%A3%E9%87%8A"><span class="nav-number">1.</span> <span class="nav-text">CI&#x2F;CD 的一些解释</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%86%99%E5%9C%A8%E5%89%8D%E9%9D%A2"><span class="nav-number">2.</span> <span class="nav-text">写在前面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%83%A8%E7%BD%B2python%E7%9A%84%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1"><span class="nav-number">3.</span> <span class="nav-text">部署python的定时任务</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-GitHub%E4%B8%AD%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE"><span class="nav-number">3.1.</span> <span class="nav-text">1. GitHub中创建项目</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%A1%B9%E7%9B%AE%E7%9B%AE%E5%BD%95"><span class="nav-number">3.1.1.</span> <span class="nav-text">项目目录</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%B8%BB%E8%A6%81%E6%96%87%E4%BB%B6%E5%86%85%E5%AE%B9"><span class="nav-number">3.1.2.</span> <span class="nav-text">主要文件内容</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="nav-number">3.2.</span> <span class="nav-text">2. 配置环境变量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%E4%B8%8A%E4%BC%A0%E4%BB%A3%E7%A0%81-%E6%9F%A5%E7%9C%8B-actions"><span class="nav-number">3.3.</span> <span class="nav-text">3. 上传代码 查看 actions</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-%E6%9F%A5%E7%9C%8B%E6%89%A7%E8%A1%8C%E7%BB%93%E6%9E%9C"><span class="nav-number">3.4.</span> <span class="nav-text">4. 查看执行结果</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-%E6%88%91%E7%9A%84%E6%89%A7%E8%A1%8C%E7%BB%93%E6%9E%9C"><span class="nav-number">3.5.</span> <span class="nav-text">5. 我的执行结果</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-%E4%B8%80%E4%BA%9B%E8%A7%A3%E9%87%8A"><span class="nav-number">3.6.</span> <span class="nav-text">6. 一些解释</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-%E9%97%AE%E9%A2%98%E6%80%9D%E8%80%83"><span class="nav-number">3.7.</span> <span class="nav-text">7. 问题思考</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E5%8F%AF%E8%83%BD%E7%9A%84%E7%94%A8%E5%A4%84"><span class="nav-number">4.</span> <span class="nav-text">其他可能的用处</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"><span class="nav-number">5.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -179,7 +178,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">358</span>
+          <span class="site-state-item-count">360</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -237,11 +236,16 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/weilining/img@main/img/icon.gif">
       <meta itemprop="name" content="Lining Wei">
-      <meta itemprop="description" content="算法、技术">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Ln's Blog">
+      <meta itemprop="description" content="算法、技术">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Github Action 的简单使用 | Ln's Blog">
+      <meta itemprop="description" content="默认">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -294,9 +298,9 @@
     
     <div class="post-body" itemprop="articleBody">
         <p>GitHub Action 是 GitHub 于 2019 年 11 月正式推出的一个 CI CD 服务。</p>
-<h3 id="CI-CD-的一些解释"><a href="#CI-CD-的一些解释" class="headerlink" title="CI/CD 的一些解释"></a>CI/CD 的一些解释</h3><p>CI/CD 是什么？如何理解持续集成、持续交付和持续部署。</p>
-<p>CI/CD 是一种通过在应用开发阶段引入自动化来频繁向客户交付应用的方法。CI/CD 的核心概念是持续集成、持续交付和持续部署。作为一个面向开发和运营团队的解决方案，CI/CD 主要针对在集成新代码时所引发的问题（亦称：“集成地狱”）。</p>
-<p>具体而言，CI/CD 可让持续自动化和持续监控贯穿于应用的整个生命周期（从集成和测试阶段，到交付和部署）。这些关联的事务通常被统称为“CI/CD 管道”，由开发和运维团队以敏捷方式协同支持。</p>
+<h3 id="CI-x2F-CD-的一些解释"><a href="#CI-x2F-CD-的一些解释" class="headerlink" title="CI&#x2F;CD 的一些解释"></a>CI&#x2F;CD 的一些解释</h3><p>CI&#x2F;CD 是什么？如何理解持续集成、持续交付和持续部署。</p>
+<p>CI&#x2F;CD 是一种通过在应用开发阶段引入自动化来频繁向客户交付应用的方法。CI&#x2F;CD 的核心概念是持续集成、持续交付和持续部署。作为一个面向开发和运营团队的解决方案，CI&#x2F;CD 主要针对在集成新代码时所引发的问题（亦称：“集成地狱”）。</p>
+<p>具体而言，CI&#x2F;CD 可让持续自动化和持续监控贯穿于应用的整个生命周期（从集成和测试阶段，到交付和部署）。这些关联的事务通常被统称为“CI&#x2F;CD 管道”，由开发和运维团队以敏捷方式协同支持。</p>
 <h3 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h3><p>如果你仅仅是想体验一下 Github Action 那么阅读下面的步骤就可以（可能需要对GitHub有些基础）。</p>
 <p>强烈建议访问官网了解详情 <span class="exturl" data-url="aHR0cHM6Ly9saW5rLmp1ZWppbi5jbi8/dGFyZ2V0PWh0dHBzOi8vZG9jcy5naXRodWIuY29tL2NuL2FjdGlvbnM=">官方文档<i class="fa fa-external-link-alt"></i></span></p>
 <h3 id="部署python的定时任务"><a href="#部署python的定时任务" class="headerlink" title="部署python的定时任务"></a>部署python的定时任务</h3><h4 id="1-GitHub中创建项目"><a href="#1-GitHub中创建项目" class="headerlink" title="1. GitHub中创建项目"></a>1. GitHub中创建项目</h4><p>创建步骤可以自行搜索，没有特殊的要求</p>
@@ -311,7 +315,7 @@
 <ol>
 <li>main.py</li>
 </ol>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span>():</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;执行github action&quot;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    main()</span><br><span class="line"></span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">main</span>():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;执行github action&quot;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    main()</span><br><span class="line"></span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
 
 <h4 id="2-配置环境变量"><a href="#2-配置环境变量" class="headerlink" title="2. 配置环境变量"></a>2. 配置环境变量</h4><p>如果需要配置，没有则跳过</p>
 <p><img data-src="/332/90cb8c091e1d457ca5c93f791109378f~tplv-k3u1fbpfcp-watermark.awebp" alt="image.png" loading="lazy"></p>
@@ -323,7 +327,7 @@
 <p><img data-src="/332/aa383d9cf6bf4247bc689c8743c8a3b0~tplv-k3u1fbpfcp-watermark.awebp" alt="image.png" loading="lazy"></p>
 <h4 id="6-一些解释"><a href="#6-一些解释" class="headerlink" title="6. 一些解释"></a>6. 一些解释</h4><ul>
 <li><strong>name :</strong> job 的名称 （后续在GitHub的Actions会显示）</li>
-<li><strong>on.push.branches :</strong> 在代码合并/推送到此分支后自动执行当前job</li>
+<li><strong>on.push.branches :</strong> 在代码合并&#x2F;推送到此分支后自动执行当前job</li>
 <li><strong>on.schedule :</strong> 计划任务 符合cron的表达式</li>
 <li><strong>jobs.build.runs-on :</strong>  运行环境的选择</li>
 <li><strong>jobs.build.steps :</strong>  job的具体执行步骤，可以定义多个步骤按顺序执行</li>
@@ -438,7 +442,7 @@
 
 <div class="copyright">
   &copy; 2015 – 
-  <span itemprop="copyrightYear">2021</span>
+  <span itemprop="copyrightYear">2022</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -449,13 +453,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">544k</span>
+    <span title="站点总字数">550k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">8:14</span>
+    <span title="站点阅读时长">8:20</span>
   </span>
 </div>
 
@@ -472,16 +476,16 @@
   <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js" integrity="sha256-EdPgYcPk/IIrw7FYeuJQexva49pVRZNmt3LculEr7zM=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.2/source/js/comments.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.2/source/js/utils.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.2/source/js/motion.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.2/source/js/next-boot.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.10.1/source/js/comments.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.10.1/source/js/utils.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.10.1/source/js/motion.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.10.1/source/js/next-boot.min.js"></script>
 
   
 <script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.2/source/js/third-party/search/local-search.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.10.1/source/js/third-party/search/local-search.min.js"></script>
 
 
 
 
-  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.2/source/js/third-party/pace.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.10.1/source/js/third-party/pace.min.js"></script>
 
   
 
@@ -490,7 +494,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/quicklink@2.2.0/dist/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>
   <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"ignores":null,"url":"https://weilining.github.io/332.html"}</script>
-  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.2/source/js/third-party/quicklink.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.10.1/source/js/third-party/quicklink.min.js"></script>
 
 
 <script class="next-config" data-name="valine" type="application/json">{"enable":true,"appId":"Bu6sP4depeiGP22PIFqz0SmJ-MdYXbMMI","appKey":"jYGDeeOBkTqvrUJDEmqj83q7","serverURLs":"https://bu6sp4de.api.lncldglobal.com","placeholder":"Just go go","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"lang":null,"visitor":true,"comment_count":true,"recordIP":false,"enableQQ":false,"requiredFields":[],"el":"#valine-comments","path":"/332.html"}</script>

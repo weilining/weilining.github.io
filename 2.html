@@ -4,8 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
 <meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)">
-<meta name="generator" content="Hexo 5.4.0">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.1.0">
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.jsdelivr.net/gh/weilining/img@main/img/apple-touch-icon-next.png">
@@ -21,18 +20,17 @@
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css" integrity="sha256-jTIdiMuX/e3DGJUGwl3pKSxuc6YOuqtJYkM0bGQESA4=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/blue/pace-theme-bounce.css">
   <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"weilining.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.8.2","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.2/source/js/config.min.js"></script>
-<meta name="description" content="看到csdn上连个目录都没有，基本上全是广告，怎么让人学习使用Git？">
-<meta property="og:type" content="article">
+<script class="next-config" data-name="main" type="application/json">{"hostname":"weilining.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.10.1","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.10.1/source/js/config.min.js"></script>
+
+    <meta property="og:type" content="article">
 <meta property="og:title" content="史上最详细Git使用教程">
 <meta property="og:url" content="https://weilining.github.io/2.html">
 <meta property="og:site_name" content="Ln&#39;s Blog">
-<meta property="og:description" content="看到csdn上连个目录都没有，基本上全是广告，怎么让人学习使用Git？">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-09-18T16:54:15.000Z">
 <meta property="article:modified_time" content="2020-09-18T16:54:15.000Z">
@@ -51,6 +49,7 @@
 <script class="next-config" data-name="calendar" type="application/json">""</script>
 <title>史上最详细Git使用教程 | Ln's Blog</title>
   
+
 
 
 
@@ -159,7 +158,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%97%A0%E6%B3%95%E5%9C%A8git%E4%B8%AD%E6%B7%BB%E5%8A%A0%E6%96%87%E4%BB%B6%E5%A4%B9"><span class="nav-number">1.</span> <span class="nav-text">无法在git中添加文件夹</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E2%80%A6or-create-a-new-repository-on-the-command-line"><span class="nav-number">1.0.1.</span> <span class="nav-text">…or create a new repository on the command line</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E2%80%A6or-push-an-existing-repository-from-the-command-line"><span class="nav-number">1.0.2.</span> <span class="nav-text">…or push an existing repository from the command line</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BF%AB%E9%80%9F%E8%AE%BE%E7%BD%AE%E2%80%94-%E5%A6%82%E6%9E%9C%E4%BD%A0%E7%9F%A5%E9%81%93%E8%AF%A5%E6%80%8E%E4%B9%88%E6%93%8D%E4%BD%9C%EF%BC%8C%E7%9B%B4%E6%8E%A5%E4%BD%BF%E7%94%A8%E4%B8%8B%E9%9D%A2%E7%9A%84%E5%9C%B0%E5%9D%80"><span class="nav-number">1.0.2.1.</span> <span class="nav-text">快速设置— 如果你知道该怎么操作，直接使用下面的地址</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AE%80%E6%98%93%E7%9A%84%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B"><span class="nav-number">1.0.2.2.</span> <span class="nav-text">简易的命令行入门教程:</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git-clone-depth-1%E5%88%87%E6%8D%A2%E5%88%86%E6%94%AF"><span class="nav-number">1.1.</span> <span class="nav-text">git clone --depth&#x3D;1切换分支</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git%E5%88%A0%E9%99%A4%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF%E5%92%8C%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF"><span class="nav-number">1.2.</span> <span class="nav-text">git删除远程分支和本地分支</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%AA%E8%BE%93%E5%87%BA%E9%94%99%E8%AF%AF%E4%BF%A1%E6%81%AF"><span class="nav-number">1.3.</span> <span class="nav-text">只输出错误信息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git-%E5%9B%9E%E6%A1%A3%E6%93%8D%E4%BD%9C"><span class="nav-number">1.4.</span> <span class="nav-text">git 回档操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%83%A8%E7%BD%B2%E5%88%B0-github"><span class="nav-number">1.5.</span> <span class="nav-text">部署到 github</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%97%A0%E6%B3%95%E5%9C%A8git%E4%B8%AD%E6%B7%BB%E5%8A%A0%E6%96%87%E4%BB%B6%E5%A4%B9"><span class="nav-number">1.</span> <span class="nav-text">无法在git中添加文件夹</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E2%80%A6or-create-a-new-repository-on-the-command-line"><span class="nav-number">1.0.1.</span> <span class="nav-text">…or create a new repository on the command line</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E2%80%A6or-push-an-existing-repository-from-the-command-line"><span class="nav-number">1.0.2.</span> <span class="nav-text">…or push an existing repository from the command line</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BF%AB%E9%80%9F%E8%AE%BE%E7%BD%AE%E2%80%94-%E5%A6%82%E6%9E%9C%E4%BD%A0%E7%9F%A5%E9%81%93%E8%AF%A5%E6%80%8E%E4%B9%88%E6%93%8D%E4%BD%9C%EF%BC%8C%E7%9B%B4%E6%8E%A5%E4%BD%BF%E7%94%A8%E4%B8%8B%E9%9D%A2%E7%9A%84%E5%9C%B0%E5%9D%80"><span class="nav-number">1.0.2.1.</span> <span class="nav-text">快速设置— 如果你知道该怎么操作，直接使用下面的地址</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AE%80%E6%98%93%E7%9A%84%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B"><span class="nav-number">1.0.2.2.</span> <span class="nav-text">简易的命令行入门教程:</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git-clone-depth-x3D-1%E5%88%87%E6%8D%A2%E5%88%86%E6%94%AF"><span class="nav-number">1.1.</span> <span class="nav-text">git clone --depth&#x3D;1切换分支</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git%E5%88%A0%E9%99%A4%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF%E5%92%8C%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF"><span class="nav-number">1.2.</span> <span class="nav-text">git删除远程分支和本地分支</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%AA%E8%BE%93%E5%87%BA%E9%94%99%E8%AF%AF%E4%BF%A1%E6%81%AF"><span class="nav-number">1.3.</span> <span class="nav-text">只输出错误信息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git-%E5%9B%9E%E6%A1%A3%E6%93%8D%E4%BD%9C"><span class="nav-number">1.4.</span> <span class="nav-text">git 回档操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%83%A8%E7%BD%B2%E5%88%B0-github"><span class="nav-number">1.5.</span> <span class="nav-text">部署到 github</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -174,7 +173,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">358</span>
+          <span class="site-state-item-count">360</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -232,11 +231,16 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/weilining/img@main/img/icon.gif">
       <meta itemprop="name" content="Lining Wei">
-      <meta itemprop="description" content="算法、技术">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Ln's Blog">
+      <meta itemprop="description" content="算法、技术">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="史上最详细Git使用教程 | Ln's Blog">
+      <meta itemprop="description" content="看到csdn上连个目录都没有，基本上全是广告，怎么让人学习使用Git？">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -309,9 +313,9 @@
 <h3 id="…or-push-an-existing-repository-from-the-command-line"><a href="#…or-push-an-existing-repository-from-the-command-line" class="headerlink" title="…or push an existing repository from the command line"></a>…or push an existing repository from the command line</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin git@github.com:weilining/images.git</span><br><span class="line">git branch -M main</span><br><span class="line">git push -u origin main</span><br></pre></td></tr></table></figure>
 
 <h4 id="快速设置—-如果你知道该怎么操作，直接使用下面的地址"><a href="#快速设置—-如果你知道该怎么操作，直接使用下面的地址" class="headerlink" title="快速设置— 如果你知道该怎么操作，直接使用下面的地址"></a>快速设置— 如果你知道该怎么操作，直接使用下面的地址</h4><p>HTTPS:<span class="exturl" data-url="aHR0cHM6Ly9naXRlZS5jb20vd2VpbGluaW5nL3Rlc3QuZ2l0">https://gitee.com/weilining/test.git<i class="fa fa-external-link-alt"></i></span></p>
-<p>SSH:<span class="exturl" data-url="bWFpbHRvOiYjMTAzOyYjMTA1OyYjeDc0OyYjNjQ7JiN4Njc7JiN4Njk7JiN4NzQ7JiN4NjU7JiMxMDE7JiM0NjsmIzk5OyYjMTExOyYjMTA5Ow==">&#103;&#105;&#x74;&#64;&#x67;&#x69;&#x74;&#x65;&#101;&#46;&#99;&#111;&#109;<i class="fa fa-external-link-alt"></i></span>:weilining/test.git</p>
+<p>SSH:<span class="exturl" data-url="bWFpbHRvOiYjMTAzOyYjeDY5OyYjeDc0OyYjNjQ7JiMxMDM7JiN4Njk7JiMxMTY7JiMxMDE7JiMxMDE7JiM0NjsmIzk5OyYjMTExOyYjMTA5Ow==">&#103;&#x69;&#x74;&#64;&#103;&#x69;&#116;&#101;&#101;&#46;&#99;&#111;&#109;<i class="fa fa-external-link-alt"></i></span>:weilining&#x2F;test.git</p>
 <p>我们强烈建议所有的git仓库都有一个<code>README</code>, <code>LICENSE</code>, <code>.gitignore</code>文件</p>
-<p>Git入门？查看 <span class="exturl" data-url="aHR0cHM6Ly9naXRlZS5jb20vb3NjaGluYS9naXQtb3NjL3dpa2lzLyVFNSVCOCVBRSVFNSU4QSVBOQ==">帮助<i class="fa fa-external-link-alt"></i></span> , <span class="exturl" data-url="aHR0cHM6Ly9naXRlZS5jb20vaGVscC9hcnRpY2xlcy80MTE4">Visual Studio<i class="fa fa-external-link-alt"></i></span> / <span class="exturl" data-url="aHR0cDovL215Lm9zY2hpbmEubmV0L2xvbmd4dXUvYmxvZy8xNDE2OTk=">TortoiseGit<i class="fa fa-external-link-alt"></i></span> / <span class="exturl" data-url="aHR0cHM6Ly9naXRlZS5jb20vaGVscC9hcnRpY2xlcy80MTE5">Eclipse<i class="fa fa-external-link-alt"></i></span> / <span class="exturl" data-url="aHR0cDovL215Lm9zY2hpbmEubmV0L3p4cy9ibG9nLzE0MjU0NA==">Xcode<i class="fa fa-external-link-alt"></i></span> 下如何连接本站, <span class="exturl" data-url="aHR0cDovL3d3dy5vc2NoaW5hLm5ldC9xdWVzdGlvbi84Mjk5M18xMzM1MjA=">如何导入仓库<i class="fa fa-external-link-alt"></i></span></p>
+<p>Git入门？查看 <span class="exturl" data-url="aHR0cHM6Ly9naXRlZS5jb20vb3NjaGluYS9naXQtb3NjL3dpa2lzLyVFNSVCOCVBRSVFNSU4QSVBOQ==">帮助<i class="fa fa-external-link-alt"></i></span> , <span class="exturl" data-url="aHR0cHM6Ly9naXRlZS5jb20vaGVscC9hcnRpY2xlcy80MTE4">Visual Studio<i class="fa fa-external-link-alt"></i></span> &#x2F; <span class="exturl" data-url="aHR0cDovL215Lm9zY2hpbmEubmV0L2xvbmd4dXUvYmxvZy8xNDE2OTk=">TortoiseGit<i class="fa fa-external-link-alt"></i></span> &#x2F; <span class="exturl" data-url="aHR0cHM6Ly9naXRlZS5jb20vaGVscC9hcnRpY2xlcy80MTE5">Eclipse<i class="fa fa-external-link-alt"></i></span> &#x2F; <span class="exturl" data-url="aHR0cDovL215Lm9zY2hpbmEubmV0L3p4cy9ibG9nLzE0MjU0NA==">Xcode<i class="fa fa-external-link-alt"></i></span> 下如何连接本站, <span class="exturl" data-url="aHR0cDovL3d3dy5vc2NoaW5hLm5ldC9xdWVzdGlvbi84Mjk5M18xMzM1MjA=">如何导入仓库<i class="fa fa-external-link-alt"></i></span></p>
 <h4 id="简易的命令行入门教程"><a href="#简易的命令行入门教程" class="headerlink" title="简易的命令行入门教程:"></a>简易的命令行入门教程:</h4><p>Git 全局设置:</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;name&quot;</span><br><span class="line">git config --global user.email &quot;email@163.com&quot;</span><br></pre></td></tr></table></figure>
 
@@ -332,7 +336,7 @@
 <p>清空GitHub历史</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">find . -name &quot;.git&quot; | xargs rm -Rf</span><br><span class="line">git init</span><br><span class="line">git add .</span><br><span class="line">git commit -m &quot;first commit&quot;</span><br><span class="line">git branch -M master</span><br><span class="line">git remote add origin git@github.com:weilining/images.git</span><br><span class="line">git push -f origin master</span><br></pre></td></tr></table></figure>
 
-<h2 id="git-clone-depth-1切换分支"><a href="#git-clone-depth-1切换分支" class="headerlink" title="git clone --depth=1切换分支"></a>git clone --depth=1切换分支</h2><p>以GitHub为例，假设默认分支main，切换到master分支。</p>
+<h2 id="git-clone-depth-x3D-1切换分支"><a href="#git-clone-depth-x3D-1切换分支" class="headerlink" title="git clone --depth&#x3D;1切换分支"></a>git clone --depth&#x3D;1切换分支</h2><p>以GitHub为例，假设默认分支main，切换到master分支。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git clone --depth=1 git@github.com:weilining/images.git # 快速下载默认分支最后一次提交</span><br><span class="line">cd images # 进入git仓库</span><br><span class="line">git branch # 查看默认分支main</span><br><span class="line">git remote set-branches origin &#x27;master&#x27; # 远程分支名master</span><br><span class="line">git fetch --depth 1 origin master</span><br><span class="line">git checkout master #切换到master分支</span><br></pre></td></tr></table></figure>
 
 <h2 id="git删除远程分支和本地分支"><a href="#git删除远程分支和本地分支" class="headerlink" title="git删除远程分支和本地分支"></a>git删除远程分支和本地分支</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">cd git # 进入git项目</span><br><span class="line">git branch -a # 查看所有的分支。</span><br><span class="line">git checkout main #假设要删除master的远程分支，我们需要先把分支切换到main，才能删除master。</span><br><span class="line">git push origin --delete master # 删除远程分支</span><br><span class="line">git branch -d master # 删除本地分支</span><br><span class="line">git branch -D master # 强制删除</span><br></pre></td></tr></table></figure>
@@ -347,7 +351,7 @@
 </ol>
 <p>最后要 <code>git push -f -u origin master</code> 提交。</p>
 <p>VSCode 规范化提交插件：<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1JlZEp1ZS9naXQtY29tbWl0LXBsdWdpbg==">git-commit-plugin<i class="fa fa-external-link-alt"></i></span></p>
-<h2 id="部署到-github"><a href="#部署到-github" class="headerlink" title="部署到 github"></a>部署到 github</h2><p>登录 <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tLw==">github<i class="fa fa-external-link-alt"></i></span> ，创建 yourname/yourname.github.io 仓库， 进入该仓库 setting，下拉到 Github Page</p>
+<h2 id="部署到-github"><a href="#部署到-github" class="headerlink" title="部署到 github"></a>部署到 github</h2><p>登录 <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tLw==">github<i class="fa fa-external-link-alt"></i></span> ，创建 yourname&#x2F;yourname.github.io 仓库， 进入该仓库 setting，下拉到 Github Page</p>
 <p>设置 master branch，Custom domain（可选），Enforce HTTPS</p>
 <p>git 命令行进入 blog 目录，执行下面操作：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Python</span><br><span class="line">ssh-keygen -t rsa -C yourmail@example.com #建议不设置密码，按回车</span><br><span class="line">clip &lt; ~/.ssh/id_rsa.pub # 复制公钥到系统粘贴板</span><br></pre></td></tr></table></figure>
@@ -447,7 +451,7 @@
 
 <div class="copyright">
   &copy; 2015 – 
-  <span itemprop="copyrightYear">2021</span>
+  <span itemprop="copyrightYear">2022</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -458,13 +462,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">544k</span>
+    <span title="站点总字数">550k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">8:14</span>
+    <span title="站点阅读时长">8:20</span>
   </span>
 </div>
 
@@ -481,16 +485,16 @@
   <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js" integrity="sha256-EdPgYcPk/IIrw7FYeuJQexva49pVRZNmt3LculEr7zM=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.2/source/js/comments.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.2/source/js/utils.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.2/source/js/motion.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.2/source/js/next-boot.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.10.1/source/js/comments.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.10.1/source/js/utils.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.10.1/source/js/motion.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.10.1/source/js/next-boot.min.js"></script>
 
   
 <script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.2/source/js/third-party/search/local-search.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.10.1/source/js/third-party/search/local-search.min.js"></script>
 
 
 
 
-  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.2/source/js/third-party/pace.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.10.1/source/js/third-party/pace.min.js"></script>
 
   
 
@@ -499,7 +503,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/quicklink@2.2.0/dist/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>
   <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"ignores":null,"url":"https://weilining.github.io/2.html"}</script>
-  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.2/source/js/third-party/quicklink.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.10.1/source/js/third-party/quicklink.min.js"></script>
 
 
 <script class="next-config" data-name="valine" type="application/json">{"enable":true,"appId":"Bu6sP4depeiGP22PIFqz0SmJ-MdYXbMMI","appKey":"jYGDeeOBkTqvrUJDEmqj83q7","serverURLs":"https://bu6sp4de.api.lncldglobal.com","placeholder":"Just go go","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"lang":null,"visitor":true,"comment_count":true,"recordIP":false,"enableQQ":false,"requiredFields":[],"el":"#valine-comments","path":"/2.html"}</script>
