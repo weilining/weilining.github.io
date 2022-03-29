@@ -6,7 +6,7 @@
   <link href="https://weilining.github.io/atom.xml" rel="self"/>
   
   <link href="https://weilining.github.io/"/>
-  <updated>2022-03-29T03:19:32.000Z</updated>
+  <updated>2022-03-29T03:39:38.000Z</updated>
   <id>https://weilining.github.io/</id>
   
   <author>
@@ -15,6 +15,23 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>利用 Yandex，搭建免费的个人域名邮箱服务</title>
+    <link href="https://weilining.github.io/363.html"/>
+    <id>https://weilining.github.io/363.html</id>
+    <published>2022-03-29T03:39:38.000Z</published>
+    <updated>2022-03-29T03:39:38.000Z</updated>
+    
+    <content type="html"><![CDATA[<p> 有一个自己的域名邮箱好处多多。你可以用它来重复注册某些网站或服务，如果你在运营网站或播客，还可以用它来和读者、听众们沟通。</p><p>自己搭建邮件服务器非常麻烦，你需要解决 TOS、繁琐地搭建、SPF 与 DKIM 的设置等众多问题，更不用提服务器需要自己维护所带来的备份等工作。</p><p>随后，我发现 Yandex 提供了免费的个性域名服务。和同类型的 QQ 邮箱相比，Yandex 注册过程更简单，不需要手机验证和实名验证，自由度更高。</p><h2 id="Yandex-是什么"><a href="#Yandex-是什么" class="headerlink" title="Yandex 是什么"></a>Yandex 是什么</h2><p>Yandex（俄语：Яндекс）是一家俄罗斯互联网企业，旗下的搜索引擎在俄国内拥有逾 60% 的市场占有率，同时也提供邮箱、网盘等一系列互联网产品和服务。</p><ul><li>Yandex Mail 的注册入口：<span class="exturl" data-url="aHR0cHM6Ly9tYWlsLnlhbmRleC5jb20v">mail.yandex.com<i class="fa fa-external-link-alt"></i></span></li><li>个人域名邮箱申请入口：<span class="exturl" data-url="aHR0cHM6Ly9jb25uZWN0LnlhbmRleC5jb20vcGRkLw==">Connect Yandex<i class="fa fa-external-link-alt"></i></span></li></ul><h2 id="Yandex-域名邮箱和其它同类服务相比的优势"><a href="#Yandex-域名邮箱和其它同类服务相比的优势" class="headerlink" title="Yandex 域名邮箱和其它同类服务相比的优势"></a>Yandex 域名邮箱和其它同类服务相比的优势</h2><ul><li>注册相比自行搭建步骤简单很多</li><li>由大型企业及服务商维护，无需自行维护</li><li>免费，并可提供 1000 个自定义前缀邮箱，每个用户 10G 容量</li><li>可以配置 SPF、DKIM，降低被认证为垃圾邮件的几率</li><li>搭建好后多开邮箱账号无门槛</li></ul><h2 id="步骤一：申请和注册"><a href="#步骤一：申请和注册" class="headerlink" title="步骤一：申请和注册"></a>步骤一：申请和注册</h2><h3 id="注册-Yandex-邮箱"><a href="#注册-Yandex-邮箱" class="headerlink" title="注册 Yandex 邮箱"></a>注册 Yandex 邮箱</h3><p>传送门：<span class="exturl" data-url="aHR0cHM6Ly9wYXNzcG9ydC55YW5kZXguY29tL3JlZ2lzdHJhdGlvbg==">https://passport.yandex.com/registration<i class="fa fa-external-link-alt"></i></span></p><p><img data-src="/363/1-20220329114012377.png" alt="img" loading="lazy"></p><p>可以选择用电话号码或者设置安全问题两种方式注册，笔者是使用 Google Voice 注册的。</p><h3 id="注册域名邮箱"><a href="#注册域名邮箱" class="headerlink" title="注册域名邮箱"></a>注册域名邮箱</h3><p>个人域名邮箱申请入口：<span class="exturl" data-url="aHR0cHM6Ly9jb25uZWN0LnlhbmRleC5jb20vcGRkLw==">Connect Yandex<i class="fa fa-external-link-alt"></i></span>，输入你的顶级域名注册。</p><p><img data-src="/363/1.png" alt="img" loading="lazy"></p><p>接着就是验证该域名所有权，一共有四种方式：</p><ul><li>Html files：放一个指定名称的 html 文件到服务器根目录</li><li>Meta tag：在网站首页加入指定的 meta 头</li><li>Whois：不推荐，因为大部分的 whois 都被商家做了保护</li><li>DNS record：在 DNS 解析中加入指定的 TXT 项</li></ul><p>对于不懂得网站搭建的朋友，前两种方法注定是行不通了，只能在 DNS 管理后台做 dns 记录。如果你有自己的网站，优先选择方案二，加入一个 meta 头即可。</p><p>下面来讲解一下 DNS record 的设置方法，进入 DNS 的后台面板，点击添加 TXT 记录：</p><p>Name（host）填写 <code>yandex-verification</code></p><p>Value 填写验证页面给定的值，比如 <code>5c10414be60d8631</code></p><p><strong>做好验证之后就是等待通过验证的过程，此过程可能短至一天，长至数月，请耐心等待。</strong>笔者在今年上半年申请之后没有立即通过，直到最近群友提起才重新拾起查看。</p><p>当你点击 <span class="exturl" data-url="aHR0cHM6Ly9jb25uZWN0LnlhbmRleC5jb20vcG9ydGFsL2ltcG9ydC9wZGQ/ZnJvbT1wZGQ=">这里<i class="fa fa-external-link-alt"></i></span>，出现如下图显示画面时，说明你已经成功申请域名邮箱：</p><p><img data-src="/363/1-20220329114012407.png" alt="img" loading="lazy"></p><h2 id="步骤二：配置-MX、SPF-与-DKIM-记录"><a href="#步骤二：配置-MX、SPF-与-DKIM-记录" class="headerlink" title="步骤二：配置 MX、SPF 与 DKIM 记录"></a>步骤二：配置 MX、SPF 与 DKIM 记录</h2><h3 id="配置-MX-记录"><a href="#配置-MX-记录" class="headerlink" title="配置 MX 记录"></a>配置 MX 记录</h3><p>进入 DNS 管理后台，找到 mail 设置或者可以填写 MX 记录的地方，Name（Host）填写 <code>@</code> 或者你的顶级域名，Value 填写 <code>mx.yandex.net.</code>，Priority 填写 <code>10</code>。</p><p><img data-src="/363/1-20220329114012371.png" alt="img" loading="lazy"></p><p>解析好之后静待生效即可。</p><h3 id="配置-SPF-和-DKIM"><a href="#配置-SPF-和-DKIM" class="headerlink" title="配置 SPF 和 DKIM"></a>配置 SPF 和 DKIM</h3><p>SPF 记录有助于降低从域名邮箱发送的电子邮件被标记为垃圾邮件的风险，因此一定要设置。进入 DNS 管理后台，添加新的 TXT 记录。Name（Host）填写 <code>@</code> 或者顶级域名，Value 填写 <code>v = spf1 redirect = _spf.yandex.net</code>。更具体的操作可以参考官网：<span class="exturl" data-url="aHR0cHM6Ly95YW5kZXguY29tL3N1cHBvcnQvZG9tYWluL3NldC1tYWlsL3NwZi5odG1s">传送门<i class="fa fa-external-link-alt"></i></span></p><p>使用 DKIM 签名，电子邮件收件人可以验证邮件是否真的来自所谓的发件人。进入 DNS 管理后台，添加新的 TXT 记录。Name（Host）填写 <code>mail._domainkey</code>，Value 填写 Yandex.Connect 设置中复制的「公钥」中的文本块。</p><ul><li>公钥获取地址：<span class="exturl" data-url="aHR0cHM6Ly9jb25uZWN0LnlhbmRleC5jb20vcG9ydGFsL2FkbWluL2N1c3RvbWl6YXRpb24vbWFpbA==">传送门<i class="fa fa-external-link-alt"></i></span></li><li>更具体的操作可以参考官网：<span class="exturl" data-url="aHR0cHM6Ly95YW5kZXguY29tL3N1cHBvcnQvY29ubmVjdC9kbnMvZGtpbS5odG1sP2Zvcm0tb3JnX2lkPTI3NjU1MjMmZm9ybS12PTA=">传送门<i class="fa fa-external-link-alt"></i></span></li></ul><p><img data-src="/363/1-20220329114012382.png" alt="img" loading="lazy"></p><p>解析好之后静待生效即可。</p><h2 id="步骤三：自定义域名邮箱前缀"><a href="#步骤三：自定义域名邮箱前缀" class="headerlink" title="步骤三：自定义域名邮箱前缀"></a>步骤三：自定义域名邮箱前缀</h2><p>如果你完成了以上所有步骤并且通过了 Yandex 的官方验证，那么恭喜你，你已经有了属于自己的域名邮箱。下面要做的工作就是通过简单的设置自定义域名邮箱的前缀。</p><p>进入 <span class="exturl" data-url="aHR0cHM6Ly9jb25uZWN0LnlhbmRleC5jb20vcG9ydGFsL2FkbWluL2RlcGFydG1lbnRzLzE=">这里<i class="fa fa-external-link-alt"></i></span>（Все сотрудники），点击「Add」添加一位用户，并完成域名前缀和密码的设置。</p><p><img data-src="/363/1-20220329114012401.png" alt="img" loading="lazy"></p><p>创建好之后回到 <span class="exturl" data-url="aHR0cHM6Ly9tYWlsLnlhbmRleC5jb20v">Yandex mail 官网<i class="fa fa-external-link-alt"></i></span> 登录，用户名和密码填写刚刚创建的信息即可。<strong>切记一定要登录，因为这里有一个协议需要同意，同意后该自定义前缀的域名邮箱方可开通。</strong></p><p>Enjoy it！</p><h2 id="补充内容"><a href="#补充内容" class="headerlink" title="补充内容"></a>补充内容</h2><p>配置中，如果你需要用到这些资讯，可以参考——</p><ul><li><p>POP3：pop.yandex.com SSL 端口：995</p></li><li><p>SMTP：smtp.yandex.com SSL 端口：465</p></li><li><p>IMAP：imap.yandex.com SSL 端口：993</p></li><li><p>API：<span class="exturl" data-url="aHR0cHM6Ly90ZWNoLnlhbmRleC5jb20vZG9tYWluL2RvYy9hYm91dC1kb2NwYWdlLw==">https://tech.yandex.com/domain/doc/about-docpage/<i class="fa fa-external-link-alt"></i></span></p></li><li><p>DNS record 全指南：</p><p><img data-src="/363/1.jpeg" alt="img" loading="lazy"></p></li></ul><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p><span class="exturl" data-url="aHR0cHM6Ly9zc3BhaS5jb20vcG9zdC82MTI4NA==">利用 Yandex，搭建免费的个人域名邮箱服务 - 少数派 (sspai.com)<i class="fa fa-external-link-alt"></i></span></p>]]></content>
+    
+    
+    <summary type="html">默认</summary>
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>JetBrains全系列软件激活教程激活码以及JetBrains系列软件汉化包</title>
@@ -330,23 +347,6 @@
     <updated>2021-11-01T19:29:01.000Z</updated>
     
     <content type="html"><![CDATA[<p>本文以安装 <code>numpy</code> 库为例：</p><ol><li>在本地终端中执行 <code>mkdir test-package</code> 命令，创建一个目录用于存放函数代码和依赖库。</li><li>执行以下命令，在该目录下安装 <code>numpy</code> 依赖库。</li></ol><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd test-package</span><br><span class="line">pip install numpy -t .</span><br></pre></td></tr></table></figure><ul><li>您可以使用 <code>pip freeze &gt; requirements.txt</code> 生成本地环境下所有依赖的 <code>requirements.txt</code> 文件。</li><li>在 IDE 的终端中执行 <code>pip install -r requirements.txt -t .</code> 即可根据 <code>requirements.txt</code> 的配置安装依赖包。</li></ul>]]></content>
-    
-    
-    <summary type="html">默认</summary>
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>最有效python批量安装模块</title>
-    <link href="https://weilining.github.io/343.html"/>
-    <id>https://weilining.github.io/343.html</id>
-    <published>2021-11-01T17:22:22.000Z</published>
-    <updated>2021-11-01T17:22:22.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>我相信很多小伙伴带有一个困扰，换了电脑或者重新装了系统之后，自己之前搭建的python环境和模块等等，都需要重新部署，特别费劲。有没有什么简单的方法呢？答案显而易见，请看下面介绍!</p><h1 id="1-创建requirements-txt文件，把所需要安装的模块都写进去"><a href="#1-创建requirements-txt文件，把所需要安装的模块都写进去" class="headerlink" title="1.创建requirements.txt文件，把所需要安装的模块都写进去"></a>1.创建requirements.txt文件，把所需要安装的模块都写进去</h1><p><img data-src="https://upload-images.jianshu.io/upload_images/18158347-7713e17d91dc65d3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/719/format/webp" alt="img" loading="lazy"></p><p>当然，版本号可以为空，为空时自动最新版本</p><h1 id="2-执行命令安装requirements-txt中的模块"><a href="#2-执行命令安装requirements-txt中的模块" class="headerlink" title="2.执行命令安装requirements.txt中的模块"></a>2.执行命令安装requirements.txt中的模块</h1><blockquote><p>pip install -r requirements.txt </p></blockquote><p>等待系统自动下载安装，简单快速</p><h1 id="3-已安装模块的导出"><a href="#3-已安装模块的导出" class="headerlink" title="3.已安装模块的导出"></a>3.已安装模块的导出</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">您可以使用 pip freeze &gt; requirements.txt 生成本地环境下所有依赖的 requirements.txt 文件。</span><br><span class="line">在 IDE 的终端中执行 pip install -r requirements.txt -t . 即可根据 requirements.txt 的配置安装依赖包。</span><br></pre></td></tr></table></figure><p>当然，会有一些小伙伴说，我模块安装的太多，一个一个写出来也挺费劲呢，有没有简单的方法呢？请看下面：</p><p>在终端执行命令：</p><blockquote><p>pip3 freeze &gt;requirements.txt</p></blockquote><p><img data-src="/343/image-20211102012409686.png" alt="image-20211102012409686" loading="lazy"></p><p>生成已安装的模块requirements.txt</p>]]></content>
     
     
     <summary type="html">默认</summary>
