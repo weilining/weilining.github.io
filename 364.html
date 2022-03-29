@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.1.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.jsdelivr.net/gh/weilining/img@main/img/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.jsdelivr.net/gh/weilining/img@main/img/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://cdn.jsdelivr.net/gh/weilining/img@main/img/favicon-16x16-next.png">
+  <link rel="mask-icon" href="https://cdn.jsdelivr.net/gh/weilining/img@main/img/logo.svg" color="#222">
+  <meta name="google-site-verification" content="OjGymv9uAqWYDsr-E-j6DG2k1_mPXsDQF77kgEK0nz8">
+  <meta name="msvalidate.01" content="5C84BC77E02800759CE29C4ACCE487BD">
+  <meta name="yandex-verification" content="06c62a93328de5da">
+  <meta name="baidu-site-verification" content="code-wFDrn4lvkD">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css" integrity="sha256-jTIdiMuX/e3DGJUGwl3pKSxuc6YOuqtJYkM0bGQESA4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/blue/pace-theme-bounce.css">
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"weilining.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.10.1","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.10.1/source/js/config.min.js"></script>
+
+    <meta property="og:type" content="article">
+<meta property="og:title" content="Cloudflare Workers 文件反代（推荐，无需服务器&#x2F;域名）">
+<meta property="og:url" content="https://weilining.github.io/364.html">
+<meta property="og:site_name" content="Ln&#39;s Blog">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://weilining.github.io/364/152347723-5afcbde2-a1d0-4d57-ac08-5052c0189b43.png">
+<meta property="og:image" content="https://weilining.github.io/364/152347729-d5cac205-f54d-4805-a460-3845676c8d11.png">
+<meta property="og:image" content="https://weilining.github.io/364/152347733-f3536cc1-fd63-4a01-99d2-dae1a0633b34.png">
+<meta property="og:image" content="https://weilining.github.io/364/152354320-2103bc1b-b4ed-4bfe-b238-153f005ba94d.png">
+<meta property="article:published_time" content="2022-03-29T04:23:50.000Z">
+<meta property="article:modified_time" content="2022-03-29T04:23:50.000Z">
+<meta property="article:author" content="Lining Wei">
+<meta property="article:tag" content="ACM,开发者,程序猿,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,互联网一切折腾">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://weilining.github.io/364/152347723-5afcbde2-a1d0-4d57-ac08-5052c0189b43.png">
+
+
+<link rel="canonical" href="https://weilining.github.io/364.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://weilining.github.io/364.html","path":"364.html","title":"Cloudflare Workers 文件反代（推荐，无需服务器/域名）"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Cloudflare Workers 文件反代（推荐，无需服务器/域名） | Ln's Blog</title>
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="Ln's Blog" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Ln's Blog</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">有朋自远方来，不亦乐乎</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-bell fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-top"><a href="/top/" rel="section"><i class="fa fa-signal fa-fw"></i>热榜</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-friends"><a href="/friends/" rel="section"><i class="fa fa-globe-asia fa-fw"></i>朋友们</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%80%E4%BB%8B"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%88%90%E6%9E%9C"><span class="nav-number">2.</span> <span class="nav-text">成果</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E6%88%98"><span class="nav-number">3.</span> <span class="nav-text">实战</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%93%E5%BC%80-Cloudflare-Workers%EF%BC%8C%E7%82%B9%E5%87%BB%E4%B8%AD%E9%97%B4%E6%A9%99%E8%89%B2%E7%9A%84-Start-building-%E6%8C%89%E9%92%AE%E3%80%82"><span class="nav-number">3.1.</span> <span class="nav-text">打开 Cloudflare Workers，点击中间橙色的 Start building 按钮。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%82%B9%E5%87%BB-%E5%88%9B%E5%BB%BA%E6%9C%8D%E5%8A%A1-%E6%8C%89%E9%92%AE%EF%BC%88%E5%A6%82%E4%B8%8B%E5%9B%BE%E6%89%80%E7%A4%BA%EF%BC%89"><span class="nav-number">3.2.</span> <span class="nav-text">点击 创建服务 按钮（如下图所示）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E6%9C%8D%E5%8A%A1%E5%90%8D%E7%A7%B0%EF%BC%88%E4%B8%89%E7%BA%A7%E5%AD%90%E5%9F%9F%E5%90%8D%EF%BC%89%EF%BC%8C%E9%80%89%E6%8B%A9%E7%AC%AC%E4%BA%8C%E4%B8%AA-HTTP-%E5%A4%84%E7%90%86%E7%A8%8B%E5%BA%8F%EF%BC%8C%E7%82%B9%E5%87%BB-%E5%88%9B%E5%BB%BA%E6%9C%8D%E5%8A%A1-%E6%8C%89%E9%92%AE%EF%BC%88%E5%A6%82%E4%B8%8B%E5%9B%BE%E6%89%80%E7%A4%BA%EF%BC%89"><span class="nav-number">3.3.</span> <span class="nav-text">输入服务名称（三级子域名），选择第二个 HTTP 处理程序，点击 创建服务 按钮（如下图所示）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%82%B9%E5%87%BB%E5%8F%B3%E4%B8%8B%E8%A7%92%E7%9A%84-%E5%BF%AB%E9%80%9F%E7%BC%96%E8%BE%91-%E6%8C%89%E9%92%AE"><span class="nav-number">3.4.</span> <span class="nav-text">点击右下角的 快速编辑 按钮</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B8%85%E7%A9%BA%E5%8E%9F%E5%86%85%E5%AE%B9%E5%B9%B6%E7%B2%98%E8%B4%B4%E4%BB%A5%E4%B8%8B%E4%BB%A3%E7%A0%81%EF%BC%8C%E7%82%B9%E5%87%BB-%E4%BF%9D%E5%AD%98%E5%B9%B6%E9%83%A8%E7%BD%B2%EF%BC%88%E9%80%9A%E5%B8%B8-10-%E7%A7%92%E5%86%85%E5%B0%B1%E5%AE%8C%E6%88%90%E4%BA%86%EF%BC%8C%E5%A6%82%E4%B8%8B%E5%9B%BE%E6%89%80%E7%A4%BA%EF%BC%89"><span class="nav-number">3.5.</span> <span class="nav-text">清空原内容并粘贴以下代码，点击 保存并部署（通常 10 秒内就完成了，如下图所示）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%80%E5%90%8E%E5%B0%9D%E8%AF%95%E6%B5%8F%E8%A7%88%E5%99%A8%E8%AE%BF%E9%97%AE-https-XXX-YYY-workers-dev-200mb-test-%E5%A6%82%E6%9E%9C%E5%8F%AF%E4%BB%A5%E6%AD%A3%E5%B8%B8%E4%B8%8B%E8%BD%BD%E5%88%99%E4%BB%A3%E8%A1%A8%E9%83%A8%E7%BD%B2%E6%88%90%E5%8A%9F"><span class="nav-number">3.6.</span> <span class="nav-text">最后尝试浏览器访问 https:&#x2F;&#x2F;XXX.YYY.workers.dev&#x2F;200mb.test 如果可以正常下载则代表部署成功</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE"><span class="nav-number">4.</span> <span class="nav-text">参考文献</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Lining Wei"
+      src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/icon.gif">
+  <p class="site-author-name" itemprop="name">Lining Wei</p>
+  <div class="site-description" itemprop="description">算法、技术</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">364</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">35</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="cc-license site-overview-item animated" itemprop="license">
+    <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC96aC1DTg=="><img src="https://cdn.jsdelivr.net/npm/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></span>
+  </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://weilining.github.io/364.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/weilining/img@main/img/icon.gif">
+      <meta itemprop="name" content="Lining Wei">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ln's Blog">
+      <meta itemprop="description" content="算法、技术">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Cloudflare Workers 文件反代（推荐，无需服务器/域名） | Ln's Blog">
+      <meta itemprop="description" content="默认">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Cloudflare Workers 文件反代（推荐，无需服务器/域名）<span class="exturl post-edit-link" data-url="aHR0cHM6Ly9naXRodWIuY29tL3dlaWxpbmluZy9ibG9nL2VkaXQvbWFpbi9zb3VyY2UvX3Bvc3RzLzM2NC5tZA==" title="编辑"><i class="fa fa-pen-nib"></i></span>
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-03-29 12:23:50" itemprop="dateCreated datePublished" datetime="2022-03-29T12:23:50+08:00">2022-03-29</time>
+    </span>
+
+  
+    <span id="/364.html" class="post-meta-item leancloud_visitors" data-flag-title="Cloudflare Workers 文件反代（推荐，无需服务器/域名）" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.3k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+            <div class="post-description">默认</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>可以利用 Cloudflare Workers 服务，这个只限制访问次数不限制流量，免费版<strong>每日 10 万次数</strong>限制（每天 8 点重置）。<br>搭建 Workers 文件反代很简单，也就在 Cloudflare 后台点几下就完事了，默认分配免费子域名，连域名&#x2F;服务器都省了。</p>
+<h2 id="成果"><a href="#成果" class="headerlink" title="成果"></a>成果</h2><p><span class="exturl" data-url="aHR0cHM6Ly9jYWNoZWZseS5jYWNoZWZseS5uZXQvMjAwbWIudGVzdA==">https://cachefly.cachefly.net/200mb.test<i class="fa fa-external-link-alt"></i></span></p>
+<p>反代地址</p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9jZmlwc2VsZWN0LnRpbWVsaW1pdC53b3JrZXJzLmRldi8yMDBtYi50ZXN0">https://cfipselect.timelimit.workers.dev/200mb.test<i class="fa fa-external-link-alt"></i></span></p>
+<h2 id="实战"><a href="#实战" class="headerlink" title="实战"></a>实战</h2><p>简单来说就是：<strong>创建服务、粘贴代码、保存部署</strong>，完事~</p>
+<h3 id="打开-Cloudflare-Workers，点击中间橙色的-Start-building-按钮。"><a href="#打开-Cloudflare-Workers，点击中间橙色的-Start-building-按钮。" class="headerlink" title="打开 Cloudflare Workers，点击中间橙色的 Start building 按钮。"></a>打开 <span class="exturl" data-url="aHR0cHM6Ly93b3JrZXJzLmNsb3VkZmxhcmUuY29tLw==">Cloudflare Workers<i class="fa fa-external-link-alt"></i></span>，点击中间橙色的 Start building 按钮。</h3><p><em><code>如果是第一次用，则会让你取个 &quot;专属于你&quot; 的二级子域名，即 YYY.workers.dev，以后可以改...</code></em></p>
+<h3 id="点击-创建服务-按钮（如下图所示）"><a href="#点击-创建服务-按钮（如下图所示）" class="headerlink" title="点击 创建服务 按钮（如下图所示）"></a>点击 创建服务 按钮（如下图所示）</h3><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://user-images.githubusercontent.com/54703944/152347723-5afcbde2-a1d0-4d57-ac08-5052c0189b43.png"><img data-src="/364/152347723-5afcbde2-a1d0-4d57-ac08-5052c0189b43.png" alt="img" loading="lazy"></a></p>
+<hr>
+<h3 id="输入服务名称（三级子域名），选择第二个-HTTP-处理程序，点击-创建服务-按钮（如下图所示）"><a href="#输入服务名称（三级子域名），选择第二个-HTTP-处理程序，点击-创建服务-按钮（如下图所示）" class="headerlink" title="输入服务名称（三级子域名），选择第二个 HTTP 处理程序，点击 创建服务 按钮（如下图所示）"></a>输入<strong>服务名称</strong>（三级子域名），选择第二个 <strong>HTTP 处理程序</strong>，点击 创建服务 按钮（如下图所示）</h3><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://user-images.githubusercontent.com/54703944/152347729-d5cac205-f54d-4805-a460-3845676c8d11.png"><img data-src="/364/152347729-d5cac205-f54d-4805-a460-3845676c8d11.png" alt="img" loading="lazy"></a></p>
+<hr>
+<h3 id="点击右下角的-快速编辑-按钮"><a href="#点击右下角的-快速编辑-按钮" class="headerlink" title="点击右下角的 快速编辑 按钮"></a>点击右下角的 快速编辑 按钮</h3><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://user-images.githubusercontent.com/54703944/152347733-f3536cc1-fd63-4a01-99d2-dae1a0633b34.png"><img data-src="/364/152347733-f3536cc1-fd63-4a01-99d2-dae1a0633b34.png" alt="img" loading="lazy"></a></p>
+<hr>
+<h3 id="清空原内容并粘贴以下代码，点击-保存并部署（通常-10-秒内就完成了，如下图所示）"><a href="#清空原内容并粘贴以下代码，点击-保存并部署（通常-10-秒内就完成了，如下图所示）" class="headerlink" title="清空原内容并粘贴以下代码，点击 保存并部署（通常 10 秒内就完成了，如下图所示）"></a>清空原内容并粘贴以下代码，点击 保存并部署（通常 10 秒内就完成了，如下图所示）</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">addEventListener(&quot;fetch&quot;, event =&gt; &#123;</span><br><span class="line">  let url = new URL(event.request.url);</span><br><span class="line">  url.protocol = &#x27;https:&#x27;</span><br><span class="line">  url.hostname = &quot;cachefly.cachefly.net&quot;;</span><br><span class="line">  let request = new Request(url, event.request);</span><br><span class="line">  event.respondWith(fetch(request));</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>这里是以 <code>https://cachefly.cachefly.net/200mb.test</code> 为反代目标（不建议只照着这一个薅），不过最大只有 <strong>200MB</strong>，想要<strong>更大的请修改反代目标</strong>（下面有可用的大文件 URL），另外如果目标是 http 地址则记得将上面代码中的 <code>https:</code> 改为 <code>http:</code></p>
+</blockquote>
+<p><img data-src="/364/152354320-2103bc1b-b4ed-4bfe-b238-153f005ba94d.png" alt="img" loading="lazy"></p>
+<h3 id="最后尝试浏览器访问-https-XXX-YYY-workers-dev-200mb-test-如果可以正常下载则代表部署成功"><a href="#最后尝试浏览器访问-https-XXX-YYY-workers-dev-200mb-test-如果可以正常下载则代表部署成功" class="headerlink" title="最后尝试浏览器访问 https://XXX.YYY.workers.dev/200mb.test 如果可以正常下载则代表部署成功"></a>最后尝试浏览器访问 <code>https://XXX.YYY.workers.dev/200mb.test</code> 如果可以正常下载则代表部署成功</h3><p>后续使用 CloudflareST 时，记得加上 <code>-url</code> 参数，例如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># Windows</span><br><span class="line">CloudflareST.exe -url https://XXX.YYY.workers.dev/200mb.test </span><br><span class="line"></span><br><span class="line"># Linux/Mac</span><br><span class="line">./CloudflareST -url https://XXX.YYY.workers.dev/200mb.test </span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>访问这个 URL 其实就是在反代 <span class="exturl" data-url="aHR0cHM6Ly9jYWNoZWZseS5jYWNoZWZseS5uZXQvMjAwbWIudGVzdA==">https://cachefly.cachefly.net/200mb.test<i class="fa fa-external-link-alt"></i></span><br>如果想要改成其他大文件 URL（下面写的有），只需要修改 Workers 代码中的 <code>cachefly.cachefly.net</code> 域名和协议即可</p>
+</blockquote>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/XIU2/CloudflareSpeedTest/issues/168#issuecomment-1028697209">关于下载测速不可用 <code>0.00 MB/s</code> 的 情况说明 及 解决方法... · Issue #168 · XIU2&#x2F;CloudflareSpeedTest (github.com)</a></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>Buy me a coffee</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/20201122213021.png" alt="Lining Wei 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/434235F3-7A93-4EA4-A7B6-4F6D977F1A89.png" alt="Lining Wei 支付宝">
+        <span>支付宝</span>
+      </div>
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/weilining/img@main/img/bitcoin.png" alt="Lining Wei 比特币">
+        <span>比特币</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文博主： </strong>Lining Wei
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://weilining.github.io/364.html" title="Cloudflare Workers 文件反代（推荐，无需服务器&#x2F;域名）">https://weilining.github.io/364.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC96aC1DTg=="><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/363.html" rel="prev" title="利用 Yandex，搭建免费的个人域名邮箱服务">
+                  <i class="fa fa-chevron-left"></i> 利用 Yandex，搭建免费的个人域名邮箱服务
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments" id="valine-comments"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 2015 – 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Ln</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">561k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">8:30</span>
+  </span>
+</div>
+
+<div><canvas id="snow" style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:99999;pointer-events:none"></canvas></div>
+
+
+<script id="click-show-text" src="/js/click-show-text.js" data-mobile="false" data-text="富强,民主,文明,和谐,自由,平等,公正,法治,爱国,敬业,诚信,友善" data-fontsize="20px" data-random="false" async></script>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js" integrity="sha256-EdPgYcPk/IIrw7FYeuJQexva49pVRZNmt3LculEr7zM=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.10.1/source/js/comments.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.10.1/source/js/utils.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.10.1/source/js/motion.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.10.1/source/js/next-boot.min.js"></script>
+
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.10.1/source/js/third-party/search/local-search.min.js"></script>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.10.1/source/js/third-party/pace.min.js"></script>
+
+  
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.2.0/dist/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"ignores":null,"url":"https://weilining.github.io/364.html"}</script>
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.10.1/source/js/third-party/quicklink.min.js"></script>
+
+
+<script class="next-config" data-name="valine" type="application/json">{"enable":true,"appId":"Bu6sP4depeiGP22PIFqz0SmJ-MdYXbMMI","appKey":"jYGDeeOBkTqvrUJDEmqj83q7","serverURLs":"https://bu6sp4de.api.lncldglobal.com","placeholder":"Just go go","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"lang":null,"visitor":true,"comment_count":true,"recordIP":false,"enableQQ":false,"requiredFields":[],"el":"#valine-comments","path":"/364.html"}</script>
+<script>
+document.addEventListener('page:loaded', () => {
+  NexT.utils.loadComments(CONFIG.valine.el)
+    .then(() => NexT.utils.getScript(
+      'https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js',
+      { condition: window.Valine }
+    ))
+    .then(() => {
+      new Valine(CONFIG.valine);
+    });
+});
+</script>
+
+
+
+
+</body>
+</html>

@@ -6,7 +6,7 @@
   <link href="https://weilining.github.io/atom.xml" rel="self"/>
   
   <link href="https://weilining.github.io/"/>
-  <updated>2022-03-29T03:39:38.000Z</updated>
+  <updated>2022-03-29T04:23:50.000Z</updated>
   <id>https://weilining.github.io/</id>
   
   <author>
@@ -15,6 +15,23 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Cloudflare Workers 文件反代（推荐，无需服务器/域名）</title>
+    <link href="https://weilining.github.io/364.html"/>
+    <id>https://weilining.github.io/364.html</id>
+    <published>2022-03-29T04:23:50.000Z</published>
+    <updated>2022-03-29T04:23:50.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>可以利用 Cloudflare Workers 服务，这个只限制访问次数不限制流量，免费版<strong>每日 10 万次数</strong>限制（每天 8 点重置）。<br>搭建 Workers 文件反代很简单，也就在 Cloudflare 后台点几下就完事了，默认分配免费子域名，连域名&#x2F;服务器都省了。</p><h2 id="成果"><a href="#成果" class="headerlink" title="成果"></a>成果</h2><p><span class="exturl" data-url="aHR0cHM6Ly9jYWNoZWZseS5jYWNoZWZseS5uZXQvMjAwbWIudGVzdA==">https://cachefly.cachefly.net/200mb.test<i class="fa fa-external-link-alt"></i></span></p><p>反代地址</p><p><span class="exturl" data-url="aHR0cHM6Ly9jZmlwc2VsZWN0LnRpbWVsaW1pdC53b3JrZXJzLmRldi8yMDBtYi50ZXN0">https://cfipselect.timelimit.workers.dev/200mb.test<i class="fa fa-external-link-alt"></i></span></p><h2 id="实战"><a href="#实战" class="headerlink" title="实战"></a>实战</h2><p>简单来说就是：<strong>创建服务、粘贴代码、保存部署</strong>，完事~</p><h3 id="打开-Cloudflare-Workers，点击中间橙色的-Start-building-按钮。"><a href="#打开-Cloudflare-Workers，点击中间橙色的-Start-building-按钮。" class="headerlink" title="打开 Cloudflare Workers，点击中间橙色的 Start building 按钮。"></a>打开 <span class="exturl" data-url="aHR0cHM6Ly93b3JrZXJzLmNsb3VkZmxhcmUuY29tLw==">Cloudflare Workers<i class="fa fa-external-link-alt"></i></span>，点击中间橙色的 Start building 按钮。</h3><p><em><code>如果是第一次用，则会让你取个 &quot;专属于你&quot; 的二级子域名，即 YYY.workers.dev，以后可以改...</code></em></p><h3 id="点击-创建服务-按钮（如下图所示）"><a href="#点击-创建服务-按钮（如下图所示）" class="headerlink" title="点击 创建服务 按钮（如下图所示）"></a>点击 创建服务 按钮（如下图所示）</h3><p><a href="https://user-images.githubusercontent.com/54703944/152347723-5afcbde2-a1d0-4d57-ac08-5052c0189b43.png"><img data-src="/364/152347723-5afcbde2-a1d0-4d57-ac08-5052c0189b43.png" alt="img" loading="lazy"></a></p><hr><h3 id="输入服务名称（三级子域名），选择第二个-HTTP-处理程序，点击-创建服务-按钮（如下图所示）"><a href="#输入服务名称（三级子域名），选择第二个-HTTP-处理程序，点击-创建服务-按钮（如下图所示）" class="headerlink" title="输入服务名称（三级子域名），选择第二个 HTTP 处理程序，点击 创建服务 按钮（如下图所示）"></a>输入<strong>服务名称</strong>（三级子域名），选择第二个 <strong>HTTP 处理程序</strong>，点击 创建服务 按钮（如下图所示）</h3><p><a href="https://user-images.githubusercontent.com/54703944/152347729-d5cac205-f54d-4805-a460-3845676c8d11.png"><img data-src="/364/152347729-d5cac205-f54d-4805-a460-3845676c8d11.png" alt="img" loading="lazy"></a></p><hr><h3 id="点击右下角的-快速编辑-按钮"><a href="#点击右下角的-快速编辑-按钮" class="headerlink" title="点击右下角的 快速编辑 按钮"></a>点击右下角的 快速编辑 按钮</h3><p><a href="https://user-images.githubusercontent.com/54703944/152347733-f3536cc1-fd63-4a01-99d2-dae1a0633b34.png"><img data-src="/364/152347733-f3536cc1-fd63-4a01-99d2-dae1a0633b34.png" alt="img" loading="lazy"></a></p><hr><h3 id="清空原内容并粘贴以下代码，点击-保存并部署（通常-10-秒内就完成了，如下图所示）"><a href="#清空原内容并粘贴以下代码，点击-保存并部署（通常-10-秒内就完成了，如下图所示）" class="headerlink" title="清空原内容并粘贴以下代码，点击 保存并部署（通常 10 秒内就完成了，如下图所示）"></a>清空原内容并粘贴以下代码，点击 保存并部署（通常 10 秒内就完成了，如下图所示）</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">addEventListener(&quot;fetch&quot;, event =&gt; &#123;</span><br><span class="line">  let url = new URL(event.request.url);</span><br><span class="line">  url.protocol = &#x27;https:&#x27;</span><br><span class="line">  url.hostname = &quot;cachefly.cachefly.net&quot;;</span><br><span class="line">  let request = new Request(url, event.request);</span><br><span class="line">  event.respondWith(fetch(request));</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure><blockquote><p>这里是以 <code>https://cachefly.cachefly.net/200mb.test</code> 为反代目标（不建议只照着这一个薅），不过最大只有 <strong>200MB</strong>，想要<strong>更大的请修改反代目标</strong>（下面有可用的大文件 URL），另外如果目标是 http 地址则记得将上面代码中的 <code>https:</code> 改为 <code>http:</code></p></blockquote><p><img data-src="/364/152354320-2103bc1b-b4ed-4bfe-b238-153f005ba94d.png" alt="img" loading="lazy"></p><h3 id="最后尝试浏览器访问-https-XXX-YYY-workers-dev-200mb-test-如果可以正常下载则代表部署成功"><a href="#最后尝试浏览器访问-https-XXX-YYY-workers-dev-200mb-test-如果可以正常下载则代表部署成功" class="headerlink" title="最后尝试浏览器访问 https://XXX.YYY.workers.dev/200mb.test 如果可以正常下载则代表部署成功"></a>最后尝试浏览器访问 <code>https://XXX.YYY.workers.dev/200mb.test</code> 如果可以正常下载则代表部署成功</h3><p>后续使用 CloudflareST 时，记得加上 <code>-url</code> 参数，例如：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># Windows</span><br><span class="line">CloudflareST.exe -url https://XXX.YYY.workers.dev/200mb.test </span><br><span class="line"></span><br><span class="line"># Linux/Mac</span><br><span class="line">./CloudflareST -url https://XXX.YYY.workers.dev/200mb.test </span><br></pre></td></tr></table></figure><blockquote><p>访问这个 URL 其实就是在反代 <span class="exturl" data-url="aHR0cHM6Ly9jYWNoZWZseS5jYWNoZWZseS5uZXQvMjAwbWIudGVzdA==">https://cachefly.cachefly.net/200mb.test<i class="fa fa-external-link-alt"></i></span><br>如果想要改成其他大文件 URL（下面写的有），只需要修改 Workers 代码中的 <code>cachefly.cachefly.net</code> 域名和协议即可</p></blockquote><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p><a href="https://github.com/XIU2/CloudflareSpeedTest/issues/168#issuecomment-1028697209">关于下载测速不可用 <code>0.00 MB/s</code> 的 情况说明 及 解决方法... · Issue #168 · XIU2&#x2F;CloudflareSpeedTest (github.com)</a></p>]]></content>
+    
+    
+    <summary type="html">默认</summary>
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>利用 Yandex，搭建免费的个人域名邮箱服务</title>
@@ -330,23 +347,6 @@
     <updated>2021-11-01T20:15:46.000Z</updated>
     
     <content type="html"><![CDATA[<p>Python 3:</p><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python3 -m pip install [package_name]</span><br></pre></td></tr></table></figure><p>Python 2:</p><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python -m pip install [package_name]</span><br></pre></td></tr></table></figure><h2 id="实战"><a href="#实战" class="headerlink" title="实战"></a>实战</h2><h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pip3 install -i https://pypi.python.org/simple python-telegram-bot==</span><br><span class="line">pip install -i https://pypi.python.org/simple python-telegram-bot==</span><br></pre></td></tr></table></figure><p><img data-src="/345/image-20211102041659816.png" alt="image-20211102041659816" loading="lazy"></p><h3 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h3> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">python3 -m pip install -i https://pypi.python.org/simple python-telegram-bot==</span><br><span class="line">python -m pip install -i https://pypi.python.org/simple python-telegram-bot==</span><br></pre></td></tr></table></figure><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p><span class="exturl" data-url="aHR0cHM6Ly9zdGFja292ZXJmbG93LmNvbS9xdWVzdGlvbnMvNTk5OTcwNjUvcGlwLXB5dGhvbi1ub3JtYWwtc2l0ZS1wYWNrYWdlcy1pcy1ub3Qtd3JpdGVhYmxlLzY1MjkwNjM4">pip&#x2F;python: normal site-packages is not writeable - Stack Overflow<i class="fa fa-external-link-alt"></i></span></p>]]></content>
-    
-    
-    <summary type="html">默认</summary>
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>最有效Python模块安装在文件</title>
-    <link href="https://weilining.github.io/344.html"/>
-    <id>https://weilining.github.io/344.html</id>
-    <published>2021-11-01T19:29:01.000Z</published>
-    <updated>2021-11-01T19:29:01.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>本文以安装 <code>numpy</code> 库为例：</p><ol><li>在本地终端中执行 <code>mkdir test-package</code> 命令，创建一个目录用于存放函数代码和依赖库。</li><li>执行以下命令，在该目录下安装 <code>numpy</code> 依赖库。</li></ol><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd test-package</span><br><span class="line">pip install numpy -t .</span><br></pre></td></tr></table></figure><ul><li>您可以使用 <code>pip freeze &gt; requirements.txt</code> 生成本地环境下所有依赖的 <code>requirements.txt</code> 文件。</li><li>在 IDE 的终端中执行 <code>pip install -r requirements.txt -t .</code> 即可根据 <code>requirements.txt</code> 的配置安装依赖包。</li></ul>]]></content>
     
     
     <summary type="html">默认</summary>
