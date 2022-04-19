@@ -6,7 +6,7 @@
   <link href="https://weilining.github.io/atom.xml" rel="self"/>
   
   <link href="https://weilining.github.io/"/>
-  <updated>2022-04-17T00:33:02.000Z</updated>
+  <updated>2022-04-19T18:17:11.000Z</updated>
   <id>https://weilining.github.io/</id>
   
   <author>
@@ -15,6 +15,23 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>通过搜索引擎找某网站资源的方法</title>
+    <link href="https://weilining.github.io/368.html"/>
+    <id>https://weilining.github.io/368.html</id>
+    <published>2022-04-19T18:17:11.000Z</published>
+    <updated>2022-04-19T18:17:11.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>例子</p> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">av220 site:www.chiphell.com</span><br><span class="line">office2021 site:rutracker.org</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+    <summary type="html">默认</summary>
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>兄弟DCP-B7520DW 打印机加粉与清零、硒鼓清零</title>
@@ -330,23 +347,6 @@
     <updated>2021-11-04T11:51:11.000Z</updated>
     
     <content type="html"><![CDATA[<p>地址是这个：<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3NwcmluZy1wcm9qZWN0cy9zcHJpbmctYm9vdA==">https://github.com/spring-projects/spring-boot<i class="fa fa-external-link-alt"></i></span></p><p>打开之后很普通，没啥不同的</p><p>但是在 com变dev，你就会发现新大陆了</p><p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuZGV2L3NwcmluZy1wcm9qZWN0cy9zcHJpbmctYm9vdA==">https://github.dev/spring-projects/spring-boot<i class="fa fa-external-link-alt"></i></span> </p><p>在<code>repo</code>直接点击&#96;.即可</p><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmltemp3LmNuL3Bvc3RzL2dpdGh1YjFzLw==">另一种方式在 GitHub 上阅读源码 | 小嘉的部落格 (imzjw.cn)<i class="fa fa-external-link-alt"></i></span></p>]]></content>
-    
-    
-    <summary type="html">默认</summary>
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>最有效GitHub Action 创建Release</title>
-    <link href="https://weilining.github.io/348.html"/>
-    <id>https://weilining.github.io/348.html</id>
-    <published>2021-11-02T10:26:14.000Z</published>
-    <updated>2021-11-02T10:26:14.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="实战"><a href="#实战" class="headerlink" title="实战"></a>实战</h2><p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3dlaWxpbmluZy9Ib3N0bG9jQXV0b0dldFBvaW50cw==">weilining&#x2F;HostlocAutoGetPoints: 腾讯云函数和GitHub Action测试通过<i class="fa fa-external-link-alt"></i></span></p><h3 id="GitHub-Action"><a href="#GitHub-Action" class="headerlink" title="GitHub Action"></a>GitHub Action</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">name: CI</span><br><span class="line"></span><br><span class="line">on:</span><br><span class="line">  push:</span><br><span class="line">    # Sequence of patterns matched against refs/tags</span><br><span class="line">    tags:</span><br><span class="line">      - &quot;v*&quot; # Push events to matching v*, i.e. v1.0, v20.15.10</span><br><span class="line">jobs:</span><br><span class="line">  build:</span><br><span class="line">    runs-on: ubuntu-latest</span><br><span class="line"></span><br><span class="line">    steps:</span><br><span class="line">      - name: Checkout source</span><br><span class="line">        uses: actions/checkout@v1</span><br><span class="line">      - name: Build normal</span><br><span class="line">        run: |</span><br><span class="line"></span><br><span class="line">          zip -r mjjscf.zip ./*</span><br><span class="line">      - name: Create Release</span><br><span class="line">        id: create_release</span><br><span class="line">        uses: monkeyWie/create-release@master</span><br><span class="line">        env:</span><br><span class="line">          GITHUB_TOKEN: $&#123;&#123; secrets.GITHUB_TOKEN &#125;&#125;</span><br><span class="line">        with:</span><br><span class="line">          tag_name: $&#123;&#123; github.ref &#125;&#125;</span><br><span class="line">          release_name: Release $&#123;&#123; github.ref &#125;&#125;</span><br><span class="line">          draft: false</span><br><span class="line">          prerelease: false</span><br><span class="line"></span><br><span class="line">      - name: Upload Release normal windows</span><br><span class="line">        uses: actions/upload-release-asset@v1.0.1</span><br><span class="line">        env:</span><br><span class="line">          GITHUB_TOKEN: $&#123;&#123; secrets.GITHUB_TOKEN &#125;&#125;</span><br><span class="line">        with:</span><br><span class="line">          upload_url: $&#123;&#123; steps.create_release.outputs.upload_url &#125;&#125; # This pulls from the CREATE RELEASE step above, referencing it&#x27;s ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps</span><br><span class="line">          asset_path: ./mjjscf.zip</span><br><span class="line">          asset_name: normal-$&#123;&#123; steps.create_release.outputs.tag &#125;&#125;-mjjscf.zip</span><br><span class="line">          asset_content_type: application/zip</span><br></pre></td></tr></table></figure><h3 id="脚本"><a href="#脚本" class="headerlink" title="脚本"></a>脚本</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">git rm -r --cached .</span><br><span class="line">git add .</span><br><span class="line">git commit -m &quot;main&quot;</span><br><span class="line">git pull origin main</span><br><span class="line">git push origin main</span><br><span class="line"># 创建tag名为v1.0.8，并添加描述</span><br><span class="line">git tag -a &quot;v1.0.8&quot; -m &#x27;发布v1.0.8版本</span><br><span class="line">修复了以下bug:</span><br><span class="line">1. xxxxx</span><br><span class="line">2. xxxxx&#x27;</span><br><span class="line"># 把tag推到github上</span><br><span class="line">git push --tags</span><br></pre></td></tr></table></figure><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p><span class="exturl" data-url="aHR0cHM6Ly9zZWdtZW50ZmF1bHQuY29tL2EvMTE5MDAwMDAyMDg3Mzg2MA==">Github Actions 尝鲜 - SegmentFault 思否<i class="fa fa-external-link-alt"></i></span></p>]]></content>
     
     
     <summary type="html">默认</summary>
