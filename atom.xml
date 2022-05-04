@@ -6,7 +6,7 @@
   <link href="https://weilining.github.io/atom.xml" rel="self"/>
   
   <link href="https://weilining.github.io/"/>
-  <updated>2022-04-19T18:17:11.000Z</updated>
+  <updated>2022-05-04T03:52:06.000Z</updated>
   <id>https://weilining.github.io/</id>
   
   <author>
@@ -15,6 +15,57 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>如何查看windows激活状态？</title>
+    <link href="https://weilining.github.io/371.html"/>
+    <id>https://weilining.github.io/371.html</id>
+    <published>2022-05-04T03:52:06.000Z</published>
+    <updated>2022-05-04T03:52:06.000Z</updated>
+    
+    <content type="html"><![CDATA[<p> 右键计算机-属性，如图，windows显示已激活！证明系统已经激活，接着查看是否永久激活！</p><p>在系统中打开运行框(WIN+R),输入以下命令：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">slmgr.vbs -dli</span><br><span class="line">slmgr.vbs -xpr</span><br><span class="line">slmgr.vbs -dlv</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+    <summary type="html">默认</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>登录微软账号状态下如何查看本机用户名</title>
+    <link href="https://weilining.github.io/370.html"/>
+    <id>https://weilining.github.io/370.html</id>
+    <published>2022-05-04T03:44:38.000Z</published>
+    <updated>2022-05-04T03:44:38.000Z</updated>
+    
+    <content type="html"><![CDATA[<p> 在系统中打开运行框(WIN+R),输入以下命令：Winver</p>]]></content>
+    
+    
+    <summary type="html">默认</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>登录微软账号的Windows电脑如何远程？</title>
+    <link href="https://weilining.github.io/369.html"/>
+    <id>https://weilining.github.io/369.html</id>
+    <published>2022-05-04T03:36:11.000Z</published>
+    <updated>2022-05-04T03:36:11.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="实战"><a href="#实战" class="headerlink" title="实战"></a>实战</h2><p>环境</p><p><code>[Win + R]键</code>  输入   <code>msinfo32</code></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">操作系统名称Microsoft Windows 10 IoT 企业版 LTSC</span><br><span class="line">版本10.0.19044 内部版本 19044</span><br></pre></td></tr></table></figure><h3 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h3><h4 id="用户名"><a href="#用户名" class="headerlink" title="用户名"></a>用户名</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">在系统中打开运行框(WIN+R),输入以下命令：Winver</span><br><span class="line">使用该用户名，尝试登陆计算机，密码是微软帐户的密码，不是pin，成功就不用看下面教程。</span><br></pre></td></tr></table></figure><h4 id="打开远程"><a href="#打开远程" class="headerlink" title="打开远程"></a>打开远程</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">我的电脑（这台电脑）——属性——远程属性，勾选【允许远程连接到此电脑】，切记不要勾选【仅允许运行使用网络级别的身份验证的远程桌面的计算机连接（建议）】，然后点击确定。</span><br></pre></td></tr></table></figure><h4 id="远程桌面"><a href="#远程桌面" class="headerlink" title="远程桌面"></a>远程桌面</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">请打开设置，帐户，先转换为本地帐户，然后尝试使用rdp登陆，用户名就是本地的。</span><br><span class="line">之后，再次转为微软帐户，用户名依旧是您之前本地的，尝试登陆计算机，密码是微软帐户的密码，不是pin</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+    <summary type="html">默认</summary>
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>通过搜索引擎找某网站资源的方法</title>
@@ -296,57 +347,6 @@
     <updated>2021-11-07T11:51:55.000Z</updated>
     
     <content type="html"><![CDATA[<p> 顺序读取速度用于大文件拷贝，随机读取（IOPS）用于小文件拷贝。</p><p>下面是980pro性能图</p><p><img data-src="/352/image-20211107223845829.png" alt="image-20211107223845829" loading="lazy"></p><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p><span class="exturl" data-url="aHR0cHM6Ly96aC53aWtpcGVkaWEub3JnL3dpa2kvJUU5JTlEJTlFJUU2JThGJUFFJUU3JTk5JUJDJUU2JTgwJUE3JUU4JUE4JTk4JUU2JTg2JUI2JUU5JUFCJTk0">非易失性存储器 - 维基百科，自由的百科全书 (wikipedia.org)<i class="fa fa-external-link-alt"></i></span></p>]]></content>
-    
-    
-    <summary type="html">默认</summary>
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>最有效修改 Windows 7 的引导方式为 EFI</title>
-    <link href="https://weilining.github.io/351.html"/>
-    <id>https://weilining.github.io/351.html</id>
-    <published>2021-11-07T10:16:53.000Z</published>
-    <updated>2021-11-07T10:16:53.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>2019.3.12 Microsoft 发布了代号为 KB4474419 的系统补丁。该补丁更新了 bootmgfw.efi （版本 6.1.7601.24382），使得 Windows 7 支持了纯 UEFI 引导方式，不再需要替换文件。集成该补丁的系统可以直接封装用于 UEFI 方式部署。</p><h2 id="实战"><a href="#实战" class="headerlink" title="实战"></a>实战</h2><p>待测</p><h3 id="集成和封装"><a href="#集成和封装" class="headerlink" title="集成和封装"></a>集成和封装</h3><p>可以做一个形象的比喻：如果说集成就是用原盘在自己电脑的硬盘上做出一个系统的话，那么封装就是用原盘在别人的电脑上做好系统，再把硬盘拆下来安到自己的电脑上。也就是说，封装出来的系统，是被封装电脑污染过的系统，里面必然包含了众多只在原电脑上才有效的注册表键值等杂七杂八的东西。<strong>所以我们选择系统镜像，应该选择集成的，而不要选择封装的，切记！</strong></p><h3 id="制作目的："><a href="#制作目的：" class="headerlink" title="制作目的："></a>制作目的：</h3><p>免去全新安装Windows 7后更新补丁所耗费的数小时等待之苦。</p><p>让Windows 7具备已经具备的nvme硬盘支持（KB2990941-v3、KB3087873-v2）和EFI引导能力（KB4474419，该更新把bootmgfw.efi更新到了6.1.7601.24382。集成了KB4474419之后，sysprep出来的WIM，UEFI的机器上部署后，bcdboot c:\windows &#x2F;l zh-cn，直接就可以EFI方式引导了，无需再用Win8以上版本的bootmgfw.efi覆盖EFI分区的文件）。</p><p>为Windows Update的Windows 7更新服务器停摆做准备。Windows 7停止支持后，负责为其提供既有补丁更新的Windows Update服务器还会继续工作很长一段时间，但微软不可能一直为它提供在线更新补丁的服务。将更新汇总集成，可以免除以后安装Windows 7无法在线更新这一顾虑。 </p><p><strong>镜像下载地址：</strong></p><p><span class="exturl" data-url="aHR0cHM6Ly9wYW4uYmFpZHUuY29tL3MvMURvLUNwRU9zZEZIVWVtcmN1VlJ6Unc=">https://pan.baidu.com/s/1Do-CpEOsdFHUemrcuVRzRw<i class="fa fa-external-link-alt"></i></span></p><p>提取码：kpcw</p><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p><span class="exturl" data-url="aHR0cHM6Ly9zdXBwb3J0Lm1pY3Jvc29mdC5jb20vemgtY24vdG9waWMvc2hhLTItY29kZS1zaWduaW5nLXN1cHBvcnQtdXBkYXRlLWZvci13aW5kb3dzLXNlcnZlci0yMDA4LXIyLXdpbmRvd3MtNy1hbmQtd2luZG93cy1zZXJ2ZXItMjAwOC1zZXB0ZW1iZXItMjMtMjAxOS04NGE4YWFkNS1kOGQ5LTJkNWMtNmQ3OC0zNGY5YWE1ZjgzMzk=">SHA-2 code signing support update for Windows Server 2008 R2, Windows 7, and Windows Server 2008: September 23, 2019 (microsoft.com)<i class="fa fa-external-link-alt"></i></span></p><p><span class="exturl" data-url="aHR0cHM6Ly93d3cuY2hpcGhlbGwuY29tL2ZvcnVtLnBocD9tb2Q9dmlld3RocmVhZCZ0aWQ9MjE4OTA5OSZleHRyYT1wYWdlPTEmcGFnZT0xJm1vYmlsZT0x">时代的见证：集成更新的Windows 7旗舰版、专业版镜像 - 软件系统交流 - Chiphell - 分享与交流用户体验<i class="fa fa-external-link-alt"></i></span></p><p><span class="exturl" data-url="aHR0cDovL3d3dy5jcnNreWJicy5vcmcvcmVhZC5waHA/dGlkPTMwOTEwOTUmZnBhZ2U9Mg==">修改 Windows 7 的引导方式为 EFI| 口- 应用交流区 - 霏凡论坛 - powered by phpwind.net (crskybbs.org)<i class="fa fa-external-link-alt"></i></span></p>]]></content>
-    
-    
-    <summary type="html">默认</summary>
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>最有效centos下载</title>
-    <link href="https://weilining.github.io/350.html"/>
-    <id>https://weilining.github.io/350.html</id>
-    <published>2021-11-06T10:01:41.000Z</published>
-    <updated>2021-11-06T10:01:41.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="第三方"><a href="#第三方" class="headerlink" title="第三方"></a>第三方</h2><p>第三方保存的官方镜像源<span class="exturl" data-url="aHR0cHM6Ly9hcmNoaXZlLmtlcm5lbC5vcmcv">archive.kernel.org<i class="fa fa-external-link-alt"></i></span></p><h3 id="CentOS-Linux-7-6-1810-x86-64-iso-官方原版镜像下载"><a href="#CentOS-Linux-7-6-1810-x86-64-iso-官方原版镜像下载" class="headerlink" title="CentOS Linux 7.6 1810 x86 64 iso 官方原版镜像下载"></a>CentOS Linux 7.6 1810 x86 64 iso 官方原版镜像下载</h3><p>版本说明：</p><p>DVD：        # 标准安装镜像，一般常用。<br>Minimal：    # 最小安装镜像，自带的软件最少。<br>Everything： # 标准的基础上集成所有软件，镜像最大。<br>NetInstall： # 网络安装镜像，包小，但需联网才能安装。</p><p>官方种子下载：</p><p><span class="exturl" data-url="aHR0cHM6Ly9hcmNoaXZlLmtlcm5lbC5vcmcvY2VudG9zLXZhdWx0LzcuNi4xODEwL2lzb3MveDg2XzY0L0NlbnRPUy03LXg4Nl82NC1EVkQtMTgxMC50b3JyZW50">CentOS-7-x86_64-DVD-1810.torrent<i class="fa fa-external-link-alt"></i></span></p><p>官方ISO下载：</p><p><span class="exturl" data-url="aHR0cHM6Ly9hcmNoaXZlLmtlcm5lbC5vcmcvY2VudG9zLXZhdWx0LzcuNi4xODEwL2lzb3MveDg2XzY0L0NlbnRPUy03LXg4Nl82NC1EVkQtMTgxMC5pc28=">CentOS-7-x86_64-DVD-1810.iso<i class="fa fa-external-link-alt"></i></span></p><h2 id="官方"><a href="#官方" class="headerlink" title="官方"></a>官方</h2><h3 id="谷歌搜索centos第一个链接"><a href="#谷歌搜索centos第一个链接" class="headerlink" title="谷歌搜索centos第一个链接"></a>谷歌搜索<code>centos</code>第一个链接</h3><p> <span class="exturl" data-url="aHR0cHM6Ly93d3cuY2VudG9zLm9yZy9kb3dubG9hZC8jdGFiLTI=">Download (centos.org)<i class="fa fa-external-link-alt"></i></span></p><h3 id="找自己国家的镜像"><a href="#找自己国家的镜像" class="headerlink" title="找自己国家的镜像"></a>找自己国家的镜像</h3><p><span class="exturl" data-url="aHR0cHM6Ly93d3cuY2VudG9zLm9yZy9kb3dubG9hZC9taXJyb3JzLw==">Mirror List (centos.org)<i class="fa fa-external-link-alt"></i></span></p><h3 id="清华大学开源镜像站"><a href="#清华大学开源镜像站" class="headerlink" title="清华大学开源镜像站"></a>清华大学开源镜像站</h3><p><span class="exturl" data-url="aHR0cHM6Ly9taXJyb3JzLnR1bmEudHNpbmdodWEuZWR1LmNuL2NlbnRvcy8=">Index of &#x2F;centos&#x2F; | 清华大学开源软件镜像站 | Tsinghua Open Source Mirror<i class="fa fa-external-link-alt"></i></span></p><h3 id="以centos7-9为例"><a href="#以centos7-9为例" class="headerlink" title="以centos7.9为例"></a>以centos7.9为例</h3><p><span class="exturl" data-url="aHR0cHM6Ly9taXJyb3JzLnR1bmEudHNpbmdodWEuZWR1LmNuL2NlbnRvcy83LjkuMjAwOS9pc29zL3g4Nl82NC8=">Index of &#x2F;centos&#x2F;7.9.2009&#x2F;isos&#x2F;x86_64&#x2F; | 清华大学开源软件镜像站 | Tsinghua Open Source Mirror<i class="fa fa-external-link-alt"></i></span></p><p>桌面版</p><p><span class="exturl" data-url="aHR0cHM6Ly9taXJyb3JzLnR1bmEudHNpbmdodWEuZWR1LmNuL2NlbnRvcy83LjkuMjAwOS9pc29zL3g4Nl82NC9DZW50T1MtNy14ODZfNjQtRFZELTIwMDkuaXNv">CentOS-7-x86_64-DVD-2009.iso<i class="fa fa-external-link-alt"></i></span></p><p>ps:想下7.6只能用第三方保存的官方镜像源，官方不提供。</p>]]></content>
-    
-    
-    <summary type="html">默认</summary>
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>最有效GitHub读源码</title>
-    <link href="https://weilining.github.io/349.html"/>
-    <id>https://weilining.github.io/349.html</id>
-    <published>2021-11-04T11:51:11.000Z</published>
-    <updated>2021-11-04T11:51:11.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>地址是这个：<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3NwcmluZy1wcm9qZWN0cy9zcHJpbmctYm9vdA==">https://github.com/spring-projects/spring-boot<i class="fa fa-external-link-alt"></i></span></p><p>打开之后很普通，没啥不同的</p><p>但是在 com变dev，你就会发现新大陆了</p><p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuZGV2L3NwcmluZy1wcm9qZWN0cy9zcHJpbmctYm9vdA==">https://github.dev/spring-projects/spring-boot<i class="fa fa-external-link-alt"></i></span> </p><p>在<code>repo</code>直接点击&#96;.即可</p><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmltemp3LmNuL3Bvc3RzL2dpdGh1YjFzLw==">另一种方式在 GitHub 上阅读源码 | 小嘉的部落格 (imzjw.cn)<i class="fa fa-external-link-alt"></i></span></p>]]></content>
     
     
     <summary type="html">默认</summary>
