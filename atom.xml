@@ -6,7 +6,7 @@
   <link href="https://weilining.github.io/atom.xml" rel="self"/>
   
   <link href="https://weilining.github.io/"/>
-  <updated>2022-05-04T03:52:06.000Z</updated>
+  <updated>2022-05-10T06:57:55.000Z</updated>
   <id>https://weilining.github.io/</id>
   
   <author>
@@ -15,6 +15,23 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Microsoft Remote Desktop Beta for Mac</title>
+    <link href="https://weilining.github.io/372.html"/>
+    <id>https://weilining.github.io/372.html</id>
+    <published>2022-05-10T06:57:55.000Z</published>
+    <updated>2022-05-10T06:57:55.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><p><span class="exturl" data-url="aHR0cHM6Ly9ha2EubXMvcmRtYWNiZXRh">https://aka.ms/rdmacbeta<i class="fa fa-external-link-alt"></i></span></p><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><span class="exturl" data-url="aHR0cHM6Ly9kb2NzLm1pY3Jvc29mdC5jb20vemgtY24vd2luZG93cy1zZXJ2ZXIvcmVtb3RlL3JlbW90ZS1kZXNrdG9wLXNlcnZpY2VzL2NsaWVudHMvcmVtb3RlLWRlc2t0b3AtbWFj">https://docs.microsoft.com/zh-cn/windows-server/remote/remote-desktop-services/clients/remote-desktop-mac<i class="fa fa-external-link-alt"></i></span></p>]]></content>
+    
+    
+    <summary type="html">默认</summary>
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>如何查看windows激活状态？</title>
@@ -57,7 +74,7 @@
     <published>2022-05-04T03:36:11.000Z</published>
     <updated>2022-05-04T03:36:11.000Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="实战"><a href="#实战" class="headerlink" title="实战"></a>实战</h2><p>环境</p><p><code>[Win + R]键</code>  输入   <code>msinfo32</code></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">操作系统名称Microsoft Windows 10 IoT 企业版 LTSC</span><br><span class="line">版本10.0.19044 内部版本 19044</span><br></pre></td></tr></table></figure><h3 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h3><h4 id="用户名"><a href="#用户名" class="headerlink" title="用户名"></a>用户名</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">在系统中打开运行框(WIN+R),输入以下命令：Winver</span><br><span class="line">使用该用户名，尝试登陆计算机，密码是微软帐户的密码，不是pin，成功就不用看下面教程。</span><br></pre></td></tr></table></figure><h4 id="打开远程"><a href="#打开远程" class="headerlink" title="打开远程"></a>打开远程</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">我的电脑（这台电脑）——属性——远程属性，勾选【允许远程连接到此电脑】，切记不要勾选【仅允许运行使用网络级别的身份验证的远程桌面的计算机连接（建议）】，然后点击确定。</span><br></pre></td></tr></table></figure><h4 id="远程桌面"><a href="#远程桌面" class="headerlink" title="远程桌面"></a>远程桌面</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">请打开设置，帐户，先转换为本地帐户，然后尝试使用rdp登陆，用户名就是本地的。</span><br><span class="line">之后，再次转为微软帐户，用户名依旧是您之前本地的，尝试登陆计算机，密码是微软帐户的密码，不是pin</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<h2 id="实战"><a href="#实战" class="headerlink" title="实战"></a>实战</h2><p>环境</p><p><code>[Win + R]键</code>  输入   <code>msinfo32</code></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">操作系统名称Microsoft Windows 10 IoT 企业版 LTSC</span><br><span class="line">版本10.0.19044 内部版本 19044</span><br></pre></td></tr></table></figure><h3 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">在系统中打开运行框(WIN+R),输入以下命令：Winver</span><br><span class="line">使用该用户名，尝试登陆计算机，密码是微软帐户的密码，不是pin，成功就不用看下面教程。</span><br></pre></td></tr></table></figure><h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">请打开设置，帐户，先转换为本地帐户，然后尝试使用rdp登陆，用户名就是本地的。</span><br><span class="line">之后，再次转为微软帐户，用户名依旧是您之前本地的，尝试登陆计算机，密码是微软帐户的密码，不是pin</span><br></pre></td></tr></table></figure>]]></content>
     
     
     <summary type="html">默认</summary>
@@ -330,23 +347,6 @@
     <updated>2021-11-24T09:09:41.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="实战"><a href="#实战" class="headerlink" title="实战"></a>实战</h2><p>打开终端，输入</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda config --<span class="built_in">set</span> auto_activate_base <span class="literal">false</span></span><br></pre></td></tr></table></figure><h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><p>安装conda后取消命令行前出现的base，取消每次启动自动激活conda的基础环境</p><p>方法一：</p><p>每次在命令行通过conda deactivate退出base环境回到系统自带的环境</p><p>方法二</p><p>1，通过将auto_activate_base参数设置为false实现：</p><p>conda config --set auto_activate_base false</p><p>2，那要进入的话通过conda activate base</p><p>3，如果反悔了还是希望base一直留着的话通过conda config --set auto_activate_base true来恢复</p><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ3MzQ4ODYvYXJ0aWNsZS9kZXRhaWxzLzkwNzE4NzE5">(48条消息) 安装conda后取消命令行前出现的base，取消每次启动自动激活conda的基础环境_南国那片枫叶的博客-CSDN博客<i class="fa fa-external-link-alt"></i></span></p>]]></content>
-    
-    
-    <summary type="html">默认</summary>
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>最有效固态性能比对</title>
-    <link href="https://weilining.github.io/352.html"/>
-    <id>https://weilining.github.io/352.html</id>
-    <published>2021-11-07T11:51:55.000Z</published>
-    <updated>2021-11-07T11:51:55.000Z</updated>
-    
-    <content type="html"><![CDATA[<p> 顺序读取速度用于大文件拷贝，随机读取（IOPS）用于小文件拷贝。</p><p>下面是980pro性能图</p><p><img data-src="/352/image-20211107223845829.png" alt="image-20211107223845829" loading="lazy"></p><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p><span class="exturl" data-url="aHR0cHM6Ly96aC53aWtpcGVkaWEub3JnL3dpa2kvJUU5JTlEJTlFJUU2JThGJUFFJUU3JTk5JUJDJUU2JTgwJUE3JUU4JUE4JTk4JUU2JTg2JUI2JUU5JUFCJTk0">非易失性存储器 - 维基百科，自由的百科全书 (wikipedia.org)<i class="fa fa-external-link-alt"></i></span></p>]]></content>
     
     
     <summary type="html">默认</summary>
